@@ -1,8 +1,5 @@
 package com.goodstadt.john.language.exams.packages.VocabQuiz
 
-import com.goodstadt.john.language.exams.data.stats.QuizStat
-import com.goodstadt.john.language.exams.data.stats.recordQuizCompletion
-
 import android.app.Activity
 import android.app.Application
 import android.content.Context
@@ -34,6 +31,8 @@ import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Comp
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statVocabQuizOkCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statVocabQuizTotalCount
 import com.goodstadt.john.language.exams.data.repository.VocabQuizRepository
+import com.goodstadt.john.language.exams.data.stats.QuizStat
+import com.goodstadt.john.language.exams.data.stats.recordQuizCompletion
 import com.goodstadt.john.language.exams.managers.BannerManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.managers.XPManager
@@ -397,6 +396,7 @@ class VocabSectionQuizViewModel @Inject constructor(
     // Store the cleaned base name (e.g. "WordQuizTravel") so we can switch numbers easily
     private var currentSectionBaseName: String = ""
     private var currentSectionTitle: String = ""
+    private var currentCategoryTitle: String = "" //e.g. "Personal Development B2" not "PersonalDevelopment"
     private var currentSkillLevel: String = "B1" // Default
 
     // 2. This is what the BottomSheet observes.
@@ -586,6 +586,7 @@ class VocabSectionQuizViewModel @Inject constructor(
                     return@launch
                 }
                 currentSectionTitle = quizKey
+                currentCategoryTitle = categoryTitle
                 val baseFilenamePrefix = "WordQuiz$quizKey" // e.g. "WordQuizFood"
                 currentSectionBaseName = baseFilenamePrefix
 
@@ -1726,6 +1727,10 @@ class VocabSectionQuizViewModel @Inject constructor(
     fun getSectionTitle():String {
         return currentSectionTitle
     }
+    fun getCategoryTitle():String {
+        return currentCategoryTitle
+    }
+
     private fun awardXP(outcome: VocabQuizOutcome) {
         when (outcome) {
             VocabQuizOutcome.FLAWLESS -> xpManager.registerAction(XpActionType.PerfectWord, count = 5) // High Reward

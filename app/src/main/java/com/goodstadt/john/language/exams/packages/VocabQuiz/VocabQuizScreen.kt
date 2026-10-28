@@ -20,6 +20,7 @@ import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.ArrowForward
@@ -61,6 +62,7 @@ import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.withStyle
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -76,6 +78,8 @@ import com.goodstadt.john.language.exams.screens.shared.InfoCircleButton
 import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 import com.goodstadt.john.language.exams.ui.theme.blueBright2
 import com.goodstadt.john.language.exams.ui.theme.statusOrange
+import com.goodstadt.john.language.exams.utils.HeightClass
+import com.goodstadt.john.language.exams.utils.rememberHeightClass
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 import timber.log.Timber
 
@@ -87,6 +91,7 @@ fun VocabQuizScreen(
     autoLoad: Boolean = true
 ) {
     val correctGreen = LocalExtendedColors.current.textAccentAlternative
+    val questionScrollState = rememberScrollState()
     val context = LocalContext.current
     var infoDisabled by remember { mutableStateOf(false) }
     var showInfoBottomSheet by remember { mutableStateOf(false) }
@@ -136,7 +141,14 @@ fun VocabQuizScreen(
     val currentIndex by viewModel.currentSectionIndex.collectAsState()
     val activeFilters by viewModel.activeFilters.collectAsState()
     val autoAdvance by viewModel.autoAdvance.collectAsState()
-    //val showInfoSheet by viewModel.showInfoSheet.collectAsState()
+
+    val heightClass = rememberHeightClass()
+// 2. Derive dynamic spacing & padding values based on screen height
+    val verticalPadding: Dp = when (heightClass) {
+        HeightClass.COMPACT -> 0.dp   // Less padding on short screens (e.g. 360x640dp)
+        HeightClass.MEDIUM -> 6.dp    // Balanced padding on standard screens
+        HeightClass.EXPANDED -> 16.dp // Generous padding on tall screens
+    }
 
 
 
@@ -173,6 +185,11 @@ fun VocabQuizScreen(
                 AnnotatedString(questionText)
             }
         }
+    }
+
+    // Keep scroll work separate from restoring the selected answer for a question.
+    LaunchedEffect(currentQuestionIndex, questions, currentIndex, selectedLevel, selectedQuizNumber) {
+        questionScrollState.scrollTo(0)
     }
 
     Column(
@@ -226,11 +243,11 @@ fun VocabQuizScreen(
             } else { //TODO: This could be deleted if file is only Section Quiz
                 // If only 1 quiz, maybe just show the title
                 Text(
-                    text = viewModel.getSectionTitle(),// quizStatistics.title, // "Quiz 1"
+                    text = viewModel.getCategoryTitle(),// quizStatistics.title, // "Quiz 1"
                     style = MaterialTheme.typography.titleLarge,
                     fontWeight = FontWeight.Bold,
-                    color = Color.Black,//MaterialTheme.colorScheme.primary,
-                    modifier = Modifier.padding(vertical = 4.dp)
+                    color = MaterialTheme.colorScheme.onSurface,
+                    modifier = Modifier.padding(vertical = verticalPadding)
                 )
                 HorizontalDivider()
             }
@@ -282,251 +299,261 @@ fun VocabQuizScreen(
             }
         }
 
-        // Filtered-empty state: filters active but no matching questions
-        if (questions.isEmpty() && activeFilters.isNotEmpty()) {
-            val filterNames = activeFilters.joinToString(", ") { it.name }
-            Column(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(vertical = 48.dp),
-                horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.spacedBy(8.dp)
-            ) {
+        // Long instructions and answers can scroll without moving navigation or scores off-screen.
+        Column(
+            modifier = Modifier
+                .weight(1f)
+                .fillMaxWidth()
+                .verticalScroll(questionScrollState),
+            verticalArrangement = Arrangement.spacedBy(6.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            // Filtered-empty state: filters active but no matching questions
+            if (questions.isEmpty() && activeFilters.isNotEmpty()) {
+                val filterNames = activeFilters.joinToString(", ") { it.name }
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(vertical = 48.dp),
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.spacedBy(8.dp)
+                ) {
+                    Text(
+                        text = "No $filterNames questions to show.",
+                        style = MaterialTheme.typography.bodyLarge,
+                        textAlign = TextAlign.Center,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                    // Explain what the tapped filter(s) actually mean.
+                    Text(
+                        text = activeFilters.joinToString("\n") { vocabMasteryExplanation(it) },
+                        style = MaterialTheme.typography.bodyMedium,
+                        textAlign = TextAlign.Center,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                    Text(
+                        text = "Select All to see more.",
+                        style = MaterialTheme.typography.bodyMedium,
+                        textAlign = TextAlign.Center,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f)
+                    )
+                }
+            } else if (currentQuestionIndex == 0 && questions.isNotEmpty()) {
                 Text(
-                    text = "No $filterNames questions to show.",
-                    style = MaterialTheme.typography.bodyLarge,
+                    text = displayText,
+                    style = MaterialTheme.typography.bodyLarge.copy(fontSize = 18.sp),
                     textAlign = TextAlign.Center,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(vertical = verticalPadding)
                 )
-                // Explain what the tapped filter(s) actually mean.
-                Text(
-                    text = activeFilters.joinToString("\n") { vocabMasteryExplanation(it) },
-                    style = MaterialTheme.typography.bodyMedium,
+            } else if (questions.isNotEmpty()) {
+                Text( //still keep the space
+                    text = "",
+                    style = MaterialTheme.typography.bodyLarge.copy(fontSize = 18.sp),
                     textAlign = TextAlign.Center,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-                Text(
-                    text = "Select All to see more.",
-                    style = MaterialTheme.typography.bodyMedium,
-                    textAlign = TextAlign.Center,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f)
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(vertical = verticalPadding)
                 )
             }
-        } else if (currentQuestionIndex == 0 && questions.isNotEmpty()) {
-            Text(
-                text = displayText,
-                style = MaterialTheme.typography.bodyLarge.copy(fontSize = 18.sp),
-                textAlign = TextAlign.Center,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(vertical = 32.dp)
-            )
-        } else if (questions.isNotEmpty()) {
-            Text( //still keep the space
-                text = "",
-                style = MaterialTheme.typography.bodyLarge.copy(fontSize = 18.sp),
-                textAlign = TextAlign.Center,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(vertical = 16.dp)
-            )
+
+            if (questions.isNotEmpty()) {
+                val question = questions[currentQuestionIndex]
+
+                val annotatedQuestionText =
+                    buildAnnotatedString {
+                        if (isCurrentAnswerCorrect == true && selectedOption != null) {
+                            // --- SUCCESS STATE ---
+
+                            append(displayedSentence)
+
+
+                        } else {
+                            // --- QUESTION STATE ---
+                            // Not answered yet, or answered incorrectly.
+                            append(displayedSentence)
+                            withStyle(
+                                style = SpanStyle(
+                                    color = correctGreen,
+                                    fontWeight = FontWeight.Bold
+                                )
+                            ) {
+                                // append(displayedSentence) // Append the correct word in green
+                            }
+                        }
+                    }
+
+    //The correct answer row
+                if (isCurrentAnswerCorrect == true) {
+                    Text(
+                        text = annotatedQuestionText,
+                        style = MaterialTheme.typography.bodyLarge.copy(fontSize = 24.sp),
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier.fillMaxWidth().padding(bottom = 24.dp),
+                        color = correctGreen//Color.Black//orangeLight,
+                    )
+                } else {
+                    Text(
+                        text = annotatedQuestionText,
+                        style = MaterialTheme.typography.bodyLarge.copy(fontSize = 24.sp),
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier.fillMaxWidth().padding(bottom = 24.dp),
+                        color = correctGreen
+                    )
+                }
+
+                val fluency = viewModel.fluencyStats(annotatedQuestionText.text)
+                val stats = viewModel.getWordStats(annotatedQuestionText.text)
+                Column {
+
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            // Optional: Add horizontal padding to keep icon off the very edge
+                            .padding(horizontal = 2.dp)
+
+                    ) {
+                        Timber.v(stats.toString())
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(horizontal = 2.dp),
+                            // This spreads items out: one at the start, one in the middle (if 3), one at the end
+                            horizontalArrangement = Arrangement.SpaceBetween,
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                           // Text("Status: ${fluency.first}", color = fluency.second, fontWeight = FontWeight.Bold)
+    //                    Text("Current Streak: ${stats.correctStreak}🔥")
+
+                            Text(
+                                text = fluency.first,
+                                color = fluency.second,
+                                style = MaterialTheme.typography.labelMedium,
+                                modifier = Modifier
+                                    .background(fluency.second.copy(alpha = 0.1f), RoundedCornerShape(4.dp))
+    //                                .align(Alignment.CenterStart)
+    //                    .padding(horizontal = 8.dp, vertical = 1.dp)
+                            )
+
+    //                if (stats.nextReviewTime > 0) {
+    //                    Text("Next review: ${viewModel.getFormattedNextReviewTime(stats.word)}")
+    //                }
+                        }
+
+                    }
+
+                }//: Column
+
+
+                question.answers.forEach { option ->
+                    val isOptionCorrect =
+                        option == question.correctOption // Determine if option is correct
+
+                    // Format-aware sentence for the loudspeaker preview (and for replaying a solved question).
+                    val previewSentence =
+                        if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
+                            question.question.replace("_", option)
+                        } else {
+                            if (viewModel.currentFileFormat.value == viewModel.quizDefinitions) {
+                                option.replace(Regex("\\s*\\([^)]*\\)\\s*"), " ").trim() // remove ()
+                            } else {
+                                option
+                            }
+                        }
+
+                    // Answering the question: used by BOTH the radio button AND tapping the answer sentence,
+                    // so they score identically. The loudspeaker does NOT call this - it only previews.
+                    // Marking finishes once the correct answer is chosen: after that, a tap just replays the
+                    // option as a preview and never changes Correct/Tries again.
+                    val submitAnswer: () -> Unit = {
+                        if (isCurrentAnswerCorrect == true) {
+                            // Already solved -> preview only, no scoring.
+                            viewModel.handleTap(option)
+                        } else {
+                            selectedOption = option
+                            isCurrentAnswerCorrect = isOptionCorrect
+                            // Remember this selection so navigating back re-shows it (until the quiz restarts).
+                            viewModel.rememberSelection(question.question, option)
+                            viewModel.updateAnswer(isOptionCorrect) // Tries++ (and Correct recomputed)
+                            viewModel.vocabQuizAttemptStats(isOptionCorrect, question.question)
+
+                            if (isOptionCorrect) {
+                                displayedSentence = viewModel.highlightWordInSentence(
+                                    sentence = option,
+                                    wordToHighlight = question.question,
+                                    highlightColor = correctGreen
+                                )
+                                viewModel.handleTap(option)
+                                viewModel.incQuizStat()
+                            } else { // incorrect
+                                viewModel.incQuizStat(false)
+                            }
+
+                            viewModel.markAnswerSelected(question.question, isOptionCorrect)
+
+                            // If auto-advance is ON, a correct answer moves to the next question automatically.
+                            if (isOptionCorrect) viewModel.onCorrectAnswered()
+                        }
+                    }
+
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        // Left cell: takes all remaining width so a long sentence WRAPS instead of
+                        // shoving the radio button off the edge.
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            modifier = Modifier.weight(1f)
+                        ) {
+                            Icon(
+                                // Loudspeaker: preview the sentence only. Never affects Correct/Tries.
+                                modifier = Modifier.clickable {
+                                    viewModel.handleTap(previewSentence)
+                                },
+                                imageVector = Icons.AutoMirrored.Filled.VolumeUp,
+                                contentDescription = "Speak ${question.question.replace("_", option)}",
+                                tint = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+                            Spacer(modifier = Modifier.width(8.dp))
+                            Text(
+                                // Tapping the answer sentence is a demo play (like the loudspeaker), NOT a
+                                // choice - only the radio button commits the answer.
+                                text = option,
+                                color = LocalExtendedColors.current.quizQuestionText,
+                                style = MaterialTheme.typography.bodyLarge.copy(fontSize = 16.sp),
+                                modifier = Modifier
+                                    .weight(1f)
+                                    .padding(vertical = 4.dp)
+                                    .clickable { viewModel.handleTap(previewSentence) }
+                            )
+                        }
+
+                        // Reserved fixed-width cell so the radio button always sits in the SAME place
+                        // under the user's finger, regardless of sentence length.
+                        Box(
+                            modifier = Modifier.width(48.dp),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            RadioButton(
+                                selected = selectedOption == option && isOptionCorrect, // Select only if correct
+                                onClick = { submitAnswer() },
+                                colors = RadioButtonDefaults.colors(
+                                    selectedColor = if (isCurrentAnswerCorrect == true) Color.Green else Color.Red, // Conditional color
+                                    unselectedColor = if (isCurrentAnswerCorrect == false && selectedOption == option) Color.Red else Color.Unspecified // Conditional color
+                                ),
+                                modifier = Modifier.semantics { contentDescription = option }
+                            )
+                        }
+                    } // Row
+                }
+
+                Spacer(Modifier.height(4.dp))
+            }
         }
 
         if (questions.isNotEmpty()) {
-            val question = questions[currentQuestionIndex]
-
-            val annotatedQuestionText =
-                buildAnnotatedString {
-                    if (isCurrentAnswerCorrect == true && selectedOption != null) {
-                        // --- SUCCESS STATE ---
-
-                        append(displayedSentence)
-
-
-                    } else {
-                        // --- QUESTION STATE ---
-                        // Not answered yet, or answered incorrectly.
-                        append(displayedSentence)
-                        withStyle(
-                            style = SpanStyle(
-                                color = correctGreen,
-                                fontWeight = FontWeight.Bold
-                            )
-                        ) {
-                            // append(displayedSentence) // Append the correct word in green
-                        }
-                    }
-                }
-
-//The correct answer row
-            if (isCurrentAnswerCorrect == true) {
-                Text(
-                    text = annotatedQuestionText,
-                    style = MaterialTheme.typography.bodyLarge.copy(fontSize = 24.sp),
-                    textAlign = TextAlign.Center,
-                    modifier = Modifier.fillMaxWidth().padding(bottom = 24.dp),
-                    color = correctGreen//Color.Black//orangeLight,
-                )
-            } else {
-                Text(
-                    text = annotatedQuestionText,
-                    style = MaterialTheme.typography.bodyLarge.copy(fontSize = 24.sp),
-                    textAlign = TextAlign.Center,
-                    modifier = Modifier.fillMaxWidth().padding(bottom = 24.dp),
-                    color = correctGreen
-                )
-            }
-
-            val fluency = viewModel.fluencyStats(annotatedQuestionText.text)
-            val stats = viewModel.getWordStats(annotatedQuestionText.text)
-            Column {
-
-                Box(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        // Optional: Add horizontal padding to keep icon off the very edge
-                        .padding(horizontal = 2.dp)
-
-                ) {
-                    Timber.v(stats.toString())
-                    Row(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(horizontal = 2.dp),
-                        // This spreads items out: one at the start, one in the middle (if 3), one at the end
-                        horizontalArrangement = Arrangement.SpaceBetween,
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                       // Text("Status: ${fluency.first}", color = fluency.second, fontWeight = FontWeight.Bold)
-//                    Text("Current Streak: ${stats.correctStreak}🔥")
-
-                        Text(
-                            text = fluency.first,
-                            color = fluency.second,
-                            style = MaterialTheme.typography.labelMedium,
-                            modifier = Modifier
-                                .background(fluency.second.copy(alpha = 0.1f), RoundedCornerShape(4.dp))
-//                                .align(Alignment.CenterStart)
-//                    .padding(horizontal = 8.dp, vertical = 1.dp)
-                        )
-
-//                if (stats.nextReviewTime > 0) {
-//                    Text("Next review: ${viewModel.getFormattedNextReviewTime(stats.word)}")
-//                }
-                    }
-
-                }
-
-            }//: Column
-
-
-            question.answers.forEach { option ->
-                val isOptionCorrect =
-                    option == question.correctOption // Determine if option is correct
-
-                // Format-aware sentence for the loudspeaker preview (and for replaying a solved question).
-                val previewSentence =
-                    if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
-                        question.question.replace("_", option)
-                    } else {
-                        if (viewModel.currentFileFormat.value == viewModel.quizDefinitions) {
-                            option.replace(Regex("\\s*\\([^)]*\\)\\s*"), " ").trim() // remove ()
-                        } else {
-                            option
-                        }
-                    }
-
-                // Answering the question: used by BOTH the radio button AND tapping the answer sentence,
-                // so they score identically. The loudspeaker does NOT call this - it only previews.
-                // Marking finishes once the correct answer is chosen: after that, a tap just replays the
-                // option as a preview and never changes Correct/Tries again.
-                val submitAnswer: () -> Unit = {
-                    if (isCurrentAnswerCorrect == true) {
-                        // Already solved -> preview only, no scoring.
-                        viewModel.handleTap(option)
-                    } else {
-                        selectedOption = option
-                        isCurrentAnswerCorrect = isOptionCorrect
-                        // Remember this selection so navigating back re-shows it (until the quiz restarts).
-                        viewModel.rememberSelection(question.question, option)
-                        viewModel.updateAnswer(isOptionCorrect) // Tries++ (and Correct recomputed)
-                        viewModel.vocabQuizAttemptStats(isOptionCorrect, question.question)
-
-                        if (isOptionCorrect) {
-                            displayedSentence = viewModel.highlightWordInSentence(
-                                sentence = option,
-                                wordToHighlight = question.question,
-                                highlightColor = correctGreen
-                            )
-                            viewModel.handleTap(option)
-                            viewModel.incQuizStat()
-                        } else { // incorrect
-                            viewModel.incQuizStat(false)
-                        }
-
-                        viewModel.markAnswerSelected(question.question, isOptionCorrect)
-
-                        // If auto-advance is ON, a correct answer moves to the next question automatically.
-                        if (isOptionCorrect) viewModel.onCorrectAnswered()
-                    }
-                }
-
-                Row(
-                    verticalAlignment = Alignment.CenterVertically,
-                    modifier = Modifier.fillMaxWidth()
-                ) {
-                    // Left cell: takes all remaining width so a long sentence WRAPS instead of
-                    // shoving the radio button off the edge.
-                    Row(
-                        verticalAlignment = Alignment.CenterVertically,
-                        modifier = Modifier.weight(1f)
-                    ) {
-                        Icon(
-                            // Loudspeaker: preview the sentence only. Never affects Correct/Tries.
-                            modifier = Modifier.clickable {
-                                viewModel.handleTap(previewSentence)
-                            },
-                            imageVector = Icons.AutoMirrored.Filled.VolumeUp,
-                            contentDescription = "Speak ${question.question.replace("_", option)}",
-                            tint = MaterialTheme.colorScheme.onSurfaceVariant
-                        )
-                        Spacer(modifier = Modifier.width(8.dp))
-                        Text(
-                            // Tapping the answer sentence is a demo play (like the loudspeaker), NOT a
-                            // choice - only the radio button commits the answer.
-                            text = option,
-                            color = LocalExtendedColors.current.quizQuestionText,
-                            style = MaterialTheme.typography.bodyLarge.copy(fontSize = 16.sp),
-                            modifier = Modifier
-                                .weight(1f)
-                                .padding(vertical = 4.dp)
-                                .clickable { viewModel.handleTap(previewSentence) }
-                        )
-                    }
-
-                    // Reserved fixed-width cell so the radio button always sits in the SAME place
-                    // under the user's finger, regardless of sentence length.
-                    Box(
-                        modifier = Modifier.width(48.dp),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        RadioButton(
-                            selected = selectedOption == option && isOptionCorrect, // Select only if correct
-                            onClick = { submitAnswer() },
-                            colors = RadioButtonDefaults.colors(
-                                selectedColor = if (isCurrentAnswerCorrect == true) Color.Green else Color.Red, // Conditional color
-                                unselectedColor = if (isCurrentAnswerCorrect == false && selectedOption == option) Color.Red else Color.Unspecified // Conditional color
-                            ),
-                            modifier = Modifier.semantics { contentDescription = option }
-                        )
-                    }
-                } // Row
-            }
-
-            Spacer(Modifier.height(4.dp))
-            Spacer(modifier = Modifier.weight(1f))//push the reset to teh bottom
-
-
             // Next/Previous flow across sub-tab pages: at the last question of a page, Next auto-selects
             // the next sub-tab (first question); at the first question of a page, Previous steps back into
             // the previous sub-tab (last question). Computed from observed state so the arrows enable/grey
