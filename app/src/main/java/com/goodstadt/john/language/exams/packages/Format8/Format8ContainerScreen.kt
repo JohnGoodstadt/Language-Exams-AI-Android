@@ -117,12 +117,12 @@ fun Format8ContainerScreen(
                             playback.stopPlayback(); quiz = Format8QuizGenerator.generate(quizFile); showQuiz = true
                         } },
                         shape = CircleShape, containerColor = MaterialTheme.colorScheme.surface,
-                        contentColor = if (canQuiz) LocalExtendedColors.current.screenAccent else MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.4f),
+                        contentColor = if (canQuiz) LocalExtendedColors.current.statusOrange else MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.4f),
                         modifier = Modifier.align(Alignment.BottomStart).padding(16.dp)
                     ) { Icon(Icons.Default.SportsEsports, if (canQuiz) "Quiz" else "Quiz unavailable for this sheet") }
                     FloatingActionButton(
                         onClick = { playback.stopPlayback(); showTranslate = true },
-                        shape = CircleShape, containerColor = MaterialTheme.colorScheme.surface, contentColor = LocalExtendedColors.current.screenAccent,
+                        shape = CircleShape, containerColor = MaterialTheme.colorScheme.surface, contentColor = LocalExtendedColors.current.statusOrange, // orange like the other FABs
                         modifier = Modifier.align(Alignment.BottomEnd).padding(16.dp)
                     ) { Icon(Icons.Default.Translate, "Translate") }
                 }

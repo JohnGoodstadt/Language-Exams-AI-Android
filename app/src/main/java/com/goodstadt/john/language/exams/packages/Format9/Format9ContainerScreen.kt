@@ -176,7 +176,7 @@ fun Format9ContainerScreen(
                         Icon(
                             Icons.Default.Translate,
                             contentDescription = if (showTranslation) "Showing translation" else "Show translation",
-                            tint = if (showTranslation) LocalExtendedColors.current.screenAccent else MaterialTheme.colorScheme.onSurfaceVariant
+                            tint = if (showTranslation) LocalExtendedColors.current.statusOrange else MaterialTheme.colorScheme.onSurfaceVariant // orange like the other floating buttons
                         )
                     }
                 }
@@ -184,7 +184,7 @@ fun Format9ContainerScreen(
                 val floatingPlaying = playingKey != null && !isPaused
                 FloatingActionButton(
                     onClick = { viewModel.playPauseFloating() },
-                    shape = CircleShape, containerColor = MaterialTheme.colorScheme.surface, contentColor = LocalExtendedColors.current.screenAccent,
+                    shape = CircleShape, containerColor = MaterialTheme.colorScheme.surface, contentColor = LocalExtendedColors.current.statusOrange, // matches Format6/Conjugations FABs
                     modifier = Modifier.align(Alignment.BottomEnd).padding(16.dp)
                 ) { Icon(if (floatingPlaying) Icons.Default.Pause else Icons.Default.PlayArrow, if (floatingPlaying) "Pause" else "Play") }
 
