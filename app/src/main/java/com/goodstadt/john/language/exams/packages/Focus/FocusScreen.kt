@@ -195,7 +195,7 @@ fun FocusScreen(
                     )
                     Spacer(Modifier.height(6.dp))
                     Card(
-                        colors = CardDefaults.cardColors(containerColor = LocalExtendedColors.current.cardBackground),
+                        colors = CardDefaults.cardColors(containerColor = LocalExtendedColors.current.groupedPanel),
                         shape = RoundedCornerShape(16.dp),
                         modifier = Modifier.fillMaxWidth()
                     ) {
@@ -245,7 +245,7 @@ fun FocusScreen(
                     )
                     Spacer(Modifier.height(6.dp))
                     Card(
-                        colors = CardDefaults.cardColors(containerColor = LocalExtendedColors.current.cardBackground),
+                        colors = CardDefaults.cardColors(containerColor = LocalExtendedColors.current.groupedPanel),
                         shape = RoundedCornerShape(16.dp),
                         modifier = Modifier.fillMaxWidth()
                     ) {
@@ -333,7 +333,7 @@ private fun NotEnoughDataCard(confidence: Int, onTakeAudit: () -> Unit) {
 
     Column(modifier = Modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(12.dp)) {
         Card(
-            colors = CardDefaults.cardColors(containerColor = LocalExtendedColors.current.cardBackground),
+            colors = CardDefaults.cardColors(containerColor = LocalExtendedColors.current.groupedPanel),
             shape = RoundedCornerShape(12.dp),
             modifier = Modifier.fillMaxWidth()
         ) {
@@ -368,7 +368,7 @@ private fun NotEnoughDataCard(confidence: Int, onTakeAudit: () -> Unit) {
 @Composable
 private fun AllCaughtUpCard(currentLevel: String) {
     Card(
-        colors = CardDefaults.cardColors(containerColor = LocalExtendedColors.current.cardBackground),
+        colors = CardDefaults.cardColors(containerColor = LocalExtendedColors.current.groupedPanel),
         shape = RoundedCornerShape(12.dp),
         modifier = Modifier.fillMaxWidth()
     ) {
@@ -459,7 +459,7 @@ private fun WeakVocabSectionsSection(
     )
     Spacer(Modifier.height(10.dp))
     Card(
-        colors = CardDefaults.cardColors(containerColor = LocalExtendedColors.current.cardBackground),
+        colors = CardDefaults.cardColors(containerColor = LocalExtendedColors.current.groupedPanel),
         shape = RoundedCornerShape(16.dp),
         modifier = Modifier.fillMaxWidth()
     ) {
@@ -570,7 +570,7 @@ private fun VocabQuizAreasSection(
 
     Spacer(Modifier.height(10.dp))
     Card(
-        colors = CardDefaults.cardColors(containerColor = LocalExtendedColors.current.cardBackground),
+        colors = CardDefaults.cardColors(containerColor = LocalExtendedColors.current.groupedPanel),
         shape = RoundedCornerShape(16.dp),
         modifier = Modifier.fillMaxWidth()
     ) {
@@ -621,7 +621,7 @@ private fun UsageQuizAreasSection(
 
     Spacer(Modifier.height(10.dp))
     Card(
-        colors = CardDefaults.cardColors(containerColor = LocalExtendedColors.current.cardBackground),
+        colors = CardDefaults.cardColors(containerColor = LocalExtendedColors.current.groupedPanel),
         shape = RoundedCornerShape(16.dp),
         modifier = Modifier.fillMaxWidth()
     ) {
@@ -672,7 +672,7 @@ private fun ReferenceAreasSection(
 
     Spacer(Modifier.height(10.dp))
     Card(
-        colors = CardDefaults.cardColors(containerColor = LocalExtendedColors.current.cardBackground),
+        colors = CardDefaults.cardColors(containerColor = LocalExtendedColors.current.groupedPanel),
         shape = RoundedCornerShape(16.dp),
         modifier = Modifier.fillMaxWidth()
     ) {

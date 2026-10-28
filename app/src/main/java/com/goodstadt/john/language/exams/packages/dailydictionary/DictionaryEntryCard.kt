@@ -16,7 +16,11 @@ fun DictionaryEntryCard(
     entry: DictionaryEntry,
     modifier: Modifier = Modifier
 ) {
-    Card(modifier = modifier) {
+    // White/black grouped panel on the Me tab's grey page.
+    Card(
+        modifier = modifier,
+        colors = CardDefaults.cardColors(containerColor = LocalExtendedColors.current.groupedPanel)
+    ) {
         Column(
             modifier = Modifier
                 .padding(16.dp)

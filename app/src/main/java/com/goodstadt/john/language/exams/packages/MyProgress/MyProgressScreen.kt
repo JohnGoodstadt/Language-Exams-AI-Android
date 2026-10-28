@@ -40,6 +40,7 @@ import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
@@ -112,9 +113,12 @@ fun MyProgressScreen(
     var auditTargetLevel by remember { mutableStateOf<ReadinessAuditLevels?>(null) }
 
     Scaffold(
+        // Transparent so the Me tab's grouped grey page shows through.
+        containerColor = Color.Transparent,
         topBar = {
             CenterAlignedTopAppBar(
-                title = { Text("Profile", fontWeight = FontWeight.Bold) }
+                title = { Text("Profile", fontWeight = FontWeight.Bold) },
+                colors = TopAppBarDefaults.centerAlignedTopAppBarColors(containerColor = Color.Transparent)
             )
         }
     ) { innerPadding ->
@@ -134,6 +138,14 @@ fun MyProgressScreen(
                     .padding(horizontal = 16.dp),
                 verticalArrangement = Arrangement.spacedBy(24.dp)
             ) {
+            // The cards here (shared with the stats sheets) use surfaceVariant. On this grey page they
+            // become white/black grouped panels; the sheets/dialogs below keep the normal scheme.
+            MaterialTheme(
+                colorScheme = MaterialTheme.colorScheme.copy(
+                    surfaceVariant = LocalExtendedColors.current.groupedPanel
+                )
+            ) {
+            Column(verticalArrangement = Arrangement.spacedBy(24.dp)) {
 
                 // Full-access marker — comp (allow-listed tester) or App Review demonstration mode.
                 if (isComped || isReviewUnlocked) {
@@ -322,6 +334,9 @@ fun MyProgressScreen(
                 AIWriterCard(count = state.aiCount, heard = state.aiHeard,onNavigate = onNavigate )
 
                 BadgeShowcaseSection(xpState = state.xpState)
+            } //: Column - grouped panel cards
+            } //: MaterialTheme - surfaceVariant = groupedPanel
+
                 // ==========================================
                 // 4. FOOTER / ADMIN
                 // ==========================================

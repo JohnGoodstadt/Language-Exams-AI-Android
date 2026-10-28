@@ -10,6 +10,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
+import androidx.compose.ui.graphics.Color
 import androidx.compose.material3.Snackbar
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -50,7 +51,8 @@ fun SearchScreen(viewModel: SearchViewModel = hiltViewModel()) {
     val isHourlyRateLimitingSheetVisible by viewModel.showRateHourlyLimitSheet.collectAsState()
 
     Scaffold(
-
+        // Transparent so the Me tab's grouped grey page shows through.
+        containerColor = Color.Transparent,
         snackbarHost = {
             SnackbarHost(hostState = snackbarHostState) { snackbarData ->
                 // Apply the error colors ONLY to the Snackbar component itself.

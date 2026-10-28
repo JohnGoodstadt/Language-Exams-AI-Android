@@ -76,7 +76,8 @@ fun AuditDashboardHeader(
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(16.dp),
+            // Narrower side margin so the blue gauge panel is wider; the rest adds 8dp back below.
+            .padding(horizontal = 8.dp, vertical = 16.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         // --- 1. THE GRAPHIC AREA ---
@@ -114,6 +115,7 @@ fun AuditDashboardHeader(
         // Once the baseline is done this summary is rarely needed again, so from the day after install it
         // starts collapsed (one tap to reveal); on install day it stays open so the fresh result is visible.
         val context = LocalContext.current
+        Column(Modifier.padding(horizontal = 8.dp)) {
         CollapsibleSection(
             title = "Baseline result",
             initiallyExpanded = getDaysSinceInstall(context) < 2
@@ -196,6 +198,7 @@ fun AuditDashboardHeader(
                     enabled = newAuditEnabled
                 )
             }
+        }
         }
 
 

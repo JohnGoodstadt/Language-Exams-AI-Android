@@ -48,6 +48,9 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.layout.onGloballyPositioned
+import androidx.compose.ui.layout.positionInParent
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.graphics.Color
 import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 import androidx.compose.ui.text.font.FontStyle
@@ -137,16 +140,19 @@ fun VocabQuizActiveView(
     onDebugClick: () -> Unit
 ) {
     val buttonBlue = LocalExtendedColors.current.buttonBlue
-    // BoxWithConstraints + heightIn(min) lets the category panel (weight 1f) stretch to the bottom of
-    // the screen when the list is short, while the page still scrolls when it is long.
+    // The category panel gets a MIN height reaching the bottom of the screen (from where it starts),
+    // so it stretches when the list is short but grows and scrolls when it is long. (A weight(1f)
+    // panel inside heightIn(min) capped it at screen height and broke scrolling.)
+    val density = LocalDensity.current
+    var panelTop by remember { mutableStateOf(0.dp) }
     BoxWithConstraints(Modifier.fillMaxSize()) {
     val screenHeight = maxHeight
     Column(
         modifier = Modifier
             .fillMaxSize()
             .verticalScroll(rememberScrollState())
-            .heightIn(min = screenHeight)
-            .padding(16.dp),
+            // Narrower side margin so the blue card is wider; other content adds 8dp back.
+            .padding(horizontal = 8.dp, vertical = 16.dp),
         verticalArrangement = Arrangement.spacedBy(20.dp)
     ) {
         // 1. Due Today Card
@@ -228,7 +234,9 @@ fun VocabQuizActiveView(
         var showScoringInfo by remember { mutableStateOf(false) }
 
         Row(
-            modifier = Modifier.fillMaxWidth(),
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 8.dp),
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
@@ -254,8 +262,11 @@ fun VocabQuizActiveView(
         // 3. Category List, on a grouped panel (white on light, black on dark) down to the bottom
         Column(
             modifier = Modifier
+                .padding(horizontal = 8.dp)
                 .fillMaxWidth()
-                .weight(1f)
+                .onGloballyPositioned { panelTop = with(density) { it.positionInParent().y.toDp() } }
+                // screen - top padding - panel's offset - bottom padding
+                .heightIn(min = (screenHeight - 16.dp - panelTop - 16.dp).coerceAtLeast(0.dp))
                 .clip(RoundedCornerShape(16.dp))
                 .background(LocalExtendedColors.current.groupedPanel)
                 .padding(12.dp),
@@ -391,14 +402,15 @@ fun VocabQuizOnboardingView(
     categories: List<CategoryMasteryStats>,
     onStartSuggestion: (String) -> Unit
 ) {
-    // Same stretch-to-bottom panel as VocabQuizActiveView.
+    // Same stretch-to-bottom (but still scrollable) panel as VocabQuizActiveView.
+    val density = LocalDensity.current
+    var panelTop by remember { mutableStateOf(0.dp) }
     BoxWithConstraints(Modifier.fillMaxSize()) {
     val screenHeight = maxHeight
     Column(
         modifier = Modifier
             .fillMaxSize()
             .verticalScroll(rememberScrollState())
-            .heightIn(min = screenHeight)
             .padding(24.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
@@ -435,7 +447,8 @@ fun VocabQuizOnboardingView(
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .weight(1f)
+                .onGloballyPositioned { panelTop = with(density) { it.positionInParent().y.toDp() } }
+                .heightIn(min = (screenHeight - 24.dp - panelTop - 24.dp).coerceAtLeast(0.dp))
                 .clip(RoundedCornerShape(16.dp))
                 .background(LocalExtendedColors.current.groupedPanel)
                 .padding(12.dp),

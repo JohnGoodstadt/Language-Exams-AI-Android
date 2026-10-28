@@ -2,6 +2,7 @@ package com.goodstadt.john.language.exams.packages.MeTabContainer
 
 import androidx.activity.ComponentActivity
 import androidx.compose.foundation.background
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -139,6 +140,7 @@ fun MeTabContainerScreen(viewModel: MeTabContainerTabViewModel = hiltViewModel()
 
     Column(modifier = Modifier
         .fillMaxSize()
+        .background(LocalExtendedColors.current.groupedPage) // grouped page behind every Me screen
         .statusBarsPadding() ) {
         // Part A: The Persistent Horizontal Menu (phone only; tablet uses the sidebar below).
         if (!isExpanded) {
