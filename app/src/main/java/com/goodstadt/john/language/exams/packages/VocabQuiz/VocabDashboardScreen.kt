@@ -4,6 +4,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -11,6 +12,7 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -135,10 +137,15 @@ fun VocabQuizActiveView(
     onDebugClick: () -> Unit
 ) {
     val buttonBlue = LocalExtendedColors.current.buttonBlue
+    // BoxWithConstraints + heightIn(min) lets the category panel (weight 1f) stretch to the bottom of
+    // the screen when the list is short, while the page still scrolls when it is long.
+    BoxWithConstraints(Modifier.fillMaxSize()) {
+    val screenHeight = maxHeight
     Column(
         modifier = Modifier
             .fillMaxSize()
             .verticalScroll(rememberScrollState())
+            .heightIn(min = screenHeight)
             .padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(20.dp)
     ) {
@@ -244,8 +251,16 @@ fun VocabQuizActiveView(
             ScoringInfoBottomSheet(onDismiss = { showScoringInfo = false })
         }
 
-        // 3. Category List
-        Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+        // 3. Category List, on a grouped panel (white on light, black on dark) down to the bottom
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .weight(1f)
+                .clip(RoundedCornerShape(16.dp))
+                .background(LocalExtendedColors.current.groupedPanel)
+                .padding(12.dp),
+            verticalArrangement = Arrangement.spacedBy(12.dp)
+        ) {
             state.categoryStats.forEach { stat ->
                 CategoryMasteryRow(stat, onClick = {
                     onCategoryClick(stat.categoryTitle)
@@ -270,6 +285,7 @@ fun VocabQuizActiveView(
             }
 
         }
+    }
     }
 }
 
@@ -375,11 +391,15 @@ fun VocabQuizOnboardingView(
     categories: List<CategoryMasteryStats>,
     onStartSuggestion: (String) -> Unit
 ) {
+    // Same stretch-to-bottom panel as VocabQuizActiveView.
+    BoxWithConstraints(Modifier.fillMaxSize()) {
+    val screenHeight = maxHeight
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(24.dp)
-            .verticalScroll(rememberScrollState()),
+            .verticalScroll(rememberScrollState())
+            .heightIn(min = screenHeight)
+            .padding(24.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Icon(
@@ -411,12 +431,21 @@ fun VocabQuizOnboardingView(
 
         Spacer(Modifier.height(12.dp))
 
-        // Every category that has a quiz at the current level (like iOS)
-        Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+        // Every category that has a quiz at the current level (like iOS), on a grouped panel
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .weight(1f)
+                .clip(RoundedCornerShape(16.dp))
+                .background(LocalExtendedColors.current.groupedPanel)
+                .padding(12.dp),
+            verticalArrangement = Arrangement.spacedBy(12.dp)
+        ) {
             categories.forEach { stat ->
                 CategoryMasteryRow(stat, onClick = { onStartSuggestion(stat.categoryTitle) })
             }
         }
+    }
     }
 }
 

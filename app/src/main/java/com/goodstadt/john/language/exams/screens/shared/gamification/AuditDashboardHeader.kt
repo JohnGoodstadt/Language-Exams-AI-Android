@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.screens.shared.gamification
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -27,6 +28,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -38,7 +40,6 @@ import androidx.compose.ui.unit.sp
 import com.goodstadt.john.language.exams.packages.ReadinessAudit.AuditStats
 import com.goodstadt.john.language.exams.packages.ReadinessAudit.ReadinessAuditLevels
 import com.goodstadt.john.language.exams.screens.shared.CollapsibleSection
-import com.goodstadt.john.language.exams.ui.theme.blueBright2
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 import com.goodstadt.john.language.exams.utils.getDaysSinceInstall
@@ -79,22 +80,29 @@ fun AuditDashboardHeader(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         // --- 1. THE GRAPHIC AREA ---
+        // On the same blue rounded panel as the Vocab quiz "due for review" card, with white text.
         Row(
-            modifier = Modifier.fillMaxWidth(),
+            modifier = Modifier
+                .fillMaxWidth()
+                .clip(RoundedCornerShape(16.dp))
+                .background(LocalExtendedColors.current.buttonBlue)
+                .padding(vertical = 20.dp),
             horizontalArrangement = Arrangement.SpaceEvenly,
             verticalAlignment = Alignment.CenterVertically
         ) {
             AuditCircularGauge(
                 label = "Confidence",
                 value = stats.confidence,
-                color = blueBright2,
+                // White: the old blueBright2 ring is nearly the panel's own blue.
+                color = Color.White,
                 // Per-level: this is confidence in the learner at the currently selected level.
                 description = "$currentLevel data"
             )
             AuditCircularGauge(
                 label = "Readiness",
                 value = stats.readiness,
-                color = if (stats.readiness > 70) LocalExtendedColors.current.textAccentAlternative else orangeLight,
+                // Bright green in both themes: light mode's darker green is too dim on the blue panel.
+                color = if (stats.readiness > 70) Color(0xFF76D893) else orangeLight,
                 // Per-level: readiness for an exam at the currently selected level.
                 description = "$currentLevel exam"
             )
@@ -296,14 +304,15 @@ private fun AuditCircularGauge(label: String, value: Int, color: Color, descript
                 modifier = Modifier.size(80.dp),
                 color = color,
                 strokeWidth = 8.dp,
-                trackColor = Color.DarkGray,
+                // Light translucent track so the unfilled ring shows on the blue panel.
+                trackColor = Color.White.copy(alpha = 0.3f),
                 strokeCap = StrokeCap.Round
             )
-            Text("$value%", fontWeight = FontWeight.Bold, fontSize = 18.sp)
+            Text("$value%", fontWeight = FontWeight.Bold, fontSize = 18.sp, color = Color.White)
         }
         Spacer(Modifier.height(8.dp))
-        Text(label, style = MaterialTheme.typography.labelLarge, fontWeight = FontWeight.Bold)
-        Text(description, style = MaterialTheme.typography.labelSmall, color = Color.Gray)
+        Text(label, style = MaterialTheme.typography.labelLarge, fontWeight = FontWeight.Bold, color = Color.White)
+        Text(description, style = MaterialTheme.typography.labelSmall, color = Color.White.copy(alpha = 0.8f))
     }
 }
 
