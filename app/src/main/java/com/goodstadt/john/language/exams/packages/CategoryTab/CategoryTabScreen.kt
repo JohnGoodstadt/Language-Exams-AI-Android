@@ -323,6 +323,7 @@ fun CategoryTabScreen(
         Box(
             modifier = Modifier
                 .fillMaxSize()
+                .background(LocalExtendedColors.current.groupedPage) // iOS-style grouped page behind the section panels
                 .padding(top = innerPadding.calculateTopPadding())
         ) {
 
@@ -435,6 +436,10 @@ fun CategoryTabScreen(
                                 // Freemium gate: sections past the free preview (B1/B2 only) are locked.
                                 val locked = viewModel.isCategoryLocked(catIdx)
 
+                                // Each section's rows form one rounded panel on the grouped page. No spacer
+                                // items (categoryIndexMap counts header + words), so the gap is row padding.
+                                val lastWordIndex = category.words.lastIndex
+
                                 stickyHeader {
                                     CategorySectionHeader(
                                         category = category,
@@ -454,7 +459,10 @@ fun CategoryTabScreen(
                                     item(key = "locked-teaser-${category.title}") {
                                         Row(
                                             modifier = Modifier
+                                                .padding(bottom = SectionPanelGap)
                                                 .fillMaxWidth()
+                                                .clip(RoundedCornerShape(SectionPanelRadius))
+                                                .background(LocalExtendedColors.current.groupedPanel)
                                                 .clickable { showUpgradeSheet = true }
                                                 .padding(horizontal = 16.dp, vertical = 16.dp),
                                             verticalAlignment = Alignment.CenterVertically
@@ -500,6 +508,10 @@ fun CategoryTabScreen(
                                             // One-time swipe hint on the row just played (5th play).
                                             playSwipeHint = swipeHintSentence == sentenceEntry.sentence,
                                             onSwipeHintDone = { viewModel.swipeHintDone() },
+                                            backgroundColor = LocalExtendedColors.current.groupedPanel,
+                                            modifier = Modifier
+                                                .padding(bottom = if (index == lastWordIndex) SectionPanelGap else 0.dp)
+                                                .clip(sectionPanelShape(isFirst = index == 0, isLast = index == lastWordIndex)),
 
                                             // ✅ TAP HANDLER (Delegate to ViewModel)
                                             onRowTapped = { w, s ->
@@ -660,6 +672,18 @@ private fun CategoryStatsBar(
 }
 
 
+// Grouped section panels (iOS-style): corner radius and the gap below each section.
+private val SectionPanelRadius = 12.dp
+private val SectionPanelGap = 16.dp
+
+/** Rounds only the panel's outer corners: top on the section's first row, bottom on its last. */
+private fun sectionPanelShape(isFirst: Boolean, isLast: Boolean) = RoundedCornerShape(
+    topStart = if (isFirst) SectionPanelRadius else 0.dp,
+    topEnd = if (isFirst) SectionPanelRadius else 0.dp,
+    bottomStart = if (isLast) SectionPanelRadius else 0.dp,
+    bottomEnd = if (isLast) SectionPanelRadius else 0.dp,
+)
+
 /** Sticky section header: title + play/pause + quiz status dots + Quiz / lock button. */
 @Composable
 private fun CategorySectionHeader(
@@ -676,7 +700,7 @@ private fun CategorySectionHeader(
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .background(MaterialTheme.colorScheme.surface) // Important: Solid background for sticky behavior
+            .background(LocalExtendedColors.current.groupedPage) // Solid (page colour) for sticky behaviour
             .padding(
                 horizontal = 16.dp,
                 vertical = 8.dp

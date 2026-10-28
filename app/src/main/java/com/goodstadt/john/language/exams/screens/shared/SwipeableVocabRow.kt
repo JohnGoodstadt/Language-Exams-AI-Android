@@ -101,6 +101,8 @@ fun SwipeableVocabRow(
     // and springs back, then calls [onSwipeHintDone]. The real swipe state isn't touched, so no action fires.
     playSwipeHint: Boolean = false,
     onSwipeHintDone: () -> Unit = {},
+    // Row fill. Defaults to the Material surface; grouped screens pass their panel colour.
+    backgroundColor: Color = MaterialTheme.colorScheme.surface,
     modifier: Modifier = Modifier
 ) {
 
@@ -196,7 +198,7 @@ fun SwipeableVocabRow(
             modifier = Modifier
                 .offset { IntOffset(hintOffset.value.roundToInt(), 0) }
                 .fillMaxWidth()
-                .background(MaterialTheme.colorScheme.surface)
+                .background(backgroundColor)
                 .clickable { onRowTapped(word, sentence) }
                 .padding(horizontal = 16.dp, vertical = 10.dp)
         ) {

@@ -71,6 +71,10 @@ data class ExtendedColors(
     val statusOrange: Color,
     /** Leading Settings icons, cycling in visible row order. */
     val settingsIconPalette: List<Color>,
+    /** iOS-style grouped layout: the page behind section panels (off-white on light, lighter black on dark). */
+    val groupedPage: Color,
+    /** iOS-style grouped layout: the section panel on [groupedPage] (white on light, black on dark). */
+    val groupedPanel: Color,
 ) {
     fun settingsIconColor(index: Int): Color = settingsIconPalette[index % settingsIconPalette.size]
 }
@@ -90,6 +94,8 @@ val DarkExtendedColors = ExtendedColors(
     sectionHeader = orangeLight,             // unchanged on dark (orange)
     statusOrange = statusOrange,             // 0xFFFF9800
     settingsIconPalette = DarkSettingsIconPalette,
+    groupedPage = Color(0xFF1C1C1E),         // iOS secondary system background (lighter black)
+    groupedPanel = Color(0xFF000000),
 )
 
 val LightExtendedColors = ExtendedColors(
@@ -107,6 +113,8 @@ val LightExtendedColors = ExtendedColors(
     sectionHeader = Color(0xFF000000),       // black headers on light
     statusOrange = Color(0xFFFF9800),        // alter this to retint light-mode status orange
     settingsIconPalette = LightSettingsIconPalette,
+    groupedPage = Color(0xFFF2F2F7),         // iOS system grouped background (darker white)
+    groupedPanel = Color(0xFFFFFFFF),
 )
 
 // --- Experimental / reserve palettes -------------------------------------------------------------
