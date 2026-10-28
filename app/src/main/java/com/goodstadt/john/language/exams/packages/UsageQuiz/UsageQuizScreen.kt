@@ -192,6 +192,7 @@ fun UsageQuizScreen(
     Column(
         modifier = Modifier
             .fillMaxSize()
+            .background(LocalExtendedColors.current.groupedPage) // iOS-style grouped page behind the quiz panel
             .padding(10.dp),
         verticalArrangement = Arrangement.spacedBy(6.dp),
         horizontalAlignment = Alignment.CenterHorizontally
@@ -257,6 +258,17 @@ fun UsageQuizScreen(
             color = LocalExtendedColors.current.mutedGrey
         )
 
+        // Quiz panel: from below the divider to below the paging dots, a rounded panel on the grouped page.
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .weight(1f)
+                .clip(RoundedCornerShape(16.dp))
+                .background(LocalExtendedColors.current.groupedPanel)
+                .padding(horizontal = 8.dp, vertical = 10.dp),
+            verticalArrangement = Arrangement.spacedBy(6.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
         // Mastery Filter Chips
         UsageMasteryFilterChips(
             activeFilters = activeFilters,
@@ -359,6 +371,7 @@ fun UsageQuizScreen(
             currentQuestionIndex = currentQuestionIndex,
             firstAnswers = firstAnswers,
         )
+        } //: Column - quiz panel
     }
     UsageQuizBottomSheets(
         viewModel = viewModel,

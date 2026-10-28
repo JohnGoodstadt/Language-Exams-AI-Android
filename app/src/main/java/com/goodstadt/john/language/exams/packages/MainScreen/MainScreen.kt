@@ -362,7 +362,9 @@ fun MainAppContent(navController: NavHostController, selectedVoiceName: String) 
                 }
             } else {
                 NavigationBar(
-                    containerColor = NavigationBarDefaults.containerColor,
+                    // Grouped page grey (as tabs 1-3) instead of Material's tinted (pinkish) surfaceContainer.
+                    containerColor = LocalExtendedColors.current.groupedPage,
+                    tonalElevation = 0.dp,
                     content = navItems
                 )
             }

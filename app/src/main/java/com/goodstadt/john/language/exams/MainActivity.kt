@@ -9,6 +9,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.compose.setContent
+import androidx.activity.SystemBarStyle
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
@@ -62,7 +63,18 @@ class MainActivity : ComponentActivity() {
     @OptIn(ExperimentalMaterial3WindowSizeClassApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+        // Transparent system navigation bar (3-button nav included) so the app's own bottom tab bar colour
+        // shows behind the back/home/recents buttons, instead of the default translucent scrim that each
+        // maker tints differently (grey on Samsung, white on Huawei). Button icons still follow the theme.
+        enableEdgeToEdge(
+            navigationBarStyle = SystemBarStyle.auto(
+                android.graphics.Color.TRANSPARENT,
+                android.graphics.Color.TRANSPARENT
+            )
+        )
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            window.isNavigationBarContrastEnforced = false
+        }
 
         handleNavIntent(intent) // e.g. launched from a practice-reminder notification
 

@@ -77,6 +77,11 @@ fun LanguageExamsAITheme(
             window.statusBarColor = colorScheme.primary.toArgb()
             // Dark status-bar icons only when the bar is light (i.e. in light theme).
             WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = !darkTheme
+            // The navigation bar is transparent (MainActivity), so its back/home/recents icons sit on the
+            // app's own bottom bar colour. Follow the APP theme (System/Light/Dark setting), not the
+            // phone's: SystemBarStyle.auto picks from the phone, giving dark icons on our dark bar when
+            // the two differ. Dark icons in light theme, light icons in dark theme.
+            WindowCompat.getInsetsController(window, view).isAppearanceLightNavigationBars = !darkTheme
         }
     }
 
