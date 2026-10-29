@@ -50,6 +50,9 @@ class Format9ViewModel @Inject constructor(
     companion object {
         private const val PODCAST_PREFS = "podcast_prefs"
         private const val KEY_TRANSLATION_LANGUAGE = "format9_translation_language"
+        private const val KEY_SCENE_PLAY_MODE = "format9_scene_play_mode"
+        private const val KEY_SCENE_REPEAT_COUNT = "format9_scene_repeat_count"
+        val SCENE_REPEAT_RANGE = 2..20
     }
 
     private val owner = "format9:${UUID.randomUUID()}:"
@@ -79,6 +82,17 @@ class Format9ViewModel @Inject constructor(
     private val prefs = context.getSharedPreferences(PODCAST_PREFS, Context.MODE_PRIVATE)
     private val _translationLanguage = MutableStateFlow(prefs.getString(KEY_TRANSLATION_LANGUAGE, "").orEmpty())
     val translationLanguage = _translationLanguage.asStateFlow()
+    // What a scene's play button does (chosen in the scene-options sheet), persisted globally. Defaults to
+    // playing from that scene to the end of the script until the user picks something else.
+    private val _scenePlayMode = MutableStateFlow(
+        Format9ScenePlayMode.entries.firstOrNull { it.name == prefs.getString(KEY_SCENE_PLAY_MODE, null) }
+            ?: Format9ScenePlayMode.TO_END
+    )
+    val scenePlayMode = _scenePlayMode.asStateFlow()
+    // How many times "repeat the scene" plays it; remembered for next time.
+    private val _sceneRepeatCount = MutableStateFlow(prefs.getInt(KEY_SCENE_REPEAT_COUNT, 3).coerceIn(SCENE_REPEAT_RANGE))
+    val sceneRepeatCount = _sceneRepeatCount.asStateFlow()
+
     // Scene the scrubber highlights (playhead): advances as playback crosses scenes, and is set on a scrubber
     // tap for immediate feedback. It's an indicator, not necessarily what's visible on screen.
     private val _focusedSceneIndex = MutableStateFlow(0)
@@ -189,10 +203,38 @@ class Format9ViewModel @Inject constructor(
         toggleSequence(playAllKey(), orderedLines())
     }
 
-    /** Per-scene Play/Stop. */
+    /**
+     * Per-scene Play/Stop, honouring the chosen scene play mode: just the scene, the scene N times in a row,
+     * or from the scene to the end of the script. Always under the scene's key, so that scene's button shows
+     * pause/stop for the whole run.
+     */
     fun toggleScene(scene: Format9Scene) {
         stats.recordReferenceInteraction(sheetName, "scene_play", scene.id)
-        toggleSequence(sceneKey(scene), scene.lines.sortedBy { it.sortorder })
+        toggleSequence(sceneKey(scene), linesForScenePlay(scene))
+    }
+
+    private fun linesForScenePlay(scene: Format9Scene): List<Format9Line> {
+        val sceneLines = scene.lines.sortedBy { it.sortorder }
+        return when (_scenePlayMode.value) {
+            Format9ScenePlayMode.SCENE -> sceneLines
+            Format9ScenePlayMode.REPEAT -> List(_sceneRepeatCount.value.coerceAtLeast(1)) { sceneLines }.flatten()
+            Format9ScenePlayMode.TO_END -> {
+                val scenes = orderedScenes()
+                val start = scenes.indexOfFirst { it.id == scene.id }
+                if (start < 0) sceneLines else scenes.drop(start).flatMap { it.lines.sortedBy { l -> l.sortorder } }
+            }
+        }
+    }
+
+    /** Save the scene-options sheet choice (OK). Nothing plays until a scene's play button is tapped. */
+    fun setScenePlayOptions(mode: Format9ScenePlayMode, repeatCount: Int) {
+        _scenePlayMode.value = mode
+        _sceneRepeatCount.value = repeatCount.coerceIn(SCENE_REPEAT_RANGE)
+        prefs.edit()
+            .putString(KEY_SCENE_PLAY_MODE, mode.name)
+            .putInt(KEY_SCENE_REPEAT_COUNT, _sceneRepeatCount.value)
+            .apply()
+        stats.recordReferenceInteraction(sheetName, "scene_play_mode", mode.name)
     }
 
     private fun toggleSequence(key: String, lines: List<Format9Line>) {
@@ -296,3 +338,6 @@ class Format9ViewModel @Inject constructor(
 
     override fun onCleared() { stopPlayback(); super.onCleared() }
 }
+
+/** What a scene header's play button does. Persisted by name. */
+enum class Format9ScenePlayMode { SCENE, REPEAT, TO_END }

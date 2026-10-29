@@ -6,6 +6,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.text.style.TextAlign
 import java.util.Locale
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -18,6 +19,9 @@ import androidx.compose.material.icons.filled.Pause
 import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material.icons.filled.Schedule
 import androidx.compose.material.icons.filled.Translate
+import androidx.compose.material.icons.filled.Tune
+import androidx.compose.material.icons.filled.AddCircle
+import androidx.compose.material.icons.filled.RemoveCircle
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -62,6 +66,9 @@ fun Format9ContainerScreen(
     val showTranslation by viewModel.showTranslation.collectAsStateWithLifecycle()
     val translationLanguage by viewModel.translationLanguage.collectAsStateWithLifecycle()
     var showLanguageChooser by remember { mutableStateOf(false) }
+    val scenePlayMode by viewModel.scenePlayMode.collectAsStateWithLifecycle()
+    val sceneRepeatCount by viewModel.sceneRepeatCount.collectAsStateWithLifecycle()
+    var showScenePlayOptions by remember { mutableStateOf(false) }
     val focusedSceneIndex by viewModel.focusedSceneIndex.collectAsStateWithLifecycle()
     val prompt by viewModel.prompt.collectAsStateWithLifecycle()
     val playbackError by viewModel.playbackError.collectAsStateWithLifecycle()
@@ -138,6 +145,8 @@ fun Format9ContainerScreen(
                             SceneHeader(
                                 scene = scene,
                                 activePlaying = activelyPlaying(viewModel.sceneKey(scene)),
+                                repeatCount = if (scenePlayMode == Format9ScenePlayMode.REPEAT) sceneRepeatCount else null,
+                                onOptions = { showScenePlayOptions = true },
                                 onToggle = { viewModel.toggleScene(scene) }
                             )
                         }
@@ -229,14 +238,36 @@ fun Format9ContainerScreen(
             onDismiss = { showLanguageChooser = false }
         )
     }
+    if (showScenePlayOptions) {
+        ScenePlayOptionsSheet(
+            initialMode = scenePlayMode,
+            initialCount = sceneRepeatCount,
+            onSave = { mode, count -> viewModel.setScenePlayOptions(mode, count); showScenePlayOptions = false },
+            onDismiss = { showScenePlayOptions = false }
+        )
+    }
 }
 
+/** Scene title row: options (play mode) button, the repeat count when repeat is on, then Play/Stop. */
 @Composable
-private fun SceneHeader(scene: Format9Scene, activePlaying: Boolean, onToggle: () -> Unit) {
+private fun SceneHeader(
+    scene: Format9Scene,
+    activePlaying: Boolean,
+    repeatCount: Int?,
+    onOptions: () -> Unit,
+    onToggle: () -> Unit
+) {
     Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
         Row(verticalAlignment = Alignment.CenterVertically) {
             Text(scene.title, Modifier.weight(1f), style = MaterialTheme.typography.titleMedium,
                 color = LocalExtendedColors.current.screenAccent, fontWeight = FontWeight.Bold)
+            IconButton(onClick = onOptions) {
+                Icon(Icons.Default.Tune, "Scene play options", tint = LocalExtendedColors.current.screenAccent)
+            }
+            if (repeatCount != null) {
+                Text("$repeatCount", style = MaterialTheme.typography.labelLarge, fontWeight = FontWeight.Bold,
+                    color = LocalExtendedColors.current.screenAccent)
+            }
             IconButton(onClick = onToggle) {
                 Icon(if (activePlaying) Icons.Default.Pause else Icons.Default.PlayArrow,
                     if (activePlaying) "Stop ${scene.title}" else "Play scene ${scene.title}", tint = LocalExtendedColors.current.screenAccent)
@@ -386,6 +417,79 @@ private fun TranslationLanguageChooserSheet(
                 enabled = selected.isNotBlank(),
                 modifier = Modifier.fillMaxWidth()
             ) { Text("Choose this one") }
+            Spacer(Modifier.height(8.dp))
+        }
+    }
+}
+
+/**
+ * Scene play-mode sheet (matches iOS ScenePlayOptionsView): play the scene / repeat it N times (− N +) /
+ * play to the end. OK only saves the choice; nothing plays until a scene's play button is tapped.
+ */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun ScenePlayOptionsSheet(
+    initialMode: Format9ScenePlayMode,
+    initialCount: Int,
+    onSave: (Format9ScenePlayMode, Int) -> Unit,
+    onDismiss: () -> Unit
+) {
+    val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+    var selected by remember { mutableStateOf(initialMode) }
+    var count by remember { mutableIntStateOf(initialCount.coerceIn(Format9ViewModel.SCENE_REPEAT_RANGE)) }
+    val range = Format9ViewModel.SCENE_REPEAT_RANGE
+
+    @Composable
+    fun OptionRow(mode: Format9ScenePlayMode, title: String, subtitle: String, trailing: @Composable () -> Unit = {}) {
+        Row(
+            Modifier
+                .fillMaxWidth()
+                .clip(RoundedCornerShape(8.dp))
+                .selectable(selected = mode == selected, role = Role.RadioButton, onClick = { selected = mode })
+                .padding(vertical = 8.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            RadioButton(selected = mode == selected, onClick = null)
+            Spacer(Modifier.width(12.dp))
+            Column(Modifier.weight(1f)) {
+                Text(title, style = MaterialTheme.typography.bodyLarge)
+                Text(subtitle, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+            }
+            trailing()
+        }
+    }
+
+    ModalBottomSheet(onDismissRequest = onDismiss, sheetState = sheetState) {
+        Column(Modifier.padding(start = 24.dp, end = 24.dp, bottom = 24.dp)) {
+            Text("Scene play button", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.SemiBold)
+            Spacer(Modifier.height(4.dp))
+            Text(
+                "Choose what happens when you tap a scene's play button.",
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+            Spacer(Modifier.height(16.dp))
+
+            OptionRow(Format9ScenePlayMode.SCENE, "Play the scene", "Stop at the end of the scene")
+            HorizontalDivider()
+            OptionRow(Format9ScenePlayMode.REPEAT, "Repeat the scene", "Play the scene $count times") {
+                // − / + also select the repeat option.
+                IconButton(onClick = { count -= 1; selected = Format9ScenePlayMode.REPEAT }, enabled = count > range.first) {
+                    Icon(Icons.Default.RemoveCircle, "Fewer repeats",
+                        tint = if (count > range.first) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outline)
+                }
+                Text("$count", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold,
+                    modifier = Modifier.widthIn(min = 24.dp), textAlign = TextAlign.Center)
+                IconButton(onClick = { count += 1; selected = Format9ScenePlayMode.REPEAT }, enabled = count < range.last) {
+                    Icon(Icons.Default.AddCircle, "More repeats",
+                        tint = if (count < range.last) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outline)
+                }
+            }
+            HorizontalDivider()
+            OptionRow(Format9ScenePlayMode.TO_END, "Play to the end", "From the scene to the end of the script")
+
+            Spacer(Modifier.height(20.dp))
+            Button(onClick = { onSave(selected, count) }, modifier = Modifier.fillMaxWidth()) { Text("OK") }
             Spacer(Modifier.height(8.dp))
         }
     }
