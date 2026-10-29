@@ -139,10 +139,20 @@ class BillingRepository @Inject constructor(
             scope.launch {
                 processPurchases(purchases)
             }
+        } else if (billingResult.responseCode == BillingClient.BillingResponseCode.ITEM_ALREADY_OWNED) {
+            refreshAlreadyOwnedPurchase()
         } else {
             _billingError.value = "Purchase failed with code: ${billingResult.responseCode}"
             Timber.e("Purchase update error: ${billingResult.debugMessage}")
         }
+    }
+
+    private fun refreshAlreadyOwnedPurchase() {
+        // Play can refresh a stale ownership cache when it reports ITEM_ALREADY_OWNED.
+        // Query the resulting purchase and use normal processing to grant access.
+        Timber.i("Billing: Google reports the premium product is already owned; refreshing purchases.")
+        _billingError.value = null
+        connect()
     }
 
     private val billingClient: BillingClient = BillingClient.newBuilder(context)
@@ -335,7 +345,8 @@ class BillingRepository @Inject constructor(
             val purchases = purchasesResult.purchasesList
 
             if (billingResult.responseCode == BillingClient.BillingResponseCode.OK) {
-                Timber.d("Purchases query successful. Found ${purchases.size} items.")
+                _billingError.value = null
+                Timber.i("Billing: purchases query succeeded; returned ${purchases.size} item(s).")
                 // Pass the list to the central processor.
                 processPurchases(purchases)
             } else {
@@ -374,7 +385,15 @@ class BillingRepository @Inject constructor(
         val billingFlowParams = BillingFlowParams.newBuilder()
             .setProductDetailsParamsList(listOf(productDetailsParams)).build()
 
-        billingClient.launchBillingFlow(activity, billingFlowParams)
+        val result = billingClient.launchBillingFlow(activity, billingFlowParams)
+        when (result.responseCode) {
+            BillingClient.BillingResponseCode.OK -> Unit // Completion arrives through the listener.
+            BillingClient.BillingResponseCode.ITEM_ALREADY_OWNED -> refreshAlreadyOwnedPurchase()
+            else -> {
+                _billingError.value = "Could not open purchase: ${result.debugMessage}"
+                Timber.w("Billing: purchase launch failed. Code: ${result.responseCode}")
+            }
+        }
     }
 
     /**
@@ -383,6 +402,14 @@ class BillingRepository @Inject constructor(
      */
     private suspend fun processPurchases(purchases: List<Purchase>) {
         val premiumPurchase = purchases.firstOrNull { it.products.contains(PRODUCT_ID) }
+        // Product ID/state are sufficient for diagnostics; never log tokens or account details.
+        Timber.i(
+            "Billing: premium product=%s, found=%s, state=%s, acknowledged=%s",
+            PRODUCT_ID,
+            premiumPurchase != null,
+            premiumPurchase?.purchaseState,
+            premiumPurchase?.isAcknowledged
+        )
         ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statIAPProcessPurchaseCount)
         ttsStatsRepository.inc(TTSStatsRepository.fsDOC.USER, statIAPProcessPurchaseCount)
 
@@ -438,7 +465,7 @@ class BillingRepository @Inject constructor(
                 ttsStatsRepository.inc(TTSStatsRepository.fsDOC.USER, statIAPAlreadyPurchasedCount)
 
                 _isPurchased.value = true
-                Timber.d("Existing premium purchase found.")
+                Timber.i("Billing: existing premium purchase restored; premium access enabled.")
             }
         } else {
             ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statIAPNoPremiumPurchaseCount)

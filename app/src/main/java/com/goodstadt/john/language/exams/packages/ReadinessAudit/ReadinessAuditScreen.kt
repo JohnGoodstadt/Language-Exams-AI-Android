@@ -2,6 +2,7 @@ package com.goodstadt.john.language.exams.packages.ReadinessAudit
 
 import android.content.Context
 import android.widget.Toast
+import androidx.activity.compose.BackHandler
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
@@ -19,19 +20,18 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
-import androidx.activity.compose.BackHandler
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Close
-import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.TextButton
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.ArrowForward
 import androidx.compose.material.icons.automirrored.filled.VolumeUp
+import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.outlined.Info
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
@@ -45,7 +45,9 @@ import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.RadioButtonDefaults
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -56,9 +58,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
-import androidx.compose.foundation.layout.widthIn
-import androidx.compose.material3.Surface
-import com.goodstadt.john.language.exams.ui.LocalIsExpanded
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.drawWithContent
@@ -83,20 +82,18 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.R
 import com.goodstadt.john.language.exams.packages.UsageQuiz.QuizQuestion
+import com.goodstadt.john.language.exams.packages.UsageQuiz.QuizState
 import com.goodstadt.john.language.exams.packages.UsageQuiz.dotColor
 import com.goodstadt.john.language.exams.packages.reference.QuizInfoBottomSheetView
 import com.goodstadt.john.language.exams.packages.reference.UsageDashboardScreen
 import com.goodstadt.john.language.exams.packages.reference.shared.HorizontalLevelPicker
-import com.goodstadt.john.language.exams.packages.UsageQuiz.QuizState
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
-import androidx.compose.foundation.clickable
-import com.goodstadt.john.language.exams.screens.shared.AutoAdvanceToggleButton
 import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
+import com.goodstadt.john.language.exams.screens.shared.AutoAdvanceToggleButton
 import com.goodstadt.john.language.exams.storage.UiEvent
-import com.goodstadt.john.language.exams.ui.theme.blueBright2
+import com.goodstadt.john.language.exams.ui.LocalIsExpanded
 import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
+import com.goodstadt.john.language.exams.ui.theme.blueBright2
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.goodstadt.john.language.exams.utils.HeightClass
 import com.goodstadt.john.language.exams.utils.rememberHeightClass
@@ -1333,11 +1330,12 @@ private fun AuditQuizHowToSheet(exampleSentence: String, onClose: () -> Unit) {
 
             // 2. Tapping the sentence itself also plays it (uses the real first question's sentence).
             Text(
-                text = if (exampleSentence.isNotBlank()) {
-                    "Tap ‘$exampleSentence’ to hear the sentence"
-                } else {
-                    "Tap the sentence to hear it"
-                },
+//                text = if (exampleSentence.isNotBlank()) {
+//                    "Tap ‘$exampleSentence’ to hear the sentence"
+//                } else {
+//                    "Tap the sentence to hear it"
+//                },
+                text =  "Tap the sentence to hear it",
                 style = MaterialTheme.typography.bodyLarge,
                 color = MaterialTheme.colorScheme.onSurface
             )
