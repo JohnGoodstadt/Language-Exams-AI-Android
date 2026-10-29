@@ -27,6 +27,7 @@ import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
+import timber.log.Timber
 import java.util.UUID
 import javax.inject.Inject
 
@@ -56,7 +57,7 @@ class Format8PlaybackViewModel @Inject constructor(
         private set
 
     init{
-        println("format 8 init")
+        Timber.d("format 8 init")
     }
     fun isLocked(rank: Int): Boolean = policy.isRowLocked(ContentArea.REFERENCE, null, rank)
     fun sectionKey(sheetName: String, rank: Int): String = "$owner$sheetName:$rank"

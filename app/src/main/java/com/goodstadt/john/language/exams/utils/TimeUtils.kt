@@ -4,6 +4,7 @@ import android.content.Context
 import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import org.jetbrains.annotations.Debug
+import timber.log.Timber
 import java.util.Calendar
 import java.util.Date
 import java.util.concurrent.TimeUnit
@@ -124,16 +125,16 @@ suspend fun calcIsTodayFreePassDay(userPreferencesRepository: UserPreferencesRep
     }
     if (initialAppInstallDate != null) {
         // Log the loaded date for debugging (equivalent to Logger.d)
-        println("Initial Install Date found: $initialAppInstallDate")
+        Timber.d("Initial Install Date found: $initialAppInstallDate")
 
         // Check the 24-hour condition using the new extension function
         val isWithin24Hours = initialAppInstallDate.isWithin24Hours()
 
-        println("Is within 24 hours: $isWithin24Hours")
+        Timber.d("Is within 24 hours: $isWithin24Hours")
         return isWithin24Hours
     } else {
         // Fallback logic: No install date found (equivalent to Logger.f)
-        println("FATAL: No install date found in DataStore. Setting Date.distantPast.")
+        Timber.w("FATAL: No install date found in DataStore. Setting Date.distantPast.")
 
         // Save the earliest possible date (similar to Date.distantPast)
         // In Kotlin/Java, Date(Long.MIN_VALUE) is the most equivalent earliest date.

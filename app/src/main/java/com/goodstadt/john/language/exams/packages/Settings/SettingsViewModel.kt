@@ -948,15 +948,15 @@ class SettingsViewModel @Inject constructor(
                     val catTitle = category.title.replace(" ","").replace(",","")
                     categoryList = "$categoryList,$catTitle"
 //                    println("--- Category: ${catTitle} ---")
-                    println(" ")
-                    println("WordQuiz${catTitle}1-en count:${category.words.count()}")
+                    Timber.d(" ")
+                    Timber.d("WordQuiz${catTitle}1-en count:${category.words.count()}")
                     // 2. Extract just the word strings, chunk them, and print
                     category.words
                         .map { it.word } // Convert List<Format0Word> to List<String>
                         .chunked(10)     // Split into lists of 10 items max
                         .forEach { chunk ->
                             // Join the chunk into a single CSV string
-                            println(chunk.joinToString(", "))
+                            Timber.d(chunk.joinToString(", "))
                         }
 
                     category.words
@@ -967,7 +967,7 @@ class SettingsViewModel @Inject constructor(
                         }
 
                 }
-                println(".")
+                Timber.d(".")
                 Timber.i("$categoryList")
                 val wl = allWordList.joinToString(",")
                 Timber.i("$wl")
@@ -1022,9 +1022,9 @@ class SettingsViewModel @Inject constructor(
                     val words = csv.split(",")
                     val groups = words.chunked(10)
                     groups.forEachIndexed { index, group ->
-                        println("${index+1} ${group.joinToString(",")}")
+                        Timber.d("${index+1} ${group.joinToString(",")}")
                     }
-                    println()
+                    Timber.d(" ")
 
                 } //category
                 Timber.i("${csv}")
@@ -1073,7 +1073,7 @@ class SettingsViewModel @Inject constructor(
             val paragraph = aiManager.getTeacherParagraphGemini(wordList, currentModel)
 
             if (paragraph != null) {
-                println(paragraph)
+                Timber.d("%s", paragraph)
 //                _uiState.update { it.copy(paragraphText = paragraph) }
                 // Now trigger your TTS as usual...
             }

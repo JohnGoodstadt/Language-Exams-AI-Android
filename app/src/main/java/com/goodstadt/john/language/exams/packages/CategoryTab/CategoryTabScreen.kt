@@ -806,7 +806,7 @@ private fun CategorySectionHeader(
             }
         } else {
             if (DEBUG) {
-                println("am i here")
+                Timber.d("am i here")
             }
         }
     }

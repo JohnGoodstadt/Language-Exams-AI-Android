@@ -12,6 +12,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import timber.log.Timber
 
 @Composable
 fun VocabQuizNavigation() {
@@ -56,7 +57,7 @@ fun VocabQuizNavigation() {
                 onBackClick = { navController.popBackStack() },
                 onStartSet = { selectedSet ->
                     // Navigate to actual Quiz Screen (Next Step)
-                    println("Starting ${selectedSet.setTitle}")
+                    Timber.d("Starting ${selectedSet.setTitle}")
                 }
             )
         }

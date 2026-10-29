@@ -282,7 +282,7 @@ class ConjugationsViewModel @Inject constructor(
                     }
                 }
                 else -> {
-                    println("State is not UiState, skipping audio playback.")
+                    Timber.w("State is not UiState, skipping audio playback.")
                 }
             }
         }
@@ -321,7 +321,7 @@ class ConjugationsViewModel @Inject constructor(
                     )
                 }
                 else -> {
-                    println("State is not UiState, skipping audio playback.")
+                    Timber.w("State is not UiState, skipping audio playback.")
                 }
             }
         }
@@ -354,7 +354,7 @@ class ConjugationsViewModel @Inject constructor(
                 }
             }
             else -> {
-                println("State is not UiState, skipping audio playback.")
+                Timber.w("State is not UiState, skipping audio playback.")
             }
         }
 

@@ -269,7 +269,7 @@ class FirestoreRepository @Inject constructor(
 
         itemRef.update(updates)
             .addOnFailureListener { e ->
-                println("Error updating field ${property}: $e")
+                Timber.w(e, "Error updating field %s", property)
             }
     }
 
@@ -292,7 +292,7 @@ class FirestoreRepository @Inject constructor(
 
         itemRef.update(updates)
             .addOnFailureListener { e ->
-                println("Error updating fbUpdateUsePurchasedProperty(): $e")
+                Timber.w(e, "Error updating fbUpdateUsePurchasedProperty()")
             }
     }
     fun fbUpdateUseFailedPurchasedProperty(erormMssage:String) {
@@ -311,7 +311,7 @@ class FirestoreRepository @Inject constructor(
 
         itemRef.update(updates)
             .addOnFailureListener { e ->
-                println("Error updating fbUpdateUsePurchasedProperty(): $e")
+                Timber.w(e, "Error updating fbUpdateUseFailedPurchasedProperty()")
             }
     }
 

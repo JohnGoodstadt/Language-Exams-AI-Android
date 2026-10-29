@@ -299,7 +299,7 @@ class ReferenceGenericViewModel @Inject constructor(
         val currentState = _uiState.value
         if (currentState is GenericVocabUiState.Success) {
             val categories = currentState.categories
-            println("Found ${categories.size} categories")
+            Timber.d("Found ${categories.size} categories")
 
             val allSentences = categories
                 .flatMap { it.words }
