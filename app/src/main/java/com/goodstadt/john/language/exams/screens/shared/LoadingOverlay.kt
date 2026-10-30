@@ -10,6 +10,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.unit.dp
 
 import androidx.compose.material3.CircularProgressIndicator
@@ -34,6 +35,41 @@ fun LoadingOverlay() {
             Box(contentAlignment = Alignment.Center) {
                 CircularProgressIndicator(
                     modifier = Modifier.size(32.dp), // Smaller spinner
+                    color = MaterialTheme.colorScheme.onSecondaryContainer,
+                    strokeWidth = 3.dp
+                )
+            }
+        }
+    }
+}
+/**
+ * Spinner shown OVER the current content while the next sheet loads, so switching sheets (verb / sub-tab
+ * picker) never blanks the screen. Swallows taps so the outgoing sheet can't be played mid-switch.
+ */
+@Composable
+fun SheetSwitchingOverlay(visible: Boolean) {
+    if (!visible) return
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .pointerInput(Unit) {
+                awaitPointerEventScope {
+                    while (true) {
+                        awaitPointerEvent().changes.forEach { it.consume() }
+                    }
+                }
+            },
+        contentAlignment = Alignment.Center
+    ) {
+        Surface(
+            shape = RoundedCornerShape(12.dp),
+            color = MaterialTheme.colorScheme.secondaryContainer,
+            shadowElevation = 6.dp,
+            modifier = Modifier.size(60.dp)
+        ) {
+            Box(contentAlignment = Alignment.Center) {
+                CircularProgressIndicator(
+                    modifier = Modifier.size(32.dp),
                     color = MaterialTheme.colorScheme.onSecondaryContainer,
                     strokeWidth = 3.dp
                 )

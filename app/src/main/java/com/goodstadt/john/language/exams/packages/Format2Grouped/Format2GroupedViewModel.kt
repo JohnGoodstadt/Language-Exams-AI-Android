@@ -113,10 +113,13 @@ class Format2GroupedViewModel @Inject constructor(
         loadContentForSubTab(subTab)
     }
 
+    private var loadJob: kotlinx.coroutines.Job? = null
+
     private fun loadContentForSubTab(subTab: SubTabDefinition) {
         val sheetName = subTab.firestoreDocumentId ?: return
 
-        viewModelScope.launch {
+        loadJob?.cancel() // a newer sub-tab tap wins over a slower earlier load
+        loadJob = viewModelScope.launch {
             // Check Cache
             if (contentCache.containsKey(sheetName)) {
                 _uiState.update {
@@ -131,6 +134,7 @@ class Format2GroupedViewModel @Inject constructor(
                 return@launch
             }
 
+            // isLoading with a file already shown = the screen keeps it visible under an overlay spinner.
             _uiState.update { it.copy(isLoading = true, currentSheetName = sheetName) }
 
             // Fetch Format 2

@@ -22,6 +22,8 @@ import androidx.compose.material.icons.filled.SportsEsports
 import androidx.compose.material.icons.filled.Translate
 import androidx.compose.material.icons.filled.WorkspacePremium
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.runtime.key
+import com.goodstadt.john.language.exams.screens.shared.SheetSwitchingOverlay
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
@@ -113,9 +115,11 @@ fun Format2GroupedScreen(
         }
 
         // 2. CONTENT AREA
-        if (uiState.isLoading) {
+        // Switching sub-tab keeps the current sheet on screen (overlay spinner) instead of going blank;
+        // the full-screen spinner is only for the very first load.
+        if (uiState.isLoading && uiState.currentFormat2File == null) {
             Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) { CircularProgressIndicator() }
-        } else if (uiState.error != null) {
+        } else if (uiState.error != null && !uiState.isLoading) {
             Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                 Text("Error: ${uiState.error}", color = Color.Red)
             }
@@ -124,26 +128,31 @@ fun Format2GroupedScreen(
             uiState.currentFormat2File?.let { file ->
 
 
-                // ✅ USE THE STATELESS COMPONENT
-                Format2Content(
-                    title = file.title,
-                    description = file.description,
-                    levels = file.data,
+                Box(Modifier.fillMaxSize()) {
+                    // Keyed by file instance so a newly loaded sheet starts at the top, not the old scroll.
+                    key(System.identityHashCode(file)) {
+                        Format2Content(
+                            title = file.title,
+                            description = file.description,
+                            levels = file.data,
 
-                    // Logic Delegates
-                    isHeard = { sentence ->
+                            // Logic Delegates
+                            isHeard = { sentence ->
 
-                        viewModel.isHeard(sentence)
+                                viewModel.isHeard(sentence)
 
-                    },
-                    getPlayCount = { 0 }, // Optional if you want to implement count logic
-                    onPlayTrack = { sentence -> viewModel.handleSentenceTap(sentence) },
-                    onShowSideQuestSheet = { showSideQuestSheet = true },
-                    onShowQuizSheet = {
-                        showQuizSheet = true
-                    },
-                    onShowTranslateSheet = { showTranslateSheet = true }
-                )
+                            },
+                            getPlayCount = { 0 }, // Optional if you want to implement count logic
+                            onPlayTrack = { sentence -> viewModel.handleSentenceTap(sentence) },
+                            onShowSideQuestSheet = { showSideQuestSheet = true },
+                            onShowQuizSheet = {
+                                showQuizSheet = true
+                            },
+                            onShowTranslateSheet = { showTranslateSheet = true }
+                        )
+                    }
+                    SheetSwitchingOverlay(visible = uiState.isLoading)
+                }
             }
         }
     }

@@ -35,6 +35,7 @@ import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -55,6 +56,7 @@ import com.goodstadt.john.language.exams.packages.ReferencePronouns.PronounSente
 import com.goodstadt.john.language.exams.packages.ReferenceQuiz.ReferenceQuizScreen
 import com.goodstadt.john.language.exams.packages.Translate.TranslateSheet
 import com.goodstadt.john.language.exams.packages.reference.shared.HorizontalLevelPicker
+import com.goodstadt.john.language.exams.screens.shared.SheetSwitchingOverlay
 import com.goodstadt.john.language.exams.screens.shared.buttonStyleChipColors
 import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 
@@ -71,6 +73,7 @@ import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 @Composable
 fun ConjugationsTeachingScreen(viewModel: ConjugationsTeachingViewModel = hiltViewModel()) {
     val selectedVerb by viewModel.selectedVerb.collectAsState()
+    val isSwitching by viewModel.isSwitching.collectAsState()
     var showTranslateSheet by rememberSaveable { mutableStateOf(false) }
 
     // Quiz bottom sheet (reuses the shared ReferenceQuizScreen, fed a runtime-generated question set).
@@ -113,12 +116,15 @@ fun ConjugationsTeachingScreen(viewModel: ConjugationsTeachingViewModel = hiltVi
                         selectedCategoryId = categories.firstOrNull()?.id ?: ""
                     }
 
-                    ConjugationsTeachingContent(
-                        sheet = state.sheet,
-                        selectedCategoryId = selectedCategoryId,
-                        onCategorySelected = { selectedCategoryId = it },
-                        onPlay = viewModel::play
-                    )
+                    // Keyed by sheet instance so a newly loaded verb starts at the top, not the old scroll.
+                    key(System.identityHashCode(state.sheet)) {
+                        ConjugationsTeachingContent(
+                            sheet = state.sheet,
+                            selectedCategoryId = selectedCategoryId,
+                            onCategorySelected = { selectedCategoryId = it },
+                            onPlay = viewModel::play
+                        )
+                    }
 
                     // Only offer a quiz for a tense whose form actually varies enough across persons to
                     // make a real question (hides it for English's identical-form tenses — see isQuizzable).
@@ -148,6 +154,8 @@ fun ConjugationsTeachingScreen(viewModel: ConjugationsTeachingViewModel = hiltVi
                     }
                 }
             }
+
+            SheetSwitchingOverlay(visible = isSwitching)
 
             // The single Translate ("T") button, bottom-RIGHT — mirrors the vocab tabs' "T".
             FloatingActionButton(

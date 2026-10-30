@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material3.CircularProgressIndicator
@@ -40,6 +41,7 @@ import com.goodstadt.john.language.exams.packages.ReferenceQuiz.ReferenceQuizScr
 import com.goodstadt.john.language.exams.packages.Translate.TranslateSheet
 import com.goodstadt.john.language.exams.packages.reference.SimpleSectionedVocabList
 import com.goodstadt.john.language.exams.packages.reference.shared.ScrollableHorizontalLevelPicker
+import com.goodstadt.john.language.exams.screens.shared.SheetSwitchingOverlay
 import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestStatsSheet
 import com.goodstadt.john.language.exams.uti.buildSideQuestData
 import com.goodstadt.john.language.exams.utils.QuizDataConverter
@@ -59,6 +61,7 @@ fun GroupedSheetScreen(
     val isDailyRateLimitingSheetVisible by viewModel.showRateDailyLimitSheet.collectAsState()
     val isHourlyRateLimitingSheetVisible by viewModel.showRateHourlyLimitSheet.collectAsState()
     val lazyListState = rememberLazyListState()
+    var shownSheetName by rememberSaveable { mutableStateOf<String?>(null) }
     var showSideQuestSheet by remember { mutableStateOf(false) }
     val sheetStateSideQuest = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
@@ -134,34 +137,45 @@ fun GroupedSheetScreen(
                 }
             }
             is ContentState.Success -> {
+                // A newly loaded sub-tab starts at the top rather than at the previous sheet's scroll
+                // (but returning to the same sheet keeps its position).
+                LaunchedEffect(System.identityHashCode(contentState.categories)) {
+                    if (shownSheetName != null && shownSheetName != uiState.currentSheetName) {
+                        lazyListState.scrollToItem(0)
+                    }
+                    shownSheetName = uiState.currentSheetName
+                }
 
-                SimpleSectionedVocabList(
-                    data = contentState.categories,
-                    isHeard = { sentence -> viewModel.isHeard(sentence) },
-                    playCount = { sentence -> viewModel.getPlayCount(sentence) },
-                    listState = lazyListState,
-                    contentPadding = PaddingValues(bottom = 80.dp),
+                Box(Modifier.fillMaxSize()) {
+                    SimpleSectionedVocabList(
+                        data = contentState.categories,
+                        isHeard = { sentence -> viewModel.isHeard(sentence) },
+                        playCount = { sentence -> viewModel.getPlayCount(sentence) },
+                        listState = lazyListState,
+                        contentPadding = PaddingValues(bottom = 80.dp),
 
-                    // Freemium: lock words past the free preview; tapping a locked word opens the paywall.
-                    isWordLocked = { index -> viewModel.isReferenceRowLocked(index) },
-                    onLockedTapped = { showUpgradeSheet = true },
+                        // Freemium: lock words past the free preview; tapping a locked word opens the paywall.
+                        isWordLocked = { index -> viewModel.isReferenceRowLocked(index) },
+                        onLockedTapped = { showUpgradeSheet = true },
 
-                    // ACTIONS
-                    onRowTapped = { word, sentence, category ->
-                        viewModel.handleTap(sentence.sentence)
-                    },
-                    onSideQuestTapped = {
-                        showQuizSheet = false
-                        showSideQuestSheet = true
+                        // ACTIONS
+                        onRowTapped = { word, sentence, category ->
+                            viewModel.handleTap(sentence.sentence)
+                        },
+                        onSideQuestTapped = {
+                            showQuizSheet = false
+                            showSideQuestSheet = true
 
-                    },
-                    onQuizSheetTapped = {
-                        showSideQuestSheet = false
-                        showQuizSheet = true
-                    },
-                    // Translate ("T") to the left of the Quiz button.
-                    onTranslateTapped = { showTranslateSheet = true }
-                )
+                        },
+                        onQuizSheetTapped = {
+                            showSideQuestSheet = false
+                            showQuizSheet = true
+                        },
+                        // Translate ("T") to the left of the Quiz button.
+                        onTranslateTapped = { showTranslateSheet = true }
+                    )
+                    SheetSwitchingOverlay(visible = uiState.isSwitching)
+                }
             }
             is ContentState.Error -> {
                 // An error occurred during the data fetch

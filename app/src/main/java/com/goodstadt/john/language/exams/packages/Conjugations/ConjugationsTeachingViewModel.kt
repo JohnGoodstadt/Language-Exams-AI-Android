@@ -8,6 +8,7 @@ import com.goodstadt.john.language.exams.data.repository.BillingRepository
 import com.goodstadt.john.language.exams.data.repository.ContentRepository
 import com.goodstadt.john.language.exams.packages.ReferencePronouns.Format6File
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -48,6 +49,12 @@ class ConjugationsTeachingViewModel @Inject constructor(
     private val _uiState = MutableStateFlow<ConjugationsTeachingUiState>(ConjugationsTeachingUiState.Loading)
     val uiState: StateFlow<ConjugationsTeachingUiState> = _uiState.asStateFlow()
 
+    /** True while another verb's sheet loads; the current sheet stays on screen under a spinner. */
+    private val _isSwitching = MutableStateFlow(false)
+    val isSwitching: StateFlow<Boolean> = _isSwitching.asStateFlow()
+
+    private var loadJob: Job? = null
+
     /** Logical fileFormat-6 sheet name for the selected verb, e.g. "GermanConjugationsToBeTeaching". */
     private fun teachingSheetName(verb: String): String =
         LanguageConfig.getConjugationFirestoreSheetName(verb) + "Teaching"
@@ -65,8 +72,11 @@ class ConjugationsTeachingViewModel @Inject constructor(
 
     private fun load(verb: String) {
         val documentId = teachingSheetName(verb)
-        viewModelScope.launch {
-            _uiState.value = ConjugationsTeachingUiState.Loading
+        loadJob?.cancel() // a newer verb tap wins over a slower earlier load
+        loadJob = viewModelScope.launch {
+            // Keep the current sheet visible (with an overlay spinner) instead of blanking the screen.
+            if (_uiState.value is ConjugationsTeachingUiState.Success) _isSwitching.value = true
+            else _uiState.value = ConjugationsTeachingUiState.Loading
             contentRepository.getFormat6Data(documentId)
                 .onSuccess { sheet ->
                     // Sort tenses and their chips by sortOrder for a stable chip order.
@@ -76,11 +86,13 @@ class ConjugationsTeachingViewModel @Inject constructor(
                             .map { c -> c.copy(patterns = c.patterns.sortedBy { it.sortOrder }) }
                     )
                     _uiState.value = ConjugationsTeachingUiState.Success(ordered)
+                    _isSwitching.value = false
                 }
                 .onFailure { e ->
                     Timber.e(e, "ConjugationsTeaching: failed to load '$documentId'")
                     _uiState.value =
                         ConjugationsTeachingUiState.Error(e.localizedMessage ?: "Failed to load")
+                    _isSwitching.value = false
                 }
         }
     }

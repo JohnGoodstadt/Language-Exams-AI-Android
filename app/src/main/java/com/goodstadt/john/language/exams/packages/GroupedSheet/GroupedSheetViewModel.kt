@@ -43,6 +43,8 @@ data class GroupedSheetUiState(
     val subTabs: List<SubTabDefinition> = emptyList(),
     val selectedSubTab: SubTabDefinition? = null,
     val contentState: ContentState = ContentState.Idle,
+    /** True while another sub-tab loads; the current content stays on screen under a spinner. */
+    val isSwitching: Boolean = false,
     val lastUpdate: Long = System.currentTimeMillis()
     // You could also add PlaybackState and other sheet visibility booleans here
     // if this screen will also play audio, just like in your other ViewModels.
@@ -98,6 +100,7 @@ class GroupedSheetViewModel @Inject constructor(
 
     // A simple in-memory cache to avoid re-fetching data when a user taps back and forth
     private val contentCache = mutableMapOf<String, List<Category>>()
+    private var loadJob: kotlinx.coroutines.Job? = null
 
 
     init {
@@ -194,21 +197,30 @@ class GroupedSheetViewModel @Inject constructor(
      */
 
     private fun loadContentForSubTab(subTab: SubTabDefinition) {
-        viewModelScope.launch {
+        loadJob?.cancel() // a newer sub-tab tap wins over a slower earlier load
+        loadJob = viewModelScope.launch {
             val sheetName = subTab.firestoreDocumentId
 
 
             val cachedCategories = contentCache[subTab.firestoreDocumentId]
             if (cachedCategories != null) {
-                _uiState.update { it.copy(contentState = ContentState.Success(cachedCategories)) }
+                _uiState.update {
+                    it.copy(
+                        contentState = ContentState.Success(cachedCategories),
+                        currentSheetName = sheetName,
+                        isSwitching = false
+                    )
+                }
                 return@launch
             }
 
+            // Keep the current sheet visible (with an overlay spinner) instead of blanking the screen.
             _uiState.update {
-                it.copy(
-                    contentState = ContentState.Loading,
-                    currentSheetName = sheetName
-                )
+                if (it.contentState is ContentState.Success) {
+                    it.copy(isSwitching = true, currentSheetName = sheetName)
+                } else {
+                    it.copy(contentState = ContentState.Loading, currentSheetName = sheetName)
+                }
             }
 
             try {
@@ -218,7 +230,7 @@ class GroupedSheetViewModel @Inject constructor(
                 result.onSuccess { vocabFile ->
                     val categories = vocabFile.categories
                     contentCache[sheetName] = categories
-                    _uiState.update { it.copy(contentState = ContentState.Success(categories)) }
+                    _uiState.update { it.copy(contentState = ContentState.Success(categories), isSwitching = false) }
 
                     val allSentences = vocabFile.categories //sort out stats
                         .flatMap { it.words }
@@ -232,16 +244,20 @@ class GroupedSheetViewModel @Inject constructor(
                         it.copy(
                             contentState = ContentState.Error(
                                 error.localizedMessage ?: "Failed to load content."
-                            )
+                            ),
+                            isSwitching = false
                         )
                     }
                 }
+            } catch (e: kotlinx.coroutines.CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _uiState.update {
                     it.copy(
                         contentState = ContentState.Error(
                             e.localizedMessage ?: "An unexpected error occurred."
-                        )
+                        ),
+                        isSwitching = false
                     )
                 }
             }
