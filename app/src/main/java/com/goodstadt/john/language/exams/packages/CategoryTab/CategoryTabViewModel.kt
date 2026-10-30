@@ -416,7 +416,7 @@ class CategoryTabViewModel @Inject constructor(
 
                 val (heardOnTab, total) = calculateTabSpecificStats(tabCategories)
 
-                Timber.i("loadContentForTab() tabNumber:$tabNumber heardOnTab:$heardOnTab total:$total")
+               // Timber.i("loadContentForTab() tabNumber:$tabNumber heardOnTab:$heardOnTab total:$total")
 
                 // ✅ 3. Use the cached keys (or fetch fresh if empty/paranoid)
                 // Since the collector in init started immediately, currentRecalledKeys
