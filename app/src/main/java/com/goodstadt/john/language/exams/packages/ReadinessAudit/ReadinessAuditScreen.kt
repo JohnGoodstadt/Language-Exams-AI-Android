@@ -210,10 +210,13 @@ fun ReadinessAuditScreen(
     }
 
     // Full-screen presentation (not a bottom sheet): the "X" / system-back is the only way out, so confirm
-    // before abandoning a quiz in progress. Mid-quiz = answered ≥1 but not finished and not on the summary.
+    // before abandoning a quiz in progress (answered ≥1, not finished, not on the summary) - and, until the
+    // Baseline has been completed, before closing at all (e.g. the first-launch audit with nothing answered).
     var showCloseConfirm by remember { mutableStateOf(false) }
+    val isMidQuiz = quizStatistics.state == QuizState.IN_PROGRESS && !showSummary
+    val isSkippingBaseline = baselineLevel == null && quizStatistics.state != QuizState.COMPLETED && !showSummary
     val requestClose = {
-        if (quizStatistics.state == QuizState.IN_PROGRESS && !showSummary) showCloseConfirm = true
+        if (isMidQuiz || isSkippingBaseline) showCloseConfirm = true
         else onFinished()
     }
     BackHandler { requestClose() }
@@ -576,7 +579,12 @@ fun ReadinessAuditScreen(
         AlertDialog(
             onDismissRequest = { showCloseConfirm = false },
             title = { Text("Close the quiz?") },
-            text = { Text("You haven't finished this quiz yet. Are you sure you want to close?") },
+            text = {
+                Text(
+                    if (isMidQuiz) "You haven't finished this quiz yet. Are you sure you want to close?"
+                    else "Completing the first quiz helps me set up the app accurately for you. Are you sure you want to close before finishing it?"
+                )
+            },
             confirmButton = {
                 TextButton(onClick = { showCloseConfirm = false; onFinished() }) {
                     Text("Close Anyway")
