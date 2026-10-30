@@ -74,6 +74,7 @@ import com.goodstadt.john.language.exams.navigation.IconResource
 import com.goodstadt.john.language.exams.navigation.Screen
 import com.goodstadt.john.language.exams.navigation.bottomNavItems
 import com.goodstadt.john.language.exams.packages.CategoryTab.CategoryTabScreen
+import com.goodstadt.john.language.exams.screens.shared.LaunchSpinner
 import com.goodstadt.john.language.exams.utils.rememberHeightClass
 import com.goodstadt.john.language.exams.utils.HeightClass
 import com.goodstadt.john.language.exams.packages.MeTabContainer.MeTabContainerScreen
@@ -199,8 +200,9 @@ fun MainScreen() {
             // Show a full-screen loading indicator while Firebase connects
             Timber.d("MainScreen.Loading")
             Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                CircularProgressIndicator()
-                Text(modifier = Modifier.padding(top = 60.dp), text = "Connecting...")
+                // Custom spinner - pick the style with LAUNCH_SPINNER_STYLE in LaunchSpinners.kt.
+                LaunchSpinner()
+                Text(modifier = Modifier.padding(top = 120.dp), text = "Connecting...")
             }
         }
         is AuthUiState.Error -> {
