@@ -385,6 +385,8 @@ fun ReadinessAuditScreen(
             HorizontalLevelPicker(
                 options = ReadinessAuditLevels.entries.map { labelFor(it) },
                 selectedOption = labelFor(selectedLevel),
+                filledWhenSelected = true,           // light mode: button blue + white text (as iOS)
+                lightUnselectedOnPageColor = true,   // unlocked: black on off-white; locked: dark on white
                 lockedOptions = ReadinessAuditLevels.entries
                     .filterNot { unlockedLevels.contains(it) }
                     .map { labelFor(it) }

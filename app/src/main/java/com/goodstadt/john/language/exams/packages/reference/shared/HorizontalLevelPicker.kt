@@ -36,9 +36,13 @@ fun HorizontalLevelPicker(
     lockedOptions: Set<String> = emptySet(),
     // Light mode only: show the selected option as a standard button (button blue, white text).
     filledWhenSelected: Boolean = false,
+    // Light mode only, with filledWhenSelected (e.g. Readiness Audit, iOS-style): unlocked options are
+    // black text on the off-white grouped page colour; locked ones dark grey text on white.
+    lightUnselectedOnPageColor: Boolean = false,
     fontSize: TextUnit = 12.sp
 ) {
     val filled = filledWhenSelected && !LocalIsDarkTheme.current
+    val pageStyle = filled && lightUnselectedOnPageColor
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -56,6 +60,8 @@ fun HorizontalLevelPicker(
                     containerColor = when {
                         isSelected && filled -> LocalExtendedColors.current.buttonBlue
                         isSelected -> LocalExtendedColors.current.rowSelected // adaptive: selected more prominent
+                        pageStyle && isLocked -> LocalExtendedColors.current.groupedPanel
+                        pageStyle -> LocalExtendedColors.current.groupedPage
                         else -> LocalExtendedColors.current.rowUnselected
                     },
                     contentColor = MaterialTheme.colorScheme.onSurface
@@ -71,7 +77,7 @@ fun HorizontalLevelPicker(
                     Icon(
                         imageVector = Icons.Filled.Lock,
                         contentDescription = "Locked - complete the previous level first",
-                        tint = Color.Gray,
+                        tint = if (pageStyle) MaterialTheme.colorScheme.onSurfaceVariant else Color.Gray,
                         modifier = Modifier.size(12.dp)
                     )
                     Spacer(modifier = Modifier.width(4.dp))
@@ -79,8 +85,10 @@ fun HorizontalLevelPicker(
                 Text(
                     text = option,
                     color = when {
-                        isLocked -> Color.Gray
                         isSelected && filled -> Color.White
+                        pageStyle && isLocked -> MaterialTheme.colorScheme.onSurfaceVariant
+                        pageStyle -> MaterialTheme.colorScheme.onSurface
+                        isLocked -> Color.Gray
                         isSelected -> LocalExtendedColors.current.screenAccent
                         else -> MaterialTheme.colorScheme.onSurfaceVariant
                     },
