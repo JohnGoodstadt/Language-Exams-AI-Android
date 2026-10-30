@@ -74,6 +74,8 @@ import com.goodstadt.john.language.exams.navigation.IconResource
 import com.goodstadt.john.language.exams.navigation.Screen
 import com.goodstadt.john.language.exams.navigation.bottomNavItems
 import com.goodstadt.john.language.exams.packages.CategoryTab.CategoryTabScreen
+import com.goodstadt.john.language.exams.utils.rememberHeightClass
+import com.goodstadt.john.language.exams.utils.HeightClass
 import com.goodstadt.john.language.exams.packages.MeTabContainer.MeTabContainerScreen
 import com.goodstadt.john.language.exams.packages.ReadinessAudit.ReadinessAuditScreen
 import com.goodstadt.john.language.exams.packages.ReadinessAudit.ReadinessAuditModalCard
@@ -426,13 +428,22 @@ fun MainAppContent(navController: NavHostController, selectedVoiceName: String) 
         }
     } //: Scaffold
 
+    val examSheetHeightClass = rememberHeightClass()
     if (globalUiState.showEnglishChoiceSheet) {
         ModalBottomSheet(
             // An empty lambda makes the sheet non-dismissible by dragging or tapping outside.
             // The user MUST make a choice.
             onDismissRequest = { },
             sheetState = sheetState,
-            modifier = Modifier.fillMaxHeight( if (LanguageConfig.hasDialectSelection) 0.80f else 0.50f) //NOTE: if too low then button off screen
+            // NOTE: if too low then button off screen. Short phones (HeightClass.COMPACT, < 790dp tall, e.g.
+            // HUAWEI AMN-LX9 / Samsung A10) get 3/4 height for the exam-only sheet, else B2 is cut off.
+            modifier = Modifier.fillMaxHeight(
+                when {
+                    LanguageConfig.hasDialectSelection -> 0.80f
+                    examSheetHeightClass == HeightClass.COMPACT -> 0.75f
+                    else -> 0.50f
+                }
+            )
         ) {
             if (LanguageConfig.hasDialectSelection) {
                 // English: the combined 2-choice sheet (Dialect + Exam Level).
