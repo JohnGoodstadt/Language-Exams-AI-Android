@@ -11,7 +11,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.graphics.Color
 import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
+import com.goodstadt.john.language.exams.ui.theme.LocalIsDarkTheme
 
 @Composable
 fun CacheProgressBar(
@@ -49,7 +51,10 @@ fun CacheProgressBar(
                     .weight(1f)
                     .padding(horizontal = 10.dp) ,
                 color = LocalExtendedColors.current.screenAccent,
-                trackColor = MaterialTheme.colorScheme.surfaceVariant
+                // Light mode: surfaceVariant is near-white and vanishes on the grouped page, so use a
+                // darker grey track (iOS systemGray4).
+                trackColor = if (LocalIsDarkTheme.current) MaterialTheme.colorScheme.surfaceVariant
+                             else Color(0xFFD1D1D6)
 
 
             )

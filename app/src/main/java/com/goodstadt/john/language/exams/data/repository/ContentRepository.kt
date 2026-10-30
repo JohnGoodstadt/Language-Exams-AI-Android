@@ -31,6 +31,7 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Deferred
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.async
 import kotlinx.coroutines.coroutineScope
@@ -148,6 +149,8 @@ class ContentRepository @Inject constructor(
     private val ongoingFetches = mutableMapOf<String, Deferred<Result<Format0File>>>()
     // Define a scope for playback (Main thread is usually best for MediaPlayer)
     private val playbackScope = CoroutineScope(Dispatchers.Main + SupervisorJob())
+    // Owns shared vocab fetches so they outlive any single (cancellable) caller.
+    private val fetchScope = CoroutineScope(Dispatchers.IO + SupervisorJob())
 
     // A lazy json parser instance with lenient configuration
     private val jsonParser = Json {
@@ -169,19 +172,22 @@ class ContentRepository @Inject constructor(
 //        val parentFunctionName = parentCaller?.methodName ?: "Unknown"
 //        Timber.d("This log is from getVocabData, but it was called by: $parentFunctionName")
 
-        // Use CoroutineScope to manage the lifecycle of our fetches
-        return coroutineScope {
-            val logicalName = normalizeToLogicalName(sheet_name)
-
+        // The shared fetch runs in the repository's own scope, NOT the caller's: if the first caller is
+        // cancelled (e.g. a screen re-requests and cancels its older load) the fetch carries on for every
+        // other caller awaiting it. Previously it ran in the caller's coroutineScope, so cancelling that
+        // caller before the job started left a dead entry in ongoingFetches that hung every later load.
+        val logicalName = normalizeToLogicalName(sheet_name)
+        val job = synchronized(ongoingFetches) {
             // --- 1. Check for an ONGOING fetch for this exact name ---
-            ongoingFetches[logicalName]?.let { activeJob ->
+            ongoingFetches[logicalName]?.takeIf { it.isActive }?.also {
                 Timber.d("VocabRepo: Found an IN-PROGRESS fetch for '$logicalName'. Awaiting its result.")
-                // If a job is already running, don't start a new one.
-                // Just wait for the existing one to finish and return its result.
-                return@coroutineScope activeJob.await()
-            }
-            // --- If no ongoing fetch, start a new one ---
-            val newJob = async(Dispatchers.IO) {
+            } ?: startFormat0Fetch(logicalName, sheet_name).also { ongoingFetches[logicalName] = it }
+        }
+        return job.await()
+    } //end
+
+    private fun startFormat0Fetch(logicalName: String, sheet_name: String): Deferred<Result<Format0File>> =
+            fetchScope.async {
                 try {
                     // --- 1. Version Check ---
                     val remoteVersions = appConfigRepository.getRemoteSheetVersions()
@@ -244,18 +250,13 @@ class ContentRepository @Inject constructor(
                 } finally {
                     // ✅ CRUCIAL: Remove the job from the map when it's done.
                     // This allows for a fresh fetch the next time it's requested.
-                    ongoingFetches.remove(logicalName)
+                    val self = coroutineContext[Job]
+                    synchronized(ongoingFetches) {
+                        if (ongoingFetches[logicalName] === self) ongoingFetches.remove(logicalName)
+                    }
                     Timber.d("VocabRepo: Fetch job for '$logicalName' has completed and been removed from ongoingFetches.")
                 }
             } //: End Try
-
-            ongoingFetches[logicalName] = newJob
-            // The result of the `coroutineScope` is the result of the last expression,
-            // which is the awaited result of our new job.
-            newJob.await()
-        }//: End Return
-
-    } //end
 
     suspend fun getFormat1Data(name: String): Result<Format1File> = withContext(Dispatchers.IO) {
         val logicalName = normalizeToLogicalName(name)
@@ -913,6 +914,19 @@ class ContentRepository @Inject constructor(
      * It provides a simple API for fixed screens like Conjugations.
      * It uses the centralized in-memory cache for session-level performance.
      */
+    /**
+     * Category titles for [tabNumber] from the copy of [sheet_name] bundled in the app — no network.
+     * Used only to label a loading skeleton for a level never loaded before; the bundle may lag the
+     * live sheet slightly, which is fine for that. Not cached (avoids holding a second copy in memory).
+     */
+    suspend fun getBundledFormat0TabTitles(sheet_name: String, tabNumber: Int): List<String> =
+        withContext(Dispatchers.IO) {
+            val resourceName = mapLogicalToResourceName(normalizeToLogicalName(sheet_name))
+            (vocabCache[resourceName] ?: _loadFromBundleFormat0(resourceName).getOrNull())
+                ?.categories?.filter { it.tabNumber == tabNumber }?.map { it.title }
+                ?: emptyList()
+        }
+
     fun loadBundledFormat0Data(resourceName: String): Result<Format0File> {
         // 1. Check the in-memory cache first.
         vocabCache[resourceName]?.let { cachedFile ->

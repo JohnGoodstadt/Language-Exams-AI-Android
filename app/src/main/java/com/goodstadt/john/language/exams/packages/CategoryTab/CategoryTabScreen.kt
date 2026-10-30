@@ -333,10 +333,13 @@ fun CategoryTabScreen(
             ) {
 
                 // --- Loading State ---
+                // Only on a tab/level not yet seen this session: a skeleton of the screen (placeholder
+                // menu, disabled Translate/Award) with a spinner in the middle until the words arrive.
                 if (uiState is CategoryTabUiState.Loading) {
-                    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                        CircularProgressIndicator(color = LocalExtendedColors.current.screenAccent)
-                    }
+                    CategoryTabSkeleton(
+                        loading = uiState as CategoryTabUiState.Loading,
+                        showMenu = tabIdentifier != null
+                    )
                 }
 
                 // --- Success State ---
@@ -622,6 +625,58 @@ fun CategoryTabScreen(
     } //: Box
 }
 
+/**
+ * Loading skeleton: the menu (remembered titles, or placeholder blocks the first time ever), the stats
+ * bar with its buttons disabled, and a centred spinner.
+ */
+@Composable
+private fun CategoryTabSkeleton(loading: CategoryTabUiState.Loading, showMenu: Boolean) {
+    Column(modifier = Modifier.fillMaxSize()) {
+        if (showMenu) {
+            if (loading.menuTitles.isNotEmpty()) {
+                LazyRow(
+                    modifier = Modifier.fillMaxWidth(),
+                    contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                    userScrollEnabled = false
+                ) {
+                    itemsIndexed(loading.menuTitles) { index, title ->
+                        MenuItemChip(text = title, isSelected = index == 0, onClick = {})
+                    }
+                }
+            } else {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 16.dp, vertical = 8.dp),
+                    horizontalArrangement = Arrangement.spacedBy(8.dp)
+                ) {
+                    listOf(72.dp, 96.dp, 64.dp, 88.dp).forEach { w ->
+                        Box(
+                            modifier = Modifier
+                                .padding(vertical = 8.dp)
+                                .width(w)
+                                .height(32.dp)
+                                .clip(RoundedCornerShape(8.dp))
+                                .background(MaterialTheme.colorScheme.onSurface.copy(alpha = 0.08f))
+                        )
+                    }
+                }
+            }
+        }
+        CategoryStatsBar(
+            heardCount = loading.heardCount,
+            totalCount = loading.totalCount,
+            onTranslate = {},
+            onShowStats = {},
+            enabled = false
+        )
+        Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+            CircularProgressIndicator(color = LocalExtendedColors.current.screenAccent)
+        }
+    }
+}
+
 /** Cache/progress bar with the Translate (left) and gamification-stats (right) buttons. */
 @Composable
 private fun CategoryStatsBar(
@@ -629,6 +684,7 @@ private fun CategoryStatsBar(
     totalCount: Int,
     onTranslate: () -> Unit,
     onShowStats: () -> Unit,
+    enabled: Boolean = true,
 ) {
     Box(
         modifier = Modifier
@@ -646,6 +702,7 @@ private fun CategoryStatsBar(
         // Translate sheet, pre-filled with the last sentence played on this tab.
         IconButton(
             onClick = onTranslate,
+            enabled = enabled,
             modifier = Modifier
                 .align(Alignment.CenterStart)
                 .padding(start = 8.dp)
@@ -653,11 +710,12 @@ private fun CategoryStatsBar(
             Icon(
                 imageVector = Icons.Filled.Translate,
                 contentDescription = "Translate",
-                tint = LocalExtendedColors.current.iconAccent
+                tint = LocalExtendedColors.current.iconAccent.copy(alpha = if (enabled) 1f else 0.35f)
             )
         }
         IconButton(
             onClick = onShowStats,
+            enabled = enabled,
             modifier = Modifier
                 .align(Alignment.CenterEnd)
                 .padding(end = 8.dp)
@@ -665,7 +723,7 @@ private fun CategoryStatsBar(
             Icon(
                 imageVector = Icons.Filled.WorkspacePremium,
                 contentDescription = "Stats",
-                tint = LocalExtendedColors.current.iconAccent
+                tint = LocalExtendedColors.current.iconAccent.copy(alpha = if (enabled) 1f else 0.35f)
             )
         }
     }

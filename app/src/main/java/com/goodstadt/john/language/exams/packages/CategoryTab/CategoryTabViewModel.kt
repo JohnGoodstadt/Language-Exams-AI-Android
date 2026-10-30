@@ -53,7 +53,12 @@ import timber.log.Timber
 import javax.inject.Inject
 
 sealed interface CategoryTabUiState {
-    object Loading : CategoryTabUiState
+    /** Skeleton state. Carries the menu titles + progress counts remembered from the last load (if any). */
+    data class Loading(
+        val menuTitles: List<String> = emptyList(),
+        val heardCount: Int = 0,
+        val totalCount: Int = 0
+    ) : CategoryTabUiState
     data class Success(
         val categories: List<Category>,
         val currentTabNumber: Int = 1,
@@ -174,7 +179,7 @@ class CategoryTabViewModel @Inject constructor(
             index = indexWithinTab
         )
 
-    private val _uiState = MutableStateFlow<CategoryTabUiState>(CategoryTabUiState.Loading)
+    private val _uiState = MutableStateFlow<CategoryTabUiState>(CategoryTabUiState.Loading())
     val uiState = _uiState.asStateFlow()
 
     private val _uiEvent = MutableSharedFlow<UiEvent>()
@@ -338,18 +343,44 @@ class CategoryTabViewModel @Inject constructor(
 
     // MARK: - Loading
 
+    private var loadJob: Job? = null
+
     fun loadContentForTab(tabNumber: Int) {
         // fileFormat-0 popularity: this main tab (1/2/3) was shown. tap/play join under the vocab area.
         currentLoadedTab = tabNumber
         ttsStatsRepository.recordPageView(PageStat.Area.VOCAB, "$tabNumber", PageStat.Metric.OPEN)
-        viewModelScope.launch {
-            _uiState.value = CategoryTabUiState.Loading
-
+        loadJob?.cancel() // the latest call wins (the screen can fire this twice on re-entry)
+        loadJob = viewModelScope.launch {
             // Read the persisted exam name directly from DataStore. Do NOT use
             // currentExamName.value here: that stateIn flow uses WhileSubscribed(5s) and
             // resets to its "vocab_data_b1" initialValue when the tab is left for >5s, which
             // would transiently load the B1 word list even when the user picked A1/A2/B2.
             val examName = userPreferencesRepository.selectedExamNameFlow.first()
+
+            // Already seen this session (same level + tab)? Show it straight away and refresh quietly
+            // underneath; only a never-seen tab/level shows the loading skeleton.
+            val memoryKey = "$examName#$tabNumber"
+            val current = _uiState.value
+            if (current is CategoryTabUiState.Success && loadedMemoryKey == memoryKey) {
+                // keep showing it
+            } else {
+                val remembered = sessionTabCache[memoryKey]
+                val skeleton = rememberedSkeleton(memoryKey)
+                _uiState.value = remembered ?: skeleton
+                loadedMemoryKey = if (remembered != null) memoryKey else null
+
+                // Level never loaded on this device (e.g. just switched exam): label the skeleton's menu
+                // from the app's bundled copy while the real sheet downloads.
+                if (remembered == null && skeleton.menuTitles.isEmpty()) {
+                    launch {
+                        val titles = contentRepository.getBundledFormat0TabTitles(examName, tabNumber)
+                        _uiState.update { state ->
+                            if (state is CategoryTabUiState.Loading && titles.isNotEmpty()) state.copy(menuTitles = titles)
+                            else state
+                        }
+                    }
+                }
+            }
             val voiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
 
             // Cache the level for isHeard calls later
@@ -396,18 +427,57 @@ class CategoryTabViewModel @Inject constructor(
                     currentRecalledKeys = recallingRepository.getAllRecalledKeys()
                 }
 
-                _uiState.value = CategoryTabUiState.Success(
+                val success = CategoryTabUiState.Success(
                     categories = tabCategories,
                     totalWordsOnTab = total,
                     heardCountOnTab = heardOnTab,
                     recalledWordKeys = currentRecalledKeys, //✅ USE THE CACHED VARIABLE
                     isQuizAvailable = isQuizEnabled
                 )
+                sessionTabCache[memoryKey] = success
+                saveSkeleton(memoryKey, success)
+                loadedMemoryKey = memoryKey
+                _uiState.value = success
             }.onFailure { error ->
-                _uiState.value =
-                    CategoryTabUiState.Error(error.localizedMessage ?: "Failed to load")
+                // A failed quiet refresh keeps the content already on screen.
+                if (loadedMemoryKey != memoryKey) {
+                    _uiState.value =
+                        CategoryTabUiState.Error(error.localizedMessage ?: "Failed to load")
+                }
             }
         }
+    }
+
+    // The skeleton shown on a not-yet-loaded tab uses the menu titles + counts from the last time this
+    // level/tab loaded (persisted across launches), so it shows the real menu and progress bar.
+    private val skeletonPrefs by lazy { context.getSharedPreferences("category_tab_skeleton", Context.MODE_PRIVATE) }
+
+    private fun rememberedSkeleton(memoryKey: String) = CategoryTabUiState.Loading(
+        menuTitles = skeletonPrefs.getString("$memoryKey.titles", null)
+            ?.split(SKELETON_TITLE_SEPARATOR)?.filter { it.isNotEmpty() } ?: emptyList(),
+        heardCount = skeletonPrefs.getInt("$memoryKey.heard", 0),
+        totalCount = skeletonPrefs.getInt("$memoryKey.total", 0)
+    )
+
+    private fun saveSkeleton(memoryKey: String, success: CategoryTabUiState.Success) {
+        skeletonPrefs.edit()
+            .putString("$memoryKey.titles", success.categories.joinToString(SKELETON_TITLE_SEPARATOR) { it.title })
+            .putInt("$memoryKey.heard", success.heardCountOnTab)
+            .putInt("$memoryKey.total", success.totalWordsOnTab)
+            .apply()
+    }
+
+    /** "examName#tab" of the Success currently in [_uiState], or null if none is showing. */
+    private var loadedMemoryKey: String? = null
+
+    companion object {
+        private const val SKELETON_TITLE_SEPARATOR = "\u001F"
+
+        /**
+         * Last loaded content per "examName#tab" for this app session, so a tab the user has already
+         * seen re-opens instantly (no skeleton) even if its ViewModel was recreated.
+         */
+        private val sessionTabCache = java.util.concurrent.ConcurrentHashMap<String, CategoryTabUiState.Success>()
     }
 
     // MARK: - Helper for View (Direct Check)
