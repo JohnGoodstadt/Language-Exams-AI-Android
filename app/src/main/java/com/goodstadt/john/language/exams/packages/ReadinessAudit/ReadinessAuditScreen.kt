@@ -93,6 +93,7 @@ import com.goodstadt.john.language.exams.screens.shared.AutoAdvanceToggleButton
 import com.goodstadt.john.language.exams.storage.UiEvent
 import com.goodstadt.john.language.exams.ui.LocalIsExpanded
 import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
+import com.goodstadt.john.language.exams.ui.theme.LocalIsDarkTheme
 import com.goodstadt.john.language.exams.ui.theme.blueBright2
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.goodstadt.john.language.exams.utils.HeightClass
@@ -656,7 +657,7 @@ private fun AuditSummaryContent(
         }
 
         guidance?.let {
-            Text(it, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
+            Text(it, style = MaterialTheme.typography.bodyMedium, color = auditBodyText)
         }
 
         if (hasHigherQuiz) {
@@ -702,7 +703,7 @@ private fun AuditSummaryContent(
 private fun AuditSummaryStat(label: String, value: String, sub: String, modifier: Modifier = Modifier) {
     val correctGreen = LocalExtendedColors.current.textAccentAlternative
     Column(modifier = modifier) {
-        Text(label, style = MaterialTheme.typography.labelSmall, color = orangeLight)
+        Text(label, style = MaterialTheme.typography.labelSmall, color = auditText)
         Text(value, style = MaterialTheme.typography.displaySmall, fontWeight = FontWeight.Bold, color = correctGreen)
         Text(sub, style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
     }
@@ -769,7 +770,7 @@ private fun AuditStatusHeader(
                         }
                     },
                     style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    color = auditBodyText,
                     lineHeight = 20.sp,
                     modifier = Modifier.padding(top = 4.dp, bottom = bottomPadding)
                 )
@@ -864,7 +865,7 @@ private fun AuditLearningPoints(
                         padding(vertical = verticalPadding),
                         verticalAlignment = Alignment.Top
                     ) {
-                        Text(text = "• ", color = orangeLight)
+                        Text(text = "• ", color = auditText)
                         Text(
                             text = point,
                             style = MaterialTheme.typography.bodyMedium,
@@ -982,7 +983,7 @@ private fun AuditQuestionAnswers(
             style = MaterialTheme.typography.bodyLarge.copy(fontSize = if (heightClass == HeightClass.COMPACT) 15.sp else 16.sp),
             textAlign = TextAlign.Center,
             modifier = Modifier.fillMaxWidth().padding(bottom = questionTextPadding),
-            color = orangeLight,
+            color = auditText,
         )
 
 
@@ -1024,7 +1025,7 @@ private fun AuditQuestionAnswers(
                     Spacer(modifier = Modifier.width(8.dp))
                     Text(
                         text = option,
-                        color = orangeLight,
+                        color = auditText,
 //                                style = MaterialTheme.typography.bodyLarge.copy(fontSize = 14.sp),
                         style = MaterialTheme.typography.bodyLarge.copy(
                             fontSize = if (heightClass == HeightClass.COMPACT) 13.sp else 14.sp
@@ -1193,7 +1194,7 @@ private fun AuditNavigationRow(
                 },
                 enabled = !isCurrentQuestionLocked,
                 modifier = Modifier.height(48.dp),
-                colors = ButtonDefaults.outlinedButtonColors(contentColor = orangeLight),
+                colors = ButtonDefaults.outlinedButtonColors(contentColor = auditText),
                 border = BorderStroke(1.dp, Color.Gray.copy(alpha = 0.5f))
             ) {
                 Text("Don't Know", style = MaterialTheme.typography.bodyMedium)
@@ -1278,7 +1279,7 @@ private fun AuditStatisticsRow(
             text = "Tries: $tries",
             style = MaterialTheme.typography.bodyLarge.copy(
                 fontSize = 16.sp,
-                color = Color.Red
+                color = if (tries <= correct) correctGreen else Color.Red // as iOS
             ),
             modifier = Modifier
                 .weight(1f)
@@ -1484,11 +1485,20 @@ private fun AuditBottomSheets(
 }
 
 
+/** Light mode: plain black text, like iOS. Dark mode keeps the original orange. */
+private val auditText: Color
+    @Composable get() = if (LocalIsDarkTheme.current) orangeLight else MaterialTheme.colorScheme.onSurface
+
+/** Light mode: body text black (onSurface) rather than grey. Dark mode unchanged. */
+private val auditBodyText: Color
+    @Composable get() = if (LocalIsDarkTheme.current) MaterialTheme.colorScheme.onSurfaceVariant
+                        else MaterialTheme.colorScheme.onSurface
+
 @Composable
 private fun AuditStatItem(label: String, value: String, subValue: String) {
     Column {
-        Text(text = label, style = MaterialTheme.typography.bodySmall,  color = Color(0xFFFF9500),)
-        Text(text = value, style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Bold)
+        Text(text = label, style = MaterialTheme.typography.bodySmall, color = if (LocalIsDarkTheme.current) Color(0xFFFF9500) else MaterialTheme.colorScheme.onSurface)
+        Text(text = value, style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Bold, color = LocalExtendedColors.current.textAccentAlternative)
         Text(text = subValue, style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
     }
 }
