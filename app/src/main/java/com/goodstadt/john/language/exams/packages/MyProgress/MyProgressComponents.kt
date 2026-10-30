@@ -13,7 +13,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -43,11 +42,8 @@ fun ProfileHeaderView(userLevel: String, streak: Int, gems: Int) {
             modifier = Modifier
                 .size(80.dp)
                 .clip(CircleShape)
-                .background(
-                    Brush.linearGradient(
-                        colors = listOf(Color(0xFF2196F3), Color(0xFF00BCD4))
-                    )
-                ),
+                // Same button blue as the gauge panel above it.
+                .background(LocalExtendedColors.current.buttonBlue),
             contentAlignment = Alignment.Center
         ) {
             Text(
