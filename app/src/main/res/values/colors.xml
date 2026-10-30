@@ -3,4 +3,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="app_background_dark">#121212</color>
+    <!-- Launch window background: the grouped page colour of the first screens (Me / tabs 1-3), light. -->
+    <color name="launch_background">#F2F2F7</color>
 </resources>

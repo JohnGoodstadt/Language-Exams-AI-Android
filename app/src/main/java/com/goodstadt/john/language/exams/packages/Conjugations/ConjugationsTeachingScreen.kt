@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.packages.Conjugations
 
+import com.goodstadt.john.language.exams.screens.shared.LaunchSpinner
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -101,7 +102,7 @@ fun ConjugationsTeachingScreen(viewModel: ConjugationsTeachingViewModel = hiltVi
             when (val state = viewModel.uiState.collectAsState().value) {
                 is ConjugationsTeachingUiState.Loading ->
                     Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                        CircularProgressIndicator()
+                        LaunchSpinner()
                     }
 
                 is ConjugationsTeachingUiState.Error ->

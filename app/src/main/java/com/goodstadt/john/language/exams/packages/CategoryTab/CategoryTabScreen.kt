@@ -104,6 +104,7 @@ import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomShe
 import com.goodstadt.john.language.exams.screens.shared.CacheProgressBar
 import com.goodstadt.john.language.exams.screens.shared.HelpInfoSheet
 import com.goodstadt.john.language.exams.screens.shared.HighlightedWordInSentenceRow
+import com.goodstadt.john.language.exams.screens.shared.LaunchSpinner
 import com.goodstadt.john.language.exams.screens.shared.MenuItemChip
 import com.goodstadt.john.language.exams.screens.shared.SwipeableVocabRow
 import com.goodstadt.john.language.exams.screens.shared.GridVocabCard
@@ -672,7 +673,7 @@ private fun CategoryTabSkeleton(loading: CategoryTabUiState.Loading, showMenu: B
             enabled = false
         )
         Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-            CircularProgressIndicator(color = LocalExtendedColors.current.screenAccent)
+            LaunchSpinner() // same spinner as app start (tabs 1-3 can be the first page shown)
         }
     }
 }

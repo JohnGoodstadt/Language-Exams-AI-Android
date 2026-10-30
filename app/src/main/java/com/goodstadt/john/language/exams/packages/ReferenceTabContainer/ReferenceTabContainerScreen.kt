@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.packages.ReferenceTabContainer
 
+import com.goodstadt.john.language.exams.screens.shared.LaunchSpinner
 import androidx.compose.foundation.background
 import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 import androidx.compose.foundation.clickable
@@ -394,7 +395,7 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceTabContainerViewModel = hilt
                                     modifier = Modifier.fillMaxSize(),
                                     contentAlignment = Alignment.Center
                                 ) {
-                                    CircularProgressIndicator()
+                                    LaunchSpinner()
                                 }
                             }
 
@@ -535,7 +536,7 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceTabContainerViewModel = hilt
         } //: is not empty
         else {
             Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                CircularProgressIndicator()
+                LaunchSpinner()
             }
         }
 

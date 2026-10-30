@@ -1,6 +1,7 @@
 package com.goodstadt.john.language.exams.screens.shared
 
 import androidx.compose.foundation.Canvas
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.runtime.Composable
@@ -38,6 +39,8 @@ import kotlin.math.sin
 enum class LaunchSpinnerStyle { MATERIAL, WAVEFORM, ORBIT, COLOUR_MIX }
 
 /** Which spinner the app-start screen shows. */
+// The launch window (res/drawable/launch_background.xml) shows this spinner's first frame as a still image
+// before the app draws, so keep the two in step: ORBIT <-> launch_orbit.xml.
 val LAUNCH_SPINNER_STYLE = LaunchSpinnerStyle.ORBIT
 
 // Sampled from the app icon (the face red and the "de" yellow).
@@ -49,12 +52,18 @@ private const val SQRT3 = 1.73205081f
 private const val PI_F = PI.toFloat()
 
 @Composable
-fun LaunchSpinner(style: LaunchSpinnerStyle = LAUNCH_SPINNER_STYLE, size: Dp = 72.dp) {
-    when (style) {
-        LaunchSpinnerStyle.MATERIAL -> CircularProgressIndicator()
-        LaunchSpinnerStyle.WAVEFORM -> WaveformSpinner(size)
-        LaunchSpinnerStyle.ORBIT -> OrbitSpinner(size)
-        LaunchSpinnerStyle.COLOUR_MIX -> ColourMixSpinner(size)
+fun LaunchSpinner(
+    modifier: Modifier = Modifier,
+    style: LaunchSpinnerStyle = LAUNCH_SPINNER_STYLE,
+    size: Dp = 72.dp
+) {
+    Box(modifier) {
+        when (style) {
+            LaunchSpinnerStyle.MATERIAL -> CircularProgressIndicator(Modifier.size(size))
+            LaunchSpinnerStyle.WAVEFORM -> WaveformSpinner(size)
+            LaunchSpinnerStyle.ORBIT -> OrbitSpinner(size)
+            LaunchSpinnerStyle.COLOUR_MIX -> ColourMixSpinner(size)
+        }
     }
 }
 

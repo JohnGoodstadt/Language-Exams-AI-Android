@@ -1,6 +1,7 @@
 package com.goodstadt.john.language.exams.screens.GroupedSheet
 
 
+import com.goodstadt.john.language.exams.screens.shared.LaunchSpinner
 import androidx.activity.ComponentActivity
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -133,7 +134,7 @@ fun GroupedSheetScreen(
             is ContentState.Loading -> {
                 // Show a loading indicator while fetching data from Firestore
                 Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                    CircularProgressIndicator()
+                    LaunchSpinner()
                 }
             }
             is ContentState.Success -> {

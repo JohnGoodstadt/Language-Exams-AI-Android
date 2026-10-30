@@ -1,6 +1,7 @@
 package com.goodstadt.john.language.exams.screens.Format3
 
 
+import com.goodstadt.john.language.exams.screens.shared.LaunchSpinner
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -159,7 +160,7 @@ private fun LoadingView() {
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        CircularProgressIndicator(color = MaterialTheme.colorScheme.onSurface)
+        LaunchSpinner()
         Spacer(Modifier.height(12.dp))
         Text("Loading…", color = MaterialTheme.colorScheme.onSurfaceVariant)
     }

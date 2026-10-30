@@ -31,7 +31,7 @@ import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CenterAlignedTopAppBar
-import androidx.compose.material3.CircularProgressIndicator
+import com.goodstadt.john.language.exams.screens.shared.LaunchSpinner
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
@@ -125,7 +125,9 @@ fun MyProgressScreen(
 
         if (uiState == null) {
             Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                CircularProgressIndicator()
+                // The app opens on this screen, so use the app-start spinner (it follows on from the
+                // launch window's still frame) rather than the stock purple indicator.
+                LaunchSpinner()
             }
         } else {
             val  state = uiState!!

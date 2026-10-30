@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.screens.Format3Grouped
 
+import com.goodstadt.john.language.exams.screens.shared.LaunchSpinner
 import androidx.activity.ComponentActivity
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -91,7 +92,7 @@ fun Format3GroupedScreen(
 
         // 2. CONTENT AREA
         if (uiState.isLoading) {
-            Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) { CircularProgressIndicator() }
+            Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) { LaunchSpinner() }
         } else if (uiState.error != null) {
             Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                 Text("Error: ${uiState.error}", color = Color.Red)

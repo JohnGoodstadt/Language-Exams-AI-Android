@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.screens.Format2Grouped
 
+import com.goodstadt.john.language.exams.screens.shared.LaunchSpinner
 import androidx.activity.ComponentActivity
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
@@ -118,7 +119,7 @@ fun Format2GroupedScreen(
         // Switching sub-tab keeps the current sheet on screen (overlay spinner) instead of going blank;
         // the full-screen spinner is only for the very first load.
         if (uiState.isLoading && uiState.currentFormat2File == null) {
-            Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) { CircularProgressIndicator() }
+            Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) { LaunchSpinner() }
         } else if (uiState.error != null && !uiState.isLoading) {
             Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                 Text("Error: ${uiState.error}", color = Color.Red)

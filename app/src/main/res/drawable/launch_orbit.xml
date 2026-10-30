@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- First frame (t = 0) of OrbitSpinner (screens/shared/LaunchSpinners.kt), shown by the launch window
+     before Compose draws, so the animated spinner starts from exactly this picture. Dot positions, trails
+     and colours generated from the spinner's own formula - regenerate if that formula or its colours change. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="72dp" android:height="72dp"
+    android:viewportWidth="72" android:viewportHeight="72">
+    <path android:fillColor="#FFFD0535" android:fillAlpha="0.020" android:pathData="M43.035,30.336 a3.235,3.235 0 1,0 6.470,0 a3.235,3.235 0 1,0 -6.470,0 z"/>
+    <path android:fillColor="#FFFD0535" android:fillAlpha="0.082" android:pathData="M43.489,30.996 a3.716,3.716 0 1,0 7.431,0 a3.716,3.716 0 1,0 -7.431,0 z"/>
+    <path android:fillColor="#FFFD0535" android:fillAlpha="0.184" android:pathData="M43.906,31.773 a4.197,4.197 0 1,0 8.393,0 a4.197,4.197 0 1,0 -8.393,0 z"/>
+    <path android:fillColor="#FFFD0535" android:fillAlpha="0.327" android:pathData="M44.273,32.666 a4.677,4.677 0 1,0 9.355,0 a4.677,4.677 0 1,0 -9.355,0 z"/>
+    <path android:fillColor="#FFFD0535" android:fillAlpha="0.510" android:pathData="M44.575,33.671 a5.158,5.158 0 1,0 10.317,0 a5.158,5.158 0 1,0 -10.317,0 z"/>
+    <path android:fillColor="#FFFD0535" android:fillAlpha="0.735" android:pathData="M44.798,34.784 a5.639,5.639 0 1,0 11.278,0 a5.639,5.639 0 1,0 -11.278,0 z"/>
+    <path android:fillColor="#FFFD0535" android:fillAlpha="1.000" android:pathData="M44.928,36.000 a6.120,6.120 0 1,0 12.240,0 a6.120,6.120 0 1,0 -12.240,0 z"/>
+    <path android:fillColor="#FFFFBE02" android:fillAlpha="0.020" android:pathData="M11.953,50.120 a3.235,3.235 0 1,0 6.470,0 a3.235,3.235 0 1,0 -6.470,0 z"/>
+    <path android:fillColor="#FFFFBE02" android:fillAlpha="0.082" android:pathData="M12.279,51.861 a3.716,3.716 0 1,0 7.431,0 a3.716,3.716 0 1,0 -7.431,0 z"/>
+    <path android:fillColor="#FFFFBE02" android:fillAlpha="0.184" android:pathData="M12.775,53.536 a4.197,4.197 0 1,0 8.393,0 a4.197,4.197 0 1,0 -8.393,0 z"/>
+    <path android:fillColor="#FFFFBE02" android:fillAlpha="0.327" android:pathData="M13.434,55.128 a4.677,4.677 0 1,0 9.355,0 a4.677,4.677 0 1,0 -9.355,0 z"/>
+    <path android:fillColor="#FFFFBE02" android:fillAlpha="0.510" android:pathData="M14.247,56.618 a5.158,5.158 0 1,0 10.317,0 a5.158,5.158 0 1,0 -10.317,0 z"/>
+    <path android:fillColor="#FFFFBE02" android:fillAlpha="0.735" android:pathData="M15.205,57.990 a5.639,5.639 0 1,0 11.278,0 a5.639,5.639 0 1,0 -11.278,0 z"/>
+    <path android:fillColor="#FFFFBE02" android:fillAlpha="1.000" android:pathData="M16.294,59.230 a6.120,6.120 0 1,0 12.240,0 a6.120,6.120 0 1,0 -12.240,0 z"/>
+    <path android:fillColor="#FF1777FB" android:fillAlpha="0.020" android:pathData="M13.282,20.494 a3.235,3.235 0 1,0 6.470,0 a3.235,3.235 0 1,0 -6.470,0 z"/>
+    <path android:fillColor="#FF1777FB" android:fillAlpha="0.082" android:pathData="M14.206,19.605 a3.716,3.716 0 1,0 7.431,0 a3.716,3.716 0 1,0 -7.431,0 z"/>
+    <path android:fillColor="#FF1777FB" android:fillAlpha="0.184" android:pathData="M15.188,18.860 a4.197,4.197 0 1,0 8.393,0 a4.197,4.197 0 1,0 -8.393,0 z"/>
+    <path android:fillColor="#FF1777FB" android:fillAlpha="0.327" android:pathData="M16.214,18.261 a4.677,4.677 0 1,0 9.355,0 a4.677,4.677 0 1,0 -9.355,0 z"/>
+    <path android:fillColor="#FF1777FB" android:fillAlpha="0.510" android:pathData="M17.267,17.811 a5.158,5.158 0 1,0 10.317,0 a5.158,5.158 0 1,0 -10.317,0 z"/>
+    <path android:fillColor="#FF1777FB" android:fillAlpha="0.735" android:pathData="M18.331,17.508 a5.639,5.639 0 1,0 11.278,0 a5.639,5.639 0 1,0 -11.278,0 z"/>
+    <path android:fillColor="#FF1777FB" android:fillAlpha="1.000" android:pathData="M19.391,17.353 a6.120,6.120 0 1,0 12.240,0 a6.120,6.120 0 1,0 -12.240,0 z"/>
+</vector>

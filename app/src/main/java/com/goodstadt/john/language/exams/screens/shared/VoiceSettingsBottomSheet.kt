@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.screens.shared
 
+import com.goodstadt.john.language.exams.screens.shared.LaunchSpinner
 import android.speech.tts.Voice
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
@@ -51,7 +52,7 @@ fun VoiceSettingsBottomSheet(
                 Box(modifier = Modifier
                     .fillMaxWidth()
                     .height(150.dp), contentAlignment = Alignment.Center) {
-                    CircularProgressIndicator()
+                    LaunchSpinner()
                 }
             } else if (state.error != null) {
                 Text(text = state.error ?: "Unknown Error", color = MaterialTheme.colorScheme.error)

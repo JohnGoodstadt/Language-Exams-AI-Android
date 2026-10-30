@@ -2,6 +2,7 @@ package com.goodstadt.john.language.exams.packages.ReferenceGeneric
 
 //package com.yourpackage.ui.reference.generic // Or your preferred package
 
+import com.goodstadt.john.language.exams.screens.shared.LaunchSpinner
 import androidx.activity.ComponentActivity
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
@@ -102,7 +103,7 @@ fun ReferenceGenericScreen(viewModel: ReferenceGenericViewModel = hiltViewModel(
     when (val state = uiState) {
         is GenericVocabUiState.Loading -> {
             Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                CircularProgressIndicator()
+                LaunchSpinner()
             }
         }
         is GenericVocabUiState.Error -> {

@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.packages.Format9
 
+import com.goodstadt.john.language.exams.screens.shared.LaunchSpinner
 import androidx.compose.foundation.background
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.clickable
@@ -94,7 +95,7 @@ fun Format9ContainerScreen(
                 horizontalAlignment = Alignment.CenterHorizontally
             ) { Text("Could not load this podcast.\n$loadError", color = MaterialTheme.colorScheme.error) }
 
-            file == null -> CircularProgressIndicator(Modifier.align(Alignment.Center))
+            file == null -> LaunchSpinner(Modifier.align(Alignment.Center))
 
             else -> {
                 val f = file!!

@@ -1,4 +1,5 @@
 package com.goodstadt.john.language.exams.screens.Format1
+import com.goodstadt.john.language.exams.screens.shared.LaunchSpinner
 import com.goodstadt.john.language.exams.packages.reference.NavigationViewModel
 import com.goodstadt.john.language.exams.packages.ReferenceQuiz.ReferenceQuizScreen
 
@@ -79,7 +80,7 @@ fun Format1Screen(
     when (val state = uiState) {
         is Format1UiState.Loading -> {
             Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                CircularProgressIndicator()
+                LaunchSpinner()
             }
         }
         is Format1UiState.Error -> {

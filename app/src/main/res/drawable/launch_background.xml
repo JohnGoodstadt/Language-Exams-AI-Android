@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Launch window: shown instantly by Android before the app's first frame (it used to be plain #121212,
+     which looked like a black blank screen on slow phones). Same background as the Compose start screen,
+     with the orbit spinner's first frame in the centre. MainActivity swaps back to a plain colour once
+     it starts, so the bars never show behind the real UI. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/launch_background" />
+    <item android:drawable="@drawable/launch_orbit" android:gravity="center"
+        android:width="72dp" android:height="72dp" />
+</layer-list>

@@ -2,7 +2,8 @@
 <resources>
 
     <style name="Theme.LanguageExamsAI.NoActionBar" parent="android:Theme.Material.Light.NoActionBar" >
-        <item name="android:windowBackground">@color/app_background_dark</item>
+        <!-- Launch window: background + still first frame of the orbit spinner (was plain #121212). -->
+        <item name="android:windowBackground">@drawable/launch_background</item>
     </style>
 
     <style name="Theme.LanguageExamsAI" parent="Theme.Material3.DayNight.NoActionBar">

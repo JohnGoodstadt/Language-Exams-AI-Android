@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.packages.ReferencePronouns
 
+import com.goodstadt.john.language.exams.screens.shared.LaunchSpinner
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -59,7 +60,7 @@ import com.goodstadt.john.language.exams.screens.shared.buttonStyleChipColors
 fun Format6SheetView(viewModel: Format6ViewModel = hiltViewModel()) {
     when (val state = viewModel.uiState.collectAsState().value) {
         is Format6UiState.Loading ->
-            Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) { CircularProgressIndicator() }
+            Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) { LaunchSpinner() }
 
         is Format6UiState.Error ->
             Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {

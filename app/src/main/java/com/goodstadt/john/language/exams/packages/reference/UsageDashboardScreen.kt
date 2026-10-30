@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.packages.reference
 
+import com.goodstadt.john.language.exams.screens.shared.LaunchSpinner
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -80,7 +81,7 @@ fun UsageDashboardScreen(
             when (val state = uiState) {
                 is UsageDashboardViewModel.UiState.Loading -> {
 //                    CircularProgressIndicator(modifier = Modifier.align(LineHeightStyle.Alignment.Center))
-                    CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
+                    LaunchSpinner(modifier = Modifier.align(Alignment.Center))
                 }
                 is UsageDashboardViewModel.UiState.ColdStart -> {
                     UsageColdStartView(

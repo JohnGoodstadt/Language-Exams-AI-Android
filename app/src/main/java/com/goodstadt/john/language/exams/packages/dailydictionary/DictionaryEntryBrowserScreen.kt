@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.packages.dailydictionary
 
+import com.goodstadt.john.language.exams.screens.shared.LaunchSpinner
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -29,7 +30,7 @@ fun DictionaryEntryBrowserScreen(
     when {
         state.isLoading -> {
             Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                CircularProgressIndicator()
+                LaunchSpinner()
             }
         }
 

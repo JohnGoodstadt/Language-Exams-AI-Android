@@ -65,6 +65,9 @@ class MainActivity : ComponentActivity() {
     @OptIn(ExperimentalMaterial3WindowSizeClassApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // The theme's launch background (still waveform frame) has done its job once we're running;
+        // use a plain colour from here so the bars can never show behind the real UI.
+        window.setBackgroundDrawableResource(R.color.launch_background)
         // Transparent system navigation bar (3-button nav included) so the app's own bottom tab bar colour
         // shows behind the back/home/recents buttons, instead of the default translucent scrim that each
         // maker tints differently (grey on Samsung, white on Huawei). Button icons still follow the theme.

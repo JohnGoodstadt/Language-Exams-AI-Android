@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.packages.VocabQuiz
 
+import com.goodstadt.john.language.exams.screens.shared.LaunchSpinner
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -82,7 +83,7 @@ fun VocabDashboardScreen(
     if (uiState.isLoading) {
         Box(
             Modifier.fillMaxSize(), contentAlignment = Alignment.Center
-        ) { CircularProgressIndicator() }
+        ) { LaunchSpinner() }
     } else if (uiState.isColdStart) {
         // STATE A: Cold Start — suggestion buttons open the quiz sheet directly
         VocabQuizOnboardingView(categories = uiState.categoryStats, onStartSuggestion = { title ->

@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.screens.Format3
 
+import com.goodstadt.john.language.exams.screens.shared.LaunchSpinner
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -49,7 +50,7 @@ fun Format3SheetView(
     ) {
         when {
             state.isLoading -> {
-                CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
+                LaunchSpinner(modifier = Modifier.align(Alignment.Center))
             }
             state.errorMessage != null -> {
                 Text(

@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.packages.ReferenceGeneric
 
+import com.goodstadt.john.language.exams.screens.shared.LaunchSpinner
 import androidx.activity.ComponentActivity
 import com.goodstadt.john.language.exams.packages.CategoryTab.StatsSheetEntryPoint
 import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestStatsSheet
@@ -49,7 +50,7 @@ fun ReferenceGenericScreenNew(
     when (val state = uiState) {
         is GenericVocabUiState.Loading -> {
             Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                CircularProgressIndicator()
+                LaunchSpinner()
             }
         }
 

@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.packages.Format8
 
+import com.goodstadt.john.language.exams.screens.shared.LaunchSpinner
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -104,7 +105,7 @@ fun Format8ContainerScreen(
         }
         Box(Modifier.weight(1f).fillMaxWidth(), contentAlignment = Alignment.TopCenter) {
             when {
-                isLoading -> CircularProgressIndicator(Modifier.align(Alignment.Center))
+                isLoading -> LaunchSpinner(Modifier.align(Alignment.Center))
                 error != null -> Column(Modifier.align(Alignment.Center).padding(16.dp), horizontalAlignment = Alignment.CenterHorizontally) {
                     Text(error, color = MaterialTheme.colorScheme.error)
                     TextButton(onClick = onRetry) { Text("Retry") }

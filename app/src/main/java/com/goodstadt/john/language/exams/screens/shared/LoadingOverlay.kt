@@ -13,7 +13,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.unit.dp
 
-import androidx.compose.material3.CircularProgressIndicator
 
 @Composable
 fun LoadingOverlay() {
@@ -33,11 +32,7 @@ fun LoadingOverlay() {
             modifier = Modifier.size(60.dp) // Small square size
         ) {
             Box(contentAlignment = Alignment.Center) {
-                CircularProgressIndicator(
-                    modifier = Modifier.size(32.dp), // Smaller spinner
-                    color = MaterialTheme.colorScheme.onSecondaryContainer,
-                    strokeWidth = 3.dp
-                )
+                LaunchSpinner(size = 40.dp) // app spinner, small enough for the card
             }
         }
     }
@@ -68,11 +63,7 @@ fun SheetSwitchingOverlay(visible: Boolean) {
             modifier = Modifier.size(60.dp)
         ) {
             Box(contentAlignment = Alignment.Center) {
-                CircularProgressIndicator(
-                    modifier = Modifier.size(32.dp),
-                    color = MaterialTheme.colorScheme.onSecondaryContainer,
-                    strokeWidth = 3.dp
-                )
+                LaunchSpinner(size = 40.dp) // app spinner, small enough for the card
             }
         }
     }
