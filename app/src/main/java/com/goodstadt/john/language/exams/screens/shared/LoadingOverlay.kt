@@ -56,15 +56,7 @@ fun SheetSwitchingOverlay(visible: Boolean) {
             },
         contentAlignment = Alignment.Center
     ) {
-        Surface(
-            shape = RoundedCornerShape(12.dp),
-            color = MaterialTheme.colorScheme.secondaryContainer,
-            shadowElevation = 6.dp,
-            modifier = Modifier.size(60.dp)
-        ) {
-            Box(contentAlignment = Alignment.Center) {
-                LaunchSpinner(size = 40.dp) // app spinner, small enough for the card
-            }
-        }
+        // No card behind it: the same full-size Orbit on a clear background as a sheet's first load.
+        LaunchSpinner()
     }
 }
