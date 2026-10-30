@@ -47,7 +47,6 @@ import androidx.compose.material3.RadioButton
 import androidx.compose.material3.RadioButtonDefaults
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -585,13 +584,31 @@ fun ReadinessAuditScreen(
                     else "Completing the first quiz helps me set up the app accurately for you. Are you sure you want to close before finishing it?"
                 )
             },
+            // Filled button-blue buttons (both modes) so the choices stand out from the dialog.
+            // AlertDialog wraps its buttons onto a new line when they don't fit, hence the tight padding.
             confirmButton = {
-                TextButton(onClick = { showCloseConfirm = false; onFinished() }) {
+                Button(
+                    onClick = { showCloseConfirm = false; onFinished() },
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = LocalExtendedColors.current.buttonBlue,
+                        contentColor = Color.White
+                    ),
+                    // Tighter than the 24dp default so both buttons fit side by side, not stacked.
+                    contentPadding = PaddingValues(horizontal = 12.dp, vertical = 8.dp)
+                ) {
                     Text("Close Anyway")
                 }
             },
             dismissButton = {
-                TextButton(onClick = { showCloseConfirm = false }) {
+                Button(
+                    onClick = { showCloseConfirm = false },
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = LocalExtendedColors.current.buttonBlue,
+                        contentColor = Color.White
+                    ),
+                    // Tighter than the 24dp default so both buttons fit side by side, not stacked.
+                    contentPadding = PaddingValues(horizontal = 12.dp, vertical = 8.dp)
+                ) {
                     Text("Continue Test")
                 }
             }
