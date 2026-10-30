@@ -1,5 +1,7 @@
 package com.goodstadt.john.language.exams.packages.ReferenceTabContainer
 
+import com.goodstadt.john.language.exams.screens.shared.SessionFeedbackBar
+import com.goodstadt.john.language.exams.screens.shared.SessionFeedbackManager
 import com.goodstadt.john.language.exams.screens.shared.LaunchSpinner
 import androidx.compose.foundation.background
 import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
@@ -250,6 +252,8 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceTabContainerViewModel = hilt
                 }
             }
         }
+
+        SessionFeedbackBar(SessionFeedbackManager.Area.REFERENCE)
 
         if (uiState.tabs.isNotEmpty()) {
             // Part B: The Dynamic NavHost (now uses the single uiState)

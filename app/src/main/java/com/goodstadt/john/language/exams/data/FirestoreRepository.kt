@@ -596,6 +596,41 @@ class FirestoreRepository @Inject constructor(
             Timber.e(e, "Failed to log user error to Firestore.")
         }
     }
+    /**
+     * One answer to the "How is ExamReady doing this session?" bar (SessionFeedbackManager), as its own
+     * document in `session_feedback`. Write-only from the app; the Firestore rules allow only a create of the
+     * user's own uid. Twin of iOS fsUploadSessionFeedback - keep the fields in step.
+     */
+    fun fsUploadSessionFeedback(
+        rating: String,             // bad | fine | good | dismissed
+        area: String,               // tabs | reference
+        exam: String,
+        level: String,
+        tabsTaps: Int,              // this session
+        referenceTaps: Int,         // this session
+        daysSinceFirstUse: Int
+    ) {
+        val currentUser = FirebaseAuth.getInstance().currentUser ?: return
+        val doc = hashMapOf<String, Any>(
+            "uid" to currentUser.uid,
+            "rating" to rating,
+            "area" to area,
+            "createdAt" to FieldValue.serverTimestamp(),
+            "app" to BuildConfig.FLAVOR,          // de | en
+            "exam" to exam,
+            "level" to level,
+            "appVersion" to "${BuildConfig.VERSION_NAME}.${BuildConfig.VERSION_CODE}",
+            "platform" to "android",
+            "tabsTaps" to tabsTaps,
+            "referenceTaps" to referenceTaps,
+            "daysSinceFirstUse" to daysSinceFirstUse,
+            "debug" to BuildConfig.DEBUG
+        )
+        firestore.collection("session_feedback").document().set(doc)
+            .addOnSuccessListener { Timber.d("session_feedback uploaded: $rating ($area)") }
+            .addOnFailureListener { e -> Timber.e(e, "session_feedback upload error") }
+    }
+
     fun updateUserInFirestore() {
         val currentUser = FirebaseAuth.getInstance().currentUser ?: return
 

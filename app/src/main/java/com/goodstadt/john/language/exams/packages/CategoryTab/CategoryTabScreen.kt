@@ -102,6 +102,8 @@ import com.goodstadt.john.language.exams.packages.me.PremiumUpgradeSheet
 import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.shared.CacheProgressBar
+import com.goodstadt.john.language.exams.screens.shared.SessionFeedbackBar
+import com.goodstadt.john.language.exams.screens.shared.SessionFeedbackManager
 import com.goodstadt.john.language.exams.screens.shared.HelpInfoSheet
 import com.goodstadt.john.language.exams.screens.shared.HighlightedWordInSentenceRow
 import com.goodstadt.john.language.exams.screens.shared.LaunchSpinner
@@ -394,6 +396,8 @@ fun CategoryTabScreen(
                                 }
                             }
                         }
+
+                        SessionFeedbackBar(SessionFeedbackManager.Area.TABS)
 
                         // 2. Stats Bar & Gamification Button
                         CategoryStatsBar(

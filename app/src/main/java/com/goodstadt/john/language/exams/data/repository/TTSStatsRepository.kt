@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.data.repository
 
+import com.goodstadt.john.language.exams.screens.shared.SessionFeedbackManager
 import android.content.Context
 import android.content.SharedPreferences
 import android.icu.util.Calendar
@@ -42,6 +43,8 @@ class TTSStatsRepository @Inject constructor(
 //    private val firestore: FirebaseFirestore, //if direct call
     private val firestoreRepository: FirestoreRepository,
     private val userPreferencesRepository: UserPreferencesRepository,
+    // Taps also drive the "How is ExamReady doing this session?" bar on the busy screen.
+    internal val sessionFeedbackManager: SessionFeedbackManager,
 ) {
     private val PREFS_NAME = "pronounceDates"
     private val DATE_FORMAT = "yyyy-MM-dd" // ISO 8601 format
@@ -345,6 +348,7 @@ class TTSStatsRepository @Inject constructor(
         val tapKey = PageStat.key(PageStat.Area.REFERENCE, sheetId, PageStat.Metric.TAP)
         inc(fsDOC.GlobalStats, tapKey)
         inc(fsDOC.USER, tapKey)
+        sessionFeedbackManager.recordTap(SessionFeedbackManager.Area.REFERENCE)
         // Destination 2 — GA4 breadth + dwell.
         val params = Bundle().apply {
             putString("sheet", QuizStat.normalize(sheetId))   // normalised id -> lines up with the p_/q_ keys
@@ -373,6 +377,7 @@ class TTSStatsRepository @Inject constructor(
         val tapKey = PageStat.key(PageStat.Area.VOCAB, sheetId, PageStat.Metric.TAP)
         inc(fsDOC.GlobalStats, tapKey)
         inc(fsDOC.USER, tapKey)
+        sessionFeedbackManager.recordTap(SessionFeedbackManager.Area.TABS)
         // Destination 2 — GA4 breadth + dwell.
         val params = Bundle().apply {
             putLong("tab", tab.toLong())

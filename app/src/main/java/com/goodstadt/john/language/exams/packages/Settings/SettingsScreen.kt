@@ -1,5 +1,9 @@
 package com.goodstadt.john.language.exams.packages.Settings
 
+import androidx.compose.material.icons.filled.ThumbUp
+import androidx.compose.material.icons.filled.Refresh
+import com.goodstadt.john.language.exams.screens.shared.SessionFeedbackManager
+import com.goodstadt.john.language.exams.screens.shared.rememberSessionFeedbackManager
 import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
@@ -570,6 +574,7 @@ private fun SettingsContent(
     onRedeemCode: () -> Unit,
 ) {
     val settingsColors = LocalExtendedColors.current
+    val sessionFeedback = rememberSessionFeedbackManager()
     // Main Screen Content (wrapped in a Box so the SnackbarHost can overlay the bottom).
     Box(modifier = Modifier.fillMaxSize()) {
     LazyColumn(
@@ -1094,6 +1099,38 @@ private fun SettingsContent(
                 )
             }
 
+            // Session feedback bar: show it now (switch to that tab to see it), or clear its timers.
+            settingsItem { iconTint ->
+                SettingsActionItem(
+                    iconTint = iconTint,
+                    icon = Icons.Default.ThumbUp,
+                    title = "Show Feedback Bar on Tabs (D)",
+                    currentValue = "Appears below the menu on tabs 1-3",
+                    onClick = { sessionFeedback.debugShow(SessionFeedbackManager.Area.TABS) }
+                )
+            }
+            settingsItem { iconTint ->
+                SettingsActionItem(
+                    iconTint = iconTint,
+                    icon = Icons.Default.ThumbUp,
+                    title = "Show Feedback Bar on Reference (D)",
+                    currentValue = "Appears below the menu on Reference",
+                    onClick = { sessionFeedback.debugShow(SessionFeedbackManager.Area.REFERENCE) }
+                )
+            }
+            settingsItem { iconTint ->
+                var status by remember { mutableStateOf(sessionFeedback.debugStatus) }
+                SettingsActionItem(
+                    iconTint = iconTint,
+                    icon = Icons.Default.Refresh,
+                    title = "Reset Feedback Timers (D)",
+                    currentValue = status,
+                    onClick = {
+                        sessionFeedback.debugReset()
+                        status = sessionFeedback.debugStatus
+                    }
+                )
+            }
             settingsItem { iconTint ->
                 SettingsInfoItem(
                     iconTint = iconTint,

@@ -2,6 +2,7 @@ package com.goodstadt.john.language.exams.data.stats
 
 import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
+import com.goodstadt.john.language.exams.screens.shared.SessionFeedbackManager
 
 /**
  * Quiz stats key grammar — the Android twin of the iOS `QuizStat`. Written to BOTH the global monthly doc
@@ -93,5 +94,12 @@ fun TTSStatsRepository.recordPageView(
     val name = PageStat.key(area, sheetId, metric)
     for (doc in listOf(TTSStatsRepository.fsDOC.GlobalStats, TTSStatsRepository.fsDOC.USER)) {
         inc(doc, name, 1)
+    }
+    if (metric == PageStat.Metric.TAP) {
+        when (area) {
+            PageStat.Area.VOCAB -> sessionFeedbackManager.recordTap(SessionFeedbackManager.Area.TABS)
+            PageStat.Area.REFERENCE -> sessionFeedbackManager.recordTap(SessionFeedbackManager.Area.REFERENCE)
+            else -> Unit
+        }
     }
 }
