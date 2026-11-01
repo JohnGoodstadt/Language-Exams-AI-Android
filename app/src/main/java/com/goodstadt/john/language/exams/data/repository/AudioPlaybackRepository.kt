@@ -72,7 +72,7 @@ class AudioPlaybackRepository @Inject constructor(
         // ---------------------------------------------------------
         // 1. CHECK LOCAL DISK (Free & Fast)
         // ---------------------------------------------------------
-        if (contentRepository.playFromLocalCacheIfExists(uniqueSentenceId))
+        if (contentRepository.playFromLocalCacheIfExists(uniqueSentenceId, sentence, currentVoiceName))
         {
             // Stats logic for replay...
             handleSuccess(sentence, level, sheetName = sheetName)
@@ -127,24 +127,20 @@ class AudioPlaybackRepository @Inject constructor(
 
         // ---------------------------------------------------------
         // 2. CHECK CLOUD STORAGE (Free-ish)
-        // Only if user has heard it before (History Check)
+        // Always checked (it used to be only for sentences the user had heard before, which sent every new
+        // sentence straight to paid TTS and uploaded a duplicate of audio iOS had already put in the cloud).
         // ---------------------------------------------------------
 
-        val contentID = FirebaseAudioService.generateContentID(sentence)
-        val isHeard = historyManager.isHeard(level, contentID)
+        if (contentRepository.playFromCloudStorageIfExists(uniqueSentenceId, sentence, currentVoiceName)) {
+            loadingJob.cancel()
+            loadingManager.hide()
 
-        if (isHeard) { //enforce user has already heard it so check storage - i.e. business logic not code logic
-            if (contentRepository.playFromCloudStorageIfExists(uniqueSentenceId)) {
-                loadingJob.cancel()
-                loadingManager.hide()
-
-                handleSuccess(sentence, level, sheetName)
-                Timber.v("☁️ Waterfall L2: Downloaded from Cloud Storage. Yippee! '${sentence.take(21)}'")
-                ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats,statFBCloudHitCount)
-                return AudioPlaybackStatus.PlayedFromCloudStorage
-            }else{
-                ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats,statFBCloudMissCount)
-            }
+            handleSuccess(sentence, level, sheetName)
+            Timber.v("☁️ Waterfall L2: Downloaded from Cloud Storage. Yippee! '${sentence.take(21)}'")
+            ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats,statFBCloudHitCount)
+            return AudioPlaybackStatus.PlayedFromCloudStorage
+        }else{
+            ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats,statFBCloudMissCount)
         }
 
         try {
@@ -209,7 +205,7 @@ class AudioPlaybackRepository @Inject constructor(
         // ---------------------------------------------------------
         // 1. CHECK LOCAL DISK (Free & Fast)
         // ---------------------------------------------------------
-        if (contentRepository.playFromLocalCacheIfExists(uniqueSentenceId))
+        if (contentRepository.playFromLocalCacheIfExists(uniqueSentenceId, sentence, currentVoiceName))
         {
 
             Timber.v("🔊 Waterfall L1: Playing from Local Disk,  Yippee!! '${sentence.take(21)}'")
@@ -234,7 +230,7 @@ class AudioPlaybackRepository @Inject constructor(
         //val isHeard = historyManager.isHeard(level, contentID)
 
 
-        if (contentRepository.playFromCloudStorageIfExists(uniqueSentenceId)) {
+        if (contentRepository.playFromCloudStorageIfExists(uniqueSentenceId, sentence, currentVoiceName)) {
             loadingJob.cancel()
             loadingManager.hide()
 

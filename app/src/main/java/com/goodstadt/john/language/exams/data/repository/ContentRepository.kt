@@ -1388,14 +1388,14 @@ class ContentRepository @Inject constructor(
     ): PlaybackResultSplit {
 
         // 1. Check Local Disk (Fastest, Free)
-        if (playFromLocalCacheIfExists(uniqueSentenceId)) {
+        if (playFromLocalCacheIfExists(uniqueSentenceId, text, voiceName)) {
             return PlaybackResultSplit.PlayedFromCache
         }
 
         // 2. Check Firebase Cloud (Fast, Free)
         // Only if allowed by logic (e.g. user has heard it before)
         if (checkCloud) {
-            if (playFromCloudStorageIfExists(uniqueSentenceId)) {
+            if (playFromCloudStorageIfExists(uniqueSentenceId, text, voiceName)) {
                 return PlaybackResultSplit.PlayedFromCloudStorage // or PlayedFromNetworkAndCached
             }
         }
@@ -1415,8 +1415,10 @@ class ContentRepository @Inject constructor(
      * Checks if file exists locally. If so, plays it.
      * Returns TRUE if found and played successfully.
      */
-    suspend fun playFromLocalCacheIfExists(filename: String): Boolean {
+    suspend fun playFromLocalCacheIfExists(filename: String, text: String? = null, voiceName: String? = null): Boolean {
         val localFile = File(context.filesDir, filename)
+        // A file cached under the old Android name is renamed to the current (iOS-matching) name, not re-fetched.
+        if (text != null && voiceName != null) FirebaseAudioService.adoptLegacyLocalFile(text, voiceName, localFile)
 
         if (localFile.exists()) {
             return try {
@@ -1440,15 +1442,16 @@ class ContentRepository @Inject constructor(
     // MARK: - Step 2: Cloud Storage
 
     /**
-     * Checks if file exists in Firebase. If so, downloads, saves, and plays it.
+     * Checks if [text] in [voiceName] exists in Firebase (iOS name or Android name). If so, downloads, saves
+     * under the local name [filename], and plays it.
      * Returns TRUE if found, downloaded, and played successfully.
      */
-    suspend fun playFromCloudStorageIfExists(filename: String): Boolean {
+    suspend fun playFromCloudStorageIfExists(filename: String, text: String, voiceName: String): Boolean {
         val localFile = File(context.filesDir, filename)
 
         return try {
-            // downloadAudio returns Boolean (true if found, false if 404/error)
-            val foundInCloud = FirebaseAudioService.downloadAudio(filename, localFile)
+            // true if found under either platform's name, false if 404/error
+            val foundInCloud = FirebaseAudioService.downloadAudioAnyPlatform(text, voiceName, localFile)
 
             if (foundInCloud) {
                 // If download succeeded, file is now on disk. Read and Play.
@@ -1545,7 +1548,7 @@ class ContentRepository @Inject constructor(
 
         // 2. Cloud Storage -> download to disk (no play).
         try {
-            if (FirebaseAudioService.downloadAudio(uniqueSentenceId, localFile)) return true
+            if (FirebaseAudioService.downloadAudioAnyPlatform(text, voiceName, localFile)) return true
         } catch (e: Exception) {
             Timber.e(e, "ensureAudioCached: cloud download failed for ${uniqueSentenceId}")
         }

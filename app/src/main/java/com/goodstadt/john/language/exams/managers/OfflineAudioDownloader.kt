@@ -52,8 +52,8 @@ enum class OfflineConnection { WIFI, CELLULAR, NONE }
  * Downloads the vocab tab audio (each word's first sentence, the text a vocab row plays) for one sheet in one
  * voice from cloud storage into filesDir, under the normal local name, so taps play it with no internet.
  *
- * Cloud only - it never calls Google TTS. For each sentence it tries the iOS-named file first (iOS fills the
- * cloud for the default voices), then the Android-named one. Same design as the iOS OfflineAudioDownloader.
+ * Cloud only - it never calls Google TTS. Files are named exactly as on iOS (iOS fills the cloud for the default
+ * voices); old Android-named uploads are a fallback. Same design as the iOS OfflineAudioDownloader.
  * Runs in its own scope, so the user can keep studying; pauses on network loss / mobile data.
  */
 @Singleton
@@ -177,6 +177,8 @@ class OfflineAudioDownloader @Inject constructor(
             total = sentences.size
             val toFetch = sentences.filter { text ->
                 val name = localName(text, voice)
+                // A tapped file cached under the old Android name counts as already on the device.
+                FirebaseAudioService.adoptLegacyLocalFile(text, voice, File(context.filesDir, name))
                 if (isOnDevice(name)) {
                     if (name !in added) alreadyHad += name
                     false
@@ -214,16 +216,9 @@ class OfflineAudioDownloader @Inject constructor(
         }
     }
 
-    /** Cloud iOS name first, then the Android name; saved under the local (Android) name. */
-    private suspend fun fetch(text: String, voice: String): Boolean {
-        val dest = File(context.filesDir, localName(text, voice))
-        val part = File(context.filesDir, dest.name + ".part")
-        for (cloudName in listOf(FirebaseAudioService.generateIOSUnifiedFilename(text, voice), dest.name)) {
-            if (FirebaseAudioService.downloadAudio(cloudName, part) && part.length() > 0 && part.renameTo(dest)) return true
-        }
-        part.delete()
-        return false
-    }
+    /** Cloud unified (iOS-matching) name first, then the legacy Android name; saved under the unified name. */
+    private suspend fun fetch(text: String, voice: String): Boolean =
+        FirebaseAudioService.downloadAudioAnyPlatform(text, voice, File(context.filesDir, localName(text, voice)))
 
     // MARK: Network
 

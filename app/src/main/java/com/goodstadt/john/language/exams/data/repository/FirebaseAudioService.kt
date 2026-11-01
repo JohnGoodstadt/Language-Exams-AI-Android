@@ -45,25 +45,21 @@ object FirebaseAudioService {
      * Generates the filename for Disk/Cloud storage.
      * Format: "VoicePrefix_SentenceStart_Hash(10).mp3"
      * Specific to a single voice (e.g. Google UK Male).
+     * MUST match iOS generateUnifiedFilename exactly: the hash is of the TEXT ONLY (the voice is already in the
+     * name), so a file either app uploads is found by the other.
      */
     fun generateUnifiedFilename(text: String, voiceName: String): String {
         val cleanText = text.trim()
-        val prefix = getSafePrefix(cleanText)
-
-        // Key includes Voice + Text
-        val key = "${voiceName}_${cleanText}"
-        val hash = computeShortHash(key)
-
-        return "${voiceName}_${prefix}_${hash}.mp3"
+        return "${voiceName}_${getSafePrefix(cleanText)}_${computeShortHash(cleanText)}.mp3"
     }
 
     /**
-     * The name the iOS app uses for the same audio: identical except the hash is of the TEXT ONLY (no voice).
-     * Both names live side by side in cloud storage; the offline download reads either.
+     * The name Android used before Nov 2026 (hash of "voice_text"), which iOS never finds. Only READ - as a
+     * fallback for old local files and old cloud uploads - never written.
      */
-    fun generateIOSUnifiedFilename(text: String, voiceName: String): String {
+    fun generateLegacyAndroidFilename(text: String, voiceName: String): String {
         val cleanText = text.trim()
-        return "${voiceName}_${getSafePrefix(cleanText)}_${computeShortHash(cleanText)}.mp3"
+        return "${voiceName}_${getSafePrefix(cleanText)}_${computeShortHash("${voiceName}_${cleanText}")}.mp3"
     }
 
     /**
@@ -168,6 +164,38 @@ object FirebaseAudioService {
             false
         }
     }
+    /**
+     * Gets [text] in [voiceName] into [destFile] (its unified name) without TTS: first an old local file under the
+     * legacy Android name (renamed, no network), then Cloud under the unified name, then Cloud under the legacy
+     * Android name. Downloads via a ".part" file so a failed attempt never leaves a half-written mp3 under the
+     * real name.
+     */
+    suspend fun downloadAudioAnyPlatform(text: String, voiceName: String, destFile: File): Boolean {
+        if (adoptLegacyLocalFile(text, voiceName, destFile)) return true
+
+        val part = File(destFile.path + ".part")
+        val names = listOf(generateUnifiedFilename(text, voiceName), generateLegacyAndroidFilename(text, voiceName))
+        for (cloudName in names) {
+            if (downloadAudio(cloudName, part) && part.length() > 0 && part.renameTo(destFile)) return true
+        }
+        part.delete()
+        return false
+    }
+
+    /**
+     * If [destFile] is missing but the same audio is on disk under the legacy Android name (cached before the
+     * naming matched iOS), rename it to [destFile]. No network. Returns true if [destFile] now exists.
+     */
+    fun adoptLegacyLocalFile(text: String, voiceName: String, destFile: File): Boolean {
+        if (destFile.exists()) return true
+        val legacyLocal = File(destFile.parentFile, generateLegacyAndroidFilename(text, voiceName))
+        if (legacyLocal.exists() && legacyLocal.length() > 0 && legacyLocal.renameTo(destFile)) {
+            Timber.tag(TAG).d("Renamed legacy local file to ${destFile.name}")
+            return true
+        }
+        return false
+    }
+
     /**
      * Uploads a file to Cloud in the background (Fire & Forget).
      * Adds custom metadata so you can read the text in the Console.
