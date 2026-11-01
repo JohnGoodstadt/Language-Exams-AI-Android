@@ -1,6 +1,7 @@
 package com.goodstadt.john.language.exams.packages.Settings
 
 import androidx.compose.material.icons.filled.ThumbUp
+import androidx.compose.material.icons.filled.CloudDownload
 import androidx.compose.material.icons.filled.Refresh
 import com.goodstadt.john.language.exams.screens.shared.SessionFeedbackManager
 import com.goodstadt.john.language.exams.screens.shared.rememberSessionFeedbackManager
@@ -125,6 +126,7 @@ fun SettingsScreen(
 
     var showDebugSheet by remember { mutableStateOf(false) }
     var showTranslateSheet by remember { mutableStateOf(false) }
+    var showOfflineSheet by remember { mutableStateOf(false) }
     val vm: DictionaryEntryBrowserViewModel = viewModel()
 
 //    var showTryOutVoicesSheet by remember { mutableStateOf(false) }
@@ -200,6 +202,15 @@ fun SettingsScreen(
         dictionaryViewModel = vm,
     )
 
+    if (showOfflineSheet) {
+        OfflineDownloadSheet(
+            friendlyVoiceName = uiState.currentFriendlyVoiceName,
+            voices = uiState.availableVoices,
+            onSwitchVoice = { viewModel.switchVoiceForOffline(it) },
+            onDismiss = { showOfflineSheet = false },
+        )
+    }
+
     SettingsContent(
         navController = navController,
         viewModel = viewModel,
@@ -210,6 +221,8 @@ fun SettingsScreen(
         snackbarHostState = snackbarHostState,
         onShowSignIn = { showSignInSheet = true },
         onShowTranslate = { showTranslateSheet = true },
+        // Premium only (IAP or redeemed code); others get the upgrade sheet.
+        onShowOffline = { if (isPurchased) showOfflineSheet = true else viewModel.onShowBottomSheetClicked() },
         onRedeemCode = {
             if (!openPlayCodeRedemption(context)) {
                 coroutineScope.launch {
@@ -571,6 +584,7 @@ private fun SettingsContent(
     snackbarHostState: SnackbarHostState,
     onShowSignIn: () -> Unit,
     onShowTranslate: () -> Unit,
+    onShowOffline: () -> Unit,
     onRedeemCode: () -> Unit,
 ) {
     val settingsColors = LocalExtendedColors.current
@@ -617,6 +631,15 @@ private fun SettingsContent(
                 currentValue = uiState.availableExams.find { it.json == uiState.currentExamName }?.displayName
                     ?: uiState.currentExamName,
                 onClick = { viewModel.onSettingClicked(SheetContent.ExamSelection) }
+            )
+        }
+        settingsItem { iconTint ->
+            SettingsActionItem(
+                iconTint = iconTint,
+                icon = Icons.Default.CloudDownload,
+                title = "Download for Offline",
+                currentValue = "",
+                onClick = onShowOffline
             )
         }
         settingsItem { iconTint ->

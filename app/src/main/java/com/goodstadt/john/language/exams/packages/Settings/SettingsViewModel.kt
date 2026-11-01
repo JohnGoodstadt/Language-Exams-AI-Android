@@ -388,6 +388,15 @@ class SettingsViewModel @Inject constructor(
         }
     }
 
+    /** "Switch to the default voice for offline": same steps as confirming the Change Speaker sheet. */
+    fun switchVoiceForOffline(voiceName: String) {
+        viewModelScope.launch {
+            userPreferencesRepository.saveSelectedVoiceName(voiceName)
+            ttsStatsRepository.updateUserStatField(currentGoogleVoiceName, voiceName)
+            firestoreRepository.fsUpdateUserGoogleVoices(voiceName)
+        }
+    }
+
     fun onShowBottomSheetClicked() {
 
         if (!connectivityRepository.isCurrentlyOnline()) {

@@ -58,6 +58,15 @@ object FirebaseAudioService {
     }
 
     /**
+     * The name the iOS app uses for the same audio: identical except the hash is of the TEXT ONLY (no voice).
+     * Both names live side by side in cloud storage; the offline download reads either.
+     */
+    fun generateIOSUnifiedFilename(text: String, voiceName: String): String {
+        val cleanText = text.trim()
+        return "${voiceName}_${getSafePrefix(cleanText)}_${computeShortHash(cleanText)}.mp3"
+    }
+
+    /**
      * Generates the ID for History/Stats.
      * Format: "CID_SentenceStart_Hash(10)"
      * Voice-Agnostic (Same ID for US Female and UK Male).
