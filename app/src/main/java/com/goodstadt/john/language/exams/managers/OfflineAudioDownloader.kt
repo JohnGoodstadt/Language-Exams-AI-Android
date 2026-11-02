@@ -48,6 +48,11 @@ data class OfflinePackRecord(
 
 enum class OfflineConnection { WIFI, CELLULAR, NONE }
 
+/** One sentence to download and the voice it plays in. */
+data class OfflineAudioItem(val text: String, val voice: String)
+
+enum class ReferenceFormat { VOCAB, FORMAT1, FORMAT2, FORMAT6, FORMAT8, FORMAT9 }
+
 /**
  * Downloads the vocab tab audio (each word's first sentence, the text a vocab row plays) for one sheet in one
  * voice from cloud storage into filesDir, under the normal local name, so taps play it with no internet.
@@ -68,6 +73,54 @@ class OfflineAudioDownloader @Inject constructor(
         const val WAITING_FOR_CONNECTION = "Waiting for a connection"
 
         fun packId(sheetName: String, voice: String) = "vocab-$sheetName-$voice"
+        fun referencePackId(language: String, voice: String) = "reference-$language-$voice"
+
+        /**
+         * The Reference tab sheets (as in debug_manifest.json) whose audio "Reference Pages" downloads. Leaves out
+         * the local-language sheets (Spanish, Portuguese, Indian) and the quizzes. Same list as iOS.
+         */
+        val referenceSheets: Map<String, List<Pair<String, ReferenceFormat>>> = mapOf(
+            "German" to listOf(
+                "GermanConjugationsToHaveTeaching" to ReferenceFormat.FORMAT6, "GermanConjugationsToBeTeaching" to ReferenceFormat.FORMAT6,
+                "GermanConjugationsToDoTeaching" to ReferenceFormat.FORMAT6, "GermanConjugationsToGetTeaching" to ReferenceFormat.FORMAT6,
+                "GermanPrepositionsTeaching" to ReferenceFormat.FORMAT6,
+                "GermanA1Adjectives" to ReferenceFormat.VOCAB, "GermanA2Adjectives" to ReferenceFormat.VOCAB,
+                "GermanB1Adjectives" to ReferenceFormat.VOCAB, "GermanB2Adjectives" to ReferenceFormat.VOCAB,
+                "GermanReferencePronouns" to ReferenceFormat.FORMAT6,
+                "GermanPronouns2Nominative2" to ReferenceFormat.FORMAT8, "GermanPronouns2Accusative2" to ReferenceFormat.FORMAT8,
+                "GermanPronouns2Dative2" to ReferenceFormat.FORMAT8, "GermanPronouns2Patterns2" to ReferenceFormat.FORMAT8,
+                "GermanPronouns2BothCases2" to ReferenceFormat.FORMAT8, "GermanPronouns2LearningVerbs2" to ReferenceFormat.FORMAT8,
+                "GermanPronouns3Ich" to ReferenceFormat.FORMAT8, "GermanPronouns3Du" to ReferenceFormat.FORMAT8,
+                "GermanPronouns3Er" to ReferenceFormat.FORMAT8, "GermanPronouns3SieSingular" to ReferenceFormat.FORMAT8,
+                "GermanPronouns3Es" to ReferenceFormat.FORMAT8, "GermanPronouns3Wir" to ReferenceFormat.FORMAT8,
+                "GermanPronouns3Ihr" to ReferenceFormat.FORMAT8, "GermanPronouns3SiePlural" to ReferenceFormat.FORMAT8,
+                "GermanPronouns3SieFormal" to ReferenceFormat.FORMAT8,
+                "GermanPodcastFootballTripStuttgart" to ReferenceFormat.FORMAT9, "GermanPodcastSkiWeekendStubaital" to ReferenceFormat.FORMAT9,
+                "GermanSoundsTheSame" to ReferenceFormat.FORMAT1,
+                "GermanKennenWissen" to ReferenceFormat.FORMAT2, "GermanFragenBitten" to ReferenceFormat.FORMAT2,
+                "GermanBringenHolen" to ReferenceFormat.FORMAT2, "GermanHoerenZuhoeren" to ReferenceFormat.FORMAT2,
+            ),
+            "English" to listOf(
+                "EnglishConjugationsToHaveTeaching" to ReferenceFormat.FORMAT6, "EnglishConjugationsToBeTeaching" to ReferenceFormat.FORMAT6,
+                "EnglishConjugationsToDoTeaching" to ReferenceFormat.FORMAT6, "EnglishConjugationsToGetTeaching" to ReferenceFormat.FORMAT6,
+                "EnglishPrepositionsTeaching" to ReferenceFormat.FORMAT6,
+                "EnglishA1Adjectives" to ReferenceFormat.VOCAB, "EnglishA2Adjectives" to ReferenceFormat.VOCAB,
+                "EnglishB1Adjectives" to ReferenceFormat.VOCAB, "EnglishB2Adjectives" to ReferenceFormat.VOCAB,
+                "EnglishReferencePronouns" to ReferenceFormat.FORMAT6,
+                "EnglishPodcastFootballTripManchester" to ReferenceFormat.FORMAT9,
+                "EnglishDefinitionsFormat1" to ReferenceFormat.FORMAT1,
+                "EnglishGoodVsWell" to ReferenceFormat.FORMAT2, "EnglishSayVsTell" to ReferenceFormat.FORMAT2,
+                "EnglishSpeakVsTalk" to ReferenceFormat.FORMAT2, "EnglishHearVsListen" to ReferenceFormat.FORMAT2,
+                "EnglishBorrowVsLend" to ReferenceFormat.FORMAT2, "EnglishBringVsTake" to ReferenceFormat.FORMAT2,
+                "EnglishLookVsSee" to ReferenceFormat.FORMAT2,
+            ),
+        )
+
+        private val levelVocab = Regex("(A1|A2|B1|B2)Vocab")
+
+        /** "GermanA1Vocab" -> "German": the language prefix used by [referenceSheets]. */
+        fun languagePrefix(currentSheet: String): String? =
+            levelVocab.find(currentSheet)?.let { currentSheet.substring(0, it.range.first) }
     }
 
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
@@ -91,8 +144,12 @@ class OfflineAudioDownloader @Inject constructor(
 
     private var job: Job? = null
     private var allowCellular = false
-    /** (sheetName, level, voice) of the pack being downloaded, kept while paused so it can resume. */
-    private var current: Triple<String, String, String>? = null
+    /** The pack being downloaded, kept while paused so it can resume. */
+    private class Running(
+        val id: String, val sheetName: String, val level: String, val voice: String,
+        val items: suspend () -> List<OfflineAudioItem>
+    )
+    private var current: Running? = null
 
     init {
         loadRecords()
@@ -109,17 +166,67 @@ class OfflineAudioDownloader @Inject constructor(
             .distinct()
     }
 
+    // MARK: Reference pages
+
+    /**
+     * Every sentence the Reference pages play when tapped, in the voice a tap uses: [voice], except podcast lines,
+     * which always play in their speaker's own voice.
+     */
+    suspend fun referenceItems(language: String, voice: String): List<OfflineAudioItem> {
+        val out = LinkedHashSet<OfflineAudioItem>()
+        fun add(text: String, v: String) {
+            val t = text.trim()
+            if (t.isNotEmpty()) out += OfflineAudioItem(t, v)
+        }
+        for ((doc, format) in referenceSheets[language].orEmpty()) {
+            when (format) {
+                // Adjectives: all sentences of each word are shown and tappable.
+                ReferenceFormat.VOCAB -> contentRepository.getFormat0Data(doc).getOrNull()?.categories.orEmpty()
+                    .forEach { c -> c.words.forEach { w -> w.sentences.forEach { add(it.sentence, voice) } } }
+                ReferenceFormat.FORMAT1 -> contentRepository.getFormat1Data(doc).getOrNull()?.data.orEmpty()
+                    .forEach { g -> g.wordsAndSentences.forEach { add(it.sentence, voice) } }
+                ReferenceFormat.FORMAT2 -> contentRepository.getFormat2Data(doc).getOrNull()?.data.orEmpty()
+                    .forEach { g -> g.wordsAndSentences.forEach { w -> w.sentences.forEach { add(it.sentence, voice) } } }
+                ReferenceFormat.FORMAT6 -> contentRepository.getFormat6Data(doc).getOrNull()?.categories.orEmpty()
+                    .forEach { c -> c.patterns.forEach { p -> p.sections.forEach { sec -> sec.sentences.forEach { add(it.text, voice) } } } }
+                ReferenceFormat.FORMAT8 -> contentRepository.getFormat8Data(doc).getOrNull()?.sections.orEmpty()
+                    .forEach { sec -> sec.entries.forEach { e -> e.examples.forEach { add(it.german, voice) } } }
+                ReferenceFormat.FORMAT9 -> contentRepository.getFormat9Data(doc).getOrNull()?.let { file ->
+                    val voices = file.speakers.associate { it.id to it.voiceId }
+                    file.scenes.forEach { scene ->
+                        scene.lines.forEach { line ->
+                            add(file.spokenText(line), voices[line.speakerId]?.takeIf { it.isNotBlank() } ?: voice)
+                        }
+                    }
+                }
+            }
+        }
+        return out.toList()
+    }
+
     private fun localName(text: String, voice: String) = FirebaseAudioService.generateUnifiedFilename(text, voice)
     private fun isOnDevice(name: String) = File(context.filesDir, name).exists()
 
     fun onDeviceCount(sentences: List<String>, voice: String) = sentences.count { isOnDevice(localName(it, voice)) }
+    fun onDeviceCount(items: List<OfflineAudioItem>) = items.count { isOnDevice(localName(it.text, it.voice)) }
 
     // MARK: Start / pause / remove
 
-    fun start(sheetName: String, level: String, voice: String, allowCellular: Boolean) {
+    fun start(sheetName: String, level: String, voice: String, allowCellular: Boolean) =
+        startPack(Running(packId(sheetName, voice), sheetName, level, voice) {
+            sentences(sheetName).map { OfflineAudioItem(it, voice) }
+        }, allowCellular)
+
+    /** Download the Reference pages pack for [language] ("German" / "English"). */
+    fun startReference(language: String, voice: String, allowCellular: Boolean) =
+        startPack(Running(referencePackId(language, voice), "${language}Reference", "", voice) {
+            referenceItems(language, voice)
+        }, allowCellular)
+
+    private fun startPack(pack: Running, allowCellular: Boolean) {
         if (job?.isActive == true || _runningPackId.value != null) return
         this.allowCellular = allowCellular
-        current = Triple(sheetName, level, voice)
+        current = pack
         _isPaused.value = false
         _pauseReason.value = ""
         launchRun()
@@ -160,25 +267,24 @@ class OfflineAudioDownloader @Inject constructor(
     }
 
     private fun launchRun() {
-        val (sheetName, level, voice) = current ?: return
-        val id = packId(sheetName, voice)
-        _runningPackId.value = id
-        job = scope.launch { run(id, sheetName, level, voice) }
+        val pack = current ?: return
+        _runningPackId.value = pack.id
+        job = scope.launch { run(pack.id, pack.sheetName, pack.level, pack.voice, pack.items) }
     }
 
-    private suspend fun run(id: String, sheetName: String, level: String, voice: String) {
+    private suspend fun run(id: String, sheetName: String, level: String, voice: String, items: suspend () -> List<OfflineAudioItem>) {
         val existing = _records.value[id]
         val added = existing?.added?.toMutableSet() ?: mutableSetOf()
         val alreadyHad = existing?.alreadyHad?.toMutableSet() ?: mutableSetOf()
         var unavailable = 0
         var total = existing?.total ?: 0
         try {
-            val sentences = sentences(sheetName)
+            val sentences = items()
             total = sentences.size
-            val toFetch = sentences.filter { text ->
-                val name = localName(text, voice)
+            val toFetch = sentences.filter { item ->
+                val name = localName(item.text, item.voice)
                 // A tapped file cached under the old Android name counts as already on the device.
-                FirebaseAudioService.adoptLegacyLocalFile(text, voice, File(context.filesDir, name))
+                FirebaseAudioService.adoptLegacyLocalFile(item.text, item.voice, File(context.filesDir, name))
                 if (isOnDevice(name)) {
                     if (name !in added) alreadyHad += name
                     false
@@ -192,9 +298,9 @@ class OfflineAudioDownloader @Inject constructor(
             for (batch in toFetch.chunked(PARALLEL_DOWNLOADS)) {
                 coroutineScope {
                     ensureActive()
-                    val results = batch.map { text -> async { text to fetch(text, voice) } }.awaitAll()
-                    for ((text, ok) in results) {
-                        if (ok) added += localName(text, voice) else unavailable++
+                    val results = batch.map { item -> async { item to fetch(item.text, item.voice) } }.awaitAll()
+                    for ((item, ok) in results) {
+                        if (ok) added += localName(item.text, item.voice) else unavailable++
                     }
                 }
                 _done.value += batch.size

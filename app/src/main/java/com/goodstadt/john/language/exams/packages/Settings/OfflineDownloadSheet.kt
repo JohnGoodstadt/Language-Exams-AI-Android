@@ -55,6 +55,13 @@ data class OfflineLevelRow(
     val onDevice: Int,
 )
 
+/** The Reference pages pack for the current language, in the current voice. */
+data class OfflineReferenceRow(
+    val language: String,
+    val sentences: Int,
+    val onDevice: Int,
+)
+
 /**
  * Backs the "Download for Offline" sheet: the current vocab level, plus any other level that still holds a
  * download (so it can be removed). Downloads run in [OfflineAudioDownloader] and outlive this ViewModel.
@@ -74,6 +81,9 @@ class OfflineDownloadViewModel @Inject constructor(
     private val _defaultVoices = MutableStateFlow<Pair<String, String>?>(null)
     val defaultVoices = _defaultVoices.asStateFlow()
 
+    private val _reference = MutableStateFlow<OfflineReferenceRow?>(null)
+    val reference = _reference.asStateFlow()
+
     private val sentenceCache = mutableMapOf<String, List<String>>()
 
     fun load() {
@@ -90,14 +100,29 @@ class OfflineDownloadViewModel @Inject constructor(
                 rows += OfflineLevelRow(sheet, level, it.size, downloader.onDeviceCount(it, voice))
             }
             downloader.records.value.values
-                .filter { it.voice == voice && it.sheetName != sheet }
+                .filter { it.voice == voice && it.sheetName != sheet && it.id.startsWith("vocab-") }
                 .sortedBy { it.level }
                 .forEach { r ->
                     val s = sentencesFor(r.sheetName)
                     rows += OfflineLevelRow(r.sheetName, r.level, s.size, downloader.onDeviceCount(s, voice))
                 }
             _rows.value = rows
+
+            val language = OfflineAudioDownloader.languagePrefix(sheet)
+                ?.takeIf { OfflineAudioDownloader.referenceSheets.containsKey(it) }
+            _reference.value = language?.let {
+                val items = downloader.referenceItems(it, voice)
+                OfflineReferenceRow(it, items.size, downloader.onDeviceCount(items))
+            }
         }
+    }
+
+    fun downloadReference(row: OfflineReferenceRow, allowCellular: Boolean) =
+        downloader.startReference(row.language, _voice.value, allowCellular)
+
+    fun removeReference(row: OfflineReferenceRow) {
+        downloader.remove(OfflineAudioDownloader.referencePackId(row.language, _voice.value))
+        load()
     }
 
     private suspend fun sentencesFor(sheet: String) =
@@ -132,7 +157,9 @@ fun OfflineDownloadSheet(
     val done by downloader.done.collectAsState()
     val total by downloader.total.collectAsState()
     val connection by downloader.connection.collectAsState()
+    val reference by viewModel.reference.collectAsState()
     var cellularRow by remember { mutableStateOf<OfflineLevelRow?>(null) }
+    var cellularReference by remember { mutableStateOf<OfflineReferenceRow?>(null) }
 
     // Reload when the voice changes or a download starts / finishes, so counts and rows stay true.
     LaunchedEffect(voice, runningPackId) { viewModel.load() }
@@ -211,7 +238,57 @@ fun OfflineDownloadSheet(
                     )
                 }
             }
+
+            reference?.let { ref ->
+                HorizontalDivider(modifier = Modifier.padding(top = 8.dp))
+                Text(
+                    "REFERENCE PAGES",
+                    style = MaterialTheme.typography.labelMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    modifier = Modifier.padding(top = 16.dp, bottom = 8.dp)
+                )
+                val id = OfflineAudioDownloader.referencePackId(ref.language, voice)
+                PackRowView(
+                    title = "Reference pages",
+                    notDownloadedText = "Conjugations, prepositions, adjectives, pronouns, podcasts, pairs · " +
+                            "${ref.sentences} sentences · about ${sizeText(ref.sentences - ref.onDevice)}",
+                    sentences = ref.sentences,
+                    onDevice = ref.onDevice,
+                    record = records[id],
+                    isRunning = runningPackId == id,
+                    anyRunning = runningPackId != null,
+                    isPaused = isPaused,
+                    pauseReason = pauseReason,
+                    done = done,
+                    total = total,
+                    canDownload = connection != OfflineConnection.NONE,
+                    onDownload = {
+                        when (connection) {
+                            OfflineConnection.WIFI -> viewModel.downloadReference(ref, allowCellular = false)
+                            OfflineConnection.CELLULAR -> cellularReference = ref
+                            OfflineConnection.NONE -> {}
+                        }
+                    },
+                    onPause = { downloader.pause() },
+                    onResume = {
+                        if (connection == OfflineConnection.CELLULAR) downloader.resumeAllowingCellular() else downloader.resume()
+                    },
+                    onRemove = { viewModel.removeReference(ref) },
+                )
+            }
         }
+    }
+
+    cellularReference?.let { ref ->
+        AlertDialog(
+            onDismissRequest = { cellularReference = null },
+            title = { Text("Download on mobile data?") },
+            text = { Text("About ${sizeText(ref.sentences - ref.onDevice)} will be downloaded.") },
+            confirmButton = {
+                TextButton(onClick = { viewModel.downloadReference(ref, allowCellular = true); cellularReference = null }) { Text("Download now") }
+            },
+            dismissButton = { TextButton(onClick = { cellularReference = null }) { Text("Wait for Wi-Fi") } }
+        )
     }
 
     cellularRow?.let { row ->
@@ -252,16 +329,44 @@ private fun LevelRowView(
     onPause: () -> Unit,
     onResume: () -> Unit,
     onRemove: () -> Unit,
+) = PackRowView(
+    title = "${row.level} Vocab",
+    notDownloadedText = "${row.sentences} sentences · about ${sizeText(row.sentences - row.onDevice)}" +
+            if (row.onDevice > 0) " · ${row.onDevice} already heard" else "",
+    sentences = row.sentences, onDevice = row.onDevice, record = record, isRunning = isRunning, anyRunning = anyRunning,
+    isPaused = isPaused, pauseReason = pauseReason, done = done, total = total, canDownload = true,
+    onDownload = onDownload, onPause = onPause, onResume = onResume, onRemove = onRemove,
+)
+
+/** One downloadable pack: Download / Pause / Resume, progress, status and Remove. */
+@Composable
+private fun PackRowView(
+    title: String,
+    notDownloadedText: String,
+    sentences: Int,
+    onDevice: Int,
+    record: OfflinePackRecord?,
+    isRunning: Boolean,
+    anyRunning: Boolean,
+    isPaused: Boolean,
+    pauseReason: String,
+    done: Int,
+    total: Int,
+    canDownload: Boolean,
+    onDownload: () -> Unit,
+    onPause: () -> Unit,
+    onResume: () -> Unit,
+    onRemove: () -> Unit,
 ) {
-    val remaining = row.sentences - row.onDevice
+    val remaining = sentences - onDevice
     Column(modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp)) {
         Row(verticalAlignment = Alignment.CenterVertically) {
-            Text("${row.level} Vocab", style = MaterialTheme.typography.titleMedium, modifier = Modifier.weight(1f))
+            Text(title, style = MaterialTheme.typography.titleMedium, modifier = Modifier.weight(1f))
             when {
                 isRunning -> OutlinedButton(onClick = if (isPaused) onResume else onPause) {
                     Text(if (isPaused) "Resume" else "Pause")
                 }
-                remaining > 0 -> Button(onClick = onDownload, enabled = !anyRunning) { Text("Download") }
+                remaining > 0 -> Button(onClick = onDownload, enabled = !anyRunning && canDownload) { Text("Download") }
             }
         }
         Spacer(Modifier.height(6.dp))
@@ -278,10 +383,9 @@ private fun LevelRowView(
             )
         } else {
             var text = when {
-                remaining == 0 -> "Ready offline · ${row.sentences} sentences"
-                record != null -> "${row.onDevice} of ${row.sentences} on this device"
-                else -> "${row.sentences} sentences · about ${sizeText(remaining)}" +
-                        if (row.onDevice > 0) " · ${row.onDevice} already heard" else ""
+                remaining == 0 -> "Ready offline · $sentences sentences"
+                record != null -> "$onDevice of $sentences on this device"
+                else -> notDownloadedText
             }
             if (record != null && record.unavailable > 0) text += " · ${record.unavailable} not available"
             Text(text, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
