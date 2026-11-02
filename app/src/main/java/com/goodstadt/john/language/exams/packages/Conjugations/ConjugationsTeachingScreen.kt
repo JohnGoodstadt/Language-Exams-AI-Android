@@ -48,6 +48,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.goodstadt.john.language.exams.models.SubTabDefinition
 import com.goodstadt.john.language.exams.models.Format7or10Section
 import com.goodstadt.john.language.exams.packages.ReferencePronouns.Format6File
 import com.goodstadt.john.language.exams.packages.ReferencePronouns.Format6Style
@@ -72,7 +73,12 @@ import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ConjugationsTeachingScreen(viewModel: ConjugationsTeachingViewModel = hiltViewModel()) {
+fun ConjugationsTeachingScreen(
+    subTabs: List<SubTabDefinition> = emptyList(),
+    viewModel: ConjugationsTeachingViewModel = hiltViewModel()
+) {
+    // Runs before the first frame reads verbOptions; a no-op after the first call.
+    remember(viewModel) { viewModel.useSubTabs(subTabs) }
     val selectedVerb by viewModel.selectedVerb.collectAsState()
     val isSwitching by viewModel.isSwitching.collectAsState()
     var showTranslateSheet by rememberSaveable { mutableStateOf(false) }

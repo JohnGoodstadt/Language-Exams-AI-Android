@@ -80,6 +80,9 @@ sealed class RefScreen(val route: String) {
     object GroupedFormat8 : RefScreen("grouped_format8/{tabId}") {
         fun createRoute(tabId: String) = "grouped_format8/$tabId"
     }
+    object GroupedFormat6 : RefScreen("grouped_format6/{tabId}") {
+        fun createRoute(tabId: String) = "grouped_format6/$tabId"
+    }
     object GroupedFormat9 : RefScreen("grouped_format9/{tabId}") {
         fun createRoute(tabId: String) = "grouped_format9/$tabId"
     }

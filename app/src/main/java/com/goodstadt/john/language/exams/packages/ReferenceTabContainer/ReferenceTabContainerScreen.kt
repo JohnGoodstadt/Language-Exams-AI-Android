@@ -58,6 +58,7 @@ import com.goodstadt.john.language.exams.navigation.QUIZ_DETAIL_ROUTE
 import com.goodstadt.john.language.exams.packages.ReferencePronouns.Format6SheetView
 import com.goodstadt.john.language.exams.navigation.RefScreen
 import com.goodstadt.john.language.exams.packages.Conjugations.ConjugationsScreen
+import com.goodstadt.john.language.exams.packages.Conjugations.ConjugationsTeachingScreen
 import com.goodstadt.john.language.exams.screens.Format1.Format1Screen
 import com.goodstadt.john.language.exams.screens.Format2.Format2Screen
 import com.goodstadt.john.language.exams.screens.Format2.Format2UiState
@@ -173,6 +174,7 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceTabContainerViewModel = hilt
             ScreenType.FORMAT_8_SCREEN -> definition.firestoreDocumentId?.let { docId ->
                 RefScreen.Format8.createRoute(docId)
             }
+            ScreenType.GROUPED_FORMAT_6_SCREEN -> RefScreen.GroupedFormat6.createRoute(selectedTab.id)
             ScreenType.GROUPED_FORMAT_8_SCREEN -> RefScreen.GroupedFormat8.createRoute(selectedTab.id)
             ScreenType.GROUPED_FORMAT_9_SCREEN -> RefScreen.GroupedFormat9.createRoute(selectedTab.id)
             ScreenType.GROUPED_FORMAT_2_SCREEN -> {
@@ -447,6 +449,19 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceTabContainerViewModel = hilt
                                 onSubTabSelected = { viewModel.onFormat8SubTabSelected(tabId, it) },
                                 onRetry = { viewModel.onTabSelected(tabId) }
                             )
+                        }
+                    }
+
+                    // Several fileFormat-6 sheets (e.g. Conjugations: Haben / Sein / ...) from the manifest's
+                    // sub-tabs, shown with the conjugations teaching screen's chip row.
+                    composable(
+                        route = RefScreen.GroupedFormat6.route,
+                        arguments = listOf(navArgument("tabId") { type = NavType.StringType })
+                    ) { entry ->
+                        val tabId = entry.arguments?.getString("tabId").orEmpty()
+                        val definition = uiState.tabs.firstOrNull { it.id == tabId }?.definition
+                        key(tabId) {
+                            ConjugationsTeachingScreen(subTabs = definition?.subTabs.orEmpty())
                         }
                     }
 

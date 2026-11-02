@@ -12,8 +12,13 @@
     },
     "conjugations": {
       "title": "Conjugations",
-      "sheetDataType": "fixed",
-      "screenType": "FixedScreen"
+      "screenType": "GroupedFormat6Screen",
+      "subTabs": [
+        { "title": "To Have", "firestoreDocumentId": "EnglishConjugationsToHaveTeaching", "sheetDataType": "Format6" },
+        { "title": "To Be", "firestoreDocumentId": "EnglishConjugationsToBeTeaching", "sheetDataType": "Format6" },
+        { "title": "To Do", "firestoreDocumentId": "EnglishConjugationsToDoTeaching", "sheetDataType": "Format6" },
+        { "title": "To Get", "firestoreDocumentId": "EnglishConjugationsToGetTeaching", "sheetDataType": "Format6" }
+      ]
     },
     "EnglishPrepositions": {
       "title": "Prepositions",

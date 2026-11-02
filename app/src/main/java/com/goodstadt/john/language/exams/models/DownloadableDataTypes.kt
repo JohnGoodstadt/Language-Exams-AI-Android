@@ -44,6 +44,8 @@ enum class ScreenType(val serialName: String) {
     FORMAT_6_TEACHING_SCREEN("Format6TeachingScreen"),
     GRAMMAR_SCREEN("GrammarScreen"),
     GROUPED_FORMAT_2_SCREEN("GroupedFormat2Screen"),
+    // Several fileFormat-6 sheets behind a chip row, e.g. Conjugations (Haben / Sein / ...). Shared with iOS.
+    GROUPED_FORMAT_6_SCREEN("GroupedFormat6Screen"),
     GROUPED_FORMAT_8_SCREEN("GroupedFormat8Screen"),
     GROUPED_FORMAT_9_SCREEN("GroupedFormat9Screen"),
     GROUPED_FORMAT_3_SCREEN("GroupedFormat3Screen"),

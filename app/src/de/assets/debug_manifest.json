@@ -12,8 +12,13 @@
     },
     "conjugations": {
       "title": "Konjugationen",
-      "sheetDataType": "fixed",
-      "screenType": "FixedScreen"
+      "screenType": "GroupedFormat6Screen",
+      "subTabs": [
+        { "title": "Haben", "firestoreDocumentId": "GermanConjugationsToHaveTeaching", "sheetDataType": "Format6" },
+        { "title": "Sein", "firestoreDocumentId": "GermanConjugationsToBeTeaching", "sheetDataType": "Format6" },
+        { "title": "Machen", "firestoreDocumentId": "GermanConjugationsToDoTeaching", "sheetDataType": "Format6" },
+        { "title": "Bekommen", "firestoreDocumentId": "GermanConjugationsToGetTeaching", "sheetDataType": "Format6" }
+      ]
     },
     "GermanPrepositions": {
       "title": "Präpositionen",
