@@ -143,7 +143,18 @@ class AudioPlaybackRepository @Inject constructor(
         // sentence straight to paid TTS and uploaded a duplicate of audio iOS had already put in the cloud).
         // ---------------------------------------------------------
 
-        if (contentRepository.playFromCloudStorageIfExists(uniqueSentenceId, sentence, currentVoiceName)) {
+        // Raced against a quick connection probe: the emulator (and some real networks) can report "connected"
+        // with no internet, and Firebase would then retry for 10 minutes behind the spinner. null = offline.
+        val playedFromCloud = connectionNotice.unlessOffline {
+            contentRepository.playFromCloudStorageIfExists(uniqueSentenceId, sentence, currentVoiceName)
+        }
+        if (playedFromCloud == null) {
+            loadingJob.cancel()
+            loadingManager.hide()
+            connectionNotice.noteMiss()
+            return AudioPlaybackStatus.Failure
+        }
+        if (playedFromCloud) {
             loadingJob.cancel()
             loadingManager.hide()
 
