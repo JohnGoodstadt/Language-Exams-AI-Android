@@ -52,7 +52,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.goodstadt.john.language.exams.packages.Format8.Format8ContainerScreen
-import com.goodstadt.john.language.exams.packages.Format9.Format9ContainerScreen
+import com.goodstadt.john.language.exams.packages.Format9.Format9GroupedScreen
 import com.goodstadt.john.language.exams.models.ScreenType
 import com.goodstadt.john.language.exams.navigation.QUIZ_DETAIL_ROUTE
 import com.goodstadt.john.language.exams.packages.ReferencePronouns.Format6SheetView
@@ -450,18 +450,18 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceTabContainerViewModel = hilt
                         }
                     }
 
-                    // STEP 1 placeholder for Podcasts (fileFormat-9). Resolves the sub-tab's documentId and
-                    // shows a one-line confirmation that the bundled JSON read; step 2 builds the real screen.
+                    // Podcasts can contain several scripts, selected using the configured sub-tabs.
                     composable(
                         route = RefScreen.GroupedFormat9.route,
                         arguments = listOf(navArgument("tabId") { type = NavType.StringType })
                     ) { entry ->
                         val tabId = entry.arguments?.getString("tabId").orEmpty()
                         val definition = uiState.tabs.firstOrNull { it.id == tabId }?.definition
-                        val documentId = definition?.subTabs?.firstOrNull()?.firestoreDocumentId
-                            ?: definition?.firestoreDocumentId.orEmpty()
                         key(tabId) {
-                            Format9ContainerScreen(documentId = documentId)
+                            Format9GroupedScreen(
+                                subTabs = definition?.subTabs.orEmpty(),
+                                fallbackDocumentId = definition?.firestoreDocumentId.orEmpty()
+                            )
                         }
                     }
 

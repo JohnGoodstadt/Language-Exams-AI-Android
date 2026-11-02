@@ -74,6 +74,8 @@ object LanguageConfig {
 
             // Podcasts (Format 9): use the current resource even for an older saved tab name.
             "german_podcast_football_trip_stuttgart", "german_podcast_football_trip_stuttgart_a2", "GermanPodcastFootballTripStuttgartA2" -> "GermanPodcastFootballTripStuttgart"
+            "german_podcast_birthday_party" -> "GermanPodcastBirthdayParty"
+            "german_podcast_ski_weekend_stubaital" -> "GermanPodcastSkiWeekendStubaital"
 
             "vocab_data_a1" -> "GermanA1Vocab"
             "vocab_data_a2" -> "GermanA2Vocab"
@@ -121,6 +123,8 @@ object LanguageConfig {
 
             // Podcasts (Format 9).
             "GermanPodcastFootballTripStuttgart", "GermanPodcastFootballTripStuttgartA2" -> "german_podcast_football_trip_stuttgart"
+            "GermanPodcastBirthdayParty" -> "german_podcast_birthday_party"
+            "GermanPodcastSkiWeekendStubaital" -> "german_podcast_ski_weekend_stubaital"
 
             "GermanA1Vocab" -> "vocab_data_a1"
             "GermanA2Vocab" -> "vocab_data_a2"

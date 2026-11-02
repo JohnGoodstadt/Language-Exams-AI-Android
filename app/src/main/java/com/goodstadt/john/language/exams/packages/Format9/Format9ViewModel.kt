@@ -19,6 +19,8 @@ import com.goodstadt.john.language.exams.models.Format9File
 import com.goodstadt.john.language.exams.models.Format9Line
 import com.goodstadt.john.language.exams.models.Format9Scene
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.ensureActive
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
@@ -103,22 +105,39 @@ class Format9ViewModel @Inject constructor(
     val isPurchased = billing.isPurchased
 
     private var loadedName: String? = null
+    private var loadJob: Job? = null
 
     fun load(name: String) {
-        if (name.isBlank() || name == loadedName) return
+        if (name.isBlank()) return
+        if (name == loadedName && (_file.value != null || loadJob?.isActive == true)) return
+        loadJob?.cancel()
+        stopPlayback()
         loadedName = name
-        viewModelScope.launch {
-            contentRepository.getFormat9Data(name)
-                .onSuccess { f ->
-                    sheetName = f.sheetname.ifBlank { name }
-                    speakerVoices = f.speakers.associate { it.id to it.voiceId }
-                    speakerNames = f.speakers.associate { it.id to it.name }
-                    _file.value = f
-                    _error.value = null
-                    // Warm the "heard" stats for this sheet, like the other reference screens.
-                    audioCache.recalculateReferenceStats(sheetName, orderedLines().map(::spokenText).filter { it.isNotBlank() })
-                }
-                .onFailure { _error.value = it.message; Timber.e(it, "Format9 load failed for '$name'") }
+        sheetName = ""
+        speakerVoices = emptyMap()
+        speakerNames = emptyMap()
+        _file.value = null
+        _error.value = null
+        _playbackError.value = null
+        _prompt.value = null
+        _focusedSceneIndex.value = 0
+        _showTranslation.value = false
+        loadJob = viewModelScope.launch {
+            val result = contentRepository.getFormat9Data(name)
+            // A cancelled fetch must never replace the script selected more recently, even if a
+            // repository catches cancellation while falling back to a bundled file.
+            ensureActive()
+            result.onSuccess { f ->
+                sheetName = f.sheetname.ifBlank { name }
+                speakerVoices = f.speakers.associate { it.id to it.voiceId }
+                speakerNames = f.speakers.associate { it.id to it.name }
+                _file.value = f
+                // Warm the "heard" stats for this sheet, like the other reference screens.
+                audioCache.recalculateReferenceStats(sheetName, orderedLines().map(::spokenText).filter { it.isNotBlank() })
+            }.onFailure {
+                _error.value = it.message ?: "Unable to load this podcast."
+                Timber.e(it, "Format9 load failed for '$name'")
+            }
         }
     }
 

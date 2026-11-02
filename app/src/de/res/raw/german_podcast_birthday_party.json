@@ -1,0 +1,942 @@
+{
+  "fileformat": 9,
+  "location": 0,
+  "sheetname": "GermanPodcastBirthdayParty",
+  "title": "Für wen ist das Geschenk?",
+  "updatedDate": 0,
+  "description": "Mia und Leo feiern ihren siebzehnten Geburtstag. Beim Ankommen, Auspacken und Kuchenessen werden Geschenke weitergegeben und kleine Missverständnisse geklärt. Die Geschichte übt persönliche Pronomen sowie bestimmte und unbestimmte Artikel in natürlichen Gesprächen.",
+  "language": "de-DE",
+  "translationLanguage": "en",
+  "level": "A2-B1",
+  "storyContext": {
+    "origin": "Hamburg",
+    "destination": "Hamburg",
+    "changeAt": [],
+    "venue": "Wohnung der Familie Meyer, Flur und Wohnzimmer",
+    "event": "Der gemeinsame siebzehnte Geburtstag der Zwillinge Mia und Leo",
+    "fictional": true,
+    "note": "A fictional birthday party in one home, divided into six short playback sections. Nina gives Mia a scarf (der Schal). Nina gives Leo a mug (die Tasse), chosen as a joke because he previously said he wanted the mug labelled Beste Schwester der Welt. Nina and Ben jointly give both twins a board game (das Spiel); Ben also brings a cake (der Kuchen). Grammatical gender follows the German noun and does not depend on the recipient’s gender. Natural exchanges practise nominative, accusative and dative personal pronouns, definite and indefinite articles, and singular/plural requests. Voice identities are casting suggestions and are not claims of a specific apparent age. German is the only spoken language. English, Spanish, Simplified Chinese, Brazilian Portuguese and Hindi are display translations. All six language fields are complete on every spoken entry."
+  },
+  "playback": {
+    "pauseBetweenLinesMs": 350,
+    "pauseBetweenScenesMs": 1400
+  },
+  "voices": [
+    {
+      "id": "de-DE-Studio-B",
+      "description": "Male narrator, used only for short scene introductions and transitions; clear A2 German."
+    },
+    {
+      "id": "de-DE-Chirp3-HD-Leda",
+      "description": "Mia, seventeen-year-old birthday host and Leo’s twin sister; youthful female casting choice, mostly A2 German."
+    },
+    {
+      "id": "de-DE-Chirp3-HD-Puck",
+      "description": "Leo, seventeen-year-old birthday host and Mia’s twin brother; male casting choice, playful conversational A2-B1 German."
+    },
+    {
+      "id": "de-DE-Chirp3-HD-Zephyr",
+      "description": "Nina, a female friend who brings the scarf and helps organise the presents; conversational A2-B1 German."
+    },
+    {
+      "id": "de-DE-Chirp3-HD-Achird",
+      "description": "Ben, a male friend who carries the cake and shares the game and mug joke; conversational A2-B1 German."
+    },
+    {
+      "id": "de-DE-Chirp3-HD-Gacrux",
+      "description": "Katja, the twins’ mother; adult female casting choice, warm practical everyday German at A2-B1 level."
+    }
+  ],
+  "speakers": [
+    {
+      "id": "narrator",
+      "name": "Erzähler",
+      "role": "narrator",
+      "voiceId": "de-DE-Studio-B"
+    },
+    {
+      "id": "mia",
+      "name": "Mia",
+      "role": "host",
+      "voiceId": "de-DE-Chirp3-HD-Leda"
+    },
+    {
+      "id": "leo",
+      "name": "Leo",
+      "role": "host",
+      "voiceId": "de-DE-Chirp3-HD-Puck"
+    },
+    {
+      "id": "nina",
+      "name": "Nina",
+      "role": "guest",
+      "voiceId": "de-DE-Chirp3-HD-Zephyr"
+    },
+    {
+      "id": "ben",
+      "name": "Ben",
+      "role": "guest",
+      "voiceId": "de-DE-Chirp3-HD-Achird"
+    },
+    {
+      "id": "katja",
+      "name": "Katja",
+      "role": "parent",
+      "voiceId": "de-DE-Chirp3-HD-Gacrux"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene_01",
+      "sortorder": 1,
+      "title": "Hände voll",
+      "place": "Wohnung der Familie Meyer in Hamburg, Flur und Wohnzimmer",
+      "timeOfDay": "Samstag, 18:00",
+      "summary": "Arrive carrying presents and a cake, ask for help and hand objects to another person.",
+      "lines": [
+        {
+          "id": "scene_01_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "de": "Mia und Leo sind Zwillinge. Heute werden sie siebzehn. Sie feiern zu Hause in Hamburg. Ihre Freunde Nina und Ben stehen vor der Tür. Sie bringen ihnen Geschenke und einen Kuchen mit. Nina trägt die Geschenke in einer Tasche. Ben hält den Kuchen.",
+          "en": "Mia and Leo are twins. Today they turn seventeen. They are celebrating at home in Hamburg. Their friends Nina and Ben are at the door. They have brought them presents and a cake. Nina is carrying the presents in a bag. Ben is holding the cake.",
+          "es": "Mia y Leo son gemelos. Hoy cumplen diecisiete años. Lo celebran en casa, en Hamburgo. Sus amigos Nina y Ben están en la puerta. Les han traído regalos y una tarta. Nina lleva los regalos en una bolsa. Ben sostiene la tarta.",
+          "zh": "Mia 和 Leo 是双胞胎，今天满十七岁。他们在汉堡的家里庆祝生日。朋友 Nina 和 Ben 站在门外，给他们带来了礼物和一个蛋糕。Nina 用一个袋子装着礼物，Ben 端着蛋糕。",
+          "pt": "Mia e Leo são gêmeos. Hoje fazem dezessete anos. Eles estão comemorando em casa, em Hamburgo. Seus amigos Nina e Ben estão na porta. Trouxeram presentes e um bolo para eles. Nina leva os presentes em uma bolsa. Ben segura o bolo.",
+          "hi": "Mia और Leo जुड़वाँ हैं। आज वे सत्रह साल के हो रहे हैं। वे हैम्बर्ग में अपने घर पर जन्मदिन मना रहे हैं। उनके दोस्त Nina और Ben दरवाज़े पर खड़े हैं। वे उनके लिए तोहफ़े और एक केक लाए हैं। Nina ने तोहफ़े एक बैग में रखे हैं। Ben केक पकड़े हुए है।"
+        },
+        {
+          "id": "scene_01_line_002",
+          "sortorder": 2,
+          "speakerId": "mia",
+          "de": "Da seid ihr ja! Kommt rein.",
+          "en": "There you are! Come in.",
+          "es": "¡Ya estáis aquí! Pasad.",
+          "zh": "你们来啦！快进来。",
+          "pt": "Vocês chegaram! Entrem.",
+          "hi": "आ गए तुम लोग! अंदर आओ।"
+        },
+        {
+          "id": "scene_01_line_003",
+          "sortorder": 3,
+          "speakerId": "nina",
+          "de": "Alles Gute zum Geburtstag! Kannst du mir kurz helfen?",
+          "en": "Happy birthday! Can you give me a hand?",
+          "es": "¡Feliz cumpleaños! ¿Me echas una mano un momento?",
+          "zh": "生日快乐！你能帮我一下吗？",
+          "pt": "Feliz aniversário! Pode me dar uma mãozinha?",
+          "hi": "जन्मदिन मुबारक! ज़रा मेरी मदद करोगी?"
+        },
+        {
+          "id": "scene_01_line_004",
+          "sortorder": 4,
+          "speakerId": "mia",
+          "de": "Ja. Gib mir die Tasche.",
+          "en": "Yes. Give me the bag.",
+          "es": "Sí. Dame la bolsa.",
+          "zh": "好，把袋子给我。",
+          "pt": "Sim. Me dá a bolsa.",
+          "hi": "हाँ। बैग मुझे दे दो।"
+        },
+        {
+          "id": "scene_01_line_005",
+          "sortorder": 5,
+          "speakerId": "ben",
+          "de": "Und wer nimmt den Kuchen? Mir fallen gleich die Arme ab.",
+          "en": "And who’s taking the cake? My arms are about to fall off.",
+          "es": "¿Y quién coge la tarta? ¡Ya no puedo con los brazos!",
+          "zh": "那谁来接一下蛋糕？我的胳膊都快撑不住了。",
+          "pt": "E quem pega o bolo? Meus braços estão quase caindo.",
+          "hi": "और केक कौन पकड़ेगा? मेरी तो बाँहें जवाब देने वाली हैं।"
+        },
+        {
+          "id": "scene_01_line_006",
+          "sortorder": 6,
+          "speakerId": "leo",
+          "de": "Ich nehme ihn. Vorsicht, die Tür geht gleich zu.",
+          "en": "I’ll take it. Careful, the door’s about to close.",
+          "es": "Yo la cojo. Cuidado, que se cierra la puerta.",
+          "zh": "我来拿吧。小心，门快关上了。",
+          "pt": "Eu pego. Cuidado, a porta vai fechar.",
+          "hi": "मैं पकड़ता हूँ। ध्यान रखना, दरवाज़ा बंद होने वाला है।"
+        },
+        {
+          "id": "scene_01_line_007",
+          "sortorder": 7,
+          "speakerId": "ben",
+          "de": "Danke. Der Kuchen ist für euch beide.",
+          "en": "Thanks. The cake is for both of you.",
+          "es": "Gracias. La tarta es para los dos.",
+          "zh": "谢谢。蛋糕是送给你们俩的。",
+          "pt": "Obrigado. O bolo é para vocês dois.",
+          "hi": "शुक्रिया। केक तुम दोनों के लिए है।"
+        },
+        {
+          "id": "scene_01_line_008",
+          "sortorder": 8,
+          "speakerId": "leo",
+          "de": "Für uns? Der sieht gut aus.",
+          "en": "For us? It looks good.",
+          "es": "¿Para nosotros? Tiene buena pinta.",
+          "zh": "给我们的？看起来真不错。",
+          "pt": "Para nós? Parece muito bom.",
+          "hi": "हमारे लिए? बहुत अच्छा लग रहा है।"
+        },
+        {
+          "id": "scene_01_line_009",
+          "sortorder": 9,
+          "speakerId": "katja",
+          "de": "Leo, gib ihn mir. Ich stelle ihn auf den Tisch.",
+          "en": "Leo, give it to me. I’ll put it on the table.",
+          "es": "Leo, dámela. La pongo en la mesa.",
+          "zh": "Leo，把它给我，我放到桌上。",
+          "pt": "Leo, me dá o bolo. Vou colocar na mesa.",
+          "hi": "Leo, मुझे दे दो। मैं इसे मेज़ पर रख देती हूँ।"
+        },
+        {
+          "id": "scene_01_line_010",
+          "sortorder": 10,
+          "speakerId": "leo",
+          "de": "Hier, Mama. Aber noch nichts abschneiden!",
+          "en": "Here, Mum. But don’t cut any off yet!",
+          "es": "Toma, mamá. ¡Pero no cortes nada todavía!",
+          "zh": "给你，妈妈。不过先别切哦！",
+          "pt": "Aqui, mãe. Mas ainda não corta nenhum pedaço!",
+          "hi": "लो, माँ। लेकिन अभी काटना मत!"
+        },
+        {
+          "id": "scene_01_line_011",
+          "sortorder": 11,
+          "speakerId": "katja",
+          "de": "Keine Sorge. Ich warte auf euch.",
+          "en": "Don’t worry. I’ll wait for you.",
+          "es": "No te preocupes. Os espero.",
+          "zh": "别担心，我等你们。",
+          "pt": "Não se preocupe. Vou esperar vocês.",
+          "hi": "चिंता मत करो। मैं तुम लोगों का इंतज़ार करूँगी।"
+        }
+      ]
+    },
+    {
+      "id": "scene_02",
+      "sortorder": 2,
+      "title": "Drei Pakete für zwei",
+      "place": "Wohnung der Familie Meyer in Hamburg, Flur und Wohnzimmer",
+      "timeOfDay": "Samstag, 18:03",
+      "summary": "Introduce the three presents with definite and indefinite articles and establish their recipients.",
+      "lines": [
+        {
+          "id": "scene_02_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "de": "Nina holt drei Pakete aus der Tasche. Zwei sind klein. Das dritte ist eine große Schachtel. An einem Paket fehlt der Name.",
+          "en": "Nina takes three parcels out of the bag. Two are small. The third is a large box. One parcel has no name on it.",
+          "es": "Nina saca tres paquetes de la bolsa. Dos son pequeños. El tercero es una caja grande. A uno le falta el nombre.",
+          "zh": "Nina 从袋子里拿出三个包好的礼物。两个小，第三个是个大盒子。其中一个上面没有名字。",
+          "pt": "Nina tira três pacotes da bolsa. Dois são pequenos. O terceiro é uma caixa grande. Um dos pacotes está sem nome.",
+          "hi": "Nina बैग से तीन पैकेट निकालती है। दो छोटे हैं। तीसरा एक बड़ा डिब्बा है। एक पैकेट पर नाम नहीं है।"
+        },
+        {
+          "id": "scene_02_line_002",
+          "sortorder": 2,
+          "speakerId": "nina",
+          "de": "Oh. Wo ist denn der Zettel? Auf einem stand Mia.",
+          "en": "Oh. Where’s the label? One of them said Mia.",
+          "es": "Vaya. ¿Dónde está la etiqueta? En una ponía Mia.",
+          "zh": "咦，标签去哪儿了？有一个上面写着 Mia。",
+          "pt": "Ué. Cadê a etiqueta? Uma delas estava com o nome da Mia.",
+          "hi": "अरे। वह पर्ची कहाँ गई? एक पर Mia लिखा था।"
+        },
+        {
+          "id": "scene_02_line_003",
+          "sortorder": 3,
+          "speakerId": "ben",
+          "de": "Ich habe die Pakete vorhin noch mal eingepackt. Vielleicht liegt er im Auto.",
+          "en": "I wrapped the parcels again earlier. Maybe it’s in the car.",
+          "es": "He vuelto a envolver los paquetes hace un rato. A lo mejor está en el coche.",
+          "zh": "我刚才把这些礼物重新包装了一下。标签可能落在车里了。",
+          "pt": "Eu embrulhei os pacotes de novo agora há pouco. Talvez a etiqueta esteja no carro.",
+          "hi": "मैंने थोड़ी देर पहले पैकेट फिर से लपेटे थे। शायद पर्ची गाड़ी में है।"
+        },
+        {
+          "id": "scene_02_line_004",
+          "sortorder": 4,
+          "speakerId": "mia",
+          "de": "Was ist denn drin?",
+          "en": "What’s inside, then?",
+          "es": "¿Y qué hay dentro?",
+          "zh": "那里面是什么呀？",
+          "pt": "E o que tem dentro?",
+          "hi": "अच्छा, अंदर क्या है?"
+        },
+        {
+          "id": "scene_02_line_005",
+          "sortorder": 5,
+          "speakerId": "nina",
+          "de": "Ein Schal, eine Tasse und ein Spiel.",
+          "en": "A scarf, a mug and a game.",
+          "es": "Una bufanda, una taza y un juego.",
+          "zh": "一条围巾、一个杯子，还有一套游戏。",
+          "pt": "Um cachecol, uma caneca e um jogo.",
+          "hi": "एक मफ़लर, एक मग और एक गेम।"
+        },
+        {
+          "id": "scene_02_line_006",
+          "sortorder": 6,
+          "speakerId": "mia",
+          "de": "Ich brauche einen Schal. Meiner ist weg.",
+          "en": "I need a scarf. Mine’s gone missing.",
+          "es": "Necesito una bufanda. La mía ha desaparecido.",
+          "zh": "我正需要一条围巾，我的找不到了。",
+          "pt": "Estou precisando de um cachecol. O meu sumiu.",
+          "hi": "मुझे एक मफ़लर चाहिए। मेरा गुम हो गया है।"
+        },
+        {
+          "id": "scene_02_line_007",
+          "sortorder": 7,
+          "speakerId": "leo",
+          "de": "Vielleicht liegt er bei mir. Du lässt deine Sachen immer in meinem Zimmer.",
+          "en": "Maybe it’s in my room. You always leave your things there.",
+          "es": "A lo mejor está en mi habitación. Siempre dejas tus cosas allí.",
+          "zh": "说不定在我房间里。你总把东西落在我那儿。",
+          "pt": "Talvez esteja no meu quarto. Você sempre deixa suas coisas lá.",
+          "hi": "शायद मेरे कमरे में हो। तुम हमेशा अपना सामान मेरे कमरे में छोड़ देती हो।"
+        },
+        {
+          "id": "scene_02_line_008",
+          "sortorder": 8,
+          "speakerId": "mia",
+          "de": "Dann gib ihn mir später zurück.",
+          "en": "Then give it back to me later.",
+          "es": "Entonces devuélvemela luego.",
+          "zh": "那你待会儿还给我。",
+          "pt": "Então me devolve depois.",
+          "hi": "तो बाद में मुझे वापस दे देना।"
+        },
+        {
+          "id": "scene_02_line_009",
+          "sortorder": 9,
+          "speakerId": "nina",
+          "de": "Den neuen Schal habe ich für Mia gekauft. Die Tasse ist für Leo.",
+          "en": "I bought the new scarf for Mia. The mug is for Leo.",
+          "es": "La bufanda nueva la he comprado para Mia. La taza es para Leo.",
+          "zh": "新围巾是我买给 Mia 的，杯子是给 Leo 的。",
+          "pt": "Comprei o cachecol novo para a Mia. A caneca é para o Leo.",
+          "hi": "नया मफ़लर मैंने Mia के लिए ख़रीदा है। मग Leo के लिए है।"
+        },
+        {
+          "id": "scene_02_line_010",
+          "sortorder": 10,
+          "speakerId": "ben",
+          "de": "Und das Spiel haben wir zusammen ausgesucht. Es ist für euch beide.",
+          "en": "And we chose the game together. It’s for both of you.",
+          "es": "Y el juego lo hemos elegido juntos. Es para los dos.",
+          "zh": "游戏是我们一起挑的，送给你们俩。",
+          "pt": "E nós escolhemos o jogo juntos. É para vocês dois.",
+          "hi": "और गेम हमने मिलकर चुना है। यह तुम दोनों के लिए है।"
+        },
+        {
+          "id": "scene_02_line_011",
+          "sortorder": 11,
+          "speakerId": "katja",
+          "de": "Ben, stell die große Schachtel erst mal auf den Tisch. Dann habt ihr die Hände frei.",
+          "en": "Ben, put the big box on the table for now. Then you’ll have your hands free.",
+          "es": "Ben, deja de momento la caja grande en la mesa. Así tendréis las manos libres.",
+          "zh": "Ben，先把大盒子放桌上吧，这样你们就能腾出手了。",
+          "pt": "Ben, coloca a caixa grande na mesa por enquanto. Assim vocês ficam com as mãos livres.",
+          "hi": "Ben, बड़ा डिब्बा अभी मेज़ पर रख दो। फिर तुम लोगों के हाथ खाली हो जाएँगे।"
+        },
+        {
+          "id": "scene_02_line_012",
+          "sortorder": 12,
+          "speakerId": "leo",
+          "de": "Danke euch! Komm, Mia, wir machen erst die kleinen auf.",
+          "en": "Thanks, both of you! Come on, Mia, let’s open the small ones first.",
+          "es": "¡Gracias a los dos! Venga, Mia, abrimos primero los pequeños.",
+          "zh": "谢谢你们俩！来吧，Mia，我们先拆小的。",
+          "pt": "Obrigado aos dois! Vem, Mia, vamos abrir os pequenos primeiro.",
+          "hi": "तुम दोनों का शुक्रिया! आओ, Mia, पहले छोटे पैकेट खोलते हैं।"
+        }
+      ]
+    },
+    {
+      "id": "scene_03",
+      "sortorder": 3,
+      "title": "Der ist für sie",
+      "place": "Wohnung der Familie Meyer in Hamburg, Flur und Wohnzimmer",
+      "timeOfDay": "Samstag, 18:06",
+      "summary": "Sort out the scarf and mug, using object pronouns with male and female recipients.",
+      "lines": [
+        {
+          "id": "scene_03_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "de": "Leo öffnet ein Paket. Er zieht einen grünen Schal heraus. Mia schaut auf den Schal. Dann muss Nina lachen.",
+          "en": "Leo opens a parcel. He pulls out a green scarf. Mia looks at the scarf. Then Nina starts laughing.",
+          "es": "Leo abre un paquete. Saca una bufanda verde. Mia mira la bufanda. Entonces Nina se echa a reír.",
+          "zh": "Leo 拆开一个礼物，拿出一条绿色围巾。Mia 看着围巾。这时 Nina 忍不住笑了。",
+          "pt": "Leo abre um pacote e tira um cachecol verde. Mia olha para o cachecol. Então Nina começa a rir.",
+          "hi": "Leo एक पैकेट खोलता है। उसमें से हरे रंग का मफ़लर निकालता है। Mia मफ़लर की ओर देखती है। फिर Nina हँस पड़ती है।"
+        },
+        {
+          "id": "scene_03_line_002",
+          "sortorder": 2,
+          "speakerId": "nina",
+          "de": "Leo, der ist für Mia.",
+          "en": "Leo, that’s for Mia.",
+          "es": "Leo, esa es para Mia.",
+          "zh": "Leo，那是给 Mia 的。",
+          "pt": "Leo, esse é para a Mia.",
+          "hi": "Leo, वह Mia के लिए है।"
+        },
+        {
+          "id": "scene_03_line_003",
+          "sortorder": 3,
+          "speakerId": "leo",
+          "de": "Ach so. Ich dachte, die Tasse wäre in diesem Paket.",
+          "en": "Oh, right. I thought the mug was in this parcel.",
+          "es": "Ah, vale. Pensaba que la taza estaba en este paquete.",
+          "zh": "哦，原来如此。我以为这个包裹里是杯子呢。",
+          "pt": "Ah, entendi. Achei que a caneca estava neste pacote.",
+          "hi": "अच्छा। मुझे लगा इस पैकेट में मग होगा।"
+        },
+        {
+          "id": "scene_03_line_004",
+          "sortorder": 4,
+          "speakerId": "katja",
+          "de": "Der Schal ist für deine Schwester. Gib ihn ihr bitte.",
+          "en": "The scarf is for your sister. Give it to her, please.",
+          "es": "La bufanda es para tu hermana. Dásela, por favor.",
+          "zh": "围巾是给 Mia 的，请把它给她。",
+          "pt": "O cachecol é para a sua irmã. Dá para ela, por favor.",
+          "hi": "मफ़लर तुम्हारी बहन के लिए है। उसे दे दो, प्लीज़।"
+        },
+        {
+          "id": "scene_03_line_005",
+          "sortorder": 5,
+          "speakerId": "leo",
+          "de": "Hier. Alles Gute noch mal.",
+          "en": "Here. Happy birthday again.",
+          "es": "Toma. Feliz cumpleaños otra vez.",
+          "zh": "给你。再说一次，生日快乐。",
+          "pt": "Aqui. Feliz aniversário de novo.",
+          "hi": "लो। एक बार फिर जन्मदिन मुबारक।"
+        },
+        {
+          "id": "scene_03_line_006",
+          "sortorder": 6,
+          "speakerId": "mia",
+          "de": "Danke. Er ist schön weich. Nina, du kennst mich wirklich gut.",
+          "en": "Thanks. It’s lovely and soft. Nina, you really know me well.",
+          "es": "Gracias. Es muy suave. Nina, de verdad que me conoces bien.",
+          "zh": "谢谢，真柔软。Nina，你可真了解我。",
+          "pt": "Obrigada. Ele é bem macio. Nina, você me conhece mesmo.",
+          "hi": "शुक्रिया। यह कितना मुलायम है। Nina, तुम सच में मुझे बहुत अच्छी तरह जानती हो।"
+        },
+        {
+          "id": "scene_03_line_007",
+          "sortorder": 7,
+          "speakerId": "ben",
+          "de": "Hier ist die Tasse. Mia, soll ich sie dir geben?",
+          "en": "Here’s the mug. Mia, shall I give it to you?",
+          "es": "Aquí está la taza. Mia, ¿te la doy?",
+          "zh": "杯子在这儿。Mia，要给你吗？",
+          "pt": "Aqui está a caneca. Mia, quer que eu dê para você?",
+          "hi": "यह रहा मग। Mia, क्या मैं यह तुम्हें दूँ?"
+        },
+        {
+          "id": "scene_03_line_008",
+          "sortorder": 8,
+          "speakerId": "mia",
+          "de": "Nein, die ist für Leo. Gib sie ihm.",
+          "en": "No, that’s for Leo. Give it to him.",
+          "es": "No, esa es para Leo. Dásela a él.",
+          "zh": "不用，那是给 Leo 的，把它给他吧。",
+          "pt": "Não, essa é para o Leo. Dá para ele.",
+          "hi": "नहीं, वह Leo के लिए है। उसे दे दो।"
+        },
+        {
+          "id": "scene_03_line_009",
+          "sortorder": 9,
+          "speakerId": "ben",
+          "de": "Stimmt. Hier, Leo.",
+          "en": "Right. Here you are, Leo.",
+          "es": "Es verdad. Toma, Leo.",
+          "zh": "对哦。给你，Leo。",
+          "pt": "Verdade. Aqui, Leo.",
+          "hi": "हाँ, सही। लो, Leo।"
+        },
+        {
+          "id": "scene_03_line_010",
+          "sortorder": 10,
+          "speakerId": "leo",
+          "de": "Danke. Ich packe sie gleich ganz aus.",
+          "en": "Thanks. I’ll finish unwrapping it in a moment.",
+          "es": "Gracias. Ahora termino de desenvolverla.",
+          "zh": "谢谢，我马上把它完全拆开。",
+          "pt": "Obrigado. Já vou terminar de desembrulhar.",
+          "hi": "शुक्रिया। अभी इसकी बाकी पैकिंग भी हटा देता हूँ।"
+        },
+        {
+          "id": "scene_03_line_011",
+          "sortorder": 11,
+          "speakerId": "mia",
+          "de": "Und jetzt das Spiel. Ben, kannst du es uns geben?",
+          "en": "And now the game. Ben, can you give it to us?",
+          "es": "Y ahora el juego. Ben, ¿nos lo puedes dar?",
+          "zh": "现在该游戏了。Ben，你能把它给我们吗？",
+          "pt": "E agora o jogo. Ben, pode dar para nós?",
+          "hi": "और अब गेम। Ben, क्या तुम वह हमें दे सकते हो?"
+        },
+        {
+          "id": "scene_03_line_012",
+          "sortorder": 12,
+          "speakerId": "ben",
+          "de": "Natürlich. Ich lege es zwischen euch.",
+          "en": "Of course. I’ll put it between you.",
+          "es": "Claro. Lo pongo entre los dos.",
+          "zh": "当然，我把它放在你们俩中间。",
+          "pt": "Claro. Vou colocar entre vocês dois.",
+          "hi": "ज़रूर। मैं इसे तुम दोनों के बीच रख देता हूँ।"
+        }
+      ]
+    },
+    {
+      "id": "scene_04",
+      "sortorder": 4,
+      "title": "Wo ist die Karte?",
+      "place": "Wohnung der Familie Meyer in Hamburg, Flur und Wohnzimmer",
+      "timeOfDay": "Samstag, 18:10",
+      "summary": "Find the birthday card and identify the people who gave the presents.",
+      "lines": [
+        {
+          "id": "scene_04_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "de": "Auf dem Tisch liegen jetzt Papier, eine Tasse und das Spiel. Leo sucht die Geburtstagskarte. Katja kommt aus der Küche zurück.",
+          "en": "There is now paper, a mug and the game on the table. Leo is looking for the birthday card. Katja comes back from the kitchen.",
+          "es": "Ahora hay papel, una taza y el juego sobre la mesa. Leo busca la tarjeta de cumpleaños. Katja vuelve de la cocina.",
+          "zh": "桌上现在有包装纸、一个杯子和那套游戏。Leo 在找生日贺卡。Katja 从厨房回来了。",
+          "pt": "Agora há papel, uma caneca e o jogo sobre a mesa. Leo procura o cartão de aniversário. Katja volta da cozinha.",
+          "hi": "अब मेज़ पर काग़ज़, एक मग और गेम रखा है। Leo जन्मदिन का कार्ड ढूँढ़ रहा है। Katja रसोई से वापस आती है।"
+        },
+        {
+          "id": "scene_04_line_002",
+          "sortorder": 2,
+          "speakerId": "leo",
+          "de": "Wo ist die Karte zum Spiel? Ich hatte sie gerade noch.",
+          "en": "Where’s the card that came with the game? I had it just a moment ago.",
+          "es": "¿Dónde está la tarjeta que venía con el juego? La tenía hace un momento.",
+          "zh": "游戏附的那张贺卡呢？刚才还在我手里。",
+          "pt": "Cadê o cartão que veio com o jogo? Eu estava com ele agora mesmo.",
+          "hi": "गेम के साथ वाला कार्ड कहाँ है? अभी तो मेरे पास था।"
+        },
+        {
+          "id": "scene_04_line_003",
+          "sortorder": 3,
+          "speakerId": "nina",
+          "de": "Die liegt unter dem Papier, neben der Tasse.",
+          "en": "It’s under the paper, next to the mug.",
+          "es": "Está debajo del papel, al lado de la taza.",
+          "zh": "在包装纸下面，杯子旁边。",
+          "pt": "Está debaixo do papel, ao lado da caneca.",
+          "hi": "वह काग़ज़ के नीचे, मग के बगल में है।"
+        },
+        {
+          "id": "scene_04_line_004",
+          "sortorder": 4,
+          "speakerId": "leo",
+          "de": "Ah, hier ist sie. Da stehen eure beiden Namen.",
+          "en": "Ah, here it is. It has both your names on it.",
+          "es": "Ah, aquí está. Pone vuestros dos nombres.",
+          "zh": "啊，在这儿，上面写着你们俩的名字。",
+          "pt": "Ah, está aqui. Tem o nome de vocês dois.",
+          "hi": "अच्छा, यह रहा। इस पर तुम दोनों के नाम हैं।"
+        },
+        {
+          "id": "scene_04_line_005",
+          "sortorder": 5,
+          "speakerId": "katja",
+          "de": "Und dein neuer Schal, Mia? Ist der von einem Freund aus deiner Klasse?",
+          "en": "And your new scarf, Mia? Is it from a male friend in your class?",
+          "es": "Y tu bufanda nueva, Mia, ¿es de un amigo de tu clase?",
+          "zh": "Mia，你的新围巾呢？是你班上的一个男同学送的吗？",
+          "pt": "E o seu cachecol novo, Mia? É de um amigo da sua turma?",
+          "hi": "और तुम्हारा नया मफ़लर, Mia? क्या वह तुम्हारी क्लास के किसी लड़के ने दिया है?"
+        },
+        {
+          "id": "scene_04_line_006",
+          "sortorder": 6,
+          "speakerId": "mia",
+          "de": "Nein, von einer Freundin. Von Nina. Sie hat sogar meine Lieblingsfarbe gefunden.",
+          "en": "No, from a female friend. From Nina. She even found my favourite colour.",
+          "es": "No, de una amiga. De Nina. Hasta ha encontrado mi color favorito.",
+          "zh": "不是，是一个女性朋友送的，就是 Nina。她连我最喜欢的颜色都找到了。",
+          "pt": "Não, de uma amiga. Da Nina. Ela até encontrou a minha cor favorita.",
+          "hi": "नहीं, एक सहेली ने। Nina ने। उसने तो मेरा पसंदीदा रंग भी ढूँढ़ लिया।"
+        },
+        {
+          "id": "scene_04_line_007",
+          "sortorder": 7,
+          "speakerId": "katja",
+          "de": "Der passt gut zu dir. Ist noch eine Karte dabei?",
+          "en": "It suits you. Is there another card with it?",
+          "es": "Te queda muy bien. ¿Venía también con una tarjeta?",
+          "zh": "很适合你。还附了一张贺卡吗？",
+          "pt": "Fica muito bem em você. Veio com outro cartão?",
+          "hi": "तुम पर बहुत अच्छा लगता है। क्या इसके साथ भी कोई कार्ड है?"
+        },
+        {
+          "id": "scene_04_line_008",
+          "sortorder": 8,
+          "speakerId": "mia",
+          "de": "Ja. Ich habe sie neben den Kuchen gelegt.",
+          "en": "Yes. I put it next to the cake.",
+          "es": "Sí. La he dejado al lado de la tarta.",
+          "zh": "有，我把它放在蛋糕旁边了。",
+          "pt": "Sim. Coloquei ao lado do bolo.",
+          "hi": "हाँ। मैंने उसे केक के बगल में रख दिया था।"
+        },
+        {
+          "id": "scene_04_line_009",
+          "sortorder": 9,
+          "speakerId": "katja",
+          "de": "Ach, da. Neben dem Kuchen. Jetzt sehe ich sie.",
+          "en": "Oh, there. Next to the cake. I can see it now.",
+          "es": "Ah, ahí. Al lado de la tarta. Ahora la veo.",
+          "zh": "哦，在那儿，蛋糕旁边。现在看见了。",
+          "pt": "Ah, ali. Ao lado do bolo. Agora estou vendo.",
+          "hi": "अच्छा, वहाँ। केक के बगल में। अब दिख रहा है।"
+        },
+        {
+          "id": "scene_04_line_010",
+          "sortorder": 10,
+          "speakerId": "ben",
+          "de": "Wollen wir nach dem Essen mit einem Spiel anfangen?",
+          "en": "Shall we start with a game after we’ve eaten?",
+          "es": "¿Empezamos con un juego después de comer?",
+          "zh": "吃完东西以后，我们先玩个游戏，好吗？",
+          "pt": "Vamos começar com um jogo depois de comer?",
+          "hi": "खाने के बाद एक गेम खेलना शुरू करें?"
+        },
+        {
+          "id": "scene_04_line_011",
+          "sortorder": 11,
+          "speakerId": "leo",
+          "de": "Mit dem neuen? Klar. Aber du erklärst uns die Regeln.",
+          "en": "The new one? Of course. But you’re explaining the rules to us.",
+          "es": "¿Con el nuevo? Claro. Pero tú nos explicas las reglas.",
+          "zh": "玩新的这套？当然，不过规则由你来给我们讲。",
+          "pt": "Com o novo? Claro. Mas você explica as regras para nós.",
+          "hi": "नया वाला? ज़रूर। लेकिन नियम तुम हमें समझाओगे।"
+        }
+      ]
+    },
+    {
+      "id": "scene_05",
+      "sortorder": 5,
+      "title": "Platz für den Kuchen",
+      "place": "Wohnung der Familie Meyer in Hamburg, Flur und Wohnzimmer",
+      "timeOfDay": "Samstag, 18:13",
+      "summary": "Clear the table, pass plates around and ask for help using singular and plural forms.",
+      "lines": [
+        {
+          "id": "scene_05_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "de": "Katja bringt einen Stapel Teller. Auf dem Tisch ist kaum noch Platz. Mia trägt den Schal schon um den Hals.",
+          "en": "Katja brings a stack of plates. There is hardly any space left on the table. Mia is already wearing the scarf around her neck.",
+          "es": "Katja trae una pila de platos. Apenas queda sitio en la mesa. Mia ya lleva la bufanda al cuello.",
+          "zh": "Katja 拿来一摞盘子。桌上几乎没有空地方了。Mia 已经把围巾围在脖子上。",
+          "pt": "Katja traz uma pilha de pratos. Quase não há mais espaço na mesa. Mia já está com o cachecol no pescoço.",
+          "hi": "Katja प्लेटों का एक ढेर लाती है। मेज़ पर अब मुश्किल से जगह बची है। Mia ने मफ़लर पहले ही गले में डाल लिया है।"
+        },
+        {
+          "id": "scene_05_line_002",
+          "sortorder": 2,
+          "speakerId": "katja",
+          "de": "Gebt mir bitte das Papier. Das kommt in den großen Beutel.",
+          "en": "Give me the paper, please. It goes in the big bag.",
+          "es": "Dadme el papel, por favor. Va en la bolsa grande.",
+          "zh": "请把包装纸给我，放进大袋子里。",
+          "pt": "Me deem o papel, por favor. Ele vai na sacola grande.",
+          "hi": "काग़ज़ मुझे दे दो, प्लीज़। यह बड़े थैले में जाएगा।"
+        },
+        {
+          "id": "scene_05_line_003",
+          "sortorder": 3,
+          "speakerId": "nina",
+          "de": "Hier. Soll ich dir auch die leeren Schachteln geben?",
+          "en": "Here. Shall I give you the empty boxes too?",
+          "es": "Toma. ¿Te doy también las cajas vacías?",
+          "zh": "给你。空盒子也给你吗？",
+          "pt": "Aqui. Quer que eu dê também as caixas vazias?",
+          "hi": "लो। क्या खाली डिब्बे भी तुम्हें दे दूँ?"
+        },
+        {
+          "id": "scene_05_line_004",
+          "sortorder": 4,
+          "speakerId": "katja",
+          "de": "Ja, danke. Und Ben, stell die Geschenke auf den anderen Tisch.",
+          "en": "Yes, thanks. And Ben, put the presents on the other table.",
+          "es": "Sí, gracias. Y Ben, pon los regalos en la otra mesa.",
+          "zh": "好的，谢谢。Ben，把礼物放到另一张桌上吧。",
+          "pt": "Sim, obrigada. E Ben, coloca os presentes na outra mesa.",
+          "hi": "हाँ, शुक्रिया। और Ben, तोहफ़े दूसरी मेज़ पर रख दो।"
+        },
+        {
+          "id": "scene_05_line_005",
+          "sortorder": 5,
+          "speakerId": "ben",
+          "de": "Auch das Spiel?",
+          "en": "The game too?",
+          "es": "¿También el juego?",
+          "zh": "游戏也放过去吗？",
+          "pt": "O jogo também?",
+          "hi": "गेम भी?"
+        },
+        {
+          "id": "scene_05_line_006",
+          "sortorder": 6,
+          "speakerId": "leo",
+          "de": "Ja, stell es neben die Lampe. Wir brauchen es erst später.",
+          "en": "Yes, put it next to the lamp. We won’t need it until later.",
+          "es": "Sí, ponlo al lado de la lámpara. No lo necesitamos hasta más tarde.",
+          "zh": "对，放在灯旁边。我们待会儿才用。",
+          "pt": "Sim, coloca ao lado da luminária. Só vamos precisar dele mais tarde.",
+          "hi": "हाँ, उसे लैम्प के बगल में रख दो। हमें उसकी ज़रूरत बाद में पड़ेगी।"
+        },
+        {
+          "id": "scene_05_line_007",
+          "sortorder": 7,
+          "speakerId": "mia",
+          "de": "Mama, kannst du uns die Teller geben?",
+          "en": "Mum, can you give us the plates?",
+          "es": "Mamá, ¿nos puedes dar los platos?",
+          "zh": "妈妈，能把盘子给我们吗？",
+          "pt": "Mãe, pode dar os pratos para nós?",
+          "hi": "माँ, क्या तुम हमें प्लेटें दे सकती हो?"
+        },
+        {
+          "id": "scene_05_line_008",
+          "sortorder": 8,
+          "speakerId": "katja",
+          "de": "Hier sind sie. Nehmt euch jeder einen.",
+          "en": "Here they are. Take one each.",
+          "es": "Aquí están. Coged uno cada uno.",
+          "zh": "在这儿，一人拿一个。",
+          "pt": "Aqui estão. Peguem um cada um.",
+          "hi": "ये रहीं। सब एक-एक ले लो।"
+        },
+        {
+          "id": "scene_05_line_009",
+          "sortorder": 9,
+          "speakerId": "ben",
+          "de": "Vier Teller reichen, oder?",
+          "en": "Four plates are enough, right?",
+          "es": "Con cuatro platos basta, ¿no?",
+          "zh": "四个盘子就够了吧？",
+          "pt": "Quatro pratos são suficientes, né?",
+          "hi": "चार प्लेटें काफ़ी हैं, है न?"
+        },
+        {
+          "id": "scene_05_line_010",
+          "sortorder": 10,
+          "speakerId": "leo",
+          "de": "Fünf. Mama isst doch auch mit.",
+          "en": "Five. Mum’s having some too.",
+          "es": "Cinco. Mamá también come con nosotros.",
+          "zh": "五个，妈妈也跟我们一起吃呀。",
+          "pt": "Cinco. A mãe também vai comer com a gente.",
+          "hi": "पाँच। माँ भी तो हमारे साथ खाएँगी।"
+        },
+        {
+          "id": "scene_05_line_011",
+          "sortorder": 11,
+          "speakerId": "katja",
+          "de": "Sehr aufmerksam. Nina, kannst du mir noch kurz helfen?",
+          "en": "Very thoughtful. Nina, can you give me a hand for a moment?",
+          "es": "Qué detalle. Nina, ¿me ayudas un momento?",
+          "zh": "真体贴。Nina，能再帮我一下吗？",
+          "pt": "Que atencioso. Nina, pode me ajudar um instante?",
+          "hi": "कितना ख़याल है तुम्हें। Nina, क्या तुम ज़रा मेरी मदद करोगी?"
+        },
+        {
+          "id": "scene_05_line_012",
+          "sortorder": 12,
+          "speakerId": "nina",
+          "de": "Klar, ich helfe dir. Was fehlt noch?",
+          "en": "Of course, I’ll help you. What else do we need?",
+          "es": "Claro que te ayudo. ¿Qué falta?",
+          "zh": "当然，我来帮你。还缺什么？",
+          "pt": "Claro que ajudo. O que está faltando?",
+          "hi": "ज़रूर, मैं मदद करती हूँ। और क्या चाहिए?"
+        },
+        {
+          "id": "scene_05_line_013",
+          "sortorder": 13,
+          "speakerId": "katja",
+          "de": "Die kleinen Gabeln. Sie sind in der Schublade direkt neben dir.",
+          "en": "The little forks. They’re in the drawer right next to you.",
+          "es": "Los tenedores pequeños. Están en el cajón que tienes justo al lado.",
+          "zh": "小叉子，在你身旁的抽屉里。",
+          "pt": "Os garfinhos. Estão na gaveta bem ao seu lado.",
+          "hi": "छोटे काँटे। वे तुम्हारे ठीक बगल वाली दराज़ में हैं।"
+        }
+      ]
+    },
+    {
+      "id": "scene_06",
+      "sortorder": 6,
+      "title": "Die beste Schwester",
+      "place": "Wohnung der Familie Meyer in Hamburg, Flur und Wohnzimmer",
+      "timeOfDay": "Samstag, 18:16",
+      "summary": "Read the joke on the mug, resolve the apparent mix-up and finish with cake.",
+      "lines": [
+        {
+          "id": "scene_06_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "de": "Alle setzen sich. Leo nimmt das letzte Papier von seiner Tasse. Auf der Vorderseite stehen vier Wörter. Er liest sie laut vor.",
+          "en": "Everyone sits down. Leo removes the last bit of wrapping paper from his mug. Four German words are printed on the front. He reads them out loud.",
+          "es": "Todos se sientan. Leo quita el último trozo de papel de su taza. En la parte delantera hay cuatro palabras en alemán. Las lee en voz alta.",
+          "zh": "大家都坐下来。Leo 把杯子上最后一点包装纸取下来。杯子正面写着四个德语单词，他大声读了出来。",
+          "pt": "Todos se sentam. Leo tira o último pedaço de papel da caneca. Na frente dela estão escritas quatro palavras em alemão. Ele lê em voz alta.",
+          "hi": "सब बैठ जाते हैं। Leo अपने मग से बचा हुआ आख़िरी काग़ज़ हटाता है। सामने चार जर्मन शब्द लिखे हैं। वह उन्हें ज़ोर से पढ़ता है।"
+        },
+        {
+          "id": "scene_06_line_002",
+          "sortorder": 2,
+          "speakerId": "leo",
+          "de": "Beste Schwester der Welt?",
+          "en": "Best sister in the world?",
+          "es": "¿La mejor hermana del mundo?",
+          "zh": "全世界最棒的姐妹？",
+          "pt": "Melhor irmã do mundo?",
+          "hi": "दुनिया की सबसे अच्छी बहन?"
+        },
+        {
+          "id": "scene_06_line_003",
+          "sortorder": 3,
+          "speakerId": "mia",
+          "de": "Siehst du! Die Tasse ist doch für mich.",
+          "en": "See! The mug is for me after all.",
+          "es": "¡Lo ves! Al final, la taza es para mí.",
+          "zh": "你看！这杯子果然是给我的。",
+          "pt": "Está vendo! A caneca é para mim, afinal.",
+          "hi": "देखा! मग आख़िर मेरे लिए ही है।"
+        },
+        {
+          "id": "scene_06_line_004",
+          "sortorder": 4,
+          "speakerId": "nina",
+          "de": "Nein, die ist wirklich für ihn. Leo, erinnerst du dich an den Laden letzte Woche?",
+          "en": "No, it really is for him. Leo, do you remember the shop last week?",
+          "es": "No, de verdad que es para él. Leo, ¿te acuerdas de la tienda de la semana pasada?",
+          "zh": "不是，真的是给他的。Leo，你还记得上周那家店吗？",
+          "pt": "Não, é mesmo para ele. Leo, lembra da loja da semana passada?",
+          "hi": "नहीं, सच में उसी के लिए है। Leo, पिछले हफ़्ते की वह दुकान याद है?"
+        },
+        {
+          "id": "scene_06_line_005",
+          "sortorder": 5,
+          "speakerId": "ben",
+          "de": "Du hast die Tasse hochgehalten und gesagt: Genau die will ich haben.",
+          "en": "You held up the mug and said: That’s exactly the one I want.",
+          "es": "Levantaste la taza y dijiste: Esa es justo la que quiero.",
+          "zh": "你当时举起这个杯子说：我就想要这个。",
+          "pt": "Você levantou a caneca e disse: É essa mesmo que eu quero.",
+          "hi": "तुमने मग उठाकर कहा था: मुझे बिल्कुल यही चाहिए।"
+        },
+        {
+          "id": "scene_06_line_006",
+          "sortorder": 6,
+          "speakerId": "leo",
+          "de": "Das war ein Witz!",
+          "en": "That was a joke!",
+          "es": "¡Era una broma!",
+          "zh": "那是开玩笑的！",
+          "pt": "Era uma brincadeira!",
+          "hi": "वह तो मज़ाक था!"
+        },
+        {
+          "id": "scene_06_line_007",
+          "sortorder": 7,
+          "speakerId": "ben",
+          "de": "Unser Geschenk auch.",
+          "en": "So was our present.",
+          "es": "Nuestro regalo también.",
+          "zh": "我们的礼物也是开玩笑的呀。",
+          "pt": "O nosso presente também.",
+          "hi": "हमारा तोहफ़ा भी।"
+        },
+        {
+          "id": "scene_06_line_008",
+          "sortorder": 8,
+          "speakerId": "mia",
+          "de": "Dann gib sie mir. Ich bin hier die Schwester.",
+          "en": "Then give it to me. I’m the sister here.",
+          "es": "Entonces dámela. La hermana aquí soy yo.",
+          "zh": "那就给我吧，我们俩当中，女孩子可是我。",
+          "pt": "Então me dá. A irmã aqui sou eu.",
+          "hi": "तो फिर मुझे दे दो। यहाँ बहन तो मैं हूँ।"
+        },
+        {
+          "id": "scene_06_line_009",
+          "sortorder": 9,
+          "speakerId": "leo",
+          "de": "Nichts da. Sie gehört mir. Ich bin jetzt die beste Schwester der Welt.",
+          "en": "No chance. It belongs to me. I’m the best sister in the world now.",
+          "es": "Ni hablar. Es mía. Ahora soy la mejor hermana del mundo.",
+          "zh": "想都别想，这是我的。现在我就是全世界最棒的姐妹了。",
+          "pt": "Nem pensar. Ela é minha. Agora eu sou a melhor irmã do mundo.",
+          "hi": "बिल्कुल नहीं। यह मेरा है। अब मैं दुनिया की सबसे अच्छी बहन हूँ।"
+        },
+        {
+          "id": "scene_06_line_010",
+          "sortorder": 10,
+          "speakerId": "katja",
+          "de": "Ihr könnt euch später einigen. Wer gibt mir jetzt ein Stück Kuchen?",
+          "en": "You can sort that out later. Who’s giving me a piece of cake now?",
+          "es": "Ya os pondréis de acuerdo luego. ¿Quién me da ahora un trozo de tarta?",
+          "zh": "你们待会儿再商量吧。现在谁给我一块蛋糕？",
+          "pt": "Vocês podem se acertar depois. Quem vai me dar um pedaço de bolo agora?",
+          "hi": "बाद में आपस में तय कर लेना। अभी मुझे केक का एक टुकड़ा कौन देगा?"
+        },
+        {
+          "id": "scene_06_line_011",
+          "sortorder": 11,
+          "speakerId": "mia",
+          "de": "Ich. Ein großes oder ein kleines?",
+          "en": "I will. A big one or a small one?",
+          "es": "Yo. ¿Uno grande o uno pequeño?",
+          "zh": "我来。要大的还是小的？",
+          "pt": "Eu. Um grande ou um pequeno?",
+          "hi": "मैं दूँगी। बड़ा टुकड़ा या छोटा?"
+        },
+        {
+          "id": "scene_06_line_012",
+          "sortorder": 12,
+          "speakerId": "katja",
+          "de": "Ein großes. Ich habe heute schließlich zwei Geburtstagskinder.",
+          "en": "A big one. After all, I’ve got two birthdays to celebrate today.",
+          "es": "Uno grande. Al fin y al cabo, hoy tengo dos hijos de cumpleaños.",
+          "zh": "大的。毕竟今天我有两个孩子过生日呢。",
+          "pt": "Um grande. Afinal, hoje tenho dois filhos fazendo aniversário.",
+          "hi": "बड़ा। आख़िर आज मेरे दो बच्चों का जन्मदिन है।"
+        },
+        {
+          "id": "scene_06_line_013",
+          "sortorder": 13,
+          "speakerId": "narrator",
+          "de": "Mia schneidet den Kuchen an. Leo stellt seine neue Tasse neben den Teller. Mit der Schrift zu Mia. Sie liest sie noch einmal und lacht.",
+          "en": "Mia cuts into the cake. Leo puts his new mug next to his plate, with the writing facing Mia. She reads it again and laughs.",
+          "es": "Mia empieza a cortar la tarta. Leo pone su taza nueva junto al plato, con la inscripción mirando hacia Mia. Ella vuelve a leerla y se ríe.",
+          "zh": "Mia 开始切蛋糕。Leo 把新杯子放在盘子旁，让字朝着 Mia。她又读了一遍，笑了起来。",
+          "pt": "Mia começa a cortar o bolo. Leo coloca sua caneca nova ao lado do prato, com a frase virada para Mia. Ela lê de novo e ri.",
+          "hi": "Mia केक काटना शुरू करती है। Leo अपना नया मग प्लेट के बगल में रखता है, लिखावट Mia की ओर करके। वह उसे फिर से पढ़ती है और हँस पड़ती है।"
+        }
+      ]
+    }
+  ]
+}

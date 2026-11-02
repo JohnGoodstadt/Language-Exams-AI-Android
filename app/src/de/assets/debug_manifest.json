@@ -54,8 +54,18 @@
       "sheetDataType": "Format9",
       "subTabs": [
         {
-          "title": "A2",
+          "title": "Geburtstag",
+          "firestoreDocumentId": "GermanPodcastBirthdayParty",
+          "sheetDataType": "Format9"
+        },
+        {
+          "title": "Fußballspiel",
           "firestoreDocumentId": "GermanPodcastFootballTripStuttgart",
+          "sheetDataType": "Format9"
+        },
+        {
+          "title": "Skiurlaub",
+          "firestoreDocumentId": "GermanPodcastSkiWeekendStubaital",
           "sheetDataType": "Format9"
         }
       ]

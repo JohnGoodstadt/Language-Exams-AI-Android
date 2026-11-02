@@ -143,7 +143,7 @@ object FirebaseAudioService {
         val fileRef = storageRef.child(filename)
         // Download directly to the file destination
         fileRef.getFile(destFile).await()
-        Timber.tag(TAG).d("☁️ Downloaded: $filename to ${destFile.name}")
+        Timber.tag(TAG).d("☁️ Downloaded:${destFile.name}")
     }
     suspend fun downloadAudio(filename: String, destFile: File) : Boolean {
         val fileRef = storageRef.child(filename)
@@ -151,7 +151,7 @@ object FirebaseAudioService {
         return try {
             // Attempt download
             fileRef.getFile(destFile).await()
-            Timber.tag(TAG).d("☁️ Downloaded: $filename to ${destFile.name}")
+            Timber.tag(TAG).d("☁️ Downloaded: to ${destFile.name}")
 
             true
         } catch (e: Exception) {
