@@ -103,6 +103,7 @@ import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomShee
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.shared.CacheProgressBar
 import com.goodstadt.john.language.exams.screens.shared.SessionFeedbackBar
+import com.goodstadt.john.language.exams.screens.shared.NoConnectionBar
 import com.goodstadt.john.language.exams.screens.shared.SessionFeedbackManager
 import com.goodstadt.john.language.exams.screens.shared.HelpInfoSheet
 import com.goodstadt.john.language.exams.screens.shared.HighlightedWordInSentenceRow
@@ -398,6 +399,7 @@ fun CategoryTabScreen(
                         }
 
                         SessionFeedbackBar(SessionFeedbackManager.Area.TABS)
+                        NoConnectionBar(SessionFeedbackManager.Area.TABS)
 
                         // 2. Stats Bar & Gamification Button
                         CategoryStatsBar(
