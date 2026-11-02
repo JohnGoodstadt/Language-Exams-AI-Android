@@ -121,7 +121,7 @@
     "GermanReferencePronounsOpenAI": {
       "title": "Pronomen II",
       "screenType": "GroupedFormat8Screen",
-      "sheetDataType": "Format8Screen",
+      "sheetDataType": "Format8",
       "subTabs": [
         {
           "title": "Personal",
