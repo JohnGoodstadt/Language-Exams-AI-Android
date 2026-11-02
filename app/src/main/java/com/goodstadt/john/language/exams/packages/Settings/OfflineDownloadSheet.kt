@@ -223,6 +223,7 @@ fun OfflineDownloadSheet(
                         pauseReason = pauseReason,
                         done = done,
                         total = total,
+                        canDownload = connection != OfflineConnection.NONE,
                         onDownload = {
                             when (connection) {
                                 OfflineConnection.WIFI -> viewModel.download(row, allowCellular = false)
@@ -325,6 +326,7 @@ private fun LevelRowView(
     pauseReason: String,
     done: Int,
     total: Int,
+    canDownload: Boolean,
     onDownload: () -> Unit,
     onPause: () -> Unit,
     onResume: () -> Unit,
@@ -334,7 +336,7 @@ private fun LevelRowView(
     notDownloadedText = "${row.sentences} sentences · about ${sizeText(row.sentences - row.onDevice)}" +
             if (row.onDevice > 0) " · ${row.onDevice} already heard" else "",
     sentences = row.sentences, onDevice = row.onDevice, record = record, isRunning = isRunning, anyRunning = anyRunning,
-    isPaused = isPaused, pauseReason = pauseReason, done = done, total = total, canDownload = true,
+    isPaused = isPaused, pauseReason = pauseReason, done = done, total = total, canDownload = canDownload,
     onDownload = onDownload, onPause = onPause, onResume = onResume, onRemove = onRemove,
 )
 

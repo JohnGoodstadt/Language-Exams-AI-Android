@@ -68,6 +68,8 @@ class OfflineAudioDownloader @Inject constructor(
 ) {
     companion object {
         private const val PARALLEL_DOWNLOADS = 5
+        /** Per-file limit; with no network Firebase would otherwise retry one file for 10 minutes. */
+        private const val DOWNLOAD_TIMEOUT_MS = 20_000L
         const val ESTIMATED_BYTES_PER_FILE = 25_000
         const val WAITING_FOR_WIFI = "Waiting for Wi-Fi"
         const val WAITING_FOR_CONNECTION = "Waiting for a connection"
@@ -294,14 +296,27 @@ class OfflineAudioDownloader @Inject constructor(
             _done.value = total - toFetch.size
             saveRecord(id, sheetName, level, voice, total, added, alreadyHad, unavailable)
 
+            // Started while offline (the network callback may not have reported it yet): wait instead of hanging.
+            if (toFetch.isNotEmpty() && !connectionAllowed(_connection.value)) {
+                pause(WAITING_FOR_CONNECTION)
+                return
+            }
+
             var sinceSave = 0
             for (batch in toFetch.chunked(PARALLEL_DOWNLOADS)) {
-                coroutineScope {
+                val results = coroutineScope {
                     ensureActive()
-                    val results = batch.map { item -> async { item to fetch(item.text, item.voice) } }.awaitAll()
-                    for ((item, ok) in results) {
-                        if (ok) added += localName(item.text, item.voice) else unavailable++
-                    }
+                    batch.map { item -> async { item to fetch(item.text, item.voice) } }.awaitAll()
+                }
+                // Every file in the batch failed for a reason other than "not in the cloud": treat it as no
+                // connection, so pause (Resume retries this batch) rather than mark the files unavailable.
+                if (results.all { it.second == FirebaseAudioService.CloudFetch.FAILED }) {
+                    Timber.d("Offline: batch failed - pausing")
+                    pause(WAITING_FOR_CONNECTION)
+                    break
+                }
+                for ((item, r) in results) {
+                    if (r == FirebaseAudioService.CloudFetch.OK) added += localName(item.text, item.voice) else unavailable++
                 }
                 _done.value += batch.size
                 sinceSave += batch.size
@@ -323,8 +338,8 @@ class OfflineAudioDownloader @Inject constructor(
     }
 
     /** Cloud unified (iOS-matching) name first, then the legacy Android name; saved under the unified name. */
-    private suspend fun fetch(text: String, voice: String): Boolean =
-        FirebaseAudioService.downloadAudioAnyPlatform(text, voice, File(context.filesDir, localName(text, voice)))
+    private suspend fun fetch(text: String, voice: String): FirebaseAudioService.CloudFetch =
+        FirebaseAudioService.downloadAudioForOffline(text, voice, File(context.filesDir, localName(text, voice)), DOWNLOAD_TIMEOUT_MS)
 
     // MARK: Network
 
@@ -343,10 +358,13 @@ class OfflineAudioDownloader @Inject constructor(
         else -> OfflineConnection.CELLULAR
     }
 
+    private fun connectionAllowed(c: OfflineConnection) =
+        c == OfflineConnection.WIFI || (c == OfflineConnection.CELLULAR && allowCellular)
+
     private fun networkChanged(c: OfflineConnection) {
         _connection.value = c
         if (_runningPackId.value == null) return
-        val ok = c == OfflineConnection.WIFI || (c == OfflineConnection.CELLULAR && allowCellular)
+        val ok = connectionAllowed(c)
         if (!_isPaused.value && !ok) {
             pause(if (c == OfflineConnection.NONE) WAITING_FOR_CONNECTION else WAITING_FOR_WIFI)
         } else if (_isPaused.value && ok && _pauseReason.value in listOf(WAITING_FOR_WIFI, WAITING_FOR_CONNECTION)) {

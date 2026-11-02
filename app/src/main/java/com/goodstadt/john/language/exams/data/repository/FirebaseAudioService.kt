@@ -5,12 +5,16 @@ package com.goodstadt.john.language.exams.data.repository
 import android.net.Uri
 import android.util.Log
 import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.StorageException
 import com.google.firebase.storage.StorageMetadata
 import com.google.firebase.storage.ktx.storage
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.TimeoutCancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
+import kotlinx.coroutines.withTimeout
 import timber.log.Timber
 import java.io.File
 import java.security.MessageDigest
@@ -180,6 +184,51 @@ object FirebaseAudioService {
         }
         part.delete()
         return false
+    }
+
+    enum class CloudFetch { OK, NOT_FOUND, FAILED }
+
+    /**
+     * For offline downloads: like [downloadAudioAnyPlatform], but each cloud attempt gives up after [timeoutMs]
+     * (with no network Firebase otherwise retries one file for up to 10 minutes) and the result says WHY it
+     * failed, so the caller can tell "not in the cloud" from "no connection". A network failure on the
+     * unified name skips the legacy name.
+     */
+    suspend fun downloadAudioForOffline(text: String, voiceName: String, destFile: File, timeoutMs: Long): CloudFetch {
+        if (adoptLegacyLocalFile(text, voiceName, destFile)) return CloudFetch.OK
+
+        val part = File(destFile.path + ".part")
+        var result = CloudFetch.NOT_FOUND
+        for (cloudName in listOf(generateUnifiedFilename(text, voiceName), generateLegacyAndroidFilename(text, voiceName))) {
+            result = downloadWithTimeout(cloudName, part, timeoutMs)
+            if (result == CloudFetch.OK) {
+                if (part.length() > 0 && part.renameTo(destFile)) return CloudFetch.OK
+                result = CloudFetch.FAILED
+            }
+            if (result == CloudFetch.FAILED) break
+        }
+        part.delete()
+        return result
+    }
+
+    /** One cloud download that is cancelled (not left retrying) on timeout or when the caller is cancelled. */
+    private suspend fun downloadWithTimeout(filename: String, destFile: File, timeoutMs: Long): CloudFetch {
+        val task = storageRef.child(filename).getFile(destFile)
+        return try {
+            withTimeout(timeoutMs) { task.await() }
+            CloudFetch.OK
+        } catch (e: TimeoutCancellationException) {
+            task.cancel()
+            Timber.tag(TAG).d("☁️ Cloud download timed out: $filename")
+            CloudFetch.FAILED
+        } catch (e: CancellationException) {
+            task.cancel()
+            throw e
+        } catch (e: StorageException) {
+            if (e.errorCode == StorageException.ERROR_OBJECT_NOT_FOUND) CloudFetch.NOT_FOUND else CloudFetch.FAILED
+        } catch (e: Exception) {
+            CloudFetch.FAILED
+        }
     }
 
     /**
