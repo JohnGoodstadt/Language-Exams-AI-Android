@@ -1043,7 +1043,7 @@ private fun AuditQuestionAnswers(
                                 }
                             // Loudspeaker: a demo play only. Never commits an answer - only the radio
                             // button does that.
-                            viewModel.handleTap(fullSentence)
+                            viewModel.handleTap(fullSentence, remindIfOffline = true)
                         },
                         imageVector = Icons.AutoMirrored.Filled.VolumeUp,
                         contentDescription = "Speak ${question.sentence.replace("_", option)}",
@@ -1077,7 +1077,7 @@ private fun AuditQuestionAnswers(
                                         }
                                     }
 
-                                viewModel.handleTap(fullSentence)
+                                viewModel.handleTap(fullSentence, remindIfOffline = true)
                             }
                     )
                 }

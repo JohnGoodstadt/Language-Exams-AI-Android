@@ -23,6 +23,9 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.foundation.background
+import android.content.Context
+import android.os.SystemClock
+import android.widget.Toast
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.luminance
@@ -32,6 +35,8 @@ import androidx.compose.ui.unit.dp
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.managers.OfflineAudioDownloader
 import com.goodstadt.john.language.exams.managers.OfflineConnection
+import com.goodstadt.john.language.exams.utils.PlaybackEvent
+import com.goodstadt.john.language.exams.utils.PlaybackEventBus
 import dagger.hilt.EntryPoint
 import dagger.hilt.InstallIn
 import dagger.hilt.android.EntryPointAccessors
@@ -76,11 +81,14 @@ import javax.inject.Singleton
 @Singleton
 class ConnectionNotice @Inject constructor(
     private val downloader: OfflineAudioDownloader,
+    private val playbackEventBus: PlaybackEventBus,
 ) {
     companion object {
         /** A tap's cloud download is given up after this (Firebase would otherwise retry for 10 minutes). */
         private const val DOWNLOAD_TIMEOUT_MS = 10_000L
         private const val RECHECK_MS = 5_000L
+        /** A silent offline miss counts as "finished" after this pause (as for a wrong answer, no audio). */
+        private const val SILENT_FINISH_MS = 1_200L
         private const val PROBE_URL = "https://firebasestorage.googleapis.com/"
     }
 
@@ -108,8 +116,18 @@ class ConnectionNotice @Inject constructor(
             .launchIn(scope)
     }
 
-    /** A sentence wasn't on the device and there's no connection: show the bar (again, even if closed). */
-    fun noteMiss() { _missed.value = true; _dismissed.value = false }
+    /**
+     * A sentence wasn't on the device and there's no connection: show the bar (again, even if closed).
+     * Also report the silent play as finished after a short pause, so a quiz's auto-advance (which waits
+     * for a playback event) moves on instead of waiting out its 8 s cap.
+     */
+    fun noteMiss() {
+        _missed.value = true; _dismissed.value = false
+        scope.launch {
+            delay(SILENT_FINISH_MS)
+            playbackEventBus.tryEmit(PlaybackEvent.Failed(reason = "offline"))
+        }
+    }
     fun dismiss() { _dismissed.value = true }
 
     /**
@@ -161,6 +179,20 @@ class ConnectionNotice @Inject constructor(
             }
         }
     }
+}
+
+private var lastNoSoundToastAt = 0L
+
+/**
+ * Quizzes work offline (questions are bundled), but a sentence whose MP3 isn't on the device can't play.
+ * A loudspeaker / sentence tap that stays silent for that reason shows this short reminder, at most every
+ * few seconds; the radio button stays silent. Twin of iOS ConnectionNotice.showNoSoundToast.
+ */
+fun showOfflineNoSoundToast(context: Context) {
+    val now = SystemClock.elapsedRealtime()
+    if (now - lastNoSoundToastAt < 3_000L) return
+    lastNoSoundToastAt = now
+    Toast.makeText(context, "No sound while offline. Tap the round button to answer.", Toast.LENGTH_SHORT).show()
 }
 
 /** Lets composables reach the singletons without a ViewModel. */

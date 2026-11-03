@@ -1,6 +1,7 @@
 package com.goodstadt.john.language.exams.packages.ReferenceQuiz
 
 import com.goodstadt.john.language.exams.data.stats.QuizStat
+import com.goodstadt.john.language.exams.screens.shared.showOfflineNoSoundToast
 import com.goodstadt.john.language.exams.data.stats.recordQuizCompletion
 
 import android.app.Activity
@@ -623,7 +624,8 @@ class ReferenceQuizViewModel @Inject constructor(
     fun hideHourlyRateLimitSheet() { _showRateHourlyLimitSheet.value = false }
     fun hideRateOKLimitSheet() { _showRateLimitSheet.value = false }
 
-    fun handleTap(sentence: String) {
+    /** [remindIfOffline]: a loudspeaker / sentence tap (not the radio button), so say why it's silent offline. */
+    fun handleTap(sentence: String, remindIfOffline: Boolean = false) {
         audioPlaybackRepository.stopPlayback()
         viewModelScope.launch {
             val result = audioPlaybackRepository.playTrackAndGetStatus(
@@ -640,7 +642,10 @@ class ReferenceQuizViewModel @Inject constructor(
                         _showRateHourlyLimitSheet.value = true
                     }
                 }
-                AudioPlaybackStatus.Failure -> Timber.i("ReferenceQuizViewModel.handleTap().Failure")
+                AudioPlaybackStatus.Failure -> {
+                    Timber.i("ReferenceQuizViewModel.handleTap().Failure")
+                    if (remindIfOffline && audioPlaybackRepository.isOffline) showOfflineNoSoundToast(appContext)
+                }
             }
             if (ttsStatsRepository.isMarchOrApril2026()) {
                 ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.GlobalStats)
