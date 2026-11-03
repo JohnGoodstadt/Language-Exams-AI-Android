@@ -11,6 +11,7 @@ import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
+import android.os.SystemClock
 import timber.log.Timber
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -43,7 +44,8 @@ class SequencePlayer @Inject constructor(
         val gapMillis: ((String) -> Long)?,
         val onTrackStarted: (String) -> Unit,
         val onTrackPlayed: (String) -> Unit,
-        val onCompleted: () -> Unit
+        val onCompleted: () -> Unit,
+        val onTrackListened: (String, Long) -> Unit
     )
     private var params: RunParams? = null
     private var currentIndex = 0
@@ -59,6 +61,8 @@ class SequencePlayer @Inject constructor(
         onTrackStarted: (String) -> Unit = {},
         onTrackPlayed: (String) -> Unit = {},
         onCompleted: () -> Unit = {},
+        // Milliseconds of audio actually heard for a track (to its end, or until paused/stopped).
+        onTrackListened: (String, Long) -> Unit = { _, _ -> },
         sheetName: String = "",
         isPremiumUser: Boolean = false,
         gapMillis: ((String) -> Long)? = null,
@@ -68,7 +72,7 @@ class SequencePlayer @Inject constructor(
         stop()
         if (sentences.isEmpty() || !preflight()) return
         params = RunParams(sentences, voices, level, sheetName, isPremiumUser, gapMillis,
-            onTrackStarted, onTrackPlayed, onCompleted)
+            onTrackStarted, onTrackPlayed, onCompleted, onTrackListened)
         _playingKey.value = key
         _isPaused.value = false
         startFrom(0)
@@ -84,6 +88,8 @@ class SequencePlayer @Inject constructor(
         onTrackStarted: (String) -> Unit = {},
         onTrackPlayed: (String) -> Unit = {},
         onCompleted: () -> Unit = {},
+        // Milliseconds of audio actually heard for a track (to its end, or until paused/stopped).
+        onTrackListened: (String, Long) -> Unit = { _, _ -> },
         sheetName: String = "",
         isPremiumUser: Boolean = false,
         gapMillis: ((String) -> Long)? = null,
@@ -93,7 +99,7 @@ class SequencePlayer @Inject constructor(
         stop()
         if (sentences.isEmpty()) return
         params = RunParams(sentences, voices, level, sheetName, isPremiumUser, gapMillis,
-            onTrackStarted, onTrackPlayed, onCompleted)
+            onTrackStarted, onTrackPlayed, onCompleted, onTrackListened)
         _playingKey.value = key
         _isPaused.value = true
         currentIndex = startIndex.coerceIn(0, sentences.lastIndex)
@@ -174,6 +180,7 @@ class SequencePlayer @Inject constructor(
                     playbackEventBus.events.first { it is PlaybackEvent.Completed || it is PlaybackEvent.Failed }
                 }
             }
+            var audioStartedAt = 0L // set once the track is actually playing (after any download)
             try {
                 val status = audioPlaybackRepository.playTrackAndGetStatus(
                     sentence = p.sentences[index], level = p.level, sheetName = p.sheetName,
@@ -182,11 +189,16 @@ class SequencePlayer @Inject constructor(
                 if (status is AudioPlaybackStatus.Failure || status is AudioPlaybackStatus.RateLimited) {
                     next?.cancel(); playedAll = false; break
                 }
+                audioStartedAt = SystemClock.elapsedRealtime()
                 p.onTrackPlayed(p.sentences[index])
                 if (finished.await() !is PlaybackEvent.Completed) {
                     next?.cancel(); playedAll = false; break
                 }
-            } finally { finished.cancel() }
+            } finally {
+                finished.cancel()
+                // Runs on completion, failure, pause and stop alike, so only time really heard counts.
+                if (audioStartedAt > 0L) p.onTrackListened(p.sentences[index], SystemClock.elapsedRealtime() - audioStartedAt)
+            }
             if (next == null) break
             p.gapMillis?.let { delay(it(p.sentences[index]).coerceAtLeast(0L)) }
             ready = next

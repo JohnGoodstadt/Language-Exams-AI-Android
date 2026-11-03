@@ -103,3 +103,56 @@ fun TTSStatsRepository.recordPageView(
         }
     }
 }
+
+/**
+ * Podcast listening stats — how long people actually listen and which scenes get heard. Same `p_` grammar
+ * as [PageStat], area `podcast`. Twin of iOS `PodcastStat`.
+ *
+ *     p_<platform>_podcast_<sheet>_secs                 seconds of audio heard (global monthly + user)
+ *     p_<platform>_podcast_<sheet>_<scene>_play         playback entered that scene (global monthly + user)
+ *     p_<platform>_podcast_<sheet>_<scene>_secs         seconds heard in that scene (global monthly + user)
+ *     p_<platform>_podcast_secs_d<dd>                   all podcasts, per day of the month (global monthly)
+ *     podcast_secs_<yyyy-MM-dd>                         all podcasts, per day (user doc)
+ *
+ * The day in a key is the day of listening (stamped at inc time), not the day the stats are flushed.
+ * Seconds are whole numbers so they stay Firestore integer increments.
+ */
+object PodcastStat {
+    private const val AREA = "podcast"
+
+    fun secsKey(sheet: String): String =
+        "p_${PageStat.PLATFORM}_${AREA}_${QuizStat.normalize(sheet)}_secs"
+
+    fun sceneKey(sheet: String, sceneId: String, metric: String): String =
+        "p_${PageStat.PLATFORM}_${AREA}_${QuizStat.normalize(sheet)}_${QuizStat.normalize(sceneId)}_$metric"
+
+    fun dayOfMonthKey(date: java.time.LocalDate = java.time.LocalDate.now()): String =
+        "p_${PageStat.PLATFORM}_${AREA}_secs_d${date.dayOfMonth.toString().padStart(2, '0')}" // ASCII digits in any locale
+
+    fun userDayKey(date: java.time.LocalDate = java.time.LocalDate.now()): String =
+        "podcast_secs_$date" // ISO yyyy-MM-dd
+}
+
+/** Playback entered [sceneId] of podcast [sheet] (counted once per entry, whatever started it). */
+fun TTSStatsRepository.recordPodcastScenePlay(sheet: String, sceneId: String) {
+    val name = PodcastStat.sceneKey(sheet, sceneId, "play")
+    inc(TTSStatsRepository.fsDOC.GlobalStats, name)
+    inc(TTSStatsRepository.fsDOC.USER, name)
+}
+
+/** [seconds] of audio heard in [sceneId] of podcast [sheet]: podcast, scene and per-day totals. */
+fun TTSStatsRepository.recordPodcastListen(sheet: String, sceneId: String?, seconds: Int) {
+    if (seconds <= 0) return
+    val global = TTSStatsRepository.fsDOC.GlobalStats
+    val user = TTSStatsRepository.fsDOC.USER
+    val secs = PodcastStat.secsKey(sheet)
+    inc(global, secs, seconds)
+    inc(user, secs, seconds)
+    sceneId?.let {
+        val sceneSecs = PodcastStat.sceneKey(sheet, it, "secs")
+        inc(global, sceneSecs, seconds)
+        inc(user, sceneSecs, seconds)
+    }
+    inc(global, PodcastStat.dayOfMonthKey(), seconds)
+    inc(user, PodcastStat.userDayKey(), seconds)
+}

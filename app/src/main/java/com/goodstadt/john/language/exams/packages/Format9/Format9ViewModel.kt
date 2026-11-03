@@ -11,6 +11,8 @@ import com.goodstadt.john.language.exams.data.repository.ContentRepository
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.stats.PageStat
 import com.goodstadt.john.language.exams.data.stats.recordPageView
+import com.goodstadt.john.language.exams.data.stats.recordPodcastListen
+import com.goodstadt.john.language.exams.data.stats.recordPodcastScenePlay
 import com.goodstadt.john.language.exams.managers.AccessPolicy
 import com.goodstadt.john.language.exams.managers.AudioCacheManager
 import com.goodstadt.john.language.exams.managers.SequencePlayer
@@ -58,6 +60,10 @@ class Format9ViewModel @Inject constructor(
     }
 
     private val owner = "format9:${UUID.randomUUID()}:"
+    // Podcast listening stats: heard milliseconds below a whole second, per scene, and the scene playback
+    // was last in (so re-entering a scene counts as a new play).
+    private val listenedMs = mutableMapOf<String, Long>()
+    private var lastSceneId: String? = null
     private var sheetName: String = ""
     private var speakerVoices: Map<String, String> = emptyMap()
     private var speakerNames: Map<String, String> = emptyMap()
@@ -285,6 +291,7 @@ class Format9ViewModel @Inject constructor(
                 } else true
             },
             onTrackStarted = ::handleTrackStarted,
+            onTrackListened = ::handleTrackListened,
             onCompleted = { _currentSpokenText.value = null }
         )
     }
@@ -292,8 +299,22 @@ class Format9ViewModel @Inject constructor(
     /** Shared per-track start handler: moves the row highlight + scrubber playhead, records the play stat. */
     private fun handleTrackStarted(sentence: String) {
         _currentSpokenText.value = sentence
-        sceneIndexOfText(sentence)?.let { _focusedSceneIndex.value = it }
+        val sceneIndex = sceneIndexOfText(sentence)
+        sceneIndex?.let { _focusedSceneIndex.value = it }
         stats.recordPageView(PageStat.Area.REFERENCE, sheetName, PageStat.Metric.PLAY)  // heard
+        // A scene play counts once each time playback enters a scene (Play all, scene button or scrubber).
+        val sceneId = sceneIndex?.let { orderedScenes().getOrNull(it)?.id }
+        if (sceneId != null && sceneId != lastSceneId) stats.recordPodcastScenePlay(sheetName, sceneId)
+        lastSceneId = sceneId
+    }
+
+    /** Listening time: [millis] of [sentence] really heard. Whole seconds go to the stats, the rest carries over. */
+    private fun handleTrackListened(sentence: String, millis: Long) {
+        val sceneId = sceneIndexOfText(sentence)?.let { orderedScenes().getOrNull(it)?.id }
+        val key = sceneId.orEmpty()
+        val total = (listenedMs[key] ?: 0L) + millis
+        listenedMs[key] = total % 1000
+        stats.recordPodcastListen(sheetName, sceneId, (total / 1000).toInt())
     }
 
     /** Index of the scene containing a line whose selected spoken text matches [text], or null. */
@@ -333,6 +354,7 @@ class Format9ViewModel @Inject constructor(
             sheetName = sheetName,
             isPremiumUser = policy.isPremium,
             onTrackStarted = ::handleTrackStarted,
+            onTrackListened = ::handleTrackListened,
             onCompleted = { _currentSpokenText.value = null }
         )
     }
@@ -353,6 +375,7 @@ class Format9ViewModel @Inject constructor(
     fun stopPlayback() {
         if (sequence.playingKey.value?.startsWith(owner) == true) sequence.stop()
         _currentSpokenText.value = null
+        lastSceneId = null
     }
 
     override fun onCleared() { stopPlayback(); super.onCleared() }
