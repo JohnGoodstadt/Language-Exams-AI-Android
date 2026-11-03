@@ -57,6 +57,7 @@ import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.tasks.await
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.Json
+import com.goodstadt.john.language.exams.screens.shared.ConnectionNotice
 import kotlinx.serialization.json.JsonArray
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonNull
@@ -105,8 +106,17 @@ class ExamSheetRepository @Inject constructor(
     private val firestore: FirebaseFirestore,
     private val ttsStatsRepository:TTSStatsRepository,
     @ApplicationContext private val context: Context,
-    private val jsonParser: Json
+    private val jsonParser: Json,
+    // Lazy: ConnectionNotice -> OfflineAudioDownloader -> ContentRepository -> this would be a cycle.
+    private val connectionNotice: dagger.Lazy<ConnectionNotice>,
 ) {
+    /** False offline (known, or a quick probe), so a stale sheet keeps its cached copy instead of refetching. */
+    suspend fun canRefresh(): Boolean = !connectionNotice.get().checkOffline()
+
+    /** Offline: fail now so the caller falls back to its cached/bundled copy, instead of Firestore waiting ~10 s. */
+    private suspend fun failIfOffline() {
+        if (connectionNotice.get().checkOffline()) throw java.io.IOException("Offline: Firestore fetch skipped")
+    }
 
     private val json = Json { ignoreUnknownKeys = true }
     private val cacheDir = context.filesDir
@@ -269,6 +279,8 @@ class ExamSheetRepository @Inject constructor(
      */
     private suspend fun fetchFromNetworkAndCacheFormat0File(sheet_name: String): Result<Format0File> {
         Timber.d("ExamSheetRepo.fetchFromNetworkAndCache(): '$sheet_name' from network...")
+        // Offline: fail quietly (not a fault) so the caller uses its bundled copy without Firestore's ~10 s wait.
+        if (!canRefresh()) return Result.failure(java.io.IOException("Offline: Firestore fetch skipped"))
         return try {
             // This is your existing function that talks to Firestore.
             // Let's assume it returns a VocabFile on success.
@@ -417,6 +429,7 @@ class ExamSheetRepository @Inject constructor(
     // --- 4. PRIVATE, GENERIC CACHING HELPERS ---
 
     private suspend fun downloadAndAssembleFormat1(examName: String): Format1File = coroutineScope {
+        failIfOffline()
         Timber.d("ExamSheetRepo: Assembling Format1 sheet for '$examName' from sub-collections.")
 
         // Define the base path to the specific exam sheet document
@@ -557,6 +570,7 @@ class ExamSheetRepository @Inject constructor(
 
     /** Reads the flattened `sections` subcollection and regroups by `sortorder` into levels. */
     private suspend fun downloadAndAssembleFormat7or10(examName: String): Format7or10File = coroutineScope {
+        failIfOffline()
         val examDocRef = firestore.collection(fb.global).document(fb.exam_sheets)
             .collection("sheets").document(examName)
 
@@ -740,6 +754,7 @@ class ExamSheetRepository @Inject constructor(
      * and decode the remaining map (lines keep their de/en/es/zh/pt/hi fields).
      */
     private suspend fun downloadAndAssembleFormat9(docName: String): Format9File {
+        failIfOffline()
         val docRef = firestore.collection(fb.global).document(fb.exam_sheets)
             .collection("sheets").document(docName)
         val snapshot = docRef.get(Source.SERVER).await()
@@ -773,6 +788,7 @@ class ExamSheetRepository @Inject constructor(
 
     /** Reads the embedded hierarchy written by the iOS Format 8 uploader. */
     private suspend fun downloadAndAssembleFormat8(examName: String): Format8File = coroutineScope {
+        failIfOffline()
         val examDocRef = firestore.collection(fb.global).document(fb.exam_sheets)
             .collection("sheets").document(examName)
 
@@ -811,8 +827,10 @@ class ExamSheetRepository @Inject constructor(
         (value as? List<*>)?.map { it?.toString() ?: "" } ?: emptyList()
 
     /** Selects the storage layout - see [com.goodstadt.john.language.exams.packages.ReferencePronouns.Format6Layout]. */
-    private suspend fun downloadFormat6(examName: String): Format6File =
-        if (Format6Layout.NESTED) downloadFormat6Nested(examName) else downloadFormat6Legacy(examName)
+    private suspend fun downloadFormat6(examName: String): Format6File {
+        failIfOffline()
+        return if (Format6Layout.NESTED) downloadFormat6Nested(examName) else downloadFormat6Legacy(examName)
+    }
 
 
     /**
@@ -993,6 +1011,7 @@ class ExamSheetRepository @Inject constructor(
 
     /** Reads the flattened `sections` subcollection and regroups by `sortorder` into a WordQuizRoot. */
     private suspend fun downloadAndAssembleFormat13(examName: String): WordQuizRoot = coroutineScope {
+        failIfOffline()
         val examDocRef = firestore.collection(fb.global).document(fb.exam_sheets)
             .collection("sheets").document(examName)
 
@@ -1083,6 +1102,7 @@ class ExamSheetRepository @Inject constructor(
 
 
     private suspend fun downloadAndAssembleFormat3(documentId: String): Format3File {
+        failIfOffline()
         val db = FirebaseFirestore.getInstance()
         // Make sure this matches your actual Firestore collection name
         val collectionName = "reference_sheets"
@@ -1149,6 +1169,7 @@ class ExamSheetRepository @Inject constructor(
      * from your native Firestore documents. This is the direct Kotlin translation of your final Swift version.
      */
     private suspend fun downloadAndAssembleFormat2(examName: String): Format2File = coroutineScope {
+        failIfOffline()
         Timber.d("ExamSheetRepo: Assembling Format2 sheet for '$examName' from sub-collections.")
 
         val examDocRef = firestore.collection(fb.global).document(fb.exam_sheets)

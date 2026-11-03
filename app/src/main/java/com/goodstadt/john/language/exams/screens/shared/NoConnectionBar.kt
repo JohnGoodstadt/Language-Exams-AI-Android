@@ -146,6 +146,18 @@ class ConnectionNotice @Inject constructor(
         result
     }
 
+    /**
+     * Before a Firestore sheet fetch: true when there's no connection (already known, or a quick probe says
+     * so), so the caller uses its cached or bundled copy at once. Firestore itself waits ~10 s before giving
+     * up offline, which showed as a long spinner on the quizzes. Online it costs one small request.
+     */
+    suspend fun checkOffline(): Boolean {
+        if (isOffline) return true
+        val offlineNow = probeIsOffline()
+        if (offlineNow) setProbedOffline(true)
+        return offlineNow
+    }
+
     /** True when a tiny request fails with a "no connection" error (any HTTP reply, even an error, is online). */
     private suspend fun probeIsOffline(): Boolean = withContext(Dispatchers.IO) {
         val connection = (URL(PROBE_URL).openConnection() as HttpURLConnection).apply {

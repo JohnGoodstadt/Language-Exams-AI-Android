@@ -193,7 +193,7 @@ class ContentRepository @Inject constructor(
                     val remoteVersions = appConfigRepository.getRemoteSheetVersions()
                     val remoteVersion = remoteVersions[logicalName] ?: 1
                     val localVersion = appConfigRepository.getLocalVersion(logicalName)
-                    val forceRefresh = remoteVersion > localVersion
+                    val forceRefresh = remoteVersion > localVersion && examSheetRepository.canRefresh() // offline: keep the cached copy
                     Timber.d("VocabRepo: Sheet '$logicalName' -> Remote v$remoteVersion, Local v$localVersion, Force refresh: $forceRefresh")
 
                     // --- 2. In-Memory Cache Check ---
@@ -265,7 +265,7 @@ class ContentRepository @Inject constructor(
             val remoteVersions = appConfigRepository.getRemoteSheetVersions()
             val remoteVersion = remoteVersions[logicalName] ?: 1
             val localVersion = appConfigRepository.getLocalVersion(logicalName)
-            val forceRefresh = remoteVersion > localVersion
+            val forceRefresh = remoteVersion > localVersion && examSheetRepository.canRefresh() // offline: keep the cached copy
             Timber.d("Format 1: Sheet '$logicalName' (Format1) -> Remote v$remoteVersion, Local v$localVersion, Force refresh: $forceRefresh")
 
             // --- 2. IN-MEMORY CACHE CHECK ---
@@ -357,7 +357,7 @@ class ContentRepository @Inject constructor(
             val remoteVersions = appConfigRepository.getRemoteSheetVersions()
             val remoteVersion = remoteVersions[logicalName] ?: 1
             val localVersion = appConfigRepository.getLocalVersion(logicalName)
-            val forceRefresh = remoteVersion > localVersion
+            val forceRefresh = remoteVersion > localVersion && examSheetRepository.canRefresh() // offline: keep the cached copy
             Timber.d("ContentRepo: Sheet '$logicalName' (Format8) -> Remote v$remoteVersion, Local v$localVersion, Force refresh: $forceRefresh")
 
             // --- 2. IN-MEMORY CACHE CHECK ---
@@ -426,7 +426,7 @@ class ContentRepository @Inject constructor(
             val remoteVersions = appConfigRepository.getRemoteSheetVersions()
             val remoteVersion = remoteVersions[logicalName] ?: 1
             val localVersion = appConfigRepository.getLocalVersion(logicalName)
-            val forceRefresh = remoteVersion > localVersion
+            val forceRefresh = remoteVersion > localVersion && examSheetRepository.canRefresh() // offline: keep the cached copy
             Timber.d("ContentRepo: Sheet '$logicalName' (Format9) -> Remote v$remoteVersion, Local v$localVersion, Force refresh: $forceRefresh")
 
             // --- 2. IN-MEMORY CACHE CHECK ---
@@ -512,7 +512,7 @@ class ContentRepository @Inject constructor(
             val remoteVersions = appConfigRepository.getRemoteSheetVersions()
             val remoteVersion = remoteVersions[logicalName] ?: 1
             val localVersion = appConfigRepository.getLocalVersion(logicalName)
-            val forceRefresh = remoteVersion > localVersion
+            val forceRefresh = remoteVersion > localVersion && examSheetRepository.canRefresh() // offline: keep the cached copy
             Timber.d("ContentRepo: Sheet '$logicalName' (Format2) -> Remote v$remoteVersion, Local v$localVersion, Force refresh: $forceRefresh")
 
             // --- 2. IN-MEMORY CACHE CHECK ---
@@ -613,7 +613,7 @@ class ContentRepository @Inject constructor(
             val remoteVersions = appConfigRepository.getRemoteSheetVersions()
             val remoteVersion = remoteVersions[logicalName] ?: 1
             val localVersion = appConfigRepository.getLocalVersion(logicalName)
-            val forceRefresh = remoteVersion > localVersion
+            val forceRefresh = remoteVersion > localVersion && examSheetRepository.canRefresh() // offline: keep the cached copy
             Timber.d("ContentRepo: Sheet '$logicalName' (Format7/10) -> Remote v$remoteVersion, Local v$localVersion, Force refresh: $forceRefresh")
 
             // 2. In-memory cache
@@ -660,7 +660,7 @@ class ContentRepository @Inject constructor(
             val remoteVersions = appConfigRepository.getRemoteSheetVersions()
             val remoteVersion = remoteVersions[logicalName] ?: 1
             val localVersion = appConfigRepository.getLocalVersion(logicalName)
-            val forceRefresh = remoteVersion > localVersion
+            val forceRefresh = remoteVersion > localVersion && examSheetRepository.canRefresh() // offline: keep the cached copy
             Timber.d("ContentRepo: Sheet '$logicalName' (Format13) -> Remote v$remoteVersion, Local v$localVersion, Force refresh: $forceRefresh")
 
             if (!forceRefresh) {
@@ -763,7 +763,7 @@ class ContentRepository @Inject constructor(
                 val remoteVersions = appConfigRepository.getRemoteSheetVersions()
                 val remoteVersion = remoteVersions[logicalName] ?: 1
                 val localVersion = appConfigRepository.getLocalVersion(logicalName)
-                val forceRefresh = remoteVersion > localVersion
+                val forceRefresh = remoteVersion > localVersion && examSheetRepository.canRefresh() // offline: keep the cached copy
                 Timber.d("ContentRepo: Sheet '$logicalName' (Format6) -> Remote v$remoteVersion, Local v$localVersion, Force refresh: $forceRefresh")
 
                 // 2. In-memory cache.
@@ -850,7 +850,7 @@ class ContentRepository @Inject constructor(
             val remoteVersions = appConfigRepository.getRemoteSheetVersions()
             val remoteVersion = remoteVersions[logicalName] ?: 1
             val localVersion = appConfigRepository.getLocalVersion(logicalName)
-            val forceRefresh = remoteVersion > localVersion
+            val forceRefresh = remoteVersion > localVersion && examSheetRepository.canRefresh() // offline: keep the cached copy
             Timber.d("ContentRepo: Sheet '$logicalName' (Format3) -> Remote v$remoteVersion, Local v$localVersion, Force refresh: $forceRefresh")
 
             // --- 2. IN-MEMORY CACHE CHECK ---
