@@ -639,7 +639,11 @@ private fun SettingsContent(
                 icon = Icons.Default.CloudDownload,
                 title = "Download for Offline",
                 badge = "Beta",
-                currentValue = "",
+                // What it does and why (same wording as iOS).
+                currentValue = if (isPurchased)
+                    "Save sentence audio to this device, so vocab and Reference pages still play with no internet (e.g. on a plane)"
+                else
+                    "Premium: save sentence audio to this device, so vocab and Reference pages still play with no internet",
                 onClick = onShowOffline
             )
         }
