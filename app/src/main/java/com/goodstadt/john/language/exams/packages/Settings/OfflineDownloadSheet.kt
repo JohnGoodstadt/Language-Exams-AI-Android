@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.packages.Settings
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -176,7 +177,10 @@ fun OfflineDownloadSheet(
         sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
     ) {
         Column(modifier = Modifier.padding(horizontal = 20.dp).padding(bottom = 32.dp)) {
-            Text("Download for Offline", style = MaterialTheme.typography.titleLarge)
+            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                Text("Download for Offline", style = MaterialTheme.typography.titleLarge)
+                BetaBadge()
+            }
             Spacer(Modifier.height(16.dp))
             LabeledRow("Voice", friendlyVoiceName)
             LabeledRow("Connection", when (connection) {
@@ -403,4 +407,24 @@ private fun PackRowView(
 private fun sizeText(files: Int): String {
     val bytes = files * OfflineAudioDownloader.ESTIMATED_BYTES_PER_FILE
     return if (bytes < 1_000_000) "${maxOf(bytes / 1000, 1)} KB" else "${bytes / 1_000_000} MB"
+}
+
+/**
+ * A small filled pill marking a feature that's still being tested (e.g. "Beta" on Download for Offline).
+ * Indigo, distinct from the accent orange and button blue. Same colour as iOS.
+ */
+@Composable
+internal fun BetaBadge(text: String = "Beta") {
+    Text(
+        text.uppercase(),
+        style = MaterialTheme.typography.labelSmall,
+        fontWeight = FontWeight.Bold,
+        color = androidx.compose.ui.graphics.Color.White,
+        modifier = Modifier
+            .background(
+                androidx.compose.ui.graphics.Color(0xFF5856D6),
+                androidx.compose.foundation.shape.RoundedCornerShape(50)
+            )
+            .padding(horizontal = 6.dp, vertical = 2.dp)
+    )
 }

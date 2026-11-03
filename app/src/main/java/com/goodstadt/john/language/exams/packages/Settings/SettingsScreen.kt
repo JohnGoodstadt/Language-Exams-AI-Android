@@ -638,6 +638,7 @@ private fun SettingsContent(
                 iconTint = iconTint,
                 icon = Icons.Default.CloudDownload,
                 title = "Download for Offline",
+                badge = "Beta",
                 currentValue = "",
                 onClick = onShowOffline
             )
@@ -1235,6 +1236,7 @@ private fun SettingsActionItem(
     title: String,
     currentValue: String,
     iconTint: Color = MaterialTheme.colorScheme.onSurfaceVariant,
+    badge: String? = null,
     onClick: () -> Unit
 ) {
     Row(
@@ -1251,7 +1253,10 @@ private fun SettingsActionItem(
         )
         Spacer(modifier = Modifier.width(16.dp))
         Column(modifier = Modifier.weight(1f)) {
-            Text(text = title, style = MaterialTheme.typography.bodyLarge, color = LocalExtendedColors.current.screenAccent)
+            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                Text(text = title, style = MaterialTheme.typography.bodyLarge, color = LocalExtendedColors.current.screenAccent)
+                if (badge != null) BetaBadge(badge)
+            }
             Text(
                 text = currentValue,
                 style = MaterialTheme.typography.bodyMedium,
