@@ -257,6 +257,25 @@ class OfflineAudioDownloader @Inject constructor(
             sentences(sheetName).map { OfflineAudioItem(it, voice) }
         }, allowCellular)
 
+    /**
+     * Download a vocab level and then the Reference pages, as one user action: the vocab pack runs first and the
+     * Reference pack is queued to start when it ends. [language] null (no Reference pages) downloads the vocab only.
+     */
+    fun startLevelAndReference(sheetName: String, level: String, language: String?, voice: String, allowCellular: Boolean) {
+        if (job?.isActive == true || _runningPackId.value != null) {
+            log("start $sheetName + Reference ignored - ${_runningPackId.value} is already running")
+            return
+        }
+        queued.clear()
+        if (language != null) queued += Running(referencePackId(language, voice), "${language}Reference", "", voice) {
+            referenceItems(language, voice)
+        }
+        start(sheetName, level, voice, allowCellular)
+    }
+
+    /** The pack queued to run after the current one (the Reference pages after a vocab level), if any. */
+    private val queued = ArrayDeque<Running>()
+
     /** Download the Reference pages pack for [language] ("German" / "English"). */
     fun startReference(language: String, voice: String, allowCellular: Boolean) =
         startPack(Running(referencePackId(language, voice), "${language}Reference", "", voice) {
@@ -302,6 +321,7 @@ class OfflineAudioDownloader @Inject constructor(
 
     /** Delete the files this pack added (unless another pack also uses them) and forget the pack. */
     fun remove(packId: String) {
+        queued.removeAll { it.id == packId }
         val record = _records.value[packId] ?: return
         val others = _records.value.values.filter { it.id != packId }
             .flatMap { it.added + it.alreadyHad }.toSet()
@@ -393,8 +413,15 @@ class OfflineAudioDownloader @Inject constructor(
             withContext(NonCancellable) {
                 saveRecord(id, sheetName, level, voice, total, added, alreadyHad, unavailable)
                 if (!_isPaused.value) {
-                    _runningPackId.value = null
-                    current = null
+                    val next = queued.removeFirstOrNull()
+                    if (next != null) {
+                        log("$id: done, starting queued ${next.id}")
+                        current = next
+                        launchRun()
+                    } else {
+                        _runningPackId.value = null
+                        current = null
+                    }
                 }
             }
         }
