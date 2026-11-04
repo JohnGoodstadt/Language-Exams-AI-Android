@@ -36,15 +36,15 @@
           "sentences": [
             {
               "sentence": "Gestatten Sie, dass ich mich vorstelle: Dr. Hoffmann, Leiterin der Abteilung.",
-              "translation": ""
+              "translation": "Allow me to introduce myself: Dr Hoffmann, head of the department."
             },
             {
               "sentence": "Bevor ich zur Sache komme, gestatten Sie, dass ich mich vorstelle.",
-              "translation": ""
+              "translation": "Before I get to the matter at hand, allow me to introduce myself."
             },
             {
               "sentence": "Gestatten Sie, dass ich mich vorstelle, bevor die Sitzung beginnt?",
-              "translation": ""
+              "translation": "May I introduce myself before the meeting begins?"
             }
           ]
         },
@@ -62,15 +62,15 @@
           "sentences": [
             {
               "sentence": "Ich freue mich, die Gelegenheit zu haben, Sie pers\u00f6nlich zu treffen.",
-              "translation": ""
+              "translation": "I'm pleased to have the opportunity to meet you in person."
             },
             {
               "sentence": "Es freut mich, endlich die Gelegenheit zu haben, mit Ihnen zu sprechen.",
-              "translation": ""
+              "translation": "I'm pleased finally to have the opportunity to speak with you."
             },
             {
               "sentence": "Freuen Sie sich, die Gelegenheit zu haben, das Team kennenzulernen?",
-              "translation": ""
+              "translation": "Are you pleased to have the opportunity to get to know the team?"
             }
           ]
         },
@@ -88,15 +88,15 @@
           "sentences": [
             {
               "sentence": "Ich glaube, wir wurden einander noch nicht vorgestellt.",
-              "translation": ""
+              "translation": "I believe we have not been introduced yet."
             },
             {
               "sentence": "Wir wurden einander noch nicht vorgestellt \u2013 mein Name ist Krause.",
-              "translation": ""
+              "translation": "We have not been introduced yet; my name is Krause."
             },
             {
               "sentence": "Wurden wir einander tats\u00e4chlich noch nicht vorgestellt?",
-              "translation": ""
+              "translation": "Have we really not been introduced yet?"
             }
           ]
         },
@@ -114,15 +114,15 @@
           "sentences": [
             {
               "sentence": "Es ist mir eine Ehre, Sie hier begr\u00fc\u00dfen zu d\u00fcrfen.",
-              "translation": ""
+              "translation": "It is an honour to welcome you here."
             },
             {
               "sentence": "Sie pers\u00f6nlich kennenzulernen, ist mir eine gro\u00dfe Ehre.",
-              "translation": ""
+              "translation": "It is a great honour to meet you in person."
             },
             {
               "sentence": "Ist es Ihnen eine Ehre, die G\u00e4ste begr\u00fc\u00dfen zu d\u00fcrfen?",
-              "translation": ""
+              "translation": "Is it an honour for you to welcome the guests?"
             }
           ]
         },
@@ -140,15 +140,15 @@
           "sentences": [
             {
               "sentence": "Ich sch\u00e4tze es sehr, dass Sie trotz Ihres vollen Terminkalenders gekommen sind.",
-              "translation": ""
+              "translation": "I really appreciate your coming despite your busy schedule."
             },
             {
               "sentence": "Wir sch\u00e4tzen Ihre Anwesenheit au\u00dferordentlich.",
-              "translation": ""
+              "translation": "We greatly appreciate your presence."
             },
             {
               "sentence": "Darf ich Ihnen sagen, wie sehr ich Ihre Anwesenheit sch\u00e4tze?",
-              "translation": ""
+              "translation": "May I tell you how much I appreciate your presence?"
             }
           ]
         },
@@ -166,15 +166,15 @@
           "sentences": [
             {
               "sentence": "Man hat mir bereits viel Gutes von Ihnen erz\u00e4hlt.",
-              "translation": ""
+              "translation": "I've already heard many good things about you."
             },
             {
               "sentence": "Ihr Ruf eilt Ihnen voraus \u2013 man hat mir viel von Ihnen erz\u00e4hlt.",
-              "translation": ""
+              "translation": "Your reputation precedes you; I've heard a lot about you."
             },
             {
               "sentence": "Hat man Ihnen auch schon viel von mir erz\u00e4hlt?",
-              "translation": ""
+              "translation": "Have you heard a lot about me too?"
             }
           ]
         },
@@ -192,15 +192,15 @@
           "sentences": [
             {
               "sentence": "Guten Tag, womit kann ich Ihnen behilflich sein?",
-              "translation": ""
+              "translation": "Good day, how may I help you?"
             },
             {
               "sentence": "Falls Sie Fragen haben: Womit kann ich Ihnen behilflich sein?",
-              "translation": ""
+              "translation": "If you have any questions, how may I help you?"
             },
             {
               "sentence": "Womit kann ich Ihnen heute behilflich sein?",
-              "translation": ""
+              "translation": "How may I help you today?"
             }
           ]
         },
@@ -218,15 +218,15 @@
           "sentences": [
             {
               "sentence": "Leider muss ich mich nun verabschieden, es war mir ein Vergn\u00fcgen.",
-              "translation": ""
+              "translation": "Unfortunately, I must say goodbye now; it has been a pleasure."
             },
             {
               "sentence": "Bevor ich mich verabschiede, m\u00f6chte ich mich noch bedanken.",
-              "translation": ""
+              "translation": "Before I say goodbye, I would like to thank you."
             },
             {
               "sentence": "M\u00f6chten Sie sich noch von den anderen G\u00e4sten verabschieden?",
-              "translation": ""
+              "translation": "Would you like to say goodbye to the other guests as well?"
             }
           ]
         },
@@ -244,15 +244,15 @@
           "sentences": [
             {
               "sentence": "Es war mir ein Vergn\u00fcgen, mit Ihnen zusammenzuarbeiten.",
-              "translation": ""
+              "translation": "It was a pleasure working with you."
             },
             {
               "sentence": "Vielen Dank f\u00fcr das Gespr\u00e4ch, es war mir ein Vergn\u00fcgen.",
-              "translation": ""
+              "translation": "Thank you for the conversation; it was a pleasure."
             },
             {
               "sentence": "War es Ihnen ebenfalls ein Vergn\u00fcgen, mit uns zu arbeiten?",
-              "translation": ""
+              "translation": "Was it also a pleasure for you to work with us?"
             }
           ]
         },
@@ -270,15 +270,15 @@
           "sentences": [
             {
               "sentence": "Ich hoffe, wir bleiben in Kontakt, auch wenn sich unsere Wege trennen.",
-              "translation": ""
+              "translation": "I hope we stay in touch, even if we go our separate ways."
             },
             {
               "sentence": "Hier ist meine Karte \u2013 ich hoffe, wir bleiben in Kontakt.",
-              "translation": ""
+              "translation": "Here is my card; I hope we stay in touch."
             },
             {
               "sentence": "Hoffen Sie auch, dass wir in Kontakt bleiben?",
-              "translation": ""
+              "translation": "Do you also hope that we stay in touch?"
             }
           ]
         },
@@ -296,15 +296,15 @@
           "sentences": [
             {
               "sentence": "Richten Sie bitte Ihrem Kollegen meine besten Gr\u00fc\u00dfe aus.",
-              "translation": ""
+              "translation": "Please give my best regards to your colleague."
             },
             {
               "sentence": "Falls Sie ihn sehen, richten Sie ihm bitte meine Gr\u00fc\u00dfe aus.",
-              "translation": ""
+              "translation": "If you see him, please give him my regards."
             },
             {
               "sentence": "K\u00f6nnen Sie Ihrer Familie bitte meine Gr\u00fc\u00dfe ausrichten?",
-              "translation": ""
+              "translation": "Could you please give my regards to your family?"
             }
           ]
         },
@@ -322,15 +322,15 @@
           "sentences": [
             {
               "sentence": "Machen Sie es gut und lassen Sie es sich gut gehen!",
-              "translation": ""
+              "translation": "All the best, and take good care of yourself!"
             },
             {
               "sentence": "Bis zum n\u00e4chsten Mal \u2013 lassen Sie es sich gut gehen.",
-              "translation": ""
+              "translation": "Until next time, take care of yourself."
             },
             {
               "sentence": "Werden Sie es sich im Urlaub gut gehen lassen?",
-              "translation": ""
+              "translation": "Will you treat yourself well on holiday?"
             }
           ]
         },
@@ -348,15 +348,15 @@
           "sentences": [
             {
               "sentence": "Es hat mich sehr gefreut, Sie kennengelernt zu haben.",
-              "translation": ""
+              "translation": "I was very pleased to have met you."
             },
             {
               "sentence": "Das Gespr\u00e4ch hat mich sehr gefreut, vielen Dank.",
-              "translation": ""
+              "translation": "I really enjoyed the conversation; thank you."
             },
             {
               "sentence": "Hat es Sie auch sehr gefreut, alle wiederzusehen?",
-              "translation": ""
+              "translation": "Were you also very pleased to see everyone again?"
             }
           ]
         },
@@ -374,15 +374,15 @@
           "sentences": [
             {
               "sentence": "Ich verbleibe mit freundlichen Gr\u00fc\u00dfen, Ihr Michael Wagner.",
-              "translation": ""
+              "translation": "Yours sincerely, Michael Wagner."
             },
             {
               "sentence": "In Erwartung Ihrer Antwort verbleibe ich mit freundlichen Gr\u00fc\u00dfen.",
-              "translation": ""
+              "translation": "I look forward to your reply. Yours sincerely."
             },
             {
               "sentence": "Soll ich den Brief mit \u201eIch verbleibe mit freundlichen Gr\u00fc\u00dfen\u201c beenden?",
-              "translation": ""
+              "translation": "Should I end the letter with \"Yours sincerely\"?"
             }
           ]
         },
@@ -400,15 +400,15 @@
           "sentences": [
             {
               "sentence": "Sofern Sie einverstanden sind, w\u00fcrde ich Sie gern duzen.",
-              "translation": ""
+              "translation": "If you agree, I would like us to use the informal \"du\" with each other."
             },
             {
               "sentence": "Wir k\u00f6nnten uns, sofern Sie einverstanden sind, kommende Woche treffen.",
-              "translation": ""
+              "translation": "We could meet next week, provided you agree."
             },
             {
               "sentence": "K\u00f6nnen wir, sofern Sie einverstanden sind, morgen beginnen?",
-              "translation": ""
+              "translation": "Can we start tomorrow, provided you agree?"
             }
           ]
         }
@@ -433,15 +433,15 @@
           "sentences": [
             {
               "sentence": "In seinem beruflichen Werdegang hat er mehrere Branchen kennengelernt.",
-              "translation": ""
+              "translation": "He has gained experience in several industries during his career."
             },
             {
               "sentence": "Ihr Werdegang ist beeindruckend und au\u00dfergew\u00f6hnlich vielseitig.",
-              "translation": ""
+              "translation": "Her career path is impressive and exceptionally varied."
             },
             {
               "sentence": "Welche Station Ihres Werdegangs war besonders wichtig?",
-              "translation": ""
+              "translation": "Which stage of your career was particularly important?"
             }
           ]
         },
@@ -459,15 +459,15 @@
           "sentences": [
             {
               "sentence": "Ohne die entsprechende Qualifikation kommt man f\u00fcr die Stelle nicht infrage.",
-              "translation": ""
+              "translation": "Without the appropriate qualification, you cannot be considered for the position."
             },
             {
               "sentence": "Ihre Qualifikationen \u00fcbertreffen unsere Erwartungen bei Weitem.",
-              "translation": ""
+              "translation": "Your qualifications far exceed our expectations."
             },
             {
               "sentence": "Welche Qualifikation wird f\u00fcr diese Stelle verlangt?",
-              "translation": ""
+              "translation": "What qualification is required for this position?"
             }
           ]
         },
@@ -485,15 +485,15 @@
           "sentences": [
             {
               "sentence": "Ohne g\u00fcltigen Aufenthaltstitel darf keine Besch\u00e4ftigung aufgenommen werden.",
-              "translation": ""
+              "translation": "You cannot take up employment without a valid residence permit."
             },
             {
               "sentence": "Der Aufenthaltstitel muss rechtzeitig verl\u00e4ngert werden.",
-              "translation": ""
+              "translation": "The residence permit must be renewed in good time."
             },
             {
               "sentence": "Wie lange ist Ihr Aufenthaltstitel noch g\u00fcltig?",
-              "translation": ""
+              "translation": "How much longer is your residence permit valid?"
             }
           ]
         },
@@ -511,15 +511,15 @@
           "sentences": [
             {
               "sentence": "Nach acht Jahren beantragte er die deutsche Staatsb\u00fcrgerschaft.",
-              "translation": ""
+              "translation": "After eight years, he applied for German citizenship."
             },
             {
               "sentence": "Die doppelte Staatsb\u00fcrgerschaft ist nicht in jedem Fall m\u00f6glich.",
-              "translation": ""
+              "translation": "Dual citizenship is not possible in every case."
             },
             {
               "sentence": "Kann man in diesem Land eine doppelte Staatsb\u00fcrgerschaft besitzen?",
-              "translation": ""
+              "translation": "Can you hold dual citizenship in this country?"
             }
           ]
         },
@@ -537,15 +537,15 @@
           "sentences": [
             {
               "sentence": "Bitte best\u00e4tigen Sie, dass Sie die Datenschutzerkl\u00e4rung gelesen haben.",
-              "translation": ""
+              "translation": "Please confirm that you have read the privacy policy."
             },
             {
               "sentence": "Laut Datenschutzerkl\u00e4rung werden Ihre Daten nicht weitergegeben.",
-              "translation": ""
+              "translation": "According to the privacy policy, your data will not be shared."
             },
             {
               "sentence": "Haben Sie die Datenschutzerkl\u00e4rung vollst\u00e4ndig gelesen?",
-              "translation": ""
+              "translation": "Have you read the privacy policy in full?"
             }
           ]
         },
@@ -563,15 +563,15 @@
           "sentences": [
             {
               "sentence": "Ohne Ihre ausdr\u00fcckliche Einwilligung d\u00fcrfen wir die Daten nicht speichern.",
-              "translation": ""
+              "translation": "We may not store the data without your express consent."
             },
             {
               "sentence": "Die Einwilligung kann jederzeit widerrufen werden.",
-              "translation": ""
+              "translation": "Consent can be withdrawn at any time."
             },
             {
               "sentence": "Kann ich meine Einwilligung sp\u00e4ter zur\u00fcckziehen?",
-              "translation": ""
+              "translation": "Can I withdraw my consent later?"
             }
           ]
         },
@@ -589,15 +589,15 @@
           "sentences": [
             {
               "sentence": "Als Nachweis gen\u00fcgt eine Kopie des Zeugnisses.",
-              "translation": ""
+              "translation": "A copy of the certificate is sufficient as proof."
             },
             {
               "sentence": "\u00dcber seine Sprachkenntnisse konnte er keinen Nachweis erbringen.",
-              "translation": ""
+              "translation": "He could not provide evidence of his language skills."
             },
             {
               "sentence": "Welchen Nachweis m\u00fcssen Bewerber vorlegen?",
-              "translation": ""
+              "translation": "What proof must applicants submit?"
             }
           ]
         },
@@ -615,15 +615,15 @@
           "sentences": [
             {
               "sentence": "F\u00fcr den Antrag ben\u00f6tigen Sie eine Bescheinigung des Arbeitgebers.",
-              "translation": ""
+              "translation": "You need a certificate from your employer for the application."
             },
             {
               "sentence": "Die Bescheinigung wird Ihnen per Post zugestellt.",
-              "translation": ""
+              "translation": "The certificate will be sent to you by post."
             },
             {
               "sentence": "Wann erhalte ich die Bescheinigung \u00fcber meine Teilnahme?",
-              "translation": ""
+              "translation": "When will I receive the certificate confirming my participation?"
             }
           ]
         },
@@ -641,21 +641,21 @@
           "sentences": [
             {
               "sentence": "Aus dem Lebenslauf geht hervor, dass sie im Ausland studiert hat.",
-              "translation": "",
+              "translation": "Her CV shows that she studied abroad.",
               "highlight": [
                 "hervor"
               ]
             },
             {
               "sentence": "Wie aus den Unterlagen hervorgeht, fehlt noch eine Unterschrift.",
-              "translation": "",
+              "translation": "As the documents show, a signature is still missing.",
               "highlight": [
                 "hervorgeht"
               ]
             },
             {
               "sentence": "Geht aus dem Zeugnis hervor, wann sie den Abschluss gemacht hat?",
-              "translation": "",
+              "translation": "Does the certificate show when she completed her qualification?",
               "highlight": [
                 "hervor"
               ]
@@ -676,15 +676,15 @@
           "sentences": [
             {
               "sentence": "F\u00fcr diese Position wird mehrj\u00e4hrige Berufserfahrung vorausgesetzt.",
-              "translation": ""
+              "translation": "Several years of professional experience are required for this position."
             },
             {
               "sentence": "Ohne einschl\u00e4gige Berufserfahrung ist der Einstieg schwierig.",
-              "translation": ""
+              "translation": "Getting started is difficult without relevant professional experience."
             },
             {
               "sentence": "Wie viel Berufserfahrung bringen Sie f\u00fcr die Position mit?",
-              "translation": ""
+              "translation": "How much professional experience do you bring to the position?"
             }
           ]
         },
@@ -702,21 +702,21 @@
           "sentences": [
             {
               "sentence": "Sie hat sich um eine leitende Position beworben.",
-              "translation": "",
+              "translation": "She applied for a managerial position.",
               "highlight": [
                 "beworben"
               ]
             },
             {
               "sentence": "Er bewarb sich um ein Stipendium, obwohl die Chancen gering waren.",
-              "translation": "",
+              "translation": "He applied for a scholarship even though his chances were slim.",
               "highlight": [
                 "bewarb"
               ]
             },
             {
               "sentence": "Haben Sie sich schon um die freie Stelle beworben?",
-              "translation": "",
+              "translation": "Have you already applied for the vacancy?",
               "highlight": [
                 "beworben"
               ]
@@ -737,21 +737,21 @@
           "sentences": [
             {
               "sentence": "Die Stelle setzt flie\u00dfende Englischkenntnisse voraus.",
-              "translation": "",
+              "translation": "The position requires fluent English.",
               "highlight": [
                 "setzt"
               ]
             },
             {
               "sentence": "Man sollte nicht voraussetzen, dass alle Bescheid wissen.",
-              "translation": "",
+              "translation": "You should not assume that everyone knows what is going on.",
               "highlight": [
                 "voraussetzen"
               ]
             },
             {
               "sentence": "Setzt der Kurs gute Deutschkenntnisse voraus?",
-              "translation": "",
+              "translation": "Does the course require a good knowledge of German?",
               "highlight": [
                 "Setzt"
               ]
@@ -772,15 +772,15 @@
           "sentences": [
             {
               "sentence": "Zur Feststellung der Identit\u00e4t ist ein Lichtbildausweis n\u00f6tig.",
-              "translation": ""
+              "translation": "Photo ID is required to establish your identity."
             },
             {
               "sentence": "Er wollte seine wahre Identit\u00e4t nicht preisgeben.",
-              "translation": ""
+              "translation": "He did not want to reveal his true identity."
             },
             {
               "sentence": "Wie konnte die Polizei seine Identit\u00e4t feststellen?",
-              "translation": ""
+              "translation": "How were the police able to establish his identity?"
             }
           ]
         },
@@ -798,21 +798,21 @@
           "sentences": [
             {
               "sentence": "Personenbezogene Daten unterliegen dem Datenschutz.",
-              "translation": "",
+              "translation": "Personal data is subject to data protection rules.",
               "highlight": [
                 "Personenbezogene"
               ]
             },
             {
               "sentence": "Es werden ausschlie\u00dflich personenbezogene Angaben verlangt, die notwendig sind.",
-              "translation": "",
+              "translation": "Only necessary personal information is requested.",
               "highlight": [
                 "personenbezogene"
               ]
             },
             {
               "sentence": "Welche personenbezogenen Daten speichert das Unternehmen?",
-              "translation": "",
+              "translation": "What personal data does the company store?",
               "highlight": [
                 "personenbezogenen"
               ]
@@ -833,15 +833,15 @@
           "sentences": [
             {
               "sentence": "In dieser Angelegenheit wende ich mich vertrauensvoll an Sie.",
-              "translation": ""
+              "translation": "I'm turning to you in confidence about this matter."
             },
             {
               "sentence": "Die Angelegenheit ist inzwischen gekl\u00e4rt.",
-              "translation": ""
+              "translation": "The matter has now been resolved."
             },
             {
               "sentence": "An wen kann ich mich in dieser Angelegenheit wenden?",
-              "translation": ""
+              "translation": "Who can I contact about this matter?"
             }
           ]
         }
@@ -866,15 +866,15 @@
           "sentences": [
             {
               "sentence": "Der famili\u00e4re Zusammenhalt wird oft erst in Krisen sichtbar.",
-              "translation": ""
+              "translation": "Family solidarity often only becomes apparent in a crisis."
             },
             {
               "sentence": "Ohne Zusammenhalt zerbricht selbst die stabilste Gemeinschaft.",
-              "translation": ""
+              "translation": "Without solidarity, even the most stable community falls apart."
             },
             {
               "sentence": "Wie kann man den Zusammenhalt in einer Familie st\u00e4rken?",
-              "translation": ""
+              "translation": "How can you strengthen cohesion within a family?"
             }
           ]
         },
@@ -892,15 +892,15 @@
           "sentences": [
             {
               "sentence": "Die Erziehung pr\u00e4gt einen Menschen weit \u00fcber die Kindheit hinaus.",
-              "translation": ""
+              "translation": "A person's upbringing shapes them far beyond childhood."
             },
             {
               "sentence": "\u00dcber die richtige Erziehung gehen die Meinungen weit auseinander.",
-              "translation": ""
+              "translation": "Opinions on the right way to bring up children vary widely."
             },
             {
               "sentence": "Welche Rolle spielt die Schule bei der Erziehung?",
-              "translation": ""
+              "translation": "What role does school play in bringing up children?"
             }
           ]
         },
@@ -918,15 +918,15 @@
           "sentences": [
             {
               "sentence": "Ein gewisser Generationenkonflikt l\u00e4sst sich kaum vermeiden.",
-              "translation": ""
+              "translation": "A certain degree of conflict between generations is almost unavoidable."
             },
             {
               "sentence": "Der Generationenkonflikt zeigt sich besonders in der Wahl der Werte.",
-              "translation": ""
+              "translation": "The generation gap is particularly evident in people's values."
             },
             {
               "sentence": "Wie l\u00e4sst sich ein Generationenkonflikt friedlich l\u00f6sen?",
-              "translation": ""
+              "translation": "How can a conflict between generations be resolved peacefully?"
             }
           ]
         },
@@ -944,21 +944,21 @@
           "sentences": [
             {
               "sentence": "Als \u00e4ltestes Kind musste sie fr\u00fch Verantwortung \u00fcbernehmen.",
-              "translation": "",
+              "translation": "As the eldest child, she had to take on responsibility early.",
               "highlight": [
                 "\u00fcbernehmen"
               ]
             },
             {
               "sentence": "Wer Verantwortung \u00fcbernimmt, muss auch mit Kritik rechnen.",
-              "translation": "",
+              "translation": "Anyone who takes on responsibility must also expect criticism.",
               "highlight": [
                 "\u00fcbernimmt"
               ]
             },
             {
               "sentence": "Wer soll f\u00fcr diesen Fehler Verantwortung \u00fcbernehmen?",
-              "translation": "",
+              "translation": "Who should take responsibility for this mistake?",
               "highlight": [
                 "\u00fcbernehmen"
               ]
@@ -979,15 +979,15 @@
           "sentences": [
             {
               "sentence": "Eine enge Bindung zu den Eltern gibt Kindern Sicherheit.",
-              "translation": ""
+              "translation": "A close bond with their parents gives children a sense of security."
             },
             {
               "sentence": "Die emotionale Bindung bleibt oft ein Leben lang bestehen.",
-              "translation": ""
+              "translation": "The emotional bond often lasts a lifetime."
             },
             {
               "sentence": "Wie entsteht eine sichere Bindung zwischen Eltern und Kind?",
-              "translation": ""
+              "translation": "How does a secure bond develop between parents and their child?"
             }
           ]
         },
@@ -1005,15 +1005,15 @@
           "sentences": [
             {
               "sentence": "Jedes Familienmitglied tr\u00e4gt zum Haushalt bei.",
-              "translation": ""
+              "translation": "Every family member contributes to the household."
             },
             {
               "sentence": "Ein entferntes Familienmitglied meldete sich nach Jahren wieder.",
-              "translation": ""
+              "translation": "A distant family member got back in touch after years."
             },
             {
               "sentence": "Welches Familienmitglied wohnt am weitesten entfernt?",
-              "translation": ""
+              "translation": "Which family member lives furthest away?"
             }
           ]
         },
@@ -1031,15 +1031,15 @@
           "sentences": [
             {
               "sentence": "Nach der Trennung zahlt er Unterhalt f\u00fcr die Kinder.",
-              "translation": ""
+              "translation": "After the separation, he pays child maintenance."
             },
             {
               "sentence": "Der Unterhalt richtet sich nach dem Einkommen.",
-              "translation": ""
+              "translation": "Maintenance payments depend on income."
             },
             {
               "sentence": "Wie wird die H\u00f6he des Unterhalts berechnet?",
-              "translation": ""
+              "translation": "How is the amount of maintenance calculated?"
             }
           ]
         },
@@ -1057,21 +1057,21 @@
           "sentences": [
             {
               "sentence": "\u00dcber die Jahre haben sich die Geschwister zunehmend entfremdet.",
-              "translation": "",
+              "translation": "Over the years, the siblings have become increasingly estranged.",
               "highlight": [
                 "entfremdet"
               ]
             },
             {
               "sentence": "Nach dem Streit entfremdeten sich die beiden immer mehr.",
-              "translation": "",
+              "translation": "After the argument, the two of them grew further and further apart.",
               "highlight": [
                 "entfremdeten"
               ]
             },
             {
               "sentence": "Warum haben sich die Geschwister voneinander entfremdet?",
-              "translation": "",
+              "translation": "Why have the siblings become estranged from each other?",
               "highlight": [
                 "entfremdet"
               ]
@@ -1092,15 +1092,15 @@
           "sentences": [
             {
               "sentence": "Die F\u00fcrsorge f\u00fcr pflegebed\u00fcrftige Eltern belastet viele Berufst\u00e4tige.",
-              "translation": ""
+              "translation": "Caring for parents who need support puts a strain on many working people."
             },
             {
               "sentence": "Kinder brauchen neben Grenzen vor allem F\u00fcrsorge.",
-              "translation": ""
+              "translation": "Above all, children need care as well as boundaries."
             },
             {
               "sentence": "Wer \u00fcbernimmt die F\u00fcrsorge f\u00fcr den kranken Gro\u00dfvater?",
-              "translation": ""
+              "translation": "Who is taking care of the sick grandfather?"
             }
           ]
         },
@@ -1118,15 +1118,15 @@
           "sentences": [
             {
               "sentence": "Traditionelle Rollenbilder ver\u00e4ndern sich allm\u00e4hlich.",
-              "translation": ""
+              "translation": "Traditional gender roles are gradually changing."
             },
             {
               "sentence": "In dieser Familie werden klassische Rollenbilder bewusst hinterfragt.",
-              "translation": ""
+              "translation": "This family consciously questions conventional gender roles."
             },
             {
               "sentence": "Hat sich das traditionelle Rollenbild in Familien ver\u00e4ndert?",
-              "translation": ""
+              "translation": "Have traditional roles within families changed?"
             }
           ]
         },
@@ -1144,15 +1144,15 @@
           "sentences": [
             {
               "sentence": "Die gesamte Verwandtschaft kam zur Feier zusammen.",
-              "translation": ""
+              "translation": "All the relatives gathered for the celebration."
             },
             {
               "sentence": "Mit einem Teil der Verwandtschaft hat sie kaum noch Kontakt.",
-              "translation": ""
+              "translation": "She has hardly any contact with some of her relatives anymore."
             },
             {
               "sentence": "Kommt die ganze Verwandtschaft zu der Hochzeit?",
-              "translation": ""
+              "translation": "Are all the relatives coming to the wedding?"
             }
           ]
         },
@@ -1170,21 +1170,21 @@
           "sentences": [
             {
               "sentence": "Seine Kindheit war von Armut gepr\u00e4gt.",
-              "translation": "",
+              "translation": "His childhood was marked by poverty.",
               "highlight": [
                 "gepr\u00e4gt"
               ]
             },
             {
               "sentence": "Ihre Werte sind stark von der Erziehung gepr\u00e4gt.",
-              "translation": "",
+              "translation": "Her values are strongly shaped by her upbringing.",
               "highlight": [
                 "gepr\u00e4gt"
               ]
             },
             {
               "sentence": "War seine Kindheit von h\u00e4ufigen Umz\u00fcgen gepr\u00e4gt?",
-              "translation": "",
+              "translation": "Was his childhood marked by frequent moves?",
               "highlight": [
                 "gepr\u00e4gt"
               ]
@@ -1205,15 +1205,15 @@
           "sentences": [
             {
               "sentence": "Im Formular ist der Familienstand anzugeben.",
-              "translation": ""
+              "translation": "Marital status must be stated on the form."
             },
             {
               "sentence": "Der Familienstand spielt bei der Besteuerung eine Rolle.",
-              "translation": ""
+              "translation": "Marital status plays a role in taxation."
             },
             {
               "sentence": "Muss der Familienstand in diesem Formular angegeben werden?",
-              "translation": ""
+              "translation": "Does marital status have to be stated on this form?"
             }
           ]
         },
@@ -1231,21 +1231,21 @@
           "sentences": [
             {
               "sentence": "Wegen der Arbeit vernachl\u00e4ssigt er zunehmend die Familie.",
-              "translation": "",
+              "translation": "Because of his work, he is increasingly neglecting his family.",
               "highlight": [
                 "vernachl\u00e4ssigt"
               ]
             },
             {
               "sentence": "Man sollte alte Freundschaften nicht vernachl\u00e4ssigen.",
-              "translation": "",
+              "translation": "You should not neglect old friendships.",
               "highlight": [
                 "vernachl\u00e4ssigen"
               ]
             },
             {
               "sentence": "Warum hat er seine Freunde so lange vernachl\u00e4ssigt?",
-              "translation": "",
+              "translation": "Why did he neglect his friends for so long?",
               "highlight": [
                 "vernachl\u00e4ssigt"
               ]
@@ -1266,15 +1266,15 @@
           "sentences": [
             {
               "sentence": "Um die Erbschaft entstand ein langer Streit.",
-              "translation": ""
+              "translation": "A long dispute arose over the inheritance."
             },
             {
               "sentence": "Die Erbschaft erm\u00f6glichte ihr ein sorgenfreies Studium.",
-              "translation": ""
+              "translation": "The inheritance enabled her to study without financial worries."
             },
             {
               "sentence": "Hat die Familie wegen der Erbschaft gestritten?",
-              "translation": ""
+              "translation": "Did the family argue over the inheritance?"
             }
           ]
         }
@@ -1299,15 +1299,15 @@
           "sentences": [
             {
               "sentence": "Laut aktueller Statistik nimmt die Zahl der Single-Haushalte zu.",
-              "translation": ""
+              "translation": "According to the latest statistics, the number of single-person households is increasing."
             },
             {
               "sentence": "Statistiken lassen sich je nach Interesse unterschiedlich deuten.",
-              "translation": ""
+              "translation": "Statistics can be interpreted differently depending on people's interests."
             },
             {
               "sentence": "Was zeigt die aktuelle Statistik \u00fcber die Arbeitslosigkeit?",
-              "translation": ""
+              "translation": "What do the latest statistics show about unemployment?"
             }
           ]
         },
@@ -1325,15 +1325,15 @@
           "sentences": [
             {
               "sentence": "Der Anteil erneuerbarer Energien ist deutlich gestiegen.",
-              "translation": ""
+              "translation": "The share of renewable energy has risen significantly."
             },
             {
               "sentence": "Frauen sind in F\u00fchrungspositionen nur zu einem geringen Anteil vertreten.",
-              "translation": ""
+              "translation": "Women account for only a small proportion of people in management positions."
             },
             {
               "sentence": "Wie hoch ist der Anteil erneuerbarer Energie am Stromverbrauch?",
-              "translation": ""
+              "translation": "What proportion of electricity consumption comes from renewable energy?"
             }
           ]
         },
@@ -1351,15 +1351,15 @@
           "sentences": [
             {
               "sentence": "Die Arbeitslosenquote sank auf ein historisches Tief.",
-              "translation": ""
+              "translation": "The unemployment rate fell to a historic low."
             },
             {
               "sentence": "\u00dcber eine feste Quote wird seit Jahren gestritten.",
-              "translation": ""
+              "translation": "There has been debate about a fixed quota for years."
             },
             {
               "sentence": "Ist die Arbeitslosenquote im letzten Jahr gesunken?",
-              "translation": ""
+              "translation": "Did the unemployment rate fall last year?"
             }
           ]
         },
@@ -1377,15 +1377,15 @@
           "sentences": [
             {
               "sentence": "Der Preis ist nur einer von vielen Faktoren.",
-              "translation": ""
+              "translation": "Price is only one of many factors."
             },
             {
               "sentence": "Ein entscheidender Faktor ist die Verf\u00fcgbarkeit von Fachkr\u00e4ften.",
-              "translation": ""
+              "translation": "A crucial factor is the availability of skilled workers."
             },
             {
               "sentence": "Welcher Faktor hatte den gr\u00f6\u00dften Einfluss auf die Entscheidung?",
-              "translation": ""
+              "translation": "Which factor had the greatest influence on the decision?"
             }
           ]
         },
@@ -1403,21 +1403,21 @@
           "sentences": [
             {
               "sentence": "Die Belastung nimmt von Jahr zu Jahr zu.",
-              "translation": "",
+              "translation": "The burden increases from year to year.",
               "highlight": [
                 "nimmt"
               ]
             },
             {
               "sentence": "In dem Ma\u00dfe, wie die Nachfrage zunimmt, steigen die Preise.",
-              "translation": "",
+              "translation": "Prices rise as demand increases.",
               "highlight": [
                 "zunimmt"
               ]
             },
             {
               "sentence": "Wird die Nachfrage im n\u00e4chsten Jahr weiter zunehmen?",
-              "translation": "",
+              "translation": "Will demand continue to increase next year?",
               "highlight": [
                 "zunehmen"
               ]
@@ -1438,21 +1438,21 @@
           "sentences": [
             {
               "sentence": "Das Interesse an dem Thema hat sp\u00fcrbar abgenommen.",
-              "translation": "",
+              "translation": "Interest in the subject has noticeably declined.",
               "highlight": [
                 "abgenommen"
               ]
             },
             {
               "sentence": "Mit zunehmendem Alter nimmt die Konzentrationsf\u00e4higkeit oft ab.",
-              "translation": "",
+              "translation": "The ability to concentrate often declines with age.",
               "highlight": [
                 "nimmt"
               ]
             },
             {
               "sentence": "Warum hat das Interesse an dem Angebot abgenommen?",
-              "translation": "",
+              "translation": "Why has interest in the offer declined?",
               "highlight": [
                 "abgenommen"
               ]
@@ -1473,15 +1473,15 @@
           "sentences": [
             {
               "sentence": "Ein deutlicher R\u00fcckgang der Geburtenrate ist zu beobachten.",
-              "translation": ""
+              "translation": "A significant decline in the birth rate can be observed."
             },
             {
               "sentence": "Der R\u00fcckgang der Ums\u00e4tze bereitet dem Unternehmen Sorgen.",
-              "translation": ""
+              "translation": "The decline in revenue is worrying the company."
             },
             {
               "sentence": "Wodurch erkl\u00e4rt sich der R\u00fcckgang der Verkaufszahlen?",
-              "translation": ""
+              "translation": "What explains the decline in sales figures?"
             }
           ]
         },
@@ -1499,15 +1499,15 @@
           "sentences": [
             {
               "sentence": "Die Branche verzeichnet einen kr\u00e4ftigen Zuwachs.",
-              "translation": ""
+              "translation": "The industry is recording strong growth."
             },
             {
               "sentence": "Ein Zuwachs von f\u00fcnf Prozent gilt als beachtlich.",
-              "translation": ""
+              "translation": "An increase of five per cent is considered substantial."
             },
             {
               "sentence": "Mit welchem Zuwachs rechnet das Unternehmen?",
-              "translation": ""
+              "translation": "What growth does the company expect?"
             }
           ]
         },
@@ -1525,15 +1525,15 @@
           "sentences": [
             {
               "sentence": "Durchschnittlich verbringt jeder Deutsche Stunden am Bildschirm.",
-              "translation": ""
+              "translation": "On average, each German spends hours in front of a screen."
             },
             {
               "sentence": "Die Werte liegen durchschnittlich \u00fcber dem Vorjahr.",
-              "translation": ""
+              "translation": "On average, the figures are higher than last year's."
             },
             {
               "sentence": "Wie viele Stunden arbeiten die Besch\u00e4ftigten durchschnittlich?",
-              "translation": ""
+              "translation": "How many hours do the employees work on average?"
             }
           ]
         },
@@ -1551,15 +1551,15 @@
           "sentences": [
             {
               "sentence": "Die Ergebnisse sind ann\u00e4hernd identisch.",
-              "translation": ""
+              "translation": "The results are almost identical."
             },
             {
               "sentence": "Es kamen ann\u00e4hernd tausend Besucher.",
-              "translation": ""
+              "translation": "Nearly a thousand visitors came."
             },
             {
               "sentence": "Sind die beiden Ergebnisse ann\u00e4hernd gleich?",
-              "translation": ""
+              "translation": "Are the two results approximately the same?"
             }
           ]
         },
@@ -1577,15 +1577,15 @@
           "sentences": [
             {
               "sentence": "Die Summe der Einzelbetr\u00e4ge ergibt das Gesamtbudget.",
-              "translation": ""
+              "translation": "The sum of the individual amounts makes up the total budget."
             },
             {
               "sentence": "Eine derartige Summe kann sich kaum jemand leisten.",
-              "translation": ""
+              "translation": "Hardly anyone can afford such a sum."
             },
             {
               "sentence": "Welche Summe m\u00fcssen wir insgesamt bezahlen?",
-              "translation": ""
+              "translation": "What amount do we have to pay in total?"
             }
           ]
         },
@@ -1603,21 +1603,21 @@
           "sentences": [
             {
               "sentence": "Die Kosten belaufen sich auf mehrere Millionen Euro.",
-              "translation": "",
+              "translation": "The costs amount to several million euros.",
               "highlight": [
                 "belaufen"
               ]
             },
             {
               "sentence": "Der Schaden bel\u00e4uft sich sch\u00e4tzungsweise auf zehntausend Euro.",
-              "translation": "",
+              "translation": "The damage is estimated at ten thousand euros.",
               "highlight": [
                 "bel\u00e4uft"
               ]
             },
             {
               "sentence": "Auf welche Summe belaufen sich die Reparaturkosten?",
-              "translation": "",
+              "translation": "How much do the repair costs amount to?",
               "highlight": [
                 "belaufen"
               ]
@@ -1638,21 +1638,21 @@
           "sentences": [
             {
               "sentence": "Die Abweichung ist nur geringf\u00fcgig.",
-              "translation": "",
+              "translation": "The discrepancy is only minor.",
               "highlight": [
                 "geringf\u00fcgig"
               ]
             },
             {
               "sentence": "Die L\u00f6hne stiegen lediglich geringf\u00fcgig.",
-              "translation": "",
+              "translation": "Wages rose only slightly.",
               "highlight": [
                 "geringf\u00fcgig"
               ]
             },
             {
               "sentence": "Ist die Abweichung wirklich nur geringf\u00fcgig?",
-              "translation": "",
+              "translation": "Is the discrepancy really only minor?",
               "highlight": [
                 "geringf\u00fcgig"
               ]
@@ -1673,21 +1673,21 @@
           "sentences": [
             {
               "sentence": "Die Nachfrage ist erheblich gestiegen.",
-              "translation": "",
+              "translation": "Demand has risen considerably.",
               "highlight": [
                 "erheblich"
               ]
             },
             {
               "sentence": "Das bedeutet einen erheblichen Mehraufwand.",
-              "translation": "",
+              "translation": "That means a considerable amount of additional work.",
               "highlight": [
                 "erheblichen"
               ]
             },
             {
               "sentence": "Sind die Kosten seit dem Vorjahr erheblich gestiegen?",
-              "translation": "",
+              "translation": "Have costs risen significantly since last year?",
               "highlight": [
                 "erheblich"
               ]
@@ -1708,15 +1708,15 @@
           "sentences": [
             {
               "sentence": "Sch\u00e4tzungsweise die H\u00e4lfte aller Antr\u00e4ge wird abgelehnt.",
-              "translation": ""
+              "translation": "An estimated half of all applications are rejected."
             },
             {
               "sentence": "Der Umbau wird sch\u00e4tzungsweise ein Jahr dauern.",
-              "translation": ""
+              "translation": "The renovation is expected to take about a year."
             },
             {
               "sentence": "Wie viele Menschen waren sch\u00e4tzungsweise anwesend?",
-              "translation": ""
+              "translation": "Approximately how many people were present?"
             }
           ]
         },
@@ -1734,21 +1734,21 @@
           "sentences": [
             {
               "sentence": "Innerhalb eines Jahrzehnts hat sich die Zahl verdoppelt.",
-              "translation": "",
+              "translation": "The number has doubled within a decade.",
               "highlight": [
                 "verdoppelt"
               ]
             },
             {
               "sentence": "Das Unternehmen konnte seinen Gewinn verdoppeln.",
-              "translation": "",
+              "translation": "The company was able to double its profit.",
               "highlight": [
                 "verdoppeln"
               ]
             },
             {
               "sentence": "Konnte das Unternehmen seinen Umsatz tats\u00e4chlich verdoppeln?",
-              "translation": "",
+              "translation": "Was the company actually able to double its revenue?",
               "highlight": [
                 "verdoppeln"
               ]
@@ -1776,15 +1776,15 @@
           "sentences": [
             {
               "sentence": "Montags ist die Motivation erfahrungsgem\u00e4\u00df am geringsten.",
-              "translation": ""
+              "translation": "Experience shows that motivation is lowest on Mondays."
             },
             {
               "sentence": "Der ber\u00fcchtigte Montagmorgen f\u00e4llt vielen schwer.",
-              "translation": ""
+              "translation": "Many people find the dreaded Monday morning difficult."
             },
             {
               "sentence": "Warum f\u00e4llt vielen Menschen der Montag besonders schwer?",
-              "translation": ""
+              "translation": "Why do many people find Mondays particularly difficult?"
             }
           ]
         },
@@ -1802,15 +1802,15 @@
           "sentences": [
             {
               "sentence": "Freitags l\u00e4sst bei vielen die Konzentration merklich nach.",
-              "translation": ""
+              "translation": "Many people's concentration noticeably declines on Fridays."
             },
             {
               "sentence": "Am Freitag werden erfahrungsgem\u00e4\u00df kaum noch Entscheidungen getroffen.",
-              "translation": ""
+              "translation": "Experience shows that hardly any decisions are made on Fridays."
             },
             {
               "sentence": "Endet Ihre Arbeitswoche bereits am Freitag?",
-              "translation": ""
+              "translation": "Does your working week end as early as Friday?"
             }
           ]
         },
@@ -1828,15 +1828,15 @@
           "sentences": [
             {
               "sentence": "Der Sonntag dient traditionell der Erholung.",
-              "translation": ""
+              "translation": "Sunday is traditionally a day of rest."
             },
             {
               "sentence": "Sonntags einzukaufen ist hierzulande kaum m\u00f6glich.",
-              "translation": ""
+              "translation": "Shopping on Sundays is hardly possible in this country."
             },
             {
               "sentence": "Wie verbringen Sie normalerweise den Sonntag?",
-              "translation": ""
+              "translation": "How do you usually spend Sunday?"
             }
           ]
         },
@@ -1854,15 +1854,15 @@
           "sentences": [
             {
               "sentence": "An einem gew\u00f6hnlichen Wochentag ist die Innenstadt weniger voll.",
-              "translation": ""
+              "translation": "The city centre is less crowded on a normal weekday."
             },
             {
               "sentence": "Je nach Wochentag variieren die \u00d6ffnungszeiten.",
-              "translation": ""
+              "translation": "Opening hours vary depending on the day of the week."
             },
             {
               "sentence": "An welchem Wochentag findet der Kurs statt?",
-              "translation": ""
+              "translation": "On which day of the week does the course take place?"
             }
           ]
         },
@@ -1880,15 +1880,15 @@
           "sentences": [
             {
               "sentence": "Die Bearbeitung dauert in der Regel f\u00fcnf Werktage.",
-              "translation": ""
+              "translation": "Processing usually takes five working days."
             },
             {
               "sentence": "An Werktagen gilt eine andere Regelung als am Wochenende.",
-              "translation": ""
+              "translation": "A different rule applies on working days than at the weekend."
             },
             {
               "sentence": "Wird das Paket innerhalb von drei Werktagen geliefert?",
-              "translation": ""
+              "translation": "Will the parcel be delivered within three working days?"
             }
           ]
         },
@@ -1906,15 +1906,15 @@
           "sentences": [
             {
               "sentence": "F\u00e4llt der Feiertag auf einen Sonntag, entf\u00e4llt der freie Tag.",
-              "translation": ""
+              "translation": "If the public holiday falls on a Sunday, there is no extra day off."
             },
             {
               "sentence": "An gesetzlichen Feiertagen ruht die Arbeit.",
-              "translation": ""
+              "translation": "Work stops on public holidays."
             },
             {
               "sentence": "Ist der kommende Montag ein gesetzlicher Feiertag?",
-              "translation": ""
+              "translation": "Is next Monday a public holiday?"
             }
           ]
         },
@@ -1932,15 +1932,15 @@
           "sentences": [
             {
               "sentence": "Wochentags ist der Verkehr morgens besonders dicht.",
-              "translation": ""
+              "translation": "Traffic is particularly heavy on weekday mornings."
             },
             {
               "sentence": "Der Kurs findet ausschlie\u00dflich wochentags statt.",
-              "translation": ""
+              "translation": "The course takes place only on weekdays."
             },
             {
               "sentence": "F\u00e4hrt dieser Bus auch wochentags nur einmal pro Stunde?",
-              "translation": ""
+              "translation": "Does this bus run only once an hour on weekdays too?"
             }
           ]
         },
@@ -1958,15 +1958,15 @@
           "sentences": [
             {
               "sentence": "Im hektischen Alltag geht die Erholung schnell unter.",
-              "translation": ""
+              "translation": "In hectic everyday life, rest is easily neglected."
             },
             {
               "sentence": "Feste Rituale geben dem Alltag Struktur.",
-              "translation": ""
+              "translation": "Regular rituals give structure to everyday life."
             },
             {
               "sentence": "Wie sorgen Sie im Alltag f\u00fcr gen\u00fcgend Bewegung?",
-              "translation": ""
+              "translation": "How do you make sure you get enough exercise in everyday life?"
             }
           ]
         },
@@ -1984,15 +1984,15 @@
           "sentences": [
             {
               "sentence": "Eine gewisse Routine erleichtert die Arbeit, kann aber erm\u00fcden.",
-              "translation": ""
+              "translation": "A certain routine makes work easier but can become tiring."
             },
             {
               "sentence": "Um der Routine zu entkommen, reist sie oft \u00fcbers Wochenende weg.",
-              "translation": ""
+              "translation": "To escape her routine, she often goes away for the weekend."
             },
             {
               "sentence": "Hilft Ihnen eine feste Routine bei der Arbeit?",
-              "translation": ""
+              "translation": "Does a fixed routine help you at work?"
             }
           ]
         },
@@ -2010,15 +2010,15 @@
           "sentences": [
             {
               "sentence": "Nach dem Urlaub findet man nur langsam in den gewohnten Rhythmus zur\u00fcck.",
-              "translation": ""
+              "translation": "After a holiday, it takes time to get back into your usual rhythm."
             },
             {
               "sentence": "Ein regelm\u00e4\u00dfiger Rhythmus ist gut f\u00fcr den Schlaf.",
-              "translation": ""
+              "translation": "A regular routine is good for sleep."
             },
             {
               "sentence": "Wie finden Sie nach dem Urlaub wieder in Ihren Rhythmus?",
-              "translation": ""
+              "translation": "How do you get back into your routine after a holiday?"
             }
           ]
         },
@@ -2036,15 +2036,15 @@
           "sentences": [
             {
               "sentence": "Die Vier-Tage-Arbeitswoche wird zunehmend diskutiert.",
-              "translation": ""
+              "translation": "The four-day working week is being discussed increasingly."
             },
             {
               "sentence": "Nach einer langen Arbeitswoche freut man sich auf das Wochenende.",
-              "translation": ""
+              "translation": "After a long working week, you look forward to the weekend."
             },
             {
               "sentence": "W\u00fcrden Sie eine k\u00fcrzere Arbeitswoche bevorzugen?",
-              "translation": ""
+              "translation": "Would you prefer a shorter working week?"
             }
           ]
         },
@@ -2062,15 +2062,15 @@
           "sentences": [
             {
               "sentence": "Ein verl\u00e4ngertes Wochenende nutzt sie meist f\u00fcr Kurzreisen.",
-              "translation": ""
+              "translation": "She usually uses a long weekend for short trips."
             },
             {
               "sentence": "W\u00e4re das Wochenende l\u00e4nger, k\u00e4me man mehr zur Ruhe.",
-              "translation": ""
+              "translation": "If the weekend were longer, you would get more rest."
             },
             {
               "sentence": "Was haben Sie f\u00fcr das kommende Wochenende geplant?",
-              "translation": ""
+              "translation": "What have you planned for the coming weekend?"
             }
           ]
         }
@@ -2095,15 +2095,15 @@
           "sentences": [
             {
               "sentence": "Statistisch gesehen brechen die meisten ihre Vors\u00e4tze schon im Januar.",
-              "translation": ""
+              "translation": "Statistically speaking, most people break their resolutions as early as January."
             },
             {
               "sentence": "Der Januar gilt vielen als der tr\u00fcbste Monat des Jahres.",
-              "translation": ""
+              "translation": "Many consider January the dreariest month of the year."
             },
             {
               "sentence": "Welche guten Vors\u00e4tze haben Sie f\u00fcr den Januar?",
-              "translation": ""
+              "translation": "What New Year's resolutions do you have for January?"
             }
           ]
         },
@@ -2121,15 +2121,15 @@
           "sentences": [
             {
               "sentence": "Mit dem M\u00e4rz k\u00fcndigt sich der Fr\u00fchling allm\u00e4hlich an.",
-              "translation": ""
+              "translation": "March gradually heralds the arrival of spring."
             },
             {
               "sentence": "Im M\u00e4rz werden die Uhren auf Sommerzeit umgestellt.",
-              "translation": ""
+              "translation": "The clocks are put forward to summer time in March."
             },
             {
               "sentence": "Ist es im M\u00e4rz bei Ihnen schon deutlich w\u00e4rmer?",
-              "translation": ""
+              "translation": "Is it already noticeably warmer where you are in March?"
             }
           ]
         },
@@ -2147,15 +2147,15 @@
           "sentences": [
             {
               "sentence": "Der Mai gilt sprichw\u00f6rtlich als der sch\u00f6nste Monat des Jahres.",
-              "translation": ""
+              "translation": "May is traditionally regarded as the most beautiful month of the year."
             },
             {
               "sentence": "Nicht umsonst spricht man vom Wonnemonat Mai.",
-              "translation": ""
+              "translation": "It is not called the merry month of May for nothing."
             },
             {
               "sentence": "Warum wird der Mai oft als besonders sch\u00f6ner Monat beschrieben?",
-              "translation": ""
+              "translation": "Why is May often described as a particularly beautiful month?"
             }
           ]
         },
@@ -2173,15 +2173,15 @@
           "sentences": [
             {
               "sentence": "Im Juli erreichen die Temperaturen h\u00e4ufig ihren H\u00f6hepunkt.",
-              "translation": ""
+              "translation": "Temperatures often peak in July."
             },
             {
               "sentence": "Der Juli f\u00e4llt meist mitten in die Ferienzeit.",
-              "translation": ""
+              "translation": "July usually falls right in the middle of the holiday season."
             },
             {
               "sentence": "Fahren Sie im Juli in den Urlaub?",
-              "translation": ""
+              "translation": "Are you going on holiday in July?"
             }
           ]
         },
@@ -2199,15 +2199,15 @@
           "sentences": [
             {
               "sentence": "Der September markiert f\u00fcr viele den Beginn eines neuen Abschnitts.",
-              "translation": ""
+              "translation": "For many people, September marks the start of a new chapter."
             },
             {
               "sentence": "Ein sonniger September wird gern als Altweibersommer bezeichnet.",
-              "translation": ""
+              "translation": "A sunny September is often described as an Indian summer."
             },
             {
               "sentence": "Beginnt das neue Schuljahr bei Ihnen im September?",
-              "translation": ""
+              "translation": "Does the new school year start in September where you live?"
             }
           ]
         },
@@ -2225,15 +2225,15 @@
           "sentences": [
             {
               "sentence": "Der November wird oft mit tr\u00fcber Stimmung in Verbindung gebracht.",
-              "translation": ""
+              "translation": "November is often associated with a gloomy mood."
             },
             {
               "sentence": "Kaum ein Monat wirkt so grau wie der November.",
-              "translation": ""
+              "translation": "Hardly any month seems as grey as November."
             },
             {
               "sentence": "Warum wirkt der November auf viele Menschen so grau?",
-              "translation": ""
+              "translation": "Why does November seem so grey to many people?"
             }
           ]
         },
@@ -2251,15 +2251,15 @@
           "sentences": [
             {
               "sentence": "Der Dezember ist gesch\u00e4ftlich f\u00fcr viele Branchen entscheidend.",
-              "translation": ""
+              "translation": "December is a crucial month for business in many industries."
             },
             {
               "sentence": "Zum Ende des Dezembers zieht man Bilanz \u00fcber das Jahr.",
-              "translation": ""
+              "translation": "At the end of December, people take stock of the year."
             },
             {
               "sentence": "Wie verbringen Sie gew\u00f6hnlich den Dezember?",
-              "translation": ""
+              "translation": "How do you usually spend December?"
             }
           ]
         },
@@ -2277,15 +2277,15 @@
           "sentences": [
             {
               "sentence": "Zum Monatsbeginn werden Geh\u00e4lter und Mieten f\u00e4llig.",
-              "translation": ""
+              "translation": "Salaries and rent are due at the beginning of the month."
             },
             {
               "sentence": "Der Monatsbeginn ist bei uns immer besonders stressig.",
-              "translation": ""
+              "translation": "The beginning of the month is always particularly stressful for us."
             },
             {
               "sentence": "Welche Rechnungen werden bei Ihnen zum Monatsbeginn f\u00e4llig?",
-              "translation": ""
+              "translation": "Which bills fall due at the beginning of the month for you?"
             }
           ]
         },
@@ -2303,15 +2303,15 @@
           "sentences": [
             {
               "sentence": "Der Vertrag endet zum Monatswechsel.",
-              "translation": ""
+              "translation": "The contract ends at the turn of the month."
             },
             {
               "sentence": "Zum Monatswechsel steigen erfahrungsgem\u00e4\u00df die Anfragen.",
-              "translation": ""
+              "translation": "Experience shows that enquiries increase at the turn of the month."
             },
             {
               "sentence": "\u00c4ndern sich die Preise zum Monatswechsel?",
-              "translation": ""
+              "translation": "Will prices change at the turn of the month?"
             }
           ]
         },
@@ -2329,15 +2329,15 @@
           "sentences": [
             {
               "sentence": "Der Beitrag wird monatlich abgebucht.",
-              "translation": ""
+              "translation": "The fee is debited monthly."
             },
             {
               "sentence": "Wir treffen uns monatlich zu einer Besprechung.",
-              "translation": ""
+              "translation": "We meet once a month for a discussion."
             },
             {
               "sentence": "Wird der Beitrag monatlich oder j\u00e4hrlich bezahlt?",
-              "translation": ""
+              "translation": "Is the fee paid monthly or annually?"
             }
           ]
         },
@@ -2355,15 +2355,15 @@
           "sentences": [
             {
               "sentence": "Im ersten Halbjahr lief das Gesch\u00e4ft \u00fcberraschend gut.",
-              "translation": ""
+              "translation": "Business went surprisingly well in the first half of the year."
             },
             {
               "sentence": "Die Zahlen werden halbj\u00e4hrlich ver\u00f6ffentlicht.",
-              "translation": ""
+              "translation": "The figures are published every six months."
             },
             {
               "sentence": "Welche Ziele haben Sie im ersten Halbjahr erreicht?",
-              "translation": ""
+              "translation": "Which goals did you achieve in the first half of the year?"
             }
           ]
         },
@@ -2381,15 +2381,15 @@
           "sentences": [
             {
               "sentence": "Die Ergebnisse des dritten Quartals \u00fcbertrafen die Erwartungen.",
-              "translation": ""
+              "translation": "The third-quarter results exceeded expectations."
             },
             {
               "sentence": "Jedes Quartal wird ein Bericht erstellt.",
-              "translation": ""
+              "translation": "A report is prepared every quarter."
             },
             {
               "sentence": "Wie hat sich der Umsatz im letzten Quartal entwickelt?",
-              "translation": ""
+              "translation": "How did revenue develop in the last quarter?"
             }
           ]
         }
@@ -2414,15 +2414,15 @@
           "sentences": [
             {
               "sentence": "Kaum eine Jahreszeit weckt so viele Hoffnungen wie der Fr\u00fchling.",
-              "translation": ""
+              "translation": "Hardly any season inspires as much hope as spring."
             },
             {
               "sentence": "Mit dem Fr\u00fchling steigt bei den meisten die Stimmung sp\u00fcrbar.",
-              "translation": ""
+              "translation": "Most people's spirits noticeably lift with the arrival of spring."
             },
             {
               "sentence": "Welche Ver\u00e4nderungen in der Natur bemerken Sie im Fr\u00fchling?",
-              "translation": ""
+              "translation": "What changes in nature do you notice in spring?"
             }
           ]
         },
@@ -2440,15 +2440,15 @@
           "sentences": [
             {
               "sentence": "Angesichts des Klimawandels fallen die Sommer immer hei\u00dfer aus.",
-              "translation": ""
+              "translation": "In the face of climate change, summers are getting hotter and hotter."
             },
             {
               "sentence": "Der vergangene Sommer brach mehrere Temperaturrekorde.",
-              "translation": ""
+              "translation": "Last summer broke several temperature records."
             },
             {
               "sentence": "Werden die Sommer durch den Klimawandel immer hei\u00dfer?",
-              "translation": ""
+              "translation": "Are summers getting hotter because of climate change?"
             }
           ]
         },
@@ -2466,15 +2466,15 @@
           "sentences": [
             {
               "sentence": "Der Herbst wird oft mit Verg\u00e4nglichkeit in Verbindung gebracht.",
-              "translation": ""
+              "translation": "Autumn is often associated with transience."
             },
             {
               "sentence": "So sehr ich den Herbst mag, so ungern ertrage ich den fr\u00fch einsetzenden Regen.",
-              "translation": ""
+              "translation": "As much as I like autumn, I dislike the rain that starts so early."
             },
             {
               "sentence": "Was gef\u00e4llt Ihnen am Herbst besonders gut?",
-              "translation": ""
+              "translation": "What do you particularly like about autumn?"
             }
           ]
         },
@@ -2492,15 +2492,15 @@
           "sentences": [
             {
               "sentence": "Der Winter stellt die Energieversorgung Jahr f\u00fcr Jahr auf die Probe.",
-              "translation": ""
+              "translation": "Winter puts the energy supply to the test year after year."
             },
             {
               "sentence": "W\u00e4ren die Winter milder, w\u00fcrden viele weniger heizen.",
-              "translation": ""
+              "translation": "If winters were milder, many people would use less heating."
             },
             {
               "sentence": "Wie bereiten Sie sich auf einen kalten Winter vor?",
-              "translation": ""
+              "translation": "How do you prepare for a cold winter?"
             }
           ]
         }
@@ -2525,15 +2525,15 @@
           "sentences": [
             {
               "sentence": "Unter st\u00e4ndigem Zeitdruck leidet fr\u00fcher oder sp\u00e4ter die Qualit\u00e4t.",
-              "translation": ""
+              "translation": "Sooner or later, quality suffers under constant time pressure."
             },
             {
               "sentence": "Entscheidungen, die unter Zeitdruck fallen, bereut man oft.",
-              "translation": ""
+              "translation": "Decisions made under time pressure are often regretted."
             },
             {
               "sentence": "Machen Sie unter Zeitdruck h\u00e4ufiger Fehler?",
-              "translation": ""
+              "translation": "Do you make mistakes more often under time pressure?"
             }
           ]
         },
@@ -2551,15 +2551,15 @@
           "sentences": [
             {
               "sentence": "Aus Zeitmangel musste das Projekt verschoben werden.",
-              "translation": ""
+              "translation": "The project had to be postponed because of a lack of time."
             },
             {
               "sentence": "Zeitmangel wird h\u00e4ufig als Ausrede benutzt.",
-              "translation": ""
+              "translation": "A lack of time is often used as an excuse."
             },
             {
               "sentence": "Welche Aufgaben bleiben bei Zeitmangel zuerst liegen?",
-              "translation": ""
+              "translation": "Which tasks are neglected first when time is short?"
             }
           ]
         },
@@ -2577,15 +2577,15 @@
           "sentences": [
             {
               "sentence": "Die Frist verstreicht unwiderruflich am Monatsende.",
-              "translation": ""
+              "translation": "The deadline is final and expires at the end of the month."
             },
             {
               "sentence": "Sollte die Frist verstreichen, verf\u00e4llt der Anspruch.",
-              "translation": ""
+              "translation": "If the deadline passes, the entitlement lapses."
             },
             {
               "sentence": "K\u00f6nnen wir die Frist um eine Woche verl\u00e4ngern?",
-              "translation": ""
+              "translation": "Can we extend the deadline by a week?"
             }
           ]
         },
@@ -2603,15 +2603,15 @@
           "sentences": [
             {
               "sentence": "Es kam zu erheblichen Verz\u00f6gerungen im Bauablauf.",
-              "translation": ""
+              "translation": "There were considerable delays in the construction work."
             },
             {
               "sentence": "Trotz der Verz\u00f6gerung wurde der Termin schlie\u00dflich eingehalten.",
-              "translation": ""
+              "translation": "Despite the delay, the deadline was eventually met."
             },
             {
               "sentence": "Was war der Grund f\u00fcr die lange Verz\u00f6gerung?",
-              "translation": ""
+              "translation": "What caused the long delay?"
             }
           ]
         },
@@ -2629,15 +2629,15 @@
           "sentences": [
             {
               "sentence": "Die Gleichzeitigkeit vieler Aufgaben \u00fcberfordert manche.",
-              "translation": ""
+              "translation": "Some people find dealing with many tasks at once overwhelming."
             },
             {
               "sentence": "Digitale Medien verlangen eine st\u00e4ndige Gleichzeitigkeit.",
-              "translation": ""
+              "translation": "Digital media constantly require us to do several things at once."
             },
             {
               "sentence": "F\u00fchrt die Gleichzeitigkeit so vieler Aufgaben zu Stress?",
-              "translation": ""
+              "translation": "Does dealing with so many tasks at once cause stress?"
             }
           ]
         },
@@ -2655,21 +2655,21 @@
           "sentences": [
             {
               "sentence": "Ruhm ist bekanntlich verg\u00e4nglich.",
-              "translation": "",
+              "translation": "Fame is known to be fleeting.",
               "highlight": [
                 "verg\u00e4nglich"
               ]
             },
             {
               "sentence": "Alles Materielle ist letztlich verg\u00e4nglich.",
-              "translation": "",
+              "translation": "All material things are ultimately impermanent.",
               "highlight": [
                 "verg\u00e4nglich"
               ]
             },
             {
               "sentence": "Warum ist \u00f6ffentlicher Ruhm h\u00e4ufig verg\u00e4nglich?",
-              "translation": "",
+              "translation": "Why is public fame often fleeting?",
               "highlight": [
                 "verg\u00e4nglich"
               ]
@@ -2690,15 +2690,15 @@
           "sentences": [
             {
               "sentence": "Die Angelegenheit duldet keinen weiteren Aufschub.",
-              "translation": ""
+              "translation": "The matter cannot be delayed any further."
             },
             {
               "sentence": "Man gew\u00e4hrte ihm einen letzten Aufschub.",
-              "translation": ""
+              "translation": "He was granted one final extension."
             },
             {
               "sentence": "Duldet diese Entscheidung noch einen weiteren Aufschub?",
-              "translation": ""
+              "translation": "Can this decision be postponed any longer?"
             }
           ]
         },
@@ -2716,15 +2716,15 @@
           "sentences": [
             {
               "sentence": "M\u00e4ngel sind unverz\u00fcglich zu melden.",
-              "translation": ""
+              "translation": "Defects must be reported immediately."
             },
             {
               "sentence": "Bitte antworten Sie unverz\u00fcglich, die Sache ist dringend.",
-              "translation": ""
+              "translation": "Please reply immediately; the matter is urgent."
             },
             {
               "sentence": "M\u00fcssen wir den Schaden unverz\u00fcglich melden?",
-              "translation": ""
+              "translation": "Do we have to report the damage immediately?"
             }
           ]
         },
@@ -2742,21 +2742,21 @@
           "sentences": [
             {
               "sentence": "Die Ergebnisse sind vorl\u00e4ufig und noch nicht best\u00e4tigt.",
-              "translation": "",
+              "translation": "The results are provisional and have not yet been confirmed.",
               "highlight": [
                 "vorl\u00e4ufig"
               ]
             },
             {
               "sentence": "Er wurde vorl\u00e4ufig vom Dienst freigestellt.",
-              "translation": "",
+              "translation": "He was temporarily relieved of his duties.",
               "highlight": [
                 "vorl\u00e4ufig"
               ]
             },
             {
               "sentence": "Sind diese Zahlen noch vorl\u00e4ufig?",
-              "translation": "",
+              "translation": "Are these figures still provisional?",
               "highlight": [
                 "vorl\u00e4ufig"
               ]
@@ -2777,15 +2777,15 @@
           "sentences": [
             {
               "sentence": "Diese Erfindung leitete eine neue Epoche ein.",
-              "translation": ""
+              "translation": "This invention ushered in a new era."
             },
             {
               "sentence": "Jede Epoche bringt ihre eigenen Herausforderungen hervor.",
-              "translation": ""
+              "translation": "Every era brings its own challenges."
             },
             {
               "sentence": "Welche Epoche der Geschichte interessiert Sie am meisten?",
-              "translation": ""
+              "translation": "Which period of history interests you most?"
             }
           ]
         },
@@ -2803,15 +2803,15 @@
           "sentences": [
             {
               "sentence": "Mit seinem R\u00fccktritt endet eine ganze \u00c4ra.",
-              "translation": ""
+              "translation": "His resignation marks the end of an entire era."
             },
             {
               "sentence": "Wir stehen am Beginn einer digitalen \u00c4ra.",
-              "translation": ""
+              "translation": "We are at the beginning of a digital era."
             },
             {
               "sentence": "Beginnt mit dieser Erfindung eine neue \u00c4ra?",
-              "translation": ""
+              "translation": "Does this invention mark the start of a new era?"
             }
           ]
         },
@@ -2829,21 +2829,21 @@
           "sentences": [
             {
               "sentence": "Ungenutzt verstrich eine wertvolle Gelegenheit.",
-              "translation": "",
+              "translation": "A valuable opportunity passed unused.",
               "highlight": [
                 "verstrich"
               ]
             },
             {
               "sentence": "Es d\u00fcrfen keine weiteren Wochen verstreichen.",
-              "translation": "",
+              "translation": "No more weeks must be allowed to pass.",
               "highlight": [
                 "verstreichen"
               ]
             },
             {
               "sentence": "Wie viel Zeit darf noch verstreichen, bevor wir handeln?",
-              "translation": "",
+              "translation": "How much more time can pass before we take action?",
               "highlight": [
                 "verstreichen"
               ]
@@ -2864,21 +2864,21 @@
           "sentences": [
             {
               "sentence": "Sollte der Streik andauern, drohen Engp\u00e4sse.",
-              "translation": "",
+              "translation": "If the strike continues, shortages are likely.",
               "highlight": [
                 "andauern"
               ]
             },
             {
               "sentence": "Die Diskussion dauerte bis tief in die Nacht an.",
-              "translation": "",
+              "translation": "The discussion continued late into the night.",
               "highlight": [
                 "dauerte"
               ]
             },
             {
               "sentence": "Wie lange wird der Streik voraussichtlich andauern?",
-              "translation": "",
+              "translation": "How long is the strike expected to continue?",
               "highlight": [
                 "andauern"
               ]
@@ -2899,15 +2899,15 @@
           "sentences": [
             {
               "sentence": "Das Buch trifft den Zeitgeist erstaunlich genau.",
-              "translation": ""
+              "translation": "The book captures the spirit of the times remarkably accurately."
             },
             {
               "sentence": "Mode ist immer auch ein Spiegel des Zeitgeists.",
-              "translation": ""
+              "translation": "Fashion also always reflects the spirit of the times."
             },
             {
               "sentence": "Spiegelt der Film den Zeitgeist der neunziger Jahre wider?",
-              "translation": ""
+              "translation": "Does the film reflect the spirit of the nineties?"
             }
           ]
         },
@@ -2925,15 +2925,15 @@
           "sentences": [
             {
               "sentence": "F\u00fcr die sch\u00f6nen Dinge fehlt im Alltag oft die Mu\u00dfe.",
-              "translation": ""
+              "translation": "Everyday life often leaves little leisure for the finer things."
             },
             {
               "sentence": "In aller Mu\u00dfe las er das Buch zu Ende.",
-              "translation": ""
+              "translation": "He finished reading the book at his leisure."
             },
             {
               "sentence": "Wann finden Sie die Mu\u00dfe, ein langes Buch zu lesen?",
-              "translation": ""
+              "translation": "When do you find the time to read a long book at leisure?"
             }
           ]
         },
@@ -2951,15 +2951,15 @@
           "sentences": [
             {
               "sentence": "In der \u00dcbergangszeit gelten besondere Regelungen.",
-              "translation": ""
+              "translation": "Special rules apply during the transitional period."
             },
             {
               "sentence": "Die \u00dcbergangszeit zwischen den Jobs nutzte sie f\u00fcr eine Reise.",
-              "translation": ""
+              "translation": "She used the time between jobs to go travelling."
             },
             {
               "sentence": "Welche Vorschriften gelten w\u00e4hrend der \u00dcbergangszeit?",
-              "translation": ""
+              "translation": "Which rules apply during the transitional period?"
             }
           ]
         }
@@ -2984,15 +2984,15 @@
           "sentences": [
             {
               "sentence": "Der Farbton wirkt je nach Lichteinfall v\u00f6llig anders.",
-              "translation": ""
+              "translation": "The shade looks completely different depending on how the light falls."
             },
             {
               "sentence": "Wir konnten uns lange nicht auf einen Farbton einigen.",
-              "translation": ""
+              "translation": "For a long time, we could not agree on a shade."
             },
             {
               "sentence": "Welcher Farbton passt am besten zu den M\u00f6beln?",
-              "translation": ""
+              "translation": "Which shade goes best with the furniture?"
             }
           ]
         },
@@ -3010,15 +3010,15 @@
           "sentences": [
             {
               "sentence": "Zwischen den beiden Gr\u00fcnt\u00f6nen liegt nur eine feine Nuance.",
-              "translation": ""
+              "translation": "There is only a subtle difference between the two shades of green."
             },
             {
               "sentence": "Erst im direkten Vergleich erkennt man die Nuancen.",
-              "translation": ""
+              "translation": "You only notice the nuances in a direct comparison."
             },
             {
               "sentence": "Erkennen Sie die Nuance zwischen diesen beiden Blaut\u00f6nen?",
-              "translation": ""
+              "translation": "Can you distinguish the subtle difference between these two shades of blue?"
             }
           ]
         },
@@ -3036,21 +3036,21 @@
           "sentences": [
             {
               "sentence": "Die Wand wurde bewusst in einem matten Grau gestrichen.",
-              "translation": "",
+              "translation": "The wall was deliberately painted a matt grey.",
               "highlight": [
                 "matten"
               ]
             },
             {
               "sentence": "Mattes Papier reflektiert das Licht weniger stark.",
-              "translation": "",
+              "translation": "Matt paper reflects light less strongly.",
               "highlight": [
                 "Mattes"
               ]
             },
             {
               "sentence": "Soll die Oberfl\u00e4che matt oder gl\u00e4nzend sein?",
-              "translation": "",
+              "translation": "Should the surface be matt or glossy?",
               "highlight": [
                 "matt"
               ]
@@ -3071,21 +3071,21 @@
           "sentences": [
             {
               "sentence": "Die grellen Farben der Reklame stachen sofort ins Auge.",
-              "translation": "",
+              "translation": "The garish colours of the advertisement immediately caught the eye.",
               "highlight": [
                 "grellen"
               ]
             },
             {
               "sentence": "Bei grellem Licht erm\u00fcden die Augen schneller.",
-              "translation": "",
+              "translation": "The eyes tire more quickly in harsh light.",
               "highlight": [
                 "grellem"
               ]
             },
             {
               "sentence": "Ist dieses grelle Licht nicht anstrengend f\u00fcr die Augen?",
-              "translation": "",
+              "translation": "Isn't this harsh light tiring for the eyes?",
               "highlight": [
                 "grelle"
               ]
@@ -3106,21 +3106,21 @@
           "sentences": [
             {
               "sentence": "Im B\u00fcro dominieren bewusst gedeckte Farben.",
-              "translation": "",
+              "translation": "Muted colours deliberately dominate the office.",
               "highlight": [
                 "gedeckte"
               ]
             },
             {
               "sentence": "Sie bevorzugt gedeckte T\u00f6ne wie Beige und Grau.",
-              "translation": "",
+              "translation": "She prefers muted tones such as beige and grey.",
               "highlight": [
                 "gedeckte"
               ]
             },
             {
               "sentence": "Bevorzugen Sie gedeckte oder kr\u00e4ftige Farben?",
-              "translation": "",
+              "translation": "Do you prefer muted or bold colours?",
               "highlight": [
                 "gedeckte"
               ]
@@ -3141,21 +3141,21 @@
           "sentences": [
             {
               "sentence": "Das leuchtende Rot l\u00e4sst sich kaum \u00fcbersehen.",
-              "translation": "",
+              "translation": "The vivid red is hard to miss.",
               "highlight": [
                 "leuchtende"
               ]
             },
             {
               "sentence": "Im Fr\u00fchling erstrahlt die Wiese in leuchtendem Gelb.",
-              "translation": "",
+              "translation": "In spring, the meadow glows bright yellow.",
               "highlight": [
                 "leuchtendem"
               ]
             },
             {
               "sentence": "Warum wirkt das Rot auf diesem Bild so leuchtend?",
-              "translation": "",
+              "translation": "Why does the red in this picture look so vibrant?",
               "highlight": [
                 "leuchtend"
               ]
@@ -3176,21 +3176,21 @@
           "sentences": [
             {
               "sentence": "Das kontrastreiche Design zieht die Aufmerksamkeit auf sich.",
-              "translation": "",
+              "translation": "The high-contrast design attracts attention.",
               "highlight": [
                 "kontrastreiche"
               ]
             },
             {
               "sentence": "Ein kontrastreiches Bild wirkt oft dynamischer.",
-              "translation": "",
+              "translation": "A high-contrast image often looks more dynamic.",
               "highlight": [
                 "kontrastreiches"
               ]
             },
             {
               "sentence": "Ist das kontrastreiche Design gut lesbar?",
-              "translation": "",
+              "translation": "Is the high-contrast design easy to read?",
               "highlight": [
                 "kontrastreiche"
               ]
@@ -3211,15 +3211,15 @@
           "sentences": [
             {
               "sentence": "Die dezente Farbgebung verleiht dem Raum Ruhe.",
-              "translation": ""
+              "translation": "The subtle colour scheme gives the room a sense of calm."
             },
             {
               "sentence": "\u00dcber die Farbgebung entscheidet letztlich der Kunde.",
-              "translation": ""
+              "translation": "Ultimately, the customer decides on the colour scheme."
             },
             {
               "sentence": "Wer entscheidet \u00fcber die Farbgebung des neuen B\u00fcros?",
-              "translation": ""
+              "translation": "Who decides on the colour scheme for the new office?"
             }
           ]
         },
@@ -3237,21 +3237,21 @@
           "sentences": [
             {
               "sentence": "Das Corporate Design verlangt eine einheitliche Farbgebung.",
-              "translation": "",
+              "translation": "The corporate design requires a uniform colour scheme.",
               "highlight": [
                 "einheitliche"
               ]
             },
             {
               "sentence": "Alle Uniformen sind einheitlich blau gehalten.",
-              "translation": "",
+              "translation": "All the uniforms are the same blue.",
               "highlight": [
                 "einheitlich"
               ]
             },
             {
               "sentence": "Soll die Beschriftung im ganzen Geb\u00e4ude einheitlich sein?",
-              "translation": "",
+              "translation": "Should the signage be uniform throughout the building?",
               "highlight": [
                 "einheitlich"
               ]
@@ -3272,21 +3272,21 @@
           "sentences": [
             {
               "sentence": "In vielen Kulturen symbolisiert Wei\u00df die Reinheit.",
-              "translation": "",
+              "translation": "In many cultures, white symbolises purity.",
               "highlight": [
                 "symbolisiert"
               ]
             },
             {
               "sentence": "Die Farbe Gr\u00fcn symbolisiert h\u00e4ufig Hoffnung.",
-              "translation": "",
+              "translation": "The colour green often symbolises hope.",
               "highlight": [
                 "symbolisiert"
               ]
             },
             {
               "sentence": "Was symbolisiert die Farbe Wei\u00df in dieser Kultur?",
-              "translation": "",
+              "translation": "What does the colour white symbolise in this culture?",
               "highlight": [
                 "symbolisiert"
               ]
@@ -3307,21 +3307,21 @@
           "sentences": [
             {
               "sentence": "Im Laufe der Jahre sind die Farben des Gem\u00e4ldes verblasst.",
-              "translation": "",
+              "translation": "The colours of the painting have faded over the years.",
               "highlight": [
                 "verblasst"
               ]
             },
             {
               "sentence": "Auch der einst grelle Anstrich ist l\u00e4ngst verblasst.",
-              "translation": "",
+              "translation": "Even the once-bright paint has long since faded.",
               "highlight": [
                 "verblasst"
               ]
             },
             {
               "sentence": "Wie verhindert man, dass die Fotos in der Sonne verblassen?",
-              "translation": "",
+              "translation": "How do you prevent photographs from fading in the sun?",
               "highlight": [
                 "verblassen"
               ]
@@ -3342,21 +3342,21 @@
           "sentences": [
             {
               "sentence": "Die wei\u00dfe Farbe l\u00e4sst sich beliebig abt\u00f6nen.",
-              "translation": "",
+              "translation": "The white paint can be tinted to any shade.",
               "highlight": [
                 "abt\u00f6nen"
               ]
             },
             {
               "sentence": "Er t\u00f6nte das Wei\u00df mit einem Hauch Grau ab.",
-              "translation": "",
+              "translation": "He tinted the white with a touch of grey.",
               "highlight": [
                 "t\u00f6nte"
               ]
             },
             {
               "sentence": "K\u00f6nnen wir das kr\u00e4ftige Blau mit etwas Grau abt\u00f6nen?",
-              "translation": "",
+              "translation": "Can we tone down the bright blue with a little grey?",
               "highlight": [
                 "abt\u00f6nen"
               ]
@@ -3384,15 +3384,15 @@
           "sentences": [
             {
               "sentence": "Eine pflanzliche Ern\u00e4hrungsweise gewinnt an Bedeutung.",
-              "translation": ""
+              "translation": "A plant-based diet is becoming more important."
             },
             {
               "sentence": "\u00dcber die ideale Ern\u00e4hrungsweise wird kontrovers diskutiert.",
-              "translation": ""
+              "translation": "There is heated debate about the ideal diet."
             },
             {
               "sentence": "Welche Ern\u00e4hrungsweise ist langfristig gesund?",
-              "translation": ""
+              "translation": "What type of diet is healthy in the long term?"
             }
           ]
         },
@@ -3410,15 +3410,15 @@
           "sentences": [
             {
               "sentence": "Obst und Gem\u00fcse enthalten wertvolle N\u00e4hrstoffe.",
-              "translation": ""
+              "translation": "Fruit and vegetables contain valuable nutrients."
             },
             {
               "sentence": "Durch zu langes Kochen gehen viele N\u00e4hrstoffe verloren.",
-              "translation": ""
+              "translation": "Many nutrients are lost through overcooking."
             },
             {
               "sentence": "Welche N\u00e4hrstoffe enth\u00e4lt dieses Gem\u00fcse?",
-              "translation": ""
+              "translation": "Which nutrients does this vegetable contain?"
             }
           ]
         },
@@ -3436,15 +3436,15 @@
           "sentences": [
             {
               "sentence": "Die Verpflegung w\u00e4hrend des Seminars war ausgezeichnet.",
-              "translation": ""
+              "translation": "The catering during the seminar was excellent."
             },
             {
               "sentence": "F\u00fcr die Verpflegung der G\u00e4ste ist gesorgt.",
-              "translation": ""
+              "translation": "Food and drink for the guests have been arranged."
             },
             {
               "sentence": "Ist die Verpflegung im Preis der Reise enthalten?",
-              "translation": ""
+              "translation": "Are meals included in the price of the trip?"
             }
           ]
         },
@@ -3462,15 +3462,15 @@
           "sentences": [
             {
               "sentence": "Die Zubereitung dieses Gerichts erfordert etwas Geduld.",
-              "translation": ""
+              "translation": "Preparing this dish requires a little patience."
             },
             {
               "sentence": "Bei der Zubereitung kommt es auf die richtige Temperatur an.",
-              "translation": ""
+              "translation": "The right temperature is crucial during preparation."
             },
             {
               "sentence": "Wie lange dauert die Zubereitung dieses Gerichts?",
-              "translation": ""
+              "translation": "How long does it take to prepare this dish?"
             }
           ]
         },
@@ -3488,21 +3488,21 @@
           "sentences": [
             {
               "sentence": "Das Produkt ist nach dem \u00d6ffnen rasch zu verzehren.",
-              "translation": "",
+              "translation": "The product should be consumed soon after opening.",
               "highlight": [
                 "verzehren"
               ]
             },
             {
               "sentence": "Vor Ort d\u00fcrfen keine Speisen verzehrt werden.",
-              "translation": "",
+              "translation": "No food may be consumed on the premises.",
               "highlight": [
                 "verzehrt"
               ]
             },
             {
               "sentence": "Darf man mitgebrachte Speisen in diesem Raum verzehren?",
-              "translation": "",
+              "translation": "Is it permitted to eat food brought from outside in this room?",
               "highlight": [
                 "verzehren"
               ]
@@ -3523,15 +3523,15 @@
           "sentences": [
             {
               "sentence": "In dieser Region gilt der K\u00e4se als echte Delikatesse.",
-              "translation": ""
+              "translation": "In this region, the cheese is considered a real delicacy."
             },
             {
               "sentence": "Was f\u00fcr die einen eine Delikatesse ist, lehnen andere ab.",
-              "translation": ""
+              "translation": "What some consider a delicacy, others reject."
             },
             {
               "sentence": "Welche regionale Delikatesse sollten Besucher unbedingt probieren?",
-              "translation": ""
+              "translation": "Which regional delicacy should visitors definitely try?"
             }
           ]
         },
@@ -3549,21 +3549,21 @@
           "sentences": [
             {
               "sentence": "Leicht verderbliche Waren m\u00fcssen gek\u00fchlt werden.",
-              "translation": "",
+              "translation": "Highly perishable goods must be kept refrigerated.",
               "highlight": [
                 "verderbliche"
               ]
             },
             {
               "sentence": "Fisch ist besonders verderblich.",
-              "translation": "",
+              "translation": "Fish is particularly perishable.",
               "highlight": [
                 "verderblich"
               ]
             },
             {
               "sentence": "Wie m\u00fcssen leicht verderbliche Waren gelagert werden?",
-              "translation": "",
+              "translation": "How should highly perishable goods be stored?",
               "highlight": [
                 "verderbliche"
               ]
@@ -3584,15 +3584,15 @@
           "sentences": [
             {
               "sentence": "Ein guter Wein ist f\u00fcr ihn ein wahrer Genuss.",
-              "translation": ""
+              "translation": "A good wine is a real pleasure for him."
             },
             {
               "sentence": "Sie isst mit sichtlichem Genuss.",
-              "translation": ""
+              "translation": "She eats with obvious enjoyment."
             },
             {
               "sentence": "Ist ein gutes Essen f\u00fcr Sie ein besonderer Genuss?",
-              "translation": ""
+              "translation": "Is a good meal a special pleasure for you?"
             }
           ]
         },
@@ -3610,21 +3610,21 @@
           "sentences": [
             {
               "sentence": "H\u00fclsenfr\u00fcchte sind besonders s\u00e4ttigend.",
-              "translation": "",
+              "translation": "Pulses are particularly filling.",
               "highlight": [
                 "s\u00e4ttigend"
               ]
             },
             {
               "sentence": "Eine s\u00e4ttigende Mahlzeit h\u00e4lt lange vor.",
-              "translation": "",
+              "translation": "A filling meal keeps you going for a long time.",
               "highlight": [
                 "s\u00e4ttigende"
               ]
             },
             {
               "sentence": "Welche gesunden Lebensmittel sind besonders s\u00e4ttigend?",
-              "translation": "",
+              "translation": "Which healthy foods are particularly filling?",
               "highlight": [
                 "s\u00e4ttigend"
               ]
@@ -3645,15 +3645,15 @@
           "sentences": [
             {
               "sentence": "Wegen einer Unvertr\u00e4glichkeit meidet er Milchprodukte.",
-              "translation": ""
+              "translation": "He avoids dairy products because of an intolerance."
             },
             {
               "sentence": "Bei einer Unvertr\u00e4glichkeit sollte man einen Arzt aufsuchen.",
-              "translation": ""
+              "translation": "You should see a doctor if you have an intolerance."
             },
             {
               "sentence": "Wie wurde Ihre Unvertr\u00e4glichkeit festgestellt?",
-              "translation": ""
+              "translation": "How was your intolerance diagnosed?"
             }
           ]
         },
@@ -3671,21 +3671,21 @@
           "sentences": [
             {
               "sentence": "Die Reise war ein kulinarisches Erlebnis.",
-              "translation": "",
+              "translation": "The trip was a culinary experience.",
               "highlight": [
                 "kulinarisches"
               ]
             },
             {
               "sentence": "Die Stadt hat kulinarisch einiges zu bieten.",
-              "translation": "",
+              "translation": "The city has a lot to offer in terms of food.",
               "highlight": [
                 "kulinarisch"
               ]
             },
             {
               "sentence": "Was hat die Region kulinarisch zu bieten?",
-              "translation": "",
+              "translation": "What does the region have to offer in terms of food?",
               "highlight": [
                 "kulinarisch"
               ]
@@ -3706,15 +3706,15 @@
           "sentences": [
             {
               "sentence": "Ihre Gastfreundschaft ist wirklich herzlich.",
-              "translation": ""
+              "translation": "Their hospitality is truly warm."
             },
             {
               "sentence": "In vielen L\u00e4ndern gilt Gastfreundschaft als heilige Pflicht.",
-              "translation": ""
+              "translation": "In many countries, hospitality is considered a sacred duty."
             },
             {
               "sentence": "Wodurch zeigt sich die Gastfreundschaft einer Familie?",
-              "translation": ""
+              "translation": "How does a family show its hospitality?"
             }
           ]
         },
@@ -3732,21 +3732,21 @@
           "sentences": [
             {
               "sentence": "Zum Schluss die So\u00dfe mit Salz und Pfeffer abschmecken.",
-              "translation": "",
+              "translation": "Finally, season the sauce to taste with salt and pepper.",
               "highlight": [
                 "abschmecken"
               ]
             },
             {
               "sentence": "Vor dem Servieren solltest du das Gericht noch einmal abschmecken.",
-              "translation": "",
+              "translation": "Before serving, you should taste the dish again and adjust the seasoning.",
               "highlight": [
                 "abschmecken"
               ]
             },
             {
               "sentence": "Soll ich die Suppe noch mit etwas Salz abschmecken?",
-              "translation": "",
+              "translation": "Should I season the soup with a little more salt?",
               "highlight": [
                 "abschmecken"
               ]
@@ -3767,15 +3767,15 @@
           "sentences": [
             {
               "sentence": "Beim Einkauf achtet sie zunehmend auf Nachhaltigkeit.",
-              "translation": ""
+              "translation": "She is increasingly mindful of sustainability when shopping."
             },
             {
               "sentence": "Regionale Produkte stehen f\u00fcr Nachhaltigkeit.",
-              "translation": ""
+              "translation": "Regional products stand for sustainability."
             },
             {
               "sentence": "Welche Rolle spielt Nachhaltigkeit bei Ihrem Einkauf?",
-              "translation": ""
+              "translation": "What role does sustainability play in your shopping?"
             }
           ]
         },
@@ -3793,15 +3793,15 @@
           "sentences": [
             {
               "sentence": "Bestimmte Nahrungsmittel gelten als besonders gesund.",
-              "translation": ""
+              "translation": "Certain foods are considered particularly healthy."
             },
             {
               "sentence": "Die Verschwendung von Nahrungsmitteln ist ein gro\u00dfes Problem.",
-              "translation": ""
+              "translation": "Food waste is a major problem."
             },
             {
               "sentence": "Welche Nahrungsmittel sollten k\u00fchl gelagert werden?",
-              "translation": ""
+              "translation": "Which foods should be stored in a cool place?"
             }
           ]
         },
@@ -3819,21 +3819,21 @@
           "sentences": [
             {
               "sentence": "Leichte Kost ist am Abend bek\u00f6mmlicher.",
-              "translation": "",
+              "translation": "Light food is easier to digest in the evening.",
               "highlight": [
                 "bek\u00f6mmlicher"
               ]
             },
             {
               "sentence": "Nicht jedes Gericht ist f\u00fcr jeden gleich bek\u00f6mmlich.",
-              "translation": "",
+              "translation": "Not every dish agrees equally well with everyone.",
               "highlight": [
                 "bek\u00f6mmlich"
               ]
             },
             {
               "sentence": "Ist diese Mahlzeit auch am sp\u00e4ten Abend bek\u00f6mmlich?",
-              "translation": "",
+              "translation": "Is this meal easy to digest even late in the evening?",
               "highlight": [
                 "bek\u00f6mmlich"
               ]
@@ -3861,21 +3861,21 @@
           "sentences": [
             {
               "sentence": "Diese M\u00f6glichkeit sollten wir ernsthaft in Betracht ziehen.",
-              "translation": "",
+              "translation": "We should seriously consider this possibility.",
               "highlight": [
                 "Betracht"
               ]
             },
             {
               "sentence": "Auch unkonventionelle L\u00f6sungen werden in Betracht gezogen.",
-              "translation": "",
+              "translation": "Unconventional solutions are also being considered.",
               "highlight": [
                 "Betracht"
               ]
             },
             {
               "sentence": "Welche Alternative sollten wir noch in Betracht ziehen?",
-              "translation": "",
+              "translation": "Which other alternative should we consider?",
               "highlight": [
                 "Betracht"
               ]
@@ -3896,21 +3896,21 @@
           "sentences": [
             {
               "sentence": "Der Arbeitgeber stellt einen Dienstwagen zur Verf\u00fcgung.",
-              "translation": "",
+              "translation": "The employer provides a company car.",
               "highlight": [
                 "Verf\u00fcgung"
               ]
             },
             {
               "sentence": "Die Unterlagen wurden uns rechtzeitig zur Verf\u00fcgung gestellt.",
-              "translation": "",
+              "translation": "The documents were made available to us in good time.",
               "highlight": [
                 "Verf\u00fcgung"
               ]
             },
             {
               "sentence": "Kann die Firma uns zus\u00e4tzliche R\u00e4ume zur Verf\u00fcgung stellen?",
-              "translation": "",
+              "translation": "Can the company provide us with additional rooms?",
               "highlight": [
                 "Verf\u00fcgung"
               ]
@@ -3931,21 +3931,21 @@
           "sentences": [
             {
               "sentence": "Niemand stellt seine Kompetenz in Frage.",
-              "translation": "",
+              "translation": "No one questions his competence.",
               "highlight": [
                 "Frage"
               ]
             },
             {
               "sentence": "Die neuen Zahlen stellen das bisherige Konzept in Frage.",
-              "translation": "",
+              "translation": "The new figures call the existing approach into question.",
               "highlight": [
                 "Frage"
               ]
             },
             {
               "sentence": "Warum stellen Sie die Ergebnisse der Studie in Frage?",
-              "translation": "",
+              "translation": "Why do you question the results of the study?",
               "highlight": [
                 "Frage"
               ]
@@ -3966,21 +3966,21 @@
           "sentences": [
             {
               "sentence": "Man muss sich kritisch mit dem Thema auseinandersetzen.",
-              "translation": "",
+              "translation": "You have to engage critically with the subject.",
               "highlight": [
                 "auseinandersetzen"
               ]
             },
             {
               "sentence": "Sie hat sich intensiv mit der Materie auseinandergesetzt.",
-              "translation": "",
+              "translation": "She has studied the subject in depth.",
               "highlight": [
                 "auseinandergesetzt"
               ]
             },
             {
               "sentence": "Haben Sie sich bereits mit den Gegenargumenten auseinandergesetzt?",
-              "translation": "",
+              "translation": "Have you already considered the counterarguments?",
               "highlight": [
                 "auseinandergesetzt"
               ]
@@ -4001,21 +4001,21 @@
           "sentences": [
             {
               "sentence": "Die Aufgabe setzt fundierte Kenntnisse voraus.",
-              "translation": "",
+              "translation": "The task requires sound knowledge.",
               "highlight": [
                 "setzt"
               ]
             },
             {
               "sentence": "Wir sollten nichts als selbstverst\u00e4ndlich voraussetzen.",
-              "translation": "",
+              "translation": "We should not take anything for granted.",
               "highlight": [
                 "voraussetzen"
               ]
             },
             {
               "sentence": "Welche Kenntnisse setzt diese Aufgabe voraus?",
-              "translation": "",
+              "translation": "What knowledge does this task require?",
               "highlight": [
                 "setzt"
               ]
@@ -4036,21 +4036,21 @@
           "sentences": [
             {
               "sentence": "Bei der Entscheidung sind alle Faktoren zu ber\u00fccksichtigen.",
-              "translation": "",
+              "translation": "All factors must be taken into account when making the decision.",
               "highlight": [
                 "ber\u00fccksichtigen"
               ]
             },
             {
               "sentence": "Ihre Einw\u00e4nde wurden durchaus ber\u00fccksichtigt.",
-              "translation": "",
+              "translation": "Your objections were certainly taken into account.",
               "highlight": [
                 "ber\u00fccksichtigt"
               ]
             },
             {
               "sentence": "Wurden bei der Planung alle Kosten ber\u00fccksichtigt?",
-              "translation": "",
+              "translation": "Were all costs taken into account in the planning?",
               "highlight": [
                 "ber\u00fccksichtigt"
               ]
@@ -4071,21 +4071,21 @@
           "sentences": [
             {
               "sentence": "Der Bericht bezieht sich auf das vergangene Gesch\u00e4ftsjahr.",
-              "translation": "",
+              "translation": "The report refers to the previous financial year.",
               "highlight": [
                 "bezieht"
               ]
             },
             {
               "sentence": "Worauf beziehen Sie sich mit dieser Aussage?",
-              "translation": "",
+              "translation": "What are you referring to with this statement?",
               "highlight": [
                 "beziehen"
               ]
             },
             {
               "sentence": "Auf welchen Abschnitt bezieht sich Ihre Frage?",
-              "translation": "",
+              "translation": "Which section does your question refer to?",
               "highlight": [
                 "bezieht"
               ]
@@ -4106,21 +4106,21 @@
           "sentences": [
             {
               "sentence": "Wir k\u00f6nnen die Sicherheit der Daten nicht vollst\u00e4ndig gew\u00e4hrleisten.",
-              "translation": "",
+              "translation": "We cannot fully guarantee the security of the data.",
               "highlight": [
                 "gew\u00e4hrleisten"
               ]
             },
             {
               "sentence": "Eine reibungslose Abwicklung wird gew\u00e4hrleistet.",
-              "translation": "",
+              "translation": "Smooth processing is guaranteed.",
               "highlight": [
                 "gew\u00e4hrleistet"
               ]
             },
             {
               "sentence": "Wie k\u00f6nnen wir den Schutz der Daten gew\u00e4hrleisten?",
-              "translation": "",
+              "translation": "How can we ensure the protection of the data?",
               "highlight": [
                 "gew\u00e4hrleisten"
               ]
@@ -4141,21 +4141,21 @@
           "sentences": [
             {
               "sentence": "Der L\u00e4rm beeintr\u00e4chtigt die Konzentration erheblich.",
-              "translation": "",
+              "translation": "The noise significantly impairs concentration.",
               "highlight": [
                 "beeintr\u00e4chtigt"
               ]
             },
             {
               "sentence": "Die Qualit\u00e4t wurde durch die Eile beeintr\u00e4chtigt.",
-              "translation": "",
+              "translation": "Quality suffered because of the haste.",
               "highlight": [
                 "beeintr\u00e4chtigt"
               ]
             },
             {
               "sentence": "Beeintr\u00e4chtigt der L\u00e4rm Ihre Konzentration?",
-              "translation": "",
+              "translation": "Does the noise affect your concentration?",
               "highlight": [
                 "Beeintr\u00e4chtigt"
               ]
@@ -4176,21 +4176,21 @@
           "sentences": [
             {
               "sentence": "Die Vorbereitung nimmt viel Zeit in Anspruch.",
-              "translation": "",
+              "translation": "The preparation takes a lot of time.",
               "highlight": [
                 "Anspruch"
               ]
             },
             {
               "sentence": "Er nahm die Hilfe eines Anwalts in Anspruch.",
-              "translation": "",
+              "translation": "He sought the assistance of a lawyer.",
               "highlight": [
                 "Anspruch"
               ]
             },
             {
               "sentence": "Wie viel Zeit wird die Reparatur in Anspruch nehmen?",
-              "translation": "",
+              "translation": "How much time will the repair take?",
               "highlight": [
                 "Anspruch"
               ]
@@ -4211,21 +4211,21 @@
           "sentences": [
             {
               "sentence": "Gute Ideen setzen sich am Ende meist durch.",
-              "translation": "",
+              "translation": "Good ideas usually prevail in the end.",
               "highlight": [
                 "setzen"
               ]
             },
             {
               "sentence": "Sie musste sich gegen viele Widerst\u00e4nde durchsetzen.",
-              "translation": "",
+              "translation": "She had to overcome a lot of resistance.",
               "highlight": [
                 "durchsetzen"
               ]
             },
             {
               "sentence": "Konnte sie sich mit ihrem Vorschlag durchsetzen?",
-              "translation": "",
+              "translation": "Did she manage to get her proposal accepted?",
               "highlight": [
                 "durchsetzen"
               ]
@@ -4246,21 +4246,21 @@
           "sentences": [
             {
               "sentence": "In seiner Rede hob er die Bedeutung der Bildung hervor.",
-              "translation": "",
+              "translation": "In his speech, he emphasised the importance of education.",
               "highlight": [
                 "hervor"
               ]
             },
             {
               "sentence": "Besonders hervorzuheben ist der gro\u00dfe Einsatz des Teams.",
-              "translation": "",
+              "translation": "The team's great commitment deserves particular mention.",
               "highlight": [
                 "hervorzuheben"
               ]
             },
             {
               "sentence": "Welchen Punkt m\u00f6chten Sie besonders hervorheben?",
-              "translation": "",
+              "translation": "Which point would you particularly like to emphasise?",
               "highlight": [
                 "hervorheben"
               ]
@@ -4281,21 +4281,21 @@
           "sentences": [
             {
               "sentence": "F\u00fcr den Traumjob nahm sie einen weiten Arbeitsweg in Kauf.",
-              "translation": "",
+              "translation": "She accepted a long commute for her dream job.",
               "highlight": [
                 "Kauf"
               ]
             },
             {
               "sentence": "Gewisse Nachteile muss man wohl in Kauf nehmen.",
-              "translation": "",
+              "translation": "You probably have to accept certain disadvantages.",
               "highlight": [
                 "Kauf"
               ]
             },
             {
               "sentence": "Welche Nachteile w\u00fcrden Sie f\u00fcr die neue Stelle in Kauf nehmen?",
-              "translation": "",
+              "translation": "Which disadvantages would you accept for the new position?",
               "highlight": [
                 "Kauf"
               ]
@@ -4316,21 +4316,21 @@
           "sentences": [
             {
               "sentence": "Man muss Vor- und Nachteile sorgf\u00e4ltig abw\u00e4gen.",
-              "translation": "",
+              "translation": "You have to weigh up the advantages and disadvantages carefully.",
               "highlight": [
                 "abw\u00e4gen"
               ]
             },
             {
               "sentence": "Nach reiflichem Abw\u00e4gen entschied er sich dagegen.",
-              "translation": "",
+              "translation": "After careful consideration, he decided against it.",
               "highlight": [
                 "Abw\u00e4gen"
               ]
             },
             {
               "sentence": "Haben Sie die Vor- und Nachteile gr\u00fcndlich abgewogen?",
-              "translation": "",
+              "translation": "Have you weighed up the advantages and disadvantages thoroughly?",
               "highlight": [
                 "abgewogen"
               ]
@@ -4351,21 +4351,21 @@
           "sentences": [
             {
               "sentence": "Jeder kann zum Umweltschutz beitragen.",
-              "translation": "",
+              "translation": "Everyone can contribute to protecting the environment.",
               "highlight": [
                 "beitragen"
               ]
             },
             {
               "sentence": "Ihre Ideen haben wesentlich zum Erfolg beigetragen.",
-              "translation": "",
+              "translation": "Her ideas contributed significantly to the success.",
               "highlight": [
                 "beigetragen"
               ]
             },
             {
               "sentence": "Wie kann jeder Einzelne zum Klimaschutz beitragen?",
-              "translation": "",
+              "translation": "How can each individual contribute to protecting the climate?",
               "highlight": [
                 "beitragen"
               ]
@@ -4386,21 +4386,21 @@
           "sentences": [
             {
               "sentence": "Sp\u00e4ter stellte sich heraus, dass er recht hatte.",
-              "translation": "",
+              "translation": "It later turned out that he was right.",
               "highlight": [
                 "heraus"
               ]
             },
             {
               "sentence": "Es stellte sich als schwieriger heraus als gedacht.",
-              "translation": "",
+              "translation": "It turned out to be more difficult than expected.",
               "highlight": [
                 "heraus"
               ]
             },
             {
               "sentence": "Hat sich die erste Vermutung als richtig herausgestellt?",
-              "translation": "",
+              "translation": "Did the initial assumption turn out to be correct?",
               "highlight": [
                 "herausgestellt"
               ]
@@ -4421,21 +4421,21 @@
           "sentences": [
             {
               "sentence": "Wir ziehen einen Umzug ins Ausland ernsthaft in Erw\u00e4gung.",
-              "translation": "",
+              "translation": "We are seriously considering moving abroad.",
               "highlight": [
                 "Erw\u00e4gung"
               ]
             },
             {
               "sentence": "Alle Optionen werden in Erw\u00e4gung gezogen.",
-              "translation": "",
+              "translation": "All options are being considered.",
               "highlight": [
                 "Erw\u00e4gung"
               ]
             },
             {
               "sentence": "Ziehen Sie einen Wechsel des Arbeitsplatzes in Erw\u00e4gung?",
-              "translation": "",
+              "translation": "Are you considering changing jobs?",
               "highlight": [
                 "Erw\u00e4gung"
               ]
@@ -4456,21 +4456,21 @@
           "sentences": [
             {
               "sentence": "Die Menge an Arbeit ist kaum zu bew\u00e4ltigen.",
-              "translation": "",
+              "translation": "The amount of work is almost impossible to cope with.",
               "highlight": [
                 "bew\u00e4ltigen"
               ]
             },
             {
               "sentence": "Gemeinsam haben wir die Krise bew\u00e4ltigt.",
-              "translation": "",
+              "translation": "Together, we overcame the crisis.",
               "highlight": [
                 "bew\u00e4ltigt"
               ]
             },
             {
               "sentence": "Wie hat das Team diese Krise bew\u00e4ltigt?",
-              "translation": "",
+              "translation": "How did the team cope with this crisis?",
               "highlight": [
                 "bew\u00e4ltigt"
               ]
@@ -4498,15 +4498,15 @@
           "sentences": [
             {
               "sentence": "Moderne Haushaltsger\u00e4te verbrauchen deutlich weniger Energie.",
-              "translation": ""
+              "translation": "Modern household appliances use significantly less energy."
             },
             {
               "sentence": "Defekte Haushaltsger\u00e4te lohnen sich oft nicht mehr zu reparieren.",
-              "translation": ""
+              "translation": "Broken household appliances are often no longer worth repairing."
             },
             {
               "sentence": "Welches Haushaltsger\u00e4t verbraucht bei Ihnen am meisten Strom?",
-              "translation": ""
+              "translation": "Which household appliance uses the most electricity in your home?"
             }
           ]
         },
@@ -4524,15 +4524,15 @@
           "sentences": [
             {
               "sentence": "Der Energieverbrauch l\u00e4sst sich mit kleinen Ma\u00dfnahmen senken.",
-              "translation": ""
+              "translation": "Energy consumption can be reduced with small measures."
             },
             {
               "sentence": "Auf dem Etikett ist der Energieverbrauch angegeben.",
-              "translation": ""
+              "translation": "The energy consumption is stated on the label."
             },
             {
               "sentence": "Wie l\u00e4sst sich der Energieverbrauch dieses Ger\u00e4ts senken?",
-              "translation": ""
+              "translation": "How can this device's energy consumption be reduced?"
             }
           ]
         },
@@ -4550,15 +4550,15 @@
           "sentences": [
             {
               "sentence": "Die Bedienungsanleitung liegt dem Ger\u00e4t bei.",
-              "translation": ""
+              "translation": "The operating instructions are included with the device."
             },
             {
               "sentence": "Ohne Bedienungsanleitung ist die Einrichtung m\u00fchsam.",
-              "translation": ""
+              "translation": "Setting it up is difficult without the operating instructions."
             },
             {
               "sentence": "Ist die Bedienungsanleitung auch auf Deutsch verf\u00fcgbar?",
-              "translation": ""
+              "translation": "Are the operating instructions also available in German?"
             }
           ]
         },
@@ -4576,15 +4576,15 @@
           "sentences": [
             {
               "sentence": "Das Ger\u00e4t hat leichte Gebrauchsspuren, funktioniert aber einwandfrei.",
-              "translation": ""
+              "translation": "The device shows slight signs of use but works perfectly."
             },
             {
               "sentence": "Gebrauchsspuren mindern den Wiederverkaufswert.",
-              "translation": ""
+              "translation": "Signs of use reduce the resale value."
             },
             {
               "sentence": "Hat das gebrauchte Ger\u00e4t deutliche Gebrauchsspuren?",
-              "translation": ""
+              "translation": "Does the second-hand device show clear signs of use?"
             }
           ]
         },
@@ -4602,15 +4602,15 @@
           "sentences": [
             {
               "sentence": "Auf das Ger\u00e4t gibt es zwei Jahre Garantie.",
-              "translation": ""
+              "translation": "The device comes with a two-year warranty."
             },
             {
               "sentence": "Die Garantie erlischt bei unsachgem\u00e4\u00dfer Nutzung.",
-              "translation": ""
+              "translation": "The warranty becomes void if the device is used improperly."
             },
             {
               "sentence": "Wie lange gilt die Garantie f\u00fcr diesen K\u00fchlschrank?",
-              "translation": ""
+              "translation": "How long is the warranty on this fridge valid?"
             }
           ]
         },
@@ -4628,15 +4628,15 @@
           "sentences": [
             {
               "sentence": "Bewegliche Teile unterliegen einem gewissen Verschlei\u00df.",
-              "translation": ""
+              "translation": "Moving parts are subject to a certain amount of wear and tear."
             },
             {
               "sentence": "Um den Verschlei\u00df zu verringern, sollte man das Ger\u00e4t regelm\u00e4\u00dfig warten.",
-              "translation": ""
+              "translation": "To reduce wear and tear, you should service the device regularly."
             },
             {
               "sentence": "Wie kann man den Verschlei\u00df der Teile verringern?",
-              "translation": ""
+              "translation": "How can wear and tear on the parts be reduced?"
             }
           ]
         },
@@ -4654,21 +4654,21 @@
           "sentences": [
             {
               "sentence": "Wer seine Ger\u00e4te gut instand h\u00e4lt, spart auf Dauer Geld.",
-              "translation": "",
+              "translation": "People who maintain their devices well save money in the long run.",
               "highlight": [
                 "instand"
               ]
             },
             {
               "sentence": "Das Geb\u00e4ude wird vorbildlich instand gehalten.",
-              "translation": "",
+              "translation": "The building is maintained to an exemplary standard.",
               "highlight": [
                 "instand"
               ]
             },
             {
               "sentence": "Was kostet es, das alte Geb\u00e4ude instand zu halten?",
-              "translation": "",
+              "translation": "What does it cost to maintain the old building?",
               "highlight": [
                 "instand"
               ]
@@ -4689,21 +4689,21 @@
           "sentences": [
             {
               "sentence": "Alte Elektroger\u00e4te m\u00fcssen fachgerecht entsorgt werden.",
-              "translation": "",
+              "translation": "Old electrical appliances must be disposed of properly.",
               "highlight": [
                 "entsorgt"
               ]
             },
             {
               "sentence": "Batterien d\u00fcrfen nicht im Hausm\u00fcll entsorgt werden.",
-              "translation": "",
+              "translation": "Batteries must not be disposed of in household waste.",
               "highlight": [
                 "entsorgt"
               ]
             },
             {
               "sentence": "Wo kann ich alte Batterien sicher entsorgen?",
-              "translation": "",
+              "translation": "Where can I safely dispose of old batteries?",
               "highlight": [
                 "entsorgen"
               ]
@@ -4724,15 +4724,15 @@
           "sentences": [
             {
               "sentence": "F\u00fcr das \u00e4ltere Modell gibt es kaum noch Ersatzteile.",
-              "translation": ""
+              "translation": "There are hardly any spare parts available for the older model anymore."
             },
             {
               "sentence": "Das passende Ersatzteil war schnell bestellt.",
-              "translation": ""
+              "translation": "The right spare part was quickly ordered."
             },
             {
               "sentence": "Ist f\u00fcr dieses alte Modell noch ein Ersatzteil erh\u00e4ltlich?",
-              "translation": ""
+              "translation": "Is a spare part still available for this old model?"
             }
           ]
         },
@@ -4750,21 +4750,21 @@
           "sentences": [
             {
               "sentence": "Nachhaltige Produkte sind zwar teurer, aber langlebiger.",
-              "translation": "",
+              "translation": "Sustainable products are more expensive but last longer.",
               "highlight": [
                 "Nachhaltige"
               ]
             },
             {
               "sentence": "Wir versuchen, m\u00f6glichst nachhaltig zu konsumieren.",
-              "translation": "",
+              "translation": "We try to consume as sustainably as possible.",
               "highlight": [
                 "nachhaltig"
               ]
             },
             {
               "sentence": "Wie k\u00f6nnen wir im Haushalt nachhaltiger leben?",
-              "translation": "",
+              "translation": "How can we live more sustainably at home?",
               "highlight": [
                 "nachhaltiger"
               ]
@@ -4785,15 +4785,15 @@
           "sentences": [
             {
               "sentence": "Gepflegte Ger\u00e4te haben einen h\u00f6heren Wiederverkaufswert.",
-              "translation": ""
+              "translation": "Well-maintained devices have a higher resale value."
             },
             {
               "sentence": "Der Wiederverkaufswert sinkt mit jedem Jahr.",
-              "translation": ""
+              "translation": "The resale value falls every year."
             },
             {
               "sentence": "Wie hoch ist der Wiederverkaufswert des Autos nach f\u00fcnf Jahren?",
-              "translation": ""
+              "translation": "What is the car's resale value after five years?"
             }
           ]
         },
@@ -4811,15 +4811,15 @@
           "sentences": [
             {
               "sentence": "Die Anschaffung einer Solaranlage rechnet sich langfristig.",
-              "translation": ""
+              "translation": "Buying a solar power system pays off in the long term."
             },
             {
               "sentence": "Vor jeder gr\u00f6\u00dferen Anschaffung vergleicht sie die Preise.",
-              "translation": ""
+              "translation": "Before every major purchase, she compares prices."
             },
             {
               "sentence": "Lohnt sich die Anschaffung eines neuen Ger\u00e4ts?",
-              "translation": ""
+              "translation": "Is buying a new device worthwhile?"
             }
           ]
         },
@@ -4837,21 +4837,21 @@
           "sentences": [
             {
               "sentence": "Trotz seines Alters ist das Radio noch voll funktionsf\u00e4hig.",
-              "translation": "",
+              "translation": "Despite its age, the radio is still fully functional.",
               "highlight": [
                 "funktionsf\u00e4hig"
               ]
             },
             {
               "sentence": "Bitte geben Sie das Ger\u00e4t nur funktionsf\u00e4hig zur\u00fcck.",
-              "translation": "",
+              "translation": "Please only return the device in working order.",
               "highlight": [
                 "funktionsf\u00e4hig"
               ]
             },
             {
               "sentence": "Ist der gebrauchte Drucker noch vollst\u00e4ndig funktionsf\u00e4hig?",
-              "translation": "",
+              "translation": "Is the second-hand printer still fully functional?",
               "highlight": [
                 "funktionsf\u00e4hig"
               ]
@@ -4872,15 +4872,15 @@
           "sentences": [
             {
               "sentence": "Eine regelm\u00e4\u00dfige Wartung verl\u00e4ngert die Lebensdauer.",
-              "translation": ""
+              "translation": "Regular maintenance extends the service life."
             },
             {
               "sentence": "Die Wartung \u00fcbernimmt eine Fachfirma.",
-              "translation": ""
+              "translation": "A specialist company carries out the maintenance."
             },
             {
               "sentence": "Wann ist die n\u00e4chste Wartung der Heizung f\u00e4llig?",
-              "translation": ""
+              "translation": "When is the next service for the heating system due?"
             }
           ]
         },
@@ -4898,21 +4898,21 @@
           "sentences": [
             {
               "sentence": "Hochwertige Materialien halten erfahrungsgem\u00e4\u00df l\u00e4nger.",
-              "translation": "",
+              "translation": "Experience shows that high-quality materials last longer.",
               "highlight": [
                 "Hochwertige"
               ]
             },
             {
               "sentence": "Die Verarbeitung wirkt ausgesprochen hochwertig.",
-              "translation": "",
+              "translation": "The workmanship looks exceptionally high-quality.",
               "highlight": [
                 "hochwertig"
               ]
             },
             {
               "sentence": "Woran erkennt man hochwertige Materialien?",
-              "translation": "",
+              "translation": "How can you recognise high-quality materials?",
               "highlight": [
                 "hochwertige"
               ]
@@ -4933,21 +4933,21 @@
           "sentences": [
             {
               "sentence": "Die Software ist inzwischen hoffnungslos veraltet.",
-              "translation": "",
+              "translation": "The software is now hopelessly outdated.",
               "highlight": [
                 "veraltet"
               ]
             },
             {
               "sentence": "Veraltete Ger\u00e4te lassen sich oft nicht mehr aktualisieren.",
-              "translation": "",
+              "translation": "Outdated devices often can no longer be updated.",
               "highlight": [
                 "Veraltete"
               ]
             },
             {
               "sentence": "Ist dieses Betriebssystem inzwischen veraltet?",
-              "translation": "",
+              "translation": "Is this operating system now outdated?",
               "highlight": [
                 "veraltet"
               ]
@@ -4975,21 +4975,21 @@
           "sentences": [
             {
               "sentence": "Seine Entscheidung ist durchaus nachvollziehbar.",
-              "translation": "",
+              "translation": "His decision is quite understandable.",
               "highlight": [
                 "nachvollziehbar"
               ]
             },
             {
               "sentence": "Bitte erkl\u00e4ren Sie es so, dass es f\u00fcr alle nachvollziehbar ist.",
-              "translation": "",
+              "translation": "Please explain it in a way that everyone can follow.",
               "highlight": [
                 "nachvollziehbar"
               ]
             },
             {
               "sentence": "Ist die Entscheidung f\u00fcr alle Beteiligten nachvollziehbar?",
-              "translation": "",
+              "translation": "Is the decision understandable to everyone involved?",
               "highlight": [
                 "nachvollziehbar"
               ]
@@ -5010,21 +5010,21 @@
           "sentences": [
             {
               "sentence": "Ein Smartphone ist f\u00fcr viele unverzichtbar geworden.",
-              "translation": "",
+              "translation": "A smartphone has become indispensable for many people.",
               "highlight": [
                 "unverzichtbar"
               ]
             },
             {
               "sentence": "Ihre Erfahrung ist f\u00fcr das Projekt schlicht unverzichtbar.",
-              "translation": "",
+              "translation": "Her experience is simply indispensable to the project.",
               "highlight": [
                 "unverzichtbar"
               ]
             },
             {
               "sentence": "Welche F\u00e4higkeit ist in Ihrem Beruf unverzichtbar?",
-              "translation": "",
+              "translation": "Which skill is indispensable in your profession?",
               "highlight": [
                 "unverzichtbar"
               ]
@@ -5045,21 +5045,21 @@
           "sentences": [
             {
               "sentence": "Die Ma\u00dfnahme ist in der Bev\u00f6lkerung h\u00f6chst umstritten.",
-              "translation": "",
+              "translation": "The measure is highly controversial among the public.",
               "highlight": [
                 "umstritten"
               ]
             },
             {
               "sentence": "Der Kandidat gilt als ebenso beliebt wie umstritten.",
-              "translation": "",
+              "translation": "The candidate is considered as popular as he is controversial.",
               "highlight": [
                 "umstritten"
               ]
             },
             {
               "sentence": "Warum ist diese politische Ma\u00dfnahme so umstritten?",
-              "translation": "",
+              "translation": "Why is this political measure so controversial?",
               "highlight": [
                 "umstritten"
               ]
@@ -5080,21 +5080,21 @@
           "sentences": [
             {
               "sentence": "Man sollte keine voreiligen Schl\u00fcsse ziehen.",
-              "translation": "",
+              "translation": "You should not jump to conclusions.",
               "highlight": [
                 "voreiligen"
               ]
             },
             {
               "sentence": "Sein voreiliges Urteil erwies sich als falsch.",
-              "translation": "",
+              "translation": "His hasty judgement proved to be wrong.",
               "highlight": [
                 "voreiliges"
               ]
             },
             {
               "sentence": "War es voreilig, das Angebot sofort abzulehnen?",
-              "translation": "",
+              "translation": "Was it premature to reject the offer immediately?",
               "highlight": [
                 "voreilig"
               ]
@@ -5115,21 +5115,21 @@
           "sentences": [
             {
               "sentence": "Eine angemessene Reaktion w\u00e4re eine Entschuldigung gewesen.",
-              "translation": "",
+              "translation": "An appropriate response would have been an apology.",
               "highlight": [
                 "angemessene"
               ]
             },
             {
               "sentence": "Der Preis erscheint mir durchaus angemessen.",
-              "translation": "",
+              "translation": "The price seems quite reasonable to me.",
               "highlight": [
                 "angemessen"
               ]
             },
             {
               "sentence": "Halten Sie diese Reaktion f\u00fcr angemessen?",
-              "translation": "",
+              "translation": "Do you consider this response appropriate?",
               "highlight": [
                 "angemessen"
               ]
@@ -5150,21 +5150,21 @@
           "sentences": [
             {
               "sentence": "Zwischen den Angeboten besteht ein erheblicher Unterschied.",
-              "translation": "",
+              "translation": "There is a significant difference between the offers.",
               "highlight": [
                 "erheblicher"
               ]
             },
             {
               "sentence": "Der Aufwand ist erheblich, das Ergebnis aber \u00fcberzeugend.",
-              "translation": "",
+              "translation": "The effort required is considerable, but the result is convincing.",
               "highlight": [
                 "erheblich"
               ]
             },
             {
               "sentence": "Ist der finanzielle Aufwand wirklich so erheblich?",
-              "translation": "",
+              "translation": "Is the financial outlay really that substantial?",
               "highlight": [
                 "erheblich"
               ]
@@ -5185,21 +5185,21 @@
           "sentences": [
             {
               "sentence": "Die Kosten sind betr\u00e4chtlich gestiegen.",
-              "translation": "",
+              "translation": "Costs have risen considerably.",
               "highlight": [
                 "betr\u00e4chtlich"
               ]
             },
             {
               "sentence": "Sie besitzt ein betr\u00e4chtliches Verm\u00f6gen.",
-              "translation": "",
+              "translation": "She has a considerable fortune.",
               "highlight": [
                 "betr\u00e4chtliches"
               ]
             },
             {
               "sentence": "Sind durch die Verz\u00f6gerung betr\u00e4chtliche Kosten entstanden?",
-              "translation": "",
+              "translation": "Did the delay result in considerable costs?",
               "highlight": [
                 "betr\u00e4chtliche"
               ]
@@ -5220,21 +5220,21 @@
           "sentences": [
             {
               "sentence": "Sein Talent ist unbestreitbar.",
-              "translation": "",
+              "translation": "His talent is undeniable.",
               "highlight": [
                 "unbestreitbar"
               ]
             },
             {
               "sentence": "Es ist unbestreitbar, dass sich die Lage verbessert hat.",
-              "translation": "",
+              "translation": "It is undeniable that the situation has improved.",
               "highlight": [
                 "unbestreitbar"
               ]
             },
             {
               "sentence": "Ist ihr Anteil am Erfolg unbestreitbar?",
-              "translation": "",
+              "translation": "Is her contribution to the success undeniable?",
               "highlight": [
                 "unbestreitbar"
               ]
@@ -5255,21 +5255,21 @@
           "sentences": [
             {
               "sentence": "Ein Richter darf nicht voreingenommen sein.",
-              "translation": "",
+              "translation": "A judge must not be biased.",
               "highlight": [
                 "voreingenommen"
               ]
             },
             {
               "sentence": "Sie beurteilte den Vorschlag v\u00f6llig voreingenommen.",
-              "translation": "",
+              "translation": "She assessed the proposal in a completely biased way.",
               "highlight": [
                 "voreingenommen"
               ]
             },
             {
               "sentence": "Kann ein voreingenommener Beobachter fair urteilen?",
-              "translation": "",
+              "translation": "Can a biased observer judge fairly?",
               "highlight": [
                 "voreingenommener"
               ]
@@ -5290,21 +5290,21 @@
           "sentences": [
             {
               "sentence": "Trotz der Kritik blieb er erstaunlich gelassen.",
-              "translation": "",
+              "translation": "Despite the criticism, he remained remarkably calm.",
               "highlight": [
                 "gelassen"
               ]
             },
             {
               "sentence": "Man sollte solchen R\u00fcckschl\u00e4gen gelassen begegnen.",
-              "translation": "",
+              "translation": "You should face setbacks like these calmly.",
               "highlight": [
                 "gelassen"
               ]
             },
             {
               "sentence": "Wie schaffen Sie es, unter Druck gelassen zu bleiben?",
-              "translation": "",
+              "translation": "How do you manage to stay calm under pressure?",
               "highlight": [
                 "gelassen"
               ]
@@ -5325,21 +5325,21 @@
           "sentences": [
             {
               "sentence": "Mit hartn\u00e4ckigem Flei\u00df erreichte sie ihr Ziel.",
-              "translation": "",
+              "translation": "Through persistent hard work, she achieved her goal.",
               "highlight": [
                 "hartn\u00e4ckigem"
               ]
             },
             {
               "sentence": "Das Ger\u00fccht h\u00e4lt sich hartn\u00e4ckig.",
-              "translation": "",
+              "translation": "The rumour stubbornly persists.",
               "highlight": [
                 "hartn\u00e4ckig"
               ]
             },
             {
               "sentence": "Warum h\u00e4lt sich dieses Ger\u00fccht so hartn\u00e4ckig?",
-              "translation": "",
+              "translation": "Why does this rumour persist so stubbornly?",
               "highlight": [
                 "hartn\u00e4ckig"
               ]
@@ -5360,21 +5360,21 @@
           "sentences": [
             {
               "sentence": "Der Unterschied ist wesentlich gr\u00f6\u00dfer, als man denkt.",
-              "translation": "",
+              "translation": "The difference is much greater than people think.",
               "highlight": [
                 "wesentlich"
               ]
             },
             {
               "sentence": "Ein wesentlicher Punkt wurde bislang \u00fcbersehen.",
-              "translation": "",
+              "translation": "An important point has been overlooked so far.",
               "highlight": [
                 "wesentlicher"
               ]
             },
             {
               "sentence": "Was ist der wesentliche Unterschied zwischen den Angeboten?",
-              "translation": "",
+              "translation": "What is the essential difference between the offers?",
               "highlight": [
                 "wesentliche"
               ]
@@ -5395,21 +5395,21 @@
           "sentences": [
             {
               "sentence": "Die Folgen waren unmittelbar sp\u00fcrbar.",
-              "translation": "",
+              "translation": "The consequences were felt immediately.",
               "highlight": [
                 "unmittelbar"
               ]
             },
             {
               "sentence": "In unmittelbarer N\u00e4he des Bahnhofs entsteht ein Hotel.",
-              "translation": "",
+              "translation": "A hotel is being built in the immediate vicinity of the station.",
               "highlight": [
                 "unmittelbarer"
               ]
             },
             {
               "sentence": "Welche Folgen waren unmittelbar nach der \u00c4nderung sp\u00fcrbar?",
-              "translation": "",
+              "translation": "Which effects were noticeable immediately after the change?",
               "highlight": [
                 "unmittelbar"
               ]
@@ -5430,21 +5430,21 @@
           "sentences": [
             {
               "sentence": "Die Ursachen des Problems sind vielf\u00e4ltig.",
-              "translation": "",
+              "translation": "The causes of the problem are varied.",
               "highlight": [
                 "vielf\u00e4ltig"
               ]
             },
             {
               "sentence": "Die Stadt bietet ein vielf\u00e4ltiges Kulturangebot.",
-              "translation": "",
+              "translation": "The city offers a wide range of cultural activities.",
               "highlight": [
                 "vielf\u00e4ltiges"
               ]
             },
             {
               "sentence": "Sind die beruflichen M\u00f6glichkeiten in dieser Branche vielf\u00e4ltig?",
-              "translation": "",
+              "translation": "Are career opportunities in this industry varied?",
               "highlight": [
                 "vielf\u00e4ltig"
               ]
@@ -5465,21 +5465,21 @@
           "sentences": [
             {
               "sentence": "Man sollte Informationen stets kritisch hinterfragen.",
-              "translation": "",
+              "translation": "You should always question information critically.",
               "highlight": [
                 "kritisch"
               ]
             },
             {
               "sentence": "Die Lage bleibt weiterhin kritisch.",
-              "translation": "",
+              "translation": "The situation remains critical.",
               "highlight": [
                 "kritisch"
               ]
             },
             {
               "sentence": "Warum sollte man Nachrichten kritisch pr\u00fcfen?",
-              "translation": "",
+              "translation": "Why should you examine news critically?",
               "highlight": [
                 "kritisch"
               ]
@@ -5500,21 +5500,21 @@
           "sentences": [
             {
               "sentence": "Der Fall wird gr\u00fcndlich untersucht.",
-              "translation": "",
+              "translation": "The case is being investigated thoroughly.",
               "highlight": [
                 "gr\u00fcndlich"
               ]
             },
             {
               "sentence": "Bereite dich gr\u00fcndlich auf das Gespr\u00e4ch vor.",
-              "translation": "",
+              "translation": "Prepare thoroughly for the conversation.",
               "highlight": [
                 "gr\u00fcndlich"
               ]
             },
             {
               "sentence": "Haben Sie alle Unterlagen gr\u00fcndlich gepr\u00fcft?",
-              "translation": "",
+              "translation": "Have you checked all the documents thoroughly?",
               "highlight": [
                 "gr\u00fcndlich"
               ]
@@ -5542,15 +5542,15 @@
           "sentences": [
             {
               "sentence": "Angesichts der hohen Kosten wurde das Projekt gestoppt.",
-              "translation": ""
+              "translation": "In view of the high costs, the project was stopped."
             },
             {
               "sentence": "Angesichts der Lage bleibt uns keine andere Wahl.",
-              "translation": ""
+              "translation": "Given the situation, we have no other choice."
             },
             {
               "sentence": "Welche Ma\u00dfnahmen sind angesichts der hohen Kosten noch m\u00f6glich?",
-              "translation": ""
+              "translation": "What measures are still possible in view of the high costs?"
             }
           ]
         },
@@ -5568,15 +5568,15 @@
           "sentences": [
             {
               "sentence": "Infolge des Sturms fiel der Strom aus.",
-              "translation": ""
+              "translation": "The power went out as a result of the storm."
             },
             {
               "sentence": "Infolge der Reform \u00e4nderten sich zahlreiche Vorschriften.",
-              "translation": ""
+              "translation": "Numerous regulations changed as a result of the reform."
             },
             {
               "sentence": "Welche Sch\u00e4den entstanden infolge des Sturms?",
-              "translation": ""
+              "translation": "What damage occurred as a result of the storm?"
             }
           ]
         },
@@ -5594,15 +5594,15 @@
           "sentences": [
             {
               "sentence": "Hinsichtlich der Termine sind wir flexibel.",
-              "translation": ""
+              "translation": "We are flexible regarding dates."
             },
             {
               "sentence": "Es bestehen Zweifel hinsichtlich der Finanzierung.",
-              "translation": ""
+              "translation": "There are doubts regarding the funding."
             },
             {
               "sentence": "Gibt es hinsichtlich des Termins noch Fragen?",
-              "translation": ""
+              "translation": "Are there any further questions regarding the date?"
             }
           ]
         },
@@ -5620,15 +5620,15 @@
           "sentences": [
             {
               "sentence": "Zwecks besserer \u00dcbersicht wurden die Daten sortiert.",
-              "translation": ""
+              "translation": "The data was sorted to provide a clearer overview."
             },
             {
               "sentence": "Zwecks Anmeldung wenden Sie sich bitte an das Sekretariat.",
-              "translation": ""
+              "translation": "To register, please contact the administrative office."
             },
             {
               "sentence": "M\u00fcssen wir zwecks Anmeldung pers\u00f6nlich erscheinen?",
-              "translation": ""
+              "translation": "Do we have to appear in person to register?"
             }
           ]
         },
@@ -5646,15 +5646,15 @@
           "sentences": [
             {
               "sentence": "Der Zugang erfolgt mittels einer Chipkarte.",
-              "translation": ""
+              "translation": "Access is gained using a smart card."
             },
             {
               "sentence": "Mittels moderner Verfahren l\u00e4sst sich der Fehler beheben.",
-              "translation": ""
+              "translation": "The fault can be fixed using modern methods."
             },
             {
               "sentence": "Kann der Fehler mittels dieser Software gefunden werden?",
-              "translation": ""
+              "translation": "Can the fault be found using this software?"
             }
           ]
         },
@@ -5672,15 +5672,15 @@
           "sentences": [
             {
               "sentence": "Ungeachtet aller Warnungen setzte er die Reise fort.",
-              "translation": ""
+              "translation": "Despite all the warnings, he continued his journey."
             },
             {
               "sentence": "Ungeachtet der Kritik hielt sie an ihrem Plan fest.",
-              "translation": ""
+              "translation": "Despite the criticism, she stuck to her plan."
             },
             {
               "sentence": "Setzte sie ihren Plan ungeachtet aller Warnungen fort?",
-              "translation": ""
+              "translation": "Did she continue with her plan despite all the warnings?"
             }
           ]
         },
@@ -5698,15 +5698,15 @@
           "sentences": [
             {
               "sentence": "Er verzichtete zugunsten seines Bruders auf das Erbe.",
-              "translation": ""
+              "translation": "He gave up the inheritance in favour of his brother."
             },
             {
               "sentence": "Die Entscheidung fiel zugunsten der Anwohner aus.",
-              "translation": ""
+              "translation": "The decision was made in favour of the residents."
             },
             {
               "sentence": "Wurde die Entscheidung zugunsten der Besch\u00e4ftigten ge\u00e4ndert?",
-              "translation": ""
+              "translation": "Was the decision changed in favour of the employees?"
             }
           ]
         },
@@ -5724,15 +5724,15 @@
           "sentences": [
             {
               "sentence": "Anhand konkreter Beispiele wird die Regel erkl\u00e4rt.",
-              "translation": ""
+              "translation": "The rule is explained using specific examples."
             },
             {
               "sentence": "Die Identit\u00e4t wird anhand des Ausweises \u00fcberpr\u00fcft.",
-              "translation": ""
+              "translation": "Identity is verified using an ID document."
             },
             {
               "sentence": "K\u00f6nnen Sie die Regel anhand eines Beispiels erkl\u00e4ren?",
-              "translation": ""
+              "translation": "Can you explain the rule using an example?"
             }
           ]
         },
@@ -5750,15 +5750,15 @@
           "sentences": [
             {
               "sentence": "Aufgrund technischer Probleme verz\u00f6gert sich der Start.",
-              "translation": ""
+              "translation": "The start is delayed because of technical problems."
             },
             {
               "sentence": "Aufgrund fehlender Beweise wurde er freigesprochen.",
-              "translation": ""
+              "translation": "He was acquitted because of a lack of evidence."
             },
             {
               "sentence": "Wurde der Flug aufgrund des Wetters abgesagt?",
-              "translation": ""
+              "translation": "Was the flight cancelled because of the weather?"
             }
           ]
         },
@@ -5776,15 +5776,15 @@
           "sentences": [
             {
               "sentence": "Bez\u00fcglich der K\u00fcndigung m\u00f6chte ich mich beraten lassen.",
-              "translation": ""
+              "translation": "I would like advice regarding the termination."
             },
             {
               "sentence": "Es gibt Unklarheiten bez\u00fcglich der Zust\u00e4ndigkeit.",
-              "translation": ""
+              "translation": "There is uncertainty about who is responsible."
             },
             {
               "sentence": "An wen kann ich mich bez\u00fcglich meiner Rechnung wenden?",
-              "translation": ""
+              "translation": "Who can I contact regarding my invoice?"
             }
           ]
         },
@@ -5802,15 +5802,15 @@
           "sentences": [
             {
               "sentence": "Er wurde seiner Leistung entsprechend bezahlt.",
-              "translation": ""
+              "translation": "He was paid according to his performance."
             },
             {
               "sentence": "Entsprechend den Vorgaben wurde alles dokumentiert.",
-              "translation": ""
+              "translation": "Everything was documented in accordance with the requirements."
             },
             {
               "sentence": "Wurde er seiner Erfahrung entsprechend eingesetzt?",
-              "translation": ""
+              "translation": "Was he assigned work appropriate to his experience?"
             }
           ]
         },
@@ -5828,15 +5828,15 @@
           "sentences": [
             {
               "sentence": "Laut Vertrag ist eine K\u00fcndigungsfrist von drei Monaten vorgesehen.",
-              "translation": ""
+              "translation": "According to the contract, there is a notice period of three months."
             },
             {
               "sentence": "Laut Aussage der Zeugen war niemand verletzt.",
-              "translation": ""
+              "translation": "According to the witnesses, no one was injured."
             },
             {
               "sentence": "Wann beginnt die Veranstaltung laut Programm?",
-              "translation": ""
+              "translation": "When does the event start according to the programme?"
             }
           ]
         },
@@ -5854,15 +5854,15 @@
           "sentences": [
             {
               "sentence": "Seitens der Beh\u00f6rde gab es keine Einw\u00e4nde.",
-              "translation": ""
+              "translation": "There were no objections from the authority."
             },
             {
               "sentence": "Seitens der Firma wurde eine Entsch\u00e4digung angeboten.",
-              "translation": ""
+              "translation": "The company offered compensation."
             },
             {
               "sentence": "Gab es seitens der Beh\u00f6rde weitere Einw\u00e4nde?",
-              "translation": ""
+              "translation": "Were there any further objections from the authority?"
             }
           ]
         },
@@ -5880,15 +5880,15 @@
           "sentences": [
             {
               "sentence": "Im Zuge der Umstrukturierung wurden Stellen abgebaut.",
-              "translation": ""
+              "translation": "Jobs were cut as part of the restructuring."
             },
             {
               "sentence": "Im Zuge der Ermittlungen kamen neue Details ans Licht.",
-              "translation": ""
+              "translation": "New details came to light during the investigation."
             },
             {
               "sentence": "Welche Stellen wurden im Zuge der Reform geschaffen?",
-              "translation": ""
+              "translation": "Which jobs were created as part of the reform?"
             }
           ]
         },
@@ -5906,15 +5906,15 @@
           "sentences": [
             {
               "sentence": "Abgesehen von wenigen Ausnahmen waren alle einverstanden.",
-              "translation": ""
+              "translation": "Apart from a few exceptions, everyone agreed."
             },
             {
               "sentence": "Abgesehen vom Preis \u00fcberzeugt das Angebot v\u00f6llig.",
-              "translation": ""
+              "translation": "Apart from the price, the offer is entirely convincing."
             },
             {
               "sentence": "War die Reise, abgesehen vom Wetter, erfolgreich?",
-              "translation": ""
+              "translation": "Was the trip successful apart from the weather?"
             }
           ]
         }
@@ -5939,15 +5939,15 @@
           "sentences": [
             {
               "sentence": "Es bleibt offen, inwieweit die Ergebnisse \u00fcbertragbar sind.",
-              "translation": ""
+              "translation": "It remains unclear to what extent the results can be applied elsewhere."
             },
             {
               "sentence": "Inwieweit die Ma\u00dfnahme wirkt, wird sich zeigen.",
-              "translation": ""
+              "translation": "It remains to be seen to what extent the measure works."
             },
             {
               "sentence": "Inwieweit hat die neue Regel Ihren Alltag ver\u00e4ndert?",
-              "translation": ""
+              "translation": "To what extent has the new rule changed your everyday life?"
             }
           ]
         },
@@ -5965,15 +5965,15 @@
           "sentences": [
             {
               "sentence": "Inwiefern unterscheidet sich Ihr Ansatz von den bisherigen?",
-              "translation": ""
+              "translation": "In what way does your approach differ from previous ones?"
             },
             {
               "sentence": "Man fragt sich, inwiefern das gerechtfertigt ist.",
-              "translation": ""
+              "translation": "One wonders in what way that is justified."
             },
             {
               "sentence": "Inwiefern unterscheidet sich Ihr Vorschlag vom bisherigen Plan?",
-              "translation": ""
+              "translation": "In what way does your proposal differ from the previous plan?"
             }
           ]
         },
@@ -5991,15 +5991,15 @@
           "sentences": [
             {
               "sentence": "Die Gr\u00fcnde, weshalb das Projekt scheiterte, sind vielf\u00e4ltig.",
-              "translation": ""
+              "translation": "There are many reasons why the project failed."
             },
             {
               "sentence": "Weshalb die Entscheidung so ausfiel, blieb unklar.",
-              "translation": ""
+              "translation": "Why the decision turned out this way remained unclear."
             },
             {
               "sentence": "Weshalb wurde die Sitzung so kurzfristig verschoben?",
-              "translation": ""
+              "translation": "Why was the meeting postponed at such short notice?"
             }
           ]
         },
@@ -6017,15 +6017,15 @@
           "sentences": [
             {
               "sentence": "Wodurch l\u00e4sst sich dieser Effekt erkl\u00e4ren?",
-              "translation": ""
+              "translation": "What can explain this effect?"
             },
             {
               "sentence": "Es ist unklar, wodurch der Schaden entstanden ist.",
-              "translation": ""
+              "translation": "It is unclear what caused the damage."
             },
             {
               "sentence": "Wodurch konnte das Problem schlie\u00dflich gel\u00f6st werden?",
-              "translation": ""
+              "translation": "How was the problem finally solved?"
             }
           ]
         },
@@ -6043,15 +6043,15 @@
           "sentences": [
             {
               "sentence": "Er stellte eine Frage, woraufhin alle schwiegen.",
-              "translation": ""
+              "translation": "He asked a question, after which everyone fell silent."
             },
             {
               "sentence": "Die Preise stiegen, woraufhin die Nachfrage einbrach.",
-              "translation": ""
+              "translation": "Prices rose, whereupon demand collapsed."
             },
             {
               "sentence": "Was geschah, woraufhin die Verhandlungen abgebrochen wurden?",
-              "translation": ""
+              "translation": "What happened that caused the negotiations to be broken off?"
             }
           ]
         },
@@ -6069,15 +6069,15 @@
           "sentences": [
             {
               "sentence": "Es gibt eine Regel, wonach Ausnahmen zul\u00e4ssig sind.",
-              "translation": ""
+              "translation": "There is a rule according to which exceptions are permitted."
             },
             {
               "sentence": "Wonach richtet sich eigentlich die Bewertung?",
-              "translation": ""
+              "translation": "What is the assessment actually based on?"
             },
             {
               "sentence": "Wonach richtet sich die endg\u00fcltige Bewertung?",
-              "translation": ""
+              "translation": "What is the final assessment based on?"
             }
           ]
         },
@@ -6095,15 +6095,15 @@
           "sentences": [
             {
               "sentence": "Womit l\u00e4sst sich diese Verz\u00f6gerung rechtfertigen?",
-              "translation": ""
+              "translation": "How can this delay be justified?"
             },
             {
               "sentence": "Er wusste nicht, womit er die Reaktion verdient hatte.",
-              "translation": ""
+              "translation": "He did not know what he had done to deserve the reaction."
             },
             {
               "sentence": "Womit begr\u00fcnden Sie Ihre Entscheidung?",
-              "translation": ""
+              "translation": "What grounds do you give for your decision?"
             }
           ]
         },
@@ -6121,15 +6121,15 @@
           "sentences": [
             {
               "sentence": "Worin besteht der eigentliche Unterschied?",
-              "translation": ""
+              "translation": "What is the actual difference?"
             },
             {
               "sentence": "Man sollte kl\u00e4ren, worin das Problem genau liegt.",
-              "translation": ""
+              "translation": "It should be clarified exactly what the problem is."
             },
             {
               "sentence": "Worin besteht der Vorteil dieser Methode?",
-              "translation": ""
+              "translation": "What is the advantage of this method?"
             }
           ]
         },
@@ -6147,15 +6147,15 @@
           "sentences": [
             {
               "sentence": "Weswegen wurde die Veranstaltung eigentlich abgesagt?",
-              "translation": ""
+              "translation": "Why was the event actually cancelled?"
             },
             {
               "sentence": "Er nannte keinen Grund, weswegen wir alle irritiert waren.",
-              "translation": ""
+              "translation": "He gave no reason, which puzzled us all."
             },
             {
               "sentence": "Weswegen haben Sie gegen den Beschluss gestimmt?",
-              "translation": ""
+              "translation": "Why did you vote against the resolution?"
             }
           ]
         },
@@ -6173,15 +6173,15 @@
           "sentences": [
             {
               "sentence": "Woran es letztlich gescheitert ist, wei\u00df niemand.",
-              "translation": ""
+              "translation": "No one knows what ultimately caused it to fail."
             },
             {
               "sentence": "Woran erkennt man ein seri\u00f6ses Angebot?",
-              "translation": ""
+              "translation": "How can you recognise a legitimate offer?"
             },
             {
               "sentence": "Woran l\u00e4sst sich die Qualit\u00e4t des Produkts erkennen?",
-              "translation": ""
+              "translation": "How can you recognise the quality of the product?"
             }
           ]
         },
@@ -6199,15 +6199,15 @@
           "sentences": [
             {
               "sentence": "Wovon h\u00e4ngt der Erfolg im Wesentlichen ab?",
-              "translation": ""
+              "translation": "What does success mainly depend on?"
             },
             {
               "sentence": "Es ist fraglich, wovon er eigentlich lebt.",
-              "translation": ""
+              "translation": "It is unclear what he actually lives on."
             },
             {
               "sentence": "Wovon h\u00e4ngt der Erfolg des Projekts ab?",
-              "translation": ""
+              "translation": "What does the success of the project depend on?"
             }
           ]
         }
@@ -6232,15 +6232,15 @@
           "sentences": [
             {
               "sentence": "Das ist in der Tat eine berechtigte Frage.",
-              "translation": ""
+              "translation": "That is indeed a valid question."
             },
             {
               "sentence": "Er hat in der Tat recht behalten.",
-              "translation": ""
+              "translation": "He did indeed turn out to be right."
             },
             {
               "sentence": "Ist das Ergebnis in der Tat besser als erwartet?",
-              "translation": ""
+              "translation": "Is the result indeed better than expected?"
             }
           ]
         },
@@ -6258,15 +6258,15 @@
           "sentences": [
             {
               "sentence": "Im Grunde genommen sind wir uns einig.",
-              "translation": ""
+              "translation": "Basically, we agree."
             },
             {
               "sentence": "Im Grunde genommen geht es nur ums Geld.",
-              "translation": ""
+              "translation": "Basically, it is only about money."
             },
             {
               "sentence": "Sind wir im Grunde genommen nicht derselben Meinung?",
-              "translation": ""
+              "translation": "Don't we basically share the same opinion?"
             }
           ]
         },
@@ -6284,15 +6284,15 @@
           "sentences": [
             {
               "sentence": "Der Plan ist riskant; nichtsdestotrotz halten wir daran fest.",
-              "translation": ""
+              "translation": "The plan is risky; nevertheless, we are sticking to it."
             },
             {
               "sentence": "Es war anstrengend, nichtsdestotrotz hat es sich gelohnt.",
-              "translation": ""
+              "translation": "It was exhausting; nevertheless, it was worth it."
             },
             {
               "sentence": "War die Aufgabe schwierig und nichtsdestotrotz interessant?",
-              "translation": ""
+              "translation": "Was the task difficult but nevertheless interesting?"
             }
           ]
         },
@@ -6310,15 +6310,15 @@
           "sentences": [
             {
               "sentence": "Unter dem Strich war das Jahr erfolgreich.",
-              "translation": ""
+              "translation": "Overall, the year was successful."
             },
             {
               "sentence": "Unter dem Strich z\u00e4hlt nur das Ergebnis.",
-              "translation": ""
+              "translation": "In the end, only the result counts."
             },
             {
               "sentence": "War das Projekt unter dem Strich erfolgreich?",
-              "translation": ""
+              "translation": "Was the project successful overall?"
             }
           ]
         },
@@ -6336,15 +6336,15 @@
           "sentences": [
             {
               "sentence": "Es gibt Probleme, das l\u00e4sst sich nicht leugnen.",
-              "translation": ""
+              "translation": "There are problems; that cannot be denied."
             },
             {
               "sentence": "Sein Talent l\u00e4sst sich nicht leugnen.",
-              "translation": ""
+              "translation": "His talent cannot be denied."
             },
             {
               "sentence": "Die Lage hat sich verbessert, das l\u00e4sst sich nicht leugnen, oder?",
-              "translation": ""
+              "translation": "The situation has improved; that cannot be denied, can it?"
             }
           ]
         },
@@ -6362,15 +6362,15 @@
           "sentences": [
             {
               "sentence": "Es liegt auf der Hand, dass wir handeln m\u00fcssen.",
-              "translation": ""
+              "translation": "It is obvious that we must act."
             },
             {
               "sentence": "Die L\u00f6sung liegt eigentlich auf der Hand.",
-              "translation": ""
+              "translation": "The solution is actually obvious."
             },
             {
               "sentence": "Liegt es nicht auf der Hand, dass wir handeln m\u00fcssen?",
-              "translation": ""
+              "translation": "Isn't it obvious that we must act?"
             }
           ]
         },
@@ -6388,15 +6388,15 @@
           "sentences": [
             {
               "sentence": "In Anbetracht der Umst\u00e4nde war das eine gute Leistung.",
-              "translation": ""
+              "translation": "Considering the circumstances, that was a good performance."
             },
             {
               "sentence": "In Anbetracht der Zeit sollten wir zum Schluss kommen.",
-              "translation": ""
+              "translation": "In view of the time, we should wrap things up."
             },
             {
               "sentence": "War die Leistung in Anbetracht der Umst\u00e4nde gut?",
-              "translation": ""
+              "translation": "Was the performance good considering the circumstances?"
             }
           ]
         },
@@ -6414,15 +6414,15 @@
           "sentences": [
             {
               "sentence": "Um es auf den Punkt zu bringen: So geht es nicht weiter.",
-              "translation": ""
+              "translation": "To put it plainly, things cannot go on like this."
             },
             {
               "sentence": "Um es auf den Punkt zu bringen, fehlt uns schlicht das Geld.",
-              "translation": ""
+              "translation": "To put it plainly, we simply do not have the money."
             },
             {
               "sentence": "Wie w\u00fcrden Sie das Problem, um es auf den Punkt zu bringen, beschreiben?",
-              "translation": ""
+              "translation": "To get straight to the point, how would you describe the problem?"
             }
           ]
         },
@@ -6440,15 +6440,15 @@
           "sentences": [
             {
               "sentence": "So gesehen hast du eigentlich recht.",
-              "translation": ""
+              "translation": "Seen that way, you are actually right."
             },
             {
               "sentence": "So gesehen war die Versp\u00e4tung sogar ein Gl\u00fcck.",
-              "translation": ""
+              "translation": "Seen that way, the delay was even a stroke of luck."
             },
             {
               "sentence": "War die Verz\u00f6gerung so gesehen vielleicht sogar hilfreich?",
-              "translation": ""
+              "translation": "Seen that way, might the delay even have been helpful?"
             }
           ]
         },
@@ -6466,15 +6466,15 @@
           "sentences": [
             {
               "sentence": "Im Nachhinein h\u00e4tte ich anders entschieden.",
-              "translation": ""
+              "translation": "In hindsight, I would have decided differently."
             },
             {
               "sentence": "Im Nachhinein ist man immer kl\u00fcger.",
-              "translation": ""
+              "translation": "You are always wiser after the event."
             },
             {
               "sentence": "Was w\u00fcrden Sie im Nachhinein anders machen?",
-              "translation": ""
+              "translation": "What would you do differently in hindsight?"
             }
           ]
         },
@@ -6492,15 +6492,15 @@
           "sentences": [
             {
               "sentence": "Er kann kaum laufen, geschweige denn rennen.",
-              "translation": ""
+              "translation": "He can barely walk, let alone run."
             },
             {
               "sentence": "Ich habe keine Zeit f\u00fcr Hobbys, geschweige denn f\u00fcr Urlaub.",
-              "translation": ""
+              "translation": "I have no time for hobbies, let alone holidays."
             },
             {
               "sentence": "Er kann kaum stehen, geschweige denn laufen, nicht wahr?",
-              "translation": ""
+              "translation": "He can barely stand, let alone walk, can he?"
             }
           ]
         },
@@ -6518,15 +6518,15 @@
           "sentences": [
             {
               "sentence": "Aus meiner Sicht \u00fcberwiegen die Vorteile.",
-              "translation": ""
+              "translation": "In my view, the advantages outweigh the disadvantages."
             },
             {
               "sentence": "Aus meiner Sicht war das die richtige Entscheidung.",
-              "translation": ""
+              "translation": "In my view, that was the right decision."
             },
             {
               "sentence": "Welche L\u00f6sung ist aus Ihrer Sicht am besten?",
-              "translation": ""
+              "translation": "Which solution is best in your view?"
             }
           ]
         },
@@ -6544,15 +6544,15 @@
           "sentences": [
             {
               "sentence": "Letzten Endes z\u00e4hlt, dass alle zufrieden sind.",
-              "translation": ""
+              "translation": "Ultimately, what matters is that everyone is satisfied."
             },
             {
               "sentence": "Letzten Endes muss jeder selbst entscheiden.",
-              "translation": ""
+              "translation": "Ultimately, everyone has to decide for themselves."
             },
             {
               "sentence": "Wer tr\u00e4gt letzten Endes die Verantwortung?",
-              "translation": ""
+              "translation": "Who ultimately bears responsibility?"
             }
           ]
         },
@@ -6570,15 +6570,15 @@
           "sentences": [
             {
               "sentence": "Genau genommen ist das gar nicht meine Aufgabe.",
-              "translation": ""
+              "translation": "Strictly speaking, that is not my job at all."
             },
             {
               "sentence": "Genau genommen begann alles schon viel fr\u00fcher.",
-              "translation": ""
+              "translation": "Strictly speaking, it all began much earlier."
             },
             {
               "sentence": "Wann hat das Projekt genau genommen begonnen?",
-              "translation": ""
+              "translation": "When exactly did the project begin?"
             }
           ]
         },
@@ -6596,15 +6596,15 @@
           "sentences": [
             {
               "sentence": "Lohnt sich das? \u2013 Das kommt ganz darauf an.",
-              "translation": ""
+              "translation": "Is it worth it? That depends."
             },
             {
               "sentence": "Das kommt ganz darauf an, wie man es betrachtet.",
-              "translation": ""
+              "translation": "That depends entirely on how you look at it."
             },
             {
               "sentence": "Ist die Aufgabe einfach, oder kommt das ganz darauf an?",
-              "translation": ""
+              "translation": "Is the task easy, or does it depend entirely on the circumstances?"
             }
           ]
         }
