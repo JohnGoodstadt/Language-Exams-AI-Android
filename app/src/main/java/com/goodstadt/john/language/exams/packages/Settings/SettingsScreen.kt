@@ -1,10 +1,5 @@
 package com.goodstadt.john.language.exams.packages.Settings
 
-import androidx.compose.material.icons.filled.ThumbUp
-import androidx.compose.material.icons.filled.CloudDownload
-import androidx.compose.material.icons.filled.Refresh
-import com.goodstadt.john.language.exams.screens.shared.SessionFeedbackManager
-import com.goodstadt.john.language.exams.screens.shared.rememberSessionFeedbackManager
 import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
@@ -32,16 +27,19 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.Login
 import androidx.compose.material.icons.automirrored.filled.Logout
 import androidx.compose.material.icons.filled.AccessibilityNew
+import androidx.compose.material.icons.filled.CardGiftcard
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.CheckCircle
+import androidx.compose.material.icons.filled.CloudDownload
 import androidx.compose.material.icons.filled.CloudSync
-import androidx.compose.material.icons.filled.CardGiftcard
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Palette
 import androidx.compose.material.icons.filled.RecordVoiceOver
+import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.School
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.Stars
+import androidx.compose.material.icons.filled.ThumbUp
 import androidx.compose.material.icons.filled.Translate
 import androidx.compose.material.icons.filled.Verified
 import androidx.compose.material.icons.filled.WorkspacePremium
@@ -99,6 +97,8 @@ import com.goodstadt.john.language.exams.packages.me.SignInBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.shared.HelpInfoSheet
+import com.goodstadt.john.language.exams.screens.shared.SessionFeedbackManager
+import com.goodstadt.john.language.exams.screens.shared.rememberSessionFeedbackManager
 import com.goodstadt.john.language.exams.screens.shared.speakerSelection.VoiceCategoryDropdownHeader
 import com.goodstadt.john.language.exams.screens.shared.speakerSelection.VoiceSelectionRow
 import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
@@ -641,7 +641,7 @@ private fun SettingsContent(
                 badge = "Beta",
                 // What it does and why (same wording as iOS).
                 currentValue = if (isPurchased)
-                    "Save sentence audio to this device, so vocab and Reference pages still play with no internet (e.g. on a plane)"
+                    "Save sentence audio to this device, so sentences still play with no internet (e.g. on a plane)"
                 else
                     "Premium: save sentence audio to this device, so vocab and Reference pages still play with no internet",
                 onClick = onShowOffline
