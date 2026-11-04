@@ -24,6 +24,7 @@ import kotlinx.serialization.Serializable
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
+import kotlinx.coroutines.CancellationException
 import timber.log.Timber
 import java.io.File
 import javax.inject.Inject
@@ -73,6 +74,10 @@ class OfflineAudioDownloader @Inject constructor(
         const val ESTIMATED_BYTES_PER_FILE = 25_000
         const val WAITING_FOR_WIFI = "Waiting for Wi-Fi"
         const val WAITING_FOR_CONNECTION = "Waiting for a connection"
+        /** Logcat tag for every download line. Info level, so release builds show them too (RELEASE_LOGCAT). */
+        private const val TAG = "OfflineDL"
+        /** "not in cloud" lines logged per run; the rest are only counted, to keep Logcat readable. */
+        private const val MAX_MISSING_LOGGED = 30
 
         fun packId(sheetName: String, voice: String) = "vocab-$sheetName-$voice"
         fun referencePackId(language: String, voice: String) = "reference-$language-$voice"
@@ -118,11 +123,16 @@ class OfflineAudioDownloader @Inject constructor(
             ),
         )
 
-        private val levelVocab = Regex("(A1|A2|B1|B2)Vocab")
-
-        /** "GermanA1Vocab" -> "German": the language prefix used by [referenceSheets]. */
-        fun languagePrefix(currentSheet: String): String? =
-            levelVocab.find(currentSheet)?.let { currentSheet.substring(0, it.range.first) }
+        /**
+         * The language prefix used by [referenceSheets] ("German" / "English"), from the build flavour. The current
+         * sheet name can't be used: on Android it is the resource name ("vocab_data_a1"), not "GermanA1Vocab".
+         */
+        @Suppress("UNUSED_PARAMETER")
+        fun languagePrefix(currentSheet: String): String? = when (com.goodstadt.john.language.exams.BuildConfig.FLAVOR) {
+            "de" -> "German"
+            "en" -> "English"
+            else -> null
+        }
     }
 
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
@@ -152,6 +162,8 @@ class OfflineAudioDownloader @Inject constructor(
         val items: suspend () -> List<OfflineAudioItem>
     )
     private var current: Running? = null
+
+    private fun log(message: String) = Timber.tag(TAG).i(message)
 
     init {
         loadRecords()
@@ -226,7 +238,11 @@ class OfflineAudioDownloader @Inject constructor(
         }, allowCellular)
 
     private fun startPack(pack: Running, allowCellular: Boolean) {
-        if (job?.isActive == true || _runningPackId.value != null) return
+        if (job?.isActive == true || _runningPackId.value != null) {
+            log("start ${pack.id} ignored - ${_runningPackId.value} is already running")
+            return
+        }
+        log("start ${pack.id} sheet=${pack.sheetName} level=${pack.level} voice=${pack.voice} connection=${_connection.value} allowCellular=$allowCellular")
         this.allowCellular = allowCellular
         current = pack
         _isPaused.value = false
@@ -236,6 +252,7 @@ class OfflineAudioDownloader @Inject constructor(
 
     fun pause(reason: String = "Paused") {
         if (_runningPackId.value == null || _isPaused.value) return
+        log("pause ${_runningPackId.value} - $reason (${_done.value} of ${_total.value} done)")
         _isPaused.value = true
         _pauseReason.value = reason
         job?.cancel()
@@ -243,6 +260,7 @@ class OfflineAudioDownloader @Inject constructor(
 
     fun resume() {
         if (!_isPaused.value || current == null) return
+        log("resume ${current?.id} (was: ${_pauseReason.value})")
         scope.launch {
             job?.join()
             _isPaused.value = false
@@ -265,7 +283,7 @@ class OfflineAudioDownloader @Inject constructor(
         record.added.filter { it !in others }.forEach { if (File(context.filesDir, it).delete()) deleted++ }
         _records.value = _records.value - packId
         saveRecords()
-        Timber.d("Offline: removed $packId - deleted $deleted files")
+        log("removed $packId - deleted $deleted files (${record.added.size} added by the pack, ${record.alreadyHad.size} kept as already heard)")
     }
 
     private fun launchRun() {
@@ -280,9 +298,11 @@ class OfflineAudioDownloader @Inject constructor(
         val alreadyHad = existing?.alreadyHad?.toMutableSet() ?: mutableSetOf()
         var unavailable = 0
         var total = existing?.total ?: 0
+        var missingLogged = 0
         try {
             val sentences = items()
             total = sentences.size
+            log("$id: $total sentences to cover" + if (total == 0) " - NONE: the sheet did not load (check the vocab/reference sheet)" else "")
             val toFetch = sentences.filter { item ->
                 val name = localName(item.text, item.voice)
                 // A tapped file cached under the old Android name counts as already on the device.
@@ -294,6 +314,7 @@ class OfflineAudioDownloader @Inject constructor(
             }
             _total.value = total
             _done.value = total - toFetch.size
+            log("$id: ${total - toFetch.size} already on device, ${toFetch.size} to fetch from the cloud")
             saveRecord(id, sheetName, level, voice, total, added, alreadyHad, unavailable)
 
             // Started while offline (the network callback may not have reported it yet): wait instead of hanging.
@@ -311,21 +332,37 @@ class OfflineAudioDownloader @Inject constructor(
                 // Every file in the batch failed for a reason other than "not in the cloud": treat it as no
                 // connection, so pause (Resume retries this batch) rather than mark the files unavailable.
                 if (results.all { it.second == FirebaseAudioService.CloudFetch.FAILED }) {
-                    Timber.d("Offline: batch failed - pausing")
+                    log("$id: a whole batch of ${batch.size} failed (no connection or timeout) - pausing")
                     pause(WAITING_FOR_CONNECTION)
                     break
                 }
                 for ((item, r) in results) {
-                    if (r == FirebaseAudioService.CloudFetch.OK) added += localName(item.text, item.voice) else unavailable++
+                    if (r == FirebaseAudioService.CloudFetch.OK) {
+                        added += localName(item.text, item.voice)
+                    } else {
+                        unavailable++
+                        // The file name to look for in Cloud Storage (audio_cache/), plus the sentence.
+                        if (missingLogged++ < MAX_MISSING_LOGGED) log("$id: $r ${localName(item.text, item.voice)} \"${item.text.take(50)}\"")
+                    }
                 }
                 _done.value += batch.size
                 sinceSave += batch.size
                 if (sinceSave >= 50) {
+                    log("$id: progress ${_done.value} of $total - added ${added.size}, not available $unavailable")
                     saveRecord(id, sheetName, level, voice, total, added, alreadyHad, unavailable)
                     sinceSave = 0
                 }
             }
-            Timber.d("Offline: $id finished - $total sentences, added ${added.size}, had ${alreadyHad.size}, unavailable $unavailable")
+            if (!_isPaused.value) {
+                if (missingLogged > MAX_MISSING_LOGGED) log("$id: … ${missingLogged - MAX_MISSING_LOGGED} more not available (not logged)")
+                log("$id: FINISHED - $total sentences: added ${added.size}, already had ${alreadyHad.size}, not available $unavailable" +
+                    if (unavailable == 0 && added.size + alreadyHad.size >= total) " -> Ready offline" else "")
+            }
+        } catch (e: CancellationException) {
+            throw e
+        } catch (e: Exception) {
+            Timber.tag(TAG).e(e, "$id: download stopped by an error")
+            throw e
         } finally {
             withContext(NonCancellable) {
                 saveRecord(id, sheetName, level, voice, total, added, alreadyHad, unavailable)
@@ -362,6 +399,7 @@ class OfflineAudioDownloader @Inject constructor(
         c == OfflineConnection.WIFI || (c == OfflineConnection.CELLULAR && allowCellular)
 
     private fun networkChanged(c: OfflineConnection) {
+        if (c != _connection.value) log("network ${_connection.value} -> $c" + (_runningPackId.value?.let { " (running $it)" } ?: ""))
         _connection.value = c
         if (_runningPackId.value == null) return
         val ok = connectionAllowed(c)

@@ -1,6 +1,8 @@
 package com.goodstadt.john.language.exams.packages.Settings
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -113,6 +115,7 @@ class OfflineDownloadViewModel @Inject constructor(
                 ?.takeIf { OfflineAudioDownloader.referenceSheets.containsKey(it) }
             _reference.value = language?.let {
                 val items = downloader.referenceItems(it, voice)
+                timber.log.Timber.tag("OfflineDL").i("Reference pages ($it, $voice): ${items.size} sentences, ${downloader.onDeviceCount(items)} on device")
                 OfflineReferenceRow(it, items.size, downloader.onDeviceCount(items))
             }
         }
@@ -176,7 +179,12 @@ fun OfflineDownloadSheet(
         onDismissRequest = onDismiss,
         sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
     ) {
-        Column(modifier = Modifier.padding(horizontal = 20.dp).padding(bottom = 32.dp)) {
+        Column(
+            modifier = Modifier
+                .verticalScroll(rememberScrollState())
+                .padding(horizontal = 20.dp)
+                .padding(bottom = 32.dp)
+        ) {
             Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 Text("Download for Offline", style = MaterialTheme.typography.titleLarge)
                 BetaBadge()
@@ -244,7 +252,7 @@ fun OfflineDownloadSheet(
                 }
             }
 
-            reference?.let { ref ->
+            if (OfflineAudioDownloader.languagePrefix("") != null) {
                 HorizontalDivider(modifier = Modifier.padding(top = 8.dp))
                 Text(
                     "REFERENCE PAGES",
@@ -252,6 +260,10 @@ fun OfflineDownloadSheet(
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                     modifier = Modifier.padding(top = 16.dp, bottom = 8.dp)
                 )
+                // Counting the Reference sentences reads ~35 sheets, so show progress until it's done.
+                if (reference == null) CircularProgressIndicator(modifier = Modifier.padding(16.dp))
+            }
+            reference?.let { ref ->
                 val id = OfflineAudioDownloader.referencePackId(ref.language, voice)
                 PackRowView(
                     title = "Reference pages",
