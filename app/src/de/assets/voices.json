@@ -1,50 +1,50 @@
  [
 	{
 		"id": "de-DE-Standard-G",
-		"friendlyName": "Emilia", "gender": 0
+		"friendlyName": "Emma (Slower Speaker)", "gender": 0
 	},
 	{
 		"id": "de-DE-Chirp-HD-F",
-		"friendlyName": "Sofia", "gender": 0
+		"friendlyName": "Maria", "gender": 0
 	},
 	{
 		"id": "de-DE-Chirp-HD-O",
-		"friendlyName": "Lina", "gender": 0
+		"friendlyName": "Hannah", "gender": 0
 	},
 	{
 		"id": "de-DE-Chirp3-HD-Erinome",
-		"friendlyName": "Mila", "gender": 0
+		"friendlyName": "Emilia", "gender": 0
 	},
 	{
 		"id": "de-DE-Chirp3-HD-Leda",
-		"friendlyName": "Lea", "gender": 0
+		"friendlyName": "Sofia", "gender": 0
 	},
 	{
 		"id": "de-DE-Chirp3-HD-Sulafat",
-		"friendlyName": "Lena", "gender": 0
+		"friendlyName": "Lina", "gender": 0
 	},
 
 
 
 	{
 		"id": "de-DE-Standard-H",
-		"friendlyName": "Finn", "gender": 1
+		"friendlyName": "Ben (Slower Speaker)", "gender": 1
 	},
 	{
 		"id": "de-DE-Chirp-HD-D",
-		"friendlyName": "Jonas", "gender": 1
+		"friendlyName": "Paul", "gender": 1
 	},
 	{
 		"id": "de-DE-Chirp3-HD-Algenib",
-		"friendlyName": "Luis", "gender": 1
+		"friendlyName": "Finn", "gender": 1
 	},
 	{
 		"id": "de-DE-Chirp3-HD-Charon",
-		"friendlyName": "Noah", "gender": 1
+		"friendlyName": "Luis", "gender": 1
 	},
 	{
 		"id": "de-DE-Chirp3-HD-Sadachbia",
-		"friendlyName": "Felix", "gender": 1
+		"friendlyName": "Noah", "gender": 1
 	},
 	{
 		"id": "de-DE-Chirp3-HD-Schedar",
