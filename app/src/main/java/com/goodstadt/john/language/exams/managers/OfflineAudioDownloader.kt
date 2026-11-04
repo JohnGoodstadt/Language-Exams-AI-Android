@@ -4,6 +4,7 @@ import android.content.Context
 import android.net.ConnectivityManager
 import android.net.Network
 import android.net.NetworkCapabilities
+import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.repository.ContentRepository
 import com.goodstadt.john.language.exams.data.repository.FirebaseAudioService
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -18,6 +19,9 @@ import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.ensureActive
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.Serializable
@@ -66,6 +70,7 @@ enum class ReferenceFormat { VOCAB, FORMAT1, FORMAT2, FORMAT6, FORMAT8, FORMAT9 
 class OfflineAudioDownloader @Inject constructor(
     @ApplicationContext private val context: Context,
     private val contentRepository: ContentRepository,
+    private val prefs: UserPreferencesRepository,
 ) {
     companion object {
         private const val PARALLEL_DOWNLOADS = 5
@@ -168,6 +173,27 @@ class OfflineAudioDownloader @Inject constructor(
     init {
         loadRecords()
         watchNetwork()
+        cacheSelectedVocabSheet()
+    }
+
+    /**
+     * Fetch the chosen level's vocab JSON into the disk cache as soon as the level changes (or the device comes
+     * back online), not only when tab 1 is opened, so a user who changes level and then goes offline still has it.
+     * Waits for a connection: offline, the load would only fall back to the bundle.
+     */
+    private fun cacheSelectedVocabSheet() {
+        scope.launch {
+            combine(
+                prefs.selectedFileNameFlow.distinctUntilChanged(),
+                _connection.map { it != OfflineConnection.NONE }.distinctUntilChanged(),
+            ) { sheet, online -> sheet to online }
+                .collect { (sheet, online) ->
+                    if (!online || sheet.isBlank()) return@collect
+                    val words = contentRepository.getFormat0Data(sheet).getOrNull()
+                        ?.categories?.sumOf { it.words.size }
+                    log("level sheet $sheet cached: ${words?.let { "$it words" } ?: "FAILED"}")
+                }
+        }
     }
 
     // MARK: Sentences
