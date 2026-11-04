@@ -44,7 +44,7 @@
             },
             {
               "sentence": "Sie sagt freundlich Hallo.",
-              "translation": ""
+              "translation": "She says hello in a friendly way."
             }
           ]
         },
@@ -62,15 +62,15 @@
           "sentences": [
             {
               "sentence": "Guten Morgen! Hast du gut geschlafen?",
-              "translation": ""
+              "translation": "Good morning! Did you sleep well?"
             },
             {
               "sentence": "Guten Morgen, Frau Meyer.",
-              "translation": ""
+              "translation": "Good morning, Mrs Meyer."
             },
             {
               "sentence": "Wir sagen morgens Guten Morgen.",
-              "translation": ""
+              "translation": "We say good morning in the morning."
             }
           ]
         },
@@ -88,15 +88,15 @@
           "sentences": [
             {
               "sentence": "Guten Tag, Herr Schmidt.",
-              "translation": ""
+              "translation": "Good day, Mr Schmidt."
             },
             {
               "sentence": "Guten Tag! Wie geht es Ihnen?",
-              "translation": ""
+              "translation": "Hello! How are you?"
             },
             {
               "sentence": "Der Lehrer sagt Guten Tag.",
-              "translation": ""
+              "translation": "The teacher says good day."
             }
           ]
         },
@@ -114,15 +114,15 @@
           "sentences": [
             {
               "sentence": "Guten Abend! Sch\u00f6n, dich zu sehen.",
-              "translation": ""
+              "translation": "Good evening! Nice to see you."
             },
             {
               "sentence": "Guten Abend, willkommen!",
-              "translation": ""
+              "translation": "Good evening, welcome!"
             },
             {
               "sentence": "Sagst du am Abend \u201eGuten Abend\u201c?",
-              "translation": ""
+              "translation": "Do you say \"good evening\" in the evening?"
             }
           ]
         },
@@ -140,15 +140,15 @@
           "sentences": [
             {
               "sentence": "Gute Nacht, schlaf gut!",
-              "translation": ""
+              "translation": "Good night, sleep well!"
             },
             {
               "sentence": "Ich bin m\u00fcde. Gute Nacht!",
-              "translation": ""
+              "translation": "I'm tired. Good night!"
             },
             {
               "sentence": "Sagst du vor dem Schlafen \u201eGute Nacht\u201c?",
-              "translation": ""
+              "translation": "Do you say \"good night\" before going to sleep?"
             }
           ]
         },
@@ -166,7 +166,7 @@
           "sentences": [
             {
               "sentence": "Tsch\u00fcss, bis morgen!",
-              "translation": ""
+              "translation": "Bye, see you tomorrow!"
             },
             {
               "sentence": "Tsch\u00fcss, mach's gut!",
@@ -174,7 +174,7 @@
             },
             {
               "sentence": "Sagst du jetzt Tsch\u00fcss?",
-              "translation": ""
+              "translation": "Are you saying bye now?"
             }
           ]
         },
@@ -192,15 +192,15 @@
           "sentences": [
             {
               "sentence": "Auf Wiedersehen, Frau Klein.",
-              "translation": ""
+              "translation": "Goodbye, Mrs Klein."
             },
             {
               "sentence": "Danke und auf Wiedersehen!",
-              "translation": ""
+              "translation": "Thank you and goodbye!"
             },
             {
               "sentence": "Sagen Sie beim Gehen \u201eAuf Wiedersehen\u201c?",
-              "translation": ""
+              "translation": "Do you say \"goodbye\" when you leave?"
             }
           ]
         },
@@ -214,19 +214,19 @@
           "partOfSpeech": "Redewendung",
           "id": 8,
           "romanisation": "",
-          "translation": "",
+          "translation": "What's your name? (informal)",
           "sentences": [
             {
               "sentence": "Hallo, wie hei\u00dft du?",
-              "translation": ""
+              "translation": "Hello, what's your name?"
             },
             {
               "sentence": "Wie hei\u00dft du mit Vornamen?",
-              "translation": ""
+              "translation": "What's your first name?"
             },
             {
               "sentence": "Sie m\u00f6chte wissen: Wie hei\u00dft du?",
-              "translation": ""
+              "translation": "She wants to know: what's your name?"
             }
           ]
         },
@@ -240,19 +240,19 @@
           "partOfSpeech": "Redewendung",
           "id": 9,
           "romanisation": "",
-          "translation": "",
+          "translation": "My name is",
           "sentences": [
             {
               "sentence": "Ich hei\u00dfe Anna.",
-              "translation": ""
+              "translation": "My name is Anna."
             },
             {
               "sentence": "Ich hei\u00dfe Tom und komme aus Berlin.",
-              "translation": ""
+              "translation": "My name is Tom and I'm from Berlin."
             },
             {
               "sentence": "Kannst du sagen: \u201eIch hei\u00dfe Mia\u201c?",
-              "translation": ""
+              "translation": "Can you say: \"My name is Mia\"?"
             }
           ]
         },
@@ -266,19 +266,19 @@
           "partOfSpeech": "Redewendung",
           "id": 10,
           "romanisation": "",
-          "translation": "",
+          "translation": "How are you? (informal)",
           "sentences": [
             {
               "sentence": "Hallo Maria, wie geht es dir?",
-              "translation": ""
+              "translation": "Hello Maria, how are you?"
             },
             {
               "sentence": "Wie geht es dir heute?",
-              "translation": ""
+              "translation": "How are you today?"
             },
             {
               "sentence": "Paul fragt mich: Wie geht es dir?",
-              "translation": ""
+              "translation": "Paul asks me: how are you?"
             }
           ]
         },
@@ -292,19 +292,19 @@
           "partOfSpeech": "Redewendung",
           "id": 11,
           "romanisation": "",
-          "translation": "",
+          "translation": "I'm fine",
           "sentences": [
             {
               "sentence": "Danke, mir geht es gut.",
-              "translation": ""
+              "translation": "Thanks, I'm fine."
             },
             {
               "sentence": "Mir geht es gut, und dir?",
-              "translation": ""
+              "translation": "I'm fine, and you?"
             },
             {
               "sentence": "Heute kann ich sagen: Mir geht es gut.",
-              "translation": ""
+              "translation": "Today I can say: I'm fine."
             }
           ]
         },
@@ -318,19 +318,19 @@
           "partOfSpeech": "Redewendung",
           "id": 12,
           "romanisation": "",
-          "translation": "",
+          "translation": "Nice to meet you",
           "sentences": [
             {
               "sentence": "Freut mich, dich kennenzulernen.",
-              "translation": ""
+              "translation": "Nice to meet you."
             },
             {
               "sentence": "Guten Tag! Freut mich sehr.",
-              "translation": ""
+              "translation": "Hello! Very nice to meet you."
             },
             {
               "sentence": "Sagst du auch \u201eFreut mich\u201c?",
-              "translation": ""
+              "translation": "Do you say \"nice to meet you\" too?"
             }
           ]
         },
@@ -344,19 +344,19 @@
           "partOfSpeech": "Interjektion",
           "id": 13,
           "romanisation": "",
-          "translation": "",
+          "translation": "Welcome",
           "sentences": [
             {
               "sentence": "Herzlich willkommen!",
-              "translation": ""
+              "translation": "A warm welcome!"
             },
             {
               "sentence": "Willkommen in Deutschland!",
-              "translation": ""
+              "translation": "Welcome to Germany!"
             },
             {
               "sentence": "Bist du hier willkommen?",
-              "translation": ""
+              "translation": "Are you welcome here?"
             }
           ]
         },
@@ -374,15 +374,15 @@
           "sentences": [
             {
               "sentence": "Tsch\u00fcss, bis bald!",
-              "translation": ""
+              "translation": "Bye, see you soon!"
             },
             {
               "sentence": "Bis bald, ich muss jetzt gehen.",
-              "translation": ""
+              "translation": "See you soon, I have to go now."
             },
             {
               "sentence": "Sagen wir jetzt \u201eBis bald\u201c?",
-              "translation": ""
+              "translation": "Shall we say \"see you soon\" now?"
             }
           ]
         },
@@ -396,19 +396,19 @@
           "partOfSpeech": "Gru\u00dfformel",
           "id": 15,
           "romanisation": "",
-          "translation": "",
+          "translation": "See you tomorrow",
           "sentences": [
             {
               "sentence": "Gute Nacht, bis morgen!",
-              "translation": ""
+              "translation": "Good night, see you tomorrow!"
             },
             {
               "sentence": "Bis morgen in der Schule.",
-              "translation": ""
+              "translation": "See you tomorrow at school."
             },
             {
               "sentence": "Sehen wir uns bis morgen?",
-              "translation": ""
+              "translation": "Will we see each other tomorrow?"
             }
           ]
         },
@@ -511,15 +511,15 @@
           "sentences": [
             {
               "sentence": "Mein Name ist Julia.",
-              "translation": ""
+              "translation": "My name is Julia."
             },
             {
               "sentence": "Wie ist Ihr Name, bitte?",
-              "translation": ""
+              "translation": "What is your name, please?"
             },
             {
               "sentence": "Der Name steht auf der Liste.",
-              "translation": ""
+              "translation": "The name is on the list."
             }
           ]
         },
@@ -537,7 +537,7 @@
           "sentences": [
             {
               "sentence": "Mein Vorname ist Peter.",
-              "translation": ""
+              "translation": "My first name is Peter."
             },
             {
               "sentence": "Bitte schreiben Sie Ihren Vornamen.",
@@ -545,7 +545,7 @@
             },
             {
               "sentence": "Ist Anna dein Vorname?",
-              "translation": ""
+              "translation": "Is Anna your first name?"
             }
           ]
         },
@@ -563,15 +563,15 @@
           "sentences": [
             {
               "sentence": "Mein Nachname ist M\u00fcller.",
-              "translation": ""
+              "translation": "My surname is M\u00fcller."
             },
             {
               "sentence": "Wie ist dein Nachname?",
-              "translation": ""
+              "translation": "What is your surname?"
             },
             {
               "sentence": "M\u00fcller ist ein h\u00e4ufiger Nachname.",
-              "translation": ""
+              "translation": "M\u00fcller is a common surname."
             }
           ]
         },
@@ -589,15 +589,15 @@
           "sentences": [
             {
               "sentence": "Meine Adresse ist Hauptstra\u00dfe 5.",
-              "translation": ""
+              "translation": "My address is Hauptstra\u00dfe 5."
             },
             {
               "sentence": "Wie ist deine Adresse?",
-              "translation": ""
+              "translation": "What is your address?"
             },
             {
               "sentence": "Die Adresse steht auf dem Brief.",
-              "translation": ""
+              "translation": "The address is on the letter."
             }
           ]
         },
@@ -615,15 +615,15 @@
           "sentences": [
             {
               "sentence": "Ich wohne in einer gro\u00dfen Stadt.",
-              "translation": ""
+              "translation": "I live in a big city."
             },
             {
               "sentence": "Aus welcher Stadt kommst du?",
-              "translation": ""
+              "translation": "Which city are you from?"
             },
             {
               "sentence": "Berlin ist eine Stadt in Deutschland.",
-              "translation": ""
+              "translation": "Berlin is a city in Germany."
             }
           ]
         },
@@ -641,15 +641,15 @@
           "sentences": [
             {
               "sentence": "Deutschland ist ein sch\u00f6nes Land.",
-              "translation": ""
+              "translation": "Germany is a beautiful country."
             },
             {
               "sentence": "Aus welchem Land kommst du?",
-              "translation": ""
+              "translation": "Which country are you from?"
             },
             {
               "sentence": "Italien ist ein Land in Europa.",
-              "translation": ""
+              "translation": "Italy is a country in Europe."
             }
           ]
         },
@@ -663,19 +663,19 @@
           "partOfSpeech": "Nomen",
           "id": 22,
           "romanisation": "",
-          "translation": "",
+          "translation": "the phone number",
           "sentences": [
             {
               "sentence": "Wie ist deine Telefonnummer?",
-              "translation": ""
+              "translation": "What is your phone number?"
             },
             {
               "sentence": "Meine Telefonnummer ist neu.",
-              "translation": ""
+              "translation": "My phone number is new."
             },
             {
               "sentence": "Ich notiere deine Telefonnummer.",
-              "translation": ""
+              "translation": "I'm writing down your phone number."
             }
           ]
         },
@@ -689,19 +689,19 @@
           "partOfSpeech": "Nomen",
           "id": 23,
           "romanisation": "",
-          "translation": "",
+          "translation": "the email address",
           "sentences": [
             {
               "sentence": "Wie ist deine E-Mail-Adresse?",
-              "translation": ""
+              "translation": "What is your email address?"
             },
             {
               "sentence": "Ich schreibe eine E-Mail.",
-              "translation": ""
+              "translation": "I'm writing an email."
             },
             {
               "sentence": "Meine E-Mail-Adresse steht hier.",
-              "translation": ""
+              "translation": "My email address is here."
             }
           ]
         },
@@ -719,15 +719,15 @@
           "sentences": [
             {
               "sentence": "Mein Alter ist 25 Jahre.",
-              "translation": ""
+              "translation": "My age is 25."
             },
             {
               "sentence": "Das Alter spielt keine Rolle.",
-              "translation": ""
+              "translation": "Age doesn't matter."
             },
             {
               "sentence": "Ist sein Alter wichtig?",
-              "translation": ""
+              "translation": "Is his age important?"
             }
           ]
         },
@@ -745,7 +745,7 @@
           "sentences": [
             {
               "sentence": "Was ist dein Beruf?",
-              "translation": ""
+              "translation": "What is your job?"
             },
             {
               "sentence": "Mein Beruf ist Lehrer.",
@@ -753,7 +753,7 @@
             },
             {
               "sentence": "Sie sucht einen neuen Beruf.",
-              "translation": ""
+              "translation": "She is looking for a new career."
             }
           ]
         },
@@ -771,15 +771,15 @@
           "sentences": [
             {
               "sentence": "Welche Nationalit\u00e4t hast du?",
-              "translation": ""
+              "translation": "What nationality are you?"
             },
             {
               "sentence": "Meine Nationalit\u00e4t ist deutsch.",
-              "translation": ""
+              "translation": "My nationality is German."
             },
             {
               "sentence": "Im Formular steht die Nationalit\u00e4t.",
-              "translation": ""
+              "translation": "The nationality is on the form."
             }
           ]
         },
@@ -793,25 +793,25 @@
           "partOfSpeech": "Partizip II",
           "id": 27,
           "romanisation": "",
-          "translation": "",
+          "translation": "born",
           "sentences": [
             {
               "sentence": "Ich bin in Berlin geboren.",
-              "translation": "",
+              "translation": "I was born in Berlin.",
               "highlight": [
                 "geboren"
               ]
             },
             {
               "sentence": "Wann bist du geboren?",
-              "translation": "",
+              "translation": "When were you born?",
               "highlight": [
                 "geboren"
               ]
             },
             {
               "sentence": "Wo ist dein Vater geboren?",
-              "translation": "",
+              "translation": "Where was your father born?",
               "highlight": [
                 "geboren"
               ]
@@ -832,7 +832,7 @@
           "sentences": [
             {
               "sentence": "Ich wohne in Hamburg.",
-              "translation": "",
+              "translation": "I live in Hamburg.",
               "highlight": [
                 "wohne"
               ]
@@ -846,7 +846,7 @@
             },
             {
               "sentence": "Meine Freunde wohnen in Bonn.",
-              "translation": "",
+              "translation": "My friends live in Bonn.",
               "highlight": [
                 "wohnen"
               ]
@@ -863,11 +863,11 @@
           "partOfSpeech": "Verbgruppe",
           "id": 29,
           "romanisation": "",
-          "translation": "",
+          "translation": "to come from",
           "sentences": [
             {
               "sentence": "Ich komme aus Spanien.",
-              "translation": "",
+              "translation": "I come from Spain.",
               "highlight": [
                 "komme"
               ]
@@ -881,7 +881,7 @@
             },
             {
               "sentence": "Meine Nachbarn kommen aus Polen.",
-              "translation": "",
+              "translation": "My neighbours come from Poland.",
               "highlight": [
                 "kommen"
               ]
@@ -898,19 +898,19 @@
           "partOfSpeech": "Nomen",
           "id": 30,
           "romanisation": "",
-          "translation": "",
+          "translation": "the language",
           "sentences": [
             {
               "sentence": "Ich spreche zwei Sprachen.",
-              "translation": ""
+              "translation": "I speak two languages."
             },
             {
               "sentence": "Deutsch ist eine sch\u00f6ne Sprache.",
-              "translation": ""
+              "translation": "German is a beautiful language."
             },
             {
               "sentence": "Welche Sprache lernst du?",
-              "translation": ""
+              "translation": "Which language are you learning?"
             }
           ]
         },
@@ -1104,11 +1104,11 @@
             },
             {
               "sentence": "Ich liebe meine Familie.",
-              "translation": ""
+              "translation": "I love my family."
             },
             {
               "sentence": "Ist deine Familie gro\u00df?",
-              "translation": ""
+              "translation": "Is your family big?"
             }
           ]
         },
@@ -1126,15 +1126,15 @@
           "sentences": [
             {
               "sentence": "Meine Mutter kocht gern.",
-              "translation": ""
+              "translation": "My mother likes cooking."
             },
             {
               "sentence": "Das ist meine Mutter.",
-              "translation": ""
+              "translation": "This is my mother."
             },
             {
               "sentence": "Wie hei\u00dft deine Mutter?",
-              "translation": ""
+              "translation": "What is your mother's name?"
             }
           ]
         },
@@ -1156,11 +1156,11 @@
             },
             {
               "sentence": "Mein Vater hei\u00dft Thomas.",
-              "translation": ""
+              "translation": "My father's name is Thomas."
             },
             {
               "sentence": "Wo arbeitet dein Vater?",
-              "translation": ""
+              "translation": "Where does your father work?"
             }
           ]
         },
@@ -1178,7 +1178,7 @@
           "sentences": [
             {
               "sentence": "Meine Eltern wohnen in K\u00f6ln.",
-              "translation": ""
+              "translation": "My parents live in Cologne."
             },
             {
               "sentence": "Ich besuche meine Eltern.",
@@ -1186,7 +1186,7 @@
             },
             {
               "sentence": "Besuchst du heute deine Eltern?",
-              "translation": ""
+              "translation": "Are you visiting your parents today?"
             }
           ]
         },
@@ -1204,15 +1204,15 @@
           "sentences": [
             {
               "sentence": "Ich habe einen Bruder.",
-              "translation": ""
+              "translation": "I have a brother."
             },
             {
               "sentence": "Mein Bruder ist zehn Jahre alt.",
-              "translation": ""
+              "translation": "My brother is ten years old."
             },
             {
               "sentence": "Ist dein Bruder \u00e4lter als du?",
-              "translation": ""
+              "translation": "Is your brother older than you?"
             }
           ]
         },
@@ -1230,15 +1230,15 @@
           "sentences": [
             {
               "sentence": "Meine Schwester ist nett.",
-              "translation": ""
+              "translation": "My sister is nice."
             },
             {
               "sentence": "Ich habe zwei Schwestern.",
-              "translation": ""
+              "translation": "I have two sisters."
             },
             {
               "sentence": "Wohnt deine Schwester hier?",
-              "translation": ""
+              "translation": "Does your sister live here?"
             }
           ]
         },
@@ -1252,19 +1252,19 @@
           "partOfSpeech": "Nomen",
           "id": 37,
           "romanisation": "",
-          "translation": "",
+          "translation": "the siblings",
           "sentences": [
             {
               "sentence": "Ich habe drei Geschwister.",
-              "translation": ""
+              "translation": "I have three brothers and sisters."
             },
             {
               "sentence": "Hast du Geschwister?",
-              "translation": ""
+              "translation": "Do you have any brothers or sisters?"
             },
             {
               "sentence": "Meine Geschwister sind noch jung.",
-              "translation": ""
+              "translation": "My brothers and sisters are still young."
             }
           ]
         },
@@ -1282,15 +1282,15 @@
           "sentences": [
             {
               "sentence": "Ihr Sohn ist klein.",
-              "translation": ""
+              "translation": "Her son is little."
             },
             {
               "sentence": "Sie hat einen Sohn.",
-              "translation": ""
+              "translation": "She has a son."
             },
             {
               "sentence": "Wie alt ist ihr Sohn?",
-              "translation": ""
+              "translation": "How old is her son?"
             }
           ]
         },
@@ -1308,15 +1308,15 @@
           "sentences": [
             {
               "sentence": "Meine Tochter geht zur Schule.",
-              "translation": ""
+              "translation": "My daughter goes to school."
             },
             {
               "sentence": "Er hat eine Tochter.",
-              "translation": ""
+              "translation": "He has a daughter."
             },
             {
               "sentence": "Geht deine Tochter zur Schule?",
-              "translation": ""
+              "translation": "Does your daughter go to school?"
             }
           ]
         },
@@ -1334,15 +1334,15 @@
           "sentences": [
             {
               "sentence": "Das Kind spielt im Garten.",
-              "translation": ""
+              "translation": "The child is playing in the garden."
             },
             {
               "sentence": "Wie hei\u00dft das Kind?",
-              "translation": ""
+              "translation": "What is the child's name?"
             },
             {
               "sentence": "Das Kind malt ein Bild.",
-              "translation": ""
+              "translation": "The child is painting a picture."
             }
           ]
         },
@@ -1360,15 +1360,15 @@
           "sentences": [
             {
               "sentence": "Meine Gro\u00dfmutter backt einen Kuchen.",
-              "translation": ""
+              "translation": "My grandmother is baking a cake."
             },
             {
               "sentence": "Meine Gro\u00dfmutter ist 80 Jahre alt.",
-              "translation": ""
+              "translation": "My grandmother is 80 years old."
             },
             {
               "sentence": "Besuchst du deine Gro\u00dfmutter oft?",
-              "translation": ""
+              "translation": "Do you visit your grandmother often?"
             }
           ]
         },
@@ -1386,15 +1386,15 @@
           "sentences": [
             {
               "sentence": "Mein Gro\u00dfvater liest gern.",
-              "translation": ""
+              "translation": "My grandfather likes reading."
             },
             {
               "sentence": "Mein Gro\u00dfvater wohnt auf dem Land.",
-              "translation": ""
+              "translation": "My grandfather lives in the countryside."
             },
             {
               "sentence": "Spielt dein Gro\u00dfvater Karten?",
-              "translation": ""
+              "translation": "Does your grandfather play cards?"
             }
           ]
         },
@@ -1412,15 +1412,15 @@
           "sentences": [
             {
               "sentence": "Ihr Mann ist Arzt.",
-              "translation": ""
+              "translation": "Her husband is a doctor."
             },
             {
               "sentence": "Der Mann ist mein Vater.",
-              "translation": ""
+              "translation": "The man is my father."
             },
             {
               "sentence": "Ist der Mann dein Lehrer?",
-              "translation": ""
+              "translation": "Is the man your teacher?"
             }
           ]
         },
@@ -1438,15 +1438,15 @@
           "sentences": [
             {
               "sentence": "Seine Frau hei\u00dft Laura.",
-              "translation": ""
+              "translation": "His wife's name is Laura."
             },
             {
               "sentence": "Die Frau ist sehr freundlich.",
-              "translation": ""
+              "translation": "The woman is very friendly."
             },
             {
               "sentence": "Kennst du diese Frau?",
-              "translation": ""
+              "translation": "Do you know this woman?"
             }
           ]
         },
@@ -1460,19 +1460,19 @@
           "partOfSpeech": "Nomen",
           "id": 45,
           "romanisation": "",
-          "translation": "",
+          "translation": "the baby",
           "sentences": [
             {
               "sentence": "Das Baby schl\u00e4ft.",
-              "translation": ""
+              "translation": "The baby is sleeping."
             },
             {
               "sentence": "Sie hat ein Baby.",
-              "translation": ""
+              "translation": "She has a baby."
             },
             {
               "sentence": "Ist das Baby m\u00fcde?",
-              "translation": ""
+              "translation": "Is the baby tired?"
             }
           ]
         },
@@ -1575,15 +1575,15 @@
           "sentences": [
             {
               "sentence": "Wir z\u00e4hlen von null bis zehn.",
-              "translation": ""
+              "translation": "We count from zero to ten."
             },
             {
               "sentence": "Es ist null Grad.",
-              "translation": ""
+              "translation": "It is zero degrees."
             },
             {
               "sentence": "Ist das Ergebnis null?",
-              "translation": ""
+              "translation": "Is the result zero?"
             }
           ]
         },
@@ -1601,15 +1601,15 @@
           "sentences": [
             {
               "sentence": "Ich wohne in Zimmer eins.",
-              "translation": ""
+              "translation": "I live in room one."
             },
             {
               "sentence": "Eins, zwei, drei \u2013 los!",
-              "translation": ""
+              "translation": "One, two, three \u2013 go!"
             },
             {
               "sentence": "Ist eins deine Hausnummer?",
-              "translation": ""
+              "translation": "Is one your house number?"
             }
           ]
         },
@@ -1631,11 +1631,11 @@
             },
             {
               "sentence": "Zwei Kaffee, bitte.",
-              "translation": ""
+              "translation": "Two coffees, please."
             },
             {
               "sentence": "Brauchst du zwei Tickets?",
-              "translation": ""
+              "translation": "Do you need two tickets?"
             }
           ]
         },
@@ -1657,11 +1657,11 @@
             },
             {
               "sentence": "Ich kaufe drei \u00c4pfel.",
-              "translation": ""
+              "translation": "I'm buying three apples."
             },
             {
               "sentence": "Hast du drei \u00c4pfel?",
-              "translation": ""
+              "translation": "Do you have three apples?"
             }
           ]
         },
@@ -1683,11 +1683,11 @@
             },
             {
               "sentence": "Das Buch kostet vier Euro.",
-              "translation": ""
+              "translation": "The book costs four euros."
             },
             {
               "sentence": "Sind vier Personen da?",
-              "translation": ""
+              "translation": "Are there four people here?"
             }
           ]
         },
@@ -1709,11 +1709,11 @@
             },
             {
               "sentence": "In f\u00fcnf Minuten bin ich da.",
-              "translation": ""
+              "translation": "I'll be there in five minutes."
             },
             {
               "sentence": "Kostet das f\u00fcnf Euro?",
-              "translation": ""
+              "translation": "Does that cost five euros?"
             }
           ]
         },
@@ -1731,15 +1731,15 @@
           "sentences": [
             {
               "sentence": "Sechs Eier, bitte.",
-              "translation": ""
+              "translation": "Six eggs, please."
             },
             {
               "sentence": "Er steht um sechs Uhr auf.",
-              "translation": ""
+              "translation": "He gets up at six o'clock."
             },
             {
               "sentence": "Stehst du um sechs Uhr auf?",
-              "translation": ""
+              "translation": "Do you get up at six o'clock?"
             }
           ]
         },
@@ -1761,11 +1761,11 @@
             },
             {
               "sentence": "Ich kaufe sieben Br\u00f6tchen.",
-              "translation": ""
+              "translation": "I'm buying seven bread rolls."
             },
             {
               "sentence": "Hat eine Woche sieben Tage?",
-              "translation": ""
+              "translation": "Does a week have seven days?"
             }
           ]
         },
@@ -1783,15 +1783,15 @@
           "sentences": [
             {
               "sentence": "Ich arbeite acht Stunden.",
-              "translation": ""
+              "translation": "I work eight hours."
             },
             {
               "sentence": "Es ist acht Uhr.",
-              "translation": ""
+              "translation": "It is eight o'clock."
             },
             {
               "sentence": "Beginnst du um acht Uhr?",
-              "translation": ""
+              "translation": "Do you start at eight o'clock?"
             }
           ]
         },
@@ -1809,15 +1809,15 @@
           "sentences": [
             {
               "sentence": "Neun Kinder spielen.",
-              "translation": ""
+              "translation": "Nine children are playing."
             },
             {
               "sentence": "Das Gesch\u00e4ft \u00f6ffnet um neun.",
-              "translation": ""
+              "translation": "The shop opens at nine."
             },
             {
               "sentence": "\u00d6ffnet die Schule um neun?",
-              "translation": ""
+              "translation": "Does the school open at nine?"
             }
           ]
         },
@@ -1835,15 +1835,15 @@
           "sentences": [
             {
               "sentence": "Ich habe zehn Euro.",
-              "translation": ""
+              "translation": "I have ten euros."
             },
             {
               "sentence": "Z\u00e4hle bis zehn!",
-              "translation": ""
+              "translation": "Count to ten!"
             },
             {
               "sentence": "Hast du zehn Minuten Zeit?",
-              "translation": ""
+              "translation": "Do you have ten minutes?"
             }
           ]
         },
@@ -1861,15 +1861,15 @@
           "sentences": [
             {
               "sentence": "Es ist elf Uhr.",
-              "translation": ""
+              "translation": "It is eleven o'clock."
             },
             {
               "sentence": "Elf Spieler sind auf dem Feld.",
-              "translation": ""
+              "translation": "Eleven players are on the pitch."
             },
             {
               "sentence": "Kommt der Bus um elf?",
-              "translation": ""
+              "translation": "Does the bus come at eleven?"
             }
           ]
         },
@@ -1887,15 +1887,15 @@
           "sentences": [
             {
               "sentence": "Das Jahr hat zw\u00f6lf Monate.",
-              "translation": ""
+              "translation": "The year has twelve months."
             },
             {
               "sentence": "Es ist zw\u00f6lf Uhr \u2013 Mittag.",
-              "translation": ""
+              "translation": "It is twelve o'clock \u2013 midday."
             },
             {
               "sentence": "Hat das Jahr zw\u00f6lf Monate?",
-              "translation": ""
+              "translation": "Does the year have twelve months?"
             }
           ]
         },
@@ -1917,11 +1917,11 @@
             },
             {
               "sentence": "Das kostet zwanzig Euro.",
-              "translation": ""
+              "translation": "That costs twenty euros."
             },
             {
               "sentence": "Bist du zwanzig Jahre alt?",
-              "translation": ""
+              "translation": "Are you twenty years old?"
             }
           ]
         },
@@ -1943,11 +1943,11 @@
             },
             {
               "sentence": "Sie ist drei\u00dfig Jahre alt.",
-              "translation": ""
+              "translation": "She is thirty years old."
             },
             {
               "sentence": "Kostet die Tasche drei\u00dfig Euro?",
-              "translation": ""
+              "translation": "Does the bag cost thirty euros?"
             }
           ]
         },
@@ -1965,15 +1965,15 @@
           "sentences": [
             {
               "sentence": "Ich habe hundert Euro.",
-              "translation": ""
+              "translation": "I have a hundred euros."
             },
             {
               "sentence": "Hundert Menschen sind hier.",
-              "translation": ""
+              "translation": "A hundred people are here."
             },
             {
               "sentence": "Kostet das Fahrrad hundert Euro?",
-              "translation": ""
+              "translation": "Does the bicycle cost a hundred euros?"
             }
           ]
         },
@@ -2362,15 +2362,15 @@
           "sentences": [
             {
               "sentence": "Am Montag arbeite ich.",
-              "translation": ""
+              "translation": "I work on Monday."
             },
             {
               "sentence": "Heute ist Montag.",
-              "translation": ""
+              "translation": "Today is Monday."
             },
             {
               "sentence": "Arbeitest du am Montag?",
-              "translation": ""
+              "translation": "Are you working on Monday?"
             }
           ]
         },
@@ -2388,15 +2388,15 @@
           "sentences": [
             {
               "sentence": "Am Dienstag habe ich Deutsch.",
-              "translation": ""
+              "translation": "I have German on Tuesday."
             },
             {
               "sentence": "Der Dienstag ist ein Arbeitstag.",
-              "translation": ""
+              "translation": "Tuesday is a working day."
             },
             {
               "sentence": "Hast du am Dienstag Zeit?",
-              "translation": ""
+              "translation": "Are you free on Tuesday?"
             }
           ]
         },
@@ -2414,15 +2414,15 @@
           "sentences": [
             {
               "sentence": "Am Mittwoch spiele ich Fu\u00dfball.",
-              "translation": ""
+              "translation": "I play football on Wednesday."
             },
             {
               "sentence": "Heute ist Mittwoch.",
-              "translation": ""
+              "translation": "Today is Wednesday."
             },
             {
               "sentence": "Lernst du am Mittwoch Deutsch?",
-              "translation": ""
+              "translation": "Do you learn German on Wednesday?"
             }
           ]
         },
@@ -2440,15 +2440,15 @@
           "sentences": [
             {
               "sentence": "Am Donnerstag gehe ich einkaufen.",
-              "translation": ""
+              "translation": "I go shopping on Thursday."
             },
             {
               "sentence": "Der Donnerstag ist fast Wochenende.",
-              "translation": ""
+              "translation": "Thursday is almost the weekend."
             },
             {
               "sentence": "Kommst du am Donnerstag?",
-              "translation": ""
+              "translation": "Are you coming on Thursday?"
             }
           ]
         },
@@ -2466,15 +2466,15 @@
           "sentences": [
             {
               "sentence": "Am Freitag treffe ich Freunde.",
-              "translation": ""
+              "translation": "I'm meeting friends on Friday."
             },
             {
               "sentence": "Endlich Freitag!",
-              "translation": ""
+              "translation": "Friday at last!"
             },
             {
               "sentence": "Endet die Woche f\u00fcr dich am Freitag?",
-              "translation": ""
+              "translation": "Does your week end on Friday?"
             }
           ]
         },
@@ -2492,15 +2492,15 @@
           "sentences": [
             {
               "sentence": "Am Samstag schlafe ich lange.",
-              "translation": ""
+              "translation": "I sleep in on Saturday."
             },
             {
               "sentence": "Der Samstag ist frei.",
-              "translation": ""
+              "translation": "Saturday is free."
             },
             {
               "sentence": "Gehst du am Samstag einkaufen?",
-              "translation": ""
+              "translation": "Are you going shopping on Saturday?"
             }
           ]
         },
@@ -2518,15 +2518,15 @@
           "sentences": [
             {
               "sentence": "Am Sonntag koche ich.",
-              "translation": ""
+              "translation": "I cook on Sunday."
             },
             {
               "sentence": "Der Sonntag ist ein Ruhetag.",
-              "translation": ""
+              "translation": "Sunday is a day of rest."
             },
             {
               "sentence": "Bleibst du am Sonntag zu Hause?",
-              "translation": ""
+              "translation": "Are you staying at home on Sunday?"
             }
           ]
         },
@@ -2540,19 +2540,19 @@
           "partOfSpeech": "Nomen",
           "id": 69,
           "romanisation": "",
-          "translation": "",
+          "translation": "the weekend",
           "sentences": [
             {
               "sentence": "Am Wochenende habe ich frei.",
-              "translation": ""
+              "translation": "I'm free at the weekend."
             },
             {
               "sentence": "Sch\u00f6nes Wochenende!",
-              "translation": ""
+              "translation": "Have a nice weekend!"
             },
             {
               "sentence": "Was machst du am Wochenende?",
-              "translation": ""
+              "translation": "What are you doing at the weekend?"
             }
           ]
         }
@@ -2577,7 +2577,7 @@
           "sentences": [
             {
               "sentence": "Im Januar ist es kalt.",
-              "translation": ""
+              "translation": "It's cold in January."
             },
             {
               "sentence": "Mein Geburtstag ist im Januar.",
@@ -2585,7 +2585,7 @@
             },
             {
               "sentence": "Schneit es im Januar?",
-              "translation": ""
+              "translation": "Does it snow in January?"
             }
           ]
         },
@@ -2603,15 +2603,15 @@
           "sentences": [
             {
               "sentence": "Der Februar ist kurz.",
-              "translation": ""
+              "translation": "February is short."
             },
             {
               "sentence": "Im Februar schneit es oft.",
-              "translation": ""
+              "translation": "It often snows in February."
             },
             {
               "sentence": "Hat der Februar immer 28 Tage?",
-              "translation": ""
+              "translation": "Does February always have 28 days?"
             }
           ]
         },
@@ -2629,7 +2629,7 @@
           "sentences": [
             {
               "sentence": "Im M\u00e4rz wird es w\u00e4rmer.",
-              "translation": ""
+              "translation": "It gets warmer in March."
             },
             {
               "sentence": "Der Fr\u00fchling beginnt im M\u00e4rz.",
@@ -2637,7 +2637,7 @@
             },
             {
               "sentence": "Beginnt der Fr\u00fchling im M\u00e4rz?",
-              "translation": ""
+              "translation": "Does spring begin in March?"
             }
           ]
         },
@@ -2659,11 +2659,11 @@
             },
             {
               "sentence": "Der April ist unbest\u00e4ndig.",
-              "translation": ""
+              "translation": "The weather in April is changeable."
             },
             {
               "sentence": "Regnet es oft im April?",
-              "translation": ""
+              "translation": "Does it often rain in April?"
             }
           ]
         },
@@ -2681,15 +2681,15 @@
           "sentences": [
             {
               "sentence": "Im Mai bl\u00fchen die Blumen.",
-              "translation": ""
+              "translation": "The flowers bloom in May."
             },
             {
               "sentence": "Der Mai ist mein Lieblingsmonat.",
-              "translation": ""
+              "translation": "May is my favourite month."
             },
             {
               "sentence": "Hast du im Mai Geburtstag?",
-              "translation": ""
+              "translation": "Is your birthday in May?"
             }
           ]
         },
@@ -2707,15 +2707,15 @@
           "sentences": [
             {
               "sentence": "Im Juni ist es warm.",
-              "translation": ""
+              "translation": "It's warm in June."
             },
             {
               "sentence": "Die Schule endet im Juni.",
-              "translation": ""
+              "translation": "School finishes in June."
             },
             {
               "sentence": "Beginnt der Sommer im Juni?",
-              "translation": ""
+              "translation": "Does summer begin in June?"
             }
           ]
         },
@@ -2733,15 +2733,15 @@
           "sentences": [
             {
               "sentence": "Im Juli fahren wir in den Urlaub.",
-              "translation": ""
+              "translation": "We go on holiday in July."
             },
             {
               "sentence": "Der Juli ist hei\u00df.",
-              "translation": ""
+              "translation": "July is hot."
             },
             {
               "sentence": "F\u00e4hrst du im Juli in den Urlaub?",
-              "translation": ""
+              "translation": "Are you going on holiday in July?"
             }
           ]
         },
@@ -2759,15 +2759,15 @@
           "sentences": [
             {
               "sentence": "Im August ist Sommer.",
-              "translation": ""
+              "translation": "It's summer in August."
             },
             {
               "sentence": "Wir schwimmen im August.",
-              "translation": ""
+              "translation": "We go swimming in August."
             },
             {
               "sentence": "Ist es im August hei\u00df?",
-              "translation": ""
+              "translation": "Is it hot in August?"
             }
           ]
         },
@@ -2785,15 +2785,15 @@
           "sentences": [
             {
               "sentence": "Im September beginnt die Schule.",
-              "translation": ""
+              "translation": "School starts in September."
             },
             {
               "sentence": "Der September ist mild.",
-              "translation": ""
+              "translation": "September is mild."
             },
             {
               "sentence": "Beginnt dein Kurs im September?",
-              "translation": ""
+              "translation": "Does your course start in September?"
             }
           ]
         },
@@ -2811,15 +2811,15 @@
           "sentences": [
             {
               "sentence": "Im Oktober werden die Bl\u00e4tter bunt.",
-              "translation": ""
+              "translation": "The leaves turn colourful in October."
             },
             {
               "sentence": "Der Herbst kommt im Oktober.",
-              "translation": ""
+              "translation": "Autumn comes in October."
             },
             {
               "sentence": "Feierst du im Oktober Geburtstag?",
-              "translation": ""
+              "translation": "Is your birthday in October?"
             }
           ]
         },
@@ -2837,15 +2837,15 @@
           "sentences": [
             {
               "sentence": "Der November ist grau.",
-              "translation": ""
+              "translation": "November is grey."
             },
             {
               "sentence": "Im November wird es fr\u00fch dunkel.",
-              "translation": ""
+              "translation": "It gets dark early in November."
             },
             {
               "sentence": "Ist der November oft grau?",
-              "translation": ""
+              "translation": "Is November often grey?"
             }
           ]
         },
@@ -2863,15 +2863,15 @@
           "sentences": [
             {
               "sentence": "Im Dezember ist Weihnachten.",
-              "translation": ""
+              "translation": "Christmas is in December."
             },
             {
               "sentence": "Der Dezember ist kalt.",
-              "translation": ""
+              "translation": "December is cold."
             },
             {
               "sentence": "Ist Weihnachten im Dezember?",
-              "translation": ""
+              "translation": "Is Christmas in December?"
             }
           ]
         }
@@ -2900,11 +2900,11 @@
             },
             {
               "sentence": "Der Fr\u00fchling ist sch\u00f6n.",
-              "translation": ""
+              "translation": "Spring is beautiful."
             },
             {
               "sentence": "Magst du den Fr\u00fchling?",
-              "translation": ""
+              "translation": "Do you like spring?"
             }
           ]
         },
@@ -2922,15 +2922,15 @@
           "sentences": [
             {
               "sentence": "Im Sommer ist es hei\u00df.",
-              "translation": ""
+              "translation": "It's hot in summer."
             },
             {
               "sentence": "Ich mag den Sommer.",
-              "translation": ""
+              "translation": "I like summer."
             },
             {
               "sentence": "F\u00e4hrst du im Sommer ans Meer?",
-              "translation": ""
+              "translation": "Are you going to the seaside in summer?"
             }
           ]
         },
@@ -2952,11 +2952,11 @@
             },
             {
               "sentence": "Der Herbst ist bunt.",
-              "translation": ""
+              "translation": "Autumn is colourful."
             },
             {
               "sentence": "Sind die Bl\u00e4tter im Herbst bunt?",
-              "translation": ""
+              "translation": "Are the leaves colourful in autumn?"
             }
           ]
         },
@@ -2974,15 +2974,15 @@
           "sentences": [
             {
               "sentence": "Im Winter schneit es.",
-              "translation": ""
+              "translation": "It snows in winter."
             },
             {
               "sentence": "Der Winter ist kalt.",
-              "translation": ""
+              "translation": "Winter is cold."
             },
             {
               "sentence": "Schneit es im Winter bei dir?",
-              "translation": ""
+              "translation": "Does it snow where you live in winter?"
             }
           ]
         }
@@ -3011,11 +3011,11 @@
             },
             {
               "sentence": "Die Uhr ist neu.",
-              "translation": ""
+              "translation": "The watch is new."
             },
             {
               "sentence": "Meine Uhr zeigt drei Uhr.",
-              "translation": ""
+              "translation": "My watch says three o'clock."
             }
           ]
         },
@@ -3029,19 +3029,19 @@
           "partOfSpeech": "Nomen",
           "id": 87,
           "romanisation": "",
-          "translation": "",
+          "translation": "the time",
           "sentences": [
             {
               "sentence": "Ich habe keine Zeit.",
-              "translation": ""
+              "translation": "I don't have time."
             },
             {
               "sentence": "Die Zeit vergeht schnell.",
-              "translation": ""
+              "translation": "Time passes quickly."
             },
             {
               "sentence": "Hast du heute Zeit?",
-              "translation": ""
+              "translation": "Do you have time today?"
             }
           ]
         },
@@ -3059,15 +3059,15 @@
           "sentences": [
             {
               "sentence": "Eine Stunde hat sechzig Minuten.",
-              "translation": ""
+              "translation": "An hour has sixty minutes."
             },
             {
               "sentence": "Ich warte seit einer Stunde.",
-              "translation": ""
+              "translation": "I've been waiting for an hour."
             },
             {
               "sentence": "Dauert der Kurs eine Stunde?",
-              "translation": ""
+              "translation": "Does the course last an hour?"
             }
           ]
         },
@@ -3085,15 +3085,15 @@
           "sentences": [
             {
               "sentence": "Warte eine Minute!",
-              "translation": ""
+              "translation": "Wait a minute!"
             },
             {
               "sentence": "In zehn Minuten bin ich da.",
-              "translation": ""
+              "translation": "I'll be there in ten minutes."
             },
             {
               "sentence": "Kannst du eine Minute warten?",
-              "translation": ""
+              "translation": "Can you wait a minute?"
             }
           ]
         },
@@ -3111,15 +3111,15 @@
           "sentences": [
             {
               "sentence": "Der Tag ist lang.",
-              "translation": ""
+              "translation": "The day is long."
             },
             {
               "sentence": "Einen sch\u00f6nen Tag noch!",
-              "translation": ""
+              "translation": "Have a nice day!"
             },
             {
               "sentence": "War dein Tag sch\u00f6n?",
-              "translation": ""
+              "translation": "Did you have a nice day?"
             }
           ]
         },
@@ -3141,11 +3141,11 @@
             },
             {
               "sentence": "N\u00e4chste Woche habe ich Urlaub.",
-              "translation": ""
+              "translation": "I'm on holiday next week."
             },
             {
               "sentence": "Arbeitest du diese Woche?",
-              "translation": ""
+              "translation": "Are you working this week?"
             }
           ]
         },
@@ -3159,19 +3159,19 @@
           "partOfSpeech": "Nomen",
           "id": 92,
           "romanisation": "",
-          "translation": "",
+          "translation": "the month",
           "sentences": [
             {
               "sentence": "Der Monat ist fast vorbei.",
-              "translation": ""
+              "translation": "The month is almost over."
             },
             {
               "sentence": "Ich fahre n\u00e4chsten Monat weg.",
-              "translation": ""
+              "translation": "I'm going away next month."
             },
             {
               "sentence": "Welcher Monat ist jetzt?",
-              "translation": ""
+              "translation": "Which month is it now?"
             }
           ]
         },
@@ -3185,11 +3185,11 @@
           "partOfSpeech": "Nomen",
           "id": 93,
           "romanisation": "",
-          "translation": "",
+          "translation": "the year",
           "sentences": [
             {
               "sentence": "Das Jahr hat zw\u00f6lf Monate.",
-              "translation": ""
+              "translation": "The year has twelve months."
             },
             {
               "sentence": "Frohes neues Jahr!",
@@ -3197,7 +3197,7 @@
             },
             {
               "sentence": "Welches Jahr haben wir?",
-              "translation": ""
+              "translation": "What year is it?"
             }
           ]
         },
@@ -3215,15 +3215,15 @@
           "sentences": [
             {
               "sentence": "Heute ist Montag.",
-              "translation": ""
+              "translation": "Today is Monday."
             },
             {
               "sentence": "Heute lerne ich Deutsch.",
-              "translation": ""
+              "translation": "Today I'm learning German."
             },
             {
               "sentence": "Hast du heute Unterricht?",
-              "translation": ""
+              "translation": "Do you have lessons today?"
             }
           ]
         },
@@ -3241,15 +3241,15 @@
           "sentences": [
             {
               "sentence": "Morgen habe ich frei.",
-              "translation": ""
+              "translation": "I'm free tomorrow."
             },
             {
               "sentence": "Bis morgen!",
-              "translation": ""
+              "translation": "See you tomorrow!"
             },
             {
               "sentence": "Kommst du morgen wieder?",
-              "translation": ""
+              "translation": "Are you coming back tomorrow?"
             }
           ]
         },
@@ -3267,15 +3267,15 @@
           "sentences": [
             {
               "sentence": "Gestern war ich zu Hause.",
-              "translation": ""
+              "translation": "Yesterday I was at home."
             },
             {
               "sentence": "Gestern hat es geregnet.",
-              "translation": ""
+              "translation": "It rained yesterday."
             },
             {
               "sentence": "Warst du gestern im Kino?",
-              "translation": ""
+              "translation": "Were you at the cinema yesterday?"
             }
           ]
         },
@@ -3289,19 +3289,19 @@
           "partOfSpeech": "Adverb",
           "id": 97,
           "romanisation": "",
-          "translation": "",
+          "translation": "now",
           "sentences": [
             {
               "sentence": "Ich muss jetzt gehen.",
-              "translation": ""
+              "translation": "I have to go now."
             },
             {
               "sentence": "Jetzt ist es zwei Uhr.",
-              "translation": ""
+              "translation": "It is two o'clock now."
             },
             {
               "sentence": "Hast du jetzt Zeit?",
-              "translation": ""
+              "translation": "Do you have time now?"
             }
           ]
         },
@@ -3315,7 +3315,7 @@
           "partOfSpeech": "Adverb",
           "id": 98,
           "romanisation": "",
-          "translation": "",
+          "translation": "early",
           "sentences": [
             {
               "sentence": "Ich stehe fr\u00fch auf.",
@@ -3323,11 +3323,11 @@
             },
             {
               "sentence": "Es ist noch fr\u00fch.",
-              "translation": ""
+              "translation": "It's still early."
             },
             {
               "sentence": "Stehst du fr\u00fch auf?",
-              "translation": ""
+              "translation": "Do you get up early?"
             }
           ]
         },
@@ -3341,19 +3341,19 @@
           "partOfSpeech": "Adverb",
           "id": 99,
           "romanisation": "",
-          "translation": "",
+          "translation": "late",
           "sentences": [
             {
               "sentence": "Es ist schon sp\u00e4t.",
-              "translation": ""
+              "translation": "It's already late."
             },
             {
               "sentence": "Der Bus kommt sp\u00e4t.",
-              "translation": ""
+              "translation": "The bus is late."
             },
             {
               "sentence": "Ist es schon sp\u00e4t?",
-              "translation": ""
+              "translation": "Is it late already?"
             }
           ]
         },
@@ -3375,11 +3375,11 @@
             },
             {
               "sentence": "Der Morgen ist ruhig.",
-              "translation": ""
+              "translation": "The morning is quiet."
             },
             {
               "sentence": "Was machst du am Morgen?",
-              "translation": ""
+              "translation": "What do you do in the morning?"
             }
           ]
         },
@@ -3397,15 +3397,15 @@
           "sentences": [
             {
               "sentence": "Am Abend sehe ich fern.",
-              "translation": ""
+              "translation": "In the evening I watch TV."
             },
             {
               "sentence": "Der Abend ist sch\u00f6n.",
-              "translation": ""
+              "translation": "The evening is lovely."
             },
             {
               "sentence": "Liest du am Abend?",
-              "translation": ""
+              "translation": "Do you read in the evening?"
             }
           ]
         },
@@ -3603,7 +3603,7 @@
             },
             {
               "sentence": "Ist dein Fahrrad rot?",
-              "translation": "",
+              "translation": "Is your bicycle red?",
               "highlight": [
                 "rot"
               ]
@@ -3631,14 +3631,14 @@
             },
             {
               "sentence": "Mein Auto ist blau.",
-              "translation": "",
+              "translation": "My car is blue.",
               "highlight": [
                 "blau"
               ]
             },
             {
               "sentence": "Ist das Meer blau?",
-              "translation": "",
+              "translation": "Is the sea blue?",
               "highlight": [
                 "blau"
               ]
@@ -3673,7 +3673,7 @@
             },
             {
               "sentence": "Ist deine Jacke gelb?",
-              "translation": "",
+              "translation": "Is your jacket yellow?",
               "highlight": [
                 "gelb"
               ]
@@ -3701,14 +3701,14 @@
             },
             {
               "sentence": "Ich habe eine gr\u00fcne Jacke.",
-              "translation": "",
+              "translation": "I have a green jacket.",
               "highlight": [
                 "gr\u00fcne"
               ]
             },
             {
               "sentence": "Sind die \u00c4pfel gr\u00fcn?",
-              "translation": "",
+              "translation": "Are the apples green?",
               "highlight": [
                 "gr\u00fcn"
               ]
@@ -3736,14 +3736,14 @@
             },
             {
               "sentence": "Er tr\u00e4gt eine schwarze Hose.",
-              "translation": "",
+              "translation": "He is wearing black trousers.",
               "highlight": [
                 "schwarze"
               ]
             },
             {
               "sentence": "Ist dein Handy schwarz?",
-              "translation": "",
+              "translation": "Is your mobile phone black?",
               "highlight": [
                 "schwarz"
               ]
@@ -3771,14 +3771,14 @@
             },
             {
               "sentence": "Ich trage ein wei\u00dfes Hemd.",
-              "translation": "",
+              "translation": "I'm wearing a white shirt.",
               "highlight": [
                 "wei\u00dfes"
               ]
             },
             {
               "sentence": "Ist die Wand wei\u00df?",
-              "translation": "",
+              "translation": "Is the wall white?",
               "highlight": [
                 "wei\u00df"
               ]
@@ -3799,21 +3799,21 @@
           "sentences": [
             {
               "sentence": "Der Baum ist braun.",
-              "translation": "",
+              "translation": "The tree is brown.",
               "highlight": [
                 "braun"
               ]
             },
             {
               "sentence": "Sie hat braune Augen.",
-              "translation": "",
+              "translation": "She has brown eyes.",
               "highlight": [
                 "braune"
               ]
             },
             {
               "sentence": "Ist der Tisch braun?",
-              "translation": "",
+              "translation": "Is the table brown?",
               "highlight": [
                 "braun"
               ]
@@ -3834,21 +3834,21 @@
           "sentences": [
             {
               "sentence": "Die Orange ist orange.",
-              "translation": "",
+              "translation": "The orange is orange.",
               "highlight": [
                 "orange"
               ]
             },
             {
               "sentence": "Meine Tasche ist orange.",
-              "translation": "",
+              "translation": "My bag is orange.",
               "highlight": [
                 "orange"
               ]
             },
             {
               "sentence": "Ist der Ball orange?",
-              "translation": "",
+              "translation": "Is the ball orange?",
               "highlight": [
                 "orange"
               ]
@@ -3876,14 +3876,14 @@
             },
             {
               "sentence": "Sie mag die Farbe Rosa.",
-              "translation": "",
+              "translation": "She likes the colour pink.",
               "highlight": [
                 "Rosa"
               ]
             },
             {
               "sentence": "Ist die Blume rosa?",
-              "translation": "",
+              "translation": "Is the flower pink?",
               "highlight": [
                 "rosa"
               ]
@@ -3911,14 +3911,14 @@
             },
             {
               "sentence": "Die Maus ist grau.",
-              "translation": "",
+              "translation": "The mouse is grey.",
               "highlight": [
                 "grau"
               ]
             },
             {
               "sentence": "Ist der Pullover grau?",
-              "translation": "",
+              "translation": "Is the jumper grey?",
               "highlight": [
                 "grau"
               ]
@@ -3935,25 +3935,25 @@
           "partOfSpeech": "Adjektiv",
           "id": 112,
           "romanisation": "",
-          "translation": "",
+          "translation": "colourful",
           "sentences": [
             {
               "sentence": "Der Ball ist bunt.",
-              "translation": "",
+              "translation": "The ball is colourful.",
               "highlight": [
                 "bunt"
               ]
             },
             {
               "sentence": "Im Herbst sind die Bl\u00e4tter bunt.",
-              "translation": "",
+              "translation": "In autumn the leaves are colourful.",
               "highlight": [
                 "bunt"
               ]
             },
             {
               "sentence": "Ist das Bild bunt?",
-              "translation": "",
+              "translation": "Is the picture colourful?",
               "highlight": [
                 "bunt"
               ]
@@ -3981,7 +3981,7 @@
           "sentences": [
             {
               "sentence": "Ich esse Brot zum Fr\u00fchst\u00fcck.",
-              "translation": ""
+              "translation": "I eat bread for breakfast."
             },
             {
               "sentence": "Das Brot ist frisch.",
@@ -3989,7 +3989,7 @@
             },
             {
               "sentence": "M\u00f6chtest du Brot?",
-              "translation": ""
+              "translation": "Would you like some bread?"
             }
           ]
         },
@@ -4007,15 +4007,15 @@
           "sentences": [
             {
               "sentence": "Ich trinke viel Wasser.",
-              "translation": ""
+              "translation": "I drink a lot of water."
             },
             {
               "sentence": "Ein Glas Wasser, bitte.",
-              "translation": ""
+              "translation": "A glass of water, please."
             },
             {
               "sentence": "Trinkst du genug Wasser?",
-              "translation": ""
+              "translation": "Do you drink enough water?"
             }
           ]
         },
@@ -4033,7 +4033,7 @@
           "sentences": [
             {
               "sentence": "Ich trinke morgens Kaffee.",
-              "translation": ""
+              "translation": "I drink coffee in the morning."
             },
             {
               "sentence": "Der Kaffee ist hei\u00df.",
@@ -4041,7 +4041,7 @@
             },
             {
               "sentence": "M\u00f6chtest du Kaffee?",
-              "translation": ""
+              "translation": "Would you like some coffee?"
             }
           ]
         },
@@ -4059,15 +4059,15 @@
           "sentences": [
             {
               "sentence": "M\u00f6chtest du einen Tee?",
-              "translation": ""
+              "translation": "Would you like a tea?"
             },
             {
               "sentence": "Ich trinke Tee mit Zitrone.",
-              "translation": ""
+              "translation": "I drink tea with lemon."
             },
             {
               "sentence": "Der Tee ist noch warm.",
-              "translation": ""
+              "translation": "The tea is still warm."
             }
           ]
         },
@@ -4085,15 +4085,15 @@
           "sentences": [
             {
               "sentence": "Die Milch ist im K\u00fchlschrank.",
-              "translation": ""
+              "translation": "The milk is in the fridge."
             },
             {
               "sentence": "Ich trinke gern Milch.",
-              "translation": ""
+              "translation": "I like drinking milk."
             },
             {
               "sentence": "Ist noch Milch da?",
-              "translation": ""
+              "translation": "Is there any milk left?"
             }
           ]
         },
@@ -4115,11 +4115,11 @@
             },
             {
               "sentence": "Ich esse einen Apfel.",
-              "translation": ""
+              "translation": "I'm eating an apple."
             },
             {
               "sentence": "M\u00f6chtest du einen Apfel?",
-              "translation": ""
+              "translation": "Would you like an apple?"
             }
           ]
         },
@@ -4141,11 +4141,11 @@
             },
             {
               "sentence": "Ich mag Bananen.",
-              "translation": ""
+              "translation": "I like bananas."
             },
             {
               "sentence": "Isst du gern eine Banane?",
-              "translation": ""
+              "translation": "Do you like eating bananas?"
             }
           ]
         },
@@ -4163,15 +4163,15 @@
           "sentences": [
             {
               "sentence": "Ich esse ein Ei zum Fr\u00fchst\u00fcck.",
-              "translation": ""
+              "translation": "I eat an egg for breakfast."
             },
             {
               "sentence": "Das Ei ist gekocht.",
-              "translation": ""
+              "translation": "The egg is boiled."
             },
             {
               "sentence": "M\u00f6chtest du ein Ei?",
-              "translation": ""
+              "translation": "Would you like an egg?"
             }
           ]
         },
@@ -4189,15 +4189,15 @@
           "sentences": [
             {
               "sentence": "Der K\u00e4se schmeckt gut.",
-              "translation": ""
+              "translation": "The cheese tastes good."
             },
             {
               "sentence": "Ich kaufe K\u00e4se.",
-              "translation": ""
+              "translation": "I'm buying cheese."
             },
             {
               "sentence": "Isst du gern K\u00e4se?",
-              "translation": ""
+              "translation": "Do you like eating cheese?"
             }
           ]
         },
@@ -4215,15 +4215,15 @@
           "sentences": [
             {
               "sentence": "Ich esse kein Fleisch.",
-              "translation": ""
+              "translation": "I don't eat meat."
             },
             {
               "sentence": "Das Fleisch ist teuer.",
-              "translation": ""
+              "translation": "The meat is expensive."
             },
             {
               "sentence": "Kaufst du heute Fleisch?",
-              "translation": ""
+              "translation": "Are you buying meat today?"
             }
           ]
         },
@@ -4241,15 +4241,15 @@
           "sentences": [
             {
               "sentence": "Der Fisch ist frisch.",
-              "translation": ""
+              "translation": "The fish is fresh."
             },
             {
               "sentence": "Ich esse gern Fisch.",
-              "translation": ""
+              "translation": "I like eating fish."
             },
             {
               "sentence": "Magst du Fisch?",
-              "translation": ""
+              "translation": "Do you like fish?"
             }
           ]
         },
@@ -4271,11 +4271,11 @@
             },
             {
               "sentence": "Ich kaufe Gem\u00fcse auf dem Markt.",
-              "translation": ""
+              "translation": "I buy vegetables at the market."
             },
             {
               "sentence": "Isst du jeden Tag Gem\u00fcse?",
-              "translation": ""
+              "translation": "Do you eat vegetables every day?"
             }
           ]
         },
@@ -4293,15 +4293,15 @@
           "sentences": [
             {
               "sentence": "Obst ist gesund.",
-              "translation": ""
+              "translation": "Fruit is healthy."
             },
             {
               "sentence": "Ich esse jeden Tag Obst.",
-              "translation": ""
+              "translation": "I eat fruit every day."
             },
             {
               "sentence": "Welches Obst magst du?",
-              "translation": ""
+              "translation": "Which fruit do you like?"
             }
           ]
         },
@@ -4323,11 +4323,11 @@
             },
             {
               "sentence": "Der Saft ist s\u00fc\u00df.",
-              "translation": ""
+              "translation": "The juice is sweet."
             },
             {
               "sentence": "M\u00f6chtest du Saft?",
-              "translation": ""
+              "translation": "Would you like some juice?"
             }
           ]
         },
@@ -4345,15 +4345,15 @@
           "sentences": [
             {
               "sentence": "Ich nehme Zucker in den Kaffee.",
-              "translation": ""
+              "translation": "I take sugar in my coffee."
             },
             {
               "sentence": "Zu viel Zucker ist ungesund.",
-              "translation": ""
+              "translation": "Too much sugar is unhealthy."
             },
             {
               "sentence": "Nimmst du Zucker in den Tee?",
-              "translation": ""
+              "translation": "Do you take sugar in your tea?"
             }
           ]
         },
@@ -4375,11 +4375,11 @@
             },
             {
               "sentence": "Ich esse eine Suppe.",
-              "translation": ""
+              "translation": "I'm having a soup."
             },
             {
               "sentence": "Ist die Suppe fertig?",
-              "translation": ""
+              "translation": "Is the soup ready?"
             }
           ]
         },
@@ -4786,7 +4786,7 @@
           "sentences": [
             {
               "sentence": "Ich bin m\u00fcde.",
-              "translation": "",
+              "translation": "I am tired.",
               "highlight": [
                 "bin"
               ]
@@ -4800,7 +4800,7 @@
             },
             {
               "sentence": "Wir sind heute zu Hause.",
-              "translation": "",
+              "translation": "We are at home today.",
               "highlight": [
                 "sind"
               ]
@@ -4835,7 +4835,7 @@
             },
             {
               "sentence": "Sie hat zwei Kinder.",
-              "translation": "",
+              "translation": "She has two children.",
               "highlight": [
                 "hat"
               ]
@@ -4863,14 +4863,14 @@
             },
             {
               "sentence": "Wir gehen ins Kino.",
-              "translation": "",
+              "translation": "We are going to the cinema.",
               "highlight": [
                 "gehen"
               ]
             },
             {
               "sentence": "Gehst du heute zur Schule?",
-              "translation": "",
+              "translation": "Are you going to school today?",
               "highlight": [
                 "Gehst"
               ]
@@ -4905,7 +4905,7 @@
             },
             {
               "sentence": "Der Zug kommt um neun Uhr.",
-              "translation": "",
+              "translation": "The train comes at nine o'clock.",
               "highlight": [
                 "kommt"
               ]
@@ -4933,14 +4933,14 @@
             },
             {
               "sentence": "Ich mache meine Hausaufgaben.",
-              "translation": "",
+              "translation": "I'm doing my homework.",
               "highlight": [
                 "mache"
               ]
             },
             {
               "sentence": "Wir machen heute Sport.",
-              "translation": "",
+              "translation": "We're doing sport today.",
               "highlight": [
                 "machen"
               ]
@@ -4961,21 +4961,21 @@
           "sentences": [
             {
               "sentence": "Ich esse einen Apfel.",
-              "translation": "",
+              "translation": "I'm eating an apple.",
               "highlight": [
                 "esse"
               ]
             },
             {
               "sentence": "Was isst du gern?",
-              "translation": "",
+              "translation": "What do you like to eat?",
               "highlight": [
                 "isst"
               ]
             },
             {
               "sentence": "Wir essen zusammen zu Abend.",
-              "translation": "",
+              "translation": "We have dinner together.",
               "highlight": [
                 "essen"
               ]
@@ -4996,21 +4996,21 @@
           "sentences": [
             {
               "sentence": "Ich trinke Wasser.",
-              "translation": "",
+              "translation": "I'm drinking water.",
               "highlight": [
                 "trinke"
               ]
             },
             {
               "sentence": "M\u00f6chtest du etwas trinken?",
-              "translation": "",
+              "translation": "Would you like something to drink?",
               "highlight": [
                 "trinken"
               ]
             },
             {
               "sentence": "Er trinkt morgens Kaffee.",
-              "translation": "",
+              "translation": "He drinks coffee in the morning.",
               "highlight": [
                 "trinkt"
               ]
@@ -5045,7 +5045,7 @@
             },
             {
               "sentence": "Wir sprechen im Kurs Deutsch.",
-              "translation": "",
+              "translation": "We speak German in class.",
               "highlight": [
                 "sprechen"
               ]
@@ -5080,7 +5080,7 @@
             },
             {
               "sentence": "Meine Tante wohnt in M\u00fcnchen.",
-              "translation": "",
+              "translation": "My aunt lives in Munich.",
               "highlight": [
                 "wohnt"
               ]
@@ -5115,7 +5115,7 @@
             },
             {
               "sentence": "Arbeitest du heute?",
-              "translation": "",
+              "translation": "Are you working today?",
               "highlight": [
                 "Arbeitest"
               ]
@@ -5136,21 +5136,21 @@
           "sentences": [
             {
               "sentence": "Ich lerne Deutsch.",
-              "translation": "",
+              "translation": "I'm learning German.",
               "highlight": [
                 "lerne"
               ]
             },
             {
               "sentence": "Wir lernen zusammen.",
-              "translation": "",
+              "translation": "We study together.",
               "highlight": [
                 "lernen"
               ]
             },
             {
               "sentence": "Lernst du gern Deutsch?",
-              "translation": "",
+              "translation": "Do you enjoy learning German?",
               "highlight": [
                 "Lernst"
               ]
@@ -5167,25 +5167,25 @@
           "partOfSpeech": "Verb",
           "id": 140,
           "romanisation": "",
-          "translation": "",
+          "translation": "to play",
           "sentences": [
             {
               "sentence": "Die Kinder spielen im Park.",
-              "translation": "",
+              "translation": "The children are playing in the park.",
               "highlight": [
                 "spielen"
               ]
             },
             {
               "sentence": "Ich spiele Gitarre.",
-              "translation": "",
+              "translation": "I play the guitar.",
               "highlight": [
                 "spiele"
               ]
             },
             {
               "sentence": "Spielen die Kinder drau\u00dfen?",
-              "translation": "",
+              "translation": "Are the children playing outside?",
               "highlight": [
                 "Spielen"
               ]
@@ -5206,21 +5206,21 @@
           "sentences": [
             {
               "sentence": "Ich lese ein Buch.",
-              "translation": "",
+              "translation": "I'm reading a book.",
               "highlight": [
                 "lese"
               ]
             },
             {
               "sentence": "Liest du gern?",
-              "translation": "",
+              "translation": "Do you like reading?",
               "highlight": [
                 "Liest"
               ]
             },
             {
               "sentence": "Am Abend lese ich die Zeitung.",
-              "translation": "",
+              "translation": "In the evening I read the newspaper.",
               "highlight": [
                 "lese"
               ]
@@ -5241,21 +5241,21 @@
           "sentences": [
             {
               "sentence": "Ich schreibe einen Brief.",
-              "translation": "",
+              "translation": "I'm writing a letter.",
               "highlight": [
                 "schreibe"
               ]
             },
             {
               "sentence": "Schreib mir eine E-Mail!",
-              "translation": "",
+              "translation": "Write me an email!",
               "highlight": [
                 "Schreib"
               ]
             },
             {
               "sentence": "Schreibst du eine Nachricht?",
-              "translation": "",
+              "translation": "Are you writing a message?",
               "highlight": [
                 "Schreibst"
               ]
@@ -5276,21 +5276,21 @@
           "sentences": [
             {
               "sentence": "Ich kaufe Brot.",
-              "translation": "",
+              "translation": "I'm buying bread.",
               "highlight": [
                 "kaufe"
               ]
             },
             {
               "sentence": "Wo kaufst du ein?",
-              "translation": "",
+              "translation": "Where do you do your shopping?",
               "highlight": [
                 "kaufst"
               ]
             },
             {
               "sentence": "Ich kaufe heute Milch.",
-              "translation": "",
+              "translation": "I'm buying milk today.",
               "highlight": [
                 "kaufe"
               ]
@@ -5311,7 +5311,7 @@
           "sentences": [
             {
               "sentence": "Ich fahre mit dem Bus.",
-              "translation": "",
+              "translation": "I'm going by bus.",
               "highlight": [
                 "fahre"
               ]
@@ -5325,7 +5325,7 @@
             },
             {
               "sentence": "F\u00e4hrst du mit dem Fahrrad?",
-              "translation": "",
+              "translation": "Are you going by bike?",
               "highlight": [
                 "F\u00e4hrst"
               ]
@@ -5346,21 +5346,21 @@
           "sentences": [
             {
               "sentence": "Ich sehe einen Film.",
-              "translation": "",
+              "translation": "I'm watching a film.",
               "highlight": [
                 "sehe"
               ]
             },
             {
               "sentence": "Siehst du das?",
-              "translation": "",
+              "translation": "Do you see that?",
               "highlight": [
                 "Siehst"
               ]
             },
             {
               "sentence": "Ich sehe dort meine Freundin.",
-              "translation": "",
+              "translation": "I can see my friend over there.",
               "highlight": [
                 "sehe"
               ]
@@ -5377,25 +5377,25 @@
           "partOfSpeech": "Verb",
           "id": 146,
           "romanisation": "",
-          "translation": "",
+          "translation": "to sleep",
           "sentences": [
             {
               "sentence": "Ich schlafe acht Stunden.",
-              "translation": "",
+              "translation": "I sleep eight hours.",
               "highlight": [
                 "schlafe"
               ]
             },
             {
               "sentence": "Das Baby schl\u00e4ft.",
-              "translation": "",
+              "translation": "The baby is sleeping.",
               "highlight": [
                 "schl\u00e4ft"
               ]
             },
             {
               "sentence": "Schl\u00e4fst du schon?",
-              "translation": "",
+              "translation": "Are you asleep already?",
               "highlight": [
                 "Schl\u00e4fst"
               ]
@@ -6022,11 +6022,11 @@
             },
             {
               "sentence": "Der Tisch ist gro\u00df.",
-              "translation": ""
+              "translation": "The table is big."
             },
             {
               "sentence": "Ist der Tisch frei?",
-              "translation": ""
+              "translation": "Is the table free?"
             }
           ]
         },
@@ -6048,11 +6048,11 @@
             },
             {
               "sentence": "Ich sitze auf dem Stuhl.",
-              "translation": ""
+              "translation": "I'm sitting on the chair."
             },
             {
               "sentence": "Ist der Stuhl bequem?",
-              "translation": ""
+              "translation": "Is the chair comfortable?"
             }
           ]
         },
@@ -6070,15 +6070,15 @@
           "sentences": [
             {
               "sentence": "Ich schlafe in meinem Bett.",
-              "translation": ""
+              "translation": "I sleep in my bed."
             },
             {
               "sentence": "Das Bett ist weich.",
-              "translation": ""
+              "translation": "The bed is soft."
             },
             {
               "sentence": "Ist dein Bett bequem?",
-              "translation": ""
+              "translation": "Is your bed comfortable?"
             }
           ]
         },
@@ -6096,15 +6096,15 @@
           "sentences": [
             {
               "sentence": "Die Lampe ist an.",
-              "translation": ""
+              "translation": "The lamp is on."
             },
             {
               "sentence": "Ich kaufe eine neue Lampe.",
-              "translation": ""
+              "translation": "I'm buying a new lamp."
             },
             {
               "sentence": "Ist die Lampe aus?",
-              "translation": ""
+              "translation": "Is the lamp off?"
             }
           ]
         },
@@ -6122,7 +6122,7 @@
           "sentences": [
             {
               "sentence": "Bitte schlie\u00df die T\u00fcr!",
-              "translation": ""
+              "translation": "Please close the door!"
             },
             {
               "sentence": "Die T\u00fcr ist offen.",
@@ -6130,7 +6130,7 @@
             },
             {
               "sentence": "Ist die T\u00fcr geschlossen?",
-              "translation": ""
+              "translation": "Is the door closed?"
             }
           ]
         },
@@ -6148,15 +6148,15 @@
           "sentences": [
             {
               "sentence": "Das Fenster ist offen.",
-              "translation": ""
+              "translation": "The window is open."
             },
             {
               "sentence": "Mach bitte das Fenster zu!",
-              "translation": ""
+              "translation": "Please close the window!"
             },
             {
               "sentence": "Kannst du das Fenster \u00f6ffnen?",
-              "translation": ""
+              "translation": "Can you open the window?"
             }
           ]
         },
@@ -6174,7 +6174,7 @@
           "sentences": [
             {
               "sentence": "Ich lese ein Buch.",
-              "translation": ""
+              "translation": "I'm reading a book."
             },
             {
               "sentence": "Das Buch ist interessant.",
@@ -6182,7 +6182,7 @@
             },
             {
               "sentence": "Ist das dein Buch?",
-              "translation": ""
+              "translation": "Is that your book?"
             }
           ]
         },
@@ -6200,11 +6200,11 @@
           "sentences": [
             {
               "sentence": "Ich schreibe mit einem Stift.",
-              "translation": ""
+              "translation": "I write with a pen."
             },
             {
               "sentence": "Der Stift ist blau.",
-              "translation": ""
+              "translation": "The pen is blue."
             },
             {
               "sentence": "Hast du einen Stift?",
@@ -6222,19 +6222,19 @@
           "partOfSpeech": "Nomen",
           "id": 155,
           "romanisation": "",
-          "translation": "",
+          "translation": "the mobile phone",
           "sentences": [
             {
               "sentence": "Mein Handy ist neu.",
-              "translation": ""
+              "translation": "My mobile is new."
             },
             {
               "sentence": "Wo ist mein Handy?",
-              "translation": ""
+              "translation": "Where is my mobile?"
             },
             {
               "sentence": "Ich lade mein Handy auf.",
-              "translation": ""
+              "translation": "I'm charging my mobile."
             }
           ]
         },
@@ -6252,15 +6252,15 @@
           "sentences": [
             {
               "sentence": "Ich arbeite am Computer.",
-              "translation": ""
+              "translation": "I work on the computer."
             },
             {
               "sentence": "Der Computer ist schnell.",
-              "translation": ""
+              "translation": "The computer is fast."
             },
             {
               "sentence": "Ist der Computer an?",
-              "translation": ""
+              "translation": "Is the computer on?"
             }
           ]
         },
@@ -6278,15 +6278,15 @@
           "sentences": [
             {
               "sentence": "Wo ist mein Schl\u00fcssel?",
-              "translation": ""
+              "translation": "Where is my key?"
             },
             {
               "sentence": "Ich habe meinen Schl\u00fcssel verloren.",
-              "translation": ""
+              "translation": "I have lost my key."
             },
             {
               "sentence": "Der Schl\u00fcssel liegt auf dem Tisch.",
-              "translation": ""
+              "translation": "The key is on the table."
             }
           ]
         },
@@ -6304,15 +6304,15 @@
           "sentences": [
             {
               "sentence": "Die Tasche ist schwer.",
-              "translation": ""
+              "translation": "The bag is heavy."
             },
             {
               "sentence": "Meine Tasche ist rot.",
-              "translation": ""
+              "translation": "My bag is red."
             },
             {
               "sentence": "Was ist in deiner Tasche?",
-              "translation": ""
+              "translation": "What is in your bag?"
             }
           ]
         },
@@ -6330,15 +6330,15 @@
           "sentences": [
             {
               "sentence": "Der Teller ist auf dem Tisch.",
-              "translation": ""
+              "translation": "The plate is on the table."
             },
             {
               "sentence": "Ich brauche einen Teller.",
-              "translation": ""
+              "translation": "I need a plate."
             },
             {
               "sentence": "Ist der Teller sauber?",
-              "translation": ""
+              "translation": "Is the plate clean?"
             }
           ]
         },
@@ -6356,15 +6356,15 @@
           "sentences": [
             {
               "sentence": "Ein Glas Wasser, bitte.",
-              "translation": ""
+              "translation": "A glass of water, please."
             },
             {
               "sentence": "Das Glas ist voll.",
-              "translation": ""
+              "translation": "The glass is full."
             },
             {
               "sentence": "Ist das Glas leer?",
-              "translation": ""
+              "translation": "Is the glass empty?"
             }
           ]
         },
@@ -6378,19 +6378,19 @@
           "partOfSpeech": "Nomen",
           "id": 161,
           "romanisation": "",
-          "translation": "",
+          "translation": "the fridge",
           "sentences": [
             {
               "sentence": "Die Milch ist im K\u00fchlschrank.",
-              "translation": ""
+              "translation": "The milk is in the fridge."
             },
             {
               "sentence": "Der K\u00fchlschrank ist leer.",
-              "translation": ""
+              "translation": "The fridge is empty."
             },
             {
               "sentence": "Ist das Gem\u00fcse im K\u00fchlschrank?",
-              "translation": ""
+              "translation": "Are the vegetables in the fridge?"
             }
           ]
         },
@@ -6408,15 +6408,15 @@
           "sentences": [
             {
               "sentence": "Der Fernseher ist neu.",
-              "translation": ""
+              "translation": "The television is new."
             },
             {
               "sentence": "Ich schaue den Fernseher an.",
-              "translation": ""
+              "translation": "I'm watching the television."
             },
             {
               "sentence": "Ist der Fernseher aus?",
-              "translation": ""
+              "translation": "Is the television off?"
             }
           ]
         },
@@ -6860,21 +6860,21 @@
           "sentences": [
             {
               "sentence": "Das Essen ist gut.",
-              "translation": "",
+              "translation": "The food is good.",
               "highlight": [
                 "gut"
               ]
             },
             {
               "sentence": "Er ist ein guter Freund.",
-              "translation": "",
+              "translation": "He is a good friend.",
               "highlight": [
                 "guter"
               ]
             },
             {
               "sentence": "Ist der Film gut?",
-              "translation": "",
+              "translation": "Is the film good?",
               "highlight": [
                 "gut"
               ]
@@ -6902,14 +6902,14 @@
             },
             {
               "sentence": "Ich f\u00fchle mich schlecht.",
-              "translation": "",
+              "translation": "I feel bad.",
               "highlight": [
                 "schlecht"
               ]
             },
             {
               "sentence": "Ist das Essen schlecht?",
-              "translation": "",
+              "translation": "Has the food gone off?",
               "highlight": [
                 "schlecht"
               ]
@@ -6937,14 +6937,14 @@
             },
             {
               "sentence": "Er ist sehr gro\u00df.",
-              "translation": "",
+              "translation": "He is very tall.",
               "highlight": [
                 "gro\u00df"
               ]
             },
             {
               "sentence": "Ist deine Wohnung gro\u00df?",
-              "translation": "",
+              "translation": "Is your flat big?",
               "highlight": [
                 "gro\u00df"
               ]
@@ -6965,21 +6965,21 @@
           "sentences": [
             {
               "sentence": "Die Wohnung ist klein.",
-              "translation": "",
+              "translation": "The flat is small.",
               "highlight": [
                 "klein"
               ]
             },
             {
               "sentence": "Das Kind ist klein.",
-              "translation": "",
+              "translation": "The child is little.",
               "highlight": [
                 "klein"
               ]
             },
             {
               "sentence": "Ist dein Zimmer klein?",
-              "translation": "",
+              "translation": "Is your room small?",
               "highlight": [
                 "klein"
               ]
@@ -7000,21 +7000,21 @@
           "sentences": [
             {
               "sentence": "Mein Auto ist neu.",
-              "translation": "",
+              "translation": "My car is new.",
               "highlight": [
                 "neu"
               ]
             },
             {
               "sentence": "Ich habe ein neues Handy.",
-              "translation": "",
+              "translation": "I have a new mobile.",
               "highlight": [
                 "neues"
               ]
             },
             {
               "sentence": "Ist dein Computer neu?",
-              "translation": "",
+              "translation": "Is your computer new?",
               "highlight": [
                 "neu"
               ]
@@ -7035,7 +7035,7 @@
           "sentences": [
             {
               "sentence": "Das Haus ist alt.",
-              "translation": "",
+              "translation": "The house is old.",
               "highlight": [
                 "alt"
               ]
@@ -7049,7 +7049,7 @@
             },
             {
               "sentence": "Das alte Fahrrad f\u00e4hrt noch gut.",
-              "translation": "",
+              "translation": "The old bike still rides well.",
               "highlight": [
                 "alte"
               ]
@@ -7070,21 +7070,21 @@
           "sentences": [
             {
               "sentence": "Der Tag ist sch\u00f6n.",
-              "translation": "",
+              "translation": "It's a beautiful day.",
               "highlight": [
                 "sch\u00f6n"
               ]
             },
             {
               "sentence": "Das ist ein sch\u00f6nes Bild.",
-              "translation": "",
+              "translation": "That is a beautiful picture.",
               "highlight": [
                 "sch\u00f6nes"
               ]
             },
             {
               "sentence": "Ist der Park sch\u00f6n?",
-              "translation": "",
+              "translation": "Is the park nice?",
               "highlight": [
                 "sch\u00f6n"
               ]
@@ -7105,21 +7105,21 @@
           "sentences": [
             {
               "sentence": "Das Auto ist teuer.",
-              "translation": "",
+              "translation": "The car is expensive.",
               "highlight": [
                 "teuer"
               ]
             },
             {
               "sentence": "Der Kaffee ist teuer.",
-              "translation": "",
+              "translation": "The coffee is expensive.",
               "highlight": [
                 "teuer"
               ]
             },
             {
               "sentence": "Ist die Wohnung teuer?",
-              "translation": "",
+              "translation": "Is the flat expensive?",
               "highlight": [
                 "teuer"
               ]
@@ -7140,21 +7140,21 @@
           "sentences": [
             {
               "sentence": "Das Brot ist billig.",
-              "translation": "",
+              "translation": "The bread is cheap.",
               "highlight": [
                 "billig"
               ]
             },
             {
               "sentence": "Die Jacke war billig.",
-              "translation": "",
+              "translation": "The jacket was cheap.",
               "highlight": [
                 "billig"
               ]
             },
             {
               "sentence": "Ist das Ticket billig?",
-              "translation": "",
+              "translation": "Is the ticket cheap?",
               "highlight": [
                 "billig"
               ]
@@ -7171,25 +7171,25 @@
           "partOfSpeech": "Adjektiv",
           "id": 172,
           "romanisation": "",
-          "translation": "",
+          "translation": "warm",
           "sentences": [
             {
               "sentence": "Das Wasser ist warm.",
-              "translation": "",
+              "translation": "The water is warm.",
               "highlight": [
                 "warm"
               ]
             },
             {
               "sentence": "Heute ist es warm.",
-              "translation": "",
+              "translation": "It's warm today.",
               "highlight": [
                 "warm"
               ]
             },
             {
               "sentence": "Ist die Suppe noch warm?",
-              "translation": "",
+              "translation": "Is the soup still warm?",
               "highlight": [
                 "warm"
               ]
@@ -7206,25 +7206,25 @@
           "partOfSpeech": "Adjektiv",
           "id": 173,
           "romanisation": "",
-          "translation": "",
+          "translation": "cold",
           "sentences": [
             {
               "sentence": "Der Winter ist kalt.",
-              "translation": "",
+              "translation": "Winter is cold.",
               "highlight": [
                 "kalt"
               ]
             },
             {
               "sentence": "Das Getr\u00e4nk ist kalt.",
-              "translation": "",
+              "translation": "The drink is cold.",
               "highlight": [
                 "kalt"
               ]
             },
             {
               "sentence": "Ist dir kalt?",
-              "translation": "",
+              "translation": "Are you cold?",
               "highlight": [
                 "kalt"
               ]
@@ -7252,14 +7252,14 @@
             },
             {
               "sentence": "Er l\u00e4uft schnell.",
-              "translation": "",
+              "translation": "He runs fast.",
               "highlight": [
                 "schnell"
               ]
             },
             {
               "sentence": "Ist der Zug schnell?",
-              "translation": "",
+              "translation": "Is the train fast?",
               "highlight": [
                 "schnell"
               ]
@@ -7280,21 +7280,21 @@
           "sentences": [
             {
               "sentence": "Der Bus ist langsam.",
-              "translation": "",
+              "translation": "The bus is slow.",
               "highlight": [
                 "langsam"
               ]
             },
             {
               "sentence": "Bitte sprich langsam!",
-              "translation": "",
+              "translation": "Please speak slowly!",
               "highlight": [
                 "langsam"
               ]
             },
             {
               "sentence": "F\u00e4hrt der Bus langsam?",
-              "translation": "",
+              "translation": "Is the bus going slowly?",
               "highlight": [
                 "langsam"
               ]
@@ -7315,21 +7315,21 @@
           "sentences": [
             {
               "sentence": "Ich bin gl\u00fccklich.",
-              "translation": "",
+              "translation": "I am happy.",
               "highlight": [
                 "gl\u00fccklich"
               ]
             },
             {
               "sentence": "Sie ist ein gl\u00fcckliches Kind.",
-              "translation": "",
+              "translation": "She is a happy child.",
               "highlight": [
                 "gl\u00fcckliches"
               ]
             },
             {
               "sentence": "Bist du heute gl\u00fccklich?",
-              "translation": "",
+              "translation": "Are you happy today?",
               "highlight": [
                 "gl\u00fccklich"
               ]
@@ -7350,21 +7350,21 @@
           "sentences": [
             {
               "sentence": "Ich bin m\u00fcde.",
-              "translation": "",
+              "translation": "I am tired.",
               "highlight": [
                 "m\u00fcde"
               ]
             },
             {
               "sentence": "Das Baby ist m\u00fcde.",
-              "translation": "",
+              "translation": "The baby is tired.",
               "highlight": [
                 "m\u00fcde"
               ]
             },
             {
               "sentence": "Bist du m\u00fcde?",
-              "translation": "",
+              "translation": "Are you tired?",
               "highlight": [
                 "m\u00fcde"
               ]
@@ -7381,25 +7381,25 @@
           "partOfSpeech": "Adjektiv",
           "id": 178,
           "romanisation": "",
-          "translation": "",
+          "translation": "easy / simple",
           "sentences": [
             {
               "sentence": "Die Aufgabe ist einfach.",
-              "translation": "",
+              "translation": "The task is easy.",
               "highlight": [
                 "einfach"
               ]
             },
             {
               "sentence": "Deutsch ist nicht einfach.",
-              "translation": "",
+              "translation": "German isn't easy.",
               "highlight": [
                 "einfach"
               ]
             },
             {
               "sentence": "Ist die Frage einfach?",
-              "translation": "",
+              "translation": "Is the question easy?",
               "highlight": [
                 "einfach"
               ]
@@ -7420,21 +7420,21 @@
           "sentences": [
             {
               "sentence": "Die Tasche ist schwer.",
-              "translation": "",
+              "translation": "The bag is heavy.",
               "highlight": [
                 "schwer"
               ]
             },
             {
               "sentence": "Die Pr\u00fcfung ist schwer.",
-              "translation": "",
+              "translation": "The exam is difficult.",
               "highlight": [
                 "schwer"
               ]
             },
             {
               "sentence": "Ist die Tasche schwer?",
-              "translation": "",
+              "translation": "Is the bag heavy?",
               "highlight": [
                 "schwer"
               ]
@@ -7451,25 +7451,25 @@
           "partOfSpeech": "Adjektiv",
           "id": 180,
           "romanisation": "",
-          "translation": "",
+          "translation": "friendly",
           "sentences": [
             {
               "sentence": "Die Frau ist freundlich.",
-              "translation": "",
+              "translation": "The woman is friendly.",
               "highlight": [
                 "freundlich"
               ]
             },
             {
               "sentence": "Er ist immer freundlich.",
-              "translation": "",
+              "translation": "He is always friendly.",
               "highlight": [
                 "freundlich"
               ]
             },
             {
               "sentence": "Ist dein Nachbar freundlich?",
-              "translation": "",
+              "translation": "Is your neighbour friendly?",
               "highlight": [
                 "freundlich"
               ]
@@ -7715,7 +7715,7 @@
             },
             {
               "sentence": "Ist der Schl\u00fcssel in der Tasche?",
-              "translation": ""
+              "translation": "Is the key in the bag?"
             }
           ]
         },
@@ -7733,15 +7733,15 @@
           "sentences": [
             {
               "sentence": "Das Glas steht auf dem Tisch.",
-              "translation": ""
+              "translation": "The glass is on the table."
             },
             {
               "sentence": "Ich gehe auf den Markt.",
-              "translation": ""
+              "translation": "I'm going to the market."
             },
             {
               "sentence": "Liegt das Buch auf dem Tisch?",
-              "translation": ""
+              "translation": "Is the book on the table?"
             }
           ]
         },
@@ -7763,11 +7763,11 @@
             },
             {
               "sentence": "Der Ball liegt unter dem Bett.",
-              "translation": ""
+              "translation": "The ball is under the bed."
             },
             {
               "sentence": "Ist die Katze unter dem Bett?",
-              "translation": ""
+              "translation": "Is the cat under the bed?"
             }
           ]
         },
@@ -7785,15 +7785,15 @@
           "sentences": [
             {
               "sentence": "Die Lampe h\u00e4ngt \u00fcber dem Tisch.",
-              "translation": ""
+              "translation": "The lamp hangs above the table."
             },
             {
               "sentence": "Das Flugzeug fliegt \u00fcber die Stadt.",
-              "translation": ""
+              "translation": "The plane is flying over the city."
             },
             {
               "sentence": "H\u00e4ngt die Lampe \u00fcber dem Tisch?",
-              "translation": ""
+              "translation": "Does the lamp hang above the table?"
             }
           ]
         },
@@ -7811,7 +7811,7 @@
           "sentences": [
             {
               "sentence": "Ich sitze neben dir.",
-              "translation": ""
+              "translation": "I'm sitting next to you."
             },
             {
               "sentence": "Die Bank ist neben der Post.",
@@ -7819,7 +7819,7 @@
             },
             {
               "sentence": "Sitzt du neben Anna?",
-              "translation": ""
+              "translation": "Are you sitting next to Anna?"
             }
           ]
         },
@@ -7837,15 +7837,15 @@
           "sentences": [
             {
               "sentence": "Ich warte vor dem Haus.",
-              "translation": ""
+              "translation": "I'm waiting in front of the house."
             },
             {
               "sentence": "Das Auto steht vor der T\u00fcr.",
-              "translation": ""
+              "translation": "The car is in front of the door."
             },
             {
               "sentence": "Wartest du vor dem Kino?",
-              "translation": ""
+              "translation": "Are you waiting in front of the cinema?"
             }
           ]
         },
@@ -7863,15 +7863,15 @@
           "sentences": [
             {
               "sentence": "Der Garten ist hinter dem Haus.",
-              "translation": ""
+              "translation": "The garden is behind the house."
             },
             {
               "sentence": "Er steht hinter mir.",
-              "translation": ""
+              "translation": "He is standing behind me."
             },
             {
               "sentence": "Ist der Garten hinter dem Haus?",
-              "translation": ""
+              "translation": "Is the garden behind the house?"
             }
           ]
         },
@@ -7889,15 +7889,15 @@
           "sentences": [
             {
               "sentence": "Das Kind sitzt zwischen den Eltern.",
-              "translation": ""
+              "translation": "The child is sitting between the parents."
             },
             {
               "sentence": "Die Post ist zwischen Bank und Caf\u00e9.",
-              "translation": ""
+              "translation": "The post office is between the bank and the caf\u00e9."
             },
             {
               "sentence": "Sitzt Paul zwischen seinen Eltern?",
-              "translation": ""
+              "translation": "Is Paul sitting between his parents?"
             }
           ]
         },
@@ -7915,15 +7915,15 @@
           "sentences": [
             {
               "sentence": "Ich fahre mit dem Bus.",
-              "translation": ""
+              "translation": "I'm going by bus."
             },
             {
               "sentence": "Ich komme mit dir.",
-              "translation": ""
+              "translation": "I'm coming with you."
             },
             {
               "sentence": "F\u00e4hrst du mit dem Bus?",
-              "translation": ""
+              "translation": "Are you going by bus?"
             }
           ]
         },
@@ -7941,15 +7941,15 @@
           "sentences": [
             {
               "sentence": "Ich trinke Kaffee ohne Zucker.",
-              "translation": ""
+              "translation": "I drink coffee without sugar."
             },
             {
               "sentence": "Er geht ohne Jacke.",
-              "translation": ""
+              "translation": "He goes without a jacket."
             },
             {
               "sentence": "Trinkst du Kaffee ohne Milch?",
-              "translation": ""
+              "translation": "Do you drink coffee without milk?"
             }
           ]
         },
@@ -7967,15 +7967,15 @@
           "sentences": [
             {
               "sentence": "Das Geschenk ist f\u00fcr dich.",
-              "translation": ""
+              "translation": "The present is for you."
             },
             {
               "sentence": "Ich lerne f\u00fcr die Pr\u00fcfung.",
-              "translation": ""
+              "translation": "I'm studying for the exam."
             },
             {
               "sentence": "Ist das Geschenk f\u00fcr mich?",
-              "translation": ""
+              "translation": "Is the present for me?"
             }
           ]
         },
@@ -7993,15 +7993,15 @@
           "sentences": [
             {
               "sentence": "Das Bild h\u00e4ngt an der Wand.",
-              "translation": ""
+              "translation": "The picture hangs on the wall."
             },
             {
               "sentence": "Wir sitzen am Tisch.",
-              "translation": ""
+              "translation": "We are sitting at the table."
             },
             {
               "sentence": "H\u00e4ngt das Bild an der Wand?",
-              "translation": ""
+              "translation": "Does the picture hang on the wall?"
             }
           ]
         },
@@ -8019,15 +8019,15 @@
           "sentences": [
             {
               "sentence": "Ich gehe zu meiner Oma.",
-              "translation": ""
+              "translation": "I'm going to my grandma's."
             },
             {
               "sentence": "Wir fahren zum Bahnhof.",
-              "translation": ""
+              "translation": "We're going to the station."
             },
             {
               "sentence": "Gehst du zu deiner Freundin?",
-              "translation": ""
+              "translation": "Are you going to your girlfriend's?"
             }
           ]
         },
@@ -8049,11 +8049,11 @@
             },
             {
               "sentence": "Sie trinkt aus dem Glas.",
-              "translation": ""
+              "translation": "She drinks from the glass."
             },
             {
               "sentence": "Kommst du aus \u00d6sterreich?",
-              "translation": ""
+              "translation": "Are you from Austria?"
             }
           ]
         },
@@ -8071,15 +8071,15 @@
           "sentences": [
             {
               "sentence": "Ich bin bei meinen Eltern.",
-              "translation": ""
+              "translation": "I'm at my parents'."
             },
             {
               "sentence": "Er wohnt bei einem Freund.",
-              "translation": ""
+              "translation": "He is staying with a friend."
             },
             {
               "sentence": "Wohnst du bei deinen Eltern?",
-              "translation": ""
+              "translation": "Do you live with your parents?"
             }
           ]
         },
@@ -8101,11 +8101,11 @@
             },
             {
               "sentence": "Nach dem Essen trinke ich Kaffee.",
-              "translation": ""
+              "translation": "After the meal I drink coffee."
             },
             {
               "sentence": "F\u00e4hrst du nach Hamburg?",
-              "translation": ""
+              "translation": "Are you going to Hamburg?"
             }
           ]
         },
@@ -8123,15 +8123,15 @@
           "sentences": [
             {
               "sentence": "Das ist ein Geschenk von meiner Mutter.",
-              "translation": ""
+              "translation": "That is a present from my mother."
             },
             {
               "sentence": "Ich komme von der Arbeit.",
-              "translation": ""
+              "translation": "I'm coming from work."
             },
             {
               "sentence": "Ist der Brief von Lisa?",
-              "translation": ""
+              "translation": "Is the letter from Lisa?"
             }
           ]
         }
@@ -8160,11 +8160,11 @@
             },
             {
               "sentence": "Wer kommt heute?",
-              "translation": ""
+              "translation": "Who is coming today?"
             },
             {
               "sentence": "Wer ist deine Lehrerin?",
-              "translation": ""
+              "translation": "Who is your teacher?"
             }
           ]
         },
@@ -8212,11 +8212,11 @@
             },
             {
               "sentence": "Wo ist der Bahnhof?",
-              "translation": ""
+              "translation": "Where is the station?"
             },
             {
               "sentence": "Wo steht dein Auto?",
-              "translation": ""
+              "translation": "Where is your car parked?"
             }
           ]
         },
@@ -8238,7 +8238,7 @@
             },
             {
               "sentence": "Wann beginnt der Film?",
-              "translation": ""
+              "translation": "When does the film start?"
             },
             {
               "sentence": "Wann hast du Geburtstag?",
@@ -8260,7 +8260,7 @@
           "sentences": [
             {
               "sentence": "Wie hei\u00dft du?",
-              "translation": ""
+              "translation": "What's your name?"
             },
             {
               "sentence": "Wie geht es dir?",
@@ -8268,7 +8268,7 @@
             },
             {
               "sentence": "Wie findest du den Film?",
-              "translation": ""
+              "translation": "What do you think of the film?"
             }
           ]
         },
@@ -8286,15 +8286,15 @@
           "sentences": [
             {
               "sentence": "Warum lernst du Deutsch?",
-              "translation": ""
+              "translation": "Why are you learning German?"
             },
             {
               "sentence": "Warum bist du traurig?",
-              "translation": ""
+              "translation": "Why are you sad?"
             },
             {
               "sentence": "Warum kommst du heute nicht?",
-              "translation": ""
+              "translation": "Why aren't you coming today?"
             }
           ]
         },
@@ -8316,11 +8316,11 @@
             },
             {
               "sentence": "Woher wei\u00dft du das?",
-              "translation": ""
+              "translation": "How do you know that?"
             },
             {
               "sentence": "Woher hat sie das Buch?",
-              "translation": ""
+              "translation": "Where did she get the book from?"
             }
           ]
         },
@@ -8342,11 +8342,11 @@
             },
             {
               "sentence": "Wohin fahren wir?",
-              "translation": ""
+              "translation": "Where are we going?"
             },
             {
               "sentence": "Wohin f\u00e4hrt der Zug?",
-              "translation": ""
+              "translation": "Where is the train going?"
             }
           ]
         },
@@ -8364,15 +8364,15 @@
           "sentences": [
             {
               "sentence": "Wie viel kostet das?",
-              "translation": ""
+              "translation": "How much does that cost?"
             },
             {
               "sentence": "Wie viel Zeit hast du?",
-              "translation": ""
+              "translation": "How much time do you have?"
             },
             {
               "sentence": "Wie viel Wasser trinkst du?",
-              "translation": ""
+              "translation": "How much water do you drink?"
             }
           ]
         },
@@ -8390,15 +8390,15 @@
           "sentences": [
             {
               "sentence": "Wie viele Geschwister hast du?",
-              "translation": ""
+              "translation": "How many brothers and sisters do you have?"
             },
             {
               "sentence": "Wie viele Personen kommen?",
-              "translation": ""
+              "translation": "How many people are coming?"
             },
             {
               "sentence": "Wie viele B\u00fccher hast du?",
-              "translation": ""
+              "translation": "How many books do you have?"
             }
           ]
         },
@@ -8412,19 +8412,19 @@
           "partOfSpeech": "Fragewort",
           "id": 208,
           "romanisation": "",
-          "translation": "",
+          "translation": "which",
           "sentences": [
             {
               "sentence": "Welche Farbe magst du?",
-              "translation": ""
+              "translation": "Which colour do you like?"
             },
             {
               "sentence": "Welche Sprache sprichst du?",
-              "translation": ""
+              "translation": "Which language do you speak?"
             },
             {
               "sentence": "Welche Jacke kaufst du?",
-              "translation": ""
+              "translation": "Which jacket are you buying?"
             }
           ]
         }
@@ -8449,15 +8449,15 @@
           "sentences": [
             {
               "sentence": "Danke f\u00fcr deine Hilfe.",
-              "translation": ""
+              "translation": "Thanks for your help."
             },
             {
               "sentence": "Vielen Dank!",
-              "translation": ""
+              "translation": "Thank you very much!"
             },
             {
               "sentence": "Sagst du nach der Hilfe \u201eDanke\u201c?",
-              "translation": ""
+              "translation": "Do you say \"thank you\" after someone helps?"
             }
           ]
         },
@@ -8475,15 +8475,15 @@
           "sentences": [
             {
               "sentence": "Bitte, gern geschehen.",
-              "translation": ""
+              "translation": "Here you are, you're welcome."
             },
             {
               "sentence": "Ein Wasser, bitte.",
-              "translation": ""
+              "translation": "A water, please."
             },
             {
               "sentence": "M\u00f6chtest du Wasser, bitte?",
-              "translation": ""
+              "translation": "Would you like some water?"
             }
           ]
         },
@@ -8501,15 +8501,15 @@
           "sentences": [
             {
               "sentence": "Entschuldigung, wo ist der Bahnhof?",
-              "translation": ""
+              "translation": "Excuse me, where is the station?"
             },
             {
               "sentence": "Entschuldigung, ich bin sp\u00e4t.",
-              "translation": ""
+              "translation": "Sorry, I'm late."
             },
             {
               "sentence": "Sie sagt leise Entschuldigung.",
-              "translation": ""
+              "translation": "She quietly says sorry."
             }
           ]
         },
@@ -8531,11 +8531,11 @@
             },
             {
               "sentence": "Ja, gerne!",
-              "translation": ""
+              "translation": "Yes, gladly!"
             },
             {
               "sentence": "Ist deine Antwort \u201eJa\u201c?",
-              "translation": ""
+              "translation": "Is your answer \"yes\"?"
             }
           ]
         },
@@ -8553,15 +8553,15 @@
           "sentences": [
             {
               "sentence": "Nein, danke.",
-              "translation": ""
+              "translation": "No, thank you."
             },
             {
               "sentence": "Nein, das ist falsch.",
-              "translation": ""
+              "translation": "No, that's wrong."
             },
             {
               "sentence": "Ist deine Antwort \u201eNein\u201c?",
-              "translation": ""
+              "translation": "Is your answer \"no\"?"
             }
           ]
         },
@@ -8575,19 +8575,19 @@
           "partOfSpeech": "Adverb",
           "id": 214,
           "romanisation": "",
-          "translation": "",
+          "translation": "maybe / perhaps",
           "sentences": [
             {
               "sentence": "Vielleicht komme ich morgen.",
-              "translation": ""
+              "translation": "Maybe I'll come tomorrow."
             },
             {
               "sentence": "Vielleicht, ich wei\u00df es nicht.",
-              "translation": ""
+              "translation": "Maybe, I don't know."
             },
             {
               "sentence": "Kommst du vielleicht morgen?",
-              "translation": ""
+              "translation": "Are you coming tomorrow, perhaps?"
             }
           ]
         },
@@ -8605,15 +8605,15 @@
           "sentences": [
             {
               "sentence": "Kein Problem, ich helfe dir.",
-              "translation": ""
+              "translation": "No problem, I'll help you."
             },
             {
               "sentence": "Das ist kein Problem.",
-              "translation": ""
+              "translation": "That's no problem."
             },
             {
               "sentence": "Ist das f\u00fcr dich kein Problem?",
-              "translation": ""
+              "translation": "Is that no problem for you?"
             }
           ]
         },
@@ -8627,19 +8627,19 @@
           "partOfSpeech": "Redewendung",
           "id": 216,
           "romanisation": "",
-          "translation": "",
+          "translation": "I'm sorry",
           "sentences": [
             {
               "sentence": "Es tut mir leid.",
-              "translation": ""
+              "translation": "I'm sorry."
             },
             {
               "sentence": "Es tut mir leid, ich habe keine Zeit.",
-              "translation": ""
+              "translation": "I'm sorry, I don't have time."
             },
             {
               "sentence": "Tut es dir leid?",
-              "translation": ""
+              "translation": "Are you sorry?"
             }
           ]
         },
@@ -8657,15 +8657,15 @@
           "sentences": [
             {
               "sentence": "Ich wei\u00df nicht.",
-              "translation": ""
+              "translation": "I don't know."
             },
             {
               "sentence": "Ich wei\u00df nicht, wo er ist.",
-              "translation": ""
+              "translation": "I don't know where he is."
             },
             {
               "sentence": "Wei\u00dft du es wirklich nicht?",
-              "translation": ""
+              "translation": "Do you really not know?"
             }
           ]
         },
@@ -8683,15 +8683,15 @@
           "sentences": [
             {
               "sentence": "Ich verstehe nicht.",
-              "translation": ""
+              "translation": "I don't understand."
             },
             {
               "sentence": "Entschuldigung, ich verstehe das nicht.",
-              "translation": ""
+              "translation": "Sorry, I don't understand that."
             },
             {
               "sentence": "Verstehst du die Frage nicht?",
-              "translation": ""
+              "translation": "Don't you understand the question?"
             }
           ]
         },
@@ -8713,11 +8713,11 @@
             },
             {
               "sentence": "Wie bitte? Ich habe dich nicht geh\u00f6rt.",
-              "translation": ""
+              "translation": "Pardon? I didn't hear you."
             },
             {
               "sentence": "Er fragt noch einmal: Wie bitte?",
-              "translation": ""
+              "translation": "He asks again: pardon?"
             }
           ]
         },
@@ -8735,7 +8735,7 @@
           "sentences": [
             {
               "sentence": "Alles klar, bis sp\u00e4ter!",
-              "translation": ""
+              "translation": "All right, see you later!"
             },
             {
               "sentence": "Alles klar, ich verstehe.",
@@ -8743,7 +8743,7 @@
             },
             {
               "sentence": "Ist jetzt alles klar?",
-              "translation": ""
+              "translation": "Is everything clear now?"
             }
           ]
         },
@@ -8757,19 +8757,19 @@
           "partOfSpeech": "Adverb",
           "id": 221,
           "romanisation": "",
-          "translation": "",
+          "translation": "of course",
           "sentences": [
             {
               "sentence": "Nat\u00fcrlich helfe ich dir.",
-              "translation": ""
+              "translation": "Of course I'll help you."
             },
             {
               "sentence": "Nat\u00fcrlich, kein Problem.",
-              "translation": ""
+              "translation": "Of course, no problem."
             },
             {
               "sentence": "Hilfst du mir nat\u00fcrlich auch?",
-              "translation": ""
+              "translation": "You'll help me too, of course?"
             }
           ]
         },
@@ -8791,11 +8791,11 @@
             },
             {
               "sentence": "Bis sp\u00e4ter, ich muss los.",
-              "translation": ""
+              "translation": "See you later, I have to go."
             },
             {
               "sentence": "Sagen wir jetzt \u201eBis sp\u00e4ter\u201c?",
-              "translation": ""
+              "translation": "Shall we say \"see you later\" now?"
             }
           ]
         },
