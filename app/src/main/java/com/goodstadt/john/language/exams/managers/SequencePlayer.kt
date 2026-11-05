@@ -34,6 +34,17 @@ class SequencePlayer @Inject constructor(
     private val _isPaused = MutableStateFlow(false)
     val isPaused = _isPaused.asStateFlow()
 
+    /** What the car dashboard / Android Auto / lock screen shows: the current sentence and position. */
+    data class NowPlaying(val sentence: String, val index: Int, val count: Int, val title: String?)
+    private val _nowPlaying = MutableStateFlow<NowPlaying?>(null)
+    val nowPlaying = _nowPlaying.asStateFlow()
+
+    private fun publishNowPlaying() {
+        val p = params
+        _nowPlaying.value = if (p == null || _playingKey.value == null) null
+            else p.sentences.getOrNull(currentIndex)?.let { NowPlaying(it, currentIndex, p.sentences.size, p.title) }
+    }
+
     /** Retained so pause()/resume() can continue the same run from [currentIndex]. */
     private data class RunParams(
         val sentences: List<String>,
@@ -45,7 +56,8 @@ class SequencePlayer @Inject constructor(
         val onTrackStarted: (String) -> Unit,
         val onTrackPlayed: (String) -> Unit,
         val onCompleted: () -> Unit,
-        val onTrackListened: (String, Long) -> Unit
+        val onTrackListened: (String, Long) -> Unit,
+        val title: String?               // e.g. the podcast title, for the car / lock-screen label
     )
     private var params: RunParams? = null
     private var currentIndex = 0
@@ -66,13 +78,14 @@ class SequencePlayer @Inject constructor(
         sheetName: String = "",
         isPremiumUser: Boolean = false,
         gapMillis: ((String) -> Long)? = null,
-        voices: List<String?>? = null
+        voices: List<String?>? = null,
+        title: String? = null
     ) {
         if (_playingKey.value == key && !_isPaused.value) { stop(); return }
         stop()
         if (sentences.isEmpty() || !preflight()) return
         params = RunParams(sentences, voices, level, sheetName, isPremiumUser, gapMillis,
-            onTrackStarted, onTrackPlayed, onCompleted, onTrackListened)
+            onTrackStarted, onTrackPlayed, onCompleted, onTrackListened, title)
         _playingKey.value = key
         _isPaused.value = false
         startFrom(0)
@@ -94,15 +107,17 @@ class SequencePlayer @Inject constructor(
         isPremiumUser: Boolean = false,
         gapMillis: ((String) -> Long)? = null,
         voices: List<String?>? = null,
-        startIndex: Int = 0
+        startIndex: Int = 0,
+        title: String? = null
     ) {
         stop()
         if (sentences.isEmpty()) return
         params = RunParams(sentences, voices, level, sheetName, isPremiumUser, gapMillis,
-            onTrackStarted, onTrackPlayed, onCompleted, onTrackListened)
+            onTrackStarted, onTrackPlayed, onCompleted, onTrackListened, title)
         _playingKey.value = key
         _isPaused.value = true
         currentIndex = startIndex.coerceIn(0, sentences.lastIndex)
+        publishNowPlaying()
     }
 
     /** Suspend the active run, keeping its key + position. The in-flight track is cut. */
@@ -122,6 +137,22 @@ class SequencePlayer @Inject constructor(
         startFrom(currentIndex)
     }
 
+    /**
+     * Move [delta] tracks (car / Android Auto / headset next & previous). While playing, the current track is
+     * cut and playback continues from the new one; while paused, only the resume point moves.
+     */
+    fun skip(delta: Int) {
+        val p = params ?: return
+        if (_playingKey.value == null) return
+        val target = (currentIndex + delta).coerceIn(0, p.sentences.lastIndex)
+        if (_isPaused.value) { currentIndex = target; publishNowPlaying(); return }
+        ++runVersion            // the cut run's `finally` must not clear state
+        job?.cancel()
+        job = null
+        audioPlaybackRepository.stopPlayback()
+        startFrom(target)
+    }
+
     fun stop() {
         ++runVersion
         job?.cancel()
@@ -131,6 +162,7 @@ class SequencePlayer @Inject constructor(
         _isPaused.value = false
         params = null
         currentIndex = 0
+        _nowPlaying.value = null
     }
 
     private fun startFrom(startIndex: Int) {
@@ -150,6 +182,7 @@ class SequencePlayer @Inject constructor(
                     params = null
                     currentIndex = 0
                     job = null
+                    _nowPlaying.value = null
                 }
             }
         }
@@ -173,6 +206,7 @@ class SequencePlayer @Inject constructor(
             val next = if (index < p.sentences.lastIndex) resolve(index + 1) else null
             ensureActive()
             currentIndex = index
+            publishNowPlaying()
             p.onTrackStarted(p.sentences[index])
             // Subscribe before starting even a very short cached clip.
             val finished = async(start = CoroutineStart.UNDISPATCHED) {

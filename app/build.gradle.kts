@@ -22,8 +22,8 @@ if (secretsFile.exists()) {
     secretsProperties.load(FileInputStream(secretsFile))
 }
 
-val VERSION_CODE = 149  //for remote config versioning.  localised quizzes
-val VERSION_NAME = "4.0.149" //go live
+val VERSION_CODE = 150  //for remote config versioning.  localised quizzes
+val VERSION_NAME = "4.0.150" //go live - Car Auto
 
 android {
     namespace = "com.goodstadt.john.language.exams" // Base namespace
@@ -216,6 +216,7 @@ Fix: Use a relative path or an environment variable: storeFile = file(System.get
 dependencies {
     // Core & Compose
     implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.media)   // MediaSession: car / Android Auto / lock-screen controls
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
     implementation(platform(libs.androidx.compose.bom))

@@ -67,6 +67,10 @@ class LanguageExamsApp : Application() {
     @Inject
     lateinit var offlineAudioDownloader: dagger.Lazy<com.goodstadt.john.language.exams.managers.OfflineAudioDownloader>
 
+    /** Created at launch so car / lock-screen controls follow the shared SequencePlayer. */
+    @Inject
+    lateinit var mediaControls: dagger.Lazy<com.goodstadt.john.language.exams.managers.MediaControls>
+
     // 2. Add the onCreate method
     override fun onCreate() {
         super.onCreate() // Always call the parent class's method first
@@ -97,6 +101,7 @@ class LanguageExamsApp : Application() {
         AppEventsLogger.activateApp(this) // <--- This fires the "Install" signal
 
         offlineAudioDownloader.get()
+        mediaControls.get()
 
     }
     private fun setupAppDependencies() {

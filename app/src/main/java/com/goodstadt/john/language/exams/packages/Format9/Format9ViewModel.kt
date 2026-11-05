@@ -292,7 +292,8 @@ class Format9ViewModel @Inject constructor(
             },
             onTrackStarted = ::handleTrackStarted,
             onTrackListened = ::handleTrackListened,
-            onCompleted = { _currentSpokenText.value = null }
+            onCompleted = { _currentSpokenText.value = null },
+            title = _file.value?.title
         )
     }
 
@@ -355,7 +356,8 @@ class Format9ViewModel @Inject constructor(
             isPremiumUser = policy.isPremium,
             onTrackStarted = ::handleTrackStarted,
             onTrackListened = ::handleTrackListened,
-            onCompleted = { _currentSpokenText.value = null }
+            onCompleted = { _currentSpokenText.value = null },
+            title = _file.value?.title
         )
     }
 
