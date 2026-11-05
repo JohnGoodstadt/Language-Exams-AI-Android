@@ -1,6 +1,5 @@
 package com.goodstadt.john.language.exams.packages.CategoryTab
 
-import removeContentInBracketsAndTrim
 import android.Manifest
 import android.content.pm.PackageManager
 import android.os.Build
@@ -27,15 +26,14 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.LazyRow
-import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.lazy.itemsIndexed
-import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.GridItemSpan
 import androidx.compose.foundation.lazy.grid.LazyGridState
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
-import androidx.compose.foundation.lazy.grid.itemsIndexed as gridItemsIndexed
 import androidx.compose.foundation.lazy.grid.rememberLazyGridState
+import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -49,7 +47,6 @@ import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.Translate
 import androidx.compose.material.icons.filled.WorkspacePremium
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
@@ -98,25 +95,25 @@ import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.packages.SavedPractice.SavedInfoSheetContent
 import com.goodstadt.john.language.exams.packages.Translate.TranslateSheet
 import com.goodstadt.john.language.exams.packages.VocabQuiz.VocabQuizScreen
+import com.goodstadt.john.language.exams.packages.VocabQuiz.VocabSectionQuizViewModel
 import com.goodstadt.john.language.exams.packages.me.PremiumUpgradeSheet
 import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.shared.CacheProgressBar
-import com.goodstadt.john.language.exams.screens.shared.SessionFeedbackBar
-import com.goodstadt.john.language.exams.screens.shared.NoConnectionBar
-import com.goodstadt.john.language.exams.screens.shared.SessionFeedbackManager
+import com.goodstadt.john.language.exams.screens.shared.GridVocabCard
 import com.goodstadt.john.language.exams.screens.shared.HelpInfoSheet
 import com.goodstadt.john.language.exams.screens.shared.HighlightedWordInSentenceRow
 import com.goodstadt.john.language.exams.screens.shared.LaunchSpinner
 import com.goodstadt.john.language.exams.screens.shared.MenuItemChip
+import com.goodstadt.john.language.exams.screens.shared.NoConnectionBar
+import com.goodstadt.john.language.exams.screens.shared.SessionFeedbackBar
+import com.goodstadt.john.language.exams.screens.shared.SessionFeedbackManager
 import com.goodstadt.john.language.exams.screens.shared.SwipeableVocabRow
-import com.goodstadt.john.language.exams.screens.shared.GridVocabCard
-import com.goodstadt.john.language.exams.ui.LocalIsExpanded
 import com.goodstadt.john.language.exams.screens.shared.VoiceSettingsBottomSheet
 import com.goodstadt.john.language.exams.screens.shared.gamification.VocabGamificationStatsSheet
+import com.goodstadt.john.language.exams.ui.LocalIsExpanded
 import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 import com.goodstadt.john.language.exams.utils.buildSentenceParts
-import com.goodstadt.john.language.exams.packages.VocabQuiz.VocabSectionQuizViewModel
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 import dagger.hilt.EntryPoint
 import dagger.hilt.InstallIn
@@ -124,7 +121,9 @@ import dagger.hilt.android.EntryPointAccessors
 import dagger.hilt.components.SingletonComponent
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
+import removeContentInBracketsAndTrim
 import timber.log.Timber
+import androidx.compose.foundation.lazy.grid.itemsIndexed as gridItemsIndexed
 
 @EntryPoint
 @InstallIn(SingletonComponent::class)
@@ -218,15 +217,12 @@ fun CategoryTabScreen(
 //            val h = viewModel.checkTotalsNow()
             val heard = viewModel.calculateGrandTotalsNow()
 
-            Timber.i("LaunchedEffect() freshly calculated Exam Total is: $heard")
+            Timber.v("LaunchedEffect() freshly calculated Exam Total is: $heard")
 
-
-            Timber.i("heard total is $heard")
             if (heard > HELP_TRIGGER_VOICE_SELECTION_COUNT) {
-                Timber.i("Screen has been triggered")
+                Timber.v("Screen has been triggered")
             }
             if (!hasSeenHelp && (heard > HELP_TRIGGER_VOICE_SELECTION_COUNT)) {
-                Timber.i("Showing Help")
                 viewModel.markVoiceHelpAsSeen() // Save to DataStore
                 showVoiceSheet = true    // Show UI
             }
