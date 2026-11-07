@@ -29,7 +29,9 @@ class TranslateViewModel @Inject constructor(
     private val translationCache: TranslationCache,
     private val audioPlaybackRepository: AudioPlaybackRepository,
     private val billingRepository: BillingRepository,
-    private val userPreferencesRepository: UserPreferencesRepository
+    private val userPreferencesRepository: UserPreferencesRepository,
+    /** The learner's own language: the default target, and asked for once if the phone doesn't say. */
+    val learnerLanguage: com.goodstadt.john.language.exams.managers.LearnerLanguage
 ) : ViewModel() {
 
     /** The flavour's own language — always has a TTS voice, and can't be the [userLang] target. */
@@ -64,13 +66,25 @@ class TranslateViewModel @Inject constructor(
         viewModelScope.launch {
             TranslateLang.fromCode(userPreferencesRepository.translateTargetLangFlow.first())
                 ?.takeIf { it != appLang }
-                ?.let { userLang = it }
+                ?.let { userLang = it; hasSavedTarget = true }
         }
     }
 
-    /** The phone's language as a table entry, unless it's the app language; null if not in the table. */
+    /**
+     * Default target before the learner picks one here: their own language (from the phone's languages,
+     * or "My Language" in Settings), unless it's the app language.
+     */
     private fun localeDefault(): TranslateLang? =
-        TranslateLang.fromCode(Locale.getDefault().language)?.takeIf { it != appLang }
+        learnerLanguage.language.value.takeIf { it != appLang }
+
+    /** Whether the learner picked a target in this sheet before (then it wins over their language). */
+    private var hasSavedTarget = false
+
+    /** After the first-time question: use the learner's language as the target, unless one was saved. */
+    fun useLearnerLanguage() {
+        if (hasSavedTarget) return
+        learnerLanguage.language.value.takeIf { it != appLang }?.let { userLang = it; targetText = ""; errorMessage = null }
+    }
 
     fun onSourceChange(text: String) {
         sourceText = text

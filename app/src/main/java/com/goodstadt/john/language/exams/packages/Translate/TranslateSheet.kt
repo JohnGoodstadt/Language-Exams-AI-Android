@@ -72,6 +72,20 @@ fun TranslateSheet(
     // Pre-fill the source when the sheet opens (e.g. the last sentence played). Runs once per open.
     LaunchedEffect(Unit) { viewModel.prefillSource(initialText) }
 
+    // First translation ever, and the phone didn't say which language the learner speaks: ask first.
+    var askLanguage by remember { mutableStateOf(viewModel.learnerLanguage.needsAsking()) }
+    if (askLanguage) {
+        ModalBottomSheet(onDismissRequest = onDismiss, sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true),
+            containerColor = MaterialTheme.colorScheme.surface) {
+            LearnerLanguageQuestion { lang ->
+                if (lang != null) viewModel.learnerLanguage.choose(lang) else viewModel.learnerLanguage.markAsked()
+                viewModel.useLearnerLanguage()
+                askLanguage = false
+            }
+        }
+        return
+    }
+
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
     val context = LocalContext.current
     val focusManager = LocalFocusManager.current
@@ -314,6 +328,40 @@ private fun LangLabel(
                     }
                 )
             }
+        }
+    }
+}
+
+
+/**
+ * Asked once, the first time the learner translates, when the phone's language is the one being learned
+ * (so it doesn't say which language they speak). `onAnswer(null)` = "Not now": keep the default.
+ */
+@Composable
+private fun LearnerLanguageQuestion(onAnswer: (TranslateLang?) -> Unit) {
+    val ll = com.goodstadt.john.language.exams.managers.LearnerLanguage
+    Column(
+        modifier = Modifier.fillMaxWidth().verticalScroll(rememberScrollState())
+            .padding(horizontal = 20.dp).padding(bottom = 28.dp),
+        verticalArrangement = Arrangement.spacedBy(12.dp)
+    ) {
+        Text("Which language do you speak?", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
+        Text(
+            "Your phone is set to ${ll.appLanguage.display}, the language you're learning. Choose the language you'd like translations in. You can change it later in Settings > My Language.",
+            style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+        ll.askChoices.forEach { lang ->
+            androidx.compose.material3.Surface(
+                onClick = { onAnswer(lang) },
+                shape = androidx.compose.foundation.shape.RoundedCornerShape(10.dp),
+                color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.08f),
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Text(lang.display, style = MaterialTheme.typography.bodyLarge, modifier = Modifier.padding(14.dp))
+            }
+        }
+        androidx.compose.material3.TextButton(onClick = { onAnswer(null) }, modifier = Modifier.align(Alignment.CenterHorizontally)) {
+            Text("Not now (use ${ll.detectFromPhone().display})")
         }
     }
 }

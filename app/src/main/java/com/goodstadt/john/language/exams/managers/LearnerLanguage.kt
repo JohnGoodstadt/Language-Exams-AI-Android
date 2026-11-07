@@ -30,6 +30,7 @@ class LearnerLanguage @Inject constructor(
         private const val PREFS = "learner_language"
         /** Only set when the user picks one in Settings; otherwise the phone setting is followed. */
         private const val KEY_CHOICE = "learner_language_choice"
+        private const val KEY_ASKED = "learner_language_asked"
 
         /** The language the app teaches (German in the de flavour). Learners aren't offered translation into it. */
         val appLanguage: TranslateLang
@@ -40,20 +41,42 @@ class LearnerLanguage @Inject constructor(
          * German speaker learning German gets their next language, if any). If there is none: English, or
          * German for the English app.
          */
-        fun detectFromPhone(): TranslateLang {
+        fun detectFromPhone(): TranslateLang = phoneLanguageMatch()
+            ?: if (appLanguage == TranslateLang.ENGLISH) TranslateLang.GERMAN else TranslateLang.ENGLISH
+
+        /** The first phone language in [choices] that isn't the language being learned; null if none. */
+        fun phoneLanguageMatch(): TranslateLang? {
             val locales = Resources.getSystem().configuration.locales
             for (i in 0 until locales.size()) {
                 val lang = TranslateLang.fromCode(locales[i].language)
                 if (lang != null && lang in choices && lang != appLanguage) return lang
             }
-            return if (appLanguage == TranslateLang.ENGLISH) TranslateLang.GERMAN else TranslateLang.ENGLISH
+            return null
         }
+
+        /** The languages offered when asking: everything except the language being learned. */
+        val askChoices: List<TranslateLang> get() = choices.filter { it != appLanguage }
     }
 
     private val prefs = context.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
 
     /** What the phone's settings give, whether or not the user has overridden it. */
     val detected: TranslateLang = detectFromPhone()
+
+    /**
+     * True when the phone gave no usable language (e.g. a German phone running the German app, as most
+     * testers do), so [detected] is only a guess.
+     */
+    val detectedIsGuess: Boolean = phoneLanguageMatch() == null
+
+    /**
+     * Ask the learner once, the first time they translate, when the language is only a guess and they
+     * haven't chosen one. Asked once only, whatever they answer.
+     */
+    fun needsAsking(): Boolean = !_isUserChoice.value && detectedIsGuess && !prefs.getBoolean(KEY_ASKED, false)
+
+    /** "Not now": keep the guess and don't ask again (Settings > My Language still changes it). */
+    fun markAsked() { prefs.edit().putBoolean(KEY_ASKED, true).apply() }
 
     private val chosen: TranslateLang? = TranslateLang.fromCode(prefs.getString(KEY_CHOICE, null))?.takeIf { it in choices }
 
@@ -71,6 +94,7 @@ class LearnerLanguage @Inject constructor(
 
     /** Pick a language in Settings, or null to follow the phone again. */
     fun choose(lang: TranslateLang?) {
+        markAsked()
         if (lang != null) {
             prefs.edit().putString(KEY_CHOICE, lang.code).apply()
             _language.value = lang
