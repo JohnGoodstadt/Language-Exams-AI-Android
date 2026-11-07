@@ -153,7 +153,7 @@ fun Format9ContainerScreen(
                         }
                         items(scene.lines.sortedBy { it.sortorder }, key = { it.id }) { line ->
                             PodcastLineRow(
-                                displayText = viewModel.displayText(line, translationLanguage, showTranslation),
+                                displayText = viewModel.displayText(line, viewModel.effectiveTranslationLanguage(translationLanguage), showTranslation),
                                 speakerName = viewModel.speakerName(line.speakerId),
                                 isPlaying = currentSpokenText == viewModel.spokenText(line),
                                 onClick = { viewModel.playLine(line) }
@@ -234,7 +234,7 @@ fun Format9ContainerScreen(
     if (showLanguageChooser) {
         TranslationLanguageChooserSheet(
             codes = viewModel.availableTranslationCodes,
-            initialSelection = translationLanguage.ifBlank { viewModel.defaultTranslationCode() },
+            initialSelection = viewModel.effectiveTranslationLanguage(translationLanguage).ifBlank { viewModel.defaultTranslationCode() },
             onChoose = { code -> viewModel.setTranslationLanguage(code); showLanguageChooser = false },
             onDismiss = { showLanguageChooser = false }
         )

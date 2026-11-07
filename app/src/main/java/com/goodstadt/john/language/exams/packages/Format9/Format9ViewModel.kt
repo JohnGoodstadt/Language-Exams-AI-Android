@@ -46,7 +46,8 @@ class Format9ViewModel @Inject constructor(
     private val limiter: SimpleRateLimiter,
     private val stats: TTSStatsRepository,
     private val audioCache: AudioCacheManager,
-    @ApplicationContext private val context: Context
+    @ApplicationContext private val context: Context,
+    private val learnerLanguage: com.goodstadt.john.language.exams.managers.LearnerLanguage
 ) : ViewModel() {
 
     enum class Prompt { DAILY, HOURLY }
@@ -161,11 +162,22 @@ class Format9ViewModel @Inject constructor(
     val availableTranslationCodes: List<String> get() = _file.value?.availableTranslationLanguageCodes.orEmpty()
 
     /** True when a usable translation language is chosen for THIS script. */
-    fun hasValidTranslationLanguage(): Boolean =
-        _translationLanguage.value.isNotBlank() && availableTranslationCodes.contains(_translationLanguage.value)
+    fun hasValidTranslationLanguage(): Boolean = effectiveTranslationLanguage(_translationLanguage.value).isNotBlank()
+
+    /** The learner's language (Settings > My Language), if this script has a translation in it. */
+    private fun learnerTranslationCode(): String? =
+        learnerLanguage.language.value.code.takeIf { availableTranslationCodes.contains(it) }
+
+    /**
+     * The translation actually shown: [saved] (chosen in the podcast chooser) if this script has it;
+     * otherwise the learner's own language, if this script has it; otherwise "" (the translate button asks).
+     */
+    fun effectiveTranslationLanguage(saved: String): String =
+        if (saved.isNotBlank() && availableTranslationCodes.contains(saved)) saved else learnerTranslationCode().orEmpty()
 
     /** Default to pre-select the first time: the phone's language if the script has it, else the first. */
     fun defaultTranslationCode(): String {
+        learnerTranslationCode()?.let { return it }
         val codes = availableTranslationCodes
         val phone = Locale.getDefault().language.lowercase(Locale.ROOT)
         return if (codes.contains(phone)) phone else codes.firstOrNull().orEmpty()
