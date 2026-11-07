@@ -27,7 +27,8 @@ enum class TranslateLang(val code: String, val display: String, val speechTag: S
     SPANISH("es", "Spanish", "es-ES"),
     FRENCH("fr", "French", "fr-FR"),
     GERMAN("de", "German", "de-DE"),
-    CHINESE("zh", "Chinese", "zh-CN");
+    ITALIAN("it", "Italian", "it-IT"),
+    CHINESE("zh", "Chinese (Mandarin)", "zh-CN");
 
     companion object {
         /** Match a language / locale code (e.g. "es" or a "zh-CN" tag) to a row; null if not in the table. */

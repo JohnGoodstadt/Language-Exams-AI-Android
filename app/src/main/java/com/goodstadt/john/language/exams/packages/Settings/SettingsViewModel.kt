@@ -103,6 +103,8 @@ sealed interface SettingsUiEvent {
 
 @HiltViewModel
 class SettingsViewModel @Inject constructor(
+    /** The learner's own language (the "My Language" row). */
+    val learnerLanguage: com.goodstadt.john.language.exams.managers.LearnerLanguage,
     private val userPreferencesRepository: UserPreferencesRepository,
     private val controlRepository: ControlRepository,
     private val voiceRepository: VoiceRepository,

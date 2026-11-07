@@ -61,6 +61,9 @@ import androidx.compose.material3.SnackbarResult
 import androidx.compose.material3.Switch
 import androidx.compose.material3.SwitchDefaults
 import androidx.compose.material3.Text
+import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.RadioButton
+import androidx.compose.material3.TextButton
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -589,7 +592,12 @@ private fun SettingsContent(
 ) {
     val settingsColors = LocalExtendedColors.current
     val sessionFeedback = rememberSessionFeedbackManager()
+    val learnerLanguage by viewModel.learnerLanguage.language.collectAsState()
+    var showLearnerLanguageDialog by remember { mutableStateOf(false) }
     // Main Screen Content (wrapped in a Box so the SnackbarHost can overlay the bottom).
+    if (showLearnerLanguageDialog) {
+        LearnerLanguageDialog(viewModel.learnerLanguage, onDismiss = { showLearnerLanguageDialog = false })
+    }
     Box(modifier = Modifier.fillMaxSize()) {
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
@@ -613,6 +621,16 @@ private fun SettingsContent(
                     onClick = { viewModel.onSettingClicked(SheetContent.LanguageSelection) }
                 )
             }
+        }
+        // The learner's own language (translations go into it). Detected from the phone; changeable here.
+        settingsItem { iconTint ->
+            SettingsActionItem(
+                iconTint = iconTint,
+                icon = Icons.Default.Translate,
+                title = "My Language",
+                currentValue = learnerLanguage.display,
+                onClick = { showLearnerLanguageDialog = true }
+            )
         }
         settingsItem { iconTint ->
             SettingsActionItem(
@@ -1450,3 +1468,47 @@ fun LanguageSelectionRow(
 
 
 
+
+
+/** "My Language": the learner's own language. Choose one, or follow the phone's setting again. */
+@Composable
+private fun LearnerLanguageDialog(
+    learnerLanguage: com.goodstadt.john.language.exams.managers.LearnerLanguage,
+    onDismiss: () -> Unit
+) {
+    val current by learnerLanguage.language.collectAsState()
+    val isUserChoice by learnerLanguage.isUserChoice.collectAsState()
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        title = { Text("My Language") },
+        text = {
+            Column {
+                Text("The language you speak. Translations in the app will be into this language.",
+                    style = MaterialTheme.typography.bodyMedium)
+                Spacer(Modifier.height(8.dp))
+                com.goodstadt.john.language.exams.managers.LearnerLanguage.choices.forEach { lang ->
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier.fillMaxWidth()
+                            .clickable { learnerLanguage.choose(lang); onDismiss() }
+                            .padding(vertical = 4.dp)
+                    ) {
+                        RadioButton(selected = isUserChoice && lang == current,
+                            onClick = { learnerLanguage.choose(lang); onDismiss() })
+                        Text(lang.display)
+                    }
+                }
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier.fillMaxWidth()
+                        .clickable { learnerLanguage.choose(null); onDismiss() }
+                        .padding(vertical = 4.dp)
+                ) {
+                    RadioButton(selected = !isUserChoice, onClick = { learnerLanguage.choose(null); onDismiss() })
+                    Text("Use phone setting (${learnerLanguage.detected.display})")
+                }
+            }
+        },
+        confirmButton = { TextButton(onClick = onDismiss) { Text("Close") } }
+    )
+}
