@@ -18,6 +18,7 @@ object LanguageConfig {
         "Settings",
         "Focus",
         "Saved",
+        "Speeches",
         "Vocab",
         "Word of the Day",
         "Paragraph",
