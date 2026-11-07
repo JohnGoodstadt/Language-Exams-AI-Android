@@ -183,6 +183,9 @@ object FirebaseAudioService {
             if (downloadAudio(cloudName, part) && part.length() > 0 && part.renameTo(destFile)) return true
         }
         part.delete()
+        // Firebase itself logs "StorageException ... Object does not exist ... 404" once per name tried (up to
+        // two per sentence). This line says which sentence it was. Filter Logcat on "MISSING MP3".
+        Timber.tag(TAG).i("MISSING MP3 (not in cloud, will use Google TTS): \"$text\" [$voiceName] ${names.first()}")
         return false
     }
 
@@ -208,6 +211,9 @@ object FirebaseAudioService {
             if (result == CloudFetch.FAILED) break
         }
         part.delete()
+        if (result == CloudFetch.NOT_FOUND) {
+            Timber.tag(TAG).i("MISSING MP3 (not in cloud, offline pack skips it): \"$text\" [$voiceName]")
+        }
         return result
     }
 
