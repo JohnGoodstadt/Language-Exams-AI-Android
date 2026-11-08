@@ -172,6 +172,9 @@ Fix: Use a relative path or an environment variable: storeFile = file(System.get
             buildConfigField("Boolean", "IS_DEBUG", "false")
             buildConfigField("Boolean", "TEST_RATE_LIMITING", "false")
             signingConfig = signingConfigs.getByName("release")
+            // Package native debug symbols into the .aab so Play can symbolicate native crashes/ANRs
+            // (the only native code is AndroidX's: graphics-path and DataStore). Metadata only; the app is unchanged.
+            ndk { debugSymbolLevel = "SYMBOL_TABLE" }
         }
         create("staging") {
             // 1. Copy everything from Release (R8, Proguard rules, Minification)
