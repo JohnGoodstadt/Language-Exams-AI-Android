@@ -609,6 +609,14 @@ class ContentRepository @Inject constructor(
     suspend fun getFormat7or10Data(name: String): Result<Format7or10File> = withContext(Dispatchers.IO) {
         val logicalName = name // already the logical Firestore doc name
         try {
+            // 0. ReadinessAudit sheets: bundle only (no version check / disk cache / Firestore) when the flag is on.
+            if (ReadinessAuditSheetMapping.FORCE_BUNDLE && ReadinessAuditSheetMapping.isAuditSheet(logicalName)) {
+                val assetPath = ReadinessAuditSheetMapping.mapLogicalToResourceName(logicalName)
+                    ?: return@withContext Result.failure(Exception("No bundle mapping for audit sheet '$logicalName'"))
+                Timber.d("ContentRepo: '$logicalName' (ReadinessAudit) -> BUNDLE ONLY ($assetPath).")
+                return@withContext loadBundledFormat7or10Data(logicalName, assetPath)
+            }
+
             // 1. Version check
             val remoteVersions = appConfigRepository.getRemoteSheetVersions()
             val remoteVersion = remoteVersions[logicalName] ?: 1

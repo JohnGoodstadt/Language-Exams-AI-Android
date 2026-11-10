@@ -41,8 +41,10 @@ import com.goodstadt.john.language.exams.packages.ReferencePronouns.PronounForm
 import com.goodstadt.john.language.exams.packages.ReferencePronouns.PronounPattern
 import com.goodstadt.john.language.exams.packages.ReferencePronouns.PronounSentence
 import com.goodstadt.john.language.exams.packages.dailydictionary.DictionaryEntry
+import com.goodstadt.john.language.exams.screens.shared.ConnectionNotice
 import com.goodstadt.john.language.exams.utils.logging.TimberFault
 import com.google.firebase.Timestamp
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Source
@@ -54,10 +56,11 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.suspendCancellableCoroutine
 import kotlinx.coroutines.tasks.await
 import kotlinx.coroutines.withContext
+import kotlinx.coroutines.withTimeoutOrNull
 import kotlinx.serialization.json.Json
-import com.goodstadt.john.language.exams.screens.shared.ConnectionNotice
 import kotlinx.serialization.json.JsonArray
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonNull
@@ -67,6 +70,7 @@ import timber.log.Timber
 import java.io.File
 import javax.inject.Inject
 import javax.inject.Singleton
+import kotlin.coroutines.resume
 
 /**
  * **ExamSheetRepository**
@@ -109,6 +113,7 @@ class ExamSheetRepository @Inject constructor(
     private val jsonParser: Json,
     // Lazy: ConnectionNotice -> OfflineAudioDownloader -> ContentRepository -> this would be a cycle.
     private val connectionNotice: dagger.Lazy<ConnectionNotice>,
+    private val auth: FirebaseAuth,
 ) {
     /** False offline (known, or a quick probe), so a stale sheet keeps its cached copy instead of refetching. */
     suspend fun canRefresh(): Boolean = !connectionNotice.get().checkOffline()
@@ -116,6 +121,32 @@ class ExamSheetRepository @Inject constructor(
     /** Offline: fail now so the caller falls back to its cached/bundled copy, instead of Firestore waiting ~10 s. */
     private suspend fun failIfOffline() {
         if (connectionNotice.get().checkOffline()) throw java.io.IOException("Offline: Firestore fetch skipped")
+        awaitSignedIn()
+    }
+
+    /**
+     * Fresh install: the first sheet fetch races MainViewModel's anonymous sign-in, and Firestore rules
+     * reject an unauthenticated read with PERMISSION_DENIED (the app then silently used the bundle).
+     * Wait for that sign-in to land instead of starting a second one (two parallel signInAnonymously()
+     * calls can create two different anonymous users). On timeout, carry on: the caller falls back as before.
+     */
+    private suspend fun awaitSignedIn(timeoutMs: Long = 10_000) {
+        if (auth.currentUser != null) return
+        Timber.d("ExamSheetRepo.awaitSignedIn(): waiting for Firebase sign-in before fetching...")
+        val user = withTimeoutOrNull(timeoutMs) {
+            suspendCancellableCoroutine { cont ->
+                val listener = object : FirebaseAuth.AuthStateListener {
+                    override fun onAuthStateChanged(a: FirebaseAuth) {
+                        val u = a.currentUser ?: return
+                        a.removeAuthStateListener(this)
+                        if (cont.isActive) cont.resume(u)
+                    }
+                }
+                auth.addAuthStateListener(listener)
+                cont.invokeOnCancellation { auth.removeAuthStateListener(listener) }
+            }
+        }
+        if (user == null) Timber.w("ExamSheetRepo.awaitSignedIn(): still not signed in after ${timeoutMs}ms; fetching anyway.")
     }
 
     private val json = Json { ignoreUnknownKeys = true }
@@ -281,6 +312,7 @@ class ExamSheetRepository @Inject constructor(
         Timber.d("ExamSheetRepo.fetchFromNetworkAndCache(): '$sheet_name' from network...")
         // Offline: fail quietly (not a fault) so the caller uses its bundled copy without Firestore's ~10 s wait.
         if (!canRefresh()) return Result.failure(java.io.IOException("Offline: Firestore fetch skipped"))
+        awaitSignedIn()
         return try {
             // This is your existing function that talks to Firestore.
             // Let's assume it returns a VocabFile on success.
@@ -363,7 +395,7 @@ class ExamSheetRepository @Inject constructor(
 
                             // Debug: show that every sentence got a content-ID at read time, and whether it
                             // came from the DB (uploaded) or was COMPUTED here as a fallback.
-                            if (com.goodstadt.john.language.exams.BuildConfig.IS_DEBUG) {
+                            if (false && com.goodstadt.john.language.exams.BuildConfig.IS_DEBUG) {
                                 Timber.i("HASH-READ: word='${firestoreWord.word}' sources=$hashSources")
                             }
 

@@ -20,6 +20,18 @@ object ReadinessAuditSheetMapping {
 
     private const val FOLDER = "Quizzes/ReadinessAudit"
 
+    /**
+     * true  = ReadinessAudit sheets (Baseline + Verify, de & en) are read ONLY from the bundled JSON in
+     *         [FOLDER]: no version check, disk cache or Firestore call.
+     * false = full lookup: memory cache -> disk cache -> Firestore -> bundle fallback.
+     * Applied in ContentRepository.getFormat7or10Data().
+     */
+    const val FORCE_BUNDLE = true
+
+    /** True if [logicalName] is a ReadinessAudit sheet for this flavour (e.g. "GermanBaselineAuditA2-1"). */
+    fun isAuditSheet(logicalName: String): Boolean =
+        logicalName.startsWith(languagePrefix) && logicalName.contains("Audit")
+
     /** Firestore logical-name language prefix for the current flavour. */
     private val languagePrefix: String = when (BuildConfig.FLAVOR) {
         "de" -> "German"

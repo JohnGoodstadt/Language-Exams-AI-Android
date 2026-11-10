@@ -678,3 +678,34 @@ Implementation (both platforms):
 - `isWholeQuizComplete()` = every in-play question answered. "In play" = `_paginatedQuestions.flatten()` (section, respects active mastery filter) else `_allSectionQuestions` else the single `_questions` page. Answers accumulate across pages in `_sectionAnswersByWord` (keyed by word), so completion holds regardless of order/page.
 - One-shot latch `_hasCelebrated` gates the fire so re-answering the final question (or auto-advance landing back on it) cannot re-trigger it. Reset on: new section load, `resetQuiz`, and both filter re-paginate paths (`applyFilters` / `applyFiltersAndPaginate`).
 - Replaces the earlier positional gate (last question of last page), which misfired on out-of-order answering and could fire twice.
+
+
+---
+
+## Sheet fetch waits for anonymous sign-in on fresh install (2026-11-09)
+
+**Symptom (live DE app, fresh install):** first fetch of the default sheet (`GermanB1Vocab`) failed with Firestore `PERMISSION_DENIED`, then silently fell back to the bundle. Cause: the sheet fetch raced `MainViewModel.initializeAppSession()` → `signInOrUpdateUser()`; Firestore rules require `request.auth != null`, and no user existed yet. Later fetches (e.g. A1) succeeded because sign-in had landed.
+
+**Android:** `ExamSheetRepository.awaitSignedIn()` — called from `failIfOffline()` and `fetchFromNetworkAndCacheFormat0File()`, i.e. before every Firestore sheet download. If `auth.currentUser == null`, it waits (AuthStateListener, 10 s timeout) for the existing startup sign-in rather than starting its own (two parallel `signInAnonymously()` calls can mint two anon users). On timeout it proceeds and the caller falls back to bundle as before.
+
+**iOS status: TODO** — check whether the iOS sheet fetch can run before anonymous sign-in on first launch; if so, await `Auth.auth().currentUser` (via `addStateDidChangeListener`, with timeout) before Firestore sheet reads.
+
+
+---
+
+## ReadinessAudit sheets: bundle-only flag (2026-11-09)
+
+**Why:** audit sheets (Baseline + Verify A2/B1/B2, `assets/Quizzes/ReadinessAudit/*-de|en.json`) went memory → disk → Firestore → bundle, and `ReadinessAuditViewModel.preloadAuditSheets()` hits all 8 on entry, so every non-uploaded sheet logged `ExamSheetRepo: getFormat7or10Sheet failed for 'GermanBaselineAuditA2-1'` before falling back to the bundle.
+
+**Android:** `ReadinessAuditSheetMapping.FORCE_BUNDLE` (const, currently `true`) + `isAuditSheet(logicalName)`. `ContentRepository.getFormat7or10Data()` short-circuits audit sheets to `loadBundledFormat7or10Data()` when the flag is on: no version check, disk cache or Firestore. `false` restores the full lookup.
+
+**iOS status: TODO** — mirror the flag in the iOS audit-sheet loader (both DE and EN targets).
+
+
+---
+
+## App Check: registration + iOS German factory fix (2026-11-09)
+
+**Android:** live DE app logged `App not registered: 1:891265417310:android:283a…` — App Check had never been set up in the German Firebase project. Fixed in console only: Play Integrity registered with the Play app-signing SHA-256 (`1D:62:F0:FE:…:DD:DA:C1`, read from the installed APK via `apksigner`), Play Integrity API linked to the German Cloud project. English Firebase project still to do.
+
+**iOS: DONE in code (not yet released)** — `LanguageExamWordsAIApp.init()` only called `AppCheck.setAppCheckProviderFactory` inside `#elseif ENGLISH_APP`, so the German iOS app sent **no App Check token**. Moved to just before `FirebaseApp.configure(options:)` so it applies to every variant. Must ship before enforcing App Check in the German project, or German iOS users are blocked. Console: register iOS app with App Attest (Team ID) + add simulator debug token.
