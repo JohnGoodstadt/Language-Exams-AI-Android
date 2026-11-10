@@ -442,7 +442,7 @@ private fun UsageQuizHeader(
 
 /** Collapsible "Why this quiz works" learning points. */
 @Composable
-private fun UsageQuizLearningPoints(
+internal fun UsageQuizLearningPoints(
     learningTitle: String,
     learningPoints: List<String>,
     isExpanded: Boolean,
@@ -504,7 +504,7 @@ private fun UsageQuizLearningPoints(
 
 /** The scrollable question text + per-question mastery badge + answer option rows. */
 @Composable
-private fun UsageQuizQuestionAnswers(
+internal fun UsageQuizQuestionAnswers(
     viewModel: UsageQuizViewModel,
     question: QuizQuestion,
     currentQuestionIndex: Int,
@@ -717,7 +717,7 @@ private fun UsageQuizQuestionAnswers(
 
 /** Previous / Info + Auto-advance / Next navigation controls. */
 @Composable
-private fun UsageQuizNavigationRow(
+internal fun UsageQuizNavigationRow(
     viewModel: UsageQuizViewModel,
     currentQuestionIndex: Int,
     questionCount: Int,
@@ -800,7 +800,7 @@ private fun UsageQuizNavigationRow(
 
 /** The Correct / Tries tally row. */
 @Composable
-private fun UsageQuizStatisticsRow(correct: Int, tries: Int) {
+internal fun UsageQuizStatisticsRow(correct: Int, tries: Int) {
     val correctGreen = LocalExtendedColors.current.textAccentAlternative
     Row(
         modifier = Modifier.fillMaxWidth(),
@@ -833,7 +833,7 @@ private fun UsageQuizStatisticsRow(correct: Int, tries: Int) {
 
 /** The row of paging dots (one per question). */
 @Composable
-private fun UsageQuizPagingDots(
+internal fun UsageQuizPagingDots(
     questionCount: Int,
     currentQuestionIndex: Int,
     firstAnswers: MutableMap<Int, Boolean>,  // first answer per index → the dot colour
@@ -865,7 +865,7 @@ private fun UsageQuizPagingDots(
 /** Rate-limit / info / dashboard bottom sheets for the usage quiz screen. */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-private fun UsageQuizBottomSheets(
+internal fun UsageQuizBottomSheets(
     viewModel: UsageQuizViewModel,
     context: Context,
     isRateLimitingSheetVisible: Boolean,

@@ -72,6 +72,8 @@ import com.goodstadt.john.language.exams.packages.VocabQuiz.QuizSet
 import com.goodstadt.john.language.exams.packages.VocabQuiz.VocabDashboardScreen
 import com.goodstadt.john.language.exams.packages.reference.NavigationViewModel
 import com.goodstadt.john.language.exams.packages.UsageQuiz.UsageQuizScreen
+import com.goodstadt.john.language.exams.packages.UsageQuiz.UsageQuizLayout
+import com.goodstadt.john.language.exams.packages.UsageQuiz.UsageQuizSplitScreen
 import com.goodstadt.john.language.exams.screens.shared.MenuItemChip
 import com.goodstadt.john.language.exams.utils.findActivity
 import com.google.accompanist.navigation.material.ExperimentalMaterialNavigationApi
@@ -307,7 +309,8 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceTabContainerViewModel = hilt
                 ) {
 
                     composable(RefScreen.Quiz.route) {
-                        UsageQuizScreen()
+                        // Trial: picker screen + quiz in a bottom sheet. Flip the flag to go back.
+                        if (UsageQuizLayout.USE_SPLIT_SCREEN) UsageQuizSplitScreen() else UsageQuizScreen()
                     }//Existing Quiz
 
 
