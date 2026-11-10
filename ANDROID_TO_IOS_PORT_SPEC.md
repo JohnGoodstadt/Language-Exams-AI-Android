@@ -709,3 +709,12 @@ Implementation (both platforms):
 **Android:** live DE app logged `App not registered: 1:891265417310:android:283a…` — App Check had never been set up in the German Firebase project. Fixed in console only: Play Integrity registered with the Play app-signing SHA-256 (`1D:62:F0:FE:…:DD:DA:C1`, read from the installed APK via `apksigner`), Play Integrity API linked to the German Cloud project. English Firebase project still to do.
 
 **iOS: DONE in code (not yet released)** — `LanguageExamWordsAIApp.init()` only called `AppCheck.setAppCheckProviderFactory` inside `#elseif ENGLISH_APP`, so the German iOS app sent **no App Check token**. Moved to just before `FirebaseApp.configure(options:)` so it applies to every variant. Must ship before enforcing App Check in the German project, or German iOS users are blocked. Console: register iOS app with App Attest (Team ID) + add simulator debug token.
+
+
+---
+
+## Usage Quiz: split layout trial (2026-11-10)
+
+**Android:** `UsageQuizSplitScreen` behind `UsageQuizLayout.USE_SPLIT_SCREEN` (branch `V4_usage_quiz_sheet_trial`). Base screen: level tabs, fluency + stats icon, the quiz's `learningTitle` (+ points), vertical quiz list, Start/Continue Quiz. Quiz opens in a near-full-height bottom sheet headed by the question's `summary`. Same `UsageQuizViewModel`, so all stats unchanged.
+
+**iOS status: DONE (trial, same branch name)** — `UsageQuizSplitView` behind `UsageQuizLayout.useSplitScreen`; `UsageQuizView` body split into sections, classic layout unchanged. Info sheet and celebration banner are presented from inside the quiz sheet. `learningTitle`/`learningPoints` added to `TestMyselfList` + Firestore DTO. (No fluency/stats row on iOS — the classic iOS screen doesn't have one.)
