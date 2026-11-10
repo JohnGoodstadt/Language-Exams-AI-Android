@@ -353,7 +353,7 @@ fun CategoryMasteryRow(
             )
             Spacer(Modifier.width(8.dp))
             Text(
-                if (hasProgress) "${stat.masteredCount}/${stat.totalWords} Mastered"
+                if (hasProgress) "${stat.totalWords} Words, ${stat.masteredCount} Mastered"
                 else "${stat.totalWords} Words",
                 style = MaterialTheme.typography.labelMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
