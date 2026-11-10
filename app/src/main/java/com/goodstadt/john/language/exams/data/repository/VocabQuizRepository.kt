@@ -150,8 +150,8 @@ class VocabQuizRepository @Inject constructor(
 
     // Requires: import java.time.*
     private fun updateMasteryLogic(state: VocabLearningState, outcome: VocabQuizOutcome) {
-        // The spaced-repetition transition lives in the pure, unit-tested VocabMasteryEngine.
-        VocabMasteryEngine.updateMastery(state, outcome, System.currentTimeMillis())
+        // Vocab: Mastered = right first try on 3 different days (same rule as iOS).
+        VocabMasteryEngine.updateVocabMasteryDaily(state, outcome, System.currentTimeMillis(), BuildConfig.DEBUG)
         Timber.d("Quiz: Updated '${state.word}' to ${state.masteryLevel}. Outcome: $outcome")
     }
 
@@ -353,6 +353,7 @@ class VocabQuizRepository @Inject constructor(
     private fun recomputeCategoryStatus(category: String, level: String) {
         val words = categoryWordLists[categoryKey(category, level)] ?: return
         val levels = words.map { masteryLevelFor(it) }
+        val stats = words.map { getWordStats(it) }.filter { it.masteryLevel != WordMasteryLevel.Mastered }
         categoryStates[categoryKey(category, level)] = CategoryMasteryState(
             category = category,
             level = level,
@@ -363,6 +364,8 @@ class VocabQuizRepository @Inject constructor(
             learning = levels.count { it == WordMasteryLevel.Learning },
             review = levels.count { it == WordMasteryLevel.Review },
             mastered = levels.count { it == WordMasteryLevel.Mastered },
+            day1 = stats.count { it.correctStreak == 1 },
+            day2 = stats.count { it.correctStreak == 2 },
             updatedAt = System.currentTimeMillis()
         )
         saveCategoriesToDisk()

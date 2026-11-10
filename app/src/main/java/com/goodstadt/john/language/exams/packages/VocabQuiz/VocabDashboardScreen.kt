@@ -260,7 +260,7 @@ fun VocabQuizActiveView(
 
         // What "Mastered" means (same wording as iOS).
         Text(
-            "Mastered: right first time in 3 separate review sessions, spaced apart. A wrong answer starts the count again. Tap ⓘ for more.",
+            "Mastered: right first time on 3 different days. A wrong answer never loses the days you have already earned. Tap ⓘ for more.",
             style = MaterialTheme.typography.bodySmall,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
             modifier = Modifier.padding(horizontal = 8.dp)
@@ -398,10 +398,9 @@ fun CategoryMasteryRow(
                 }
             }
 
-            // Breakdown, so progress shows before anything is Mastered (that needs 3 correct in a row
-            // across separate review sessions).
+            // Progress towards the aim: Mastered = right first time on 3 different days.
             Text(
-                "${stat.learningCount} learning · ${stat.newCount} new · ${stat.masteredCount} mastered",
+                vocabDayProgressLine(stat),
                 style = MaterialTheme.typography.labelSmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
@@ -520,7 +519,7 @@ fun ScoringInfoBottomSheet(onDismiss: () -> Unit) {
             LevelRow(emoji = "\uD83D\uDD34", title = "Struggling", description = "You couldn't get this one right \u2014 don't worry, it happens!", schedule = "Comes back in 10 minutes")
             LevelRow(emoji = "\uD83D\uDFE0", title = "Learning", description = "You got there in the end, but needed a few tries.", schedule = "Comes back in 6 hours")
             LevelRow(emoji = "\uD83D\uDFE1", title = "Review", description = "You got it right \u2014 nice work! Now let's make sure it sticks.", schedule = "Comes back tomorrow morning")
-            LevelRow(emoji = "\uD83D\uDFE2", title = "Mastered", description = "You got it right 3 times in a row \u2014 you really know this one!", schedule = "Done! Won't come back unless you reset")
+            LevelRow(emoji = "\uD83D\uDFE2", title = "Mastered", description = "You got it right first time on 3 different days \u2014 you really know this one!", schedule = "Done! Won't come back unless you reset")
 
             HorizontalDivider()
 
@@ -598,3 +597,15 @@ fun SmartReviewContainer(
         )
     }
 }
+/**
+ * One line showing each word's progress towards Mastered (right first time on 3 different days),
+ * e.g. "5 mastered · 8 on 2 of 3 days · 6 on 1 of 3 days · 2 to retry · 20 new". Zero parts are left out.
+ * Same wording as iOS CategoryMasteryRow.
+ */
+fun vocabDayProgressLine(stat: CategoryMasteryStats): String = listOfNotNull(
+    stat.masteredCount.takeIf { it > 0 }?.let { "$it mastered" },
+    stat.day2Count.takeIf { it > 0 }?.let { "$it on 2 of 3 days" },
+    stat.day1Count.takeIf { it > 0 }?.let { "$it on 1 of 3 days" },
+    stat.retryCount.takeIf { it > 0 }?.let { "$it to retry" },
+    stat.newCount.takeIf { it > 0 }?.let { "$it new" },
+).joinToString(" · ")

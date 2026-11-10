@@ -5,8 +5,13 @@ data class CategoryMasteryStats(
     val totalWords: Int,
     val newCount: Int,       // MasteryLevel.New
     val learningCount: Int,  // Learning + Review + Struggling
-    val masteredCount: Int   // MasteryLevel.Mastered
+    val masteredCount: Int,  // MasteryLevel.Mastered
+    val day1Count: Int = 0,  // not Mastered yet: right first try on 1 of the 3 days needed
+    val day2Count: Int = 0,  // ... on 2 of the 3 days
 ) {
+    /** Quizzed but on day 0 of 3 (got one wrong, or only right with help): they need another go. */
+    val retryCount: Int get() = (learningCount - day1Count - day2Count).coerceAtLeast(0)
+
     // Helpers for UI progress bars (0.0 - 1.0)
     val masteredFraction: Float get() = if (totalWords > 0) masteredCount.toFloat() / totalWords else 0f
     val learningFraction: Float get() = if (totalWords > 0) learningCount.toFloat() / totalWords else 0f

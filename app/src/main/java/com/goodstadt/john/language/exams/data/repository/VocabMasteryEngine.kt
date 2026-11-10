@@ -36,6 +36,65 @@ object VocabMasteryEngine {
 
     const val MASTERED_STREAK = 3
 
+    /**
+     * VOCAB QUIZ rule (matches iOS VocabQuizRepository.updateMasteryLogic): Mastered = right first try on
+     * 3 DIFFERENT DAYS. Each first-try success schedules the next check for 6am, [correctStreak] days ahead
+     * (day 1 -> tomorrow, day 2 -> the day after next), so the 3 successes always fall on separate days.
+     *   FLAWLESS -> streak+1; at 3 Mastered (never due again), else Review due 6am +streak days
+     *   ASSISTED -> Review, due 6am tomorrow (streak kept)
+     *   STUMBLED -> Learning, due in 6 h      (streak KEPT: days already earned are never lost)
+     *   FAILED   -> Struggling, due in 10 min (streak KEPT)
+     * Anti-cramming as iOS: a right answer on a word that isn't due yet changes nothing.
+     * [debug]: 30 s stands in for a day (and shorter retries) so the ladder can be tested quickly, as on iOS.
+     * The Usage Quiz keeps using [updateMastery].
+     */
+    fun updateVocabMasteryDaily(state: SrsState, outcome: VocabQuizOutcome, now: Long, debug: Boolean) {
+        val isDue = state.nextReviewTime <= now
+        if (!isDue && (outcome == VocabQuizOutcome.FLAWLESS || outcome == VocabQuizOutcome.ASSISTED)) return
+
+        when (outcome) {
+            VocabQuizOutcome.FLAWLESS -> {
+                state.correctStreak++
+                if (state.correctStreak >= MASTERED_STREAK) {
+                    state.masteryLevel = WordMasteryLevel.Mastered
+                    state.nextReviewTime = Long.MAX_VALUE
+                } else {
+                    state.masteryLevel = WordMasteryLevel.Review
+                    state.nextReviewTime =
+                        if (debug) now + state.correctStreak * 30_000L
+                        else nextMorning(now, daysAhead = state.correctStreak)
+                }
+            }
+            VocabQuizOutcome.ASSISTED -> {
+                state.masteryLevel = WordMasteryLevel.Review
+                state.nextReviewTime = if (debug) now + 30_000L else nextMorning(now, daysAhead = 1)
+            }
+            VocabQuizOutcome.STUMBLED -> {
+                // A wrong answer doesn't send the learner back to the start: earned days are kept, and the
+                // next first-try success adds the next day (on day 3 that makes it Mastered).
+                state.masteryLevel = WordMasteryLevel.Learning
+                state.nextReviewTime = now + if (debug) MINUTE else 6 * HOUR
+            }
+            VocabQuizOutcome.FAILED -> {
+                state.masteryLevel = WordMasteryLevel.Struggling // streak kept, as above
+                state.nextReviewTime = now + if (debug) 10_000L else 10 * MINUTE
+            }
+        }
+    }
+
+    /** 6am local time, [daysAhead] days after [now] (same as iOS nextMorning). */
+    private fun nextMorning(now: Long, daysAhead: Int): Long {
+        val cal = java.util.Calendar.getInstance().apply {
+            timeInMillis = now
+            set(java.util.Calendar.HOUR_OF_DAY, 6)
+            set(java.util.Calendar.MINUTE, 0)
+            set(java.util.Calendar.SECOND, 0)
+            set(java.util.Calendar.MILLISECOND, 0)
+            add(java.util.Calendar.DAY_OF_YEAR, daysAhead)
+        }
+        return cal.timeInMillis
+    }
+
     fun updateMastery(state: SrsState, outcome: VocabQuizOutcome, now: Long) {
         // Anti-cramming: if the item wasn't due yet and they got it right, don't advance the
         // schedule (repeating a card in the same session must not count as a new session).
