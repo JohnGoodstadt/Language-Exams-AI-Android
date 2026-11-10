@@ -9,6 +9,8 @@ import com.goodstadt.john.language.exams.data.repository.ContentRepository
 import com.goodstadt.john.language.exams.models.CategoryMasteryStats
 import com.goodstadt.john.language.exams.models.DashboardUiState
 import com.goodstadt.john.language.exams.models.WordMasteryLevel
+import com.goodstadt.john.language.exams.BuildConfig
+import com.goodstadt.john.language.exams.data.repository.VocabMasteryEngine
 import com.goodstadt.john.language.exams.screens.CategoryTab.SectionQuizKeyMap
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -108,6 +110,15 @@ class VocabDashboardViewModel @Inject constructor(
                     // list whenever it's played), so the numbers match exactly what the quiz recorded.
                     val quizKey = SectionQuizKeyMap.keyFor(currentSkillLevel, category.title) ?: ""
                     val quizState = vocabQuizRepository.getCategoryMasteryState(quizKey, currentSkillLevel)
+                    // This category's quizzed words (by its vocab words, or recorded under its quiz key), for the
+                    // "what's next" hint on the row.
+                    val quizzedStates = (category.words.mapNotNull { allWordStates[it.word] } +
+                        allWordStates.values.filter { it.sourceCategory == quizKey || it.sourceCategory == category.title })
+                        .distinctBy { it.word }
+                        .filter { it.masteryLevel != WordMasteryLevel.New }
+                    val nextStepFor: (Int) -> String? = { newCount ->
+                        VocabMasteryEngine.categoryNextStep(quizzedStates, newCount, System.currentTimeMillis(), BuildConfig.DEBUG)
+                    }
                     if (quizState != null && quizState.total > 0) {
                         return@map CategoryMasteryStats(
                             categoryTitle = category.title,
@@ -116,7 +127,8 @@ class VocabDashboardViewModel @Inject constructor(
                             learningCount = quizState.struggling + quizState.learning + quizState.review,
                             masteredCount = quizState.mastered,
                             day1Count = quizState.day1,
-                            day2Count = quizState.day2
+                            day2Count = quizState.day2,
+                            nextStep = nextStepFor(quizState.newCount)
                         )
                     }
 
@@ -151,7 +163,8 @@ class VocabDashboardViewModel @Inject constructor(
                         learningCount = learning,
                         masteredCount = mastered,
                         day1Count = day1,
-                        day2Count = day2
+                        day2Count = day2,
+                        nextStep = nextStepFor(new)
                     )
                 }
 

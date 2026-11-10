@@ -398,12 +398,28 @@ fun CategoryMasteryRow(
                 }
             }
 
-            // Progress towards the aim: Mastered = right first time on 3 different days.
-            Text(
-                vocabDayProgressLine(stat),
-                style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
+            // Progress towards the aim (Mastered = right first time on 3 different days) + what's next.
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(
+                    vocabDayProgressLine(stat),
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    modifier = Modifier.weight(1f)
+                )
+                stat.nextStep?.let { hint ->
+                    Spacer(Modifier.width(8.dp))
+                    Text(
+                        hint,
+                        style = MaterialTheme.typography.labelSmall,
+                        fontWeight = FontWeight.SemiBold,
+                        color = if (hint == "All mastered!") Color(0xFF4CAF50) else LocalExtendedColors.current.buttonBlue,
+                        maxLines = 1
+                    )
+                }
+            }
         }
     }
 }

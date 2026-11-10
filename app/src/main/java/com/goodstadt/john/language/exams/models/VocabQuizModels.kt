@@ -111,5 +111,8 @@ data class VocabLearningState(
 
     @SerializedName("history") val history: MutableList<WordQuizAttempt> = mutableListOf(),
 
-    @SerializedName("last_out") var lastOutcome: VocabQuizOutcome? = null
+    @SerializedName("last_out") var lastOutcome: VocabQuizOutcome? = null,
+
+    // When this word last EARNED a day (first-try right). One day counts per calendar day; 0 = never.
+    @SerializedName("last_ok") var lastSuccessAt: Long = 0
 ) : SrsState
