@@ -81,30 +81,8 @@ object VocabMasteryEngine {
         }
     }
 
-    /**
-     * Encouraging "what's next" for a category row, from its quizzed words' states ([newCount] = words not yet
-     * tried). Null when nothing has been quizzed. Same rules and wording as iOS VocabNextStep.
-     */
-    fun categoryNextStep(states: List<VocabLearningState>, newCount: Int, now: Long, debug: Boolean): String? {
-        if (states.isEmpty()) return null
-        val open = states.filter { it.masteryLevel != WordMasteryLevel.Mastered }
-        if (open.isEmpty() && newCount == 0) return "All mastered!"
-        val today = dayIndex(now, debug)
-        val canEarnToday = open.filter { it.lastSuccessAt == 0L || dayIndex(it.lastSuccessAt, debug) != today }
-        if (canEarnToday.isEmpty() && newCount == 0) return "Do again tomorrow"
-        val wrongToday = canEarnToday.any {
-            (it.lastOutcome == VocabQuizOutcome.FAILED || it.lastOutcome == VocabQuizOutcome.STUMBLED) &&
-                (it.history.lastOrNull()?.timestamp?.let { t -> dayIndex(t, debug) == today } == true)
-        }
-        return when {
-            wrongToday -> "Try again now"
-            canEarnToday.any { it.correctStreak == MASTERED_STREAK - 1 } -> "Do today for mastery"
-            else -> "Do today"
-        }
-    }
-
-    /** Calendar day number in local time (debug: 30 s "days"). */
-    private fun dayIndex(t: Long, debug: Boolean): Long {
+    /** Calendar day number in local time (debug: 30 s "days"). Shared with the per-category day count. */
+    fun dayIndex(t: Long, debug: Boolean): Long {
         if (debug) return t / 30_000L
         val cal = java.util.Calendar.getInstance().apply { timeInMillis = t }
         return cal.get(java.util.Calendar.YEAR) * 1000L + cal.get(java.util.Calendar.DAY_OF_YEAR)

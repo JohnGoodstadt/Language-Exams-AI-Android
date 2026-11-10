@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.data.repository
 
+import com.goodstadt.john.language.exams.models.CategoryDayProgress
 import android.content.Context
 import androidx.compose.ui.graphics.Color
 import com.goodstadt.john.language.exams.ui.theme.statusOrange
@@ -483,21 +484,27 @@ class VocabQuizRepository @Inject constructor(
      * ([streakGapMs]). Returns 0 the moment the latest attempt has an error, so the row shows the status
      * dots instead of stars (they're mutually exclusive). "flawless" = every question right, one tap each.
      */
-    fun flawlessStreakStars(category: String, level: String): Int {
-        val attempts = getCategoryAttempts(category, level).sortedBy { it.attemptedAt }
-        if (attempts.isEmpty() || !attempts.last().flawless) return 0 // never taken, or last go had errors
+    fun flawlessStreakStars(category: String, level: String): Int =
+        categoryDayProgress(category, level).days // same rule as the Vocab Quiz rows (see below)
 
-        var stars = 0
-        var nextCountedAt = Long.MAX_VALUE
-        for (a in attempts.asReversed()) {
-            if (!a.flawless) break // a faulty go breaks the streak
-            if (stars == 0 || nextCountedAt - a.attemptedAt >= streakGapMs) {
-                stars++
-                nextCountedAt = a.attemptedAt
-                if (stars >= 3) break
-            }
-        }
-        return stars
+    /**
+     * Per-CATEGORY progress to Mastered (shared by the Vocab Quiz rows and the category-tab stars): one day
+     * per calendar day on which the whole quiz was done flawlessly (every word right first time), up to 3.
+     * A go with mistakes never loses days already earned. Same rule as iOS categoryDayProgress.
+     */
+    fun categoryDayProgress(category: String, level: String, now: Long = System.currentTimeMillis()): CategoryDayProgress {
+        val attempts = getCategoryAttempts(category, level).sortedBy { it.attemptedAt }
+        val flawlessDays = attempts.filter { it.flawless }
+            .map { VocabMasteryEngine.dayIndex(it.attemptedAt, BuildConfig.DEBUG) }.toSet()
+        val last = attempts.lastOrNull()
+        return CategoryDayProgress(
+            days = flawlessDays.size.coerceAtMost(3),
+            hasAttempts = last != null,
+            lastFlawless = last?.flawless ?: false,
+            lastCorrect = last?.let { it.firstTryCorrect ?: it.correct } ?: 0,
+            lastTotal = last?.total ?: 0,
+            earnedToday = VocabMasteryEngine.dayIndex(now, BuildConfig.DEBUG) in flawlessDays,
+        )
     }
 
     private fun saveCategoryAttemptsToDisk() {

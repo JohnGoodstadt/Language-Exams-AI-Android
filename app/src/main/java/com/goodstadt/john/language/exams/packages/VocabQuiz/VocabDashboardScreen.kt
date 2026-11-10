@@ -260,7 +260,7 @@ fun VocabQuizActiveView(
 
         // What "Mastered" means (same wording as iOS).
         Text(
-            "Mastered: right first time on 3 different days. A wrong answer never loses the days you have already earned. Tap ⓘ for more.",
+            "Mastered: every word right first time, on 3 different days. A go with mistakes never loses the days you have already earned.",
             style = MaterialTheme.typography.bodySmall,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
             modifier = Modifier.padding(horizontal = 8.dp)
@@ -321,7 +321,7 @@ fun VocabQuizActiveView(
 fun CategoryMasteryRow(
     stat: CategoryMasteryStats, onClick: () -> Unit
 ) {
-    val hasProgress = stat.masteredCount + stat.learningCount > 0
+    val progress = stat.dayProgress // per-category "N of 3 days"; null until the quiz is played
     Column(verticalArrangement = Arrangement.spacedBy(8.dp),
         modifier = Modifier
             .fillMaxWidth()
@@ -353,72 +353,51 @@ fun CategoryMasteryRow(
             )
             Spacer(Modifier.width(8.dp))
             Text(
-                if (hasProgress) "${stat.totalWords} Words, ${stat.masteredCount} Mastered"
-                else "${stat.totalWords} Words",
+                "${stat.totalWords} Words",
                 style = MaterialTheme.typography.labelMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
         }
 
-        // Stacked Progress Bar (only once this category has been quizzed)
-        if (hasProgress) {
+        // Progress to Mastered (3 days, each with every word right first time) + what's next.
+        if (progress != null) {
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(8.dp)
                     .clip(RoundedCornerShape(4.dp))
-                    .background(MaterialTheme.colorScheme.surfaceVariant)
+                    .background(MaterialTheme.colorScheme.surfaceVariant),
+                horizontalArrangement = Arrangement.spacedBy(3.dp)
             ) {
-                // Mastered (Green)
-                if (stat.masteredFraction > 0) {
+                // Three segments, one per day earned.
+                repeat(3) { i ->
                     Box(
                         Modifier
                             .fillMaxHeight()
-                            .weight(stat.masteredFraction)
-                            .background(Color(0xFF4CAF50))
-                    )
-                }
-                // Learning (Orange)
-                if (stat.learningFraction > 0) {
-                    Box(
-                        Modifier
-                            .fillMaxHeight()
-                            .weight(stat.learningFraction)
-                            .background(LocalExtendedColors.current.statusOrange)
-                    )
-                }
-                // Remaining (Transparent/Grey)
-                val remaining = 1f - (stat.masteredFraction + stat.learningFraction)
-                if (remaining > 0) {
-                    Box(
-                        Modifier
-                            .fillMaxHeight()
-                            .weight(remaining)
+                            .weight(1f)
+                            .background(if (i < progress.days) Color(0xFF4CAF50) else Color.Transparent)
                     )
                 }
             }
 
-            // Progress towards the aim (Mastered = right first time on 3 different days) + what's next.
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(
-                    vocabDayProgressLine(stat),
+                    progress.progressLine,
                     style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                     modifier = Modifier.weight(1f)
                 )
-                stat.nextStep?.let { hint ->
-                    Spacer(Modifier.width(8.dp))
-                    Text(
-                        hint,
-                        style = MaterialTheme.typography.labelSmall,
-                        fontWeight = FontWeight.SemiBold,
-                        color = if (hint == "All mastered!") Color(0xFF4CAF50) else LocalExtendedColors.current.buttonBlue,
-                        maxLines = 1
-                    )
-                }
+                Spacer(Modifier.width(8.dp))
+                Text(
+                    progress.nextStep,
+                    style = MaterialTheme.typography.labelSmall,
+                    fontWeight = FontWeight.SemiBold,
+                    color = if (progress.isMastered) Color(0xFF4CAF50) else LocalExtendedColors.current.buttonBlue,
+                    maxLines = 1
+                )
             }
         }
     }
@@ -613,15 +592,3 @@ fun SmartReviewContainer(
         )
     }
 }
-/**
- * One line showing each word's progress towards Mastered (right first time on 3 different days),
- * e.g. "5 mastered · 8 on 2 of 3 days · 6 on 1 of 3 days · 2 to retry · 20 new". Zero parts are left out.
- * Same wording as iOS CategoryMasteryRow.
- */
-fun vocabDayProgressLine(stat: CategoryMasteryStats): String = listOfNotNull(
-    stat.masteredCount.takeIf { it > 0 }?.let { "$it mastered" },
-    stat.day2Count.takeIf { it > 0 }?.let { "$it on 2 of 3 days" },
-    stat.day1Count.takeIf { it > 0 }?.let { "$it on 1 of 3 days" },
-    stat.retryCount.takeIf { it > 0 }?.let { "$it to retry" },
-    stat.newCount.takeIf { it > 0 }?.let { "$it new" },
-).joinToString(" · ")
