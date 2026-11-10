@@ -116,6 +116,7 @@ fun UsageQuizSplitScreen(
             filledWhenSelected = true,
             fontSize = 16.sp
         )
+        Spacer(modifier = Modifier.height(6.dp)) // a little air between the level tabs and the learningTitle
 
         // --- Fluency label (the stats-dashboard IconButton is removed for now: it took too much height) ---
         if (fluency.label.isNotBlank()) {

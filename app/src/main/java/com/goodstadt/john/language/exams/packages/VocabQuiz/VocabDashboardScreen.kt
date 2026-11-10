@@ -234,6 +234,8 @@ fun VocabQuizActiveView(
         // 2. Breakdown Title + Info Button
         var showScoringInfo by remember { mutableStateOf(false) }
 
+        // Heading + its subtitle grouped, so the outer column's 20dp spacing doesn't split them.
+        Column {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
@@ -255,6 +257,15 @@ fun VocabQuizActiveView(
                 )
             }
         }
+
+        // What "Mastered" means (same wording as iOS).
+        Text(
+            "Mastered: right first time in 3 separate review sessions, spaced apart. A wrong answer starts the count again. Tap ⓘ for more.",
+            style = MaterialTheme.typography.bodySmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            modifier = Modifier.padding(horizontal = 8.dp)
+        )
+        } //: Column - heading + subtitle
 
         if (showScoringInfo) {
             ScoringInfoBottomSheet(onDismiss = { showScoringInfo = false })
