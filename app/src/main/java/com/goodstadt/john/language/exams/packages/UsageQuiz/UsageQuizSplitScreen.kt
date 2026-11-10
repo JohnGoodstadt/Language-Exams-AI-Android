@@ -18,13 +18,11 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.CheckCircle
-import androidx.compose.material.icons.filled.WorkspacePremium
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Text
@@ -99,7 +97,7 @@ fun UsageQuizSplitScreen(
             .fillMaxSize()
             .background(LocalExtendedColors.current.groupedPage)
             .padding(10.dp),
-        verticalArrangement = Arrangement.spacedBy(8.dp),
+        verticalArrangement = Arrangement.spacedBy(4.dp), // tight: tabs sit close above the learningTitle
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         // --- Level tabs (filter the quiz list below) ---
@@ -119,27 +117,17 @@ fun UsageQuizSplitScreen(
             fontSize = 16.sp
         )
 
-        // --- Fluency + stats dashboard (kept from the old header row) ---
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 4.dp),
-            verticalAlignment = Alignment.CenterVertically
-        ) {
+        // --- Fluency label (the stats-dashboard IconButton is removed for now: it took too much height) ---
+        if (fluency.label.isNotBlank()) {
             Text(
                 text = fluency.label,
                 color = fluency.color,
                 style = MaterialTheme.typography.labelMedium,
-                modifier = Modifier.background(fluency.color.copy(alpha = 0.1f), RoundedCornerShape(4.dp))
+                modifier = Modifier
+                    .align(Alignment.Start)
+                    .padding(horizontal = 6.dp)
+                    .background(fluency.color.copy(alpha = 0.1f), RoundedCornerShape(4.dp))
             )
-            Spacer(modifier = Modifier.weight(1f))
-            IconButton(onClick = { showDashboardSheet = true }) {
-                Icon(
-                    imageVector = Icons.Default.WorkspacePremium,
-                    contentDescription = "Stats",
-                    tint = LocalExtendedColors.current.buttonBlue
-                )
-            }
         }
 
         // --- learningTitle (+ expandable learning points) of the selected quiz ---
@@ -211,6 +199,7 @@ fun UsageQuizSplitScreen(
             enabled = selectedQuiz != null || availableQuizzes.isNotEmpty(),
             modifier = Modifier
                 .fillMaxWidth()
+                .padding(top = 6.dp)
                 .height(52.dp),
             shape = RoundedCornerShape(12.dp),
             colors = ButtonDefaults.buttonColors(containerColor = LocalExtendedColors.current.buttonBlue)

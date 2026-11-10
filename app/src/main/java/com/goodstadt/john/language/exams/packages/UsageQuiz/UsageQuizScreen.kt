@@ -463,16 +463,20 @@ internal fun UsageQuizLearningPoints(
             Text(
                 text = learningTitle,
                 style = MaterialTheme.typography.titleSmall,
-                color = MaterialTheme.colorScheme.onSurface
+                color = MaterialTheme.colorScheme.onSurface,
+                // weight: a long title wraps instead of squeezing "more…" to zero width (it was invisible but tappable)
+                modifier = Modifier.weight(1f)
             )
 
             Text(
                 text = if (isExpanded) "less" else "more…",
                 style = MaterialTheme.typography.labelMedium,
                 color = LocalExtendedColors.current.buttonBlue,
+                maxLines = 1,
+                softWrap = false,
                 modifier = Modifier
                     .clickable { onToggle() }
-                    .padding(8.dp)
+                    .padding(horizontal = 8.dp, vertical = 4.dp)
             )
         }
 
