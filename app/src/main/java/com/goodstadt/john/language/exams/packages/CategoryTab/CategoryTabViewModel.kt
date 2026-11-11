@@ -605,7 +605,10 @@ class CategoryTabViewModel @Inject constructor(
                     }
                 }
 
-                is AudioPlaybackStatus.Failure -> {
+                is AudioPlaybackStatus.Failure -> if (audioPlaybackRepository.isOffline) {
+                    // Offline and not on the device: the No-connection bar says so; no snackbar, no fault.
+                    Timber.d("Offline: '${sentence.take(21)}' isn't on the device")
+                } else {
 
                     //TODO: 1 day only -- bad failure?
                     Timber.e("AudioPlaybackStatus.Failure -> CategoryTabViewModel.audioPlaybackRepository.playTrackAndGetStatus")

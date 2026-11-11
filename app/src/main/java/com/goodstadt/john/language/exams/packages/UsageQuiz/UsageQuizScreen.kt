@@ -442,7 +442,7 @@ private fun UsageQuizHeader(
 
 /** Collapsible "Why this quiz works" learning points. */
 @Composable
-private fun UsageQuizLearningPoints(
+internal fun UsageQuizLearningPoints(
     learningTitle: String,
     learningPoints: List<String>,
     isExpanded: Boolean,
@@ -463,16 +463,20 @@ private fun UsageQuizLearningPoints(
             Text(
                 text = learningTitle,
                 style = MaterialTheme.typography.titleSmall,
-                color = MaterialTheme.colorScheme.onSurface
+                color = MaterialTheme.colorScheme.onSurface,
+                // weight: a long title wraps instead of squeezing "more…" to zero width (it was invisible but tappable)
+                modifier = Modifier.weight(1f)
             )
 
             Text(
                 text = if (isExpanded) "less" else "more…",
                 style = MaterialTheme.typography.labelMedium,
                 color = LocalExtendedColors.current.buttonBlue,
+                maxLines = 1,
+                softWrap = false,
                 modifier = Modifier
                     .clickable { onToggle() }
-                    .padding(8.dp)
+                    .padding(horizontal = 8.dp, vertical = 4.dp)
             )
         }
 
@@ -504,7 +508,7 @@ private fun UsageQuizLearningPoints(
 
 /** The scrollable question text + per-question mastery badge + answer option rows. */
 @Composable
-private fun UsageQuizQuestionAnswers(
+internal fun UsageQuizQuestionAnswers(
     viewModel: UsageQuizViewModel,
     question: QuizQuestion,
     currentQuestionIndex: Int,
@@ -673,7 +677,7 @@ private fun UsageQuizQuestionAnswers(
                     Icon(
                         // Loudspeaker: preview the sentence only. Never affects Correct/Tries.
                         modifier = Modifier.clickable {
-                            viewModel.handleTap(previewSentence)
+                            viewModel.handleTap(previewSentence, remindIfOffline = true)
                         },
                         imageVector = Icons.AutoMirrored.Filled.VolumeUp,
                         contentDescription = "Speak ${question.sentence.replace("_", option)}",
@@ -689,7 +693,7 @@ private fun UsageQuizQuestionAnswers(
                         modifier = Modifier
                             .weight(1f)
                             .padding(vertical = 2.dp)
-                            .clickable { viewModel.handleTap(previewSentence) }
+                            .clickable { viewModel.handleTap(previewSentence, remindIfOffline = true) }
                     )
                 }
 
@@ -717,7 +721,7 @@ private fun UsageQuizQuestionAnswers(
 
 /** Previous / Info + Auto-advance / Next navigation controls. */
 @Composable
-private fun UsageQuizNavigationRow(
+internal fun UsageQuizNavigationRow(
     viewModel: UsageQuizViewModel,
     currentQuestionIndex: Int,
     questionCount: Int,
@@ -800,7 +804,7 @@ private fun UsageQuizNavigationRow(
 
 /** The Correct / Tries tally row. */
 @Composable
-private fun UsageQuizStatisticsRow(correct: Int, tries: Int) {
+internal fun UsageQuizStatisticsRow(correct: Int, tries: Int) {
     val correctGreen = LocalExtendedColors.current.textAccentAlternative
     Row(
         modifier = Modifier.fillMaxWidth(),
@@ -833,7 +837,7 @@ private fun UsageQuizStatisticsRow(correct: Int, tries: Int) {
 
 /** The row of paging dots (one per question). */
 @Composable
-private fun UsageQuizPagingDots(
+internal fun UsageQuizPagingDots(
     questionCount: Int,
     currentQuestionIndex: Int,
     firstAnswers: MutableMap<Int, Boolean>,  // first answer per index → the dot colour
@@ -865,7 +869,7 @@ private fun UsageQuizPagingDots(
 /** Rate-limit / info / dashboard bottom sheets for the usage quiz screen. */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-private fun UsageQuizBottomSheets(
+internal fun UsageQuizBottomSheets(
     viewModel: UsageQuizViewModel,
     context: Context,
     isRateLimitingSheetVisible: Boolean,

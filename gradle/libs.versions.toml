@@ -50,6 +50,7 @@ firebaseAuth = "23.1.0"
 [libraries]
 # Core & AppCompat
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-media = { group = "androidx.media", name = "media", version = "1.7.0" }
 androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
 # Add this new library definition
 google-android-material = { group = "com.google.android.material", name = "material", version.ref = "material" } # <-- ADD THIS LINE

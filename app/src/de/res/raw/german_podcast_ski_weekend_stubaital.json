@@ -1,0 +1,1642 @@
+{
+  "fileformat": 9,
+  "location": 0,
+  "sheetname": "GermanPodcastSkiWeekendStubaital",
+  "title": "Lena im Schnee – Ein Skiwochenende im Stubaital",
+  "updatedDate": 0,
+  "description": "Lena reist mit drei Freundinnen von Hamburg ins Stubaital. Lena und der männliche Erzähler sprechen meist auf A2-Niveau. Die anderen Personen sprechen natürliches Alltagsdeutsch, ungefähr auf B1-Niveau.",
+  "language": "de-DE",
+  "translationLanguage": "en",
+  "level": "A2-B1",
+  "storyContext": {
+    "origin": "Hamburg",
+    "destination": "Fulpmes im Stubaital, Tirol, Österreich",
+    "changeAt": [
+      "Flughafen Innsbruck"
+    ],
+    "venue": "Skigebiet Schlick 2000 bei Fulpmes",
+    "event": "Ein Skiwochenende mit drei Freundinnen",
+    "fictional": true,
+    "note": "The characters, Hamburg pickup address, Hotel Bergblick in Fulpmes, bookings, flight and transfer times, room arrangements, prices, baggage allowance and surcharge, café menu and individual service situations are fictional. Hamburg, Innsbruck, Fulpmes and Schlick 2000 are real places; the journey uses a plausible seasonal direct flight and a prebooked shared minibus. This is an intra-Schengen journey with no routine arrival passport-control scene. The security lane in the story requires the filled drinking bottle to be emptied; procedures vary by lane and equipment. Equipment is rented at the destination. German is the only spoken language; English is a display translation. The es, zh, pt and hi translation fields are intentionally empty."
+  },
+  "playback": {
+    "pauseBetweenLinesMs": 350,
+    "pauseBetweenScenesMs": 1800
+  },
+  "voices": [
+    {
+      "id": "de-DE-Studio-B",
+      "description": "Male narrator: German Studio voice, reserved exclusively for the narrator; short, clear A2 narration."
+    },
+    {
+      "id": "de-DE-Chirp3-HD-Leda",
+      "description": "Lena: female lead; mostly A2 German, with short natural questions and spontaneous reactions."
+    },
+    {
+      "id": "de-DE-Chirp3-HD-Zephyr",
+      "description": "Mia: female friend, encouraging and playful; conversational A2-B1 German."
+    },
+    {
+      "id": "de-DE-Chirp3-HD-Kore",
+      "description": "Anna: female friend, practical and confident; conversational B1 German."
+    },
+    {
+      "id": "de-DE-Chirp3-HD-Aoede",
+      "description": "Sophie: female friend who made the bookings; conversational B1 German."
+    },
+    {
+      "id": "de-DE-Chirp3-HD-Gacrux",
+      "description": "Female supporting characters in separate encounters: check-in agent, barista, cabin crew member and lift ticket seller."
+    },
+    {
+      "id": "de-DE-Chirp3-HD-Algenib",
+      "description": "Male supporting characters in separate encounters: taxi driver, shared-transfer driver and lift attendant."
+    },
+    {
+      "id": "de-DE-Chirp3-HD-Charon",
+      "description": "Male supporting characters in separate encounters: taxi dispatcher, security officer, receptionist, ski rental assistant and waiter."
+    }
+  ],
+  "speakers": [
+    {
+      "id": "narrator",
+      "name": "Erzähler",
+      "role": "narrator",
+      "voiceId": "de-DE-Studio-B"
+    },
+    {
+      "id": "lena",
+      "name": "Lena",
+      "role": "traveller",
+      "voiceId": "de-DE-Chirp3-HD-Leda"
+    },
+    {
+      "id": "mia",
+      "name": "Mia",
+      "role": "supporting",
+      "voiceId": "de-DE-Chirp3-HD-Zephyr"
+    },
+    {
+      "id": "anna",
+      "name": "Anna",
+      "role": "supporting",
+      "voiceId": "de-DE-Chirp3-HD-Kore"
+    },
+    {
+      "id": "sophie",
+      "name": "Sophie",
+      "role": "supporting",
+      "voiceId": "de-DE-Chirp3-HD-Aoede"
+    },
+    {
+      "id": "taxi_dispatcher",
+      "name": "Mitarbeiter der Taxizentrale",
+      "role": "supporting",
+      "voiceId": "de-DE-Chirp3-HD-Charon"
+    },
+    {
+      "id": "taxi_driver",
+      "name": "Taxifahrer",
+      "role": "supporting",
+      "voiceId": "de-DE-Chirp3-HD-Algenib"
+    },
+    {
+      "id": "checkin_agent",
+      "name": "Mitarbeiterin bei der Gepäckabgabe",
+      "role": "supporting",
+      "voiceId": "de-DE-Chirp3-HD-Gacrux"
+    },
+    {
+      "id": "security_officer",
+      "name": "Mitarbeiter der Sicherheitskontrolle",
+      "role": "supporting",
+      "voiceId": "de-DE-Chirp3-HD-Charon"
+    },
+    {
+      "id": "barista",
+      "name": "Cafémitarbeiterin",
+      "role": "supporting",
+      "voiceId": "de-DE-Chirp3-HD-Gacrux"
+    },
+    {
+      "id": "flight_attendant",
+      "name": "Flugbegleiterin",
+      "role": "supporting",
+      "voiceId": "de-DE-Chirp3-HD-Gacrux"
+    },
+    {
+      "id": "shuttle_driver",
+      "name": "Fahrer des Transferbusses",
+      "role": "supporting",
+      "voiceId": "de-DE-Chirp3-HD-Algenib"
+    },
+    {
+      "id": "receptionist",
+      "name": "Rezeptionist",
+      "role": "supporting",
+      "voiceId": "de-DE-Chirp3-HD-Charon"
+    },
+    {
+      "id": "rental_assistant",
+      "name": "Mitarbeiter im Skiverleih",
+      "role": "supporting",
+      "voiceId": "de-DE-Chirp3-HD-Charon"
+    },
+    {
+      "id": "lift_ticket_agent",
+      "name": "Mitarbeiterin an der Liftkasse",
+      "role": "supporting",
+      "voiceId": "de-DE-Chirp3-HD-Gacrux"
+    },
+    {
+      "id": "lift_attendant",
+      "name": "Liftmitarbeiter",
+      "role": "supporting",
+      "voiceId": "de-DE-Chirp3-HD-Algenib"
+    },
+    {
+      "id": "waiter",
+      "name": "Kellner",
+      "role": "supporting",
+      "voiceId": "de-DE-Chirp3-HD-Charon"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene_01",
+      "sortorder": 1,
+      "title": "Das Taxi ist da",
+      "place": "Lenas Wohnung in Hamburg und Fahrt zum Flughafen",
+      "timeOfDay": "Freitag, 10:45–11:35",
+      "summary": "Book a taxi by telephone, clarify the pickup address, load a suitcase and pay at the airport.",
+      "lines": [
+        {
+          "id": "scene_01_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "de": "Es ist Freitagvormittag. Lena wohnt in Hamburg. Heute fliegt sie mit Mia, Anna und Sophie nach Innsbruck. Die vier wollen im Stubaital Ski fahren. Lena hat ihren Koffer gepackt. Jetzt bestellt sie ein Taxi.",
+          "en": "It is Friday morning. Lena lives in Hamburg. Today she is flying to Innsbruck with Mia, Anna and Sophie. The four friends want to go skiing in the Stubai Valley. Lena has packed her suitcase. Now she orders a taxi.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_01_line_002",
+          "sortorder": 2,
+          "speakerId": "taxi_dispatcher",
+          "de": "Taxizentrale, guten Tag.",
+          "en": "Taxi service, hello.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_01_line_003",
+          "sortorder": 3,
+          "speakerId": "lena",
+          "de": "Guten Tag. Ich brauche ein Taxi zum Flughafen. Zur Lindenstraße vierzehn, bitte.",
+          "en": "Hello. I need a taxi to the airport. To fourteen Lindenstraße, please.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_01_line_004",
+          "sortorder": 4,
+          "speakerId": "taxi_dispatcher",
+          "de": "Auf welchen Namen? Und können Sie in ungefähr fünfzehn Minuten unten sein?",
+          "en": "What name, please? And can you be downstairs in about fifteen minutes?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_01_line_005",
+          "sortorder": 5,
+          "speakerId": "lena",
+          "de": "Lena Meyer. Ja, das passt. Ich habe einen großen Koffer.",
+          "en": "Lena Meyer. Yes, that works. I have a large suitcase.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_01_line_006",
+          "sortorder": 6,
+          "speakerId": "taxi_dispatcher",
+          "de": "Alles klar. Der Fahrer meldet sich, wenn er da ist.",
+          "en": "All right. The driver will contact you when he arrives.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_01_line_007",
+          "sortorder": 7,
+          "speakerId": "narrator",
+          "de": "Eine Viertelstunde später klingelt Lenas Handy.",
+          "en": "Fifteen minutes later, Lena’s phone rings.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_01_line_008",
+          "sortorder": 8,
+          "speakerId": "taxi_driver",
+          "de": "Ihr Taxi ist da. Ich stehe vor der Bäckerei. Wo müssen Sie raus?",
+          "en": "Your taxi is here. I’m outside the bakery. Which entrance are you coming out of?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_01_line_009",
+          "sortorder": 9,
+          "speakerId": "lena",
+          "de": "Aus der Tür daneben. Ich komme sofort.",
+          "en": "The door next to it. I’m coming now.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_01_line_010",
+          "sortorder": 10,
+          "speakerId": "taxi_driver",
+          "de": "Den Koffer nehme ich. Geht’s in den Urlaub?",
+          "en": "I’ll take the suitcase. Going on holiday?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_01_line_011",
+          "sortorder": 11,
+          "speakerId": "lena",
+          "de": "Ja, zum Skifahren. Hoffentlich habe ich alles dabei.",
+          "en": "Yes, a skiing holiday. Hopefully I have everything with me.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_01_line_012",
+          "sortorder": 12,
+          "speakerId": "taxi_driver",
+          "de": "Dem Gewicht nach fehlt nicht viel. Welche Fluggesellschaft?",
+          "en": "Judging by the weight, you can’t have left much behind. Which airline?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_01_line_013",
+          "sortorder": 13,
+          "speakerId": "lena",
+          "de": "Eurowings. Wir fliegen nach Innsbruck.",
+          "en": "Eurowings. We’re flying to Innsbruck.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_01_line_014",
+          "sortorder": 14,
+          "speakerId": "narrator",
+          "de": "Am Flughafen hält der Fahrer vor dem richtigen Terminal. Er holt den Koffer aus dem Auto.",
+          "en": "At the airport, the driver stops outside the right terminal. He takes the suitcase out of the car.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_01_line_015",
+          "sortorder": 15,
+          "speakerId": "taxi_driver",
+          "de": "Macht achtundvierzig Euro sechzig. Bar oder mit Karte?",
+          "en": "That’s forty-eight euros sixty. Cash or card?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_01_line_016",
+          "sortorder": 16,
+          "speakerId": "lena",
+          "de": "Mit Karte, bitte. Und ich brauche eine Quittung.",
+          "en": "By card, please. And I need a receipt.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_01_line_017",
+          "sortorder": 17,
+          "speakerId": "taxi_driver",
+          "de": "Kommt. Und den kleinen Rucksack nicht auf dem Rücksitz vergessen.",
+          "en": "Coming right up. And don’t leave your little backpack on the back seat.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        }
+      ]
+    },
+    {
+      "id": "scene_02",
+      "sortorder": 2,
+      "title": "Zu schwer und noch etwas in der Tasche",
+      "place": "Flughafen Hamburg, Gepäckabgabe und Sicherheitskontrolle",
+      "timeOfDay": "Freitag, 11:45–12:15",
+      "summary": "Meet the friends, deal with an overweight suitcase and follow short instructions at security.",
+      "lines": [
+        {
+          "id": "scene_02_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "de": "In der Halle warten die drei Freundinnen. Sophie hat die Reise gebucht. Alle haben ihre Bordkarten auf dem Handy. Nur die Koffer müssen sie noch abgeben.",
+          "en": "Her three friends are waiting in the terminal. Sophie booked the trip. They all have their boarding passes on their phones. They still need to drop off their suitcases.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_02_line_002",
+          "sortorder": 2,
+          "speakerId": "sophie",
+          "de": "Da bist du ja. Wir haben schon gedacht, du packst noch.",
+          "en": "There you are. We were starting to think you were still packing.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_02_line_003",
+          "sortorder": 3,
+          "speakerId": "lena",
+          "de": "Nein. Nur noch den Rucksack holen. Der war fast noch im Taxi.",
+          "en": "No. I just had to get my backpack. I nearly left it in the taxi.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_02_line_004",
+          "sortorder": 4,
+          "speakerId": "checkin_agent",
+          "de": "Die Nächste, bitte. Bordkarte und Reisepass. Den Koffer hier auf die Waage.",
+          "en": "Next, please. Boarding pass and passport. Put the suitcase here on the scales.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_02_line_005",
+          "sortorder": 5,
+          "speakerId": "lena",
+          "de": "Hier, bitte.",
+          "en": "Here you are.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_02_line_006",
+          "sortorder": 6,
+          "speakerId": "checkin_agent",
+          "de": "Vierundzwanzig Komma fünf Kilo. Gebucht sind dreiundzwanzig. Sie können etwas herausnehmen oder den Zuschlag bezahlen.",
+          "en": "Twenty-four point five kilos. You’ve booked twenty-three. You can take something out or pay the excess baggage charge.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_02_line_007",
+          "sortorder": 7,
+          "speakerId": "lena",
+          "de": "Wie viel kostet das extra?",
+          "en": "How much extra does that cost?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_02_line_008",
+          "sortorder": 8,
+          "speakerId": "checkin_agent",
+          "de": "In Ihrer Buchung sind das fünfzig Euro.",
+          "en": "For your booking, that’s fifty euros.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_02_line_009",
+          "sortorder": 9,
+          "speakerId": "anna",
+          "de": "Du kannst etwas in meinen Rucksack legen. Da ist noch Platz.",
+          "en": "You can put something in my backpack. There’s still some space.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_02_line_010",
+          "sortorder": 10,
+          "speakerId": "lena",
+          "de": "Danke, aber ich bezahle lieber. Ich will den Koffer hier nicht aufmachen.",
+          "en": "Thanks, but I’d rather pay. I don’t want to open the suitcase here.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_02_line_011",
+          "sortorder": 11,
+          "speakerId": "narrator",
+          "de": "Lena bezahlt. Dann gehen die vier zur Sicherheitskontrolle. Ein Mitarbeiter zeigt auf die freien Schalen.",
+          "en": "Lena pays. Then the four friends go to security. An employee points to the empty trays.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_02_line_012",
+          "sortorder": 12,
+          "speakerId": "security_officer",
+          "de": "Jacke aus, bitte. Und die Hosentaschen ganz leer machen.",
+          "en": "Coat off, please. And empty your trouser pockets completely.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_02_line_013",
+          "sortorder": 13,
+          "speakerId": "lena",
+          "de": "Auch das Handy?",
+          "en": "My phone too?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_02_line_014",
+          "sortorder": 14,
+          "speakerId": "security_officer",
+          "de": "Ja. In die Schale. Den Rucksack aufs Band, bitte.",
+          "en": "Yes. Into the tray. Put your backpack on the belt, please.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_02_line_015",
+          "sortorder": 15,
+          "speakerId": "narrator",
+          "de": "Lena geht durch die Kontrolle. Auf der anderen Seite wartet ihre Schale. Ein Mitarbeiter hält ihren Rucksack noch zurück.",
+          "en": "Lena goes through the security check. Her tray is waiting on the other side. An employee is still holding her backpack.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_02_line_016",
+          "sortorder": 16,
+          "speakerId": "security_officer",
+          "de": "Ist das Ihre Tasche? Dürfte ich die einmal aufmachen?",
+          "en": "Is this your bag? May I open it?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_02_line_017",
+          "sortorder": 17,
+          "speakerId": "lena",
+          "de": "Ja, natürlich. Ist etwas nicht in Ordnung?",
+          "en": "Yes, of course. Is something wrong?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_02_line_018",
+          "sortorder": 18,
+          "speakerId": "security_officer",
+          "de": "Nur die Trinkflasche. Die ist noch voll. Sie können sie hier ausleeren. Die Flasche selbst dürfen Sie behalten.",
+          "en": "Just the drinking bottle. It’s still full. You can empty it here. You can keep the bottle itself.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_02_line_019",
+          "sortorder": 19,
+          "speakerId": "lena",
+          "de": "Ach, stimmt. Das Wasser habe ich vergessen.",
+          "en": "Oh, right. I forgot about the water.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        }
+      ]
+    },
+    {
+      "id": "scene_03",
+      "sortorder": 3,
+      "title": "Vier Getränke, drei Becher",
+      "place": "Café hinter der Sicherheitskontrolle, Flughafen Hamburg",
+      "timeOfDay": "Freitag, 12:20",
+      "summary": "Order drinks for four people, wait for collection and check on the missing drink.",
+      "lines": [
+        {
+          "id": "scene_03_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "de": "Bis zum Einsteigen ist noch Zeit. Anna und Sophie suchen einen Tisch. Lena und Mia bestellen die Getränke.",
+          "en": "There is still time before boarding. Anna and Sophie look for a table. Lena and Mia order the drinks.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_03_line_002",
+          "sortorder": 2,
+          "speakerId": "lena",
+          "de": "Zwei Cappuccino, einen schwarzen Kaffee und einen Pfefferminztee, bitte. Alles für hier.",
+          "en": "Two cappuccinos, one black coffee and one peppermint tea, please. All to have here.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_03_line_003",
+          "sortorder": 3,
+          "speakerId": "barista",
+          "de": "Den Tee haben wir nur noch als Ingwer-Zitrone. Wäre das auch okay?",
+          "en": "The only tea we have left is ginger and lemon. Would that be all right?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_03_line_004",
+          "sortorder": 4,
+          "speakerId": "mia",
+          "de": "Für mich? Ja, passt.",
+          "en": "For me? Yes, that’s fine.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_03_line_005",
+          "sortorder": 5,
+          "speakerId": "barista",
+          "de": "Zusammen oder getrennt?",
+          "en": "Together or separately?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_03_line_006",
+          "sortorder": 6,
+          "speakerId": "lena",
+          "de": "Zusammen. Die anderen geben mir das Geld später.",
+          "en": "Together. The others will give me the money later.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_03_line_007",
+          "sortorder": 7,
+          "speakerId": "barista",
+          "de": "Sechzehn Euro achtzig. Ihren Namen rufe ich dann auf.",
+          "en": "Sixteen euros eighty. I’ll call your name when it’s ready.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_03_line_008",
+          "sortorder": 8,
+          "speakerId": "narrator",
+          "de": "Lena bezahlt und setzt sich zu den anderen. Kurz danach ruft die Mitarbeiterin ihren Namen. Auf dem Tablett stehen drei Becher.",
+          "en": "Lena pays and sits down with the others. Shortly afterwards, the employee calls her name. There are three cups on the tray.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_03_line_009",
+          "sortorder": 9,
+          "speakerId": "lena",
+          "de": "Entschuldigung, wir hatten auch einen Tee.",
+          "en": "Excuse me, we ordered a tea as well.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_03_line_010",
+          "sortorder": 10,
+          "speakerId": "barista",
+          "de": "Der zieht noch. Ich bring ihn Ihnen gleich an den Tisch.",
+          "en": "It’s still brewing. I’ll bring it to your table in a moment.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_03_line_011",
+          "sortorder": 11,
+          "speakerId": "mia",
+          "de": "Dann kann ich ja noch kurz aufs Klo. Passt ihr auf meine Tasche auf?",
+          "en": "Then I’ve got time to go to the loo. Can you keep an eye on my bag?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        }
+      ]
+    },
+    {
+      "id": "scene_04",
+      "sortorder": 4,
+      "title": "Erst einmal auf den eigenen Platz",
+      "place": "Flug nach Innsbruck, Boarding und Kabine",
+      "timeOfDay": "Freitag, 13:10–15:05",
+      "summary": "Ask about sitting together, follow cabin instructions and arrive in Innsbruck.",
+      "lines": [
+        {
+          "id": "scene_04_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "de": "Am Gate stehen die vier mit ihren Bordkarten bereit. Nach der Kontrolle gehen sie ins Flugzeug. Lena sitzt in Reihe acht. Die anderen sitzen weiter hinten.",
+          "en": "The four friends are ready at the gate with their boarding passes. After the check, they board the plane. Lena is in row eight. The others are sitting further back.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_04_line_002",
+          "sortorder": 2,
+          "speakerId": "lena",
+          "de": "Entschuldigung, können wir zusammen sitzen? Meine Freundinnen sind in Reihe zwölf.",
+          "en": "Excuse me, can we sit together? My friends are in row twelve.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_04_line_003",
+          "sortorder": 3,
+          "speakerId": "flight_attendant",
+          "de": "Setzen Sie sich bitte erst auf Ihren gebuchten Platz. Wenn alle an Bord sind, schauen wir, was noch frei ist.",
+          "en": "Please sit in your allocated seat first. Once everyone is on board, we’ll see what’s still available.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_04_line_004",
+          "sortorder": 4,
+          "speakerId": "lena",
+          "de": "Gut. Kann der Rucksack unter den Sitz?",
+          "en": "All right. Can my backpack go under the seat?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_04_line_005",
+          "sortorder": 5,
+          "speakerId": "flight_attendant",
+          "de": "Ja, unter den Sitz vor Ihnen. Den Gang bitte frei lassen.",
+          "en": "Yes, under the seat in front of you. Please keep the aisle clear.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_04_line_006",
+          "sortorder": 6,
+          "speakerId": "narrator",
+          "de": "Der Flug ist voll. Lena bleibt auf ihrem Platz. Nach dem Start schaut sie aus dem Fenster. Später sieht sie die Berge.",
+          "en": "The flight is full. Lena stays in her seat. After take-off, she looks out of the window. Later, she sees the mountains.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_04_line_007",
+          "sortorder": 7,
+          "speakerId": "flight_attendant",
+          "de": "Wir landen in Kürze in Innsbruck. Bitte klappen Sie die Tische hoch und stellen Sie die Rückenlehnen aufrecht.",
+          "en": "We’ll be landing in Innsbruck shortly. Please fold away your tray tables and return your seat backs to the upright position.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_04_line_008",
+          "sortorder": 8,
+          "speakerId": "narrator",
+          "de": "Wenig später steht das Flugzeug am Boden. Lena macht den Gurt auf. Hinter ihr winkt Mia.",
+          "en": "A little later, the plane is on the ground. Lena unfastens her seat belt. Mia waves from behind her.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_04_line_009",
+          "sortorder": 9,
+          "speakerId": "mia",
+          "de": "Na? Hast du die Berge gesehen?",
+          "en": "Well? Did you see the mountains?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_04_line_010",
+          "sortorder": 10,
+          "speakerId": "lena",
+          "de": "Ja. Vom Fenster sehen sie ziemlich hoch aus.",
+          "en": "Yes. They look quite high from the window.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        }
+      ]
+    },
+    {
+      "id": "scene_05",
+      "sortorder": 5,
+      "title": "Die Buchung läuft auf Sophie",
+      "place": "Flughafen Innsbruck, Transfer und Hotel in Fulpmes",
+      "timeOfDay": "Freitag, 15:15–16:30",
+      "summary": "Find the booked shared transfer and confirm rooms and practical arrangements at the hotel.",
+      "lines": [
+        {
+          "id": "scene_05_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "de": "Die vier holen ihre Koffer vom Gepäckband. In der Ankunftshalle suchen sie den Fahrer für ihren gebuchten Kleinbus. Er steht neben einem Schild mit dem Namen des Hotels.",
+          "en": "The four friends collect their suitcases from the baggage belt. In the arrivals hall, they look for the driver of their booked minibus. He is standing beside a sign with the hotel’s name.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_05_line_002",
+          "sortorder": 2,
+          "speakerId": "lena",
+          "de": "Guten Tag. Wir fahren zum Hotel Bergblick in Fulpmes. Vier Personen.",
+          "en": "Hello. We’re going to the Hotel Bergblick in Fulpmes. Four people.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_05_line_003",
+          "sortorder": 3,
+          "speakerId": "shuttle_driver",
+          "de": "Wie heißen Sie?",
+          "en": "What’s your name?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_05_line_004",
+          "sortorder": 4,
+          "speakerId": "lena",
+          "de": "Lena Meyer.",
+          "en": "Lena Meyer.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_05_line_005",
+          "sortorder": 5,
+          "speakerId": "shuttle_driver",
+          "de": "Meyer habe ich nicht auf der Liste. Haben Sie eine Buchungsnummer?",
+          "en": "I don’t have Meyer on my list. Do you have a booking number?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_05_line_006",
+          "sortorder": 6,
+          "speakerId": "sophie",
+          "de": "Die Buchung läuft auf mich. Sophie Wagner. Hier ist die Bestätigung.",
+          "en": "The booking’s in my name. Sophie Wagner. Here’s the confirmation.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_05_line_007",
+          "sortorder": 7,
+          "speakerId": "shuttle_driver",
+          "de": "Ah, Wagner. Vier Personen, vier Koffer. Dann passt’s. Wir warten noch auf zwei Gäste.",
+          "en": "Ah, Wagner. Four people, four suitcases. That’s right, then. We’re still waiting for two guests.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_05_line_008",
+          "sortorder": 8,
+          "speakerId": "narrator",
+          "de": "Nach der Fahrt stehen die Freundinnen an der Rezeption. Lena schaut auf die kleinen Berge aus Schnee vor dem Hotel.",
+          "en": "After the journey, the friends are at reception. Lena looks at the little piles of snow outside the hotel.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_05_line_009",
+          "sortorder": 9,
+          "speakerId": "receptionist",
+          "de": "Wagner, richtig? Zwei Zweibettzimmer für zwei Nächte.",
+          "en": "Wagner, right? Two twin rooms for two nights.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_05_line_010",
+          "sortorder": 10,
+          "speakerId": "sophie",
+          "de": "Genau. Und Frühstück ist dabei?",
+          "en": "Exactly. And breakfast is included?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_05_line_011",
+          "sortorder": 11,
+          "speakerId": "receptionist",
+          "de": "Ja, von halb acht bis zehn. Ihre Zimmer sind oben im ersten Stock. Der Skiraum ist unten, neben der Treppe.",
+          "en": "Yes, from half past seven until ten. Your rooms are upstairs on the first floor. The ski storage room is downstairs, next to the stairs.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_05_line_012",
+          "sortorder": 12,
+          "speakerId": "lena",
+          "de": "Wo fährt der Bus zum Skigebiet ab?",
+          "en": "Where does the bus to the ski area leave from?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_05_line_013",
+          "sortorder": 13,
+          "speakerId": "receptionist",
+          "de": "Die Haltestelle ist um die Ecke. Den Fahrplan bekommen Sie hier. Brauchen Sie auch einen Skiverleih?",
+          "en": "The stop is around the corner. You can get the timetable here. Do you need a ski hire shop as well?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_05_line_014",
+          "sortorder": 14,
+          "speakerId": "lena",
+          "de": "Ja, für morgen. Ich brauche alles. Außer Kleidung. Davon habe ich genug.",
+          "en": "Yes, for tomorrow. I need everything. Except clothes. I have enough of those.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        }
+      ]
+    },
+    {
+      "id": "scene_06",
+      "sortorder": 6,
+      "title": "Der Schuh drückt",
+      "place": "Skiverleih an der Schlick 2000, Fulpmes",
+      "timeOfDay": "Samstag, 08:30",
+      "summary": "Hire equipment, answer personal questions and explain that a ski boot does not fit.",
+      "lines": [
+        {
+          "id": "scene_06_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "de": "Am nächsten Morgen fahren sie mit dem Skibus zur Schlick 2000. Im Verleih probiert Lena zuerst die Schuhe an. Sie ist schon Ski gefahren, aber seit zwei Jahren nicht mehr.",
+          "en": "The next morning, they take the ski bus to Schlick 2000. At the hire shop, Lena tries on the boots first. She has skied before, but not for two years.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_06_line_002",
+          "sortorder": 2,
+          "speakerId": "rental_assistant",
+          "de": "Welche Schuhgröße haben Sie? Und wie groß und wie schwer sind Sie?",
+          "en": "What’s your shoe size? And how tall are you and how much do you weigh?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_06_line_003",
+          "sortorder": 3,
+          "speakerId": "lena",
+          "de": "Größe neununddreißig. Ich bin einen Meter achtundsechzig groß. Und ungefähr zweiundsechzig Kilo schwer.",
+          "en": "Size thirty-nine. I’m one metre sixty-eight tall. And I weigh about sixty-two kilos.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_06_line_004",
+          "sortorder": 4,
+          "speakerId": "rental_assistant",
+          "de": "Wie sicher fahren Sie? Eher gemütlich oder sportlich?",
+          "en": "How confidently do you ski? More relaxed or sporty?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_06_line_005",
+          "sortorder": 5,
+          "speakerId": "lena",
+          "de": "Lieber langsam. Ich muss erst wieder üben.",
+          "en": "Slowly, please. I need to practise again first.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_06_line_006",
+          "sortorder": 6,
+          "speakerId": "rental_assistant",
+          "de": "Dann probieren Sie die hier. Gehen Sie mal ein bisschen in die Knie. Wie fühlt sich das an?",
+          "en": "Then try these. Bend your knees a little. How does that feel?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_06_line_007",
+          "sortorder": 7,
+          "speakerId": "lena",
+          "de": "Links gut. Aber rechts tut es hier am Knöchel weh.",
+          "en": "Good on the left. But on the right it hurts here at my ankle.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_06_line_008",
+          "sortorder": 8,
+          "speakerId": "rental_assistant",
+          "de": "Zeigen Sie mal. Ah, die Socke sitzt nicht glatt. Machen wir die Schnalle noch mal auf.",
+          "en": "Let me see. Ah, your sock isn’t lying flat. Let’s undo the buckle again.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_06_line_009",
+          "sortorder": 9,
+          "speakerId": "lena",
+          "de": "So ist es besser. Danke, dass Sie noch mal schauen.",
+          "en": "That’s better. Thank you for checking again.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_06_line_010",
+          "sortorder": 10,
+          "speakerId": "narrator",
+          "de": "Draußen zieht Lena ihre Handschuhe an. Mit der linken Hand geht es gut. Dann bleibt sie stehen.",
+          "en": "Outside, Lena puts on her gloves. The left hand goes in easily. Then she stops.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_06_line_011",
+          "sortorder": 11,
+          "speakerId": "lena",
+          "de": "Das gibt’s nicht. Ich habe zwei linke Handschuhe.",
+          "en": "I don’t believe it. I’ve brought two left gloves.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_06_line_012",
+          "sortorder": 12,
+          "speakerId": "mia",
+          "de": "Hier. Ich hab ein zweites Paar dabei. Du kannst es heute nehmen.",
+          "en": "Here. I’ve got a second pair with me. You can use it today.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_06_line_013",
+          "sortorder": 13,
+          "speakerId": "anna",
+          "de": "Vierundzwanzig Kilo Gepäck. Und kein rechter Handschuh.",
+          "en": "Twenty-four kilos of luggage. And not one right glove.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        }
+      ]
+    },
+    {
+      "id": "scene_07",
+      "sortorder": 7,
+      "title": "Bitte langsam anfangen",
+      "place": "Liftkasse, Gondel und erste Abfahrt, Schlick 2000",
+      "timeOfDay": "Samstag, 09:15",
+      "summary": "Buy a day pass, follow lift instructions and agree on an easy first run.",
+      "lines": [
+        {
+          "id": "scene_07_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "de": "Mit den Skiern in der Hand geht Lena zur Kasse. Die anderen warten neben dem Pistenplan.",
+          "en": "Holding her skis, Lena goes to the ticket office. The others wait beside the piste map.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_07_line_002",
+          "sortorder": 2,
+          "speakerId": "lena",
+          "de": "Eine Tageskarte, bitte. Und wo ist eine leichte Piste?",
+          "en": "A day pass, please. And where is an easy slope?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_07_line_003",
+          "sortorder": 3,
+          "speakerId": "lift_ticket_agent",
+          "de": "Hier auf dem Plan. Für den Anfang nehmen Sie am besten diese blaue Abfahrt. Nicht oben den anderen einfach hinterherfahren.",
+          "en": "Here on the map. To start with, you’re best taking this blue run. Don’t just follow everyone else at the top.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_07_line_004",
+          "sortorder": 4,
+          "speakerId": "lena",
+          "de": "Und bis wann fahren die Lifte?",
+          "en": "And what time do the lifts run until?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_07_line_005",
+          "sortorder": 5,
+          "speakerId": "lift_ticket_agent",
+          "de": "Die Zeiten stehen jeweils an der Anlage. Schauen Sie vor der letzten Fahrt noch mal drauf.",
+          "en": "The times are displayed at each lift. Check again before your last run.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_07_line_006",
+          "sortorder": 6,
+          "speakerId": "narrator",
+          "de": "An der Gondel hält Lena die Karte vor den Leser. Die Tür öffnet sich. Ein Mitarbeiter zeigt auf die Halterung.",
+          "en": "At the gondola, Lena holds her pass in front of the reader. The gate opens. An employee points to the rack.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_07_line_007",
+          "sortorder": 7,
+          "speakerId": "lift_attendant",
+          "de": "Die Ski kommen außen rein. Die Stöcke nehmen Sie mit in die Kabine.",
+          "en": "The skis go in outside. Take your poles into the cabin with you.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_07_line_008",
+          "sortorder": 8,
+          "speakerId": "lena",
+          "de": "Hier hinein?",
+          "en": "In here?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_07_line_009",
+          "sortorder": 9,
+          "speakerId": "lift_attendant",
+          "de": "Genau. Passt. Sie können einsteigen.",
+          "en": "Exactly. That’s right. You can get in.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_07_line_010",
+          "sortorder": 10,
+          "speakerId": "mia",
+          "de": "Wir bleiben erst mal zusammen, ja? Ich fahr vor.",
+          "en": "Let’s stay together to begin with, okay? I’ll go first.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_07_line_011",
+          "sortorder": 11,
+          "speakerId": "lena",
+          "de": "Gut. Aber bitte nicht so schnell.",
+          "en": "Good. But not too fast, please.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_07_line_012",
+          "sortorder": 12,
+          "speakerId": "narrator",
+          "de": "Die erste Abfahrt ist langsam. Lena hält oft an. Unten lacht sie. Ihre Beine erinnern sich doch noch ans Skifahren.",
+          "en": "The first descent is slow. Lena stops often. At the bottom, she laughs. Her legs do remember how to ski after all.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        }
+      ]
+    },
+    {
+      "id": "scene_08",
+      "sortorder": 8,
+      "title": "Bei welchem Lift denn?",
+      "place": "Pistenkreuzung und Talstation, Schlick 2000",
+      "timeOfDay": "Samstag, 10:45",
+      "summary": "Clarify a vague meeting point by phone and use a photograph to find the others.",
+      "lines": [
+        {
+          "id": "scene_08_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "de": "Später fahren Anna und Sophie eine andere Piste. Sie wollen sich danach am Lift treffen. Lena und Mia warten unten. Aber die anderen kommen nicht. Lena ruft Sophie an.",
+          "en": "Later, Anna and Sophie take a different run. They plan to meet at the lift afterwards. Lena and Mia wait at the bottom. But the others don’t come. Lena calls Sophie.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_08_line_002",
+          "sortorder": 2,
+          "speakerId": "lena",
+          "de": "Wo seid ihr? Wir warten schon am Lift.",
+          "en": "Where are you? We’re already waiting at the lift.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_08_line_003",
+          "sortorder": 3,
+          "speakerId": "sophie",
+          "de": "Wir auch. Direkt beim Eingang.",
+          "en": "So are we. Right by the entrance.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_08_line_004",
+          "sortorder": 4,
+          "speakerId": "lena",
+          "de": "Ich sehe euch nicht. Neben uns ist eine große Pistentafel.",
+          "en": "I can’t see you. There’s a big piste map next to us.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_08_line_005",
+          "sortorder": 5,
+          "speakerId": "sophie",
+          "de": "Moment. Meinst du die Gondel ganz unten? Wir sind bei einem anderen Lift.",
+          "en": "Hang on. Do you mean the gondola right at the bottom? We’re at a different lift.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_08_line_006",
+          "sortorder": 6,
+          "speakerId": "lena",
+          "de": "Dann war unser Treffpunkt nicht so gut.",
+          "en": "Then our meeting point wasn’t very good.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_08_line_007",
+          "sortorder": 7,
+          "speakerId": "sophie",
+          "de": "Stimmt. Bleibt dort. Wir fahren zu euch runter. Schick mir kurz ein Foto, wo ihr steht.",
+          "en": "True. Stay there. We’ll ski down to you. Send me a quick photo of where you’re standing.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_08_line_008",
+          "sortorder": 8,
+          "speakerId": "lena",
+          "de": "Gut. Wir sind neben der Tafel. Ich schicke es jetzt.",
+          "en": "All right. We’re next to the map. I’m sending it now.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_08_line_009",
+          "sortorder": 9,
+          "speakerId": "narrator",
+          "de": "Wenig später sind alle wieder zusammen. Diesmal zeigt Anna auf den Plan.",
+          "en": "A little later, they are all together again. This time, Anna points to the map.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_08_line_010",
+          "sortorder": 10,
+          "speakerId": "anna",
+          "de": "Ab jetzt sagen wir den Namen vom Lift. Oder wir schicken gleich ein Foto.",
+          "en": "From now on, we say the name of the lift. Or we send a photo straight away.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_08_line_011",
+          "sortorder": 11,
+          "speakerId": "mia",
+          "de": "Am besten eins, auf dem auch der Name steht. Nicht nur Lenas Gesicht.",
+          "en": "Preferably one with the name in it too. Not just Lena’s face.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        }
+      ]
+    },
+    {
+      "id": "scene_09",
+      "sortorder": 9,
+      "title": "Ein guter erster Tag",
+      "place": "Bergrestaurant und später das Hotelzimmer in Fulpmes",
+      "timeOfDay": "Samstag, 12:00–16:30",
+      "summary": "Share a table, discover a local dish, discuss the day and end with a callback to the gloves.",
+      "lines": [
+        {
+          "id": "scene_09_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "de": "Mittags gehen die Freundinnen in ein Bergrestaurant. Viele Tische sind voll. Neben zwei anderen Gästen sind noch vier Plätze frei.",
+          "en": "At lunchtime, the friends go to a mountain restaurant. Many tables are full. There are four free seats beside two other guests.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_09_line_002",
+          "sortorder": 2,
+          "speakerId": "lena",
+          "de": "Entschuldigung, sind die Plätze hier noch frei?",
+          "en": "Excuse me, are these seats still free?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_09_line_003",
+          "sortorder": 3,
+          "speakerId": "waiter",
+          "de": "Ja, da können Sie sich dazusetzen. Ich komme gleich zu Ihnen.",
+          "en": "Yes, you can sit there with the others. I’ll be with you in a moment.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_09_line_004",
+          "sortorder": 4,
+          "speakerId": "narrator",
+          "de": "Lena schaut auf die Karte. Eine Frau am Nebentisch bekommt einen großen Teller. Darauf liegen kleine Stücke mit Zucker.",
+          "en": "Lena looks at the menu. A woman at the next table receives a large plate. On it are little pieces covered in sugar.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_09_line_005",
+          "sortorder": 5,
+          "speakerId": "lena",
+          "de": "Was ist das da? Das sieht gut aus.",
+          "en": "What’s that over there? It looks good.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_09_line_006",
+          "sortorder": 6,
+          "speakerId": "waiter",
+          "de": "Kaiserschmarrn. Das ist ein süßes Gericht, ungefähr wie ein Pfannkuchen in Stücken. Dazu gibt’s Apfelmus.",
+          "en": "Kaiserschmarrn. It’s a sweet dish, rather like a pancake torn into pieces. It comes with apple sauce.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_09_line_007",
+          "sortorder": 7,
+          "speakerId": "lena",
+          "de": "Dann nehme ich das. Können wir uns eine Portion teilen?",
+          "en": "Then I’ll have that. Can we share a portion?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_09_line_008",
+          "sortorder": 8,
+          "speakerId": "waiter",
+          "de": "Klar. Ich bring Ihnen einen zweiten Teller.",
+          "en": "Of course. I’ll bring you a second plate.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_09_line_009",
+          "sortorder": 9,
+          "speakerId": "mia",
+          "de": "Und? Noch Angst vor den Bergen?",
+          "en": "So? Still afraid of the mountains?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_09_line_010",
+          "sortorder": 10,
+          "speakerId": "lena",
+          "de": "Nicht mehr so viel. Die erste Fahrt war schwer. Aber jetzt macht es Spaß.",
+          "en": "Not as much. The first run was difficult. But now it’s fun.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_09_line_011",
+          "sortorder": 11,
+          "speakerId": "anna",
+          "de": "Morgen wieder zusammen anfangen?",
+          "en": "Shall we start together again tomorrow?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_09_line_012",
+          "sortorder": 12,
+          "speakerId": "lena",
+          "de": "Ja. Und danach treffen wir uns an einem Ort mit einem Namen.",
+          "en": "Yes. And afterwards we meet somewhere with a name.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_09_line_013",
+          "sortorder": 13,
+          "speakerId": "narrator",
+          "de": "Nach ein paar weiteren Abfahrten fahren sie zurück zum Hotel. Lena legt die geliehenen Handschuhe auf den Tisch. Dann öffnet sie eine Seitentasche ihres Koffers. Darin liegen zwei rechte Handschuhe.",
+          "en": "After a few more runs, they return to the hotel. Lena puts the borrowed gloves on the table. Then she opens a side pocket of her suitcase. Inside are two right gloves.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_09_line_014",
+          "sortorder": 14,
+          "speakerId": "lena",
+          "de": "Nein. Die waren die ganze Zeit hier!",
+          "en": "No. They were here the whole time!",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_09_line_015",
+          "sortorder": 15,
+          "speakerId": "narrator",
+          "de": "Sie schickt ein Foto an die drei Freundinnen. Mia antwortet sofort.",
+          "en": "She sends a photo to her three friends. Mia replies immediately.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_09_line_016",
+          "sortorder": 16,
+          "speakerId": "mia",
+          "de": "Dann war dein Koffer ja doch gut gepackt. Nur leider nicht für einen Menschen mit zwei Händen.",
+          "en": "So your suitcase was well packed after all. Just not for a person with two hands.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_09_line_017",
+          "sortorder": 17,
+          "speakerId": "lena",
+          "de": "Für morgen packe ich nur zwei ein. Einen linken. Einen rechten.",
+          "en": "For tomorrow, I’m packing just two. One left. One right.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_09_line_018",
+          "sortorder": 18,
+          "speakerId": "anna",
+          "de": "Mach lieber ein Foto, bevor du die Tasche zumachst.",
+          "en": "Better take a photo before you close the bag.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_09_line_019",
+          "sortorder": 19,
+          "speakerId": "narrator",
+          "de": "Lena legt die Handschuhe nebeneinander und macht ein Foto. Diesmal sind auf dem Bild keine Berge. Aber sie ist trotzdem stolz.",
+          "en": "Lena puts the gloves next to each other and takes a photo. This time, there are no mountains in the picture. But she is proud of it anyway.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        }
+      ]
+    }
+  ]
+}

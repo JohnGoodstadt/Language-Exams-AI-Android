@@ -790,6 +790,9 @@ class FirestoreUploadAdminRepository @Inject constructor(
                         "sentences" to sentences,
                         "translations" to translations,
                         "highlight" to highlights,
+                        // Content-ID per sentence, as "Upload Vocab Hashes" writes it, so a fresh upload
+                        // needs no second step and the hashes always match the uploaded sentences.
+                        "hashes" to sentences.map { FirebaseAudioService.generateContentID(it) },
                         "lockedClause" to w.optString("lockedClause", ""),
                         "weakenedClause" to w.optString("weakenedClause", "")
                     )

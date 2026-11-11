@@ -1,6 +1,7 @@
 package com.goodstadt.john.language.exams.packages.ReadinessAudit
 
 import com.goodstadt.john.language.exams.data.stats.QuizStat
+import com.goodstadt.john.language.exams.screens.shared.showOfflineNoSoundToast
 import com.goodstadt.john.language.exams.data.stats.recordQuizCompletion
 
 //import android.graphics.Color
@@ -312,6 +313,11 @@ class ReadinessAuditViewModel @Inject constructor(
         }
     }
 
+    // Declared before init: init collects the saved preference into it, and a cached value can arrive
+    // synchronously during init (Main.immediate), which crashed with an NPE when this was declared later.
+    private val _autoAdvance = MutableStateFlow(false)
+    val autoAdvance = _autoAdvance.asStateFlow()
+
     init {
         // Drive the audit screen's gauges from the shared comfort-band model (re-anchored to the learner's
         // current vocab level), so Progress, Focus and this screen always show the same numbers. Updates as
@@ -348,8 +354,7 @@ class ReadinessAuditViewModel @Inject constructor(
 
     // --- Auto-advance ("A" button): after a CORRECT answer, wait for the answer's audio to finish,
     // then move to the next question, as though Next had been tapped. Mirrors the Usage quiz. ---
-    private val _autoAdvance = MutableStateFlow(false)
-    val autoAdvance = _autoAdvance.asStateFlow()
+    // (_autoAdvance / autoAdvance are declared above the first init block: it collects into them.)
     private val autoAdvanceMaxWaitMs = 8000L
     private var autoAdvanceJob: Job? = null
 
@@ -492,7 +497,8 @@ class ReadinessAuditViewModel @Inject constructor(
 
 
 
-    fun handleTap(sentence: String) {
+    /** [remindIfOffline]: a loudspeaker / sentence tap (not the radio button), so say why it's silent offline. */
+    fun handleTap(sentence: String, remindIfOffline: Boolean = false) {
 
         audioPlaybackRepository.stopPlayback()
 
@@ -530,6 +536,7 @@ class ReadinessAuditViewModel @Inject constructor(
                 AudioPlaybackStatus.Failure -> {
                     //TODO: Show Snackbar logic
                     Timber.i("QuizViewModel.handleTap().AudioPlaybackStatus.Failure")
+                    if (remindIfOffline && audioPlaybackRepository.isOffline) showOfflineNoSoundToast(appContext)
                 }
             }
             //TODO: for 1 month feb/march 2026, facebook ads manager campaign. see stats

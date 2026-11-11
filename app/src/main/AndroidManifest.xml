@@ -15,6 +15,9 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <!-- Local practice reminders -->
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <!-- Car / Android Auto / lock-screen play-pause: keeps playback alive in the background -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
 
     <queries>
         <package android:name="com.facebook.katana" />
@@ -72,6 +75,12 @@
         <receiver
             android:name=".managers.PracticeReminderReceiver"
             android:exported="false" />
+
+        <!-- Media notification + session while sentences/podcasts play (see managers/MediaControls.kt) -->
+        <service
+            android:name=".managers.MediaPlaybackService"
+            android:exported="false"
+            android:foregroundServiceType="mediaPlayback" />
     </application>
 
 </manifest>

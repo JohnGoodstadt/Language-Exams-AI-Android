@@ -14,10 +14,12 @@ data class AppUIManifest(
 
 // 2. The definition for a single piece of content in the registry
 @Serializable
+// Fields default rather than being required, so one entry written for the other platform (e.g. an iOS
+// grouped screen with no parent sheetDataType) can't fail the whole manifest.
 data class SheetDefinition(
-    val title: String,
-    val screenType: ScreenType,
-    val sheetDataType: SheetDataType,
+    val title: String = "",
+    val screenType: ScreenType = ScreenType.UNKNOWN,
+    val sheetDataType: SheetDataType = SheetDataType.UNKNOWN,
     val firestoreDocumentId: String? = null,
     val subTabs: List<SubTabDefinition>? = null,
     val requiredLocale: String? = null //for Spanish/Mandarin specific sheets
@@ -28,7 +30,7 @@ data class SheetDefinition(
 data class SubTabDefinition(
     val title: String,
     val firestoreDocumentId: String,
-    val sheetDataType: SheetDataType
+    val sheetDataType: SheetDataType = SheetDataType.UNKNOWN
 )
 
 // 4. A container for all the different UI layouts

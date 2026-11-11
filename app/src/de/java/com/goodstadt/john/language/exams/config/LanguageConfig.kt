@@ -5,7 +5,7 @@ package com.goodstadt.john.language.exams.config
 object LanguageConfig {
     val showLanguageSelectionSetting: Boolean = false
     val hasDialectSelection: Boolean = false // 👈 Only English needs US/UK/AU choice
-    val voiceName: String = "de-DE-Neural2-G" //female
+    val voiceName: String = "de-DE-Standard-G" //female
     val languageCode: String = "de-DE"
     val defaultFileName: String = "vocab_data_b1" // first launch loads B1 vocab (matches defaulSkillLevel)
     val defaulSkillLevel: String = "B1"
@@ -19,6 +19,7 @@ object LanguageConfig {
         "Settings",
         "Focus",
         "Saved",
+        "Speeches",
         "Vocab",
         "Word of the Day",
         "Paragraph",
@@ -74,6 +75,8 @@ object LanguageConfig {
 
             // Podcasts (Format 9): use the current resource even for an older saved tab name.
             "german_podcast_football_trip_stuttgart", "german_podcast_football_trip_stuttgart_a2", "GermanPodcastFootballTripStuttgartA2" -> "GermanPodcastFootballTripStuttgart"
+            "german_podcast_birthday_party" -> "GermanPodcastBirthdayParty"
+            "german_podcast_ski_weekend_stubaital" -> "GermanPodcastSkiWeekendStubaital"
 
             "vocab_data_a1" -> "GermanA1Vocab"
             "vocab_data_a2" -> "GermanA2Vocab"
@@ -121,6 +124,8 @@ object LanguageConfig {
 
             // Podcasts (Format 9).
             "GermanPodcastFootballTripStuttgart", "GermanPodcastFootballTripStuttgartA2" -> "german_podcast_football_trip_stuttgart"
+            "GermanPodcastBirthdayParty" -> "german_podcast_birthday_party"
+            "GermanPodcastSkiWeekendStubaital" -> "german_podcast_ski_weekend_stubaital"
 
             "GermanA1Vocab" -> "vocab_data_a1"
             "GermanA2Vocab" -> "vocab_data_a2"

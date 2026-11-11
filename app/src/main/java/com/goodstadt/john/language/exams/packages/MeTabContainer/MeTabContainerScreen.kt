@@ -52,6 +52,7 @@ import com.goodstadt.john.language.exams.packages.CategoryTab.StatsSheetEntryPoi
 import com.goodstadt.john.language.exams.packages.Focus.FocusScreen
 import com.goodstadt.john.language.exams.packages.MyProgress.MyProgressScreen
 import com.goodstadt.john.language.exams.packages.SavedPractice.SavedPracticeScreen
+import com.goodstadt.john.language.exams.packages.Speeches.SpeechesScreen
 import com.goodstadt.john.language.exams.packages.Settings.SettingsScreen
 import com.goodstadt.john.language.exams.packages.UploadJson.UploadJsonScreen
 import com.goodstadt.john.language.exams.packages.dailydictionary.DictionaryEntryBrowserScreen
@@ -191,6 +192,7 @@ fun MeTabContainerScreen(viewModel: MeTabContainerTabViewModel = hiltViewModel()
                 FocusScreen(onNavigate = { target -> navViewModel.requestNavigation(target) })
             }
             composable(MeScreen.Saved.route) { SavedPracticeScreen() }
+            composable(MeScreen.Speeches.route) { SpeechesScreen() }
             composable(MeScreen.Settings.route) { SettingsScreen(navController = meTabNavController) }
             composable(MeScreen.Search.route) { SearchScreen() }
             composable(MeScreen.Progress.route) {

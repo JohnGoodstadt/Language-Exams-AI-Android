@@ -1,6 +1,7 @@
 package com.goodstadt.john.language.exams.packages.VocabQuiz
 
 import android.app.Activity
+import com.goodstadt.john.language.exams.screens.shared.showOfflineNoSoundToast
 import android.app.Application
 import android.content.Context
 import androidx.compose.runtime.derivedStateOf
@@ -860,7 +861,8 @@ class VocabSectionQuizViewModel @Inject constructor(
     fun hideRateOKLimitSheet() {
         _showRateLimitSheet.value = false
     }
-    fun handleTap(sentence: String) {
+    /** [remindIfOffline]: a loudspeaker / sentence tap (not the radio button), so say why it's silent offline. */
+    fun handleTap(sentence: String, remindIfOffline: Boolean = false) {
         // if (_playbackState.value is PlaybackState.Playing) return
 
         audioPlaybackRepository.stopPlayback()
@@ -899,6 +901,7 @@ class VocabSectionQuizViewModel @Inject constructor(
                 AudioPlaybackStatus.Failure -> {
                     //TODO: Show Snackbar logic
                     Timber.i("QuizViewModel.handleTap().AudioPlaybackStatus.Failure")
+                    if (remindIfOffline && audioPlaybackRepository.isOffline) showOfflineNoSoundToast(appContext)
                 }
             }
             //TODO: for 1 month feb/march 2026, facebook ads manager campaign. see stats

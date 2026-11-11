@@ -1859,30 +1859,6 @@
           "definition": "The place to which someone or something is going or being sent."
         },
         {
-          "sortOrder": 1,
-          "id": 22,
-          "word": "arrival",
-          "translation": "",
-          "group": "Travel",
-          "partOfSpeech": "",
-          "romanisation": "",
-          "sentences": [
-            {
-              "translation": "",
-              "sentence": "We were excited to reach our destination."
-            },
-            {
-              "sentence": "The arrival of the new shipment was delayed.",
-              "translation": ""
-            },
-            {
-              "sentence": "What is the arrival time?",
-              "translation": ""
-            }
-          ],
-          "definition": "The act of reaching a place."
-        },
-        {
           "translation": "",
           "partOfSpeech": "",
           "id": 23,

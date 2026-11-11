@@ -108,13 +108,20 @@ class VocabDashboardViewModel @Inject constructor(
                     // list whenever it's played), so the numbers match exactly what the quiz recorded.
                     val quizKey = SectionQuizKeyMap.keyFor(currentSkillLevel, category.title) ?: ""
                     val quizState = vocabQuizRepository.getCategoryMasteryState(quizKey, currentSkillLevel)
+                    // Per-category "N of 3 days" (same key as the category-tab stars), null until played.
+                    val dayProgress = vocabQuizRepository.categoryDayProgress(quizKey, currentSkillLevel)
+                        .takeIf { it.hasAttempts }
+                        ?: vocabQuizRepository.categoryDayProgress(category.title, currentSkillLevel).takeIf { it.hasAttempts }
                     if (quizState != null && quizState.total > 0) {
                         return@map CategoryMasteryStats(
                             categoryTitle = category.title,
                             totalWords = quizState.total,
                             newCount = quizState.newCount,
                             learningCount = quizState.struggling + quizState.learning + quizState.review,
-                            masteredCount = quizState.mastered
+                            masteredCount = quizState.mastered,
+                            day1Count = quizState.day1,
+                            day2Count = quizState.day2,
+                            dayProgress = dayProgress
                         )
                     }
 
@@ -122,6 +129,8 @@ class VocabDashboardViewModel @Inject constructor(
                     var new = 0
                     var learning = 0
                     var mastered = 0
+                    var day1 = 0
+                    var day2 = 0
 
                     category.words.forEach { word ->
                         val state = allWordStates[word.word]
@@ -131,7 +140,11 @@ class VocabDashboardViewModel @Inject constructor(
                             when (state.masteryLevel) {
                                 WordMasteryLevel.New -> new++
                                 WordMasteryLevel.Mastered -> mastered++
-                                else -> learning++ // Struggling, Learning, Review
+                                else -> {          // Struggling, Learning, Review
+                                    learning++
+                                    if (state.correctStreak == 1) day1++
+                                    if (state.correctStreak == 2) day2++
+                                }
                             }
                         }
                     }
@@ -141,7 +154,10 @@ class VocabDashboardViewModel @Inject constructor(
                         totalWords = category.words.size,
                         newCount = new,
                         learningCount = learning,
-                        masteredCount = mastered
+                        masteredCount = mastered,
+                        day1Count = day1,
+                        day2Count = day2,
+                        dayProgress = dayProgress
                     )
                 }
 

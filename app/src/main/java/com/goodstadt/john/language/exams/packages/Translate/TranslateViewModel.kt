@@ -11,6 +11,7 @@ import com.goodstadt.john.language.exams.data.repository.AudioPlaybackRepository
 import com.goodstadt.john.language.exams.data.repository.BillingRepository
 import com.goodstadt.john.language.exams.data.repository.TranslateLang
 import com.goodstadt.john.language.exams.data.repository.TranslationRepository
+import com.goodstadt.john.language.exams.managers.LearnerLanguage
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
@@ -29,7 +30,9 @@ class TranslateViewModel @Inject constructor(
     private val translationCache: TranslationCache,
     private val audioPlaybackRepository: AudioPlaybackRepository,
     private val billingRepository: BillingRepository,
-    private val userPreferencesRepository: UserPreferencesRepository
+    private val userPreferencesRepository: UserPreferencesRepository,
+    /** The learner's own language: the default target, and asked for once if the phone doesn't say. */
+    val learnerLanguage: com.goodstadt.john.language.exams.managers.LearnerLanguage
 ) : ViewModel() {
 
     /** The flavour's own language — always has a TTS voice, and can't be the [userLang] target. */
@@ -44,7 +47,7 @@ class TranslateViewModel @Inject constructor(
     var targetText by mutableStateOf("")
         private set
 
-    /** The learner's chosen language. Seeded from the phone locale, then overridden by a saved choice. */
+    /** The target language: the learner's language (My Language), the same for every translation. */
     var userLang by mutableStateOf(localeDefault() ?: targetOptions.first())
         private set
 
@@ -60,30 +63,47 @@ class TranslateViewModel @Inject constructor(
         private set
 
     init {
-        // Restore the remembered target choice (if any); otherwise the locale default above stands.
+        // One-time move: older builds kept this sheet's language separately (translateTargetLang). Keep a
+        // tester's choice by making it their My Language (unless they chose one there), then clear it.
         viewModelScope.launch {
-            TranslateLang.fromCode(userPreferencesRepository.translateTargetLangFlow.first())
-                ?.takeIf { it != appLang }
-                ?.let { userLang = it }
+            val old = TranslateLang.fromCode(userPreferencesRepository.translateTargetLangFlow.first())
+            if (old != null) {
+                if (old != appLang && old in LearnerLanguage.choices && !learnerLanguage.isUserChoice.value) {
+                    learnerLanguage.choose(old)
+                    userLang = old
+                }
+                userPreferencesRepository.setTranslateTargetLang("")
+            }
         }
     }
 
-    /** The phone's language as a table entry, unless it's the app language; null if not in the table. */
+    /**
+     * Default target before the learner picks one here: their own language (from the phone's languages,
+     * or "My Language" in Settings), unless it's the app language.
+     */
     private fun localeDefault(): TranslateLang? =
-        TranslateLang.fromCode(Locale.getDefault().language)?.takeIf { it != appLang }
+        learnerLanguage.language.value.takeIf { it != appLang }
+
+    /** After the first-time question: use the learner's language as the target. */
+    fun useLearnerLanguage() {
+        learnerLanguage.language.value.takeIf { it != appLang }?.let { userLang = it; targetText = ""; errorMessage = null }
+    }
 
     fun onSourceChange(text: String) {
         sourceText = text
         errorMessage = null
     }
 
-    /** Choose the target language (persisted for next time). Ignored if it's the app's own language. */
+    /**
+     * Choose the target language. It becomes the learner's language (Settings > My Language), the default
+     * for every translation in the app. Ignored if it's the app's own language.
+     */
     fun chooseUserLang(lang: TranslateLang) {
         if (lang == appLang || lang == userLang) return
         userLang = lang
         targetText = "" // the previous result was for the old language
         errorMessage = null
-        viewModelScope.launch { userPreferencesRepository.setTranslateTargetLang(lang.code) }
+        learnerLanguage.choose(lang)
     }
 
     /**

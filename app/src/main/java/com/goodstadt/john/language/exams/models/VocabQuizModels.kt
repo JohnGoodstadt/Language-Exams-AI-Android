@@ -56,6 +56,9 @@ data class CategoryMasteryState(
     @SerializedName("learning") var learning: Int = 0,
     @SerializedName("review") var review: Int = 0,
     @SerializedName("mastered") var mastered: Int = 0,
+    // Not yet Mastered, right first try on 1 / 2 of the 3 days needed (see VocabMasteryEngine.updateVocabMasteryDaily).
+    @SerializedName("day1") var day1: Int = 0,
+    @SerializedName("day2") var day2: Int = 0,
     @SerializedName("updated") var updatedAt: Long = 0
 )
 
@@ -108,5 +111,8 @@ data class VocabLearningState(
 
     @SerializedName("history") val history: MutableList<WordQuizAttempt> = mutableListOf(),
 
-    @SerializedName("last_out") var lastOutcome: VocabQuizOutcome? = null
+    @SerializedName("last_out") var lastOutcome: VocabQuizOutcome? = null,
+
+    // When this word last EARNED a day (first-try right). One day counts per calendar day; 0 = never.
+    @SerializedName("last_ok") var lastSuccessAt: Long = 0
 ) : SrsState

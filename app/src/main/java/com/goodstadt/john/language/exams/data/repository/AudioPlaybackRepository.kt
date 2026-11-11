@@ -20,6 +20,7 @@ import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.managers.XpActionType
 import com.goodstadt.john.language.exams.models.AudioPlaybackStatus
+import com.goodstadt.john.language.exams.screens.shared.ConnectionNotice
 import com.goodstadt.john.language.exams.utils.AnalyticsHelper
 import com.goodstadt.john.language.exams.utils.logging.TimberFault
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -42,7 +43,8 @@ class AudioPlaybackRepository @Inject constructor(
     private val rateLimiter: SimpleRateLimiter,
     private val ttsStatsRepository: TTSStatsRepository,
     private val loadingManager: GlobalLoadingManager,
-    private val audioPlayerService: AudioPlayerService
+    private val audioPlayerService: AudioPlayerService,
+    private val connectionNotice: ConnectionNotice
 ) {
 
     /**
@@ -52,6 +54,9 @@ class AudioPlaybackRepository @Inject constructor(
      * 3. Updates History (Red Dots)
      * 4. Updates XP & Graphs
      */
+
+    /** No network now. A Failure while this is true means "not on the device" (the No-connection bar shows). */
+    val isOffline: Boolean get() = connectionNotice.isOffline
 
     suspend fun playTrackAndGetStatus(
         sentence: String,
@@ -84,6 +89,13 @@ class AudioPlaybackRepository @Inject constructor(
             return AudioPlaybackStatus.PlayedFromLocalCache
         } else {
             ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statLocalCacheMissCount)
+        }
+
+        // Offline and not on the device: don't wait on cloud/TTS (or count a rate-limited call), tell the
+        // screen's No-connection bar instead. Callers see a Failure; check isOffline.
+        if (connectionNotice.isOffline) {
+            connectionNotice.noteMiss()
+            return AudioPlaybackStatus.Failure
         }
 
         //only show if not locally cached
@@ -131,7 +143,18 @@ class AudioPlaybackRepository @Inject constructor(
         // sentence straight to paid TTS and uploaded a duplicate of audio iOS had already put in the cloud).
         // ---------------------------------------------------------
 
-        if (contentRepository.playFromCloudStorageIfExists(uniqueSentenceId, sentence, currentVoiceName)) {
+        // Raced against a quick connection probe: the emulator (and some real networks) can report "connected"
+        // with no internet, and Firebase would then retry for 10 minutes behind the spinner. null = offline.
+        val playedFromCloud = connectionNotice.unlessOffline {
+            contentRepository.playFromCloudStorageIfExists(uniqueSentenceId, sentence, currentVoiceName)
+        }
+        if (playedFromCloud == null) {
+            loadingJob.cancel()
+            loadingManager.hide()
+            connectionNotice.noteMiss()
+            return AudioPlaybackStatus.Failure
+        }
+        if (playedFromCloud) {
             loadingJob.cancel()
             loadingManager.hide()
 

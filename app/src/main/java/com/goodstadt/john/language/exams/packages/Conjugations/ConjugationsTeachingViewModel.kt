@@ -6,6 +6,7 @@ import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.repository.AudioPlaybackRepository
 import com.goodstadt.john.language.exams.data.repository.BillingRepository
 import com.goodstadt.john.language.exams.data.repository.ContentRepository
+import com.goodstadt.john.language.exams.models.SubTabDefinition
 import com.goodstadt.john.language.exams.packages.ReferencePronouns.Format6File
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Job
@@ -32,6 +33,8 @@ sealed interface ConjugationsTeachingUiState {
  * The four verbs come from [LanguageConfig.conjugationOptions]; the logical sheet name is the existing
  * per-verb Firestore name with a "Teaching" suffix (e.g. "GermanConjugationsToBe" -> the teaching sheet
  * "GermanConjugationsToBeTeaching"), which [ContentRepository] maps to the bundled res/raw json.
+ * A manifest "GroupedFormat6Screen" entry (shared with iOS) supplies its own chips and sheets instead,
+ * via [useSubTabs].
  */
 @HiltViewModel
 class ConjugationsTeachingViewModel @Inject constructor(
@@ -41,7 +44,11 @@ class ConjugationsTeachingViewModel @Inject constructor(
 ) : ViewModel() {
 
     /** The verb picker options, e.g. ["Haben", "Sein", "Machen", "Bekommen"] (de) — same as the old screen. */
-    val verbOptions: List<String> = LanguageConfig.conjugationOptions
+    var verbOptions: List<String> = LanguageConfig.conjugationOptions
+        private set
+
+    /** Chip title -> fileFormat-6 sheet name, when the manifest's sub-tabs drive this screen. */
+    private var sheetNames: Map<String, String> = emptyMap()
 
     private val _selectedVerb = MutableStateFlow(verbOptions.first())
     val selectedVerb: StateFlow<String> = _selectedVerb.asStateFlow()
@@ -57,9 +64,23 @@ class ConjugationsTeachingViewModel @Inject constructor(
 
     /** Logical fileFormat-6 sheet name for the selected verb, e.g. "GermanConjugationsToBeTeaching". */
     private fun teachingSheetName(verb: String): String =
-        LanguageConfig.getConjugationFirestoreSheetName(verb) + "Teaching"
+        sheetNames[verb] ?: (LanguageConfig.getConjugationFirestoreSheetName(verb) + "Teaching")
 
-    init {
+    private var started = false
+
+    /**
+     * Starts the screen (once). Non-empty [subTabs] (a GroupedFormat6Screen manifest entry) replace the
+     * built-in verb list; empty keeps [LanguageConfig.conjugationOptions] (the old FixedScreen entry).
+     */
+    fun useSubTabs(subTabs: List<SubTabDefinition>) {
+        if (started) return
+        started = true
+        val tabs = subTabs.filter { it.firestoreDocumentId.isNotBlank() }.distinctBy { it.title }
+        if (tabs.isNotEmpty()) {
+            verbOptions = tabs.map { it.title }
+            sheetNames = tabs.associate { it.title to it.firestoreDocumentId }
+            _selectedVerb.value = verbOptions.first()
+        }
         load(_selectedVerb.value)
     }
 

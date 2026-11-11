@@ -11,6 +11,8 @@ import com.goodstadt.john.language.exams.data.repository.ContentRepository
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.stats.PageStat
 import com.goodstadt.john.language.exams.data.stats.recordPageView
+import com.goodstadt.john.language.exams.data.stats.recordPodcastListen
+import com.goodstadt.john.language.exams.data.stats.recordPodcastScenePlay
 import com.goodstadt.john.language.exams.managers.AccessPolicy
 import com.goodstadt.john.language.exams.managers.AudioCacheManager
 import com.goodstadt.john.language.exams.managers.SequencePlayer
@@ -19,6 +21,8 @@ import com.goodstadt.john.language.exams.models.Format9File
 import com.goodstadt.john.language.exams.models.Format9Line
 import com.goodstadt.john.language.exams.models.Format9Scene
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.ensureActive
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
@@ -42,7 +46,8 @@ class Format9ViewModel @Inject constructor(
     private val limiter: SimpleRateLimiter,
     private val stats: TTSStatsRepository,
     private val audioCache: AudioCacheManager,
-    @ApplicationContext private val context: Context
+    @ApplicationContext private val context: Context,
+    private val learnerLanguage: com.goodstadt.john.language.exams.managers.LearnerLanguage
 ) : ViewModel() {
 
     enum class Prompt { DAILY, HOURLY }
@@ -56,6 +61,10 @@ class Format9ViewModel @Inject constructor(
     }
 
     private val owner = "format9:${UUID.randomUUID()}:"
+    // Podcast listening stats: heard milliseconds below a whole second, per scene, and the scene playback
+    // was last in (so re-entering a scene counts as a new play).
+    private val listenedMs = mutableMapOf<String, Long>()
+    private var lastSceneId: String? = null
     private var sheetName: String = ""
     private var speakerVoices: Map<String, String> = emptyMap()
     private var speakerNames: Map<String, String> = emptyMap()
@@ -103,22 +112,39 @@ class Format9ViewModel @Inject constructor(
     val isPurchased = billing.isPurchased
 
     private var loadedName: String? = null
+    private var loadJob: Job? = null
 
     fun load(name: String) {
-        if (name.isBlank() || name == loadedName) return
+        if (name.isBlank()) return
+        if (name == loadedName && (_file.value != null || loadJob?.isActive == true)) return
+        loadJob?.cancel()
+        stopPlayback()
         loadedName = name
-        viewModelScope.launch {
-            contentRepository.getFormat9Data(name)
-                .onSuccess { f ->
-                    sheetName = f.sheetname.ifBlank { name }
-                    speakerVoices = f.speakers.associate { it.id to it.voiceId }
-                    speakerNames = f.speakers.associate { it.id to it.name }
-                    _file.value = f
-                    _error.value = null
-                    // Warm the "heard" stats for this sheet, like the other reference screens.
-                    audioCache.recalculateReferenceStats(sheetName, orderedLines().map(::spokenText).filter { it.isNotBlank() })
-                }
-                .onFailure { _error.value = it.message; Timber.e(it, "Format9 load failed for '$name'") }
+        sheetName = ""
+        speakerVoices = emptyMap()
+        speakerNames = emptyMap()
+        _file.value = null
+        _error.value = null
+        _playbackError.value = null
+        _prompt.value = null
+        _focusedSceneIndex.value = 0
+        _showTranslation.value = false
+        loadJob = viewModelScope.launch {
+            val result = contentRepository.getFormat9Data(name)
+            // A cancelled fetch must never replace the script selected more recently, even if a
+            // repository catches cancellation while falling back to a bundled file.
+            ensureActive()
+            result.onSuccess { f ->
+                sheetName = f.sheetname.ifBlank { name }
+                speakerVoices = f.speakers.associate { it.id to it.voiceId }
+                speakerNames = f.speakers.associate { it.id to it.name }
+                _file.value = f
+                // Warm the "heard" stats for this sheet, like the other reference screens.
+                audioCache.recalculateReferenceStats(sheetName, orderedLines().map(::spokenText).filter { it.isNotBlank() })
+            }.onFailure {
+                _error.value = it.message ?: "Unable to load this podcast."
+                Timber.e(it, "Format9 load failed for '$name'")
+            }
         }
     }
 
@@ -136,11 +162,22 @@ class Format9ViewModel @Inject constructor(
     val availableTranslationCodes: List<String> get() = _file.value?.availableTranslationLanguageCodes.orEmpty()
 
     /** True when a usable translation language is chosen for THIS script. */
-    fun hasValidTranslationLanguage(): Boolean =
-        _translationLanguage.value.isNotBlank() && availableTranslationCodes.contains(_translationLanguage.value)
+    fun hasValidTranslationLanguage(): Boolean = effectiveTranslationLanguage(_translationLanguage.value).isNotBlank()
+
+    /** The learner's language (Settings > My Language), if this script has a translation in it. */
+    private fun learnerTranslationCode(): String? =
+        learnerLanguage.language.value.code.takeIf { availableTranslationCodes.contains(it) }
+
+    /**
+     * The translation actually shown: [saved] (chosen in the podcast chooser) if this script has it;
+     * otherwise the learner's own language, if this script has it; otherwise "" (the translate button asks).
+     */
+    fun effectiveTranslationLanguage(saved: String): String =
+        if (saved.isNotBlank() && availableTranslationCodes.contains(saved)) saved else learnerTranslationCode().orEmpty()
 
     /** Default to pre-select the first time: the phone's language if the script has it, else the first. */
     fun defaultTranslationCode(): String {
+        learnerTranslationCode()?.let { return it }
         val codes = availableTranslationCodes
         val phone = Locale.getDefault().language.lowercase(Locale.ROOT)
         return if (codes.contains(phone)) phone else codes.firstOrNull().orEmpty()
@@ -266,15 +303,31 @@ class Format9ViewModel @Inject constructor(
                 } else true
             },
             onTrackStarted = ::handleTrackStarted,
-            onCompleted = { _currentSpokenText.value = null }
+            onTrackListened = ::handleTrackListened,
+            onCompleted = { _currentSpokenText.value = null },
+            title = _file.value?.title
         )
     }
 
     /** Shared per-track start handler: moves the row highlight + scrubber playhead, records the play stat. */
     private fun handleTrackStarted(sentence: String) {
         _currentSpokenText.value = sentence
-        sceneIndexOfText(sentence)?.let { _focusedSceneIndex.value = it }
+        val sceneIndex = sceneIndexOfText(sentence)
+        sceneIndex?.let { _focusedSceneIndex.value = it }
         stats.recordPageView(PageStat.Area.REFERENCE, sheetName, PageStat.Metric.PLAY)  // heard
+        // A scene play counts once each time playback enters a scene (Play all, scene button or scrubber).
+        val sceneId = sceneIndex?.let { orderedScenes().getOrNull(it)?.id }
+        if (sceneId != null && sceneId != lastSceneId) stats.recordPodcastScenePlay(sheetName, sceneId)
+        lastSceneId = sceneId
+    }
+
+    /** Listening time: [millis] of [sentence] really heard. Whole seconds go to the stats, the rest carries over. */
+    private fun handleTrackListened(sentence: String, millis: Long) {
+        val sceneId = sceneIndexOfText(sentence)?.let { orderedScenes().getOrNull(it)?.id }
+        val key = sceneId.orEmpty()
+        val total = (listenedMs[key] ?: 0L) + millis
+        listenedMs[key] = total % 1000
+        stats.recordPodcastListen(sheetName, sceneId, (total / 1000).toInt())
     }
 
     /** Index of the scene containing a line whose selected spoken text matches [text], or null. */
@@ -314,7 +367,9 @@ class Format9ViewModel @Inject constructor(
             sheetName = sheetName,
             isPremiumUser = policy.isPremium,
             onTrackStarted = ::handleTrackStarted,
-            onCompleted = { _currentSpokenText.value = null }
+            onTrackListened = ::handleTrackListened,
+            onCompleted = { _currentSpokenText.value = null },
+            title = _file.value?.title
         )
     }
 
@@ -334,6 +389,7 @@ class Format9ViewModel @Inject constructor(
     fun stopPlayback() {
         if (sequence.playingKey.value?.startsWith(owner) == true) sequence.stop()
         _currentSpokenText.value = null
+        lastSceneId = null
     }
 
     override fun onCleared() { stopPlayback(); super.onCleared() }

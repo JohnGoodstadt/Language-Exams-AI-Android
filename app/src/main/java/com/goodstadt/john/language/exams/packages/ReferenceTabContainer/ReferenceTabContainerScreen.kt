@@ -1,6 +1,7 @@
 package com.goodstadt.john.language.exams.packages.ReferenceTabContainer
 
 import com.goodstadt.john.language.exams.screens.shared.SessionFeedbackBar
+import com.goodstadt.john.language.exams.screens.shared.NoConnectionBar
 import com.goodstadt.john.language.exams.screens.shared.SessionFeedbackManager
 import com.goodstadt.john.language.exams.screens.shared.LaunchSpinner
 import androidx.compose.foundation.background
@@ -51,12 +52,13 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.goodstadt.john.language.exams.packages.Format8.Format8ContainerScreen
-import com.goodstadt.john.language.exams.packages.Format9.Format9ContainerScreen
+import com.goodstadt.john.language.exams.packages.Format9.Format9GroupedScreen
 import com.goodstadt.john.language.exams.models.ScreenType
 import com.goodstadt.john.language.exams.navigation.QUIZ_DETAIL_ROUTE
 import com.goodstadt.john.language.exams.packages.ReferencePronouns.Format6SheetView
 import com.goodstadt.john.language.exams.navigation.RefScreen
 import com.goodstadt.john.language.exams.packages.Conjugations.ConjugationsScreen
+import com.goodstadt.john.language.exams.packages.Conjugations.ConjugationsTeachingScreen
 import com.goodstadt.john.language.exams.screens.Format1.Format1Screen
 import com.goodstadt.john.language.exams.screens.Format2.Format2Screen
 import com.goodstadt.john.language.exams.screens.Format2.Format2UiState
@@ -70,6 +72,8 @@ import com.goodstadt.john.language.exams.packages.VocabQuiz.QuizSet
 import com.goodstadt.john.language.exams.packages.VocabQuiz.VocabDashboardScreen
 import com.goodstadt.john.language.exams.packages.reference.NavigationViewModel
 import com.goodstadt.john.language.exams.packages.UsageQuiz.UsageQuizScreen
+import com.goodstadt.john.language.exams.packages.UsageQuiz.UsageQuizLayout
+import com.goodstadt.john.language.exams.packages.UsageQuiz.UsageQuizSplitScreen
 import com.goodstadt.john.language.exams.screens.shared.MenuItemChip
 import com.goodstadt.john.language.exams.utils.findActivity
 import com.google.accompanist.navigation.material.ExperimentalMaterialNavigationApi
@@ -172,6 +176,7 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceTabContainerViewModel = hilt
             ScreenType.FORMAT_8_SCREEN -> definition.firestoreDocumentId?.let { docId ->
                 RefScreen.Format8.createRoute(docId)
             }
+            ScreenType.GROUPED_FORMAT_6_SCREEN -> RefScreen.GroupedFormat6.createRoute(selectedTab.id)
             ScreenType.GROUPED_FORMAT_8_SCREEN -> RefScreen.GroupedFormat8.createRoute(selectedTab.id)
             ScreenType.GROUPED_FORMAT_9_SCREEN -> RefScreen.GroupedFormat9.createRoute(selectedTab.id)
             ScreenType.GROUPED_FORMAT_2_SCREEN -> {
@@ -254,6 +259,7 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceTabContainerViewModel = hilt
         }
 
         SessionFeedbackBar(SessionFeedbackManager.Area.REFERENCE)
+        NoConnectionBar(SessionFeedbackManager.Area.REFERENCE)
 
         if (uiState.tabs.isNotEmpty()) {
             // Part B: The Dynamic NavHost (now uses the single uiState)
@@ -303,7 +309,8 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceTabContainerViewModel = hilt
                 ) {
 
                     composable(RefScreen.Quiz.route) {
-                        UsageQuizScreen()
+                        // Trial: picker screen + quiz in a bottom sheet. Flip the flag to go back.
+                        if (UsageQuizLayout.USE_SPLIT_SCREEN) UsageQuizSplitScreen() else UsageQuizScreen()
                     }//Existing Quiz
 
 
@@ -448,18 +455,31 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceTabContainerViewModel = hilt
                         }
                     }
 
-                    // STEP 1 placeholder for Podcasts (fileFormat-9). Resolves the sub-tab's documentId and
-                    // shows a one-line confirmation that the bundled JSON read; step 2 builds the real screen.
+                    // Several fileFormat-6 sheets (e.g. Conjugations: Haben / Sein / ...) from the manifest's
+                    // sub-tabs, shown with the conjugations teaching screen's chip row.
+                    composable(
+                        route = RefScreen.GroupedFormat6.route,
+                        arguments = listOf(navArgument("tabId") { type = NavType.StringType })
+                    ) { entry ->
+                        val tabId = entry.arguments?.getString("tabId").orEmpty()
+                        val definition = uiState.tabs.firstOrNull { it.id == tabId }?.definition
+                        key(tabId) {
+                            ConjugationsTeachingScreen(subTabs = definition?.subTabs.orEmpty())
+                        }
+                    }
+
+                    // Podcasts can contain several scripts, selected using the configured sub-tabs.
                     composable(
                         route = RefScreen.GroupedFormat9.route,
                         arguments = listOf(navArgument("tabId") { type = NavType.StringType })
                     ) { entry ->
                         val tabId = entry.arguments?.getString("tabId").orEmpty()
                         val definition = uiState.tabs.firstOrNull { it.id == tabId }?.definition
-                        val documentId = definition?.subTabs?.firstOrNull()?.firestoreDocumentId
-                            ?: definition?.firestoreDocumentId.orEmpty()
                         key(tabId) {
-                            Format9ContainerScreen(documentId = documentId)
+                            Format9GroupedScreen(
+                                subTabs = definition?.subTabs.orEmpty(),
+                                fallbackDocumentId = definition?.firestoreDocumentId.orEmpty()
+                            )
                         }
                     }
 

@@ -12,8 +12,13 @@
     },
     "conjugations": {
       "title": "Konjugationen",
-      "sheetDataType": "fixed",
-      "screenType": "FixedScreen"
+      "screenType": "GroupedFormat6Screen",
+      "subTabs": [
+        { "title": "Haben", "firestoreDocumentId": "GermanConjugationsToHaveTeaching", "sheetDataType": "Format6" },
+        { "title": "Sein", "firestoreDocumentId": "GermanConjugationsToBeTeaching", "sheetDataType": "Format6" },
+        { "title": "Machen", "firestoreDocumentId": "GermanConjugationsToDoTeaching", "sheetDataType": "Format6" },
+        { "title": "Bekommen", "firestoreDocumentId": "GermanConjugationsToGetTeaching", "sheetDataType": "Format6" }
+      ]
     },
     "GermanPrepositions": {
       "title": "Präpositionen",
@@ -54,8 +59,18 @@
       "sheetDataType": "Format9",
       "subTabs": [
         {
-          "title": "A2",
+          "title": "Geburtstag",
+          "firestoreDocumentId": "GermanPodcastBirthdayParty",
+          "sheetDataType": "Format9"
+        },
+        {
+          "title": "Fußballspiel",
           "firestoreDocumentId": "GermanPodcastFootballTripStuttgart",
+          "sheetDataType": "Format9"
+        },
+        {
+          "title": "Skiurlaub",
+          "firestoreDocumentId": "GermanPodcastSkiWeekendStubaital",
           "sheetDataType": "Format9"
         }
       ]
@@ -106,7 +121,7 @@
     "GermanReferencePronounsOpenAI": {
       "title": "Pronomen II",
       "screenType": "GroupedFormat8Screen",
-      "sheetDataType": "Format8Screen",
+      "sheetDataType": "Format8",
       "subTabs": [
         {
           "title": "Personal",

@@ -63,6 +63,18 @@ class LanguageExamsApp : Application() {
     @Inject
     lateinit var firestore: FirebaseFirestore
 
+    /** Created at launch (after Firebase init) so it caches the chosen level's vocab JSON straight away. */
+    @Inject
+    lateinit var offlineAudioDownloader: dagger.Lazy<com.goodstadt.john.language.exams.managers.OfflineAudioDownloader>
+
+    /** Created at launch: works out the learner's own language from the phone settings. */
+    @Inject
+    lateinit var learnerLanguage: dagger.Lazy<com.goodstadt.john.language.exams.managers.LearnerLanguage>
+
+    /** Created at launch so car / lock-screen controls follow the shared SequencePlayer. */
+    @Inject
+    lateinit var mediaControls: dagger.Lazy<com.goodstadt.john.language.exams.managers.MediaControls>
+
     // 2. Add the onCreate method
     override fun onCreate() {
         super.onCreate() // Always call the parent class's method first
@@ -91,6 +103,10 @@ class LanguageExamsApp : Application() {
 //        FacebookSdk.addLoggingBehavior(LoggingBehavior.REQUESTS) // Shows the HTTP code (200 vs 400)
 
         AppEventsLogger.activateApp(this) // <--- This fires the "Install" signal
+
+        offlineAudioDownloader.get()
+        mediaControls.get()
+        learnerLanguage.get()
 
     }
     private fun setupAppDependencies() {

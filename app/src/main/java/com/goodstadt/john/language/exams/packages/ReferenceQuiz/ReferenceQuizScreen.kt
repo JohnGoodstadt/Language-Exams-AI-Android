@@ -479,7 +479,7 @@ fun ReferenceQuizScreen(
                             Icon(
                                 // Loudspeaker: preview the sentence only. Never affects Correct/Tries.
                                 modifier = Modifier.clickable {
-                                    viewModel.handleTap(previewSentence)
+                                    viewModel.handleTap(previewSentence, remindIfOffline = true)
                                 },
                                 imageVector = Icons.AutoMirrored.Filled.VolumeUp,
                                 contentDescription = "Speak ${question.sentence.replace("_", option)}",
@@ -498,7 +498,7 @@ fun ReferenceQuizScreen(
                                 modifier = Modifier
                                     .weight(1f)
                                     .padding(vertical = 2.dp)
-                                    .clickable { viewModel.handleTap(previewSentence) }
+                                    .clickable { viewModel.handleTap(previewSentence, remindIfOffline = true) }
                             )
                         }
 

@@ -22,8 +22,8 @@ if (secretsFile.exists()) {
     secretsProperties.load(FileInputStream(secretsFile))
 }
 
-val VERSION_CODE = 145  //for remote config versioning.  localised quizzes
-val VERSION_NAME = "4.0.145" //go live
+val VERSION_CODE = 153  //for remote config versioning.  localised quizzes
+val VERSION_NAME = "4.0.153"//go live - Car Auto
 
 android {
     namespace = "com.goodstadt.john.language.exams" // Base namespace
@@ -172,6 +172,9 @@ Fix: Use a relative path or an environment variable: storeFile = file(System.get
             buildConfigField("Boolean", "IS_DEBUG", "false")
             buildConfigField("Boolean", "TEST_RATE_LIMITING", "false")
             signingConfig = signingConfigs.getByName("release")
+            // Package native debug symbols into the .aab so Play can symbolicate native crashes/ANRs
+            // (the only native code is AndroidX's: graphics-path and DataStore). Metadata only; the app is unchanged.
+            ndk { debugSymbolLevel = "SYMBOL_TABLE" }
         }
         create("staging") {
             // 1. Copy everything from Release (R8, Proguard rules, Minification)
@@ -216,6 +219,7 @@ Fix: Use a relative path or an environment variable: storeFile = file(System.get
 dependencies {
     // Core & Compose
     implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.media)   // MediaSession: car / Android Auto / lock-screen controls
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
     implementation(platform(libs.androidx.compose.bom))

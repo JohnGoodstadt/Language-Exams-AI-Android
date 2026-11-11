@@ -193,7 +193,7 @@ class ContentRepository @Inject constructor(
                     val remoteVersions = appConfigRepository.getRemoteSheetVersions()
                     val remoteVersion = remoteVersions[logicalName] ?: 1
                     val localVersion = appConfigRepository.getLocalVersion(logicalName)
-                    val forceRefresh = remoteVersion > localVersion
+                    val forceRefresh = remoteVersion > localVersion && examSheetRepository.canRefresh() // offline: keep the cached copy
                     Timber.d("VocabRepo: Sheet '$logicalName' -> Remote v$remoteVersion, Local v$localVersion, Force refresh: $forceRefresh")
 
                     // --- 2. In-Memory Cache Check ---
@@ -265,7 +265,7 @@ class ContentRepository @Inject constructor(
             val remoteVersions = appConfigRepository.getRemoteSheetVersions()
             val remoteVersion = remoteVersions[logicalName] ?: 1
             val localVersion = appConfigRepository.getLocalVersion(logicalName)
-            val forceRefresh = remoteVersion > localVersion
+            val forceRefresh = remoteVersion > localVersion && examSheetRepository.canRefresh() // offline: keep the cached copy
             Timber.d("Format 1: Sheet '$logicalName' (Format1) -> Remote v$remoteVersion, Local v$localVersion, Force refresh: $forceRefresh")
 
             // --- 2. IN-MEMORY CACHE CHECK ---
@@ -357,7 +357,7 @@ class ContentRepository @Inject constructor(
             val remoteVersions = appConfigRepository.getRemoteSheetVersions()
             val remoteVersion = remoteVersions[logicalName] ?: 1
             val localVersion = appConfigRepository.getLocalVersion(logicalName)
-            val forceRefresh = remoteVersion > localVersion
+            val forceRefresh = remoteVersion > localVersion && examSheetRepository.canRefresh() // offline: keep the cached copy
             Timber.d("ContentRepo: Sheet '$logicalName' (Format8) -> Remote v$remoteVersion, Local v$localVersion, Force refresh: $forceRefresh")
 
             // --- 2. IN-MEMORY CACHE CHECK ---
@@ -426,7 +426,7 @@ class ContentRepository @Inject constructor(
             val remoteVersions = appConfigRepository.getRemoteSheetVersions()
             val remoteVersion = remoteVersions[logicalName] ?: 1
             val localVersion = appConfigRepository.getLocalVersion(logicalName)
-            val forceRefresh = remoteVersion > localVersion
+            val forceRefresh = remoteVersion > localVersion && examSheetRepository.canRefresh() // offline: keep the cached copy
             Timber.d("ContentRepo: Sheet '$logicalName' (Format9) -> Remote v$remoteVersion, Local v$localVersion, Force refresh: $forceRefresh")
 
             // --- 2. IN-MEMORY CACHE CHECK ---
@@ -512,7 +512,7 @@ class ContentRepository @Inject constructor(
             val remoteVersions = appConfigRepository.getRemoteSheetVersions()
             val remoteVersion = remoteVersions[logicalName] ?: 1
             val localVersion = appConfigRepository.getLocalVersion(logicalName)
-            val forceRefresh = remoteVersion > localVersion
+            val forceRefresh = remoteVersion > localVersion && examSheetRepository.canRefresh() // offline: keep the cached copy
             Timber.d("ContentRepo: Sheet '$logicalName' (Format2) -> Remote v$remoteVersion, Local v$localVersion, Force refresh: $forceRefresh")
 
             // --- 2. IN-MEMORY CACHE CHECK ---
@@ -609,11 +609,19 @@ class ContentRepository @Inject constructor(
     suspend fun getFormat7or10Data(name: String): Result<Format7or10File> = withContext(Dispatchers.IO) {
         val logicalName = name // already the logical Firestore doc name
         try {
+            // 0. ReadinessAudit sheets: bundle only (no version check / disk cache / Firestore) when the flag is on.
+            if (ReadinessAuditSheetMapping.FORCE_BUNDLE && ReadinessAuditSheetMapping.isAuditSheet(logicalName)) {
+                val assetPath = ReadinessAuditSheetMapping.mapLogicalToResourceName(logicalName)
+                    ?: return@withContext Result.failure(Exception("No bundle mapping for audit sheet '$logicalName'"))
+                Timber.d("ContentRepo: '$logicalName' (ReadinessAudit) -> BUNDLE ONLY ($assetPath).")
+                return@withContext loadBundledFormat7or10Data(logicalName, assetPath)
+            }
+
             // 1. Version check
             val remoteVersions = appConfigRepository.getRemoteSheetVersions()
             val remoteVersion = remoteVersions[logicalName] ?: 1
             val localVersion = appConfigRepository.getLocalVersion(logicalName)
-            val forceRefresh = remoteVersion > localVersion
+            val forceRefresh = remoteVersion > localVersion && examSheetRepository.canRefresh() // offline: keep the cached copy
             Timber.d("ContentRepo: Sheet '$logicalName' (Format7/10) -> Remote v$remoteVersion, Local v$localVersion, Force refresh: $forceRefresh")
 
             // 2. In-memory cache
@@ -660,7 +668,7 @@ class ContentRepository @Inject constructor(
             val remoteVersions = appConfigRepository.getRemoteSheetVersions()
             val remoteVersion = remoteVersions[logicalName] ?: 1
             val localVersion = appConfigRepository.getLocalVersion(logicalName)
-            val forceRefresh = remoteVersion > localVersion
+            val forceRefresh = remoteVersion > localVersion && examSheetRepository.canRefresh() // offline: keep the cached copy
             Timber.d("ContentRepo: Sheet '$logicalName' (Format13) -> Remote v$remoteVersion, Local v$localVersion, Force refresh: $forceRefresh")
 
             if (!forceRefresh) {
@@ -763,7 +771,7 @@ class ContentRepository @Inject constructor(
                 val remoteVersions = appConfigRepository.getRemoteSheetVersions()
                 val remoteVersion = remoteVersions[logicalName] ?: 1
                 val localVersion = appConfigRepository.getLocalVersion(logicalName)
-                val forceRefresh = remoteVersion > localVersion
+                val forceRefresh = remoteVersion > localVersion && examSheetRepository.canRefresh() // offline: keep the cached copy
                 Timber.d("ContentRepo: Sheet '$logicalName' (Format6) -> Remote v$remoteVersion, Local v$localVersion, Force refresh: $forceRefresh")
 
                 // 2. In-memory cache.
@@ -850,7 +858,7 @@ class ContentRepository @Inject constructor(
             val remoteVersions = appConfigRepository.getRemoteSheetVersions()
             val remoteVersion = remoteVersions[logicalName] ?: 1
             val localVersion = appConfigRepository.getLocalVersion(logicalName)
-            val forceRefresh = remoteVersion > localVersion
+            val forceRefresh = remoteVersion > localVersion && examSheetRepository.canRefresh() // offline: keep the cached copy
             Timber.d("ContentRepo: Sheet '$logicalName' (Format3) -> Remote v$remoteVersion, Local v$localVersion, Force refresh: $forceRefresh")
 
             // --- 2. IN-MEMORY CACHE CHECK ---

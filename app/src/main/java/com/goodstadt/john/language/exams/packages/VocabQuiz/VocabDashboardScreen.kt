@@ -234,6 +234,8 @@ fun VocabQuizActiveView(
         // 2. Breakdown Title + Info Button
         var showScoringInfo by remember { mutableStateOf(false) }
 
+        // Heading + its subtitle grouped, so the outer column's 20dp spacing doesn't split them.
+        Column {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
@@ -255,6 +257,15 @@ fun VocabQuizActiveView(
                 )
             }
         }
+
+        // What "Mastered" means (same wording as iOS).
+        Text(
+            "Mastered: every word right first time, on 3 different days. A go with mistakes never loses the days you have already earned.",
+            style = MaterialTheme.typography.bodySmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            modifier = Modifier.padding(horizontal = 8.dp)
+        )
+        } //: Column - heading + subtitle
 
         if (showScoringInfo) {
             ScoringInfoBottomSheet(onDismiss = { showScoringInfo = false })
@@ -310,7 +321,7 @@ fun VocabQuizActiveView(
 fun CategoryMasteryRow(
     stat: CategoryMasteryStats, onClick: () -> Unit
 ) {
-    val hasProgress = stat.masteredCount + stat.learningCount > 0
+    val progress = stat.dayProgress // per-category "N of 3 days"; null until the quiz is played
     Column(verticalArrangement = Arrangement.spacedBy(8.dp),
         modifier = Modifier
             .fillMaxWidth()
@@ -342,58 +353,52 @@ fun CategoryMasteryRow(
             )
             Spacer(Modifier.width(8.dp))
             Text(
-                if (hasProgress) "${stat.masteredCount}/${stat.totalWords} Mastered"
-                else "${stat.totalWords} Words",
+                "${stat.totalWords} Words",
                 style = MaterialTheme.typography.labelMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
         }
 
-        // Stacked Progress Bar (only once this category has been quizzed)
-        if (hasProgress) {
+        // Progress to Mastered (3 days, each with every word right first time) + what's next.
+        if (progress != null) {
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(8.dp)
                     .clip(RoundedCornerShape(4.dp))
-                    .background(MaterialTheme.colorScheme.surfaceVariant)
+                    .background(MaterialTheme.colorScheme.surfaceVariant),
+                horizontalArrangement = Arrangement.spacedBy(3.dp)
             ) {
-                // Mastered (Green)
-                if (stat.masteredFraction > 0) {
+                // Three segments, one per day earned.
+                repeat(3) { i ->
                     Box(
                         Modifier
                             .fillMaxHeight()
-                            .weight(stat.masteredFraction)
-                            .background(Color(0xFF4CAF50))
-                    )
-                }
-                // Learning (Orange)
-                if (stat.learningFraction > 0) {
-                    Box(
-                        Modifier
-                            .fillMaxHeight()
-                            .weight(stat.learningFraction)
-                            .background(LocalExtendedColors.current.statusOrange)
-                    )
-                }
-                // Remaining (Transparent/Grey)
-                val remaining = 1f - (stat.masteredFraction + stat.learningFraction)
-                if (remaining > 0) {
-                    Box(
-                        Modifier
-                            .fillMaxHeight()
-                            .weight(remaining)
+                            .weight(1f)
+                            .background(if (i < progress.days) Color(0xFF4CAF50) else Color.Transparent)
                     )
                 }
             }
 
-            // Breakdown, so progress shows before anything is Mastered (that needs 3 correct in a row
-            // across separate review sessions).
-            Text(
-                "${stat.learningCount} learning · ${stat.newCount} new · ${stat.masteredCount} mastered",
-                style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(
+                    progress.progressLine,
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    modifier = Modifier.weight(1f)
+                )
+                Spacer(Modifier.width(8.dp))
+                Text(
+                    progress.nextStep,
+                    style = MaterialTheme.typography.labelSmall,
+                    fontWeight = FontWeight.SemiBold,
+                    color = if (progress.isMastered) Color(0xFF4CAF50) else LocalExtendedColors.current.buttonBlue,
+                    maxLines = 1
+                )
+            }
         }
     }
 }
@@ -509,7 +514,7 @@ fun ScoringInfoBottomSheet(onDismiss: () -> Unit) {
             LevelRow(emoji = "\uD83D\uDD34", title = "Struggling", description = "You couldn't get this one right \u2014 don't worry, it happens!", schedule = "Comes back in 10 minutes")
             LevelRow(emoji = "\uD83D\uDFE0", title = "Learning", description = "You got there in the end, but needed a few tries.", schedule = "Comes back in 6 hours")
             LevelRow(emoji = "\uD83D\uDFE1", title = "Review", description = "You got it right \u2014 nice work! Now let's make sure it sticks.", schedule = "Comes back tomorrow morning")
-            LevelRow(emoji = "\uD83D\uDFE2", title = "Mastered", description = "You got it right 3 times in a row \u2014 you really know this one!", schedule = "Done! Won't come back unless you reset")
+            LevelRow(emoji = "\uD83D\uDFE2", title = "Mastered", description = "You got it right first time on 3 different days \u2014 you really know this one!", schedule = "Done! Won't come back unless you reset")
 
             HorizontalDivider()
 

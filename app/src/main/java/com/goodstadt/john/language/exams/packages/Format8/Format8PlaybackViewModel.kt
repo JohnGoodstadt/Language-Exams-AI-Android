@@ -84,7 +84,7 @@ class Format8PlaybackViewModel @Inject constructor(
                 ensureActive()
                 when (result) {
                     is AudioPlaybackStatus.RateLimited -> showLimit(result.failReason)
-                    is AudioPlaybackStatus.Failure -> _error.value = "Unable to play this sentence. Please try again."
+                    is AudioPlaybackStatus.Failure -> if (!audio.isOffline) _error.value = "Unable to play this sentence. Please try again."
                     else -> stats.recordPageView(PageStat.Area.REFERENCE, sheetName, PageStat.Metric.PLAY)  // heard
                 }
             } catch (cancelled: CancellationException) { throw cancelled }

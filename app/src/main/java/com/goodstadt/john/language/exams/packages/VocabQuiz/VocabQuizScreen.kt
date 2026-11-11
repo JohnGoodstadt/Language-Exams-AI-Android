@@ -510,7 +510,7 @@ fun VocabQuizScreen(
                             Icon(
                                 // Loudspeaker: preview the sentence only. Never affects Correct/Tries.
                                 modifier = Modifier.clickable {
-                                    viewModel.handleTap(previewSentence)
+                                    viewModel.handleTap(previewSentence, remindIfOffline = true)
                                 },
                                 imageVector = Icons.AutoMirrored.Filled.VolumeUp,
                                 contentDescription = "Speak ${question.question.replace("_", option)}",
@@ -526,7 +526,7 @@ fun VocabQuizScreen(
                                 modifier = Modifier
                                     .weight(1f)
                                     .padding(vertical = 4.dp)
-                                    .clickable { viewModel.handleTap(previewSentence) }
+                                    .clickable { viewModel.handleTap(previewSentence, remindIfOffline = true) }
                             )
                         }
 

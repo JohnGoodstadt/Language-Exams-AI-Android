@@ -254,7 +254,8 @@ class UploadJsonViewModel @Inject constructor(
                 displayName = docName,
                 fileName = "$rawName.json",               // "vocab_data_a1.json"
                 assetPath = "raw/$rawName.json",          // unique id; the "raw/" prefix marks a res/raw source
-                firestoreDocName = docName
+                firestoreDocName = docName,
+                allowOverwrite = true // uploadFormat0 wipes the old categories/words first, so a re-upload is clean
             )
         }
         return UploadJsonSection(VOCAB_SECTION_TITLE, listOf(UploadJsonLevelGroup(VOCAB_GROUP_LEVEL, files)))

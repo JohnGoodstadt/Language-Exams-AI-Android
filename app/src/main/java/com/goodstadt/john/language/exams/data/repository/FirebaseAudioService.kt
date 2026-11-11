@@ -5,12 +5,16 @@ package com.goodstadt.john.language.exams.data.repository
 import android.net.Uri
 import android.util.Log
 import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.StorageException
 import com.google.firebase.storage.StorageMetadata
 import com.google.firebase.storage.ktx.storage
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.TimeoutCancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
+import kotlinx.coroutines.withTimeout
 import timber.log.Timber
 import java.io.File
 import java.security.MessageDigest
@@ -139,7 +143,7 @@ object FirebaseAudioService {
         val fileRef = storageRef.child(filename)
         // Download directly to the file destination
         fileRef.getFile(destFile).await()
-        Timber.tag(TAG).d("☁️ Downloaded: $filename to ${destFile.name}")
+        Timber.tag(TAG).d("☁️ Downloaded:${destFile.name}")
     }
     suspend fun downloadAudio(filename: String, destFile: File) : Boolean {
         val fileRef = storageRef.child(filename)
@@ -147,7 +151,7 @@ object FirebaseAudioService {
         return try {
             // Attempt download
             fileRef.getFile(destFile).await()
-            Timber.tag(TAG).d("☁️ Downloaded: $filename to ${destFile.name}")
+            Timber.tag(TAG).d("☁️ Downloaded: to ${destFile.name}")
 
             true
         } catch (e: Exception) {
@@ -179,7 +183,58 @@ object FirebaseAudioService {
             if (downloadAudio(cloudName, part) && part.length() > 0 && part.renameTo(destFile)) return true
         }
         part.delete()
+        // Firebase itself logs "StorageException ... Object does not exist ... 404" once per name tried (up to
+        // two per sentence). This line says which sentence it was. Filter Logcat on "MISSING MP3".
+        Timber.tag(TAG).i("MISSING MP3 (not in cloud, will use Google TTS): \"$text\" [$voiceName] ${names.first()}")
         return false
+    }
+
+    enum class CloudFetch { OK, NOT_FOUND, FAILED }
+
+    /**
+     * For offline downloads: like [downloadAudioAnyPlatform], but each cloud attempt gives up after [timeoutMs]
+     * (with no network Firebase otherwise retries one file for up to 10 minutes) and the result says WHY it
+     * failed, so the caller can tell "not in the cloud" from "no connection". A network failure on the
+     * unified name skips the legacy name.
+     */
+    suspend fun downloadAudioForOffline(text: String, voiceName: String, destFile: File, timeoutMs: Long): CloudFetch {
+        if (adoptLegacyLocalFile(text, voiceName, destFile)) return CloudFetch.OK
+
+        val part = File(destFile.path + ".part")
+        var result = CloudFetch.NOT_FOUND
+        for (cloudName in listOf(generateUnifiedFilename(text, voiceName), generateLegacyAndroidFilename(text, voiceName))) {
+            result = downloadWithTimeout(cloudName, part, timeoutMs)
+            if (result == CloudFetch.OK) {
+                if (part.length() > 0 && part.renameTo(destFile)) return CloudFetch.OK
+                result = CloudFetch.FAILED
+            }
+            if (result == CloudFetch.FAILED) break
+        }
+        part.delete()
+        if (result == CloudFetch.NOT_FOUND) {
+            Timber.tag(TAG).i("MISSING MP3 (not in cloud, offline pack skips it): \"$text\" [$voiceName]")
+        }
+        return result
+    }
+
+    /** One cloud download that is cancelled (not left retrying) on timeout or when the caller is cancelled. */
+    private suspend fun downloadWithTimeout(filename: String, destFile: File, timeoutMs: Long): CloudFetch {
+        val task = storageRef.child(filename).getFile(destFile)
+        return try {
+            withTimeout(timeoutMs) { task.await() }
+            CloudFetch.OK
+        } catch (e: TimeoutCancellationException) {
+            task.cancel()
+            Timber.tag(TAG).d("☁️ Cloud download timed out: $filename")
+            CloudFetch.FAILED
+        } catch (e: CancellationException) {
+            task.cancel()
+            throw e
+        } catch (e: StorageException) {
+            if (e.errorCode == StorageException.ERROR_OBJECT_NOT_FOUND) CloudFetch.NOT_FOUND else CloudFetch.FAILED
+        } catch (e: Exception) {
+            CloudFetch.FAILED
+        }
     }
 
     /**

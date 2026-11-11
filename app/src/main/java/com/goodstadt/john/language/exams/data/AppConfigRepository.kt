@@ -4,6 +4,8 @@ import android.content.Context
 import android.content.SharedPreferences
 import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.models.AppUIManifest
+import com.goodstadt.john.language.exams.models.Layouts
+import com.goodstadt.john.language.exams.models.SheetDefinition
 import com.goodstadt.john.language.exams.models.LlmModelInfo
 import com.goodstadt.john.language.exams.models.TabDefinition
 import com.goodstadt.john.language.exams.navigation.Screen
@@ -16,6 +18,8 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.tasks.await
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.JsonObject
+import kotlinx.serialization.json.decodeFromJsonElement
 import kotlinx.serialization.json.encodeToJsonElement
 import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonObject
@@ -332,7 +336,7 @@ class AppConfigRepository @Inject constructor(
         return if (manifestJsonString.isNotBlank()) {
             try {
                 // Attempt to parse the JSON string from the server or cache
-                jsonParser.decodeFromString<AppUIManifest>(manifestJsonString)
+                decodeManifest(manifestJsonString) ?: parseDefaultManifest()
             } catch (e: Exception) {
 
                 // If parsing the remote/cached JSON fails, log it and fall back to the bundled default.
@@ -357,39 +361,61 @@ class AppConfigRepository @Inject constructor(
     }
 
     fun getAppUiManifest(): AppUIManifest {
-        val crashlytics = FirebaseCrashlytics.getInstance()
-
-
-
-        // 1. Determine which JSON string to use
-        val manifestJsonString = if (BuildConfig.DEBUG) {
+        // DEBUG: the bundled per-flavour assets/debug_manifest.json (what gets pasted into Remote Config).
+        if (BuildConfig.DEBUG) {
             Timber.w("⚠️ DEV MODE: Using Local Manifest Override")
-
-            getLocalDebugManifest()
-
-        } else {
-            // PRODUCTION: Fetch from Remote Config
-            remoteConfig.getString("app_ui_manifest")
+            return parseDefaultManifest()
         }
 
-        // 2. Proceed with Parsing (The rest of your code stays exactly the same)
-        return if (manifestJsonString.isNotBlank()) {
-            try {
-                // Attempt to parse the JSON string from the server (or our debug string)
-                jsonParser.decodeFromString<AppUIManifest>(manifestJsonString)
-            } catch (e: Exception) {
-                // If parsing fails, log it and fall back to the bundled default.
-                Timber.e(e, "CRITICAL: Failed to parse 'app_ui_manifest'. Falling back to default.")
-                crashlytics.recordException(e)
-                parseDefaultManifest()
-            }
-        } else {
-            val error = Exception("Data load failed completely for app_ui_manifest")
-            crashlytics.recordException(error)
-            Timber.w("Remote 'app_ui_manifest' is blank. Falling back to default.")
+        // RELEASE: the live Remote Config value. Until a fetch has activated one, getString returns the
+        // remote_config_defaults.xml copy, which can lag behind; the bundled asset is kept current instead.
+        val value = remoteConfig.getValue("app_ui_manifest")
+        if (value.source != FirebaseRemoteConfig.VALUE_SOURCE_REMOTE) {
+            Timber.w("Remote 'app_ui_manifest' not fetched yet. Using the bundled manifest.")
+            return parseDefaultManifest()
+        }
+        return decodeManifest(value.asString()) ?: run {
+            FirebaseCrashlytics.getInstance()
+                .recordException(Exception("Remote 'app_ui_manifest' blank or unusable"))
+            Timber.e("CRITICAL: Remote 'app_ui_manifest' blank or unusable. Falling back to the bundled manifest.")
             parseDefaultManifest()
         }
     }
+
+    /**
+     * Parses a manifest one registry entry at a time, so an entry this build can't read (written for iOS or
+     * a newer release) is skipped instead of failing the whole manifest and leaving the Reference tab empty.
+     * Returns null when nothing usable is in [json].
+     */
+    private fun decodeManifest(json: String): AppUIManifest? {
+        if (json.isBlank()) return null
+        val root = try {
+            jsonParser.parseToJsonElement(json).jsonObject
+        } catch (e: Exception) {
+            Timber.e(e, "CRITICAL: 'app_ui_manifest' is not a JSON object.")
+            FirebaseCrashlytics.getInstance().recordException(e)
+            return null
+        }
+        val registry = (root["sheetRegistry"] as? JsonObject).orEmpty().mapNotNull { (id, element) ->
+            try {
+                id to jsonParser.decodeFromJsonElement<SheetDefinition>(element)
+            } catch (e: Exception) {
+                Timber.e(e, "'app_ui_manifest': skipping sheet '$id' (can't parse).")
+                FirebaseCrashlytics.getInstance().recordException(e)
+                null
+            }
+        }.toMap()
+        val layouts = try {
+            root["layouts"]?.let { jsonParser.decodeFromJsonElement<Layouts>(it) } ?: Layouts()
+        } catch (e: Exception) {
+            Timber.e(e, "CRITICAL: 'app_ui_manifest' layouts can't be parsed.")
+            FirebaseCrashlytics.getInstance().recordException(e)
+            return null
+        }
+        if (registry.isEmpty() || layouts.referenceTab.order.isEmpty()) return null
+        return AppUIManifest(sheetRegistry = registry, layouts = layouts)
+    }
+
     private fun getLocalDebugManifest(): String {
         return try {
             context.assets.open("debug_manifest.json").bufferedReader().use { it.readText() }
@@ -399,21 +425,13 @@ class AppConfigRepository @Inject constructor(
         }
     }
     /**
-     * A private helper to parse the default manifest from the defaults map.
-     * This is the ultimate safety net.
+     * The safety net: the manifest bundled with this flavour (assets/debug_manifest.json, shipped in release
+     * too). Not remoteConfig.getString, which returns the same remote value that just failed once fetched.
      */
     private fun parseDefaultManifest(): AppUIManifest {
-        val defaultJsonString = remoteConfig.getString("app_ui_manifest") // Gets the default value
-        return if (defaultJsonString.isNotBlank()) {
-            try {
-                jsonParser.decodeFromString<AppUIManifest>(defaultJsonString)
-            } catch (e: Exception) {
-                Timber.e(e, "FATAL: Could not parse BUNDLED default 'app_ui_manifest'. Check your defaults file.")
-                AppUIManifest() // Return a completely empty manifest as a last resort
-            }
-        } else {
-            Timber.e("FATAL: BUNDLED default 'app_ui_manifest' is missing or blank.")
-            AppUIManifest()
+        return decodeManifest(getLocalDebugManifest()) ?: run {
+            Timber.e("FATAL: Could not parse the bundled assets/debug_manifest.json.")
+            AppUIManifest() // Return a completely empty manifest as a last resort
         }
     }
     // In AppConfigRepository or MainActivity

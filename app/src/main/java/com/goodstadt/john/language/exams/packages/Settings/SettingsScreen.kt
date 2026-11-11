@@ -1,10 +1,5 @@
 package com.goodstadt.john.language.exams.packages.Settings
 
-import androidx.compose.material.icons.filled.ThumbUp
-import androidx.compose.material.icons.filled.CloudDownload
-import androidx.compose.material.icons.filled.Refresh
-import com.goodstadt.john.language.exams.screens.shared.SessionFeedbackManager
-import com.goodstadt.john.language.exams.screens.shared.rememberSessionFeedbackManager
 import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
@@ -32,16 +27,19 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.Login
 import androidx.compose.material.icons.automirrored.filled.Logout
 import androidx.compose.material.icons.filled.AccessibilityNew
+import androidx.compose.material.icons.filled.CardGiftcard
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.CheckCircle
+import androidx.compose.material.icons.filled.CloudDownload
 import androidx.compose.material.icons.filled.CloudSync
-import androidx.compose.material.icons.filled.CardGiftcard
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Palette
 import androidx.compose.material.icons.filled.RecordVoiceOver
+import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.School
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.Stars
+import androidx.compose.material.icons.filled.ThumbUp
 import androidx.compose.material.icons.filled.Translate
 import androidx.compose.material.icons.filled.Verified
 import androidx.compose.material.icons.filled.WorkspacePremium
@@ -63,6 +61,9 @@ import androidx.compose.material3.SnackbarResult
 import androidx.compose.material3.Switch
 import androidx.compose.material3.SwitchDefaults
 import androidx.compose.material3.Text
+import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.RadioButton
+import androidx.compose.material3.TextButton
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -99,6 +100,8 @@ import com.goodstadt.john.language.exams.packages.me.SignInBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.shared.HelpInfoSheet
+import com.goodstadt.john.language.exams.screens.shared.SessionFeedbackManager
+import com.goodstadt.john.language.exams.screens.shared.rememberSessionFeedbackManager
 import com.goodstadt.john.language.exams.screens.shared.speakerSelection.VoiceCategoryDropdownHeader
 import com.goodstadt.john.language.exams.screens.shared.speakerSelection.VoiceSelectionRow
 import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
@@ -589,7 +592,12 @@ private fun SettingsContent(
 ) {
     val settingsColors = LocalExtendedColors.current
     val sessionFeedback = rememberSessionFeedbackManager()
+    val learnerLanguage by viewModel.learnerLanguage.language.collectAsState()
+    var showLearnerLanguageDialog by remember { mutableStateOf(false) }
     // Main Screen Content (wrapped in a Box so the SnackbarHost can overlay the bottom).
+    if (showLearnerLanguageDialog) {
+        LearnerLanguageDialog(viewModel.learnerLanguage, onDismiss = { showLearnerLanguageDialog = false })
+    }
     Box(modifier = Modifier.fillMaxSize()) {
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
@@ -613,6 +621,16 @@ private fun SettingsContent(
                     onClick = { viewModel.onSettingClicked(SheetContent.LanguageSelection) }
                 )
             }
+        }
+        // The learner's own language (translations go into it). Detected from the phone; changeable here.
+        settingsItem { iconTint ->
+            SettingsActionItem(
+                iconTint = iconTint,
+                icon = Icons.Default.Translate,
+                title = "My Language",
+                currentValue = learnerLanguage.display,
+                onClick = { showLearnerLanguageDialog = true }
+            )
         }
         settingsItem { iconTint ->
             SettingsActionItem(
@@ -638,7 +656,12 @@ private fun SettingsContent(
                 iconTint = iconTint,
                 icon = Icons.Default.CloudDownload,
                 title = "Download for Offline",
-                currentValue = "",
+                badge = "Beta",
+                // What it does and why (same wording as iOS).
+                currentValue = if (isPurchased)
+                    "Save sentence audio to this device, so sentences still play with no internet (e.g. on a plane)"
+                else
+                    "Premium: save sentence audio to this device, so vocab and Reference pages still play with no internet",
                 onClick = onShowOffline
             )
         }
@@ -1235,6 +1258,7 @@ private fun SettingsActionItem(
     title: String,
     currentValue: String,
     iconTint: Color = MaterialTheme.colorScheme.onSurfaceVariant,
+    badge: String? = null,
     onClick: () -> Unit
 ) {
     Row(
@@ -1251,7 +1275,10 @@ private fun SettingsActionItem(
         )
         Spacer(modifier = Modifier.width(16.dp))
         Column(modifier = Modifier.weight(1f)) {
-            Text(text = title, style = MaterialTheme.typography.bodyLarge, color = LocalExtendedColors.current.screenAccent)
+            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                Text(text = title, style = MaterialTheme.typography.bodyLarge, color = LocalExtendedColors.current.screenAccent)
+                if (badge != null) BetaBadge(badge)
+            }
             Text(
                 text = currentValue,
                 style = MaterialTheme.typography.bodyMedium,
@@ -1441,3 +1468,47 @@ fun LanguageSelectionRow(
 
 
 
+
+
+/** "My Language": the learner's own language. Choose one, or follow the phone's setting again. */
+@Composable
+private fun LearnerLanguageDialog(
+    learnerLanguage: com.goodstadt.john.language.exams.managers.LearnerLanguage,
+    onDismiss: () -> Unit
+) {
+    val current by learnerLanguage.language.collectAsState()
+    val isUserChoice by learnerLanguage.isUserChoice.collectAsState()
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        title = { Text("My Language") },
+        text = {
+            Column {
+                Text("The language you speak. Translations in the app will be into this language.",
+                    style = MaterialTheme.typography.bodyMedium)
+                Spacer(Modifier.height(8.dp))
+                com.goodstadt.john.language.exams.managers.LearnerLanguage.choices.forEach { lang ->
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier.fillMaxWidth()
+                            .clickable { learnerLanguage.choose(lang); onDismiss() }
+                            .padding(vertical = 4.dp)
+                    ) {
+                        RadioButton(selected = isUserChoice && lang == current,
+                            onClick = { learnerLanguage.choose(lang); onDismiss() })
+                        Text(lang.display)
+                    }
+                }
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier.fillMaxWidth()
+                        .clickable { learnerLanguage.choose(null); onDismiss() }
+                        .padding(vertical = 4.dp)
+                ) {
+                    RadioButton(selected = !isUserChoice, onClick = { learnerLanguage.choose(null); onDismiss() })
+                    Text("Use phone setting (${learnerLanguage.detected.display})")
+                }
+            }
+        },
+        confirmButton = { TextButton(onClick = onDismiss) { Text("Close") } }
+    )
+}
