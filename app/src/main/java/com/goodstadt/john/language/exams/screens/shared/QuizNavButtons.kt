@@ -4,6 +4,9 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Translate
+import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -70,6 +73,23 @@ fun AutoAdvanceToggleButton(
     val tint = if (enabled) LocalExtendedColors.current.buttonBlue else Color.Gray // blue when on, grey when off
     IconButton(onClick = onClick) {
         LetterInCircle(letter = "A", tint = tint, size = size, fontSize = fontSize, borderWidth = borderWidth)
+    }
+}
+
+/**
+ * Translate toggle for the German Usage Quiz. Blue while German is showing (tap to translate),
+ * grey while the English translation is showing.
+ */
+@Composable
+fun TranslateToggleButton(showEnglish: Boolean, onClick: () -> Unit) {
+    val tint = if (showEnglish) Color.Gray else LocalExtendedColors.current.buttonBlue
+    IconButton(onClick = onClick) {
+        Icon(
+            imageVector = Icons.Filled.Translate,
+            contentDescription = if (showEnglish) "Show German" else "Show English translation",
+            tint = tint,
+            modifier = Modifier.size(26.dp)
+        )
     }
 }
 

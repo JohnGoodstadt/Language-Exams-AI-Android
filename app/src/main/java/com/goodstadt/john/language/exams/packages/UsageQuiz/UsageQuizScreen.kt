@@ -447,6 +447,7 @@ internal fun UsageQuizLearningPoints(
     learningPoints: List<String>,
     isExpanded: Boolean,
     onToggle: () -> Unit,
+    trailing: (@Composable () -> Unit)? = null, // e.g. the translate toggle (split screen)
 ) {
     if (learningPoints.isEmpty()) return
 
@@ -467,6 +468,8 @@ internal fun UsageQuizLearningPoints(
                 // weight: a long title wraps instead of squeezing "more…" to zero width (it was invisible but tappable)
                 modifier = Modifier.weight(1f)
             )
+
+            trailing?.invoke()
 
             Text(
                 text = if (isExpanded) "less" else "more…",
@@ -729,6 +732,7 @@ internal fun UsageQuizNavigationRow(
     infoDisabled: Boolean,
     onInfoDisabledChange: (Boolean) -> Unit,
     onShowInfo: () -> Unit,
+    extraButton: (@Composable () -> Unit)? = null, // e.g. the translate toggle (split screen)
 ) {
     val lastIndex = questionCount - 1
 
@@ -775,6 +779,7 @@ internal fun UsageQuizNavigationRow(
                 enabled = autoAdvance,
                 onClick = { viewModel.toggleAutoAdvance() }
             )
+            extraButton?.invoke()
         }
 
         // 🔹 Expanding space right
@@ -881,6 +886,7 @@ internal fun UsageQuizBottomSheets(
     showDashboardSheet: Boolean,
     onCloseDashboard: () -> Unit,
     selectedLevelDescription: String,
+    translateInfo: Boolean = false, // show the "_en" summary/explain where present
 ) {
     val dashboardSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
@@ -906,8 +912,8 @@ internal fun UsageQuizBottomSheets(
 
     if (showInfoBottomSheet && infoQuestion != null) {
         QuizInfoBottomSheetView(
-            infoQuestion.summary,
-            infoQuestion.explain,
+            if (translateInfo && !infoQuestion.summaryEn.isNullOrBlank()) infoQuestion.summaryEn else infoQuestion.summary,
+            if (translateInfo && !infoQuestion.explainEn.isNullOrBlank()) infoQuestion.explainEn else infoQuestion.explain,
             onCloseSheet = onCloseInfo
         )
     }

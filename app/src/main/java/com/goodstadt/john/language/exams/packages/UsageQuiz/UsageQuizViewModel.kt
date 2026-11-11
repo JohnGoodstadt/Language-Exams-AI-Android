@@ -135,7 +135,10 @@ data class QuizQuestion(
     // Sub-area (pattern) this question tests + its human label, for per-pattern reference strength.
     // null for quizzes not tracked at pattern granularity.
     val subArea: String? = null,
-    val subLabel: String? = null
+    val subLabel: String? = null,
+    // Static English translations (German Usage Quiz "_en" fields); null when the data has none.
+    val summaryEn: String? = null,
+    val explainEn: String? = null
 )
 
 //TODO: Do I need this?
@@ -300,6 +303,10 @@ class UsageQuizViewModel @Inject constructor(
     // Shared across all quiz types via the same saved preference (set on one screen, applies to all).
     private val _autoAdvance = MutableStateFlow(false)
     val autoAdvance = _autoAdvance.asStateFlow()
+
+    // Translate toggle (German app): show the "_en" static translations where the data has them.
+    private val _showEnglish = MutableStateFlow(false)
+    val showEnglish = _showEnglish.asStateFlow()
     private val autoAdvanceMaxWaitMs = 8000L
     private var autoAdvanceJob: Job? = null
 
@@ -329,6 +336,16 @@ class UsageQuizViewModel @Inject constructor(
         viewModelScope.launch {
             userPreferencesRepository.vocabQuizAutoAdvanceFlow.collect { _autoAdvance.value = it }
         }
+        viewModelScope.launch {
+            userPreferencesRepository.usageQuizShowEnglishFlow.collect { _showEnglish.value = it }
+        }
+    }
+
+    /** Flip the Usage Quiz translate toggle (German <-> English) and persist it. */
+    fun toggleShowEnglish() {
+        val newValue = !_showEnglish.value
+        _showEnglish.value = newValue
+        viewModelScope.launch { userPreferencesRepository.setUsageQuizShowEnglish(newValue) }
     }
 
     /** Flip the shared auto-advance toggle and persist it (applies to all quiz types). */
@@ -524,7 +541,8 @@ class UsageQuizViewModel @Inject constructor(
                 val page = quizSection.page
                 val level = quizSection.level
                 val category = quizSection.category
-                QuizQuestion(quizSection.sentence, words, correctOption, summary,explain,title,page,level,category,testData.fileFormat)
+                QuizQuestion(quizSection.sentence, words, correctOption, summary,explain,title,page,level,category,testData.fileFormat,
+                    summaryEn = quizSection.summaryEn, explainEn = quizSection.explainEn)
             }
         }
     }

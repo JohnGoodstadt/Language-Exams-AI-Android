@@ -10,5 +10,7 @@ package com.goodstadt.john.language.exams.packages.reference.shared
 data class QuizDetail(
     val id: Int,
     val baseName: String, //e.g. "Quiz1Elementary-en"
-    val title: String
+    val title: String,
+    /** Static English translation of [title] (German app only) - shown when the Usage Quiz translate toggle is on. */
+    val titleEn: String? = null
 )

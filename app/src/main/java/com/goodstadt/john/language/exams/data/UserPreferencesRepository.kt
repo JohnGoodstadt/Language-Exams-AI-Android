@@ -52,6 +52,7 @@ class UserPreferencesRepository @Inject constructor(
         val HAS_SEEN_READINESS_AUDIT_INTRO = booleanPreferencesKey("has_seen_readiness_audit_intro")
         val HAS_SEEN_AUDIT_QUIZ_HOWTO = booleanPreferencesKey("has_seen_audit_quiz_howto")
         val VOCAB_QUIZ_AUTO_ADVANCE = booleanPreferencesKey("vocab_quiz_auto_advance")
+        val USAGE_QUIZ_SHOW_ENGLISH = booleanPreferencesKey("usage_quiz_show_english")
         val FORMAT8_SPEAK_ALOUD_GAP = booleanPreferencesKey("format8_speak_aloud_gap")
         val USAGE_QUIZ_LEVEL = stringPreferencesKey("usage_quiz_level")
         val TRANSLATE_TARGET_LANG = stringPreferencesKey("translate_target_lang")
@@ -197,6 +198,20 @@ class UserPreferencesRepository @Inject constructor(
     suspend fun setVocabQuizAutoAdvance(enabled: Boolean) {
         context.dataStore.edit { preferences ->
             preferences[PreferenceKeys.VOCAB_QUIZ_AUTO_ADVANCE] = enabled
+        }
+    }
+
+    // Usage Quiz "translate" toggle (German app): when ON, text that has a static "_en" translation is shown
+    // in English. Default OFF (German).
+    val usageQuizShowEnglishFlow: Flow<Boolean> = context.dataStore.data
+        .catch { emit(emptyPreferences()) }
+        .map { preferences ->
+            preferences[PreferenceKeys.USAGE_QUIZ_SHOW_ENGLISH] ?: false
+        }
+
+    suspend fun setUsageQuizShowEnglish(enabled: Boolean) {
+        context.dataStore.edit { preferences ->
+            preferences[PreferenceKeys.USAGE_QUIZ_SHOW_ENGLISH] = enabled
         }
     }
 

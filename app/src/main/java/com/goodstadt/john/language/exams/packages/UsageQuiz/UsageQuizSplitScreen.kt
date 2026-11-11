@@ -50,6 +50,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.R
 import com.goodstadt.john.language.exams.packages.reference.shared.HorizontalLevelPicker
 import com.goodstadt.john.language.exams.screens.UsageQuiz.UsageQuizLevelsFilename
+import com.goodstadt.john.language.exams.screens.shared.TranslateToggleButton
 import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 
 /**
@@ -86,6 +87,7 @@ fun UsageQuizSplitScreen(
     val currentQuestionIndex by viewModel.currentQuestionIndex
     val userAnswers by viewModel.userAnswers
     val fluency by viewModel.fluency
+    val showEnglish by viewModel.showEnglish.collectAsState()
 
     var showQuizSheet by rememberSaveable { mutableStateOf(false) }
     var showInfoBottomSheet by remember { mutableStateOf(false) }
@@ -133,24 +135,46 @@ fun UsageQuizSplitScreen(
 
         // --- learningTitle (+ expandable learning points) of the selected quiz ---
         val learningData = uiState.format7or10ListRoot?.data?.firstOrNull()
-        val learningTitle = learningData?.learningTitle ?: selectedQuiz?.title.orEmpty()
-        val learningPoints = learningData?.learningPoints.orEmpty()
+        // Translate toggle: only offered when the loaded data carries "_en" translations (older cached /
+        // Firestore data without them, and the English app, never show the button or translate).
+        val hasTranslation = !learningData?.learningTitleEn.isNullOrBlank() ||
+            !learningData?.learningPointsEn.isNullOrEmpty() ||
+            questions.any { !it.summaryEn.isNullOrBlank() || !it.explainEn.isNullOrBlank() }
+        val translating = showEnglish && hasTranslation
+        val tr: (String, String?) -> String = { german, english ->
+            if (translating && !english.isNullOrBlank()) english else german
+        }
+        val translateButton: (@Composable () -> Unit)? = if (hasTranslation) {
+            { TranslateToggleButton(showEnglish = showEnglish, onClick = { viewModel.toggleShowEnglish() }) }
+        } else null
+
+        val learningTitle = learningData?.learningTitle?.let { tr(it, learningData?.learningTitleEn) }
+            ?: tr(selectedQuiz?.title.orEmpty(), selectedQuiz?.titleEn)
+        val learningPoints = if (translating && !learningData?.learningPointsEn.isNullOrEmpty())
+            learningData?.learningPointsEn.orEmpty() else learningData?.learningPoints.orEmpty()
         if (learningPoints.isNotEmpty()) {
             UsageQuizLearningPoints(
                 learningTitle = learningTitle,
                 learningPoints = learningPoints,
                 isExpanded = isLearningExpanded,
                 onToggle = { isLearningExpanded = !isLearningExpanded },
+                trailing = translateButton,
             )
         } else if (learningTitle.isNotBlank()) {
-            Text(
-                text = learningTitle,
-                style = MaterialTheme.typography.titleSmall,
-                color = MaterialTheme.colorScheme.onSurface,
+            Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = 6.dp)
-            )
+                    .padding(horizontal = 6.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(
+                    text = learningTitle,
+                    style = MaterialTheme.typography.titleSmall,
+                    color = MaterialTheme.colorScheme.onSurface,
+                    modifier = Modifier.weight(1f)
+                )
+                translateButton?.invoke()
+            }
         }
 
         // --- Vertical quiz list (replaces the dropdown) ---
@@ -171,7 +195,7 @@ fun UsageQuizSplitScreen(
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     Text(
-                        text = quiz.title,
+                        text = tr(quiz.title, quiz.titleEn),
                         style = MaterialTheme.typography.bodyLarge,
                         fontWeight = if (isSelected) FontWeight.SemiBold else FontWeight.Normal,
                         color = if (isSelected) LocalExtendedColors.current.buttonBlue else MaterialTheme.colorScheme.onSurface,
@@ -225,6 +249,8 @@ fun UsageQuizSplitScreen(
                 UsageQuizSheetPanel(
                     viewModel = viewModel,
                     onShowInfo = { showInfoBottomSheet = true },
+                    translating = translating,
+                    translateButton = translateButton,
                 )
             }
         }
@@ -242,6 +268,7 @@ fun UsageQuizSplitScreen(
         showDashboardSheet = showDashboardSheet,
         onCloseDashboard = { showDashboardSheet = false },
         selectedLevelDescription = selectedLevel.description,
+        translateInfo = translating,
     )
 }
 
@@ -253,6 +280,8 @@ fun UsageQuizSplitScreen(
 private fun UsageQuizSheetPanel(
     viewModel: UsageQuizViewModel,
     onShowInfo: () -> Unit,
+    translating: Boolean = false,
+    translateButton: (@Composable () -> Unit)? = null,
 ) {
     val correctGreen = LocalExtendedColors.current.textAccentAlternative
 
@@ -314,7 +343,9 @@ private fun UsageQuizSheetPanel(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         // Section summary of the current question
-        val summary = questions.getOrNull(currentQuestionIndex)?.summary.orEmpty()
+        val currentQuestion = questions.getOrNull(currentQuestionIndex)
+        val summary = if (translating && !currentQuestion?.summaryEn.isNullOrBlank())
+            currentQuestion?.summaryEn.orEmpty() else currentQuestion?.summary.orEmpty()
         if (summary.isNotBlank()) {
             Text(
                 text = summary,
@@ -406,6 +437,7 @@ private fun UsageQuizSheetPanel(
                 infoDisabled = infoDisabled,
                 onInfoDisabledChange = { infoDisabled = it },
                 onShowInfo = onShowInfo,
+                extraButton = translateButton,
             )
         } else if (activeFilters.isEmpty()) {
             Spacer(modifier = Modifier.weight(1f))
