@@ -628,7 +628,10 @@ class ExamSheetRepository @Inject constructor(
                     summary = dto.summary,
                     level = dto.level,
                     category = dto.category,
-                    words = dto.words.map { Format7or10Word(word = it.word, ok = it.ok) }
+                    words = dto.words.map { Format7or10Word(word = it.word, ok = it.ok) },
+                    summaryEn = dto.summaryEn.ifEmpty { null },
+                    explainEn = dto.explainEn.ifEmpty { null },
+                    sentenceEn = dto.sentenceEn.ifEmpty { null }
                 )
             }
             Format7or10List(
@@ -637,7 +640,11 @@ class ExamSheetRepository @Inject constructor(
                 sortorder = sortorder,
                 learningTitle = first.learningTitle,
                 learningPoints = first.learningPoints,
-                sections = sections
+                sections = sections,
+                titleEn = first.levelTitleEn.ifEmpty { null },
+                descriptionEn = first.descriptionEn.ifEmpty { null },
+                learningTitleEn = first.learningTitleEn.ifEmpty { null },
+                learningPointsEn = first.learningPointsEn
             )
         }.sortedBy { it.sortorder }
 
@@ -647,7 +654,8 @@ class ExamSheetRepository @Inject constructor(
             title = header.getString("title"),
             updatedDate = (header.get("updatedDate") as? com.google.firebase.Timestamp)?.toDate()?.time ?: 0L,
             location = (header.get("location") as? Number)?.toInt() ?: 0,
-            data = lists
+            data = lists,
+            titleEn = header.getString("title_en")
         )
     }
 

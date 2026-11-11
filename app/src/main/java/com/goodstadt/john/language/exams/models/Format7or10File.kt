@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.models
 
+import com.google.firebase.firestore.PropertyName
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -13,7 +14,10 @@ data class Format7or10File(
     val title: String? = null,//"", //read title for localised versions
     val updatedDate: Long,
     val location: Int,
-    val data: List<Format7or10List>
+    val data: List<Format7or10List>,
+    // Static English translations ("<field>_en" in JSON/Firestore). All optional/defaulted, so files,
+    // caches and Firestore docs without them parse exactly as before. Not shown on screen yet.
+    @SerialName("title_en") val titleEn: String? = null
 )
 @Serializable
 data class Format7or10List(
@@ -22,7 +26,11 @@ data class Format7or10List(
     val sortorder: Int,
     val learningTitle: String? = null,
     val learningPoints: List<String> = emptyList(),
-    var sections: List<Format7or10Section>
+    var sections: List<Format7or10Section>,
+    @SerialName("title_en") val titleEn: String? = null,
+    @SerialName("description_en") val descriptionEn: String? = null,
+    @SerialName("learningTitle_en") val learningTitleEn: String? = null,
+    @SerialName("learningPoints_en") val learningPointsEn: List<String> = emptyList()
 )
 @Serializable
 data class Format7or10Section(
@@ -42,7 +50,10 @@ data class Format7or10Section(
     // null/absent for content that isn't tracked at pattern granularity.
     val subArea: String? = null,
     val subLabel: String? = null,
-    var words: List<Format7or10Word>
+    var words: List<Format7or10Word>,
+    @SerialName("summary_en") val summaryEn: String? = null,
+    @SerialName("explain_en") val explainEn: String? = null,
+    @SerialName("sentence_en") val sentenceEn: String? = null
 )
 @Serializable
 data class Format7or10Word(
@@ -68,7 +79,16 @@ data class Format7or10SectionDTO(
     val category: String = "",
     val explain: String = "",
     val sentence: String = "",
-    val words: List<Format7or10WordDTO> = emptyList()
+    val words: List<Format7or10WordDTO> = emptyList(),
+    // Optional static English translations. Firestore keys are "<field>_en", so map them explicitly
+    // (Firestore would otherwise look for "levelTitleEn" etc.). Empty when the doc doesn't have them.
+    @get:PropertyName("levelTitle_en") @set:PropertyName("levelTitle_en") var levelTitleEn: String = "",
+    @get:PropertyName("description_en") @set:PropertyName("description_en") var descriptionEn: String = "",
+    @get:PropertyName("learningTitle_en") @set:PropertyName("learningTitle_en") var learningTitleEn: String = "",
+    @get:PropertyName("learningPoints_en") @set:PropertyName("learningPoints_en") var learningPointsEn: List<String> = emptyList(),
+    @get:PropertyName("summary_en") @set:PropertyName("summary_en") var summaryEn: String = "",
+    @get:PropertyName("explain_en") @set:PropertyName("explain_en") var explainEn: String = "",
+    @get:PropertyName("sentence_en") @set:PropertyName("sentence_en") var sentenceEn: String = ""
 )
 
 data class Format7or10WordDTO(
