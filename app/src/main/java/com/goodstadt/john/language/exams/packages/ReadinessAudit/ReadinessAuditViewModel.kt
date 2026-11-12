@@ -74,6 +74,10 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.async
+import kotlinx.coroutines.awaitAll
+import com.goodstadt.john.language.exams.data.repository.FirebaseAudioService
+import java.io.File
 import kotlinx.coroutines.withTimeoutOrNull
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
@@ -609,6 +613,52 @@ class ReadinessAuditViewModel @Inject constructor(
             // part, even ones not currently loaded.
             auditRepository.saveTotalQuestions(quizAttemptKey(selectedLevel.value, quizDetail), _allQuestions.size)
             loadCurrentAuditStats()
+
+            // Every level (Baseline on first launch, Verify A2 / B1 / B2): pull the correct answers' MP3s
+            // into the device cache now so the reward audio plays instantly.
+            prefetchCorrectAnswerAudio(_allQuestions, currentFileFormat.value)
+        }
+    }
+
+    private var audioPrefetchJob: Job? = null
+
+    /**
+     * Warm the device audio cache with each question's CORRECT answer - the only option whose audio is ever
+     * played on a correct radio tap - so playback is instant instead of a cloud download per tap.
+     * Cloud only (audio_cache/<unified name>, then the legacy Android name) via
+     * FirebaseAudioService.downloadAudioForOffline, saved into filesDir under the unified name the play
+     * path looks for. A sentence not in the cloud is skipped - the normal tap generates it by TTS and saves
+     * it then. Never calls TTS. A newer load (level/quiz change) cancels the previous run. Mirrors iOS.
+     */
+    private fun prefetchCorrectAnswerAudio(questions: List<QuizQuestion>, fileFormat: Int) {
+        audioPrefetchJob?.cancel()
+        if (audioPlaybackRepository.isOffline) return
+        val texts = questions.map { spokenTextForCorrectAnswer(it, fileFormat) }
+            .map { it.trim() }
+            .filter { it.isNotEmpty() }
+            .distinct()
+        if (texts.isEmpty()) return
+        audioPrefetchJob = viewModelScope.launch(Dispatchers.IO) {
+            val voice = userPreferencesRepository.selectedVoiceNameFlow.first()
+            Timber.d("Audit prefetch: ${texts.size} answer MP3s [$voice]")
+            texts.map { text ->
+                async {
+                    val dest = File(appContext.filesDir, FirebaseAudioService.generateUnifiedFilename(text, voice))
+                    FirebaseAudioService.downloadAudioForOffline(text, voice, dest, 20_000L)
+                }
+            }.awaitAll()
+        }
+    }
+
+    /** The text the screen speaks when this question's correct option is chosen (see ReadinessAuditScreen). */
+    private fun spokenTextForCorrectAnswer(question: QuizQuestion, fileFormat: Int): String {
+        val option = question.correctOption
+        if (option.isEmpty()) return ""
+        return when (fileFormat) {
+            quizFillInTheBlanks -> question.sentence.replace(Regex("_+"), option)
+            quizDefinitions -> "${question.title}:${option}:${question.sentence}"
+            quizMultipleChoice -> option.replace(Regex("\\s*\\([^)]*\\)\\s*"), " ").trim()
+            else -> option
         }
     }
 
