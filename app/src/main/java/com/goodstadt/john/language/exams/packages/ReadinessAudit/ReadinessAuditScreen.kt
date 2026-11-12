@@ -359,6 +359,8 @@ fun ReadinessAuditScreen(
                 currentSkillLevel = currentSkillLevel,
                 selectedLevel = selectedLevel,
                 unlockedLevels = unlockedLevels,
+                finalCorrect = quizStatistics.correct,
+                finalTotal = questions.size,
                 onTakeNext = { level -> showSummary = false; viewModel.onLevelSelected(level) },
                 onLoadVocab = { esol -> viewModel.loadRecommendedVocab(esol); onFinished() },
                 onGoToApp = { onFinished() }
@@ -628,6 +630,9 @@ private fun auditBandIndex(s: String?): Int = when (s?.trim()?.uppercase()) {
  * level being studied, and up to three options: take the next quiz (only when a genuinely higher level is
  * unlocked, so B2 never offers moving up), load the recommended vocab, or just go to the app.
  */
+/** A Verify score at or below this (percent correct) offers moving down a level on the summary. */
+private const val AUDIT_DOWNGRADE_THRESHOLD_PERCENT = 40
+
 @Composable
 private fun AuditSummaryContent(
     confidence: Int,
@@ -637,6 +642,8 @@ private fun AuditSummaryContent(
     currentSkillLevel: String,
     selectedLevel: ReadinessAuditLevels,
     unlockedLevels: Set<ReadinessAuditLevels>,
+    finalCorrect: Int,
+    finalTotal: Int,
     onTakeNext: (ReadinessAuditLevels) -> Unit,
     onLoadVocab: (String) -> Unit,
     onGoToApp: () -> Unit
@@ -647,7 +654,18 @@ private fun AuditSummaryContent(
     val hasHigherQuiz = recommended != null && recommended.ordinal > selectedLevel.ordinal
     val effectiveIdx = auditBandIndex(baselineLevel)
     val currentIdx = auditBandIndex(currentSkillLevel)
-    val guidance: String? = baselineLevel?.let { lvl ->
+    // Struggled on a Verify test (<= 40% correct): suggest the level BELOW the one just tested
+    // (Verify B2 -> B1, B1 -> A2, A2 -> A1) instead of pushing on at a level that was too hard. Mirrors iOS.
+    val bands = listOf("A1", "A2", "B1", "B2")
+    val verifyPercent = if (finalTotal > 0) finalCorrect * 100 / finalTotal else 100
+    val struggledOnVerify = selectedLevel != ReadinessAuditLevels.BASELINE && finalTotal > 0 &&
+        verifyPercent <= AUDIT_DOWNGRADE_THRESHOLD_PERCENT
+    val testedLabel = bands[selectedLevel.ordinal.coerceIn(0, 3)]          // INTER=A2, UPPER=B1, ADVANCED=B2
+    val downgradeLabel = bands[(selectedLevel.ordinal - 1).coerceIn(0, 3)]
+    val guidance: String? = if (struggledOnVerify) {
+        "$testedLabel is a big step — and this quiz shows it's not quite the right fit yet. That's completely normal. " +
+            "Building up at $downgradeLabel first will make $testedLabel feel much easier when you get there."
+    } else baselineLevel?.let { lvl ->
         when {
             effectiveIdx < 0 -> null
             effectiveIdx > currentIdx -> "The audit places you at $lvl, above your current $currentSkillLevel. Consider moving up to save time."
@@ -664,7 +682,7 @@ private fun AuditSummaryContent(
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
         Text(
-            "Nice work — here's where you stand",
+            if (struggledOnVerify) "Good effort — here's where you stand" else "Nice work — here's where you stand",
             style = MaterialTheme.typography.headlineSmall,
             fontWeight = FontWeight.Bold,
             color = MaterialTheme.colorScheme.onSurface
@@ -680,14 +698,14 @@ private fun AuditSummaryContent(
             horizontalArrangement = Arrangement.spacedBy(12.dp)
         ) {
             AuditSummaryStat("Our Confidence", "$confidence%", confidenceLabel, Modifier.weight(1f))
-            AuditSummaryStat("Your Readiness", "$readiness%", baselineLevel?.let { "$it level" } ?: "Estimated", Modifier.weight(1f))
+            AuditSummaryStat("Your Readiness", "$readiness%", if (struggledOnVerify) "$downgradeLabel suggested" else baselineLevel?.let { "$it level" } ?: "Estimated", Modifier.weight(1f))
         }
 
         guidance?.let {
             Text(it, style = MaterialTheme.typography.bodyMedium, color = auditBodyText)
         }
 
-        if (hasHigherQuiz) {
+        if (hasHigherQuiz && !struggledOnVerify) {
             Text(
                 "Take just one more quiz and we can be far more confident about your exam readiness.",
                 style = MaterialTheme.typography.titleMedium,
@@ -702,15 +720,24 @@ private fun AuditSummaryContent(
         }
 
         // Option — move UP (hidden at B2, the top).
-        if (hasHigherQuiz && recommended != null) {
+        if (hasHigherQuiz && !struggledOnVerify && recommended != null) {
             AuditSummaryOption(
                 title = "Take the ${recommended.description} quiz",
                 subtitle = "A few more questions to raise our confidence in your level.",
                 onClick = { onTakeNext(recommended) }
             )
         }
-        // Option — load the recommended vocab and start using the app.
-        baselineLevel?.let { lvl ->
+        // Struggled on a Verify test — offer the level below first.
+        if (struggledOnVerify) {
+            AuditSummaryOption(
+                title = "Start learning $downgradeLabel",
+                subtitle = "Switch to the $downgradeLabel vocabulary — a stronger base to step up from.",
+                onClick = { onLoadVocab(downgradeLabel) }
+            )
+        }
+        // Option — load the recommended vocab and start using the app (hidden when it's the very level
+        // just struggled with).
+        baselineLevel?.takeUnless { struggledOnVerify && it.trim().uppercase() == testedLabel }?.let { lvl ->
             AuditSummaryOption(
                 title = "Start learning $lvl",
                 subtitle = "Load the $lvl vocabulary and jump into the app.",
