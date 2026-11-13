@@ -94,6 +94,21 @@ fun UsageQuizSplitScreen(
     var showDashboardSheet by remember { mutableStateOf(false) }
     var isLearningExpanded by rememberSaveable { mutableStateOf(false) }
 
+    // Translate toggle: only offered when the loaded data carries "_en" translations (older cached /
+    // Firestore data without them, and the English app, never show the button or translate).
+    // Declared here (not inside the Column) so the quiz sheet and info sheet below can use them too.
+    val learningData = uiState.format7or10ListRoot?.data?.firstOrNull()
+    val hasTranslation = !learningData?.learningTitleEn.isNullOrBlank() ||
+        !learningData?.learningPointsEn.isNullOrEmpty() ||
+        questions.any { !it.summaryEn.isNullOrBlank() || !it.explainEn.isNullOrBlank() }
+    val translating = showEnglish && hasTranslation
+    val tr: (String, String?) -> String = { german, english ->
+        if (translating && !english.isNullOrBlank()) english else german
+    }
+    val translateButton: (@Composable () -> Unit)? = if (hasTranslation) {
+        { TranslateToggleButton(showEnglish = showEnglish, onClick = { viewModel.toggleShowEnglish() }) }
+    } else null
+
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -134,20 +149,6 @@ fun UsageQuizSplitScreen(
         }
 
         // --- learningTitle (+ expandable learning points) of the selected quiz ---
-        val learningData = uiState.format7or10ListRoot?.data?.firstOrNull()
-        // Translate toggle: only offered when the loaded data carries "_en" translations (older cached /
-        // Firestore data without them, and the English app, never show the button or translate).
-        val hasTranslation = !learningData?.learningTitleEn.isNullOrBlank() ||
-            !learningData?.learningPointsEn.isNullOrEmpty() ||
-            questions.any { !it.summaryEn.isNullOrBlank() || !it.explainEn.isNullOrBlank() }
-        val translating = showEnglish && hasTranslation
-        val tr: (String, String?) -> String = { german, english ->
-            if (translating && !english.isNullOrBlank()) english else german
-        }
-        val translateButton: (@Composable () -> Unit)? = if (hasTranslation) {
-            { TranslateToggleButton(showEnglish = showEnglish, onClick = { viewModel.toggleShowEnglish() }) }
-        } else null
-
         val learningTitle = learningData?.learningTitle?.let { tr(it, learningData?.learningTitleEn) }
             ?: tr(selectedQuiz?.title.orEmpty(), selectedQuiz?.titleEn)
         val learningPoints = if (translating && !learningData?.learningPointsEn.isNullOrEmpty())
