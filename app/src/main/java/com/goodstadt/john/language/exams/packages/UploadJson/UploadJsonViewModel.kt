@@ -363,6 +363,8 @@ class UploadJsonViewModel @Inject constructor(
             teach("conjugations_to_do_teaching", "${languagePrefix}ConjugationsToDoTeaching"),
             teach("conjugations_to_get_teaching", "${languagePrefix}ConjugationsToGetTeaching"),
             teach("conjugations_to_have_teaching", "${languagePrefix}ConjugationsToHaveTeaching"),
+            // German only (no english_reference_usage, so the row is dropped in the en build).
+            teach("reference_usage", "${languagePrefix}ReferenceUsage"),
         )
         return UploadJsonSection("Teachings", groups = listOf(UploadJsonLevelGroup("Files", files)))
     }

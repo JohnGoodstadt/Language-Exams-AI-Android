@@ -820,6 +820,7 @@ class ContentRepository @Inject constructor(
         "GermanConjugationsToHaveTeaching" -> "german_conjugations_to_have_teaching"
         "GermanConjugationsToDoTeaching" -> "german_conjugations_to_do_teaching"
         "GermanConjugationsToGetTeaching" -> "german_conjugations_to_get_teaching"
+        "GermanReferenceUsage" -> "german_reference_usage" // German only
         "EnglishConjugationsToBeTeaching" -> "english_conjugations_to_be_teaching"
         "EnglishConjugationsToHaveTeaching" -> "english_conjugations_to_have_teaching"
         "EnglishConjugationsToDoTeaching" -> "english_conjugations_to_do_teaching"
