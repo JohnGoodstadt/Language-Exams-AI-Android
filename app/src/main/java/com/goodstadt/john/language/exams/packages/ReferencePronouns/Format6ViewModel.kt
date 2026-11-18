@@ -59,6 +59,9 @@ class Format6ViewModel @Inject constructor(
     private val documentId: String =
         savedStateHandle.get<String>("documentId") ?: "GermanReferencePronouns"
 
+    /** Sprachgebrauch uses its authored English text instead of opening the paid translation sheet. */
+    val isUsageReferenceSheet: Boolean get() = documentId == "GermanReferenceUsage"
+
     /** Bundled fileFormat-7 quiz sheet for this reference sheet, e.g. "GermanReferencePronounsQuiz". */
     val quizSheetName: String get() = documentId + "Quiz"
 

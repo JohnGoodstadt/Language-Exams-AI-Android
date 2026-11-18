@@ -786,10 +786,10 @@ class ContentRepository @Inject constructor(
                 //    fresh install auto-load the uploaded sheet the first time the screen is opened.
                 val result = examSheetRepository.getFormat6Sheet(logicalName, forceRefresh = forceRefresh)
                 if (result.isSuccess) {
-                    val file = result.getOrThrow()
+                    val file = mergeBundledFormat6Additions(logicalName, result.getOrThrow())
                     format6Cache[logicalName] = file
                     if (forceRefresh) appConfigRepository.updateLocalVersion(logicalName, remoteVersion)
-                    return@withContext result
+                    return@withContext Result.success(file)
                 }
 
                 // 4. Bundle fallback: fileFormat-6 pronoun sheets ship in res/raw (snake_case).
@@ -807,6 +807,46 @@ class ContentRepository @Inject constructor(
                 return@withContext Result.failure(e)
             }
         }
+
+    /** Firestore stays primary; the bundle only supplies newer optional translations/highlights when absent. */
+    private fun mergeBundledFormat6Additions(
+        logicalName: String,
+        file: com.goodstadt.john.language.exams.packages.ReferencePronouns.Format6File
+    ): com.goodstadt.john.language.exams.packages.ReferencePronouns.Format6File {
+        if (logicalName != "GermanReferenceUsage") return file
+        val bundled = format6BundleRawName(logicalName)
+            ?.let(::loadBundledFormat6DataFromRaw)
+            ?.getOrNull()
+            ?: return file
+        val bundledCategories = bundled.categories.associateBy { it.id }
+
+        return file.copy(categories = file.categories.map categoryMap@ { category ->
+            val bundledCategory = bundledCategories[category.id] ?: return@categoryMap category
+            val bundledPatterns = bundledCategory.patterns.associateBy { it.id }
+            category.copy(
+                labelEn = category.labelEn?.takeIf { it.isNotBlank() } ?: bundledCategory.labelEn,
+                patterns = category.patterns.map patternMap@ { pattern ->
+                    val bundledPattern = bundledPatterns[pattern.id] ?: return@patternMap pattern
+                    val bundledSentences = bundledPattern.sections
+                        .flatMap { it.sentences }
+                        .associateBy { it.text }
+                    pattern.copy(
+                        chipEn = pattern.chipEn?.takeIf { it.isNotBlank() } ?: bundledPattern.chipEn,
+                        subtitleEn = pattern.subtitleEn?.takeIf { it.isNotBlank() } ?: bundledPattern.subtitleEn,
+                        sections = pattern.sections.map { section ->
+                            section.copy(sentences = section.sentences.map { sentence ->
+                                val bundledSentence = bundledSentences[sentence.text]
+                                sentence.copy(
+                                    en = sentence.en?.takeIf { it.isNotBlank() } ?: bundledSentence?.en,
+                                    green = sentence.green.ifEmpty { bundledSentence?.green.orEmpty() }
+                                )
+                            })
+                        }
+                    )
+                }
+            )
+        })
+    }
 
     /** Logical doc name -> res/raw resource base name. fileFormat-6 sheets ship in res/raw (per flavour). */
     private fun format6BundleRawName(logicalName: String): String? = when (logicalName) {

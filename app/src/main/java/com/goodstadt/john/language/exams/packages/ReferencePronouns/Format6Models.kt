@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.packages.ReferencePronouns
 
+import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 /**
@@ -45,6 +46,9 @@ data class Format6File(
 data class PronounCategory(
     val id: String = "",
     val label: String = "",
+    /** Optional authored English category-chip translation. */
+    @SerialName("label_en")
+    val labelEn: String? = null,
     val sortOrder: Int = 0,
     /** Optional one-liner shown above the item chips. */
     val note: String = "",
@@ -58,8 +62,14 @@ data class PronounPattern(
     val id: String = "",
     /** Chip text, e.g. "I / me". */
     val chip: String = "",
+    /** Optional authored English item-chip translation. */
+    @SerialName("chip_en")
+    val chipEn: String? = null,
     /** Short description of the slot, e.g. "1st person singular" or "3rd person · masculine". */
     val subtitle: String = "",
+    /** Authored English translation used by the Sprachgebrauch page's page-level toggle. */
+    @SerialName("subtitle_en")
+    val subtitleEn: String? = null,
     val sortOrder: Int = 0,
     /** The nominative -> accusative -> dative (…) chain for this item. */
     val forms: List<PronounForm> = emptyList(),
@@ -90,5 +100,7 @@ data class ExampleSection(
 @Serializable
 data class PronounSentence(
     val text: String = "",
+    /** Optional authored translation; absent on older format-6 sheets. */
+    val en: String? = null,
     val green: List<String> = emptyList()
 )

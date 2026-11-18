@@ -53,6 +53,12 @@
         }
       ]
     },
+    "GermanReferenceUsageGroup": {
+      "title": "Sprachgebrauch",
+      "screenType": "Format6Screen",
+      "sheetDataType": "Format6",
+      "firestoreDocumentId": "GermanReferenceUsage"
+    },
     "GermanReferencePodcastsGroup": {
       "title": "Podcasts",
       "screenType": "GroupedFormat9Screen",
@@ -241,6 +247,7 @@
         "GermanPrepositionsTeaching",
         "SpanishLanguage",
         "AdjectivesGroup",
+        "GermanReferenceUsageGroup",
         "GermanReferencePronouns",
         "GermanReferencePronounsOpenAI",
         "GermanReferenceObjectPronouns",

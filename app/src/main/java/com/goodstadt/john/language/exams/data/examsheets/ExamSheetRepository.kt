@@ -902,6 +902,7 @@ class ExamSheetRepository @Inject constructor(
                                 .map { sen ->
                                     PronounSentence(
                                         text = sen["text"]?.toString() ?: "",
+                                        en = sen["en"]?.toString(),
                                         green = stringListFrom(sen["green"])
                                     )
                                 }
@@ -914,7 +915,9 @@ class ExamSheetRepository @Inject constructor(
                     PronounPattern(
                         id = patDoc.getString("id") ?: "",
                         chip = patDoc.getString("chip") ?: "",
+                        chipEn = patDoc.getString("chip_en") ?: patDoc.getString("chipEn"),
                         subtitle = patDoc.getString("subtitle") ?: "",
+                        subtitleEn = patDoc.getString("subtitle_en") ?: patDoc.getString("subtitleEn"),
                         sortOrder = (patDoc.getLong("sortOrder") ?: 0L).toInt(),
                         forms = forms,
                         note = patDoc.getString("note") ?: "",
@@ -924,6 +927,7 @@ class ExamSheetRepository @Inject constructor(
                 PronounCategory(
                     id = catDoc.getString("id") ?: "",
                     label = catDoc.getString("label") ?: "",
+                    labelEn = catDoc.getString("label_en") ?: catDoc.getString("labelEn"),
                     sortOrder = (catDoc.getLong("sortOrder") ?: 0L).toInt(),
                     note = catDoc.getString("note") ?: "",
                     patterns = patterns
@@ -963,6 +967,7 @@ class ExamSheetRepository @Inject constructor(
                                     .map { senDoc ->
                                         PronounSentence(
                                             text = senDoc.getString("text") ?: "",
+                                            en = senDoc.getString("en"),
                                             green = senDoc.stringList("green")
                                         )
                                     }
@@ -987,7 +992,9 @@ class ExamSheetRepository @Inject constructor(
                         PronounPattern(
                             id = patDoc.getString("id") ?: "",
                             chip = patDoc.getString("chip") ?: "",
+                            chipEn = patDoc.getString("chip_en") ?: patDoc.getString("chipEn"),
                             subtitle = patDoc.getString("subtitle") ?: "",
+                            subtitleEn = patDoc.getString("subtitle_en") ?: patDoc.getString("subtitleEn"),
                             sortOrder = (patDoc.getLong("sortOrder") ?: 0L).toInt(),
                             forms = forms,
                             note = patDoc.getString("note") ?: "",
@@ -999,6 +1006,7 @@ class ExamSheetRepository @Inject constructor(
                 PronounCategory(
                     id = catDoc.getString("id") ?: "",
                     label = catDoc.getString("label") ?: "",
+                    labelEn = catDoc.getString("label_en") ?: catDoc.getString("labelEn"),
                     sortOrder = (catDoc.getLong("sortOrder") ?: 0L).toInt(),
                     note = catDoc.getString("note") ?: "",
                     patterns = patterns

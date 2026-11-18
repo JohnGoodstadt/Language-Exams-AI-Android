@@ -508,6 +508,7 @@ class FirestoreUploadAdminRepository @Inject constructor(
             stage(catRef, hashMapOf<String, Any>(
                 "id" to cat.optString("id", ""),
                 "label" to cat.optString("label", ""),
+                "label_en" to cat.optString("label_en", ""),
                 "sortOrder" to cat.optInt("sortOrder", ci),
                 "note" to cat.optString("note", "")
             ))
@@ -538,6 +539,7 @@ class FirestoreUploadAdminRepository @Inject constructor(
                         sentenceCount++
                         hashMapOf<String, Any>(
                             "text" to sen.optString("text", ""),
+                            "en" to sen.optString("en", ""),
                             "green" to jsonStringArray(sen.optJSONArray("green"))
                         )
                     }
@@ -551,7 +553,9 @@ class FirestoreUploadAdminRepository @Inject constructor(
                 stage(patRef, hashMapOf<String, Any>(
                     "id" to pat.optString("id", ""),
                     "chip" to pat.optString("chip", ""),
+                    "chip_en" to pat.optString("chip_en", ""),
                     "subtitle" to pat.optString("subtitle", ""),
+                    "subtitle_en" to pat.optString("subtitle_en", ""),
                     "sortOrder" to pat.optInt("sortOrder", pi),
                     "note" to pat.optString("note", ""),
                     "forms" to forms,
@@ -585,6 +589,7 @@ class FirestoreUploadAdminRepository @Inject constructor(
             stage(catRef, hashMapOf<String, Any>(
                 "id" to cat.optString("id", ""),
                 "label" to cat.optString("label", ""),
+                "label_en" to cat.optString("label_en", ""),
                 "sortOrder" to cat.optInt("sortOrder", ci),
                 "note" to cat.optString("note", "")
             ))
@@ -606,7 +611,9 @@ class FirestoreUploadAdminRepository @Inject constructor(
                 stage(patRef, hashMapOf<String, Any>(
                     "id" to pat.optString("id", ""),
                     "chip" to pat.optString("chip", ""),
+                    "chip_en" to pat.optString("chip_en", ""),
                     "subtitle" to pat.optString("subtitle", ""),
+                    "subtitle_en" to pat.optString("subtitle_en", ""),
                     "sortOrder" to pat.optInt("sortOrder", pi),
                     "note" to pat.optString("note", ""),
                     "formCases" to formCases,
@@ -632,6 +639,7 @@ class FirestoreUploadAdminRepository @Inject constructor(
                         stage(senRef, hashMapOf<String, Any>(
                             "index" to ti,
                             "text" to sen.optString("text", ""),
+                            "en" to sen.optString("en", ""),
                             "green" to jsonStringArray(sen.optJSONArray("green"))
                         ))
                         sentenceCount++

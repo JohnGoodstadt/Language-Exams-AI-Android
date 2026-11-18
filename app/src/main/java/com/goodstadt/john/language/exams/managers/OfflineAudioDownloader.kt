@@ -98,6 +98,7 @@ class OfflineAudioDownloader @Inject constructor(
                 "GermanPrepositionsTeaching" to ReferenceFormat.FORMAT6,
                 "GermanA1Adjectives" to ReferenceFormat.VOCAB, "GermanA2Adjectives" to ReferenceFormat.VOCAB,
                 "GermanB1Adjectives" to ReferenceFormat.VOCAB, "GermanB2Adjectives" to ReferenceFormat.VOCAB,
+                "GermanReferenceUsage" to ReferenceFormat.FORMAT6,
                 "GermanReferencePronouns" to ReferenceFormat.FORMAT6,
                 "GermanPronouns2Nominative2" to ReferenceFormat.FORMAT8, "GermanPronouns2Accusative2" to ReferenceFormat.FORMAT8,
                 "GermanPronouns2Dative2" to ReferenceFormat.FORMAT8, "GermanPronouns2Patterns2" to ReferenceFormat.FORMAT8,

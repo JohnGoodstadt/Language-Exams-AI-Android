@@ -74,6 +74,10 @@ sealed class RefScreen(val route: String) {
     object Format6Teaching : RefScreen("format6_teaching_screen/{documentId}") {
         fun createRoute(documentId: String) = "format6_teaching_screen/$documentId"
     }
+    // Separate Android destination prevents saved Pronouns state being restored for Sprachgebrauch.
+    object Format6Usage : RefScreen("format6_usage_screen/{documentId}") {
+        fun createRoute(documentId: String) = "format6_usage_screen/$documentId"
+    }
     object Format8 : RefScreen("format8_screen/{documentId}") {
         fun createRoute(documentId: String) = "format8_screen/$documentId"
     }

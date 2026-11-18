@@ -208,7 +208,8 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceTabContainerViewModel = hilt
             }
 
             ScreenType.FORMAT_6_SCREEN -> definition.firestoreDocumentId?.let { docId ->
-                RefScreen.Format6.createRoute(docId)
+                if (docId == "GermanReferenceUsage") RefScreen.Format6Usage.createRoute(docId)
+                else RefScreen.Format6.createRoute(docId)
             }
 
             ScreenType.FORMAT_6_TEACHING_SCREEN -> definition.firestoreDocumentId?.let { docId ->
@@ -530,6 +531,15 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceTabContainerViewModel = hilt
                     // saveState/restoreState collision that made Prepositions show Pronouns content.
                     composable(
                         route = RefScreen.Format6Teaching.route, // "format6_teaching_screen/{documentId}"
+                        arguments = listOf(navArgument("documentId") { type = NavType.StringType })
+                    ) {
+                        Format6SheetView()
+                    }
+
+                    // Sprachgebrauch shares the format-6 UI but has its own destination so Android's
+                    // saved-state restoration cannot reopen Pronouns content for this tab.
+                    composable(
+                        route = RefScreen.Format6Usage.route,
                         arguments = listOf(navArgument("documentId") { type = NavType.StringType })
                     ) {
                         Format6SheetView()

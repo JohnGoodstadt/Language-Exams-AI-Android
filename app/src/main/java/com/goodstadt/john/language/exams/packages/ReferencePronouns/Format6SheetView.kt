@@ -47,6 +47,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -69,11 +70,13 @@ fun Format6SheetView(viewModel: Format6ViewModel = hiltViewModel()) {
 
         is Format6UiState.Success -> {
             val categories = state.sheet.categories
+            val isUsageReferenceSheet = viewModel.isUsageReferenceSheet
             // Level-1 (category) selection is lifted here so the floating "Q" knows which chip to quiz.
             var selectedCategoryId by rememberSaveable { mutableStateOf(categories.firstOrNull()?.id ?: "") }
             val selectedCategory = categories.firstOrNull { it.id == selectedCategoryId } ?: categories.firstOrNull()
 
             var showTranslateSheet by rememberSaveable { mutableStateOf(false) }
+            var showEnglish by rememberSaveable(state.sheet.sheetname) { mutableStateOf(false) }
             var showQuizSheet by rememberSaveable { mutableStateOf(false) }
             var showUpgradeSheet by rememberSaveable { mutableStateOf(false) }
             val quizSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
@@ -84,6 +87,7 @@ fun Format6SheetView(viewModel: Format6ViewModel = hiltViewModel()) {
                     selectedCategoryId = selectedCategoryId,
                     onCategorySelected = { selectedCategoryId = it },
                     onPlay = viewModel::play,
+                    showEnglish = isUsageReferenceSheet && showEnglish,
                     isCategoryLocked = { index -> viewModel.isCategoryLocked(index) },
                     onLockedTapped = { showUpgradeSheet = true },
                     onChipTapped = { viewModel.recordReferenceTap() }
@@ -108,15 +112,20 @@ fun Format6SheetView(viewModel: Format6ViewModel = hiltViewModel()) {
 
                     // Floating Translate ("T") button, bottom-RIGHT - mirrors the vocab tabs' "T".
                     FloatingActionButton(
-                        onClick = { showTranslateSheet = true },
+                        onClick = {
+                            if (isUsageReferenceSheet) showEnglish = !showEnglish
+                            else showTranslateSheet = true
+                        },
                         shape = CircleShape,
                         containerColor = MaterialTheme.colorScheme.surface,
-                        contentColor = LocalExtendedColors.current.statusOrange,
+                        contentColor = if (isUsageReferenceSheet && showEnglish)
+                            MaterialTheme.colorScheme.onSurfaceVariant
+                        else LocalExtendedColors.current.statusOrange,
                         modifier = Modifier
                             .align(Alignment.BottomEnd)
                             .padding(16.dp)
                     ) {
-                        Icon(imageVector = Icons.Filled.Translate, contentDescription = "Translate")
+                        Icon(imageVector = Icons.Filled.Translate, contentDescription = if (showEnglish) "Show German" else "Show English")
                     }
                 }
             }
@@ -129,7 +138,7 @@ fun Format6SheetView(viewModel: Format6ViewModel = hiltViewModel()) {
             }
 
             // Translate the last sentence played on this screen (blank if none yet).
-            if (showTranslateSheet) {
+            if (showTranslateSheet && !isUsageReferenceSheet) {
                 TranslateSheet(
                     onDismiss = { showTranslateSheet = false },
                     initialText = viewModel.getLatestSentence()
@@ -176,6 +185,7 @@ private fun PronounsContent(
     selectedCategoryId: String,
     onCategorySelected: (String) -> Unit,
     onPlay: (String) -> Unit,
+    showEnglish: Boolean = false,
     isCategoryLocked: (Int) -> Boolean = { false },
     onLockedTapped: () -> Unit = {},
     onChipTapped: () -> Unit = {}
@@ -210,7 +220,7 @@ private fun PronounsContent(
                 FilterChip(
                     selected = !locked && c.id == category.id,
                     onClick = { if (locked) onLockedTapped() else { onChipTapped(); onCategorySelected(c.id) } },
-                    label = { Text(c.label) },
+                    label = { Text(c.displayLabel(showEnglish)) },
                     leadingIcon = if (locked) {
                         { Icon(Icons.Filled.Lock, contentDescription = "Locked", modifier = Modifier.size(16.dp)) }
                     } else null,
@@ -228,7 +238,7 @@ private fun PronounsContent(
                 FilterChip(
                     selected = p.id == pattern?.id,
                     onClick = { onChipTapped(); selectedPatternId = p.id },
-                    label = { Text(p.chip) },
+                    label = { Text(p.displayChip(showEnglish)) },
                     colors = buttonStyleChipColors()
                 )
             }
@@ -238,13 +248,13 @@ private fun PronounsContent(
 
         // Selected pattern detail
         if (pattern != null) {
-            PatternDetail(pattern, onPlay)
+            PatternDetail(pattern, onPlay, showEnglish)
         }
     }
 }
 
 @Composable
-private fun PatternDetail(pattern: PronounPattern, onPlay: (String) -> Unit) {
+private fun PatternDetail(pattern: PronounPattern, onPlay: (String) -> Unit, showEnglish: Boolean) {
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
         contentPadding = PaddingValues(16.dp),
@@ -252,10 +262,11 @@ private fun PatternDetail(pattern: PronounPattern, onPlay: (String) -> Unit) {
     ) {
         item {
             Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
-                Text(pattern.chip, style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.Bold)
-                if (pattern.subtitle.isNotBlank()) {
+                Text(pattern.displayChip(showEnglish), style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.Bold)
+                val subtitle = if (showEnglish) pattern.subtitleEn?.takeIf { it.isNotBlank() } ?: pattern.subtitle else pattern.subtitle
+                if (subtitle.isNotBlank()) {
                     Text(
-                        pattern.subtitle,
+                        subtitle,
                         style = MaterialTheme.typography.bodyMedium,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
@@ -279,7 +290,7 @@ private fun PatternDetail(pattern: PronounPattern, onPlay: (String) -> Unit) {
         pattern.sections.forEach { section ->
             item(key = "h-${pattern.id}-${section.header}") { SectionHeader(section) }
             items(section.sentences, key = { "${pattern.id}-${section.header}-${it.text}" }) { s ->
-                SentenceRow(s, onPlay)
+                SentenceRow(s, onPlay, showEnglish)
             }
         }
 
@@ -300,10 +311,13 @@ private fun SectionHeader(section: ExampleSection) {
 }
 
 @Composable
-private fun SentenceRow(sentence: PronounSentence, onPlay: (String) -> Unit) {
-    // Tap the row to hear it - no play button, no translation (words are simple), like the reference lists.
+private fun SentenceRow(sentence: PronounSentence, onPlay: (String) -> Unit, showEnglish: Boolean) {
+    // Display authored English when requested, but always play the original German sentence.
+    val visibleText = if (showEnglish && !sentence.en.isNullOrBlank())
+        AnnotatedString(sentence.en.orEmpty())
+    else Format6Style.highlightGreenWords(sentence.text, sentence.green)
     Text(
-        Format6Style.highlightGreenWords(sentence.text, sentence.green),
+        visibleText,
         style = MaterialTheme.typography.titleMedium,
         modifier = Modifier
             .fillMaxWidth()
@@ -311,6 +325,12 @@ private fun SentenceRow(sentence: PronounSentence, onPlay: (String) -> Unit) {
             .padding(vertical = 6.dp)
     )
 }
+
+private fun PronounCategory.displayLabel(showEnglish: Boolean): String =
+    if (showEnglish) labelEn?.takeIf { it.isNotBlank() } ?: label else label
+
+private fun PronounPattern.displayChip(showEnglish: Boolean): String =
+    if (showEnglish) chipEn?.takeIf { it.isNotBlank() } ?: chip else chip
 
 @Composable
 private fun FormChain(forms: List<PronounForm>) {

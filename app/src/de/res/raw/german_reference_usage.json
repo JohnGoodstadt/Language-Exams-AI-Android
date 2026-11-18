@@ -8,12 +8,14 @@
     {
       "id": "a1-category-1",
       "label": "Satzbau",
+      "label_en": "Sentence structure",
       "sortOrder": 1,
       "note": "A1 · Sätze bauen. Wähle ein Sprachmuster und tippe auf einen Beispielsatz.",
       "patterns": [
         {
           "id": "a1-c1-p1",
           "chip": "Verb an Position 2",
+          "chip_en": "verb in position 2",
           "subtitle": "Im Hauptsatz steht das konjugierte Verb an zweiter Stelle.",
           "subtitle_en": "In a main clause, the conjugated verb is in second position.",
           "sortOrder": 1,
@@ -47,22 +49,30 @@
                 {
                   "text": "Heute trinke ich im Café einen Tee.",
                   "en": "Today I am having tea in the café.",
-                  "green": ["trinke ich"]
+                  "green": [
+                    "trinke ich"
+                  ]
                 },
                 {
                   "text": "Am Bahnhof wartet meine Freundin auf mich.",
                   "en": "My friend is waiting for me at the station.",
-                  "green": []
+                  "green": [
+                    "wartet"
+                  ]
                 },
                 {
                   "text": "Morgen fliegen wir nach Berlin.",
                   "en": "Tomorrow we are flying to Berlin.",
-                  "green": []
+                  "green": [
+                    "fliegen"
+                  ]
                 },
                 {
                   "text": "Nach der Arbeit kauft Paul noch Brot.",
                   "en": "After work, Paul is buying some more bread.",
-                  "green": []
+                  "green": [
+                    "kauft"
+                  ]
                 }
               ]
             }
@@ -71,6 +81,7 @@
         {
           "id": "a1-c1-p2",
           "chip": "Fragen",
+          "chip_en": "questions",
           "subtitle": "In W-Fragen steht das Verb nach dem Fragewort; Ja-Nein-Fragen beginnen mit dem Verb.",
           "subtitle_en": "In W-questions, the verb follows the question word; yes-no questions begin with the verb.",
           "sortOrder": 2,
@@ -105,22 +116,31 @@
                 {
                   "text": "Wann fährt der nächste Zug?",
                   "en": "When does the next train leave?",
-                  "green": ["fährt"]
+                  "green": [
+                    "fährt"
+                  ]
                 },
                 {
                   "text": "Möchtest du noch einen Kaffee?",
                   "en": "Would you like another coffee?",
-                  "green": ["Möchtest du"]
+                  "green": [
+                    "Möchtest du"
+                  ]
                 },
                 {
                   "text": "Wo ist der Ausgang?",
                   "en": "Where is the exit?",
-                  "green": []
+                  "green": [
+                    "Wo",
+                    "ist"
+                  ]
                 },
                 {
                   "text": "Haben Sie einen Tisch für zwei Personen?",
                   "en": "Do you have a table for two?",
-                  "green": []
+                  "green": [
+                    "Haben"
+                  ]
                 }
               ]
             }
@@ -129,6 +149,7 @@
         {
           "id": "a1-c1-p3",
           "chip": "nicht / kein",
+          "chip_en": "not / no",
           "subtitle": "Nicht verneint eine Handlung oder Eigenschaft; kein verneint ein Nomen.",
           "subtitle_en": "Nicht negates an action or quality; kein negates a noun.",
           "sortOrder": 3,
@@ -195,6 +216,7 @@
         {
           "id": "a1-c1-p4",
           "chip": "Zeit zuerst",
+          "chip_en": "time first",
           "subtitle": "Beginnt der Satz mit einer Zeitangabe, folgt das Verb vor dem Subjekt.",
           "subtitle_en": "When the sentence begins with a time expression, the verb comes before the subject.",
           "sortOrder": 4,
@@ -223,27 +245,42 @@
                 {
                   "text": "Heute esse ich mit Freunden im Café.",
                   "en": "Today I am eating with friends in the café.",
-                  "green": []
+                  "green": [
+                    "Heute",
+                    "esse"
+                  ]
                 },
                 {
                   "text": "Morgen fährt mein Bruder nach Hamburg.",
                   "en": "Tomorrow my brother is travelling to Hamburg.",
-                  "green": []
+                  "green": [
+                    "Morgen",
+                    "fährt"
+                  ]
                 },
                 {
                   "text": "Um acht Uhr beginnt der Unterricht.",
                   "en": "The class begins at eight o’clock.",
-                  "green": []
+                  "green": [
+                    "Um acht Uhr",
+                    "beginnt"
+                  ]
                 },
                 {
                   "text": "Nach der Arbeit gehe ich einkaufen.",
                   "en": "After work I go shopping.",
-                  "green": []
+                  "green": [
+                    "Nach der Arbeit",
+                    "gehe"
+                  ]
                 },
                 {
                   "text": "Am Wochenende besuchen wir unsere Eltern.",
                   "en": "At the weekend we visit our parents.",
-                  "green": []
+                  "green": [
+                    "Am Wochenende",
+                    "besuchen"
+                  ]
                 }
               ]
             }
@@ -252,6 +289,7 @@
         {
           "id": "a1-c1-p5",
           "chip": "Modalverb + Infinitiv",
+          "chip_en": "modal verb + infinitive",
           "subtitle": "Das Modalverb steht an Position 2, der Infinitiv am Ende.",
           "subtitle_en": "The modal verb is in position 2, and the infinitive is at the end.",
           "sortOrder": 5,
@@ -279,27 +317,42 @@
                 {
                   "text": "Wir möchten am Fenster sitzen.",
                   "en": "We would like to sit by the window.",
-                  "green": []
+                  "green": [
+                    "möchten",
+                    "sitzen"
+                  ]
                 },
                 {
                   "text": "Du kannst am Automaten ein Ticket kaufen.",
                   "en": "You can buy a ticket from the machine.",
-                  "green": []
+                  "green": [
+                    "kannst",
+                    "kaufen"
+                  ]
                 },
                 {
                   "text": "Sie will morgen ihre Freundin besuchen.",
                   "en": "She wants to visit her friend tomorrow.",
-                  "green": []
+                  "green": [
+                    "will",
+                    "besuchen"
+                  ]
                 },
                 {
                   "text": "Darf ich hier meinen Koffer abstellen?",
                   "en": "May I leave my suitcase here?",
-                  "green": []
+                  "green": [
+                    "Darf",
+                    "abstellen"
+                  ]
                 },
                 {
                   "text": "Die Kinder sollen jetzt schlafen gehen.",
                   "en": "The children should go to sleep now.",
-                  "green": []
+                  "green": [
+                    "sollen",
+                    "schlafen gehen"
+                  ]
                 }
               ]
             }
@@ -308,6 +361,7 @@
         {
           "id": "a1-c1-p6",
           "chip": "trennbares Verb",
+          "chip_en": "separable verb",
           "subtitle": "Im Hauptsatz steht die Vorsilbe am Satzende.",
           "subtitle_en": "In a main clause, the prefix is placed at the end of the sentence.",
           "sortOrder": 6,
@@ -335,27 +389,42 @@
                 {
                   "text": "Der Zug fährt um neun Uhr ab.",
                   "en": "The train departs at nine.",
-                  "green": []
+                  "green": [
+                    "fährt",
+                    "ab"
+                  ]
                 },
                 {
                   "text": "Ich rufe dich heute Abend an.",
                   "en": "I will call you this evening.",
-                  "green": []
+                  "green": [
+                    "rufe",
+                    "an"
+                  ]
                 },
                 {
                   "text": "Wir kaufen am Samstag im Supermarkt ein.",
                   "en": "We shop at the supermarket on Saturday.",
-                  "green": []
+                  "green": [
+                    "ein",
+                    "kaufen"
+                  ]
                 },
                 {
                   "text": "Bitte mach das Fenster zu.",
                   "en": "Please close the window.",
-                  "green": []
+                  "green": [
+                    "zu",
+                    "mach"
+                  ]
                 },
                 {
                   "text": "Am Flughafen gibt er seinen Koffer auf.",
                   "en": "At the airport, he checks in his suitcase.",
-                  "green": []
+                  "green": [
+                    "auf",
+                    "gibt"
+                  ]
                 }
               ]
             }
@@ -364,6 +433,7 @@
         {
           "id": "a1-c1-p7",
           "chip": "einen",
+          "chip_en": "a; one",
           "subtitle": "Ein maskulines direktes Objekt steht im Akkusativ mit einen.",
           "subtitle_en": "A masculine direct object uses einen in the accusative.",
           "sortOrder": 7,
@@ -432,12 +502,14 @@
     {
       "id": "a1-category-2",
       "label": "Gegenwart",
+      "label_en": "Present tense",
       "sortOrder": 2,
       "note": "A1 · Verben in der Gegenwart. Wähle ein Sprachmuster und tippe auf einen Beispielsatz.",
       "patterns": [
         {
           "id": "a1-c2-p1",
           "chip": "ich / du",
+          "chip_en": "I / you",
           "subtitle": "Bei ich endet das Verb meist auf -e, bei du auf -st.",
           "subtitle_en": "With ich, the verb usually ends in -e; with du, it ends in -st.",
           "sortOrder": 8,
@@ -507,6 +579,7 @@
         {
           "id": "a1-c2-p2",
           "chip": "er / sie / es",
+          "chip_en": "he / she / it",
           "subtitle": "Bei er, sie und es endet das Verb meist auf -t.",
           "subtitle_en": "With er, sie and es, the verb usually ends in -t.",
           "sortOrder": 9,
@@ -572,6 +645,7 @@
         {
           "id": "a1-c2-p3",
           "chip": "wir / ihr",
+          "chip_en": "we / you all",
           "subtitle": "Bei wir endet das Verb auf -en, bei ihr auf -t.",
           "subtitle_en": "With wir, the verb ends in -en; with ihr, it ends in -t.",
           "sortOrder": 10,
@@ -637,6 +711,7 @@
         {
           "id": "a1-c2-p4",
           "chip": "sein",
+          "chip_en": "to be",
           "subtitle": "Sein ist unregelmäßig.",
           "subtitle_en": "Sein is irregular.",
           "sortOrder": 11,
@@ -664,27 +739,37 @@
                 {
                   "text": "Ich bin am Bahnhof.",
                   "en": "I am at the station.",
-                  "green": []
+                  "green": [
+                    "bin"
+                  ]
                 },
                 {
                   "text": "Du bist heute sehr früh.",
                   "en": "You are very early today.",
-                  "green": []
+                  "green": [
+                    "bist"
+                  ]
                 },
                 {
                   "text": "Er ist mein Nachbar.",
                   "en": "He is my neighbour.",
-                  "green": []
+                  "green": [
+                    "ist"
+                  ]
                 },
                 {
                   "text": "Wir sind im Café.",
                   "en": "We are in the café.",
-                  "green": []
+                  "green": [
+                    "sind"
+                  ]
                 },
                 {
                   "text": "Seid ihr schon am Flughafen?",
                   "en": "Are you already at the airport?",
-                  "green": []
+                  "green": [
+                    "Seid"
+                  ]
                 }
               ]
             }
@@ -693,6 +778,7 @@
         {
           "id": "a1-c2-p5",
           "chip": "haben",
+          "chip_en": "to have",
           "subtitle": "Haben ist unregelmäßig.",
           "subtitle_en": "Haben is irregular.",
           "sortOrder": 12,
@@ -720,17 +806,23 @@
                 {
                   "text": "Ich habe eine Reservierung.",
                   "en": "I have a reservation.",
-                  "green": []
+                  "green": [
+                    "habe"
+                  ]
                 },
                 {
                   "text": "Hast du dein Ticket?",
                   "en": "Do you have your ticket?",
-                  "green": []
+                  "green": [
+                    "Hast"
+                  ]
                 },
                 {
                   "text": "Sie hat heute Geburtstag.",
                   "en": "It is her birthday today.",
-                  "green": []
+                  "green": [
+                    "hat"
+                  ]
                 },
                 {
                   "text": "Wir haben noch zehn Minuten.",
@@ -742,7 +834,9 @@
                 {
                   "text": "Habt ihr Hunger?",
                   "en": "Are you hungry?",
-                  "green": []
+                  "green": [
+                    "Habt"
+                  ]
                 }
               ]
             }
@@ -751,6 +845,7 @@
         {
           "id": "a1-c2-p6",
           "chip": "Vokalwechsel",
+          "chip_en": "vowel change",
           "subtitle": "Manche Verben ändern bei du und er, sie, es ihren Vokal.",
           "subtitle_en": "Some verbs change their vowel with du and er, sie, es.",
           "sortOrder": 13,
@@ -778,27 +873,37 @@
                 {
                   "text": "Du fährst heute mit dem Zug.",
                   "en": "You are travelling by train today.",
-                  "green": []
+                  "green": [
+                    "fährst"
+                  ]
                 },
                 {
                   "text": "Er liest die Speisekarte.",
                   "en": "He reads the menu.",
-                  "green": []
+                  "green": [
+                    "liest"
+                  ]
                 },
                 {
                   "text": "Sie schläft im Flugzeug.",
                   "en": "She sleeps on the plane.",
-                  "green": []
+                  "green": [
+                    "schläft"
+                  ]
                 },
                 {
                   "text": "Du nimmst einen Kaffee.",
                   "en": "You are having a coffee.",
-                  "green": []
+                  "green": [
+                    "nimmst"
+                  ]
                 },
                 {
                   "text": "Mein Freund spricht sehr gut Deutsch.",
                   "en": "My friend speaks German very well.",
-                  "green": []
+                  "green": [
+                    "spricht"
+                  ]
                 }
               ]
             }
@@ -807,6 +912,7 @@
         {
           "id": "a1-c2-p7",
           "chip": "arbeitet",
+          "chip_en": "works",
           "subtitle": "Nach einem Stamm auf -t oder -d steht ein zusätzliches e.",
           "subtitle_en": "After a stem ending in -t or -d, an extra e is added.",
           "sortOrder": 14,
@@ -874,12 +980,14 @@
     {
       "id": "a1-category-3",
       "label": "Vergangenheit",
+      "label_en": "Past tense",
       "sortOrder": 3,
       "note": "A1 · Über gestern sprechen. Wähle ein Sprachmuster und tippe auf einen Beispielsatz.",
       "patterns": [
         {
           "id": "a1-c3-p1",
           "chip": "haben + Partizip",
+          "chip_en": "have + past participle",
           "subtitle": "Die meisten Verben bilden das Perfekt mit haben.",
           "subtitle_en": "Most verbs form the perfect tense with haben.",
           "sortOrder": 15,
@@ -923,7 +1031,10 @@
                 {
                   "text": "Ich habe im Café einen Kuchen bestellt.",
                   "en": "I ordered a cake in the café.",
-                  "green": []
+                  "green": [
+                    "habe",
+                    "bestellt"
+                  ]
                 },
                 {
                   "text": "Wir haben am Bahnhof lange gewartet.",
@@ -935,7 +1046,10 @@
                 {
                   "text": "Sie hat ihre Freundin angerufen.",
                   "en": "She called her friend.",
-                  "green": []
+                  "green": [
+                    "hat",
+                    "angerufen"
+                  ]
                 }
               ]
             }
@@ -944,6 +1058,7 @@
         {
           "id": "a1-c3-p2",
           "chip": "sein + Partizip",
+          "chip_en": "be + past participle",
           "subtitle": "Bewegungsverben bilden das Perfekt oft mit sein.",
           "subtitle_en": "Verbs of movement often form the perfect tense with sein.",
           "sortOrder": 16,
@@ -979,22 +1094,34 @@
                 {
                   "text": "Ich bin gestern spät angekommen.",
                   "en": "I arrived late yesterday.",
-                  "green": []
+                  "green": [
+                    "bin",
+                    "angekommen"
+                  ]
                 },
                 {
                   "text": "Sie ist zum Flughafen gefahren.",
                   "en": "She travelled to the airport.",
-                  "green": []
+                  "green": [
+                    "ist",
+                    "gefahren"
+                  ]
                 },
                 {
                   "text": "Wir sind im Park spazieren gegangen.",
                   "en": "We went for a walk in the park.",
-                  "green": []
+                  "green": [
+                    "sind",
+                    "spazieren gegangen"
+                  ]
                 },
                 {
                   "text": "Der Zug ist pünktlich abgefahren.",
                   "en": "The train departed on time.",
-                  "green": []
+                  "green": [
+                    "ist",
+                    "abgefahren"
+                  ]
                 }
               ]
             }
@@ -1003,6 +1130,7 @@
         {
           "id": "a1-c3-p3",
           "chip": "war / hatte",
+          "chip_en": "was / had",
           "subtitle": "Sein und haben stehen in Erzählungen oft im Präteritum.",
           "subtitle_en": "Sein and haben often appear in the simple past in narratives.",
           "sortOrder": 17,
@@ -1068,6 +1196,7 @@
         {
           "id": "a1-c3-p4",
           "chip": "Satzklammer",
+          "chip_en": "sentence bracket",
           "subtitle": "Das Hilfsverb steht vorne, das Partizip am Ende.",
           "subtitle_en": "The auxiliary verb comes near the beginning, and the participle comes at the end.",
           "sortOrder": 18,
@@ -1095,27 +1224,42 @@
                 {
                   "text": "Im Café habe ich einen Tee bestellt.",
                   "en": "I ordered a tea in the café.",
-                  "green": []
+                  "green": [
+                    "habe",
+                    "bestellt"
+                  ]
                 },
                 {
                   "text": "Am Bahnhof hat sie ein Ticket gekauft.",
                   "en": "She bought a ticket at the station.",
-                  "green": []
+                  "green": [
+                    "hat",
+                    "gekauft"
+                  ]
                 },
                 {
                   "text": "Wir haben unseren Flug online gebucht.",
                   "en": "We booked our flight online.",
-                  "green": []
+                  "green": [
+                    "haben",
+                    "gebucht"
+                  ]
                 },
                 {
                   "text": "Mein Freund hat mich gestern angerufen.",
                   "en": "My friend called me yesterday.",
-                  "green": []
+                  "green": [
+                    "hat",
+                    "angerufen"
+                  ]
                 },
                 {
                   "text": "Die Gäste haben die Rechnung zusammen bezahlt.",
                   "en": "The guests paid the bill together.",
-                  "green": []
+                  "green": [
+                    "haben",
+                    "bezahlt"
+                  ]
                 }
               ]
             }
@@ -1124,6 +1268,7 @@
         {
           "id": "a1-c3-p5",
           "chip": "unregelmäßiges Partizip",
+          "chip_en": "irregular past participle",
           "subtitle": "Starke Verben können ihren Vokal ändern.",
           "subtitle_en": "Strong verbs may change their vowel.",
           "sortOrder": 19,
@@ -1151,27 +1296,42 @@
                 {
                   "text": "Ich habe am Bahnhof meine Freundin getroffen.",
                   "en": "I met my friend at the station.",
-                  "green": []
+                  "green": [
+                    "habe",
+                    "getroffen"
+                  ]
                 },
                 {
                   "text": "Sie hat im Zug ein Buch gelesen.",
                   "en": "She read a book on the train.",
-                  "green": []
+                  "green": [
+                    "hat",
+                    "gelesen"
+                  ]
                 },
                 {
                   "text": "Wir haben im Café viel gesprochen.",
                   "en": "We talked a lot in the café.",
-                  "green": []
+                  "green": [
+                    "haben",
+                    "gesprochen"
+                  ]
                 },
                 {
                   "text": "Er hat sein Handy zu Hause vergessen.",
                   "en": "He forgot his phone at home.",
-                  "green": []
+                  "green": [
+                    "hat",
+                    "vergessen"
+                  ]
                 },
                 {
                   "text": "Die Kinder haben ein Eis gegessen.",
                   "en": "The children ate an ice cream.",
-                  "green": []
+                  "green": [
+                    "haben",
+                    "gegessen"
+                  ]
                 }
               ]
             }
@@ -1180,6 +1340,7 @@
         {
           "id": "a1-c3-p6",
           "chip": "ohne ge-",
+          "chip_en": "without ge-",
           "subtitle": "Verben mit be-, ver- und er- bilden das Partizip ohne ge-.",
           "subtitle_en": "Verbs beginning with be-, ver- and er- form the participle without ge-.",
           "sortOrder": 20,
@@ -1207,27 +1368,42 @@
                 {
                   "text": "Wir haben den Zug verpasst.",
                   "en": "We missed the train.",
-                  "green": []
+                  "green": [
+                    "haben",
+                    "verpasst"
+                  ]
                 },
                 {
                   "text": "Sie hat den Kellner bezahlt.",
                   "en": "She paid the waiter.",
-                  "green": []
+                  "green": [
+                    "hat",
+                    "bezahlt"
+                  ]
                 },
                 {
                   "text": "Ich habe meine Freunde besucht.",
                   "en": "I visited my friends.",
-                  "green": []
+                  "green": [
+                    "habe",
+                    "besucht"
+                  ]
                 },
                 {
                   "text": "Der Flug hat pünktlich begonnen.",
                   "en": "The flight began on time.",
-                  "green": []
+                  "green": [
+                    "hat",
+                    "begonnen"
+                  ]
                 },
                 {
                   "text": "Er hat mir die Situation erklärt.",
                   "en": "He explained the situation to me.",
-                  "green": []
+                  "green": [
+                    "hat",
+                    "erklärt"
+                  ]
                 }
               ]
             }
@@ -1238,12 +1414,14 @@
     {
       "id": "a1-category-4",
       "label": "Fragen",
+      "label_en": "Questions",
       "sortOrder": 4,
       "note": "A1 · Fragen & Kurzantworten. Wähle ein Sprachmuster und tippe auf einen Beispielsatz.",
       "patterns": [
         {
           "id": "a1-c4-p1",
           "chip": "W-Frage",
+          "chip_en": "W-question",
           "subtitle": "Das Fragewort steht zuerst, danach folgt das Verb.",
           "subtitle_en": "The question word comes first, followed by the verb.",
           "sortOrder": 21,
@@ -1295,12 +1473,18 @@
                 {
                   "text": "Wie viel kostet der Kaffee?",
                   "en": "How much does the coffee cost?",
-                  "green": []
+                  "green": [
+                    "Wie viel",
+                    "kostet"
+                  ]
                 },
                 {
                   "text": "Welcher Zug fährt nach Köln?",
                   "en": "Which train goes to Cologne?",
-                  "green": []
+                  "green": [
+                    "Welcher",
+                    "fährt"
+                  ]
                 }
               ]
             }
@@ -1309,6 +1493,7 @@
         {
           "id": "a1-c4-p2",
           "chip": "Ja/Nein-Frage",
+          "chip_en": "yes/no question",
           "subtitle": "Das konjugierte Verb steht am Satzanfang.",
           "subtitle_en": "The conjugated verb is placed at the beginning of the sentence.",
           "sortOrder": 22,
@@ -1349,17 +1534,23 @@
                 {
                   "text": "Fährt dieser Zug zum Flughafen?",
                   "en": "Does this train go to the airport?",
-                  "green": []
+                  "green": [
+                    "Fährt"
+                  ]
                 },
                 {
                   "text": "Möchten Sie noch etwas trinken?",
                   "en": "Would you like anything else to drink?",
-                  "green": []
+                  "green": [
+                    "Möchten"
+                  ]
                 },
                 {
                   "text": "Kann ich mit Karte bezahlen?",
                   "en": "Can I pay by card?",
-                  "green": []
+                  "green": [
+                    "Kann"
+                  ]
                 }
               ]
             }
@@ -1368,6 +1559,7 @@
         {
           "id": "a1-c4-p3",
           "chip": "Kurzantwort",
+          "chip_en": "short answer",
           "subtitle": "Nach ja oder nein folgt ein normaler Aussagesatz.",
           "subtitle_en": "After yes or no, a normal statement follows.",
           "sortOrder": 23,
@@ -1411,17 +1603,23 @@
                 {
                   "text": "Möchtest du Kaffee? – Ja, gern.",
                   "en": "Would you like coffee? – Yes, please.",
-                  "green": []
+                  "green": [
+                    "Ja"
+                  ]
                 },
                 {
                   "text": "Fährt der Zug um neun? – Nein, erst um zehn.",
                   "en": "Does the train leave at nine? – No, not until ten.",
-                  "green": []
+                  "green": [
+                    "Nein"
+                  ]
                 },
                 {
                   "text": "Ist der Platz frei? – Ja, bitte.",
                   "en": "Is this seat free? – Yes, please.",
-                  "green": []
+                  "green": [
+                    "Ja"
+                  ]
                 }
               ]
             }
@@ -1432,12 +1630,14 @@
     {
       "id": "a1-category-5",
       "label": "Präpositionen",
+      "label_en": "Prepositions",
       "sortOrder": 5,
       "note": "A1 · in, auf, mit & Co.. Wähle ein Sprachmuster und tippe auf einen Beispielsatz.",
       "patterns": [
         {
           "id": "a1-c5-p1",
           "chip": "in + Dativ",
+          "chip_en": "in + dative",
           "subtitle": "Wo? beschreibt eine Position und verlangt hier den Dativ.",
           "subtitle_en": "Wo? describes a location and requires the dative here.",
           "sortOrder": 24,
@@ -1503,6 +1703,7 @@
         {
           "id": "a1-c5-p2",
           "chip": "mit + Dativ",
+          "chip_en": "with + dative",
           "subtitle": "Mit verlangt immer den Dativ.",
           "subtitle_en": "Mit always requires the dative.",
           "sortOrder": 25,
@@ -1568,6 +1769,7 @@
         {
           "id": "a1-c5-p3",
           "chip": "auf + Akkusativ",
+          "chip_en": "onto + accusative",
           "subtitle": "Wohin? beschreibt eine Richtung und verlangt hier den Akkusativ.",
           "subtitle_en": "Wohin? describes a direction and requires the accusative here.",
           "sortOrder": 26,
@@ -1633,6 +1835,7 @@
         {
           "id": "a1-c5-p4",
           "chip": "für + Akkusativ",
+          "chip_en": "for + accusative",
           "subtitle": "Für verlangt immer den Akkusativ.",
           "subtitle_en": "Für always requires the accusative.",
           "sortOrder": 27,
@@ -1698,6 +1901,7 @@
         {
           "id": "a1-c5-p5",
           "chip": "zu + Dativ",
+          "chip_en": "to + dative",
           "subtitle": "Zu verlangt den Dativ; zu dem wird zum.",
           "subtitle_en": "Zu requires the dative; zu dem contracts to zum.",
           "sortOrder": 28,
@@ -1724,12 +1928,16 @@
                 {
                   "text": "Ich gehe zur Kasse.",
                   "en": "I am going to the till.",
-                  "green": []
+                  "green": [
+                    "zur"
+                  ]
                 },
                 {
                   "text": "Fährst du zum Bahnhof?",
                   "en": "Are you travelling to the station?",
-                  "green": []
+                  "green": [
+                    "zum"
+                  ]
                 },
                 {
                   "text": "Sie geht zu ihrer Freundin.",
@@ -1741,7 +1949,9 @@
                 {
                   "text": "Wir müssen zum Flugsteig zwölf.",
                   "en": "We have to go to gate twelve.",
-                  "green": []
+                  "green": [
+                    "zum"
+                  ]
                 },
                 {
                   "text": "Der Kellner kommt zu unserem Tisch.",
@@ -1757,6 +1967,7 @@
         {
           "id": "a1-c5-p6",
           "chip": "nach",
+          "chip_en": "to; after",
           "subtitle": "Nach steht vor Städten und den meisten Ländern ohne Artikel.",
           "subtitle_en": "Nach is used before cities and most countries without an article.",
           "sortOrder": 29,
@@ -1822,6 +2033,7 @@
         {
           "id": "a1-c5-p7",
           "chip": "aus + Dativ",
+          "chip_en": "from + dative",
           "subtitle": "Aus beschreibt eine Herkunft und verlangt den Dativ.",
           "subtitle_en": "Aus describes an origin and requires the dative.",
           "sortOrder": 30,
@@ -1887,6 +2099,7 @@
         {
           "id": "a1-c5-p8",
           "chip": "bei + Dativ",
+          "chip_en": "at; with + dative",
           "subtitle": "Bei verlangt immer den Dativ.",
           "subtitle_en": "Bei always requires the dative.",
           "sortOrder": 31,
@@ -1927,7 +2140,9 @@
                 {
                   "text": "Wir treffen uns beim Bahnhof.",
                   "en": "We are meeting near the station.",
-                  "green": []
+                  "green": [
+                    "beim"
+                  ]
                 },
                 {
                   "text": "Er arbeitet bei einer Fluggesellschaft.",
@@ -1939,7 +2154,9 @@
                 {
                   "text": "Beim Café ist eine Bushaltestelle.",
                   "en": "There is a bus stop near the café.",
-                  "green": []
+                  "green": [
+                    "Beim"
+                  ]
                 }
               ]
             }
@@ -1948,6 +2165,7 @@
         {
           "id": "a1-c5-p9",
           "chip": "um",
+          "chip_en": "at",
           "subtitle": "Uhrzeiten stehen mit um.",
           "subtitle_en": "Times are used with um.",
           "sortOrder": 32,
@@ -2013,6 +2231,7 @@
         {
           "id": "a1-c5-p10",
           "chip": "am",
+          "chip_en": "on",
           "subtitle": "Wochentage stehen mit am.",
           "subtitle_en": "Days of the week are used with am.",
           "sortOrder": 33,
@@ -2080,12 +2299,14 @@
     {
       "id": "a1-category-6",
       "label": "Verbinden",
+      "label_en": "Connecting ideas",
       "sortOrder": 6,
       "note": "A1 · Sätze verbinden. Wähle ein Sprachmuster und tippe auf einen Beispielsatz.",
       "patterns": [
         {
           "id": "a1-c6-p1",
           "chip": "und / oder",
+          "chip_en": "and / or",
           "subtitle": "Und und oder ändern die Wortstellung nicht.",
           "subtitle_en": "Und and oder do not change the word order.",
           "sortOrder": 34,
@@ -2151,6 +2372,7 @@
         {
           "id": "a1-c6-p2",
           "chip": "aber / denn",
+          "chip_en": "but / because",
           "subtitle": "Aber und denn verbinden zwei Hauptsätze.",
           "subtitle_en": "Aber and denn connect two main clauses.",
           "sortOrder": 35,
@@ -2216,6 +2438,7 @@
         {
           "id": "a1-c6-p3",
           "chip": "weil",
+          "chip_en": "because",
           "subtitle": "Nach weil steht das konjugierte Verb am Ende.",
           "subtitle_en": "After weil, the conjugated verb is placed at the end.",
           "sortOrder": 36,
@@ -2283,6 +2506,7 @@
         {
           "id": "a1-c6-p4",
           "chip": "dass",
+          "chip_en": "that",
           "subtitle": "Nach dass steht das konjugierte Verb am Ende.",
           "subtitle_en": "After dass, the conjugated verb is placed at the end.",
           "sortOrder": 37,
@@ -2350,6 +2574,7 @@
         {
           "id": "a1-c6-p5",
           "chip": "deshalb",
+          "chip_en": "therefore; that is why",
           "subtitle": "Nach deshalb folgt das Verb vor dem Subjekt.",
           "subtitle_en": "After deshalb, the verb comes before the subject.",
           "sortOrder": 38,
@@ -2417,6 +2642,7 @@
         {
           "id": "a1-c6-p6",
           "chip": "wenn",
+          "chip_en": "if; when",
           "subtitle": "Steht der wenn-Satz zuerst, folgt im Hauptsatz sofort das Verb.",
           "subtitle_en": "When the wenn clause comes first, the main clause begins immediately with the verb.",
           "sortOrder": 39,
@@ -2487,12 +2713,14 @@
     {
       "id": "a2-category-1",
       "label": "Zukunft",
+      "label_en": "Future",
       "sortOrder": 7,
       "note": "A2 · Über morgen sprechen. Wähle ein Sprachmuster und tippe auf einen Beispielsatz.",
       "patterns": [
         {
           "id": "a2-c1-p1",
           "chip": "werden + Infinitiv",
+          "chip_en": "will + infinitive",
           "subtitle": "Das Futur I besteht aus werden und einem Infinitiv am Satzende.",
           "subtitle_en": "The future tense consists of werden and an infinitive at the end.",
           "sortOrder": 1,
@@ -2551,7 +2779,10 @@
                 {
                   "text": "Der Flug wird um 18 Uhr landen.",
                   "en": "The flight will land at 6 p.m.",
-                  "green": []
+                  "green": [
+                    "wird",
+                    "landen"
+                  ]
                 }
               ]
             }
@@ -2560,6 +2791,7 @@
         {
           "id": "a2-c1-p2",
           "chip": "Präsens + Zeitangabe",
+          "chip_en": "present + future time",
           "subtitle": "Bei festen Plänen verwendet man häufig das Präsens.",
           "subtitle_en": "The present tense is often used for fixed plans.",
           "sortOrder": 2,
@@ -2595,22 +2827,34 @@
                 {
                   "text": "Heute Abend essen wir mit Freunden.",
                   "en": "This evening we are eating with friends.",
-                  "green": []
+                  "green": [
+                    "Heute Abend",
+                    "essen"
+                  ]
                 },
                 {
                   "text": "Am Freitag fliegt sie nach Madrid.",
                   "en": "She is flying to Madrid on Friday.",
-                  "green": []
+                  "green": [
+                    "Am Freitag",
+                    "fliegt"
+                  ]
                 },
                 {
                   "text": "In einer Stunde fährt mein Zug.",
                   "en": "My train leaves in an hour.",
-                  "green": []
+                  "green": [
+                    "In einer Stunde",
+                    "fährt"
+                  ]
                 },
                 {
                   "text": "Nächste Woche beginnt mein neuer Kurs.",
                   "en": "My new course starts next week.",
-                  "green": []
+                  "green": [
+                    "Nächste Woche",
+                    "beginnt"
+                  ]
                 }
               ]
             }
@@ -2619,6 +2863,7 @@
         {
           "id": "a2-c1-p3",
           "chip": "nicht werden",
+          "chip_en": "will not",
           "subtitle": "Nicht steht im Futur vor dem Infinitiv.",
           "subtitle_en": "In the future tense, nicht comes before the infinitive.",
           "sortOrder": 3,
@@ -2647,7 +2892,11 @@
                 {
                   "text": "Ich werde heute keinen Kaffee trinken.",
                   "en": "I will not drink coffee today.",
-                  "green": []
+                  "green": [
+                    "werde",
+                    "keinen",
+                    "trinken"
+                  ]
                 },
                 {
                   "text": "Wir werden den frühen Zug nicht erreichen.",
@@ -2686,6 +2935,7 @@
         {
           "id": "a2-c1-p4",
           "chip": "Frage im Futur",
+          "chip_en": "future question",
           "subtitle": "In der Frage steht werden am Anfang oder nach dem Fragewort.",
           "subtitle_en": "In a question, werden comes first or follows the question word.",
           "sortOrder": 4,
@@ -2722,22 +2972,34 @@
                 {
                   "text": "Werdet ihr am Bahnhof auf uns warten?",
                   "en": "Will you wait for us at the station?",
-                  "green": []
+                  "green": [
+                    "Werdet",
+                    "warten"
+                  ]
                 },
                 {
                   "text": "Wo wirst du in Berlin übernachten?",
                   "en": "Where will you stay in Berlin?",
-                  "green": []
+                  "green": [
+                    "wirst",
+                    "übernachten"
+                  ]
                 },
                 {
                   "text": "Wird das Café morgen geöffnet sein?",
                   "en": "Will the café be open tomorrow?",
-                  "green": []
+                  "green": [
+                    "Wird",
+                    "sein"
+                  ]
                 },
                 {
                   "text": "Wann werden deine Freunde ankommen?",
                   "en": "When will your friends arrive?",
-                  "green": []
+                  "green": [
+                    "werden",
+                    "ankommen"
+                  ]
                 }
               ]
             }
@@ -2746,6 +3008,7 @@
         {
           "id": "a2-c1-p5",
           "chip": "sein im Futur",
+          "chip_en": "be in the future",
           "subtitle": "Auch sein steht als Infinitiv am Satzende.",
           "subtitle_en": "Sein also appears as an infinitive at the end.",
           "sortOrder": 5,
@@ -2814,12 +3077,14 @@
     {
       "id": "a2-category-2",
       "label": "Gerade jetzt",
+      "label_en": "Right now",
       "sortOrder": 8,
       "note": "A2 · Was gerade passiert. Wähle ein Sprachmuster und tippe auf einen Beispielsatz.",
       "patterns": [
         {
           "id": "a2-c2-p1",
           "chip": "gerade",
+          "chip_en": "right now",
           "subtitle": "Gerade zeigt, dass eine Handlung jetzt stattfindet.",
           "subtitle_en": "Gerade shows that an action is taking place now.",
           "sortOrder": 6,
@@ -2885,6 +3150,7 @@
         {
           "id": "a2-c2-p2",
           "chip": "am … sein",
+          "chip_en": "be …-ing",
           "subtitle": "Die am-Form ist umgangssprachlich und schreibt den Infinitiv groß.",
           "subtitle_en": "The am form is colloquial and capitalises the infinitive.",
           "sortOrder": 7,
@@ -2950,6 +3216,7 @@
         {
           "id": "a2-c2-p3",
           "chip": "dabei sein",
+          "chip_en": "be in the process of",
           "subtitle": "Dabei sein, etwas zu tun betont eine laufende Handlung.",
           "subtitle_en": "Dabei sein, etwas zu tun emphasises an action in progress.",
           "sortOrder": 8,
@@ -3017,6 +3284,7 @@
         {
           "id": "a2-c2-p4",
           "chip": "beim",
+          "chip_en": "while; in the process of",
           "subtitle": "Beim plus substantivierter Infinitiv beschreibt eine gleichzeitige Handlung.",
           "subtitle_en": "Beim plus a nominalised infinitive describes a simultaneous action.",
           "sortOrder": 9,
@@ -3082,6 +3350,7 @@
         {
           "id": "a2-c2-p5",
           "chip": "noch",
+          "chip_en": "still",
           "subtitle": "Noch zeigt, dass eine Handlung weiterläuft.",
           "subtitle_en": "Noch shows that an action is continuing.",
           "sortOrder": 10,
@@ -3147,6 +3416,7 @@
         {
           "id": "a2-c2-p6",
           "chip": "Was machst du gerade?",
+          "chip_en": "What are you doing right now?",
           "subtitle": "Auch Fragen nach laufenden Handlungen stehen im Präsens.",
           "subtitle_en": "Questions about actions in progress also use the present tense.",
           "sortOrder": 11,
@@ -3223,12 +3493,14 @@
     {
       "id": "a2-category-3",
       "label": "Vergleiche",
+      "label_en": "Comparisons",
       "sortOrder": 9,
       "note": "A2 · Vergleichen: größer, am größten. Wähle ein Sprachmuster und tippe auf einen Beispielsatz.",
       "patterns": [
         {
           "id": "a2-c3-p1",
           "chip": "-er als",
+          "chip_en": "-er than",
           "subtitle": "Der Komparativ steht mit als.",
           "subtitle_en": "The comparative is used with als.",
           "sortOrder": 12,
@@ -3294,6 +3566,7 @@
         {
           "id": "a2-c3-p2",
           "chip": "so … wie",
+          "chip_en": "as … as",
           "subtitle": "Gleichheit drückt man mit so und wie aus.",
           "subtitle_en": "Equality is expressed with so and wie.",
           "sortOrder": 13,
@@ -3364,6 +3637,7 @@
         {
           "id": "a2-c3-p3",
           "chip": "Umlaut",
+          "chip_en": "umlaut",
           "subtitle": "Viele kurze Adjektive erhalten im Komparativ einen Umlaut.",
           "subtitle_en": "Many short adjectives take an umlaut in the comparative.",
           "sortOrder": 14,
@@ -3390,27 +3664,37 @@
                 {
                   "text": "Der Bahnhof ist näher als der Flughafen.",
                   "en": "The station is nearer than the airport.",
-                  "green": []
+                  "green": [
+                    "näher"
+                  ]
                 },
                 {
                   "text": "Heute ist es wärmer als gestern.",
                   "en": "Today it is warmer than yesterday.",
-                  "green": []
+                  "green": [
+                    "wärmer"
+                  ]
                 },
                 {
                   "text": "Dieser Kaffee ist stärker als der Tee.",
                   "en": "This coffee is stronger than the tea.",
-                  "green": []
+                  "green": [
+                    "stärker"
+                  ]
                 },
                 {
                   "text": "Meine Freundin läuft schneller als ich.",
                   "en": "My friend runs faster than I do.",
-                  "green": []
+                  "green": [
+                    "schneller"
+                  ]
                 },
                 {
                   "text": "Der spätere Zug ist länger als der erste.",
                   "en": "The later train is longer than the first one.",
-                  "green": []
+                  "green": [
+                    "länger"
+                  ]
                 }
               ]
             }
@@ -3419,6 +3703,7 @@
         {
           "id": "a2-c3-p4",
           "chip": "am …-sten",
+          "chip_en": "the most",
           "subtitle": "Nach dem Verb steht der Superlativ mit am.",
           "subtitle_en": "After the verb, the superlative is used with am.",
           "sortOrder": 15,
@@ -3486,6 +3771,7 @@
         {
           "id": "a2-c3-p5",
           "chip": "der/die/das …-ste",
+          "chip_en": "the …-est",
           "subtitle": "Vor einem Nomen erhält der Superlativ eine Adjektivendung.",
           "subtitle_en": "Before a noun, the superlative takes an adjective ending.",
           "sortOrder": 16,
@@ -3520,17 +3806,23 @@
                 {
                   "text": "Sie nimmt den frühesten Zug.",
                   "en": "She takes the earliest train.",
-                  "green": []
+                  "green": [
+                    "frühesten"
+                  ]
                 },
                 {
                   "text": "Wir sitzen am ruhigsten Tisch.",
                   "en": "We are sitting at the quietest table.",
-                  "green": []
+                  "green": [
+                    "ruhigsten"
+                  ]
                 },
                 {
                   "text": "Paul trägt den schwersten Koffer.",
                   "en": "Paul is carrying the heaviest suitcase.",
-                  "green": []
+                  "green": [
+                    "schwersten"
+                  ]
                 },
                 {
                   "text": "Das ist die kürzeste Verbindung zum Flughafen.",
@@ -3547,6 +3839,7 @@
         {
           "id": "a2-c3-p6",
           "chip": "gut – besser – am besten",
+          "chip_en": "good – better – best",
           "subtitle": "Gut wird unregelmäßig gesteigert.",
           "subtitle_en": "Gut has irregular comparative forms.",
           "sortOrder": 17,
@@ -3590,7 +3883,9 @@
                 {
                   "text": "Meine beste Freundin holt mich ab.",
                   "en": "My best friend is picking me up.",
-                  "green": []
+                  "green": [
+                    "beste"
+                  ]
                 },
                 {
                   "text": "Der zweite Zug passt besser.",
@@ -3614,6 +3909,7 @@
         {
           "id": "a2-c3-p7",
           "chip": "gern – lieber – am liebsten",
+          "chip_en": "gladly – prefer – most like",
           "subtitle": "Gern wird unregelmäßig gesteigert.",
           "subtitle_en": "Gern has irregular comparative forms.",
           "sortOrder": 18,
@@ -3684,6 +3980,7 @@
         {
           "id": "a2-c3-p8",
           "chip": "hoch / teuer",
+          "chip_en": "high / expensive",
           "subtitle": "Hoch und teuer verlieren im Komparativ einen Buchstaben.",
           "subtitle_en": "Hoch and teuer lose a letter in the comparative.",
           "sortOrder": 19,
@@ -3711,27 +4008,37 @@
                 {
                   "text": "Der Aussichtsturm ist höher als das Hotel.",
                   "en": "The observation tower is higher than the hotel.",
-                  "green": []
+                  "green": [
+                    "höher"
+                  ]
                 },
                 {
                   "text": "Flugtickets sind heute teurer.",
                   "en": "Plane tickets are more expensive today.",
-                  "green": []
+                  "green": [
+                    "teurer"
+                  ]
                 },
                 {
                   "text": "Unser Tisch liegt eine Etage höher.",
                   "en": "Our table is one floor higher.",
-                  "green": []
+                  "green": [
+                    "höher"
+                  ]
                 },
                 {
                   "text": "Das Taxi war teurer als der Zug.",
                   "en": "The taxi was more expensive than the train.",
-                  "green": []
+                  "green": [
+                    "teurer"
+                  ]
                 },
                 {
                   "text": "Ist der Preis jetzt noch höher?",
                   "en": "Is the price even higher now?",
-                  "green": []
+                  "green": [
+                    "höher"
+                  ]
                 }
               ]
             }
@@ -3740,6 +4047,7 @@
         {
           "id": "a2-c3-p9",
           "chip": "größere",
+          "chip_en": "larger",
           "subtitle": "Vor einem Nomen braucht der Komparativ eine Adjektivendung.",
           "subtitle_en": "Before a noun, the comparative needs an adjective ending.",
           "sortOrder": 20,
@@ -3766,27 +4074,37 @@
                 {
                   "text": "Am Bahnhof gibt es eine größere Bäckerei.",
                   "en": "There is a larger bakery at the station.",
-                  "green": []
+                  "green": [
+                    "größere"
+                  ]
                 },
                 {
                   "text": "Wir brauchen einen größeren Tisch.",
                   "en": "We need a larger table.",
-                  "green": []
+                  "green": [
+                    "größeren"
+                  ]
                 },
                 {
                   "text": "Sie nimmt die größere Reisetasche.",
                   "en": "She takes the larger travel bag.",
-                  "green": []
+                  "green": [
+                    "größere"
+                  ]
                 },
                 {
                   "text": "Meine Freunde suchen ein größeres Hotelzimmer.",
                   "en": "My friends are looking for a larger hotel room.",
-                  "green": []
+                  "green": [
+                    "größeres"
+                  ]
                 },
                 {
                   "text": "Der Flughafen hat eine größere Wartehalle.",
                   "en": "The airport has a larger waiting hall.",
-                  "green": []
+                  "green": [
+                    "größere"
+                  ]
                 }
               ]
             }
@@ -3797,12 +4115,14 @@
     {
       "id": "a2-category-4",
       "label": "Modalverben",
+      "label_en": "Modal verbs",
       "sortOrder": 10,
       "note": "A2 · können, müssen, wollen …. Wähle ein Sprachmuster und tippe auf einen Beispielsatz.",
       "patterns": [
         {
           "id": "a2-c4-p1",
           "chip": "können",
+          "chip_en": "can; be able to",
           "subtitle": "Können drückt eine Fähigkeit oder Möglichkeit aus.",
           "subtitle_en": "Können expresses an ability or possibility.",
           "sortOrder": 21,
@@ -3830,7 +4150,10 @@
                 {
                   "text": "Kann ich hier einen Kaffee bekommen?",
                   "en": "Can I get a coffee here?",
-                  "green": []
+                  "green": [
+                    "Kann",
+                    "bekommen"
+                  ]
                 },
                 {
                   "text": "Wir können den Zug noch erreichen.",
@@ -3842,7 +4165,10 @@
                 {
                   "text": "Meine Freundin kann uns abholen.",
                   "en": "My friend can pick us up.",
-                  "green": []
+                  "green": [
+                    "kann",
+                    "abholen"
+                  ]
                 },
                 {
                   "text": "Können Sie mir den Weg zeigen?",
@@ -3854,7 +4180,10 @@
                 {
                   "text": "Am Flughafen kann man Geld wechseln.",
                   "en": "You can exchange money at the airport.",
-                  "green": []
+                  "green": [
+                    "kann",
+                    "wechseln"
+                  ]
                 }
               ]
             }
@@ -3863,6 +4192,7 @@
         {
           "id": "a2-c4-p2",
           "chip": "müssen",
+          "chip_en": "must; have to",
           "subtitle": "Müssen drückt eine Notwendigkeit aus.",
           "subtitle_en": "Müssen expresses necessity.",
           "sortOrder": 22,
@@ -3897,7 +4227,10 @@
                 {
                   "text": "Ich muss die Rechnung bezahlen.",
                   "en": "I have to pay the bill.",
-                  "green": []
+                  "green": [
+                    "muss",
+                    "bezahlen"
+                  ]
                 },
                 {
                   "text": "Meine Freunde müssen früh aufstehen.",
@@ -3909,12 +4242,17 @@
                 {
                   "text": "Musst du deinen Pass zeigen?",
                   "en": "Do you have to show your passport?",
-                  "green": []
+                  "green": [
+                    "Musst",
+                    "zeigen"
+                  ]
                 },
                 {
                   "text": "Der Koffer muss auf die Waage.",
                   "en": "The suitcase has to go on the scales.",
-                  "green": []
+                  "green": [
+                    "muss"
+                  ]
                 }
               ]
             }
@@ -3923,6 +4261,7 @@
         {
           "id": "a2-c4-p3",
           "chip": "dürfen",
+          "chip_en": "may; be allowed to",
           "subtitle": "Dürfen beschreibt eine Erlaubnis; nicht dürfen ein Verbot.",
           "subtitle_en": "Dürfen describes permission; nicht dürfen describes a prohibition.",
           "sortOrder": 23,
@@ -3950,12 +4289,18 @@
                 {
                   "text": "Darf ich am Fenster sitzen?",
                   "en": "May I sit by the window?",
-                  "green": []
+                  "green": [
+                    "Darf",
+                    "sitzen"
+                  ]
                 },
                 {
                   "text": "Hier darf man nicht rauchen.",
                   "en": "Smoking is not allowed here.",
-                  "green": []
+                  "green": [
+                    "darf",
+                    "rauchen"
+                  ]
                 },
                 {
                   "text": "Wir dürfen schon einsteigen.",
@@ -3974,7 +4319,10 @@
                 {
                   "text": "Sie darf den Koffer als Handgepäck mitnehmen.",
                   "en": "She may take the suitcase as hand luggage.",
-                  "green": []
+                  "green": [
+                    "darf",
+                    "mitnehmen"
+                  ]
                 }
               ]
             }
@@ -3983,6 +4331,7 @@
         {
           "id": "a2-c4-p4",
           "chip": "wollen",
+          "chip_en": "want to",
           "subtitle": "Wollen drückt einen Wunsch oder Plan aus.",
           "subtitle_en": "Wollen expresses a wish or plan.",
           "sortOrder": 24,
@@ -4010,7 +4359,9 @@
                 {
                   "text": "Ich will einen Kaffee ohne Milch.",
                   "en": "I want a coffee without milk.",
-                  "green": []
+                  "green": [
+                    "will"
+                  ]
                 },
                 {
                   "text": "Wir wollen den Zug um acht nehmen.",
@@ -4029,12 +4380,18 @@
                 {
                   "text": "Willst du am Flughafen etwas essen?",
                   "en": "Do you want to eat something at the airport?",
-                  "green": []
+                  "green": [
+                    "Willst",
+                    "essen"
+                  ]
                 },
                 {
                   "text": "Sie will morgen nach Hause fahren.",
                   "en": "She wants to go home tomorrow.",
-                  "green": []
+                  "green": [
+                    "will",
+                    "fahren"
+                  ]
                 }
               ]
             }
@@ -4043,6 +4400,7 @@
         {
           "id": "a2-c4-p5",
           "chip": "sollen",
+          "chip_en": "should; be supposed to",
           "subtitle": "Sollen drückt einen Rat oder Auftrag aus.",
           "subtitle_en": "Sollen expresses advice or an instruction.",
           "sortOrder": 25,
@@ -4070,7 +4428,10 @@
                 {
                   "text": "Ich soll meine Freundin am Gleis treffen.",
                   "en": "I am supposed to meet my friend at the platform.",
-                  "green": []
+                  "green": [
+                    "soll",
+                    "treffen"
+                  ]
                 },
                 {
                   "text": "Wir sollen zwei Stunden früher am Flughafen sein.",
@@ -4082,12 +4443,18 @@
                 {
                   "text": "Soll ich den Kellner rufen?",
                   "en": "Shall I call the waiter?",
-                  "green": []
+                  "green": [
+                    "Soll",
+                    "rufen"
+                  ]
                 },
                 {
                   "text": "Du sollst Paul zurückrufen.",
                   "en": "You should call Paul back.",
-                  "green": []
+                  "green": [
+                    "sollst",
+                    "zurückrufen"
+                  ]
                 },
                 {
                   "text": "Die Gäste sollen am Eingang warten.",
@@ -4103,6 +4470,7 @@
         {
           "id": "a2-c4-p6",
           "chip": "möchten",
+          "chip_en": "would like",
           "subtitle": "Möchten ist die höfliche Form von wollen.",
           "subtitle_en": "Möchten is the polite form of wollen.",
           "sortOrder": 26,
@@ -4137,17 +4505,26 @@
                 {
                   "text": "Möchtest du am Bahnhof abgeholt werden?",
                   "en": "Would you like to be picked up at the station?",
-                  "green": []
+                  "green": [
+                    "Möchtest",
+                    "abgeholt werden"
+                  ]
                 },
                 {
                   "text": "Meine Freundin möchte am Fenster sitzen.",
                   "en": "My friend would like to sit by the window.",
-                  "green": []
+                  "green": [
+                    "möchte",
+                    "sitzen"
+                  ]
                 },
                 {
                   "text": "Ich möchte meinen Flug umbuchen.",
                   "en": "I would like to change my flight.",
-                  "green": []
+                  "green": [
+                    "möchte",
+                    "umbuchen"
+                  ]
                 },
                 {
                   "text": "Möchten Sie getrennt bezahlen?",
@@ -4163,6 +4540,7 @@
         {
           "id": "a2-c4-p7",
           "chip": "er kann",
+          "chip_en": "he can",
           "subtitle": "Modalverben haben bei er, sie und es kein zusätzliches t.",
           "subtitle_en": "Modal verbs take no additional t with er, sie and es.",
           "sortOrder": 27,
@@ -4231,6 +4609,7 @@
         {
           "id": "a2-c4-p8",
           "chip": "Modalfrage",
+          "chip_en": "modal question",
           "subtitle": "In Ja-Nein-Fragen steht das Modalverb zuerst.",
           "subtitle_en": "In yes-no questions, the modal verb comes first.",
           "sortOrder": 28,
@@ -4258,27 +4637,37 @@
                 {
                   "text": "Dürfen wir schon einsteigen?",
                   "en": "May we board now?",
-                  "green": []
+                  "green": [
+                    "Dürfen"
+                  ]
                 },
                 {
                   "text": "Möchtest du noch etwas bestellen?",
                   "en": "Would you like to order anything else?",
-                  "green": []
+                  "green": [
+                    "Möchtest"
+                  ]
                 },
                 {
                   "text": "Müssen Sie in Frankfurt umsteigen?",
                   "en": "Do you have to change in Frankfurt?",
-                  "green": []
+                  "green": [
+                    "Müssen"
+                  ]
                 },
                 {
                   "text": "Kann deine Freundin heute kommen?",
                   "en": "Can your friend come today?",
-                  "green": []
+                  "green": [
+                    "Kann"
+                  ]
                 },
                 {
                   "text": "Sollen wir am Café warten?",
                   "en": "Shall we wait by the café?",
-                  "green": []
+                  "green": [
+                    "Sollen"
+                  ]
                 }
               ]
             }
@@ -4287,6 +4676,7 @@
         {
           "id": "a2-c4-p9",
           "chip": "nicht müssen",
+          "chip_en": "do not have to",
           "subtitle": "Nicht steht im Mittelfeld, der Infinitiv bleibt am Ende.",
           "subtitle_en": "Nicht is in the middle section, while the infinitive remains at the end.",
           "sortOrder": 29,
@@ -4355,6 +4745,7 @@
         {
           "id": "a2-c4-p10",
           "chip": "abholen",
+          "chip_en": "collect; pick up",
           "subtitle": "Nach einem Modalverb bleibt ein trennbares Verb zusammen.",
           "subtitle_en": "After a modal verb, a separable verb remains together.",
           "sortOrder": 30,
@@ -4423,12 +4814,14 @@
     {
       "id": "a2-category-5",
       "label": "Verb + Fall",
+      "label_en": "Verb + case",
       "sortOrder": 11,
       "note": "A2 · Wem oder wen? Verben. Wähle ein Sprachmuster und tippe auf einen Beispielsatz.",
       "patterns": [
         {
           "id": "a2-c5-p1",
           "chip": "helfen + Dativ",
+          "chip_en": "help + dative",
           "subtitle": "Helfen verlangt den Dativ.",
           "subtitle_en": "Helfen requires the dative.",
           "sortOrder": 31,
@@ -4464,7 +4857,10 @@
                 {
                   "text": "Der Mitarbeiter hilft mir am Automaten.",
                   "en": "The employee helps me at the machine.",
-                  "green": []
+                  "green": [
+                    "hilft",
+                    "mir"
+                  ]
                 },
                 {
                   "text": "Wir helfen unseren Freunden mit dem Gepäck.",
@@ -4483,7 +4879,10 @@
                 {
                   "text": "Am Flughafen hilft uns eine Mitarbeiterin.",
                   "en": "An employee helps us at the airport.",
-                  "green": []
+                  "green": [
+                    "hilft",
+                    "uns"
+                  ]
                 }
               ]
             }
@@ -4492,6 +4891,7 @@
         {
           "id": "a2-c5-p2",
           "chip": "gefallen + Dativ",
+          "chip_en": "appeal to + dative",
           "subtitle": "Die Person, die etwas mag, steht bei gefallen im Dativ.",
           "subtitle_en": "With gefallen, the person who likes something is in the dative.",
           "sortOrder": 32,
@@ -4519,27 +4919,42 @@
                 {
                   "text": "Das neue Café gefällt mir.",
                   "en": "I like the new café.",
-                  "green": []
+                  "green": [
+                    "gefällt",
+                    "mir"
+                  ]
                 },
                 {
                   "text": "Wie gefällt dir der Bahnhof?",
                   "en": "How do you like the station?",
-                  "green": []
+                  "green": [
+                    "gefällt",
+                    "dir"
+                  ]
                 },
                 {
                   "text": "Meinen Freunden gefällt das Hotel.",
                   "en": "My friends like the hotel.",
-                  "green": []
+                  "green": [
+                    "gefällt",
+                    "Meinen Freunden"
+                  ]
                 },
                 {
                   "text": "Der Sitz am Fenster gefällt meiner Mutter.",
                   "en": "My mother likes the seat by the window.",
-                  "green": []
+                  "green": [
+                    "gefällt",
+                    "meiner Mutter"
+                  ]
                 },
                 {
                   "text": "Uns gefällt die ruhige Musik.",
                   "en": "We like the quiet music.",
-                  "green": []
+                  "green": [
+                    "gefällt",
+                    "Uns"
+                  ]
                 }
               ]
             }
@@ -4548,6 +4963,7 @@
         {
           "id": "a2-c5-p3",
           "chip": "warten auf",
+          "chip_en": "wait for",
           "subtitle": "Warten steht mit auf plus Akkusativ.",
           "subtitle_en": "Warten is used with auf plus the accusative.",
           "sortOrder": 33,
@@ -4617,6 +5033,7 @@
         {
           "id": "a2-c5-p4",
           "chip": "denken an",
+          "chip_en": "think about",
           "subtitle": "Denken steht mit an plus Akkusativ.",
           "subtitle_en": "Denken is used with an plus the accusative.",
           "sortOrder": 34,
@@ -4684,6 +5101,7 @@
         {
           "id": "a2-c5-p5",
           "chip": "sich freuen auf",
+          "chip_en": "look forward to",
           "subtitle": "Sich freuen auf beschreibt Vorfreude.",
           "subtitle_en": "Sich freuen auf describes looking forward to something.",
           "sortOrder": 35,
@@ -4754,6 +5172,7 @@
         {
           "id": "a2-c5-p6",
           "chip": "vergessen, zu",
+          "chip_en": "forget to",
           "subtitle": "Nach vergessen kann ein Infinitiv mit zu stehen.",
           "subtitle_en": "Vergessen can be followed by an infinitive with zu.",
           "sortOrder": 36,
@@ -4796,7 +5215,10 @@
                 {
                   "text": "Meine Freundin vergisst oft, mich anzurufen.",
                   "en": "My friend often forgets to call me.",
-                  "green": []
+                  "green": [
+                    "vergisst",
+                    "anzurufen"
+                  ]
                 },
                 {
                   "text": "Hast du vergessen, den Kaffee zu bezahlen?",
@@ -4820,6 +5242,7 @@
         {
           "id": "a2-c5-p7",
           "chip": "anfangen, zu",
+          "chip_en": "start to",
           "subtitle": "Nach anfangen kann ein Infinitiv mit zu stehen.",
           "subtitle_en": "Anfangen can be followed by an infinitive with zu.",
           "sortOrder": 37,
@@ -4868,7 +5291,10 @@
                 {
                   "text": "Wann fängt der Film an?",
                   "en": "When does the film begin?",
-                  "green": []
+                  "green": [
+                    "fängt",
+                    "an"
+                  ]
                 },
                 {
                   "text": "Es fängt an, am Flughafen zu regnen.",
@@ -4884,6 +5310,7 @@
         {
           "id": "a2-c5-p8",
           "chip": "geben: Dativ + Akkusativ",
+          "chip_en": "give: dative + accusative",
           "subtitle": "Die Person steht im Dativ, die Sache im Akkusativ.",
           "subtitle_en": "The person is in the dative, and the thing is in the accusative.",
           "sortOrder": 38,
@@ -4911,12 +5338,20 @@
                 {
                   "text": "Ich gebe dem Kellner das Geld.",
                   "en": "I give the waiter the money.",
-                  "green": []
+                  "green": [
+                    "gebe",
+                    "dem Kellner",
+                    "das Geld"
+                  ]
                 },
                 {
                   "text": "Sie gibt ihrer Freundin das Ticket.",
                   "en": "She gives her friend the ticket.",
-                  "green": []
+                  "green": [
+                    "gibt",
+                    "ihrer Freundin",
+                    "das Ticket"
+                  ]
                 },
                 {
                   "text": "Wir geben dem Fahrer unsere Adresse.",
@@ -4928,12 +5363,20 @@
                 {
                   "text": "Gibst du mir bitte die Speisekarte?",
                   "en": "Will you please give me the menu?",
-                  "green": []
+                  "green": [
+                    "Gibst",
+                    "mir",
+                    "die Speisekarte"
+                  ]
                 },
                 {
                   "text": "Der Mitarbeiter gibt den Reisenden neue Bordkarten.",
                   "en": "The employee gives the passengers new boarding passes.",
-                  "green": []
+                  "green": [
+                    "gibt",
+                    "den Reisenden",
+                    "neue Bordkarten"
+                  ]
                 }
               ]
             }
@@ -4942,6 +5385,7 @@
         {
           "id": "a2-c5-p9",
           "chip": "sich interessieren für",
+          "chip_en": "be interested in",
           "subtitle": "Sich interessieren steht mit für plus Akkusativ.",
           "subtitle_en": "Sich interessieren is used with für plus the accusative.",
           "sortOrder": 39,
@@ -5014,12 +5458,14 @@
     {
       "id": "a2-category-6",
       "label": "Nebensätze",
+      "label_en": "Subordinate clauses",
       "sortOrder": 12,
       "note": "A2 · weil, dass, wenn. Wähle ein Sprachmuster und tippe auf einen Beispielsatz.",
       "patterns": [
         {
           "id": "a2-c6-p1",
           "chip": "weil",
+          "chip_en": "because",
           "subtitle": "Weil leitet einen Nebensatz mit dem Verb am Ende ein.",
           "subtitle_en": "Weil introduces a subordinate clause with the verb at the end.",
           "sortOrder": 40,
@@ -5086,6 +5532,7 @@
         {
           "id": "a2-c6-p2",
           "chip": "obwohl",
+          "chip_en": "although",
           "subtitle": "Obwohl leitet einen Nebensatz mit dem Verb am Ende ein.",
           "subtitle_en": "Obwohl introduces a subordinate clause with the verb at the end.",
           "sortOrder": 41,
@@ -5154,6 +5601,7 @@
         {
           "id": "a2-c6-p3",
           "chip": "deshalb",
+          "chip_en": "therefore; that is why",
           "subtitle": "Nach deshalb folgt das Verb vor dem Subjekt.",
           "subtitle_en": "After deshalb, the verb comes before the subject.",
           "sortOrder": 42,
@@ -5221,6 +5669,7 @@
         {
           "id": "a2-c6-p4",
           "chip": "trotzdem",
+          "chip_en": "nevertheless",
           "subtitle": "Nach trotzdem folgt das Verb vor dem Subjekt.",
           "subtitle_en": "After trotzdem, the verb comes before the subject.",
           "sortOrder": 43,
@@ -5288,6 +5737,7 @@
         {
           "id": "a2-c6-p5",
           "chip": "wenn: Bedingung",
+          "chip_en": "if: condition",
           "subtitle": "Wenn mit Präsens beschreibt eine reale Bedingung.",
           "subtitle_en": "Wenn with the present tense describes a real condition.",
           "sortOrder": 44,
@@ -5356,6 +5806,7 @@
         {
           "id": "a2-c6-p6",
           "chip": "wenn: Wiederholung",
+          "chip_en": "whenever",
           "subtitle": "Wenn kann ein wiederholtes Ereignis beschreiben.",
           "subtitle_en": "Wenn can describe a repeated event.",
           "sortOrder": 45,
@@ -5424,6 +5875,7 @@
         {
           "id": "a2-c6-p7",
           "chip": "damit",
+          "chip_en": "so that",
           "subtitle": "Damit beschreibt einen Zweck; das Verb steht am Ende.",
           "subtitle_en": "Damit describes a purpose; the verb is placed at the end.",
           "sortOrder": 46,
@@ -5490,6 +5942,7 @@
         {
           "id": "a2-c6-p8",
           "chip": "dass",
+          "chip_en": "that",
           "subtitle": "Dass leitet eine Aussage mit dem Verb am Ende ein.",
           "subtitle_en": "Dass introduces a statement with the verb at the end.",
           "sortOrder": 47,
@@ -5556,6 +6009,7 @@
         {
           "id": "a2-c6-p9",
           "chip": "wenn am Ende",
+          "chip_en": "if at the end",
           "subtitle": "Der wenn-Satz kann auch nach dem Hauptsatz stehen.",
           "subtitle_en": "The wenn-clause can also follow the main clause.",
           "sortOrder": 48,
@@ -5622,6 +6076,7 @@
         {
           "id": "a2-c6-p10",
           "chip": "sondern",
+          "chip_en": "but rather",
           "subtitle": "Sondern folgt auf eine Verneinung und korrigiert die Aussage.",
           "subtitle_en": "Sondern follows a negation and corrects the statement.",
           "sortOrder": 49,
@@ -5690,12 +6145,14 @@
     {
       "id": "b1-category-1",
       "label": "Früher",
+      "label_en": "In the past",
       "sortOrder": 13,
       "note": "B1 · Von früher erzählen. Wähle ein Sprachmuster und tippe auf einen Beispielsatz.",
       "patterns": [
         {
           "id": "b1-c1-p1",
           "chip": "damals",
+          "chip_en": "back then; at that time",
           "subtitle": "zu einer früheren Zeit; zu jener Zeit",
           "subtitle_en": "at an earlier time; at that time",
           "sortOrder": 1,
@@ -5761,6 +6218,7 @@
         {
           "id": "b1-c1-p2",
           "chip": "deshalb",
+          "chip_en": "therefore; that is why",
           "subtitle": "aus diesem Grund; danach folgen Verb und Subjekt",
           "subtitle_en": "for this reason; the verb and subject follow",
           "sortOrder": 2,
@@ -5826,6 +6284,7 @@
         {
           "id": "b1-c1-p3",
           "chip": "als",
+          "chip_en": "when",
           "subtitle": "leitet ein einmaliges Ereignis oder einen Zeitraum in der Vergangenheit ein",
           "subtitle_en": "introduces a single event or period in the past",
           "sortOrder": 3,
@@ -5891,6 +6350,7 @@
         {
           "id": "b1-c1-p4",
           "chip": "nachdem",
+          "chip_en": "after",
           "subtitle": "zeigt, dass eine vergangene Handlung vor einer anderen geschah",
           "subtitle_en": "shows that one past action happened before another",
           "sortOrder": 4,
@@ -5958,12 +6418,14 @@
     {
       "id": "b1-category-2",
       "label": "Was wäre, wenn?",
+      "label_en": "What if?",
       "sortOrder": 14,
       "note": "B1 · Was wäre, wenn …?. Wähle ein Sprachmuster und tippe auf einen Beispielsatz.",
       "patterns": [
         {
           "id": "b1-c2-p1",
           "chip": "würde",
+          "chip_en": "would",
           "subtitle": "bildet mit einem Infinitiv häufig den Konjunktiv II",
           "subtitle_en": "often forms the subjunctive II with an infinitive",
           "sortOrder": 5,
@@ -6031,6 +6493,7 @@
         {
           "id": "b1-c2-p2",
           "chip": "hätte",
+          "chip_en": "would have; had",
           "subtitle": "Konjunktiv II von haben",
           "subtitle_en": "subjunctive II of haben",
           "sortOrder": 6,
@@ -6101,6 +6564,7 @@
         {
           "id": "b1-c2-p3",
           "chip": "wäre",
+          "chip_en": "would be; were",
           "subtitle": "Konjunktiv II von sein",
           "subtitle_en": "subjunctive II of sein",
           "sortOrder": 7,
@@ -6168,6 +6632,7 @@
         {
           "id": "b1-c2-p4",
           "chip": "könnte",
+          "chip_en": "could",
           "subtitle": "Konjunktiv II von können; oft für höfliche Bitten",
           "subtitle_en": "subjunctive II of können; often used for polite requests",
           "sortOrder": 8,
@@ -6234,6 +6699,7 @@
         {
           "id": "b1-c2-p5",
           "chip": "käme",
+          "chip_en": "would come",
           "subtitle": "Konjunktiv II von kommen",
           "subtitle_en": "subjunctive II of kommen",
           "sortOrder": 9,
@@ -6302,12 +6768,14 @@
     {
       "id": "b1-category-3",
       "label": "Passiv",
+      "label_en": "Passive voice",
       "sortOrder": 15,
       "note": "B1 · Was gemacht wird. Wähle ein Sprachmuster und tippe auf einen Beispielsatz.",
       "patterns": [
         {
           "id": "b1-c3-p1",
           "chip": "wird",
+          "chip_en": "is being; is",
           "subtitle": "Vorgangspassiv im Präsens: wird plus Partizip II",
           "subtitle_en": "present process passive: wird plus past participle",
           "sortOrder": 10,
@@ -6378,6 +6846,7 @@
         {
           "id": "b1-c3-p2",
           "chip": "werden",
+          "chip_en": "are being; be",
           "subtitle": "Passiv im Plural oder nach einem Modalverb",
           "subtitle_en": "passive in the plural or after a modal verb",
           "sortOrder": 11,
@@ -6446,6 +6915,7 @@
         {
           "id": "b1-c3-p3",
           "chip": "wurde",
+          "chip_en": "was; were",
           "subtitle": "Vorgangspassiv im Präteritum",
           "subtitle_en": "process passive in the simple past",
           "sortOrder": 12,
@@ -6514,6 +6984,7 @@
         {
           "id": "b1-c3-p4",
           "chip": "worden",
+          "chip_en": "been",
           "subtitle": "Passiv im Perfekt: ist plus Partizip II plus worden",
           "subtitle_en": "perfect passive: ist plus past participle plus worden",
           "sortOrder": 13,
@@ -6581,6 +7052,7 @@
         {
           "id": "b1-c3-p5",
           "chip": "ist geschlossen",
+          "chip_en": "is closed",
           "subtitle": "Zustandspassiv: sein plus Partizip II beschreibt das Ergebnis",
           "subtitle_en": "the state passive uses sein plus a past participle to describe the result",
           "sortOrder": 14,
@@ -6623,7 +7095,10 @@
                 {
                   "text": "Unsere Plätze sind reserviert.",
                   "en": "Our seats are reserved.",
-                  "green": []
+                  "green": [
+                    "sind",
+                    "reserviert"
+                  ]
                 },
                 {
                   "text": "Der Ausgang ist wegen Bauarbeiten gesperrt.",
@@ -6646,6 +7121,7 @@
         {
           "id": "b1-c3-p6",
           "chip": "durch",
+          "chip_en": "through; by; due to",
           "subtitle": "nennt im Passiv ein Mittel oder eine Ursache und verlangt den Akkusativ",
           "subtitle_en": "names a means or cause in the passive and requires the accusative",
           "sortOrder": 15,
@@ -6715,12 +7191,14 @@
     {
       "id": "b1-category-4",
       "label": "Berichten",
+      "label_en": "Reported speech",
       "sortOrder": 16,
       "note": "B1 · Sagen, was andere sagen. Wähle ein Sprachmuster und tippe auf einen Beispielsatz.",
       "patterns": [
         {
           "id": "b1-c4-p1",
           "chip": "dass",
+          "chip_en": "that",
           "subtitle": "leitet eine indirekte Aussage ein; das Verb steht am Ende",
           "subtitle_en": "introduces an indirect statement; the verb is at the end",
           "sortOrder": 16,
@@ -6788,6 +7266,7 @@
         {
           "id": "b1-c4-p2",
           "chip": "ob",
+          "chip_en": "whether; if",
           "subtitle": "leitet eine indirekte Ja-Nein-Frage ein",
           "subtitle_en": "introduces an indirect yes-no question",
           "sortOrder": 17,
@@ -6855,6 +7334,7 @@
         {
           "id": "b1-c4-p3",
           "chip": "wo",
+          "chip_en": "where",
           "subtitle": "Fragewort in einer indirekten Ortsfrage",
           "subtitle_en": "question word in an indirect question about a place",
           "sortOrder": 18,
@@ -6921,6 +7401,7 @@
         {
           "id": "b1-c4-p4",
           "chip": "warum",
+          "chip_en": "why",
           "subtitle": "Fragewort in einer indirekten Begründungsfrage",
           "subtitle_en": "question word in an indirect question about a reason",
           "sortOrder": 19,
@@ -6987,6 +7468,7 @@
         {
           "id": "b1-c4-p5",
           "chip": "habe",
+          "chip_en": "has",
           "subtitle": "Konjunktiv I von haben in der indirekten Rede",
           "subtitle_en": "subjunctive I of haben in reported speech",
           "sortOrder": 20,
@@ -7052,6 +7534,7 @@
         {
           "id": "b1-c4-p6",
           "chip": "sei",
+          "chip_en": "is; be",
           "subtitle": "Konjunktiv I von sein in der indirekten Rede",
           "subtitle_en": "subjunctive I of sein in reported speech",
           "sortOrder": 21,
@@ -7117,6 +7600,7 @@
         {
           "id": "b1-c4-p7",
           "chip": "solle",
+          "chip_en": "should",
           "subtitle": "Konjunktiv I von sollen für eine indirekte Aufforderung",
           "subtitle_en": "subjunctive I of sollen for a reported instruction",
           "sortOrder": 22,
@@ -7183,6 +7667,7 @@
         {
           "id": "b1-c4-p8",
           "chip": "könne",
+          "chip_en": "can; be able to",
           "subtitle": "Konjunktiv I von können in der indirekten Rede",
           "subtitle_en": "subjunctive I of können in reported speech",
           "sortOrder": 23,
@@ -7251,12 +7736,14 @@
     {
       "id": "b1-category-5",
       "label": "Relativsätze",
+      "label_en": "Relative clauses",
       "sortOrder": 17,
       "note": "B1 · Der Mann, der …. Wähle ein Sprachmuster und tippe auf einen Beispielsatz.",
       "patterns": [
         {
           "id": "b1-c5-p1",
           "chip": "der",
+          "chip_en": "who; that",
           "subtitle": "maskulines Relativpronomen im Nominativ",
           "subtitle_en": "masculine relative pronoun in the nominative",
           "sortOrder": 24,
@@ -7326,6 +7813,7 @@
         {
           "id": "b1-c5-p2",
           "chip": "den",
+          "chip_en": "whom; that",
           "subtitle": "maskulines Relativpronomen im Akkusativ",
           "subtitle_en": "masculine relative pronoun in the accusative",
           "sortOrder": 25,
@@ -7391,6 +7879,7 @@
         {
           "id": "b1-c5-p3",
           "chip": "die",
+          "chip_en": "who; that; which",
           "subtitle": "feminines oder plurales Relativpronomen",
           "subtitle_en": "feminine or plural relative pronoun",
           "sortOrder": 26,
@@ -7460,6 +7949,7 @@
         {
           "id": "b1-c5-p4",
           "chip": "das",
+          "chip_en": "that; which",
           "subtitle": "neutrales Relativpronomen",
           "subtitle_en": "neuter relative pronoun",
           "sortOrder": 27,
@@ -7530,6 +8020,7 @@
         {
           "id": "b1-c5-p5",
           "chip": "dem",
+          "chip_en": "whom; which",
           "subtitle": "maskulines oder neutrales Relativpronomen im Dativ",
           "subtitle_en": "masculine or neuter relative pronoun in the dative",
           "sortOrder": 28,
@@ -7595,6 +8086,7 @@
         {
           "id": "b1-c5-p6",
           "chip": "mit dem",
+          "chip_en": "with whom",
           "subtitle": "Präposition plus Relativpronomen im Dativ",
           "subtitle_en": "preposition plus relative pronoun in the dative",
           "sortOrder": 29,
@@ -7665,6 +8157,7 @@
         {
           "id": "b1-c5-p7",
           "chip": "in der",
+          "chip_en": "in which",
           "subtitle": "Ortspräposition plus feminines Relativpronomen im Dativ",
           "subtitle_en": "place preposition plus feminine relative pronoun in the dative",
           "sortOrder": 30,
@@ -7735,6 +8228,7 @@
         {
           "id": "b1-c5-p8",
           "chip": "dessen",
+          "chip_en": "whose",
           "subtitle": "zeigt Besitz bei einem maskulinen oder neutralen Bezugswort",
           "subtitle_en": "shows possession with a masculine or neuter antecedent",
           "sortOrder": 31,
@@ -7800,6 +8294,7 @@
         {
           "id": "b1-c5-p9",
           "chip": "deren",
+          "chip_en": "whose",
           "subtitle": "zeigt Besitz bei einem femininen oder pluralen Bezugswort",
           "subtitle_en": "shows possession with a feminine or plural antecedent",
           "sortOrder": 32,
@@ -7865,6 +8360,7 @@
         {
           "id": "b1-c5-p10",
           "chip": "was",
+          "chip_en": "what; that",
           "subtitle": "Relativpronomen nach alles, etwas und nichts",
           "subtitle_en": "relative pronoun after alles, etwas and nichts",
           "sortOrder": 33,
@@ -7932,12 +8428,14 @@
     {
       "id": "b1-category-6",
       "label": "Präpositionalverben",
+      "label_en": "Verbs with prepositions",
       "sortOrder": 18,
       "note": "B1 · warten auf, denken an. Wähle ein Sprachmuster und tippe auf einen Beispielsatz.",
       "patterns": [
         {
           "id": "b1-c6-p1",
           "chip": "warten auf",
+          "chip_en": "wait for",
           "subtitle": "feste Verbindung mit auf plus Akkusativ",
           "subtitle_en": "fixed combination with auf plus the accusative",
           "sortOrder": 34,
@@ -8004,6 +8502,7 @@
         {
           "id": "b1-c6-p2",
           "chip": "worauf",
+          "chip_en": "what … for; what … on",
           "subtitle": "fragt mit auf nach einer Sache; darauf verweist auf die Sache",
           "subtitle_en": "asks about a thing with auf; darauf refers back to the thing",
           "sortOrder": 35,
@@ -8045,12 +8544,16 @@
                 {
                   "text": "Ich habe ein Taxi bestellt; darauf warten wir draußen.",
                   "en": "I have ordered a taxi; we are waiting outside for it.",
-                  "green": []
+                  "green": [
+                    "darauf"
+                  ]
                 },
                 {
                   "text": "Die Antwort ist wichtig. Darauf wartet meine Kollegin.",
                   "en": "The answer is important. My colleague is waiting for it.",
-                  "green": []
+                  "green": [
+                    "Darauf"
+                  ]
                 },
                 {
                   "text": "Worauf achtest du beim Buchen eines Fluges?",
@@ -8066,6 +8569,7 @@
         {
           "id": "b1-c6-p3",
           "chip": "auf wen",
+          "chip_en": "whom … for",
           "subtitle": "fragt mit auf nach einer Person",
           "subtitle_en": "asks about a person with auf",
           "sortOrder": 36,
@@ -8137,6 +8641,7 @@
         {
           "id": "b1-c6-p4",
           "chip": "daran",
+          "chip_en": "about it; of it",
           "subtitle": "ersetzt an plus eine Sache",
           "subtitle_en": "replaces an plus a thing",
           "sortOrder": 37,
@@ -8203,6 +8708,7 @@
         {
           "id": "b1-c6-p5",
           "chip": "an wen",
+          "chip_en": "whom … about",
           "subtitle": "fragt mit an nach einer Person",
           "subtitle_en": "asks about a person with an",
           "sortOrder": 38,
@@ -8274,6 +8780,7 @@
         {
           "id": "b1-c6-p6",
           "chip": "worüber",
+          "chip_en": "what … about",
           "subtitle": "fragt mit über nach einer Sache",
           "subtitle_en": "asks about a thing with über",
           "sortOrder": 39,
@@ -8316,12 +8823,16 @@
                 {
                   "text": "Der Flug wurde gestrichen; darüber ärgern wir uns.",
                   "en": "The flight was cancelled; we are annoyed about that.",
-                  "green": []
+                  "green": [
+                    "darüber"
+                  ]
                 },
                 {
                   "text": "Meine Freunde erzählen vom Urlaub. Darüber möchte ich mehr wissen.",
                   "en": "My friends are talking about their holiday. I would like to know more about it.",
-                  "green": []
+                  "green": [
+                    "Darüber"
+                  ]
                 },
                 {
                   "text": "Worüber lachen die Leute am Nachbartisch?",
@@ -8337,6 +8848,7 @@
         {
           "id": "b1-c6-p7",
           "chip": "dafür",
+          "chip_en": "in it; for it",
           "subtitle": "ersetzt für plus eine Sache",
           "subtitle_en": "replaces für plus a thing",
           "sortOrder": 40,
@@ -8403,6 +8915,7 @@
         {
           "id": "b1-c6-p8",
           "chip": "antworten auf",
+          "chip_en": "reply to; answer",
           "subtitle": "feste Verbindung mit auf plus Akkusativ",
           "subtitle_en": "fixed combination with auf plus the accusative",
           "sortOrder": 41,
@@ -8470,6 +8983,7 @@
         {
           "id": "b1-c6-p9",
           "chip": "teilnehmen an",
+          "chip_en": "take part in",
           "subtitle": "feste Verbindung mit an plus Dativ",
           "subtitle_en": "fixed combination with an plus the dative",
           "sortOrder": 42,
@@ -8505,7 +9019,11 @@
                 {
                   "text": "Meine Freunde nehmen am Treffen im Café teil.",
                   "en": "My friends are taking part in the meeting at the café.",
-                  "green": []
+                  "green": [
+                    "nehmen",
+                    "am Treffen",
+                    "teil"
+                  ]
                 },
                 {
                   "text": "Kannst du morgen an der Besprechung teilnehmen?",
@@ -8525,7 +9043,10 @@
                 {
                   "text": "Paul hat nicht am Ausflug teilgenommen.",
                   "en": "Paul did not take part in the excursion.",
-                  "green": []
+                  "green": [
+                    "am Ausflug",
+                    "teilgenommen"
+                  ]
                 }
               ]
             }
@@ -8534,6 +9055,7 @@
         {
           "id": "b1-c6-p10",
           "chip": "wovor",
+          "chip_en": "what … afraid of",
           "subtitle": "fragt mit vor nach einer Sache; davor verweist auf die Sache",
           "subtitle_en": "asks about a thing with vor; davor refers back to the thing",
           "sortOrder": 43,
@@ -8569,7 +9091,11 @@
                 {
                   "text": "Ich habe Angst vor dem Fliegen; davor fürchte ich mich schon lange.",
                   "en": "I am afraid of flying; I have been afraid of it for a long time.",
-                  "green": []
+                  "green": [
+                    "vor",
+                    "davor",
+                    "fürchte"
+                  ]
                 },
                 {
                   "text": "Wovor schützt dich die Versicherung?",
@@ -8581,12 +9107,19 @@
                 {
                   "text": "Der Kellner warnt uns vor dem heißen Teller.",
                   "en": "The waiter warns us about the hot plate.",
-                  "green": []
+                  "green": [
+                    "vor",
+                    "warnt"
+                  ]
                 },
                 {
                   "text": "Meine Freunde fürchten sich vor dem Sturm. Davor habe ich auch Respekt.",
                   "en": "My friends are afraid of the storm. I respect its danger too.",
-                  "green": []
+                  "green": [
+                    "vor",
+                    "Davor",
+                    "fürchten"
+                  ]
                 }
               ]
             }
@@ -8597,12 +9130,14 @@
     {
       "id": "b2-category-1",
       "label": "Zeitwahl",
+      "label_en": "Choosing tenses",
       "sortOrder": 19,
       "note": "B2 · Die richtige Zeit wählen. Wähle ein Sprachmuster und tippe auf einen Beispielsatz.",
       "patterns": [
         {
           "id": "b2-c1-p1",
           "chip": "seit + Präsens",
+          "chip_en": "since/for + present",
           "subtitle": "Eine Handlung, die noch andauert, steht mit seit im Präsens.",
           "subtitle_en": "An action that is still continuing uses seit with the present tense.",
           "sortOrder": 1,
@@ -8669,6 +9204,7 @@
         {
           "id": "b2-c1-p2",
           "chip": "Plusquamperfekt",
+          "chip_en": "past perfect",
           "subtitle": "Das Plusquamperfekt bezeichnet das frühere von zwei vergangenen Ereignissen.",
           "subtitle_en": "The pluperfect marks the earlier of two past events.",
           "sortOrder": 2,
@@ -8696,27 +9232,42 @@
                 {
                   "text": "Als ich am Flughafen ankam, war mein Flug bereits gestartet.",
                   "en": "When I arrived at the airport, my flight had already departed.",
-                  "green": []
+                  "green": [
+                    "war",
+                    "gestartet"
+                  ]
                 },
                 {
                   "text": "Nachdem wir bezahlt hatten, verließen wir das Café.",
                   "en": "After we had paid, we left the café.",
-                  "green": []
+                  "green": [
+                    "hatten",
+                    "bezahlt"
+                  ]
                 },
                 {
                   "text": "Meine Freunde hatten schon bestellt, bevor ich eintraf.",
                   "en": "My friends had already ordered before I arrived.",
-                  "green": []
+                  "green": [
+                    "hatten",
+                    "bestellt"
+                  ]
                 },
                 {
                   "text": "Der Zug fuhr ab, nachdem alle Reisenden eingestiegen waren.",
                   "en": "The train departed after all the passengers had boarded.",
-                  "green": []
+                  "green": [
+                    "eingestiegen",
+                    "waren"
+                  ]
                 },
                 {
                   "text": "Sie bemerkte, dass sie ihren Pass zu Hause gelassen hatte.",
                   "en": "She noticed that she had left her passport at home.",
-                  "green": []
+                  "green": [
+                    "gelassen",
+                    "hatte"
+                  ]
                 }
               ]
             }
@@ -8725,6 +9276,7 @@
         {
           "id": "b2-c1-p3",
           "chip": "Verlauf und Unterbrechung",
+          "chip_en": "ongoing action and interruption",
           "subtitle": "Das Präteritum kann einen Verlauf und seine Unterbrechung darstellen.",
           "subtitle_en": "The simple past can describe an ongoing action and its interruption.",
           "sortOrder": 3,
@@ -8753,27 +9305,47 @@
                 {
                   "text": "Wir warteten auf den Zug, als plötzlich die Anzeige erlosch.",
                   "en": "We were waiting for the train when the display suddenly went dark.",
-                  "green": []
+                  "green": [
+                    "warteten",
+                    "als",
+                    "erlosch"
+                  ]
                 },
                 {
                   "text": "Ich unterhielt mich mit Freunden, als mein Flug aufgerufen wurde.",
                   "en": "I was talking to friends when my flight was called.",
-                  "green": []
+                  "green": [
+                    "als",
+                    "unterhielt",
+                    "aufgerufen wurde"
+                  ]
                 },
                 {
                   "text": "Der Kellner räumte gerade ab, als neue Gäste kamen.",
                   "en": "The waiter was clearing the tables when new guests arrived.",
-                  "green": []
+                  "green": [
+                    "als",
+                    "räumte",
+                    "kamen"
+                  ]
                 },
                 {
                   "text": "Sie fuhr zum Flughafen, als ihr Taxi eine Panne hatte.",
                   "en": "She was travelling to the airport when her taxi broke down.",
-                  "green": []
+                  "green": [
+                    "als",
+                    "fuhr",
+                    "hatte"
+                  ]
                 },
                 {
                   "text": "Während ich die Speisekarte las, klingelte mein Handy.",
                   "en": "While I was reading the menu, my phone rang.",
-                  "green": []
+                  "green": [
+                    "Während",
+                    "las",
+                    "klingelte"
+                  ]
                 }
               ]
             }
@@ -8782,6 +9354,7 @@
         {
           "id": "b2-c1-p4",
           "chip": "Perfekt mit Gegenwartsbezug",
+          "chip_en": "perfect with present relevance",
           "subtitle": "Das Perfekt betont ein Ergebnis, das jetzt wichtig ist.",
           "subtitle_en": "The perfect tense emphasises a result that matters now.",
           "sortOrder": 4,
@@ -8810,27 +9383,43 @@
                 {
                   "text": "Ich habe die Tickets gebucht, sodass die Reise feststeht.",
                   "en": "I have booked the tickets, so the trip is confirmed.",
-                  "green": []
+                  "green": [
+                    "habe",
+                    "gebucht"
+                  ]
                 },
                 {
                   "text": "Das Café hat einen neuen Koch eingestellt; das Essen ist jetzt besser.",
                   "en": "The café has hired a new chef; the food is better now.",
-                  "green": []
+                  "green": [
+                    "hat",
+                    "eingestellt",
+                    "ist"
+                  ]
                 },
                 {
                   "text": "Meine Freundin ist angekommen und wartet bereits am Ausgang.",
                   "en": "My friend has arrived and is already waiting at the exit.",
-                  "green": []
+                  "green": [
+                    "ist",
+                    "angekommen"
+                  ]
                 },
                 {
                   "text": "Der Zug hat das Gleis gewechselt; wir müssen uns beeilen.",
                   "en": "The train has changed platforms; we have to hurry.",
-                  "green": []
+                  "green": [
+                    "hat",
+                    "gewechselt"
+                  ]
                 },
                 {
                   "text": "Wir haben die Rechnung bezahlt und können jetzt gehen.",
                   "en": "We have paid the bill and can leave now.",
-                  "green": []
+                  "green": [
+                    "haben",
+                    "bezahlt"
+                  ]
                 }
               ]
             }
@@ -8839,6 +9428,7 @@
         {
           "id": "b2-c1-p5",
           "chip": "Futur II: Abschluss",
+          "chip_en": "future perfect: completion",
           "subtitle": "Das Futur II beschreibt einen Abschluss vor einem zukünftigen Zeitpunkt.",
           "subtitle_en": "The future perfect describes completion before a future point in time.",
           "sortOrder": 5,
@@ -8866,27 +9456,42 @@
                 {
                   "text": "Bis wir am Flughafen ankommen, wird der Check-in begonnen haben.",
                   "en": "By the time we arrive at the airport, check-in will have begun.",
-                  "green": []
+                  "green": [
+                    "wird",
+                    "begonnen haben"
+                  ]
                 },
                 {
                   "text": "Um acht Uhr werden meine Freunde bereits gegessen haben.",
                   "en": "By eight o’clock, my friends will already have eaten.",
-                  "green": []
+                  "green": [
+                    "werden",
+                    "gegessen haben"
+                  ]
                 },
                 {
                   "text": "Bis Monatsende wird das Café die Terrasse renoviert haben.",
                   "en": "By the end of the month, the café will have renovated the terrace.",
-                  "green": []
+                  "green": [
+                    "wird",
+                    "renoviert haben"
+                  ]
                 },
                 {
                   "text": "Morgen Abend werde ich alle Tickets gebucht haben.",
                   "en": "By tomorrow evening, I will have booked all the tickets.",
-                  "green": []
+                  "green": [
+                    "werde",
+                    "gebucht haben"
+                  ]
                 },
                 {
                   "text": "Wenn du anrufst, werden wir den Bahnhof verlassen haben.",
                   "en": "When you call, we will have left the station.",
-                  "green": []
+                  "green": [
+                    "werden",
+                    "verlassen haben"
+                  ]
                 }
               ]
             }
@@ -8895,6 +9500,7 @@
         {
           "id": "b2-c1-p6",
           "chip": "Futur II: Vermutung",
+          "chip_en": "future perfect: assumption",
           "subtitle": "Das Futur II kann eine Vermutung über die Vergangenheit ausdrücken.",
           "subtitle_en": "The future perfect can express an assumption about the past.",
           "sortOrder": 6,
@@ -8922,27 +9528,42 @@
                 {
                   "text": "Paul wird den Zug wohl verpasst haben.",
                   "en": "Paul will probably have missed the train.",
-                  "green": []
+                  "green": [
+                    "wird",
+                    "verpasst haben"
+                  ]
                 },
                 {
                   "text": "Die Gäste werden die Rechnung bereits bezahlt haben.",
                   "en": "The guests will already have paid the bill.",
-                  "green": []
+                  "green": [
+                    "werden",
+                    "bezahlt haben"
+                  ]
                 },
                 {
                   "text": "Meine Freundin wird inzwischen am Flughafen angekommen sein.",
                   "en": "My friend will have arrived at the airport by now.",
-                  "green": []
+                  "green": [
+                    "wird",
+                    "angekommen sein"
+                  ]
                 },
                 {
                   "text": "Der Kellner wird unsere Bestellung vergessen haben.",
                   "en": "The waiter will have forgotten our order.",
-                  "green": []
+                  "green": [
+                    "wird",
+                    "vergessen haben"
+                  ]
                 },
                 {
                   "text": "Sie werden sich vermutlich im Café getroffen haben.",
                   "en": "They will probably have met in the café.",
-                  "green": []
+                  "green": [
+                    "werden",
+                    "getroffen haben"
+                  ]
                 }
               ]
             }
@@ -8951,6 +9572,7 @@
         {
           "id": "b2-c1-p7",
           "chip": "gerade dabei sein",
+          "chip_en": "be in the process of",
           "subtitle": "Diese Form betont den Verlauf einer aktuellen Handlung.",
           "subtitle_en": "This form emphasises the progress of a current action.",
           "sortOrder": 7,
@@ -9020,6 +9642,7 @@
         {
           "id": "b2-c1-p8",
           "chip": "wiederholtes Perfekt",
+          "chip_en": "repeated perfect",
           "subtitle": "Mehrere abgeschlossene Handlungen können in einem noch laufenden Zeitraum im Perfekt stehen.",
           "subtitle_en": "Several completed actions in a period that is still continuing can use the perfect tense.",
           "sortOrder": 8,
@@ -9047,27 +9670,49 @@
                 {
                   "text": "Diese Woche habe ich schon zweimal im Café gearbeitet.",
                   "en": "I have worked in the café twice this week.",
-                  "green": []
+                  "green": [
+                    "Diese Woche",
+                    "schon",
+                    "zweimal",
+                    "habe"
+                  ]
                 },
                 {
                   "text": "Meine Freundin hat mich heute dreimal angerufen.",
                   "en": "My friend has called me three times today.",
-                  "green": []
+                  "green": [
+                    "heute",
+                    "dreimal",
+                    "hat"
+                  ]
                 },
                 {
                   "text": "In diesem Jahr sind wir bereits viermal nach Wien geflogen.",
                   "en": "We have already flown to Vienna four times this year.",
-                  "green": []
+                  "green": [
+                    "In diesem Jahr",
+                    "bereits",
+                    "viermal",
+                    "sind"
+                  ]
                 },
                 {
                   "text": "Der Zug ist heute schon mehrfach verspätet angekommen.",
                   "en": "The train has already arrived late several times today.",
-                  "green": []
+                  "green": [
+                    "heute",
+                    "schon",
+                    "mehrfach",
+                    "ist"
+                  ]
                 },
                 {
                   "text": "Wir haben unsere Pläne in letzter Zeit oft geändert.",
                   "en": "We have often changed our plans recently.",
-                  "green": []
+                  "green": [
+                    "oft",
+                    "haben"
+                  ]
                 }
               ]
             }
@@ -9076,6 +9721,7 @@
         {
           "id": "b2-c1-p9",
           "chip": "Dauer bis zur Vergangenheit",
+          "chip_en": "duration up to a past point",
           "subtitle": "Das Plusquamperfekt zeigt eine Dauer bis zu einem vergangenen Zeitpunkt.",
           "subtitle_en": "The pluperfect shows a duration up to a past point in time.",
           "sortOrder": 9,
@@ -9103,27 +9749,42 @@
                 {
                   "text": "Als der Flug endlich startete, hatten wir fünf Stunden gewartet.",
                   "en": "When the flight finally departed, we had been waiting for five hours.",
-                  "green": []
+                  "green": [
+                    "hatten",
+                    "gewartet"
+                  ]
                 },
                 {
                   "text": "Bevor das Café schloss, hatte Paul dort zwanzig Jahre gearbeitet.",
                   "en": "Before the café closed, Paul had worked there for twenty years.",
-                  "green": []
+                  "green": [
+                    "hatte",
+                    "gearbeitet"
+                  ]
                 },
                 {
                   "text": "Meine Freunde hatten lange gespart, bevor sie die Reise buchten.",
                   "en": "My friends had saved for a long time before they booked the trip.",
-                  "green": []
+                  "green": [
+                    "hatten",
+                    "gespart"
+                  ]
                 },
                 {
                   "text": "Als wir uns wiedersahen, hatten wir uns zehn Jahre nicht getroffen.",
                   "en": "When we met again, we had not seen each other for ten years.",
-                  "green": []
+                  "green": [
+                    "hatten",
+                    "getroffen"
+                  ]
                 },
                 {
                   "text": "Vor dem Umzug hatte sie seit Monaten eine Wohnung gesucht.",
                   "en": "Before moving, she had been looking for a flat for months.",
-                  "green": []
+                  "green": [
+                    "hatte",
+                    "gesucht"
+                  ]
                 }
               ]
             }
@@ -9132,6 +9793,7 @@
         {
           "id": "b2-c1-p10",
           "chip": "geplante Zukunft",
+          "chip_en": "planned future",
           "subtitle": "Ein fest geplanter zukünftiger Termin kann im Präsens stehen.",
           "subtitle_en": "A firmly scheduled future appointment can use the present tense.",
           "sortOrder": 10,
@@ -9159,27 +9821,42 @@
                 {
                   "text": "Unser Flug landet morgen um 16 Uhr.",
                   "en": "Our flight lands tomorrow at 4 p.m.",
-                  "green": []
+                  "green": [
+                    "morgen",
+                    "landet"
+                  ]
                 },
                 {
                   "text": "Am Freitag treffen wir die neuen Geschäftspartner im Café.",
                   "en": "On Friday we are meeting the new business partners in the café.",
-                  "green": []
+                  "green": [
+                    "Am Freitag",
+                    "treffen"
+                  ]
                 },
                 {
                   "text": "Der Zug nach Wien fährt heute Abend von Gleis sieben.",
                   "en": "The train to Vienna leaves from platform seven this evening.",
-                  "green": []
+                  "green": [
+                    "heute Abend",
+                    "fährt"
+                  ]
                 },
                 {
                   "text": "Nächsten Monat eröffnet das Restaurant eine zweite Filiale.",
                   "en": "Next month the restaurant is opening a second branch.",
-                  "green": []
+                  "green": [
+                    "Nächsten Monat",
+                    "eröffnet"
+                  ]
                 },
                 {
                   "text": "Meine Freunde kommen am Wochenende zu Besuch.",
                   "en": "My friends are coming to visit at the weekend.",
-                  "green": []
+                  "green": [
+                    "am Wochenende",
+                    "kommen"
+                  ]
                 }
               ]
             }
@@ -9190,12 +9867,14 @@
     {
       "id": "b2-category-2",
       "label": "Irreales",
+      "label_en": "Unreal situations",
       "sortOrder": 20,
       "note": "B2 · Was wäre gewesen, wenn …?. Wähle ein Sprachmuster und tippe auf einen Beispielsatz.",
       "patterns": [
         {
           "id": "b2-c2-p1",
           "chip": "irreale Gegenwart",
+          "chip_en": "unreal present",
           "subtitle": "Konjunktiv II beschreibt eine unwirkliche Situation in der Gegenwart.",
           "subtitle_en": "The subjunctive II describes an unreal situation in the present.",
           "sortOrder": 11,
@@ -9224,27 +9903,43 @@
                 {
                   "text": "Wenn ich näher am Bahnhof wohnte, würde ich häufiger Zug fahren.",
                   "en": "If I lived nearer the station, I would travel by train more often.",
-                  "green": []
+                  "green": [
+                    "Wenn",
+                    "würde"
+                  ]
                 },
                 {
                   "text": "Ich würde noch einen Kaffee bestellen, wenn ich mehr Zeit hätte.",
                   "en": "I would order another coffee if I had more time.",
-                  "green": []
+                  "green": [
+                    "wenn",
+                    "würde",
+                    "hätte"
+                  ]
                 },
                 {
                   "text": "Wäre meine Freundin hier, könnten wir gemeinsam entscheiden.",
                   "en": "If my friend were here, we could decide together.",
-                  "green": []
+                  "green": [
+                    "Wäre",
+                    "könnten"
+                  ]
                 },
                 {
                   "text": "Wenn der Flug günstiger wäre, würden wir direkt buchen.",
                   "en": "If the flight were cheaper, we would book immediately.",
-                  "green": []
+                  "green": [
+                    "Wenn",
+                    "wäre"
+                  ]
                 },
                 {
                   "text": "Ohne den Lärm wäre dieses Café ideal zum Arbeiten.",
                   "en": "Without the noise, this café would be ideal for working.",
-                  "green": []
+                  "green": [
+                    "wäre",
+                    "Ohne"
+                  ]
                 }
               ]
             }
@@ -9253,6 +9948,7 @@
         {
           "id": "b2-c2-p2",
           "chip": "irreale Vergangenheit",
+          "chip_en": "unreal past",
           "subtitle": "Hätte oder wäre plus Partizip II beschreibt eine nicht eingetretene Vergangenheit.",
           "subtitle_en": "Hätte or wäre plus the past participle describes a past event that did not happen.",
           "sortOrder": 12,
@@ -9281,27 +9977,42 @@
                 {
                   "text": "Hätten wir früher reserviert, hätten wir einen besseren Tisch bekommen.",
                   "en": "If we had reserved earlier, we would have got a better table.",
-                  "green": []
+                  "green": [
+                    "Hätten"
+                  ]
                 },
                 {
                   "text": "Wenn der Zug pünktlich gewesen wäre, hätten wir den Flug erreicht.",
                   "en": "If the train had been on time, we would have caught the flight.",
-                  "green": []
+                  "green": [
+                    "hätten",
+                    "wäre"
+                  ]
                 },
                 {
                   "text": "Meine Freundin wäre mitgekommen, wenn sie nicht hätte arbeiten müssen.",
                   "en": "My friend would have come along if she had not had to work.",
-                  "green": []
+                  "green": [
+                    "wäre",
+                    "hätte"
+                  ]
                 },
                 {
                   "text": "Hätte ich den Hinweis gelesen, wäre ich am richtigen Gleis ausgestiegen.",
                   "en": "If I had read the notice, I would have got off at the correct platform.",
-                  "green": []
+                  "green": [
+                    "wäre",
+                    "Hätte"
+                  ]
                 },
                 {
                   "text": "Wir hätten länger bleiben können, wenn das Café später geschlossen hätte.",
                   "en": "We could have stayed longer if the café had closed later.",
-                  "green": []
+                  "green": [
+                    "hätten",
+                    "hätte",
+                    "können"
+                  ]
                 }
               ]
             }
@@ -9310,6 +10021,7 @@
         {
           "id": "b2-c2-p3",
           "chip": "an deiner Stelle",
+          "chip_en": "if I were you",
           "subtitle": "Diese Wendung gibt einen höflichen hypothetischen Rat.",
           "subtitle_en": "This expression gives polite hypothetical advice.",
           "sortOrder": 13,
@@ -9384,6 +10096,7 @@
         {
           "id": "b2-c2-p4",
           "chip": "hypothetisches Modalverb",
+          "chip_en": "hypothetical modal",
           "subtitle": "Ein Modalverb im Konjunktiv II beschreibt eine mögliche Folge.",
           "subtitle_en": "A modal verb in the subjunctive II describes a possible consequence.",
           "sortOrder": 14,
@@ -9411,27 +10124,37 @@
                 {
                   "text": "Mit einer Reservierung könnten wir am Fenster sitzen.",
                   "en": "With a reservation, we could sit by the window.",
-                  "green": []
+                  "green": [
+                    "könnten"
+                  ]
                 },
                 {
                   "text": "Der Flug müsste bei besserem Wetter pünktlich starten.",
                   "en": "In better weather, the flight ought to depart on time.",
-                  "green": []
+                  "green": [
+                    "müsste"
+                  ]
                 },
                 {
                   "text": "Meine Freunde dürften inzwischen am Bahnhof angekommen sein.",
                   "en": "My friends should have arrived at the station by now.",
-                  "green": []
+                  "green": [
+                    "dürften"
+                  ]
                 },
                 {
                   "text": "Das Café könnte sonntags länger geöffnet bleiben.",
                   "en": "The café could remain open longer on Sundays.",
-                  "green": []
+                  "green": [
+                    "könnte"
+                  ]
                 },
                 {
                   "text": "Unter anderen Umständen würde ich dem Vorschlag zustimmen.",
                   "en": "Under different circumstances, I would agree to the proposal.",
-                  "green": []
+                  "green": [
+                    "würde"
+                  ]
                 }
               ]
             }
@@ -9440,6 +10163,7 @@
         {
           "id": "b2-c2-p5",
           "chip": "unerfüllbarer Wunsch",
+          "chip_en": "unattainable wish",
           "subtitle": "Wenn doch drückt einen starken, unrealistischen Wunsch aus.",
           "subtitle_en": "Wenn doch expresses a strong, unrealistic wish.",
           "sortOrder": 15,
@@ -9468,27 +10192,44 @@
                 {
                   "text": "Wenn der Urlaub doch schon morgen beginnen würde!",
                   "en": "If only the holiday began tomorrow!",
-                  "green": []
+                  "green": [
+                    "Wenn",
+                    "doch",
+                    "würde"
+                  ]
                 },
                 {
                   "text": "Wäre meine Freundin doch hier!",
                   "en": "If only my friend were here!",
-                  "green": []
+                  "green": [
+                    "doch",
+                    "Wäre"
+                  ]
                 },
                 {
                   "text": "Wenn wir doch noch einen freien Tisch finden könnten!",
                   "en": "If only we could find a free table!",
-                  "green": []
+                  "green": [
+                    "Wenn",
+                    "doch",
+                    "könnten"
+                  ]
                 },
                 {
                   "text": "Käme der Zug doch endlich!",
                   "en": "If only the train would finally arrive!",
-                  "green": []
+                  "green": [
+                    "doch",
+                    "Käme"
+                  ]
                 },
                 {
                   "text": "Wenn ich doch fließend Deutsch sprechen könnte!",
                   "en": "If only I could speak German fluently!",
-                  "green": []
+                  "green": [
+                    "Wenn",
+                    "doch"
+                  ]
                 }
               ]
             }
@@ -9497,6 +10238,7 @@
         {
           "id": "b2-c2-p6",
           "chip": "Bedauern",
+          "chip_en": "regret",
           "subtitle": "Hätte ich doch drückt Bedauern über eine vergangene Entscheidung aus.",
           "subtitle_en": "Hätte ich doch expresses regret about a past decision.",
           "sortOrder": 16,
@@ -9525,27 +10267,42 @@
                 {
                   "text": "Wären wir doch früher zum Flughafen gefahren!",
                   "en": "If only we had travelled to the airport earlier!",
-                  "green": []
+                  "green": [
+                    "Wären",
+                    "doch"
+                  ]
                 },
                 {
                   "text": "Hätte ich den Kaffee doch nicht so spät getrunken!",
                   "en": "If only I had not drunk coffee so late!",
-                  "green": []
+                  "green": [
+                    "Hätte",
+                    "doch"
+                  ]
                 },
                 {
                   "text": "Hätten wir doch einen Tisch reserviert!",
                   "en": "If only we had reserved a table!",
-                  "green": []
+                  "green": [
+                    "Hätten",
+                    "doch"
+                  ]
                 },
                 {
                   "text": "Wäre ich doch am richtigen Bahnhof ausgestiegen!",
                   "en": "If only I had got off at the correct station!",
-                  "green": []
+                  "green": [
+                    "Wäre",
+                    "doch"
+                  ]
                 },
                 {
                   "text": "Hätte meine Freundin doch vorher angerufen!",
                   "en": "If only my friend had called beforehand!",
-                  "green": []
+                  "green": [
+                    "Hätte",
+                    "doch"
+                  ]
                 }
               ]
             }
@@ -9554,6 +10311,7 @@
         {
           "id": "b2-c2-p7",
           "chip": "als ob",
+          "chip_en": "as if",
           "subtitle": "Als ob leitet einen irrealen Vergleich ein.",
           "subtitle_en": "Als ob introduces an unreal comparison.",
           "sortOrder": 17,
@@ -9625,6 +10383,7 @@
         {
           "id": "b2-c2-p8",
           "chip": "ohne wenn",
+          "chip_en": "without if",
           "subtitle": "In formeller Sprache kann das Verb an die erste Stelle rücken.",
           "subtitle_en": "In formal language, the verb can move to the first position.",
           "sortOrder": 18,
@@ -9653,27 +10412,42 @@
                 {
                   "text": "Wäre der Flug nicht gestrichen worden, wären wir längst dort.",
                   "en": "Had the flight not been cancelled, we would have been there long ago.",
-                  "green": []
+                  "green": [
+                    "Wäre",
+                    "wären"
+                  ]
                 },
                 {
                   "text": "Hätte ich mehr Zeit, bliebe ich noch auf einen Kaffee.",
                   "en": "If I had more time, I would stay for another coffee.",
-                  "green": []
+                  "green": [
+                    "Hätte",
+                    "bliebe"
+                  ]
                 },
                 {
                   "text": "Käme der Zug pünktlich, erreichten wir den Anschluss.",
                   "en": "Were the train to arrive on time, we would make the connection.",
-                  "green": []
+                  "green": [
+                    "Käme",
+                    "erreichten"
+                  ]
                 },
                 {
                   "text": "Wüsste meine Freundin davon, würde sie sofort anrufen.",
                   "en": "If my friend knew about it, she would call immediately.",
-                  "green": []
+                  "green": [
+                    "Wüsste",
+                    "würde"
+                  ]
                 },
                 {
                   "text": "Gäbe es einen freien Tisch, könnten wir hier essen.",
                   "en": "If there were a free table, we could eat here.",
-                  "green": []
+                  "green": [
+                    "Gäbe",
+                    "könnten"
+                  ]
                 }
               ]
             }
@@ -9682,6 +10456,7 @@
         {
           "id": "b2-c2-p9",
           "chip": "beinahe",
+          "chip_en": "almost",
           "subtitle": "Beinahe beschreibt ein Ereignis, das fast eingetreten wäre.",
           "subtitle_en": "Beinahe describes an event that nearly happened.",
           "sortOrder": 19,
@@ -9749,6 +10524,7 @@
         {
           "id": "b2-c2-p10",
           "chip": "sollte",
+          "chip_en": "should; if it should",
           "subtitle": "Sollte formuliert eine vorsichtige mögliche Bedingung.",
           "subtitle_en": "Sollte formulates a cautious possible condition.",
           "sortOrder": 20,
@@ -9818,12 +10594,14 @@
     {
       "id": "b2-category-3",
       "label": "Formell",
+      "label_en": "Formal language",
       "sortOrder": 21,
       "note": "B2 · Formell formulieren. Wähle ein Sprachmuster und tippe auf einen Beispielsatz.",
       "patterns": [
         {
           "id": "b2-c3-p1",
           "chip": "Passiv im Präteritum",
+          "chip_en": "past passive",
           "subtitle": "Das Passiv rückt den Vorgang statt der handelnden Person in den Mittelpunkt.",
           "subtitle_en": "The passive focuses on the process rather than the person performing it.",
           "sortOrder": 21,
@@ -9851,27 +10629,42 @@
                 {
                   "text": "Der Flug wurde aufgrund des Unwetters gestrichen.",
                   "en": "The flight was cancelled because of the storm.",
-                  "green": []
+                  "green": [
+                    "wurde",
+                    "gestrichen"
+                  ]
                 },
                 {
                   "text": "Die Rechnung wurde am Vortag vollständig beglichen.",
                   "en": "The bill was paid in full the previous day.",
-                  "green": []
+                  "green": [
+                    "wurde",
+                    "beglichen"
+                  ]
                 },
                 {
                   "text": "Am Bahnhof wurden zusätzliche Kontrollen durchgeführt.",
                   "en": "Additional checks were carried out at the station.",
-                  "green": []
+                  "green": [
+                    "wurden",
+                    "durchgeführt"
+                  ]
                 },
                 {
                   "text": "Das Café wurde nach der Renovierung wiedereröffnet.",
                   "en": "The café was reopened after the renovation.",
-                  "green": []
+                  "green": [
+                    "wurde",
+                    "wiedereröffnet"
+                  ]
                 },
                 {
                   "text": "Die Reisenden wurden unverzüglich über die Änderung informiert.",
                   "en": "The travellers were informed of the change immediately.",
-                  "green": []
+                  "green": [
+                    "wurden",
+                    "informiert"
+                  ]
                 }
               ]
             }
@@ -9880,6 +10673,7 @@
         {
           "id": "b2-c3-p2",
           "chip": "Passiv mit Modalverb",
+          "chip_en": "passive with modal",
           "subtitle": "Modalverb, Partizip II und werden bilden ein formelles Passiv.",
           "subtitle_en": "A modal verb, past participle and werden form a formal passive.",
           "sortOrder": 22,
@@ -9907,27 +10701,42 @@
                 {
                   "text": "Die Reservierung kann bis morgen kostenlos geändert werden.",
                   "en": "The reservation can be changed free of charge until tomorrow.",
-                  "green": []
+                  "green": [
+                    "kann",
+                    "geändert werden"
+                  ]
                 },
                 {
                   "text": "Sämtliche Unterlagen müssen am Schalter vorgelegt werden.",
                   "en": "All documents must be presented at the counter.",
-                  "green": []
+                  "green": [
+                    "müssen",
+                    "vorgelegt werden"
+                  ]
                 },
                 {
                   "text": "Der Antrag sollte schriftlich begründet werden.",
                   "en": "The application should be justified in writing.",
-                  "green": []
+                  "green": [
+                    "sollte",
+                    "begründet werden"
+                  ]
                 },
                 {
                   "text": "Die Kosten dürfen nicht auf die Gäste übertragen werden.",
                   "en": "The costs must not be passed on to the guests.",
-                  "green": []
+                  "green": [
+                    "dürfen",
+                    "übertragen werden"
+                  ]
                 },
                 {
                   "text": "Die Tickets können online erworben werden.",
                   "en": "The tickets can be purchased online.",
-                  "green": []
+                  "green": [
+                    "können",
+                    "erworben werden"
+                  ]
                 }
               ]
             }
@@ -9936,6 +10745,7 @@
         {
           "id": "b2-c3-p3",
           "chip": "unpersönliches Passiv",
+          "chip_en": "impersonal passive",
           "subtitle": "Das unpersönliche Passiv vermeidet die Nennung eines Handelnden.",
           "subtitle_en": "The impersonal passive avoids naming the person acting.",
           "sortOrder": 23,
@@ -9963,27 +10773,42 @@
                 {
                   "text": "Während der Fahrt darf nicht geraucht werden.",
                   "en": "Smoking is not permitted during the journey.",
-                  "green": []
+                  "green": [
+                    "darf",
+                    "geraucht werden"
+                  ]
                 },
                 {
                   "text": "Über die Beschwerde wird derzeit beraten.",
                   "en": "The complaint is currently being considered.",
-                  "green": []
+                  "green": [
+                    "wird",
+                    "beraten"
+                  ]
                 },
                 {
                   "text": "Im Café wird großen Wert auf regionale Produkte gelegt.",
                   "en": "The café places great importance on regional produce.",
-                  "green": []
+                  "green": [
+                    "wird",
+                    "gelegt"
+                  ]
                 },
                 {
                   "text": "Am Flughafen wurde zu längeren Wartezeiten geraten.",
                   "en": "Longer waiting times were advised at the airport.",
-                  "green": []
+                  "green": [
+                    "wurde",
+                    "geraten"
+                  ]
                 },
                 {
                   "text": "Von einer kurzfristigen Umbuchung wird abgeraten.",
                   "en": "Rebooking at short notice is not recommended.",
-                  "green": []
+                  "green": [
+                    "wird",
+                    "abgeraten"
+                  ]
                 }
               ]
             }
@@ -9992,6 +10817,7 @@
         {
           "id": "b2-c3-p4",
           "chip": "Nominalisierung",
+          "chip_en": "nominalisation",
           "subtitle": "Eine Nominalisierung verdichtet einen Nebensatz.",
           "subtitle_en": "A nominalisation condenses a subordinate clause.",
           "sortOrder": 24,
@@ -10019,27 +10845,39 @@
                 {
                   "text": "Nach Abschluss der Kontrolle dürfen die Reisenden einsteigen.",
                   "en": "Once the check is complete, the passengers may board.",
-                  "green": []
+                  "green": [
+                    "Nach Abschluss"
+                  ]
                 },
                 {
                   "text": "Die Stornierung des Fluges führte zu erheblichen Verzögerungen.",
                   "en": "The cancellation of the flight led to considerable delays.",
-                  "green": []
+                  "green": [
+                    "Stornierung"
+                  ]
                 },
                 {
                   "text": "Vor der Abfahrt erfolgt eine Überprüfung der Tickets.",
                   "en": "The tickets are checked before departure.",
-                  "green": []
+                  "green": [
+                    "Vor der Abfahrt",
+                    "Überprüfung"
+                  ]
                 },
                 {
                   "text": "Die Verbesserung des Angebots erfordert zusätzliche Investitionen.",
                   "en": "Improving the service requires additional investment.",
-                  "green": []
+                  "green": [
+                    "Verbesserung",
+                    "Investitionen"
+                  ]
                 },
                 {
                   "text": "Trotz der Erhöhung der Preise blieb das Café gut besucht.",
                   "en": "Despite the price increase, the café remained popular.",
-                  "green": []
+                  "green": [
+                    "Erhöhung"
+                  ]
                 }
               ]
             }
@@ -10048,6 +10886,7 @@
         {
           "id": "b2-c3-p5",
           "chip": "Partizipialattribut",
+          "chip_en": "participial attribute",
           "subtitle": "Ein Partizip vor dem Nomen fasst zusätzliche Information zusammen.",
           "subtitle_en": "A participle before a noun summarises additional information.",
           "sortOrder": 25,
@@ -10074,27 +10913,37 @@
                 {
                   "text": "Die am Schalter wartenden Reisenden wurden informiert.",
                   "en": "The passengers waiting at the counter were informed.",
-                  "green": []
+                  "green": [
+                    "wartenden"
+                  ]
                 },
                 {
                   "text": "Die kurzfristig geänderte Abflugzeit sorgte für Verwirrung.",
                   "en": "The departure time changed at short notice caused confusion.",
-                  "green": []
+                  "green": [
+                    "geänderte"
+                  ]
                 },
                 {
                   "text": "Das im vergangenen Jahr eröffnete Café ist sehr beliebt.",
                   "en": "The café opened last year is very popular.",
-                  "green": []
+                  "green": [
+                    "eröffnete"
+                  ]
                 },
                 {
                   "text": "Die von unseren Freunden empfohlene Verbindung war günstig.",
                   "en": "The connection recommended by our friends was inexpensive.",
-                  "green": []
+                  "green": [
+                    "empfohlene"
+                  ]
                 },
                 {
                   "text": "Die sorgfältig zubereiteten Speisen wurden schnell serviert.",
                   "en": "The carefully prepared dishes were served quickly.",
-                  "green": []
+                  "green": [
+                    "zubereiteten"
+                  ]
                 }
               ]
             }
@@ -10103,6 +10952,7 @@
         {
           "id": "b2-c3-p6",
           "chip": "dessen / deren",
+          "chip_en": "whose",
           "subtitle": "Genitivische Relativpronomen drücken Besitz oder Zugehörigkeit aus.",
           "subtitle_en": "Genitive relative pronouns express possession or association.",
           "sortOrder": 26,
@@ -10168,6 +11018,7 @@
         {
           "id": "b2-c3-p7",
           "chip": "Konjunktiv I",
+          "chip_en": "subjunctive I",
           "subtitle": "Der Konjunktiv I kennzeichnet eine wiedergegebene Aussage.",
           "subtitle_en": "The subjunctive I marks a reported statement.",
           "sortOrder": 27,
@@ -10194,27 +11045,37 @@
                 {
                   "text": "Die Sprecherin teilte mit, der Flug werde planmäßig starten.",
                   "en": "The spokesperson announced that the flight would depart as scheduled.",
-                  "green": []
+                  "green": [
+                    "werde"
+                  ]
                 },
                 {
                   "text": "Der Betreiber erklärte, das Café sei vollständig renoviert worden.",
                   "en": "The operator explained that the café had been fully renovated.",
-                  "green": []
+                  "green": [
+                    "sei"
+                  ]
                 },
                 {
                   "text": "Die Zeugin gab an, sie habe den Koffer am Eingang gesehen.",
                   "en": "The witness stated that she had seen the suitcase at the entrance.",
-                  "green": []
+                  "green": [
+                    "habe"
+                  ]
                 },
                 {
                   "text": "Der Bahnsprecher sagte, die Störung dauere voraussichtlich an.",
                   "en": "The railway spokesperson said that the disruption was expected to continue.",
-                  "green": []
+                  "green": [
+                    "dauere"
+                  ]
                 },
                 {
                   "text": "Paul behauptete, er könne die Buchung noch ändern.",
                   "en": "Paul claimed that he could still change the booking.",
-                  "green": []
+                  "green": [
+                    "könne"
+                  ]
                 }
               ]
             }
@@ -10223,6 +11084,7 @@
         {
           "id": "b2-c3-p8",
           "chip": "um … zu",
+          "chip_en": "in order to",
           "subtitle": "Um zu beschreibt einen Zweck mit demselben Subjekt.",
           "subtitle_en": "Um zu describes a purpose with the same subject.",
           "sortOrder": 28,
@@ -10294,6 +11156,7 @@
         {
           "id": "b2-c3-p9",
           "chip": "je … desto",
+          "chip_en": "the … the",
           "subtitle": "Je desto beschreibt eine parallele Veränderung.",
           "subtitle_en": "Je ... desto describes a parallel change.",
           "sortOrder": 29,
@@ -10365,6 +11228,7 @@
         {
           "id": "b2-c3-p10",
           "chip": "obwohl",
+          "chip_en": "although",
           "subtitle": "Obwohl verbindet einen Gegensatz mit einem Nebensatz.",
           "subtitle_en": "Obwohl links a contrast with a subordinate clause.",
           "sortOrder": 30,
@@ -10434,12 +11298,14 @@
     {
       "id": "b2-category-4",
       "label": "Sachlich",
+      "label_en": "Objective language",
       "sortOrder": 22,
       "note": "B2 · Sachlich schreiben. Wähle ein Sprachmuster und tippe auf einen Beispielsatz.",
       "patterns": [
         {
           "id": "b2-c4-p1",
           "chip": "sachlicher Stil",
+          "chip_en": "objective style",
           "subtitle": "Ein sachlicher Satz vermeidet emotionale und umgangssprachliche Wertungen.",
           "subtitle_en": "An objective sentence avoids emotional and colloquial judgements.",
           "sortOrder": 31,
@@ -10496,6 +11362,7 @@
         {
           "id": "b2-c4-p2",
           "chip": "Fragestellung",
+          "chip_en": "research question",
           "subtitle": "Die Fragestellung wird klar und genau benannt.",
           "subtitle_en": "The research question is stated clearly and precisely.",
           "sortOrder": 32,
@@ -10522,27 +11389,38 @@
                 {
                   "text": "Die Analyse untersucht, wie sich Verspätungen auf Anschlussflüge auswirken.",
                   "en": "The analysis examines how delays affect connecting flights.",
-                  "green": []
+                  "green": [
+                    "untersucht"
+                  ]
                 },
                 {
                   "text": "Im Mittelpunkt steht die Frage, warum Gäste dieses Café bevorzugen.",
                   "en": "The central question is why guests prefer this café.",
-                  "green": []
+                  "green": [
+                    "Im Mittelpunkt steht die Frage"
+                  ]
                 },
                 {
                   "text": "Zu klären ist, welche Verkehrsmittel am zuverlässigsten sind.",
                   "en": "It must be determined which means of transport are the most reliable.",
-                  "green": []
+                  "green": [
+                    "Zu klären ist"
+                  ]
                 },
                 {
                   "text": "Die Studie befasst sich mit den Erwartungen internationaler Reisender.",
                   "en": "The study addresses the expectations of international travellers.",
-                  "green": []
+                  "green": [
+                    "befasst sich"
+                  ]
                 },
                 {
                   "text": "Untersucht wird, ob flexible Preise die Nachfrage beeinflussen.",
                   "en": "The study examines whether flexible prices influence demand.",
-                  "green": []
+                  "green": [
+                    "Untersucht",
+                    "Untersucht wird"
+                  ]
                 }
               ]
             }
@@ -10551,6 +11429,7 @@
         {
           "id": "b2-c4-p3",
           "chip": "einerseits … andererseits",
+          "chip_en": "on the one hand … on the other",
           "subtitle": "Der zweiteilige Konnektor stellt zwei Seiten gegenüber.",
           "subtitle_en": "The two-part connector contrasts two sides.",
           "sortOrder": 33,
@@ -10622,6 +11501,7 @@
         {
           "id": "b2-c4-p4",
           "chip": "dürfte",
+          "chip_en": "is likely to",
           "subtitle": "Dürfte formuliert eine vorsichtige wissenschaftliche Annahme.",
           "subtitle_en": "Dürfte formulates a cautious academic assumption.",
           "sortOrder": 34,
@@ -10688,6 +11568,7 @@
         {
           "id": "b2-c4-p5",
           "chip": "laut",
+          "chip_en": "according to",
           "subtitle": "Laut gibt eine Quelle neutral wieder.",
           "subtitle_en": "Laut reports a source neutrally.",
           "sortOrder": 35,
@@ -10753,6 +11634,7 @@
         {
           "id": "b2-c4-p6",
           "chip": "Paraphrase",
+          "chip_en": "paraphrase",
           "subtitle": "Eine Paraphrase gibt den Inhalt einer Quelle mit eigenen Worten wieder.",
           "subtitle_en": "A paraphrase restates the content of a source in your own words.",
           "sortOrder": 36,
@@ -10779,27 +11661,37 @@
                 {
                   "text": "Nach Ansicht des Autors verbessert eine klare Beschilderung die Orientierung.",
                   "en": "According to the author, clear signs improve orientation.",
-                  "green": []
+                  "green": [
+                    "Nach Ansicht"
+                  ]
                 },
                 {
                   "text": "Die Studie kommt zu dem Ergebnis, dass kurze Wartezeiten entscheidend sind.",
                   "en": "The study concludes that short waiting times are crucial.",
-                  "green": []
+                  "green": [
+                    "kommt zu dem Ergebnis"
+                  ]
                 },
                 {
                   "text": "Der Bericht legt nahe, den öffentlichen Verkehr stärker auszubauen.",
                   "en": "The report suggests expanding public transport further.",
-                  "green": []
+                  "green": [
+                    "legt nahe"
+                  ]
                 },
                 {
                   "text": "Die Befragten geben mehrheitlich an, digitale Tickets zu bevorzugen.",
                   "en": "Most respondents state that they prefer digital tickets.",
-                  "green": []
+                  "green": [
+                    "geben mehrheitlich an"
+                  ]
                 },
                 {
                   "text": "Die Autorin weist darauf hin, dass Preis allein nicht ausschlaggebend ist.",
                   "en": "The author points out that price alone is not decisive.",
-                  "green": []
+                  "green": [
+                    "weist darauf hin"
+                  ]
                 }
               ]
             }
@@ -10808,6 +11700,7 @@
         {
           "id": "b2-c4-p7",
           "chip": "Entwicklung beschreiben",
+          "chip_en": "describe a trend",
           "subtitle": "Veränderungen werden mit genauen Zeit- und Mengenangaben beschrieben.",
           "subtitle_en": "Changes are described with precise time and quantity information.",
           "sortOrder": 37,
@@ -10835,27 +11728,41 @@
                 {
                   "text": "Die Fahrgastzahl nahm innerhalb eines Jahres um zwölf Prozent zu.",
                   "en": "The number of passengers increased by twelve per cent within one year.",
-                  "green": []
+                  "green": [
+                    "nahm",
+                    "um zwölf Prozent"
+                  ]
                 },
                 {
                   "text": "Seit der Eröffnung hat sich die Zahl der Cafébesuche verdoppelt.",
                   "en": "Since opening, the number of café visits has doubled.",
-                  "green": []
+                  "green": [
+                    "verdoppelt"
+                  ]
                 },
                 {
                   "text": "Im Vergleich zum Vorjahr sank die durchschnittliche Wartezeit um sechs Minuten.",
                   "en": "Compared with the previous year, average waiting time fell by six minutes.",
-                  "green": []
+                  "green": [
+                    "sank",
+                    "um sechs Minuten"
+                  ]
                 },
                 {
                   "text": "Zwischen Januar und Juni blieb die Nachfrage nahezu unverändert.",
                   "en": "Between January and June, demand remained almost unchanged.",
-                  "green": []
+                  "green": [
+                    "blieb",
+                    "nahezu unverändert"
+                  ]
                 },
                 {
                   "text": "Nach einem deutlichen Anstieg stabilisierten sich die Buchungszahlen im Herbst.",
                   "en": "After a marked increase, booking figures stabilised in the autumn.",
-                  "green": []
+                  "green": [
+                    "Anstieg",
+                    "stabilisierten sich"
+                  ]
                 }
               ]
             }
@@ -10864,6 +11771,7 @@
         {
           "id": "b2-c4-p8",
           "chip": "Beleg",
+          "chip_en": "evidence",
           "subtitle": "Eine Behauptung wird durch überprüfbare Ergebnisse gestützt.",
           "subtitle_en": "A claim is supported by verifiable results.",
           "sortOrder": 38,
@@ -10891,27 +11799,38 @@
                 {
                   "text": "Die These wird durch Daten aus drei unabhängigen Erhebungen bestätigt.",
                   "en": "The thesis is confirmed by data from three independent surveys.",
-                  "green": []
+                  "green": [
+                    "Daten"
+                  ]
                 },
                 {
                   "text": "Als Beleg dienen die veröffentlichten Fahrgastzahlen.",
                   "en": "The published passenger figures serve as evidence.",
-                  "green": []
+                  "green": [
+                    "Beleg"
+                  ]
                 },
                 {
                   "text": "Für diese Annahme liegen bislang keine ausreichenden Belege vor.",
                   "en": "There is not yet sufficient evidence for this assumption.",
-                  "green": []
+                  "green": [
+                    "Belege"
+                  ]
                 },
                 {
                   "text": "Mehrere Interviews stützen die im Bericht formulierte Einschätzung.",
                   "en": "Several interviews support the assessment set out in the report.",
-                  "green": []
+                  "green": [
+                    "Interviews"
+                  ]
                 },
                 {
                   "text": "Die Statistik liefert einen konkreten Beleg für den langfristigen Trend.",
                   "en": "The statistics provide concrete evidence of the long-term trend.",
-                  "green": []
+                  "green": [
+                    "Beleg",
+                    "Statistik"
+                  ]
                 }
               ]
             }
@@ -10920,6 +11839,7 @@
         {
           "id": "b2-c4-p9",
           "chip": "Absatzstruktur",
+          "chip_en": "paragraph structure",
           "subtitle": "Ein neuer Absatz kann mit einer klaren Teilthese beginnen.",
           "subtitle_en": "A new paragraph can begin with a clear sub-thesis.",
           "sortOrder": 39,
@@ -10946,27 +11866,37 @@
                 {
                   "text": "Zunächst werden die Ursachen der Verspätungen untersucht.",
                   "en": "First, the causes of the delays are examined.",
-                  "green": []
+                  "green": [
+                    "Zunächst"
+                  ]
                 },
                 {
                   "text": "Im folgenden Abschnitt stehen die Erfahrungen der Reisenden im Mittelpunkt.",
                   "en": "The following section focuses on the travellers’ experiences.",
-                  "green": []
+                  "green": [
+                    "Im folgenden Abschnitt"
+                  ]
                 },
                 {
                   "text": "Ein zweiter Gesichtspunkt betrifft die Qualität des Angebots.",
                   "en": "A second consideration concerns the quality of the service.",
-                  "green": []
+                  "green": [
+                    "Ein zweiter Gesichtspunkt"
+                  ]
                 },
                 {
                   "text": "Abschließend werden die wichtigsten Ergebnisse zusammengefasst.",
                   "en": "Finally, the main findings are summarised.",
-                  "green": []
+                  "green": [
+                    "Abschließend"
+                  ]
                 },
                 {
                   "text": "Darüber hinaus ist die regionale Verteilung der Befragten zu berücksichtigen.",
                   "en": "In addition, the regional distribution of respondents must be considered.",
-                  "green": []
+                  "green": [
+                    "Darüber hinaus"
+                  ]
                 }
               ]
             }
@@ -10975,6 +11905,7 @@
         {
           "id": "b2-c4-p10",
           "chip": "differenzierte Schlussfolgerung",
+          "chip_en": "nuanced conclusion",
           "subtitle": "Die Schlussfolgerung nennt Grenzen und vermeidet absolute Aussagen.",
           "subtitle_en": "The conclusion states limitations and avoids absolute claims.",
           "sortOrder": 40,
@@ -11002,27 +11933,37 @@
                 {
                   "text": "Die Maßnahme ist grundsätzlich sinnvoll, sofern ihre Kosten begrenzt bleiben.",
                   "en": "The measure is sensible in principle, provided that its costs remain limited.",
-                  "green": []
+                  "green": [
+                    "sofern"
+                  ]
                 },
                 {
                   "text": "Zusammenfassend zeigt sich ein positiver Trend, der jedoch nicht alle Gruppen betrifft.",
                   "en": "In summary, a positive trend is apparent, although it does not affect all groups.",
-                  "green": []
+                  "green": [
+                    "jedoch"
+                  ]
                 },
                 {
                   "text": "Eine abschließende Bewertung ist erst nach weiteren Erhebungen möglich.",
                   "en": "A final assessment will only be possible after further studies.",
-                  "green": []
+                  "green": [
+                    "erst nach"
+                  ]
                 },
                 {
                   "text": "Die Vorteile überwiegen, obwohl einzelne Risiken nicht unterschätzt werden dürfen.",
                   "en": "The advantages outweigh the disadvantages, although individual risks must not be underestimated.",
-                  "green": []
+                  "green": [
+                    "obwohl"
+                  ]
                 },
                 {
                   "text": "Unter Berücksichtigung der genannten Einschränkungen erscheint die Lösung tragfähig.",
                   "en": "Taking the stated limitations into account, the solution appears viable.",
-                  "green": []
+                  "green": [
+                    "Unter Berücksichtigung"
+                  ]
                 }
               ]
             }
@@ -11033,12 +11974,14 @@
     {
       "id": "b2-category-5",
       "label": "Argumentieren",
+      "label_en": "Making arguments",
       "sortOrder": 23,
       "note": "B2 · Meinung begründen. Wähle ein Sprachmuster und tippe auf einen Beispielsatz.",
       "patterns": [
         {
           "id": "b2-c5-p1",
           "chip": "These",
+          "chip_en": "thesis",
           "subtitle": "Eine These ist klar formuliert und lässt sich diskutieren.",
           "subtitle_en": "A thesis is clearly formulated and open to discussion.",
           "sortOrder": 41,
@@ -11066,7 +12009,9 @@
                 {
                   "text": "Ich vertrete die These, dass Bahntickets günstiger werden sollten.",
                   "en": "I support the thesis that train tickets should be cheaper.",
-                  "green": []
+                  "green": [
+                    "These"
+                  ]
                 },
                 {
                   "text": "Ein attraktives Café trägt wesentlich zur Aufenthaltsqualität bei.",
@@ -11081,12 +12026,16 @@
                 {
                   "text": "Aus meiner Sicht braucht jeder größere Bahnhof klare Ruhezonen.",
                   "en": "In my view, every larger station needs clearly designated quiet areas.",
-                  "green": []
+                  "green": [
+                    "Aus meiner Sicht"
+                  ]
                 },
                 {
                   "text": "Die These, häufigere Flüge seien immer besser, ist zu pauschal.",
                   "en": "The claim that more frequent flights are always better is too sweeping.",
-                  "green": []
+                  "green": [
+                    "These"
+                  ]
                 }
               ]
             }
@@ -11095,6 +12044,7 @@
         {
           "id": "b2-c5-p2",
           "chip": "Begründung",
+          "chip_en": "reason",
           "subtitle": "Eine Begründung erklärt, warum eine Behauptung plausibel ist.",
           "subtitle_en": "A justification explains why a claim is plausible.",
           "sortOrder": 42,
@@ -11122,27 +12072,37 @@
                 {
                   "text": "Längere Öffnungszeiten sind sinnvoll, weil viele Züge spät ankommen.",
                   "en": "Longer opening hours make sense because many trains arrive late.",
-                  "green": []
+                  "green": [
+                    "weil"
+                  ]
                 },
                 {
                   "text": "Der Ausbau ist erforderlich, da die Fahrgastzahlen kontinuierlich steigen.",
                   "en": "Expansion is necessary because passenger numbers are rising continuously.",
-                  "green": []
+                  "green": [
+                    "da"
+                  ]
                 },
                 {
                   "text": "Eine Reservierung empfiehlt sich, denn das Café ist abends oft voll.",
                   "en": "A reservation is advisable because the café is often full in the evening.",
-                  "green": []
+                  "green": [
+                    "denn"
+                  ]
                 },
                 {
                   "text": "Wir bevorzugen den Zug, zumal der Flughafen weit außerhalb liegt.",
                   "en": "We prefer the train, especially since the airport is far outside the city.",
-                  "green": []
+                  "green": [
+                    "zumal"
+                  ]
                 },
                 {
                   "text": "Diese Lösung überzeugt, weil sie Kosten und Zeit zugleich spart.",
                   "en": "This solution is convincing because it saves both time and money.",
-                  "green": []
+                  "green": [
+                    "weil"
+                  ]
                 }
               ]
             }
@@ -11151,6 +12111,7 @@
         {
           "id": "b2-c5-p3",
           "chip": "Beleg",
+          "chip_en": "supporting evidence",
           "subtitle": "Ein konkreter Beleg macht ein Argument nachvollziehbar.",
           "subtitle_en": "Concrete evidence makes an argument understandable.",
           "sortOrder": 43,
@@ -11178,27 +12139,37 @@
                 {
                   "text": "Aktuelle Fahrgastzahlen belegen den Bedarf an zusätzlichen Verbindungen.",
                   "en": "Current passenger figures demonstrate the need for additional connections.",
-                  "green": []
+                  "green": [
+                    "belegen"
+                  ]
                 },
                 {
                   "text": "Als Beleg lässt sich die hohe Auslastung am Wochenende anführen.",
                   "en": "The high level of use at weekends can be cited as evidence.",
-                  "green": []
+                  "green": [
+                    "Als Beleg"
+                  ]
                 },
                 {
                   "text": "Die Erfahrungen unserer Freunde bestätigen diese Einschätzung.",
                   "en": "Our friends’ experiences confirm this assessment.",
-                  "green": []
+                  "green": [
+                    "bestätigen"
+                  ]
                 },
                 {
                   "text": "Eine unabhängige Untersuchung stützt das Argument für mehr Personal.",
                   "en": "An independent study supports the argument for more staff.",
-                  "green": []
+                  "green": [
+                    "stützt"
+                  ]
                 },
                 {
                   "text": "Der tägliche Andrang am Schalter liefert einen sichtbaren Beleg.",
                   "en": "The daily crowds at the counter provide visible evidence.",
-                  "green": []
+                  "green": [
+                    "liefert einen sichtbaren Beleg"
+                  ]
                 }
               ]
             }
@@ -11207,6 +12178,7 @@
         {
           "id": "b2-c5-p4",
           "chip": "zwar … jedoch",
+          "chip_en": "admittedly … however",
           "subtitle": "Zwar jedoch erkennt ein Gegenargument an und schränkt es anschließend ein.",
           "subtitle_en": "Zwar … jedoch acknowledges a counterargument and then limits it.",
           "sortOrder": 44,
@@ -11278,6 +12250,7 @@
         {
           "id": "b2-c5-p5",
           "chip": "da",
+          "chip_en": "because; since",
           "subtitle": "Da leitet eine formellere kausale Begründung ein.",
           "subtitle_en": "Da introduces a more formal causal justification.",
           "sortOrder": 45,
@@ -11345,6 +12318,7 @@
         {
           "id": "b2-c5-p6",
           "chip": "daher",
+          "chip_en": "therefore",
           "subtitle": "Daher leitet eine logische Folgerung ein; danach folgt das Verb.",
           "subtitle_en": "Daher introduces a logical conclusion; the verb follows it.",
           "sortOrder": 46,
@@ -11411,6 +12385,7 @@
         {
           "id": "b2-c5-p7",
           "chip": "zum Beispiel",
+          "chip_en": "for example",
           "subtitle": "Ein Beispiel veranschaulicht ein allgemeines Argument.",
           "subtitle_en": "An example illustrates a general argument.",
           "sortOrder": 47,
@@ -11481,6 +12456,7 @@
         {
           "id": "b2-c5-p8",
           "chip": "häufig / viele",
+          "chip_en": "often / many",
           "subtitle": "Begrenzte Formulierungen vermeiden unbelegte Verallgemeinerungen.",
           "subtitle_en": "Limited formulations avoid unsupported generalisations.",
           "sortOrder": 48,
@@ -11547,6 +12523,7 @@
         {
           "id": "b2-c5-p9",
           "chip": "einerseits … andererseits",
+          "chip_en": "on the one hand … on the other",
           "subtitle": "Diese Verbindung wägt zwei unterschiedliche Gesichtspunkte ab.",
           "subtitle_en": "This combination weighs up two different points of view.",
           "sortOrder": 49,
@@ -11618,6 +12595,7 @@
         {
           "id": "b2-c5-p10",
           "chip": "unter diesen Voraussetzungen",
+          "chip_en": "under these conditions",
           "subtitle": "Eine Schlussfolgerung nennt die Bedingungen, unter denen sie gilt.",
           "subtitle_en": "A conclusion states the conditions under which it applies.",
           "sortOrder": 50,
@@ -11696,12 +12674,14 @@
     {
       "id": "b2-category-6",
       "label": "Wortgenauigkeit",
+      "label_en": "Word precision",
       "sortOrder": 24,
       "note": "B2 · Das genaue Wort. Wähle ein Sprachmuster und tippe auf einen Beispielsatz.",
       "patterns": [
         {
           "id": "b2-c6-p1",
           "chip": "anscheinend / scheinbar",
+          "chip_en": "apparently / seemingly",
           "subtitle": "Anscheinend bedeutet vermutlich wirklich; scheinbar bedeutet nur dem äußeren Eindruck nach.",
           "subtitle_en": "Anscheinend means probably true; scheinbar means only appearing to be so.",
           "sortOrder": 51,
@@ -11773,6 +12753,7 @@
         {
           "id": "b2-c6-p2",
           "chip": "steigen / erhöhen",
+          "chip_en": "rise / increase something",
           "subtitle": "Steigen ist intransitiv; erhöhen braucht ein Objekt.",
           "subtitle_en": "Steigen is intransitive; erhöhen requires an object.",
           "sortOrder": 52,
@@ -11800,12 +12781,18 @@
                 {
                   "text": "Die Zahl der Gäste steigt, während das Café seine Preise erhöht.",
                   "en": "The number of guests is rising while the café is increasing its prices.",
-                  "green": []
+                  "green": [
+                    "steigt",
+                    "erhöht"
+                  ]
                 },
                 {
                   "text": "Die Fluggesellschaft erhöhte die Kapazität, nachdem die Nachfrage gestiegen war.",
                   "en": "The airline increased capacity after demand had risen.",
-                  "green": []
+                  "green": [
+                    "erhöhte",
+                    "gestiegen"
+                  ]
                 },
                 {
                   "text": "Wenn die Kosten steigen, kann das Unternehmen die Gebühren erhöhen.",
@@ -11818,7 +12805,11 @@
                 {
                   "text": "Die Fahrgastzahlen sind gestiegen, ohne dass die Bahn ihre Preise erhöht hat.",
                   "en": "Passenger numbers have risen without the railway increasing its prices.",
-                  "green": []
+                  "green": [
+                    "erhöht",
+                    "gestiegen",
+                    "erhöht hat"
+                  ]
                 },
                 {
                   "text": "Das Café möchte seinen Umsatz erhöhen und seine Besucherzahl steigern.",
@@ -11834,6 +12825,7 @@
         {
           "id": "b2-c6-p3",
           "chip": "Zusammenhang",
+          "chip_en": "association",
           "subtitle": "Ein Zusammenhang beweist noch keine Ursache.",
           "subtitle_en": "A correlation does not yet prove a cause.",
           "sortOrder": 53,
@@ -11861,27 +12853,37 @@
                 {
                   "text": "Zwischen der Lage des Cafés und seiner Beliebtheit besteht ein enger Zusammenhang.",
                   "en": "There is a close correlation between the café’s location and its popularity.",
-                  "green": []
+                  "green": [
+                    "Zusammenhang"
+                  ]
                 },
                 {
                   "text": "Der zeitliche Zusammenhang allein belegt keine Ursache.",
                   "en": "The timing correlation alone does not prove a cause.",
-                  "green": []
+                  "green": [
+                    "Zusammenhang"
+                  ]
                 },
                 {
                   "text": "Die Studie untersucht den Zusammenhang zwischen Preis und Nachfrage.",
                   "en": "The study examines the correlation between price and demand.",
-                  "green": []
+                  "green": [
+                    "Zusammenhang"
+                  ]
                 },
                 {
                   "text": "In diesem Zusammenhang ist auch die Erreichbarkeit des Bahnhofs relevant.",
                   "en": "In this context, the accessibility of the station is also relevant.",
-                  "green": []
+                  "green": [
+                    "Zusammenhang"
+                  ]
                 },
                 {
                   "text": "Meine Freundin erklärte den Zusammenhang zwischen den beiden Änderungen.",
                   "en": "My friend explained the connection between the two changes.",
-                  "green": []
+                  "green": [
+                    "Zusammenhang"
+                  ]
                 }
               ]
             }
@@ -11890,6 +12892,7 @@
         {
           "id": "b2-c6-p4",
           "chip": "Anteil",
+          "chip_en": "proportion",
           "subtitle": "Ein Anteil wird mit einer klaren Bezugsgröße angegeben.",
           "subtitle_en": "A proportion is stated with a clear reference quantity.",
           "sortOrder": 54,
@@ -11916,27 +12919,37 @@
                 {
                   "text": "Der Anteil verspäteter Flüge sank auf acht Prozent.",
                   "en": "The proportion of delayed flights fell to eight per cent.",
-                  "green": []
+                  "green": [
+                    "Anteil"
+                  ]
                 },
                 {
                   "text": "Internationale Gäste machen einen wachsenden Anteil der Kundschaft aus.",
                   "en": "International guests make up a growing proportion of the customer base.",
-                  "green": []
+                  "green": [
+                    "Anteil"
+                  ]
                 },
                 {
                   "text": "Welchen Anteil tragen die Fahrkarten zu den Gesamtkosten bei?",
                   "en": "What proportion of the total costs is accounted for by the tickets?",
-                  "green": []
+                  "green": [
+                    "Anteil"
+                  ]
                 },
                 {
                   "text": "Ein erheblicher Anteil der Befragten reist regelmäßig mit dem Zug.",
                   "en": "A significant proportion of respondents travel regularly by train.",
-                  "green": []
+                  "green": [
+                    "Anteil"
+                  ]
                 },
                 {
                   "text": "Der Anteil digitaler Buchungen hat sich seit 2020 verdoppelt.",
                   "en": "The proportion of digital bookings has doubled since 2020.",
-                  "green": []
+                  "green": [
+                    "Anteil"
+                  ]
                 }
               ]
             }
@@ -11945,6 +12958,7 @@
         {
           "id": "b2-c6-p5",
           "chip": "bereits / erst",
+          "chip_en": "already / only",
           "subtitle": "Bereits betont einen frühen, erst einen späten Zeitpunkt.",
           "subtitle_en": "Bereits emphasises an early point in time; erst emphasises a late one.",
           "sortOrder": 55,
@@ -12016,6 +13030,7 @@
         {
           "id": "b2-c6-p6",
           "chip": "nahezu",
+          "chip_en": "almost; nearly",
           "subtitle": "Nahezu bedeutet fast vollständig, aber nicht ganz.",
           "subtitle_en": "Nahezu means almost completely, but not quite.",
           "sortOrder": 56,
@@ -12081,6 +13096,7 @@
         {
           "id": "b2-c6-p7",
           "chip": "nicht alle",
+          "chip_en": "not all",
           "subtitle": "Die Stellung von nicht bestimmt, welcher Teil der Aussage verneint wird.",
           "subtitle_en": "The position of nicht determines which part of the statement is negated.",
           "sortOrder": 57,
@@ -12151,6 +13167,7 @@
         {
           "id": "b2-c6-p8",
           "chip": "dürfte",
+          "chip_en": "is likely to",
           "subtitle": "Dürfte drückt eine begründete, aber nicht sichere Wahrscheinlichkeit aus.",
           "subtitle_en": "Dürfte expresses a justified but uncertain probability.",
           "sortOrder": 58,
@@ -12216,6 +13233,7 @@
         {
           "id": "b2-c6-p9",
           "chip": "beeinflussen / verursachen",
+          "chip_en": "influence / cause",
           "subtitle": "Beeinflussen verändert etwas; verursachen bezeichnet eine direkte Ursache.",
           "subtitle_en": "Beeinflussen changes something; verursachen identifies a direct cause.",
           "sortOrder": 59,
@@ -12243,7 +13261,10 @@
                 {
                   "text": "Eine Verspätung beeinflusst unsere Pläne, verursacht aber nicht zwangsläufig einen Ausfall.",
                   "en": "A delay affects our plans, but does not necessarily cause a cancellation.",
-                  "green": []
+                  "green": [
+                    "beeinflusst",
+                    "verursacht"
+                  ]
                 },
                 {
                   "text": "Lärm kann die Stimmung im Café beeinflussen und Stress verursachen.",
@@ -12256,7 +13277,10 @@
                 {
                   "text": "Das Wetter beeinflusst die Nachfrage, während der Sturm direkte Schäden verursacht.",
                   "en": "The weather influences demand, while the storm causes direct damage.",
-                  "green": []
+                  "green": [
+                    "beeinflusst",
+                    "verursacht"
+                  ]
                 },
                 {
                   "text": "Freunde beeinflussen Entscheidungen, ohne sie allein zu verursachen.",
@@ -12281,6 +13305,7 @@
         {
           "id": "b2-c6-p10",
           "chip": "eindeutiger Bezug",
+          "chip_en": "unambiguous reference",
           "subtitle": "Das Bezugswort wird wiederholt, wenn ein Pronomen missverständlich wäre.",
           "subtitle_en": "The antecedent is repeated when a pronoun would be ambiguous.",
           "sortOrder": 60,
@@ -12307,27 +13332,37 @@
                 {
                   "text": "Nachdem die Kellnerin mit der Kundin gesprochen hatte, brachte die Kellnerin die Rechnung.",
                   "en": "After the waitress had spoken to the customer, the waitress brought the bill.",
-                  "green": []
+                  "green": [
+                    "Kellnerin"
+                  ]
                 },
                 {
                   "text": "Paul informierte Martin über dessen Flugänderung.",
                   "en": "Paul informed Martin about Martin’s flight change.",
-                  "green": []
+                  "green": [
+                    "dessen"
+                  ]
                 },
                 {
                   "text": "Die Fluggesellschaft kontaktierte das Hotel, bevor die Fluggesellschaft die Gäste umbuchte.",
                   "en": "The airline contacted the hotel before the airline rebooked the guests.",
-                  "green": []
+                  "green": [
+                    "Fluggesellschaft"
+                  ]
                 },
                 {
                   "text": "Als Anna Sara am Bahnhof traf, gab Anna Sara das Ticket.",
                   "en": "When Anna met Sara at the station, Anna gave Sara the ticket.",
-                  "green": []
+                  "green": [
+                    "Anna Sara"
+                  ]
                 },
                 {
                   "text": "Der Bericht vergleicht den Zug mit dem Flugzeug und bewertet anschließend den Zug.",
                   "en": "The report compares the train with the plane and then evaluates the train.",
-                  "green": []
+                  "green": [
+                    "Zug"
+                  ]
                 }
               ]
             }
