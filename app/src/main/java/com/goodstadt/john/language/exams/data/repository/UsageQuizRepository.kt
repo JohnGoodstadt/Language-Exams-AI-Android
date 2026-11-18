@@ -137,6 +137,30 @@ class UsageQuizRepository @Inject constructor(
         return justEarnedAward
     }
 
+    /**
+     * Short history summary for a quiz's picker row, e.g. "Just now · 1x · 8/10" or
+     * "20m · 4x · 10/10 10/10 8/10": time since the last go, times completed, and the first-try scores of
+     * the last [RECENT_RUNS_SHOWN] goes, newest first (3 perfect goes in a row = mastery). Mirrors iOS
+     * UsageQuizRepository.recentSummary. Null when the quiz has never been completed.
+     */
+    fun recentSummary(quizId: String, now: Long = System.currentTimeMillis()): String? = synchronized(lock) {
+        val stat = quizStates[quizId] ?: return@synchronized null
+        @Suppress("SENSELESS_COMPARISON")
+        val attempts = if (stat.attempts == null) emptyList() else stat.attempts.toList()
+        if (stat.timesCompleted <= 0 && attempts.isEmpty()) return@synchronized null
+
+        val parts = mutableListOf<String>()
+        attempts.maxOfOrNull { it.attemptedAt }?.takeIf { it > 0 }?.let { parts += shortAge(now - it) }
+        parts += "${maxOf(stat.timesCompleted, attempts.size)}x"
+        val recent = attempts.sortedByDescending { it.attemptedAt }
+            .filter { it.total > 0 }
+            .take(RECENT_RUNS_SHOWN)
+        if (recent.isNotEmpty()) {
+            parts += recent.joinToString(" ") { "${it.firstTryCorrect ?: it.correct}/${it.total}" }
+        }
+        parts.joinToString(" · ")
+    }
+
     /** Every dated attempt at one quiz, oldest first. */
     fun getQuizAttempts(quizId: String): List<UsageQuizAttempt> =
         synchronized(lock) { quizStates[quizId]?.attempts?.toList() ?: emptyList() }
@@ -361,5 +385,24 @@ class UsageQuizRepository @Inject constructor(
             }
         }
         Timber.d("=============================")
+    }
+
+    companion object {
+        /** Recent goes shown on a quiz row = the perfect goes in a row needed for mastery. */
+        const val RECENT_RUNS_SHOWN = 3
+
+        /** "Just now" (< 10 min), then minutes "50m", hours "3h", days "2d", weeks "3w", years "1y". */
+        fun shortAge(elapsedMillis: Long): String {
+            val s = maxOf(0L, elapsedMillis) / 1000
+            val minute = 60L; val hour = 3_600L; val day = 86_400L; val week = 604_800L; val year = 31_536_000L
+            return when {
+                s < 10 * minute -> "Just now"
+                s < hour -> "${s / minute}m"
+                s < day -> "${s / hour}h"
+                s < week -> "${s / day}d"
+                s < year -> "${s / week}w"
+                else -> "${s / year}y"
+            }
+        }
     }
 }

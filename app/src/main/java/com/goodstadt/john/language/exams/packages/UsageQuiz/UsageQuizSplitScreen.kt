@@ -31,6 +31,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableLongStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -44,6 +45,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
+import kotlinx.coroutines.delay
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -93,6 +96,18 @@ fun UsageQuizSplitScreen(
     var showInfoBottomSheet by remember { mutableStateOf(false) }
     var showDashboardSheet by remember { mutableStateOf(false) }
     var isLearningExpanded by rememberSaveable { mutableStateOf(false) }
+
+    // Quiz row history ("Just now · 1x · 8/10"): refresh on stats changes and once a minute so
+    // "Just now" ages to "12m" while the screen is open. Tablets show it inline on the right.
+    val usageStatsVersion by viewModel.usageStatsVersion.collectAsState()
+    var nowMillis by remember { mutableLongStateOf(System.currentTimeMillis()) }
+    LaunchedEffect(Unit) {
+        while (true) {
+            delay(60_000)
+            nowMillis = System.currentTimeMillis()
+        }
+    }
+    val statsInline = LocalConfiguration.current.screenWidthDp >= 600
 
     // Translate toggle: only offered when the loaded data carries "_en" translations (older cached /
     // Firestore data without them, and the English app, never show the button or translate).
@@ -188,6 +203,10 @@ fun UsageQuizSplitScreen(
         ) {
             items(availableQuizzes, key = { it.id }) { quiz ->
                 val isSelected = quiz.id == selectedQuiz?.id
+                // "20m · 4x · 10/10 10/10 8/10" - re-read when stats change or the minute ticks over.
+                val rowSummary = remember(quiz.baseName, usageStatsVersion, nowMillis) {
+                    viewModel.quizRowSummary(quiz, nowMillis)
+                }
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -195,13 +214,21 @@ fun UsageQuizSplitScreen(
                         .padding(horizontal = 16.dp, vertical = 14.dp),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Text(
-                        text = tr(quiz.title, quiz.titleEn),
-                        style = MaterialTheme.typography.bodyLarge,
-                        fontWeight = if (isSelected) FontWeight.SemiBold else FontWeight.Normal,
-                        color = if (isSelected) LocalExtendedColors.current.buttonBlue else MaterialTheme.colorScheme.onSurface,
-                        modifier = Modifier.weight(1f)
-                    )
+                    // Phone: the stats go under the title in small text; tablet: on the right.
+                    Column(modifier = Modifier.weight(1f)) {
+                        Text(
+                            text = tr(quiz.title, quiz.titleEn),
+                            style = MaterialTheme.typography.bodyLarge,
+                            fontWeight = if (isSelected) FontWeight.SemiBold else FontWeight.Normal,
+                            color = if (isSelected) LocalExtendedColors.current.buttonBlue else MaterialTheme.colorScheme.onSurface
+                        )
+                        if (!statsInline && rowSummary != null) {
+                            QuizRowStatsText(rowSummary, small = true, modifier = Modifier.padding(top = 3.dp))
+                        }
+                    }
+                    if (statsInline && rowSummary != null) {
+                        QuizRowStatsText(rowSummary, small = false, modifier = Modifier.padding(start = 12.dp, end = 8.dp))
+                    }
                     if (isSelected) {
                         Icon(
                             imageVector = Icons.Default.CheckCircle,
@@ -460,4 +487,18 @@ private fun UsageQuizSheetPanel(
         )
         Spacer(modifier = Modifier.width(1.dp))
     }
+}
+
+/** A quiz row's history summary ("20m · 4x · 10/10 10/10 8/10"): small grey text, digits kept aligned. */
+@Composable
+private fun QuizRowStatsText(summary: String, small: Boolean, modifier: Modifier = Modifier) {
+    Text(
+        text = summary,
+        style = if (small) MaterialTheme.typography.bodySmall else MaterialTheme.typography.bodyMedium,
+        fontFeatureSettings = "tnum",
+        color = MaterialTheme.colorScheme.onSurfaceVariant,
+        maxLines = 1,
+        overflow = TextOverflow.Ellipsis,
+        modifier = modifier
+    )
 }

@@ -259,6 +259,21 @@ class UsageQuizViewModel @Inject constructor(
     private val _availableQuizzes = MutableStateFlow<List<QuizDetail>>(UsageQuizLevelsFilename.UPPER.quizzes)
     val availableQuizzes = _availableQuizzes.asStateFlow()
 
+    // Bumped whenever the usage stats change (e.g. a quiz is finished), so the picker rows'
+    // "Just now · 1x · 8/10" summaries recompose.
+    private val _usageStatsVersion = MutableStateFlow(0)
+    val usageStatsVersion: StateFlow<Int> = _usageStatsVersion.asStateFlow()
+
+    init {
+        viewModelScope.launch {
+            usageQuizRepository.dataUpdateEvents.collect { _usageStatsVersion.value += 1 }
+        }
+    }
+
+    /** History summary for a quiz picker row (see [UsageQuizRepository.recentSummary]); null if never completed. */
+    fun quizRowSummary(quiz: QuizDetail, now: Long = System.currentTimeMillis()): String? =
+        usageQuizRepository.recentSummary(quiz.baseName, now)
+
     // 1. The Cache: Maps a Level (e.g. ELEMENTARY) to its list of localized QuizDetails
     private val quizTitleCache = mutableMapOf<UsageQuizLevelsFilename, List<QuizDetail>>()
     private var infoUsedForCurrentQuestion = false // ✅ Track hint usage for the CURRENT question
