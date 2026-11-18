@@ -19,6 +19,11 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
 
+    <!-- MainActivity is locked to portrait, which makes Play treat "portrait screen" as a REQUIRED
+         hardware feature and hides the app from tablets, Chromebooks/desktop and XR. Declaring it
+         optional keeps the portrait lock where supported but lets every device install the app. -->
+    <uses-feature android:name="android.hardware.screen.portrait" android:required="false" />
+
     <queries>
         <package android:name="com.facebook.katana" />
         <!-- So SpeechRecognizer.isRecognitionAvailable() and the RECOGNIZE_SPEECH intent resolve on API 30+
