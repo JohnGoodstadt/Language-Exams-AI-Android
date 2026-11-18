@@ -4,6 +4,8 @@ import android.content.Context
 import android.content.SharedPreferences
 import com.goodstadt.john.language.exams.data.repository.BillingRepository
 import com.goodstadt.john.language.exams.data.repository.ContentRepository
+import com.goodstadt.john.language.exams.data.repository.TranslateLang
+import com.goodstadt.john.language.exams.managers.LearnerLanguage
 import com.goodstadt.john.language.exams.managers.SequencePlayer
 import com.goodstadt.john.language.exams.models.Format9File
 import io.mockk.*
@@ -38,8 +40,10 @@ class Format9SelectionTest {
         every { sequence.playingKey } returns playingKey
         every { sequence.isPaused } returns MutableStateFlow(false)
         every { sequence.stop() } answers { playingKey.value = null }
+        val learnerLanguage: LearnerLanguage = mockk()
+        every { learnerLanguage.language } returns MutableStateFlow(TranslateLang.ENGLISH)
         viewModel = Format9ViewModel(repository, sequence, mockk(relaxed = true), billing,
-            mockk(relaxed = true), mockk(relaxed = true), mockk(relaxed = true), context)
+            mockk(relaxed = true), mockk(relaxed = true), mockk(relaxed = true), context, learnerLanguage)
     }
 
     @After fun tearDown() { Dispatchers.resetMain() }

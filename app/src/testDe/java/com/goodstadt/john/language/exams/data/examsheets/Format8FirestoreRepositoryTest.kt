@@ -3,6 +3,10 @@ package com.goodstadt.john.language.exams.data.examsheets
 import android.content.Context
 import com.goodstadt.john.language.exams.data.FirestoreRepository.fb
 import com.goodstadt.john.language.exams.models.Format8File
+import com.goodstadt.john.language.exams.screens.shared.ConnectionNotice
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import io.mockk.coEvery
 import com.google.android.gms.tasks.Tasks
 import com.google.firebase.Timestamp
 import com.google.firebase.firestore.CollectionReference
@@ -58,7 +62,12 @@ class Format8FirestoreRepositoryTest {
             every { snapshot.data } returns fields()
             val context: Context = mockk()
             every { context.filesDir } returns temp.root
-            repository = ExamSheetRepository(firestore, mockk(), context, json)
+            // Online and signed in, so fetches go straight to the (mocked) Firestore.
+            val notice: ConnectionNotice = mockk()
+            coEvery { notice.checkOffline() } returns false
+            val auth: FirebaseAuth = mockk()
+            every { auth.currentUser } returns mockk<FirebaseUser>()
+            repository = ExamSheetRepository(firestore, mockk(), context, json, { notice }, auth)
         }
         fun cache(doc: String = name) = File(temp.root, "${doc}_cache.json")
     }
