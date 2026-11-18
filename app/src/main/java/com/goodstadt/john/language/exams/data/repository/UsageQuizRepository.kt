@@ -183,21 +183,20 @@ class UsageQuizRepository @Inject constructor(
             var priorAttempts = 0
             var totalCorrect = 0
             var totalAnswered = 0
-            var perfectStreak = 0   // trailing run of perfect (all first-try-correct) attempts
             for (a in attempts) {
                 if (a.total <= 0) continue
                 // Score by FIRST-TRY correct (honest) - `correct` is ~always the full total in this
                 // keep-trying quiz, so it would read 100%/Strong and never surface as a weakness.
                 val ftc = a.firstTryCorrect ?: a.correct
                 mark = ReferenceStrengthMath.blend(mark, priorAttempts, ftc, a.total)
-                perfectStreak = if (ftc >= a.total) perfectStreak + 1 else 0
                 priorAttempts += 1
                 totalCorrect += ftc
                 totalAnswered += a.total
             }
             if (priorAttempts == 0) return@mapNotNull null
-            // Snap to 100% after enough consecutive perfect attempts; otherwise the running EMA.
-            val m = if (perfectStreak >= ReferenceStrengthMath.PERFECT_STREAK_FOR_MASTERY) 1f else (mark ?: 0f)
+            // 100% once flawless on 3 different days - the same rule as the 3-day award; mistakes in between
+            // don't reset it. Otherwise the running EMA.
+            val m = if (flawlessDistinctDays(quizId) >= ReferenceStrengthMath.PERFECT_STREAK_FOR_MASTERY) 1f else (mark ?: 0f)
             ReferenceStrength(
                 areaId = quizId,
                 label = titles[quizId] ?: quizId,

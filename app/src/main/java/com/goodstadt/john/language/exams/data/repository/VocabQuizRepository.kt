@@ -446,12 +446,12 @@ class VocabQuizRepository @Inject constructor(
             var priorAttempts = 0
             var totalCorrect = 0
             var totalAnswered = 0
-            var perfectStreak = 0   // trailing run of perfect (all first-try-correct) attempts
+            val perfectDays = mutableSetOf<Long>()   // different days with a flawless run - same rule as the stars
             for (a in sorted) {
                 if (a.total <= 0) continue
                 val ftc = a.firstTryCorrect ?: a.correct
                 mark = ReferenceStrengthMath.blend(mark, priorAttempts, ftc, a.total)
-                perfectStreak = if (ftc >= a.total) perfectStreak + 1 else 0
+                if (a.flawless) perfectDays += VocabMasteryEngine.dayIndex(a.attemptedAt, BuildConfig.DEBUG)
                 priorAttempts += 1
                 totalCorrect += ftc
                 totalAnswered += a.total
@@ -459,8 +459,9 @@ class VocabQuizRepository @Inject constructor(
             if (priorAttempts == 0) return@mapNotNull null
             // categoryKey is "$level|$category".
             val parts = key.split("|", limit = 2)
-            // Snap to 100% after enough consecutive perfect attempts; otherwise the running EMA.
-            val m = if (perfectStreak >= ReferenceStrengthMath.PERFECT_STREAK_FOR_MASTERY) 1f else (mark ?: 0f)
+            // 100% once there are perfect runs on 3 different days (mistakes in between don't reset it);
+            // otherwise the running EMA.
+            val m = if (perfectDays.size >= ReferenceStrengthMath.PERFECT_STREAK_FOR_MASTERY) 1f else (mark ?: 0f)
             ReferenceStrength(
                 areaId = key,
                 label = parts.getOrElse(1) { key },

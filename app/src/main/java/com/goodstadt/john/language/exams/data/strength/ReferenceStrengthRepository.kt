@@ -1,6 +1,8 @@
 package com.goodstadt.john.language.exams.data.strength
 
 import android.content.Context
+import com.goodstadt.john.language.exams.BuildConfig
+import com.goodstadt.john.language.exams.data.repository.VocabMasteryEngine
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -81,8 +83,13 @@ class ReferenceStrengthRepository @Inject constructor(
                 correct = correct,
                 answered = answered
             )
-            // Track consecutive perfect (100%) runs; a non-perfect run resets the streak.
-            val streak = if (correct >= answered) (prev?.perfectStreak ?: 0) + 1 else 0
+            // Track the different days with a perfect (100%) run; a non-perfect run leaves them as they are.
+            var perfectDays = prev?.perfectDayIndexes ?: emptyList()
+            if (correct >= answered) {
+                val today = VocabMasteryEngine.dayIndex(System.currentTimeMillis(), BuildConfig.DEBUG)
+                if (today !in perfectDays) perfectDays = listOf(today) + perfectDays
+                perfectDays = perfectDays.take(ReferenceStrengthMath.PERFECT_STREAK_FOR_MASTERY)
+            }
             store[areaId] = Stored(
                 label = label.ifBlank { prev?.label ?: areaId },
                 mark = mark,
@@ -90,7 +97,8 @@ class ReferenceStrengthRepository @Inject constructor(
                 totalCorrect = (prev?.totalCorrect ?: 0) + correct,
                 totalAnswered = (prev?.totalAnswered ?: 0) + answered,
                 lastUpdated = System.currentTimeMillis(),
-                perfectStreak = streak
+                perfectStreak = prev?.perfectStreak ?: 0,
+                perfectDayIndexes = perfectDays
             )
         }
         Timber.d("ReferenceStrength: '$areaId' <- $correct/$answered")
@@ -137,7 +145,7 @@ class ReferenceStrengthRepository @Inject constructor(
 
     /** The mark shown to callers: the running EMA, snapped to 100% after enough consecutive perfect runs. */
     private fun effectiveMark(s: Stored): Float =
-        if (s.perfectStreak >= ReferenceStrengthMath.PERFECT_STREAK_FOR_MASTERY) 1f else s.mark
+        if ((s.perfectDayIndexes?.size ?: 0) >= ReferenceStrengthMath.PERFECT_STREAK_FOR_MASTERY) 1f else s.mark
 
     private fun Stored.toStrength(areaId: String): ReferenceStrength {
         val m = effectiveMark(this)
@@ -188,8 +196,12 @@ class ReferenceStrengthRepository @Inject constructor(
         val totalCorrect: Int = 0,
         val totalAnswered: Int = 0,
         val lastUpdated: Long = 0,
-        // Consecutive perfect (100%) runs; at PERFECT_STREAK_FOR_MASTERY the exposed mark snaps to 100%.
-        val perfectStreak: Int = 0
+        // LEGACY (no longer updated or read): consecutive perfect runs. Kept so older files still load.
+        val perfectStreak: Int = 0,
+        // Day numbers (VocabMasteryEngine.dayIndex) with a perfect (100%) run, newest first, one per day, at
+        // most PERFECT_STREAK_FOR_MASTERY. Runs with mistakes in between don't reset it. Nullable because Gson
+        // leaves fields missing from older files as null (counting then starts from the next perfect run).
+        val perfectDayIndexes: List<Long>? = null
     )
 
 }
