@@ -494,8 +494,9 @@ private fun UsageQuizSheetPanel(
 private fun QuizRowStatsText(summary: String, small: Boolean, modifier: Modifier = Modifier) {
     Text(
         text = summary,
-        style = if (small) MaterialTheme.typography.bodySmall else MaterialTheme.typography.bodyMedium,
-        fontFeatureSettings = "tnum",
+        // "tnum" = tabular digits, so the scores line up row to row (set on the style: Text() has no such param).
+        style = (if (small) MaterialTheme.typography.bodySmall else MaterialTheme.typography.bodyMedium)
+            .copy(fontFeatureSettings = "tnum"),
         color = MaterialTheme.colorScheme.onSurfaceVariant,
         maxLines = 1,
         overflow = TextOverflow.Ellipsis,
