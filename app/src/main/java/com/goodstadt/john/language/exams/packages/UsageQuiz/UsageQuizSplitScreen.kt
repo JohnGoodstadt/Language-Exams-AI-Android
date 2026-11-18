@@ -37,6 +37,11 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.path
+import androidx.compose.foundation.layout.size
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalConfiguration
@@ -207,6 +212,9 @@ fun UsageQuizSplitScreen(
                 val rowSummary = remember(quiz.baseName, usageStatsVersion, nowMillis) {
                     viewModel.quizRowSummary(quiz, nowMillis)
                 }
+                val rowMastered = remember(quiz.baseName, usageStatsVersion, nowMillis) {
+                    viewModel.quizRowMastered(quiz)
+                }
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -223,11 +231,11 @@ fun UsageQuizSplitScreen(
                             color = if (isSelected) LocalExtendedColors.current.buttonBlue else MaterialTheme.colorScheme.onSurface
                         )
                         if (!statsInline && rowSummary != null) {
-                            QuizRowStatsText(rowSummary, small = true, modifier = Modifier.padding(top = 3.dp))
+                            QuizRowStatsText(rowSummary, small = true, mastered = rowMastered, modifier = Modifier.padding(top = 3.dp))
                         }
                     }
                     if (statsInline && rowSummary != null) {
-                        QuizRowStatsText(rowSummary, small = false, modifier = Modifier.padding(start = 12.dp, end = 8.dp))
+                        QuizRowStatsText(rowSummary, small = false, mastered = rowMastered, modifier = Modifier.padding(start = 12.dp, end = 8.dp))
                     }
                     if (isSelected) {
                         Icon(
@@ -491,15 +499,39 @@ private fun UsageQuizSheetPanel(
 
 /** A quiz row's history summary ("20m · 4x · 10/10 10/10 8/10"): small grey text, digits kept aligned. */
 @Composable
-private fun QuizRowStatsText(summary: String, small: Boolean, modifier: Modifier = Modifier) {
-    Text(
-        text = summary,
+private fun QuizRowStatsText(summary: String, small: Boolean, mastered: Boolean, modifier: Modifier = Modifier) {
+    val style = (if (small) MaterialTheme.typography.bodySmall else MaterialTheme.typography.bodyMedium)
         // "tnum" = tabular digits, so the scores line up row to row (set on the style: Text() has no such param).
-        style = (if (small) MaterialTheme.typography.bodySmall else MaterialTheme.typography.bodyMedium)
-            .copy(fontFeatureSettings = "tnum"),
-        color = MaterialTheme.colorScheme.onSurfaceVariant,
-        maxLines = 1,
-        overflow = TextOverflow.Ellipsis,
-        modifier = modifier
-    )
+        .copy(fontFeatureSettings = "tnum")
+    Row(modifier = modifier, verticalAlignment = Alignment.CenterVertically) {
+        Text(
+            text = summary,
+            style = style,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis,
+            modifier = Modifier.weight(1f, fill = false)
+        )
+        // Small gold crown after "… · Mastered" (matches the iOS crown.fill).
+        if (mastered) {
+            Icon(
+                imageVector = CrownIcon,
+                contentDescription = "Mastered",
+                tint = Color(0xFFFFC107),
+                modifier = Modifier.padding(start = 4.dp).size(if (small) 14.dp else 16.dp)
+            )
+        }
+    }
+}
+
+/** Simple filled crown (Material icons have none): three points on a band, with a base bar. */
+private val CrownIcon: ImageVector by lazy {
+    ImageVector.Builder(name = "Crown", defaultWidth = 24.dp, defaultHeight = 24.dp,
+        viewportWidth = 24f, viewportHeight = 24f).apply {
+        path(fill = SolidColor(Color.Black)) {
+            moveTo(3f, 7f); lineTo(7.5f, 11.5f); lineTo(12f, 4f); lineTo(16.5f, 11.5f); lineTo(21f, 7f)
+            lineTo(19f, 17.5f); lineTo(5f, 17.5f); close()
+            moveTo(5f, 19f); lineTo(19f, 19f); lineTo(19f, 21f); lineTo(5f, 21f); close()
+        }
+    }.build()
 }

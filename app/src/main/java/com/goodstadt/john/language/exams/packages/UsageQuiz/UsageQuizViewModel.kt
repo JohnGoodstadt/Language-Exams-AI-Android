@@ -274,6 +274,9 @@ class UsageQuizViewModel @Inject constructor(
     fun quizRowSummary(quiz: QuizDetail, now: Long = System.currentTimeMillis()): String? =
         usageQuizRepository.recentSummary(quiz.baseName, now)
 
+    /** True once this quiz is mastered (flawless on 3 different days) - the row shows a crown. */
+    fun quizRowMastered(quiz: QuizDetail): Boolean = usageQuizRepository.isMastered(quiz.baseName)
+
     // 1. The Cache: Maps a Level (e.g. ELEMENTARY) to its list of localized QuizDetails
     private val quizTitleCache = mutableMapOf<UsageQuizLevelsFilename, List<QuizDetail>>()
     private var infoUsedForCurrentQuestion = false // ✅ Track hint usage for the CURRENT question

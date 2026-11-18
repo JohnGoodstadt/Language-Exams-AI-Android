@@ -13,8 +13,7 @@ import com.goodstadt.john.language.exams.models.WordMasteryLevel
 import com.goodstadt.john.language.exams.data.strength.ReferenceStrength
 import com.goodstadt.john.language.exams.data.strength.ReferenceStrengthMath
 import com.goodstadt.john.language.exams.screens.UsageQuiz.UsageQuizLevelsFilename
-import java.time.Instant
-import java.time.ZoneId
+import com.goodstadt.john.language.exams.BuildConfig
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -139,9 +138,11 @@ class UsageQuizRepository @Inject constructor(
 
     /**
      * Short history summary for a quiz's picker row, e.g. "Just now · 1x · 8/10" or
-     * "20m · 4x · 10/10 10/10 8/10": time since the last go, times completed, and the first-try scores of
-     * the last [RECENT_RUNS_SHOWN] goes, newest first (3 perfect goes in a row = mastery). Mirrors iOS
-     * UsageQuizRepository.recentSummary. Null when the quiz has never been completed.
+     * "20m · 5x · 2p · 10/10 9/10 10/10": time since the last go, times completed, the number of different
+     * days with a flawless go ("2p", shown once there is one), and the first-try scores of the last
+     * [RECENT_RUNS_SHOWN] goes, newest first. Once mastered (flawless on 3 different days - mistakes in
+     * between don't reset it) the scores are replaced by "3 on 3 days · Mastered" and the row adds a crown.
+     * Mirrors iOS UsageQuizRepository.recentSummary. Null when the quiz has never been completed.
      */
     fun recentSummary(quizId: String, now: Long = System.currentTimeMillis()): String? = synchronized(lock) {
         val stat = quizStates[quizId] ?: return@synchronized null
@@ -152,14 +153,25 @@ class UsageQuizRepository @Inject constructor(
         val parts = mutableListOf<String>()
         attempts.maxOfOrNull { it.attemptedAt }?.takeIf { it > 0 }?.let { parts += shortAge(now - it) }
         parts += "${maxOf(stat.timesCompleted, attempts.size)}x"
-        val recent = attempts.sortedByDescending { it.attemptedAt }
-            .filter { it.total > 0 }
-            .take(RECENT_RUNS_SHOWN)
-        if (recent.isNotEmpty()) {
-            parts += recent.joinToString(" ") { "${it.firstTryCorrect ?: it.correct}/${it.total}" }
+        val perfectDays = flawlessDistinctDays(quizId)
+        if (perfectDays >= MASTERY_DAYS) {
+            parts += "$MASTERY_DAYS on $MASTERY_DAYS days"
+            parts += "Mastered"
+        } else {
+            // "2p" = flawless on 2 different days, so the learner knows how many are left.
+            if (perfectDays > 0) parts += "${perfectDays}p"
+            val recent = attempts.sortedByDescending { it.attemptedAt }
+                .filter { it.total > 0 }
+                .take(RECENT_RUNS_SHOWN)
+            if (recent.isNotEmpty()) {
+                parts += recent.joinToString(" ") { "${it.firstTryCorrect ?: it.correct}/${it.total}" }
+            }
         }
         parts.joinToString(" · ")
     }
+
+    /** True once the quiz has been completed flawlessly on [MASTERY_DAYS] different days (row crown). */
+    fun isMastered(quizId: String): Boolean = flawlessDistinctDays(quizId) >= MASTERY_DAYS
 
     /** Every dated attempt at one quiz, oldest first. */
     fun getQuizAttempts(quizId: String): List<UsageQuizAttempt> =
@@ -211,12 +223,12 @@ class UsageQuizRepository @Inject constructor(
     }
 
     /** Number of DISTINCT local calendar days on which this quiz was completed flawlessly (no errors).
+     *  Uses [VocabMasteryEngine.dayIndex] like the vocab stars, so DEBUG builds count 30-second "days".
      *  Callers already holding [lock] are fine - the monitor is reentrant. */
     fun flawlessDistinctDays(quizId: String): Int = synchronized(lock) {
-        val zone = ZoneId.systemDefault()
         quizStates[quizId]?.attempts
             ?.filter { it.flawless }
-            ?.map { Instant.ofEpochMilli(it.attemptedAt).atZone(zone).toLocalDate() }
+            ?.map { VocabMasteryEngine.dayIndex(it.attemptedAt, BuildConfig.DEBUG) }
             ?.toSet()?.size ?: 0
     }
 
@@ -389,6 +401,8 @@ class UsageQuizRepository @Inject constructor(
     companion object {
         /** Recent goes shown on a quiz row = the perfect goes in a row needed for mastery. */
         const val RECENT_RUNS_SHOWN = 3
+        /** Flawless goes on this many different days = mastered (row crown, Focus 100%, 3-day award). */
+        const val MASTERY_DAYS = 3
 
         /** "Just now" (< 10 min), then minutes "50m", hours "3h", days "2d", weeks "3w", years "1y". */
         fun shortAge(elapsedMillis: Long): String {
