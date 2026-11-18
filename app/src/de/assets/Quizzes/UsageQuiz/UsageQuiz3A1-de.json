@@ -3,13 +3,17 @@
 	"location": 0,
 	"sheetname": "UsageQuiz3A1-de",
 	"title": "Vergangenheit",
+	"title_en": "The past",
 	"updatedDate": 0,
 	"data": [
 		{
 			"title": "Wählen Sie für jede Frage die richtige Antwort.",
+			"title_en": "Choose the correct answer for each question.",
 			"description": "Die Vergangenheit (Perfekt) im Deutschen",
+			"description_en": "Talking about the past (Perfekt) in German",
 			"sortorder": 1,
 			"learningTitle": "Über die Vergangenheit sprechen (Perfekt)",
+			"learningTitle_en": "Talking about the past (Perfekt)",
 			"learningPoints": [
 				"Übt das Perfekt mit 'haben' und 'sein' + Partizip II.",
 				"Festigt regelmäßige (ge…t) und unregelmäßige Partizipien (ge…en).",
@@ -17,13 +21,23 @@
 				"Trainiert die Satzklammer: Hilfsverb an Position 2, Partizip am Ende.",
 				"Niveau A1; orientiert sich am Goethe-Zertifikat A1 und telc Deutsch A1."
 			],
+			"learningPoints_en": [
+				"Practises the Perfekt: 'haben' or 'sein' + past participle.",
+				"Reinforces regular (ge…t) and irregular (ge…en) past participles.",
+				"Covers 'war' and 'hatte' as the past of 'sein' and 'haben'.",
+				"Trains the 'verb bracket': helping verb in position 2, participle at the end.",
+				"Level A1; based on the Goethe-Zertifikat A1 and telc Deutsch A1."
+			],
 			"sections": [
 				{
 					"title": "",
 					"page": 1,
 					"summary": "Das Perfekt bildet man mit 'haben' + Partizip II; das Partizip steht am Ende.",
+					"summary_en": "The Perfekt is formed with 'haben' + past participle; the participle goes at the end.",
 					"explain": "Perfekt = 'haben' + Partizip II am Satzende: 'Ich habe die Hausaufgaben gemacht.' Das Partizip 'gemacht' steht ganz am Schluss.",
+					"explain_en": "Perfekt = 'haben' + past participle at the end of the sentence: 'Ich habe die Hausaufgaben gemacht.' The participle 'gemacht' comes right at the end.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -43,8 +57,11 @@
 					"title": "",
 					"page": 2,
 					"summary": "Das regelmäßige Partizip II bildet man mit 'ge…t'.",
+					"summary_en": "A regular past participle is formed with 'ge…t'.",
 					"explain": "Regelmäßig: ge- + Stamm + -t. 'kaufen' → 'gekauft': 'Sie hat ein Kleid gekauft.'",
+					"explain_en": "Regular: ge- + stem + -t. 'kaufen' → 'gekauft': 'Sie hat ein Kleid gekauft.'",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -64,8 +81,11 @@
 					"title": "",
 					"page": 3,
 					"summary": "Bei Bewegungsverben bildet man das Perfekt mit 'sein'.",
+					"summary_en": "Verbs of movement form the Perfekt with 'sein'.",
 					"explain": "Verben der Bewegung nehmen 'sein': 'Wir sind nach Hause gegangen.' 'haben' ist hier falsch.",
+					"explain_en": "Verbs of movement take 'sein': 'Wir sind nach Hause gegangen.' 'haben' is wrong here.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -85,8 +105,11 @@
 					"title": "",
 					"page": 4,
 					"summary": "'fahren' bildet das Perfekt mit 'sein' (Bewegung).",
+					"summary_en": "'fahren' (to go, drive) forms the Perfekt with 'sein' (movement).",
 					"explain": "'Er ist mit dem Bus gefahren.' – Bewegung, also 'sein' + 'gefahren'.",
+					"explain_en": "'Er ist mit dem Bus gefahren.' – movement, so 'sein' + 'gefahren'.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -106,8 +129,11 @@
 					"title": "",
 					"page": 5,
 					"summary": "Unregelmäßige Verben haben ein besonderes Partizip auf '-en'.",
+					"summary_en": "Irregular verbs have a special participle ending in '-en'.",
 					"explain": "'sehen' → 'gesehen' (unregelmäßig, -en): 'Ich habe den Film gesehen.'",
+					"explain_en": "'sehen' → 'gesehen' (irregular, -en): 'Ich habe den Film gesehen.'",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -127,8 +153,11 @@
 					"title": "",
 					"page": 6,
 					"summary": "Manche Verben ändern im Partizip den Vokal (trinken → getrunken).",
+					"summary_en": "Some verbs change their vowel in the participle (trinken → getrunken).",
 					"explain": "'trinken' → 'getrunken': 'Du hast Wasser getrunken.' 'getrinkt' ist falsch.",
+					"explain_en": "'trinken' → 'getrunken': 'Du hast Wasser getrunken.' 'getrinkt' is wrong.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -148,8 +177,11 @@
 					"title": "",
 					"page": 7,
 					"summary": "Die Vergangenheit von 'sein' ist 'war' (Präteritum).",
+					"summary_en": "The past of 'sein' is 'war' (simple past).",
 					"explain": "'sein' im Präteritum: 'war'. 'Gestern war ich krank.' Das Verb bleibt an Position 2.",
+					"explain_en": "'sein' in the simple past: 'war'. 'Gestern war ich krank.' The verb stays in position 2.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -169,8 +201,11 @@
 					"title": "",
 					"page": 8,
 					"summary": "Die Vergangenheit von 'haben' ist 'hatte' (Präteritum).",
+					"summary_en": "The past of 'haben' is 'hatte' (simple past).",
 					"explain": "'haben' im Präteritum: 'hatte(n)'. Bei 'wir' heißt es 'hatten': 'Wir hatten keine Zeit.'",
+					"explain_en": "'haben' in the simple past: 'hatte(n)'. With 'wir' it is 'hatten': 'Wir hatten keine Zeit.'",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -190,8 +225,11 @@
 					"title": "",
 					"page": 9,
 					"summary": "Auch im Perfekt gilt: Hilfsverb an Position 2, Partizip am Ende.",
+					"summary_en": "In the Perfekt too: helping verb in position 2, participle at the end.",
 					"explain": "Zeitangabe + 'haben' (Position 2) + … + Partizip am Ende: 'Am Wochenende habe ich Fußball gespielt.'",
+					"explain_en": "Time phrase + 'haben' (position 2) + … + participle at the end: 'Am Wochenende habe ich Fußball gespielt.'",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -211,8 +249,11 @@
 					"title": "",
 					"page": 10,
 					"summary": "Verben mit Vorsilben wie be-, ver-, er- bilden das Partizip ohne 'ge'.",
+					"summary_en": "Verbs with prefixes like be-, ver-, er- form the participle without 'ge'.",
 					"explain": "'besuchen' → 'besucht' (kein 'ge-'): 'Ich habe meine Oma besucht.' 'gebesucht' ist falsch.",
+					"explain_en": "'besuchen' → 'besucht' (no 'ge-'): 'Ich habe meine Oma besucht.' 'gebesucht' is wrong.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,

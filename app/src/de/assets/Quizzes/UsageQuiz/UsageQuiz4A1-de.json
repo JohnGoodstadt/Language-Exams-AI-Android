@@ -3,13 +3,17 @@
 	"location": 0,
 	"sheetname": "UsageQuiz4A1-de",
 	"title": "Fragen & Kurzantworten",
+	"title_en": "Questions & short answers",
 	"updatedDate": 0,
 	"data": [
 		{
 			"title": "Wählen Sie für jede Frage die richtige Antwort.",
+			"title_en": "Choose the correct answer for each question.",
 			"description": "Fragen und Kurzantworten im Deutschen",
+			"description_en": "Questions and short answers in German",
 			"sortorder": 1,
 			"learningTitle": "Fragen stellen und kurz antworten",
+			"learningTitle_en": "Asking questions and giving short answers",
 			"learningPoints": [
 				"Übt W-Fragen (Fragewort + Verb an Position 2).",
 				"Festigt Ja/Nein-Fragen mit dem Verb an erster Stelle.",
@@ -17,13 +21,23 @@
 				"Trainiert typische A1-Fehler bei der Verbstellung in Fragen.",
 				"Niveau A1; orientiert sich am Goethe-Zertifikat A1 und telc Deutsch A1."
 			],
+			"learningPoints_en": [
+				"Practises W-questions (question word + verb in position 2).",
+				"Reinforces yes/no questions with the verb first.",
+				"Covers short statements as answers (Ja …, Nein …).",
+				"Trains typical A1 mistakes with verb position in questions.",
+				"Level A1; based on the Goethe-Zertifikat A1 and telc Deutsch A1."
+			],
 			"sections": [
 				{
 					"title": "",
 					"page": 1,
 					"summary": "In W-Fragen steht das Fragewort zuerst, dann das Verb an Position 2.",
+					"summary_en": "In W-questions the question word comes first, then the verb in position 2.",
 					"explain": "Fragewort + Verb + Subjekt: 'Wie heißt du?'",
+					"explain_en": "Question word + verb + subject: 'Wie heißt du?'",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -43,8 +57,11 @@
 					"title": "",
 					"page": 2,
 					"summary": "'woher' fragt nach der Herkunft; das Verb steht an Position 2.",
+					"summary_en": "'woher' (where from) asks where someone comes from; the verb is in position 2.",
 					"explain": "'Woher kommst du?' – Fragewort 'woher', dann das konjugierte Verb 'kommst'.",
+					"explain_en": "'Woher kommst du?' – question word 'woher', then the conjugated verb 'kommst'.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -64,8 +81,11 @@
 					"title": "",
 					"page": 3,
 					"summary": "Ja/Nein-Fragen beginnen mit dem konjugierten Verb.",
+					"summary_en": "Yes/no questions start with the conjugated verb.",
 					"explain": "Verb + Subjekt: 'Trinkst du Tee?' Die Aussagestellung ist keine richtige Frage.",
+					"explain_en": "Verb + subject: 'Trinkst du Tee?' Statement word order is not a correct question.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -85,8 +105,11 @@
 					"title": "",
 					"page": 4,
 					"summary": "Auch mit 'sein' steht das Verb in der Ja/Nein-Frage zuerst.",
+					"summary_en": "With 'sein' too, the verb comes first in a yes/no question.",
 					"explain": "'Bist du müde?' – das Verb 'bist' steht am Anfang.",
+					"explain_en": "'Bist du müde?' – the verb 'bist' comes at the start.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -106,8 +129,11 @@
 					"title": "",
 					"page": 5,
 					"summary": "Nach 'Ja' folgt ein normaler Aussagesatz (Subjekt + Verb).",
+					"summary_en": "After 'Ja' comes a normal statement (subject + verb).",
 					"explain": "Kurzantwort: 'Ja,' + Aussagesatz: 'Ja, ich komme mit.'",
+					"explain_en": "Short answer: 'Ja,' + statement: 'Ja, ich komme mit.'",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -127,8 +153,11 @@
 					"title": "",
 					"page": 6,
 					"summary": "Nach 'Nein' verneint man oft mit 'kein' oder 'nicht'.",
+					"summary_en": "After 'Nein' you often make the sentence negative with 'kein' or 'nicht'.",
 					"explain": "'Nein, ich habe keine Zeit.' – das Nomen 'Zeit' wird mit 'keine' verneint.",
+					"explain_en": "'Nein, ich habe keine Zeit.' – the noun 'Zeit' is made negative with 'keine'.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -148,8 +177,11 @@
 					"title": "",
 					"page": 7,
 					"summary": "'was' fragt nach einer Sache; das Verb steht an Position 2.",
+					"summary_en": "'was' (what) asks about a thing; the verb is in position 2.",
 					"explain": "'Was machst du?' – Fragewort 'was' + Verb 'machst' + Subjekt.",
+					"explain_en": "'Was machst du?' – question word 'was' + verb 'machst' + subject.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -169,8 +201,11 @@
 					"title": "",
 					"page": 8,
 					"summary": "'wann' fragt nach der Zeit; das Verb steht an Position 2.",
+					"summary_en": "'wann' (when) asks about time; the verb is in position 2.",
 					"explain": "'Wann kommt der Bus?' – 'der Bus' ist Singular, also 'kommt'.",
+					"explain_en": "'Wann kommt der Bus?' – 'der Bus' is singular, so 'kommt'.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -190,8 +225,11 @@
 					"title": "",
 					"page": 9,
 					"summary": "Bei zählbaren Dingen im Plural fragt man 'wie viele'.",
+					"summary_en": "For countable things in the plural you ask 'wie viele' (how many).",
 					"explain": "'Kinder' ist zählbar (Plural): 'Wie viele Kinder hast du?' 'wie viel' ist hier falsch.",
+					"explain_en": "'Kinder' is countable (plural): 'Wie viele Kinder hast du?' 'wie viel' is wrong here.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -211,8 +249,11 @@
 					"title": "",
 					"page": 10,
 					"summary": "Eine Kurzantwort ist ein einfacher Aussagesatz (Subjekt + Verb).",
+					"summary_en": "A short answer is a simple statement (subject + verb).",
 					"explain": "'Ja, das ist richtig.' – Subjekt 'das' + Verb 'ist' an Position 2.",
+					"explain_en": "'Ja, das ist richtig.' – subject 'das' + verb 'ist' in position 2.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,

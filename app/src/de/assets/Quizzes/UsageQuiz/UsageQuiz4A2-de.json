@@ -3,13 +3,17 @@
 	"location": 0,
 	"sheetname": "UsageQuiz4A2-de",
 	"title": "Modalverben",
+	"title_en": "can, must, want …",
 	"updatedDate": 0,
 	"data": [
 		{
 			"title": "Wählen Sie für jede Frage die richtige Antwort.",
+			"title_en": "Choose the correct answer for each question.",
 			"description": "Modalverben im Deutschen",
+			"description_en": "Modal verbs in German (can, must, may, want …)",
 			"sortorder": 1,
 			"learningTitle": "Modalverben richtig verwenden",
+			"learningTitle_en": "Using can, must, want … correctly",
 			"learningPoints": [
 				"Übt können, müssen, dürfen, wollen, sollen und möchten.",
 				"Festigt die Satzklammer: Modalverb an Position 2, Infinitiv am Ende.",
@@ -17,13 +21,23 @@
 				"Trainiert Modalverben in Fragen und mit Verneinung.",
 				"Niveau A2; orientiert sich am Goethe-Zertifikat A2 und telc Deutsch A2."
 			],
+			"learningPoints_en": [
+				"Practises können, müssen, dürfen, wollen, sollen and möchten (can, must, may, want, should, would like).",
+				"Reinforces the 'verb bracket': modal verb in position 2, infinitive at the end.",
+				"Covers the verb forms (er kann, with no '-t').",
+				"Trains modal verbs in questions and negative sentences.",
+				"Level A2; based on the Goethe-Zertifikat A2 and telc Deutsch A2."
+			],
 			"sections": [
 				{
 					"title": "",
 					"page": 1,
 					"summary": "Modalverb an Position 2, der zweite Verb-Infinitiv am Ende.",
+					"summary_en": "Modal verb in position 2, the second verb (infinitive) at the end.",
 					"explain": "'Ich kann sehr gut schwimmen.' – 'kann' + Infinitiv 'schwimmen' am Ende.",
+					"explain_en": "'Ich kann sehr gut schwimmen.' – 'kann' + the infinitive 'schwimmen' at the end.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -43,8 +57,11 @@
 					"title": "",
 					"page": 2,
 					"summary": "'müssen' ist unregelmäßig: ich muss, du musst, er muss …",
+					"summary_en": "'müssen' (must) is irregular: ich muss, du musst, er muss …",
 					"explain": "Bei 'du' heißt es 'musst': 'Du musst heute die Rechnung bezahlen.'",
+					"explain_en": "With 'du' it is 'musst': 'Du musst heute die Rechnung bezahlen.'",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -64,8 +81,11 @@
 					"title": "",
 					"page": 3,
 					"summary": "'dürfen' drückt Erlaubnis aus; 'nicht dürfen' ein Verbot.",
+					"summary_en": "'dürfen' means being allowed to; 'nicht dürfen' means not being allowed to.",
 					"explain": "'Hier darf man nicht rauchen.' – 'darf' an Position 2, Infinitiv 'rauchen' am Ende.",
+					"explain_en": "'Hier darf man nicht rauchen.' – 'darf' in position 2, the infinitive 'rauchen' at the end.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -85,8 +105,11 @@
 					"title": "",
 					"page": 4,
 					"summary": "'wollen' drückt einen Wunsch/Plan aus (ich will, du willst, wir wollen …).",
+					"summary_en": "'wollen' expresses a wish or plan (ich will, du willst, wir wollen …).",
 					"explain": "'Wir wollen im Sommer nach Spanien fliegen.' – Infinitiv 'fliegen' am Ende.",
+					"explain_en": "'Wir wollen im Sommer nach Spanien fliegen.' – the infinitive 'fliegen' at the end.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -106,8 +129,11 @@
 					"title": "",
 					"page": 5,
 					"summary": "'sollen' drückt einen Rat oder eine Aufforderung aus.",
+					"summary_en": "'sollen' expresses advice or something you are told to do.",
 					"explain": "'… ich soll mehr Wasser trinken.' – 'soll' + Infinitiv 'trinken'.",
+					"explain_en": "'… ich soll mehr Wasser trinken.' – 'soll' + the infinitive 'trinken'.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -127,8 +153,11 @@
 					"title": "",
 					"page": 6,
 					"summary": "'möchten' ist die höfliche Form von 'wollen'.",
+					"summary_en": "'möchten' (would like) is the polite form of 'wollen'.",
 					"explain": "'Ich möchte einen Kaffee bestellen.' – Infinitiv 'bestellen' am Ende.",
+					"explain_en": "'Ich möchte einen Kaffee bestellen.' – the infinitive 'bestellen' at the end.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -148,8 +177,11 @@
 					"title": "",
 					"page": 7,
 					"summary": "In der 3. Person Singular haben Modalverben kein '-t' (er kann, nicht 'kannt').",
+					"summary_en": "With he/she/it, modal verbs have no '-t' (er kann, not 'kannt').",
 					"explain": "'Sie kann gut Klavier spielen.' – 'kann' (kein '-t'), Infinitiv 'spielen' am Ende.",
+					"explain_en": "'Sie kann gut Klavier spielen.' – 'kann' (no '-t'), the infinitive 'spielen' at the end.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -169,8 +201,11 @@
 					"title": "",
 					"page": 8,
 					"summary": "In der Frage steht das Modalverb zuerst, der Infinitiv am Ende.",
+					"summary_en": "In a question the modal verb comes first and the infinitive at the end.",
 					"explain": "'Kannst du mir bitte helfen?' – 'kannst' am Anfang, Infinitiv 'helfen' am Ende.",
+					"explain_en": "'Kannst du mir bitte helfen?' – 'kannst' at the start, the infinitive 'helfen' at the end.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -190,8 +225,11 @@
 					"title": "",
 					"page": 9,
 					"summary": "Auch mit 'nicht' bleibt das Modalverb an Position 2 und der Infinitiv am Ende.",
+					"summary_en": "With 'nicht' too, the modal verb stays in position 2 and the infinitive at the end.",
 					"explain": "'Du musst nicht warten.' – 'musst' + 'nicht' + Infinitiv 'warten'.",
+					"explain_en": "'Du musst nicht warten.' – 'musst' + 'nicht' + the infinitive 'warten'.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -211,8 +249,11 @@
 					"title": "",
 					"page": 10,
 					"summary": "Mit einem Modalverb bleibt das trennbare Verb als ganzer Infinitiv am Ende.",
+					"summary_en": "With a modal verb, a separable verb stays together as one infinitive at the end.",
 					"explain": "'Ich muss früh aufstehen.' – 'aufstehen' bleibt zusammen am Ende (nicht getrennt).",
+					"explain_en": "'Ich muss früh aufstehen.' – 'aufstehen' stays together at the end (not split).",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,

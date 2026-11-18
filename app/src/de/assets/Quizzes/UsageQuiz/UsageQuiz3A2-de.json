@@ -3,13 +3,17 @@
 	"location": 0,
 	"sheetname": "UsageQuiz3A2-de",
 	"title": "Komparativ & Superlativ",
+	"title_en": "Comparing: bigger, biggest",
 	"updatedDate": 0,
 	"data": [
 		{
 			"title": "Wählen Sie für jede Frage die richtige Antwort.",
+			"title_en": "Choose the correct answer for each question.",
 			"description": "Die Steigerung der Adjektive im Deutschen",
+			"description_en": "Comparing with adjectives in German",
 			"sortorder": 1,
 			"learningTitle": "Adjektive steigern und vergleichen",
+			"learningTitle_en": "Comparing things with adjectives",
 			"learningPoints": [
 				"Übt den Komparativ mit '-er … als' und Gleichheit mit 'so … wie'.",
 				"Festigt den Superlativ 'am …-sten' und 'der/die/das …-ste'.",
@@ -17,13 +21,23 @@
 				"Trainiert typische A2-Fehler ('wie' statt 'als', fehlende Endung).",
 				"Niveau A2; orientiert sich am Goethe-Zertifikat A2 und telc Deutsch A2."
 			],
+			"learningPoints_en": [
+				"Practises comparing with '-er … als' (…-er than) and saying things are equal with 'so … wie' (as … as).",
+				"Reinforces the superlative 'am …-sten' and 'der/die/das …-ste' (the …-est).",
+				"Covers umlauts (alt → älter) and irregular forms (gut, gern, hoch).",
+				"Trains typical A2 mistakes ('wie' instead of 'als', a missing ending).",
+				"Level A2; based on the Goethe-Zertifikat A2 and telc Deutsch A2."
+			],
 			"sections": [
 				{
 					"title": "",
 					"page": 1,
 					"summary": "Der Komparativ bildet sich mit '-er' und dem Vergleichswort 'als'.",
+					"summary_en": "The comparative is formed with '-er' and the word 'als' (than).",
 					"explain": "'größer als': 'Mein Bruder ist größer als ich.' 'wie' und 'mehr groß' sind falsch.",
+					"explain_en": "'größer als' (taller than): 'Mein Bruder ist größer als ich.' 'wie' and 'mehr groß' are wrong.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -43,8 +57,11 @@
 					"title": "",
 					"page": 2,
 					"summary": "Gleichheit drückt man mit 'so … wie' aus.",
+					"summary_en": "To say two things are equal you use 'so … wie' (as … as).",
 					"explain": "'so alt wie': 'Sie ist so alt wie ihr Bruder.' Bei Gleichheit steht 'wie', nicht 'als'.",
+					"explain_en": "'so alt wie' (as old as): 'Sie ist so alt wie ihr Bruder.' For equality use 'wie', not 'als'.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -64,8 +81,11 @@
 					"title": "",
 					"page": 3,
 					"summary": "Viele kurze Adjektive bekommen im Komparativ einen Umlaut (kalt → kälter).",
+					"summary_en": "Many short adjectives get an umlaut in the comparative (kalt → kälter).",
 					"explain": "'kalt' → 'kälter': 'Heute ist es kälter als gestern.'",
+					"explain_en": "'kalt' → 'kälter' (colder): 'Heute ist es kälter als gestern.'",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -85,8 +105,11 @@
 					"title": "",
 					"page": 4,
 					"summary": "Der Superlativ nach dem Verb heißt 'am …-sten'.",
+					"summary_en": "After a verb the superlative is 'am …-sten'.",
 					"explain": "'am kältesten': 'Im Winter ist es am kältesten.'",
+					"explain_en": "'am kältesten' (coldest): 'Im Winter ist es am kältesten.'",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -106,8 +129,11 @@
 					"title": "",
 					"page": 5,
 					"summary": "Vor einem Nomen: 'der/die/das …-ste' (mit Adjektivendung).",
+					"summary_en": "Before a noun: 'der/die/das …-ste' (with an adjective ending).",
 					"explain": "Attributiv: 'der schnellste Zug': 'Das ist der schnellste Zug.'",
+					"explain_en": "Before a noun: 'der schnellste Zug' (the fastest train): 'Das ist der schnellste Zug.'",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -127,8 +153,11 @@
 					"title": "",
 					"page": 6,
 					"summary": "'gut' wird unregelmäßig gesteigert: gut – besser – am besten.",
+					"summary_en": "'gut' is irregular: gut – besser – am besten (good – better – best).",
 					"explain": "'gut' → 'besser': 'Anna spielt besser Tennis als Tom.'",
+					"explain_en": "'gut' → 'besser': 'Anna spielt besser Tennis als Tom.'",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -148,8 +177,11 @@
 					"title": "",
 					"page": 7,
 					"summary": "'gern' wird unregelmäßig gesteigert: gern – lieber – am liebsten.",
+					"summary_en": "'gern' is irregular: gern – lieber – am liebsten (like – prefer – like most).",
 					"explain": "'gern' → 'lieber': 'Ich trinke lieber Tee als Kaffee.'",
+					"explain_en": "'gern' → 'lieber': 'Ich trinke lieber Tee als Kaffee.'",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -169,8 +201,11 @@
 					"title": "",
 					"page": 8,
 					"summary": "'hoch' verliert im Komparativ das 'c': hoch → höher.",
+					"summary_en": "'hoch' (high) loses the 'c' in the comparative: hoch → höher.",
 					"explain": "'hoch' → 'höher': 'Der Berg ist höher als das Haus.'",
+					"explain_en": "'hoch' → 'höher': 'Der Berg ist höher als das Haus.'",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -190,8 +225,11 @@
 					"title": "",
 					"page": 9,
 					"summary": "'teuer' verliert im Komparativ das 'e': teuer → teurer.",
+					"summary_en": "'teuer' (expensive) loses an 'e' in the comparative: teuer → teurer.",
 					"explain": "'teuer' → 'teurer': 'Dieses Auto ist teurer als meins.'",
+					"explain_en": "'teuer' → 'teurer': 'Dieses Auto ist teurer als meins.'",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -211,8 +249,11 @@
 					"title": "",
 					"page": 10,
 					"summary": "Der Komparativ vor einem Nomen braucht eine Adjektivendung (größere).",
+					"summary_en": "A comparative before a noun needs an adjective ending (größere).",
 					"explain": "'eine größere Wohnung': 'Wir suchen eine größere Wohnung.'",
+					"explain_en": "'eine größere Wohnung' (a bigger flat): 'Wir suchen eine größere Wohnung.'",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,

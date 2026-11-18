@@ -3,13 +3,17 @@
 	"location": 0,
 	"sheetname": "UsageQuiz4B1-de",
 	"title": "Indirekte Rede",
+	"title_en": "Saying what others said",
 	"updatedDate": 0,
 	"data": [
 		{
 			"title": "Wählen Sie für jede Frage die richtige Antwort.",
+			"title_en": "Choose the correct answer for each question.",
 			"description": "Indirekte Rede: berichten, fragen, auffordern",
+			"description_en": "Reported speech: reporting, asking, telling someone to do something",
 			"sortorder": 1,
 			"learningTitle": "Wiedergeben, was andere sagen",
+			"learningTitle_en": "Passing on what other people say",
 			"learningPoints": [
 				"Übt indirekte Aussagen mit 'dass' (Verb am Ende).",
 				"Festigt indirekte Fragen mit 'ob' und Fragewörtern.",
@@ -17,13 +21,23 @@
 				"Trainiert indirekte Aufforderungen mit 'sollen'.",
 				"Niveau B1; orientiert sich am Goethe-Zertifikat B1 und telc Deutsch B1."
 			],
+			"learningPoints_en": [
+				"Practises reported statements with 'dass' (verb at the end).",
+				"Reinforces reported questions with 'ob' (whether) and question words.",
+				"Covers changing the pronouns and the reported-speech forms 'sei' and 'habe'.",
+				"Trains passing on instructions with 'sollen'.",
+				"Level B1; based on the Goethe-Zertifikat B1 and telc Deutsch B1."
+			],
 			"sections": [
 				{
 					"title": "",
 					"page": 1,
 					"summary": "Indirekte Aussage mit 'dass': das Verb steht am Ende.",
+					"summary_en": "Reported statement with 'dass': the verb goes at the end.",
 					"explain": "'Er sagt, dass er keine Zeit hat.' – 'hat' am Ende des Nebensatzes.",
+					"explain_en": "'Er sagt, dass er keine Zeit hat.' – 'hat' at the end of the clause.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -43,8 +57,11 @@
 					"title": "",
 					"page": 2,
 					"summary": "Ohne 'dass' bleibt die normale Wortstellung (Verb an Position 2).",
+					"summary_en": "Without 'dass' the normal word order stays (verb in position 2).",
 					"explain": "'Sie meint, sie kommt später.' – ohne 'dass' steht das Verb an Position 2.",
+					"explain_en": "'Sie meint, sie kommt später.' – without 'dass' the verb is in position 2.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -64,8 +81,11 @@
 					"title": "",
 					"page": 3,
 					"summary": "Eine indirekte Ja/Nein-Frage leitet man mit 'ob' ein; das Verb steht am Ende.",
+					"summary_en": "A reported yes/no question starts with 'ob' (whether); the verb goes at the end.",
 					"explain": "'Er fragt, ob ich morgen komme.' – 'ob' + Verb am Ende.",
+					"explain_en": "'Er fragt, ob ich morgen komme.' – 'ob' + verb at the end.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -85,8 +105,11 @@
 					"title": "",
 					"page": 4,
 					"summary": "Indirekte W-Frage: Fragewort + … + Verb am Ende (keine Inversion).",
+					"summary_en": "Reported W-question: question word + … + verb at the end (no swapping of subject and verb).",
 					"explain": "'Sie möchte wissen, wo der Bahnhof ist.' – 'wo' + Verb 'ist' am Ende, nicht 'wo ist der Bahnhof'.",
+					"explain_en": "'Sie möchte wissen, wo der Bahnhof ist.' – 'wo' + the verb 'ist' at the end, not 'wo ist der Bahnhof'.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -106,8 +129,11 @@
 					"title": "",
 					"page": 5,
 					"summary": "In der indirekten Rede passt man die Pronomen an (ich → sie/er).",
+					"summary_en": "In reported speech you change the pronouns (ich → sie/er).",
 					"explain": "Anna spricht über sich: 'Anna sagt, sie sei müde.' – 'ich' wird zu 'sie'.",
+					"explain_en": "Anna is talking about herself: 'Anna sagt, sie sei müde.' – 'ich' becomes 'sie'.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -127,8 +153,11 @@
 					"title": "",
 					"page": 6,
 					"summary": "Konjunktiv I der 3. Person: 'habe', 'sei' (indirekte Rede).",
+					"summary_en": "Reported-speech forms for he/she/it: 'habe', 'sei'.",
 					"explain": "'Der Arzt sagt, der Patient habe Fieber.' – Konjunktiv I 'habe'; ohne 'dass' steht das Verb an Position 2.",
+					"explain_en": "'Der Arzt sagt, der Patient habe Fieber.' – the reported form 'habe'; without 'dass' the verb is in position 2.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -148,8 +177,11 @@
 					"title": "",
 					"page": 7,
 					"summary": "Eine indirekte Aufforderung drückt man oft mit 'sollen' aus.",
+					"summary_en": "Passing on an instruction often uses 'sollen'.",
 					"explain": "'Er sagt, ich soll pünktlich sein.' – 'sollen' + Infinitiv 'sein'.",
+					"explain_en": "'Er sagt, ich soll pünktlich sein.' – 'sollen' + the infinitive 'sein'.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -169,8 +201,11 @@
 					"title": "",
 					"page": 8,
 					"summary": "Für eine indirekte Ja/Nein-Frage nimmt man 'ob' (nicht 'wenn').",
+					"summary_en": "For a reported yes/no question you use 'ob' (not 'wenn').",
 					"explain": "'Ich weiß nicht, ob er kommt.' – 'ob', nicht 'wenn'.",
+					"explain_en": "'Ich weiß nicht, ob er kommt.' – 'ob', not 'wenn'.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -190,8 +225,11 @@
 					"title": "",
 					"page": 9,
 					"summary": "Im 'dass'-Satz steht das ganze Verb (auch das Hilfsverb) am Ende.",
+					"summary_en": "In a 'dass' clause the whole verb (including the helping verb) goes at the end.",
 					"explain": "'…, dass sie das Buch schon gelesen hat.' – das Hilfsverb 'hat' steht ganz am Ende.",
+					"explain_en": "'…, dass sie das Buch schon gelesen hat.' – the helping verb 'hat' comes right at the end.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -211,8 +249,11 @@
 					"title": "",
 					"page": 10,
 					"summary": "In der indirekten Frage mit Modalverb steht das Modalverb am Ende.",
+					"summary_en": "In a reported question with a modal verb, the modal verb goes at the end.",
 					"explain": "'Sie fragt, ob du ihr helfen kannst.' – Modalverb 'kannst' am Ende.",
+					"explain_en": "'Sie fragt, ob du ihr helfen kannst.' – the modal verb 'kannst' at the end.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,

@@ -3,13 +3,17 @@
 	"location": 0,
 	"sheetname": "UsageQuiz5B2-de",
 	"title": "Argumentation",
+	"title_en": "Giving reasons for your view",
 	"updatedDate": 0,
 	"data": [
 		{
 			"title": "Wähle bei jeder Frage die richtige Antwort.",
+			"title_en": "Choose the correct answer for each question.",
 			"description": "Argumentieren und Begründen auf dem Niveau B2",
+			"description_en": "Arguing and giving reasons at level B2",
 			"sortorder": 1,
 			"learningTitle": "Warum dieses Quiz wichtig ist",
+			"learningTitle_en": "Why this quiz matters",
 			"learningPoints": [
 				"Du formulierst eine klare und diskutierbare These.",
 				"Du unterscheidest zwischen Behauptung, Begründung und Beleg.",
@@ -18,13 +22,24 @@
 				"Du vermeidest unbelegte Verallgemeinerungen und formulierst nachvollziehbare Schlussfolgerungen.",
 				"Die Aufgaben entsprechen dem GER-Niveau B2."
 			],
+			"learningPoints_en": [
+				"You state a clear point of view that can be discussed.",
+				"You tell apart a claim, a reason and evidence.",
+				"You link arguments logically with the right linking words.",
+				"You take counter-arguments into account and weigh up different views.",
+				"You avoid sweeping claims without evidence and draw conclusions others can follow.",
+				"The questions match CEFR level B2."
+			],
 			"sections": [
 				{
 					"title": "",
 					"page": 1,
 					"summary": "Klare und diskutierbare These.",
+					"summary_en": "A clear point of view that can be discussed.",
 					"explain": "Eine gute These nimmt eindeutig zu einer Frage Stellung und lässt sich im weiteren Text begründen und diskutieren.",
+					"explain_en": "A good thesis takes a clear position on a question and can be supported and discussed in the rest of the text.",
 					"sentence": "Welche These eignet sich am besten für eine Erörterung über den öffentlichen Nahverkehr?",
+					"sentence_en": "Which statement of opinion works best for an essay about public transport?",
 					"words": [
 						{
 							"ok": true,
@@ -44,8 +59,11 @@
 					"title": "",
 					"page": 2,
 					"summary": "Unterscheidung zwischen Behauptung und Begründung.",
+					"summary_en": "The difference between a claim and a reason.",
 					"explain": "Eine Begründung erklärt, warum eine Behauptung gelten soll. Sie beantwortet die Frage „Warum?“.",
+					"explain_en": "A reason explains why a claim should be true. It answers the question 'Why?'.",
 					"sentence": "Behauptung: Flexible Arbeitszeiten können die Zufriedenheit erhöhen. Welche Aussage ist eine passende Begründung?",
+					"sentence_en": "Claim: Flexible working hours can make people more satisfied. Which statement is a suitable reason?",
 					"words": [
 						{
 							"ok": true,
@@ -65,8 +83,11 @@
 					"title": "",
 					"page": 3,
 					"summary": "Beleg für ein Argument.",
+					"summary_en": "Evidence for an argument.",
 					"explain": "Ein geeigneter Beleg stützt ein Argument mit relevanten, nachvollziehbaren Daten oder einer zuverlässigen Quelle.",
+					"explain_en": "Good evidence supports an argument with relevant, checkable data or a reliable source.",
 					"sentence": "Argument: Regelmäßiges Lesen erweitert den Wortschatz. Welcher Beleg stützt das Argument am besten?",
+					"sentence_en": "Argument: Reading regularly widens your vocabulary. Which evidence supports the argument best?",
 					"words": [
 						{
 							"ok": true,
@@ -86,8 +107,11 @@
 					"title": "",
 					"page": 4,
 					"summary": "Gegenargument mit „zwar … jedoch“.",
+					"summary_en": "Counter-argument with „zwar … jedoch“ (it's true that … however).",
 					"explain": "Mit „zwar … jedoch“ erkennt man einen Einwand an und stellt ihm anschließend das stärkere Argument gegenüber.",
+					"explain_en": "With „zwar … jedoch“ you accept an objection and then set the stronger argument against it.",
 					"sentence": "Welche Satzverbindung ist korrekt? Onlinekurse sind flexibel. Der persönliche Austausch ist dort oft begrenzt.",
+					"sentence_en": "Which way of joining the sentences is correct? Online courses are flexible. Personal contact is often limited there.",
 					"words": [
 						{
 							"ok": true,
@@ -107,8 +131,11 @@
 					"title": "",
 					"page": 5,
 					"summary": "Kausale Verknüpfung mit „da“.",
+					"summary_en": "Giving a reason with „da“ (since, as).",
 					"explain": "Ein Nebensatz mit „da“ nennt einen Grund. Das finite Verb steht am Ende des Nebensatzes.",
+					"explain_en": "A clause with „da“ gives a reason. The conjugated verb goes at the end of the clause.",
 					"sentence": "Welche Formulierung begründet die Entscheidung grammatisch korrekt?",
+					"sentence_en": "Which wording gives the reason for the decision with correct grammar?",
 					"words": [
 						{
 							"ok": true,
@@ -128,8 +155,11 @@
 					"title": "",
 					"page": 6,
 					"summary": "Folgerung mit einem passenden Konnektor.",
+					"summary_en": "A consequence with the right linking word.",
 					"explain": "„Folglich“ leitet eine logische Konsequenz aus der vorherigen Aussage ein.",
+					"explain_en": "„Folglich“ (consequently) introduces a logical result of the previous statement.",
 					"sentence": "Welche Ergänzung passt? Die Nachfrage ist deutlich gestiegen. ___ muss die Produktion ausgeweitet werden.",
+					"sentence_en": "Which word fits? Demand has risen sharply. ___ production must be increased.",
 					"words": [
 						{
 							"ok": true,
@@ -149,8 +179,11 @@
 					"title": "",
 					"page": 7,
 					"summary": "Funktion eines Beispiels.",
+					"summary_en": "What an example is for.",
 					"explain": "Ein Beispiel veranschaulicht ein allgemeines Argument. Es ersetzt jedoch weder eine Begründung noch einen repräsentativen Beleg.",
+					"explain_en": "An example illustrates a general argument. But it doesn't replace a reason or representative evidence.",
 					"sentence": "Argument: Digitale Behördendienste können Wege und Wartezeiten reduzieren. Welche Aussage ist ein passendes Beispiel?",
+					"sentence_en": "Argument: Digital public services can cut journeys and waiting times. Which statement is a suitable example?",
 					"words": [
 						{
 							"ok": true,
@@ -170,8 +203,11 @@
 					"title": "",
 					"page": 8,
 					"summary": "Vermeidung unbelegter Verallgemeinerungen.",
+					"summary_en": "Avoiding claims that go beyond the evidence.",
 					"explain": "Aus einer begrenzten Untersuchung darf nicht ohne Weiteres auf alle Menschen geschlossen werden. Eine vorsichtige Formulierung zeigt die Reichweite der Daten.",
+					"explain_en": "A limited study doesn't let you draw conclusions about everyone. Careful wording shows how far the data go.",
 					"sentence": "Eine Befragung von 200 Studierenden zeigt eine hohe Zustimmung. Welche Schlussfolgerung ist angemessen?",
+					"sentence_en": "A survey of 200 students shows strong agreement. Which conclusion is appropriate?",
 					"words": [
 						{
 							"ok": true,
@@ -191,8 +227,11 @@
 					"title": "",
 					"page": 9,
 					"summary": "Abwägung mit „einerseits … andererseits“.",
+					"summary_en": "Weighing up with „einerseits … andererseits“ (on the one hand … on the other hand).",
 					"explain": "Mit „einerseits … andererseits“ werden zwei unterschiedliche Seiten eines Themas ausgewogen gegenübergestellt.",
+					"explain_en": "„Einerseits … andererseits“ sets two different sides of a topic against each other in a balanced way.",
 					"sentence": "Welche Formulierung wägt Vor- und Nachteile des Homeoffice ab?",
+					"sentence_en": "Which wording weighs up the pros and cons of working from home?",
 					"words": [
 						{
 							"ok": true,
@@ -212,8 +251,11 @@
 					"title": "",
 					"page": 10,
 					"summary": "Begründete Schlussfolgerung.",
+					"summary_en": "A well-founded conclusion.",
 					"explain": "Eine Schlussfolgerung fasst die vorherige Argumentation zusammen und leitet daraus eine nachvollziehbare Gesamtbewertung ab.",
+					"explain_en": "A conclusion sums up the argument so far and draws a clear overall judgement from it.",
 					"sentence": "Welche Formulierung eignet sich für den Schluss einer ausgewogenen Argumentation?",
+					"sentence_en": "Which wording suits the end of a balanced argument?",
 					"words": [
 						{
 							"ok": true,

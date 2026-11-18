@@ -3,13 +3,17 @@
 	"location": 0,
 	"sheetname": "UsageQuiz6B1-de",
 	"title": "Verben mit Präposition",
+	"title_en": "wait for, think of …",
 	"updatedDate": 0,
 	"data": [
 		{
 			"title": "Wählen Sie für jede Frage die richtige Antwort.",
+			"title_en": "Choose the correct answer for each question.",
 			"description": "Verben mit fester Präposition und die da-/wo-Formen",
+			"description_en": "Verbs with fixed prepositions and the da-/wo- forms",
 			"sortorder": 1,
 			"learningTitle": "Verben mit Präposition und Pronominaladverbien",
+			"learningTitle_en": "Verbs with prepositions, and words like darauf and worauf",
 			"learningPoints": [
 				"Übt Verben mit fester Präposition und dem richtigen Fall (warten auf + Akkusativ).",
 				"Festigt die 'wo(r)-'Fragen für Sachen (worauf, worüber).",
@@ -17,13 +21,23 @@
 				"Trainiert den Unterschied zwischen Sachen (wo-/da-) und Personen (an wen …).",
 				"Niveau B1; orientiert sich am Goethe-Zertifikat B1 und telc Deutsch B1."
 			],
+			"learningPoints_en": [
+				"Practises verbs with fixed prepositions and the right case (warten auf + accusative).",
+				"Reinforces 'wo(r)-' questions about things (worauf, worüber).",
+				"Covers the 'da(r)-' forms that replace 'preposition + thing' (darauf, daran).",
+				"Trains the difference between things (wo-/da-) and people (an wen …).",
+				"Level B1; based on the Goethe-Zertifikat B1 and telc Deutsch B1."
+			],
 			"sections": [
 				{
 					"title": "",
 					"page": 1,
 					"summary": "'warten auf' verlangt den Akkusativ.",
+					"summary_en": "'warten auf' (to wait for) takes the accusative.",
 					"explain": "'Ich warte schon lange auf den Bus.' – 'warten auf' + Akkusativ.",
+					"explain_en": "'Ich warte schon lange auf den Bus.' – 'warten auf' + accusative.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -43,8 +57,11 @@
 					"title": "",
 					"page": 2,
 					"summary": "Fragt man nach einer Sache, bildet man 'wo(r)' + Präposition (auf → worauf).",
+					"summary_en": "To ask about a thing, use 'wo(r)' + preposition (auf → worauf).",
 					"explain": "'warten auf' → Frage nach einer Sache: 'Worauf wartest du?'",
+					"explain_en": "'warten auf' → asking about a thing: 'Worauf wartest du?'",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -64,8 +81,11 @@
 					"title": "",
 					"page": 3,
 					"summary": "Statt 'an + es/das' benutzt man das Pronominaladverb 'daran' (für Sachen).",
+					"summary_en": "Instead of 'an + es/das' you use 'daran' (for things).",
 					"explain": "'denken an' → für eine Sache: 'Ich denke oft daran.' (nicht 'an das', nicht 'darauf')",
+					"explain_en": "'denken an' → for a thing: 'Ich denke oft daran.' (not 'an das', not 'darauf')",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -85,8 +105,11 @@
 					"title": "",
 					"page": 4,
 					"summary": "'sprechen über' → Frage: 'worüber'.",
+					"summary_en": "'sprechen über' (to talk about) → question: 'worüber'.",
 					"explain": "'Worüber sprecht ihr?' – 'über' wird zu 'worüber' (Sache).",
+					"explain_en": "'Worüber sprecht ihr?' – 'über' becomes 'worüber' (a thing).",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -106,8 +129,11 @@
 					"title": "",
 					"page": 5,
 					"summary": "Bei Personen benutzt man 'Präposition + wen/wem', nicht 'wo(r)…'.",
+					"summary_en": "For people you use 'preposition + wen/wem', not 'wo(r)…'.",
 					"explain": "Person: 'An wen denkst du?' (nicht 'woran'); 'denken an' + Akkusativ → 'an wen'.",
+					"explain_en": "A person: 'An wen denkst du?' (not 'woran'); 'denken an' + accusative → 'an wen'.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -127,8 +153,11 @@
 					"title": "",
 					"page": 6,
 					"summary": "'sich interessieren für' → 'dafür' (für eine Sache).",
+					"summary_en": "'sich interessieren für' → 'dafür' (for a thing).",
 					"explain": "'Interessierst du dich dafür?' – 'für' + Sache → 'dafür'.",
+					"explain_en": "'Interessierst du dich dafür?' – 'für' + a thing → 'dafür'.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -148,8 +177,11 @@
 					"title": "",
 					"page": 7,
 					"summary": "'antworten auf' verlangt den Akkusativ.",
+					"summary_en": "'antworten auf' (to reply to) takes the accusative.",
 					"explain": "'antworten auf' + Akkusativ: 'Sie hat auf meine E-Mail nicht geantwortet.'",
+					"explain_en": "'antworten auf' + accusative: 'Sie hat auf meine E-Mail nicht geantwortet.'",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -169,8 +201,11 @@
 					"title": "",
 					"page": 8,
 					"summary": "'sich ärgern über' → Frage 'worüber'.",
+					"summary_en": "'sich ärgern über' (to be annoyed about) → question 'worüber'.",
 					"explain": "'Worüber ärgerst du dich?' – 'über' → 'worüber'.",
+					"explain_en": "'Worüber ärgerst du dich?' – 'über' → 'worüber'.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -190,8 +225,11 @@
 					"title": "",
 					"page": 9,
 					"summary": "'teilnehmen an' verlangt den Dativ.",
+					"summary_en": "'teilnehmen an' (to take part in) takes the dative.",
 					"explain": "'teilnehmen an' + Dativ: 'Er nimmt an einem Deutschkurs teil.'",
+					"explain_en": "'teilnehmen an' + dative: 'Er nimmt an einem Deutschkurs teil.'",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -211,8 +249,11 @@
 					"title": "",
 					"page": 10,
 					"summary": "'Angst haben vor' → 'davor' (für eine Sache).",
+					"summary_en": "'Angst haben vor' (to be afraid of) → 'davor' (for a thing).",
 					"explain": "'Hast du Angst davor?' – 'vor' + Sache → 'davor'.",
+					"explain_en": "'Hast du Angst davor?' – 'vor' + a thing → 'davor'.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,

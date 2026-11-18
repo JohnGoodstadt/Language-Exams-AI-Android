@@ -3,13 +3,17 @@
 	"location": 0,
 	"sheetname": "UsageQuiz5B1-de",
 	"title": "Relativsätze",
+	"title_en": "The man who …",
 	"updatedDate": 0,
 	"data": [
 		{
 			"title": "Wählen Sie für jede Frage die richtige Antwort.",
+			"title_en": "Choose the correct answer for each question.",
 			"description": "Relativsätze im Deutschen",
+			"description_en": "Relative clauses in German (the man who …, the book that …)",
 			"sortorder": 1,
 			"learningTitle": "Sätze mit Relativsätzen erweitern",
+			"learningTitle_en": "Adding 'who/which/that' clauses to sentences",
 			"learningPoints": [
 				"Übt die Relativpronomen der/die/das im Nominativ und Akkusativ.",
 				"Festigt den Dativ (dem/der) und Präposition + Relativpronomen (mit dem, in der).",
@@ -17,13 +21,23 @@
 				"Trainiert die Wortstellung: das Verb steht im Relativsatz am Ende.",
 				"Niveau B1; orientiert sich am Goethe-Zertifikat B1 und telc Deutsch B1."
 			],
+			"learningPoints_en": [
+				"Practises der/die/das (who/which/that) as subject and object.",
+				"Reinforces the dative (dem/der) and preposition + der/die/das (mit dem, in der).",
+				"Covers 'whose' (dessen/deren) and 'was' after 'alles/etwas/nichts'.",
+				"Trains word order: in the 'who/which' clause the verb goes at the end.",
+				"Level B1; based on the Goethe-Zertifikat B1 and telc Deutsch B1."
+			],
 			"sections": [
 				{
 					"title": "",
 					"page": 1,
 					"summary": "Das Relativpronomen im Nominativ heißt 'der' (maskulin).",
+					"summary_en": "As the subject, the masculine 'who/which' word is 'der'.",
 					"explain": "'der Mann, der nebenan wohnt' – Subjekt im Relativsatz → 'der'; das Verb 'wohnt' steht am Ende.",
+					"explain_en": "'der Mann, der nebenan wohnt' – subject of the clause → 'der'; the verb 'wohnt' goes at the end.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -43,8 +57,11 @@
 					"title": "",
 					"page": 2,
 					"summary": "Ist das Nomen im Relativsatz Objekt, steht der Akkusativ (den).",
+					"summary_en": "If the noun is the object in the clause, use the accusative (den).",
 					"explain": "'der Film, den ich gesehen habe' – 'den' ist Akkusativobjekt; das Verb steht am Ende.",
+					"explain_en": "'der Film, den ich gesehen habe' – 'den' is the object; the verb goes at the end.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -64,8 +81,11 @@
 					"title": "",
 					"page": 3,
 					"summary": "Das Relativpronomen 'die' verwendet man für feminine Nomen (und Plural).",
+					"summary_en": "'die' is used for feminine nouns (and plurals).",
 					"explain": "'die Frau, die dort steht' – feminin, Nominativ → 'die'; Verb 'steht' am Ende.",
+					"explain_en": "'die Frau, die dort steht' – feminine subject → 'die'; the verb 'steht' at the end.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -85,8 +105,11 @@
 					"title": "",
 					"page": 4,
 					"summary": "Das Relativpronomen 'das' (neutrum) schreibt man mit einem 's' (nicht 'dass').",
+					"summary_en": "The neuter 'which/that' word 'das' has one 's' (not 'dass').",
 					"explain": "'das Buch, das … liegt' – Relativpronomen 'das' (ein 's'); 'dass' wäre eine Konjunktion.",
+					"explain_en": "'das Buch, das … liegt' – 'das' with one 's'; 'dass' means 'that' as a linking word.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -106,8 +129,11 @@
 					"title": "",
 					"page": 5,
 					"summary": "Verlangt das Verb den Dativ (helfen), steht das Relativpronomen im Dativ (dem).",
+					"summary_en": "If the verb takes the dative (helfen), the 'who' word is in the dative too (dem).",
 					"explain": "'helfen' + Dativ → 'der Kollege, dem ich geholfen habe'.",
+					"explain_en": "'helfen' + dative → 'der Kollege, dem ich geholfen habe'.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -127,8 +153,11 @@
 					"title": "",
 					"page": 6,
 					"summary": "Eine Präposition steht vor dem Relativpronomen und bestimmt den Fall (mit + Dativ).",
+					"summary_en": "A preposition goes before the 'which' word and decides its case (mit + dative).",
 					"explain": "'der Bus, mit dem ich fahre' – 'mit' + Dativ 'dem'.",
+					"explain_en": "'der Bus, mit dem ich fahre' – 'mit' + dative 'dem'.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -148,8 +177,11 @@
 					"title": "",
 					"page": 7,
 					"summary": "Bei Ort (Wo?) steht 'in' + Dativ auch im Relativsatz (in der).",
+					"summary_en": "For a place (Where?) 'in' + dative is used in the clause too (in der).",
 					"explain": "'die Stadt, in der ich wohne' – Position (Wo?) → 'in der'.",
+					"explain_en": "'die Stadt, in der ich wohne' – position (Where?) → 'in der'.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -169,8 +201,11 @@
 					"title": "",
 					"page": 8,
 					"summary": "Für Besitz benutzt man 'dessen' (maskulin/neutrum) bzw. 'deren' (feminin/Plural).",
+					"summary_en": "For 'whose' you use 'dessen' (masculine/neuter) or 'deren' (feminine/plural).",
 					"explain": "'der Mann, dessen Auto …' – maskulin → 'dessen'.",
+					"explain_en": "'der Mann, dessen Auto …' – masculine → 'dessen'.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -190,8 +225,11 @@
 					"title": "",
 					"page": 9,
 					"summary": "Im Plural heißt das Relativpronomen 'die'; das Verb steht im Plural.",
+					"summary_en": "In the plural the 'who' word is 'die'; the verb is plural.",
 					"explain": "'die Kinder, die … spielen' – Plural 'die' + Verb 'spielen'.",
+					"explain_en": "'die Kinder, die … spielen' – plural 'die' + the verb 'spielen'.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -211,8 +249,11 @@
 					"title": "",
 					"page": 10,
 					"summary": "Nach 'alles', 'etwas', 'nichts' benutzt man das Relativpronomen 'was'.",
+					"summary_en": "After 'alles', 'etwas', 'nichts' (everything, something, nothing) you use 'was'.",
 					"explain": "'alles, was ich weiß' – nach 'alles' steht 'was'.",
+					"explain_en": "'alles, was ich weiß' – after 'alles' comes 'was'.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,

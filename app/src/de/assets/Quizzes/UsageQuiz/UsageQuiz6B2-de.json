@@ -3,13 +3,17 @@
 	"location": 0,
 	"sheetname": "UsageQuiz6B2-de",
 	"title": "Präzision & Nuancen",
+	"title_en": "Choosing the exact word",
 	"updatedDate": 0,
 	"data": [
 		{
 			"title": "Wähle bei jeder Frage die richtige Antwort.",
+			"title_en": "Choose the correct answer for each question.",
 			"description": "Präzise und nuancierte Ausdrucksweise auf dem Niveau B2",
+			"description_en": "Precise, nuanced wording at level B2",
 			"sortorder": 1,
 			"learningTitle": "Warum dieses Quiz wichtig ist",
+			"learningTitle_en": "Why this quiz matters",
 			"learningPoints": [
 				"Du unterscheidest Wörter mit ähnlicher, aber nicht identischer Bedeutung.",
 				"Du drückst Wahrscheinlichkeit, Einschränkung und Umfang genau aus.",
@@ -18,13 +22,24 @@
 				"Du beschreibst Zahlen, Veränderungen und zeitliche Nuancen präzise.",
 				"Die Aufgaben entsprechen dem GER-Niveau B2."
 			],
+			"learningPoints_en": [
+				"You tell apart words with similar but not identical meanings.",
+				"You express probability, limits and amounts exactly.",
+				"You tell apart a link and a cause.",
+				"You avoid unclear references and vague generalisations.",
+				"You describe numbers, changes and timing precisely.",
+				"The questions match CEFR level B2."
+			],
 			"sections": [
 				{
 					"title": "",
 					"page": 1,
 					"summary": "Bedeutungsunterschied zwischen „anscheinend“ und „scheinbar“.",
+					"summary_en": "The difference between „anscheinend“ and „scheinbar“.",
 					"explain": "„Anscheinend“ bedeutet, dass etwas den verfügbaren Hinweisen zufolge wahrscheinlich wirklich so ist. „Scheinbar“ bezeichnet einen Eindruck, der täuscht.",
+					"explain_en": "„Anscheinend“ (apparently) means the evidence suggests something really is so. „Scheinbar“ (seemingly) describes a false impression.",
 					"sentence": "Mehrere verlässliche Messungen zeigen, dass das Gerät zu viel Energie verbraucht. Welche Ergänzung passt? Das Gerät verbraucht ___ mehr Energie als erwartet.",
+					"sentence_en": "Several reliable measurements show that the device uses too much energy. Which word fits? The device ___ uses more energy than expected.",
 					"words": [
 						{
 							"ok": true,
@@ -44,8 +59,11 @@
 					"title": "",
 					"page": 2,
 					"summary": "Transitive und intransitive Beschreibung einer Veränderung.",
+					"summary_en": "Describing a change with and without an object.",
 					"explain": "„Erhöhen“ braucht ein Akkusativobjekt: Jemand erhöht etwas. „Steigen“ beschreibt dagegen, dass etwas selbst zunimmt.",
+					"explain_en": "„Erhöhen“ (to raise) needs an object: someone raises something. „Steigen“ (to rise) means something goes up by itself.",
 					"sentence": "Welche Formulierung ist grammatisch und inhaltlich korrekt?",
+					"sentence_en": "Which wording is correct in grammar and meaning?",
 					"words": [
 						{
 							"ok": true,
@@ -65,8 +83,11 @@
 					"title": "",
 					"page": 3,
 					"summary": "Zusammenhang ohne unbelegten Kausalschluss.",
+					"summary_en": "A link, without claiming an unproven cause.",
 					"explain": "Wenn Daten nur zeigen, dass zwei Merkmale gemeinsam auftreten, darf daraus nicht automatisch eine Ursache-Wirkungs-Beziehung abgeleitet werden.",
+					"explain_en": "If data only show that two things occur together, you can't automatically conclude that one causes the other.",
 					"sentence": "Die Daten zeigen eine Korrelation, aber keine nachgewiesene Ursache. Welche Aussage ist präzise?",
+					"sentence_en": "The data show a correlation, but no proven cause. Which statement is precise?",
 					"words": [
 						{
 							"ok": true,
@@ -86,8 +107,11 @@
 					"title": "",
 					"page": 4,
 					"summary": "Präzise Angabe eines Anteils.",
+					"summary_en": "Stating a proportion precisely.",
 					"explain": "Eine genaue Prozentangabe ist aussagekräftiger als unbestimmte Mengenwörter wie „viele“ oder „einige“.",
+					"explain_en": "An exact percentage says more than vague words like „viele“ (many) or „einige“ (some).",
 					"sentence": "Von 500 Befragten stimmten 145 zu. Welche Beschreibung ist am präzisesten?",
+					"sentence_en": "Of 500 people asked, 145 agreed. Which description is the most precise?",
 					"words": [
 						{
 							"ok": true,
@@ -107,8 +131,11 @@
 					"title": "",
 					"page": 5,
 					"summary": "Zeitliche Nuance von „bereits“ und „erst“.",
+					"summary_en": "The timing difference between „bereits“ and „erst“.",
 					"explain": "„Bereits“ betont, dass etwas früher als erwartet geschieht. „Erst“ hebt einen späten Zeitpunkt hervor.",
+					"explain_en": "„Bereits“ (already) stresses that something happens earlier than expected. „Erst“ (only/not until) stresses a late time.",
 					"sentence": "Die Abgabefrist war Freitag, aber Mia reichte ihre Arbeit schon am Montag ein. Welche Formulierung passt?",
+					"sentence_en": "The deadline was Friday, but Mia handed in her work on Monday. Which wording fits?",
 					"words": [
 						{
 							"ok": true,
@@ -128,8 +155,11 @@
 					"title": "",
 					"page": 6,
 					"summary": "Genauigkeit von „nahezu“.",
+					"summary_en": "How exact „nahezu“ is.",
 					"explain": "„Nahezu“ bedeutet „fast, aber nicht ganz“ und eignet sich für Werte, die knapp unter einer genannten Grenze liegen.",
+					"explain_en": "„Nahezu“ means 'almost, but not quite' and suits values just below a stated limit.",
 					"sentence": "98 von 100 Aufgaben wurden korrekt gelöst. Welche Aussage gibt das Ergebnis angemessen wieder?",
+					"sentence_en": "98 of 100 tasks were solved correctly. Which statement describes the result appropriately?",
 					"words": [
 						{
 							"ok": true,
@@ -149,8 +179,11 @@
 					"title": "",
 					"page": 7,
 					"summary": "Geltungsbereich einer Verneinung.",
+					"summary_en": "What a negative applies to.",
 					"explain": "„Nicht alle“ bedeutet, dass nur ein Teil ausgeschlossen wird. Die Formulierung behauptet nicht, dass niemand zugestimmt hat.",
+					"explain_en": "„Nicht alle“ (not all) means only some are excluded. It doesn't claim that nobody agreed.",
 					"sentence": "Einige Teilnehmende stimmten zu, andere nicht. Welcher Satz beschreibt das eindeutig?",
+					"sentence_en": "Some participants agreed, others didn't. Which sentence describes this clearly?",
 					"words": [
 						{
 							"ok": true,
@@ -170,8 +203,11 @@
 					"title": "",
 					"page": 8,
 					"summary": "Abgestufte Wahrscheinlichkeit mit „dürfte“.",
+					"summary_en": "Degrees of likelihood with „dürfte“ (is likely to).",
 					"explain": "„Dürfte“ kann eine begründete, aber nicht sichere Vermutung ausdrücken. Es ist vorsichtiger als eine Feststellung mit „muss“.",
+					"explain_en": "„Dürfte“ expresses a reasoned but uncertain guess. It is more careful than a statement with „muss“ (must).",
 					"sentence": "Die Prognose ist wahrscheinlich, aber nicht sicher. Welche Formulierung passt?",
+					"sentence_en": "The forecast is likely but not certain. Which wording fits?",
 					"words": [
 						{
 							"ok": true,
@@ -191,8 +227,11 @@
 					"title": "",
 					"page": 9,
 					"summary": "Unterschied zwischen „beeinflussen“ und „verursachen“.",
+					"summary_en": "The difference between „beeinflussen“ and „verursachen“.",
 					"explain": "„Beeinflussen“ bezeichnet einen möglichen oder teilweisen Effekt. „Verursachen“ behauptet einen direkten ursächlichen Zusammenhang.",
+					"explain_en": "„Beeinflussen“ (to influence) means a possible or partial effect. „Verursachen“ (to cause) claims a direct cause.",
 					"sentence": "Mehrere Faktoren wirken auf das Ergebnis ein; keiner ist allein verantwortlich. Welches Verb passt? Verschiedene Bedingungen ___ das Ergebnis.",
+					"sentence_en": "Several factors affect the result; none is solely responsible. Which verb fits? Different conditions ___ the result.",
 					"words": [
 						{
 							"ok": true,
@@ -212,8 +251,11 @@
 					"title": "",
 					"page": 10,
 					"summary": "Eindeutiger Bezug statt mehrdeutiger Pronomen.",
+					"summary_en": "A clear reference instead of an ambiguous pronoun.",
 					"explain": "Wenn sich ein Pronomen auf mehrere Personen beziehen könnte, sollte das gemeinte Nomen wiederholt werden. Dadurch wird der Satz eindeutig.",
+					"explain_en": "If a pronoun could refer to more than one person, repeat the noun you mean. That makes the sentence clear.",
 					"sentence": "Laura sprach mit Miriam und überarbeitete danach ihren eigenen Bericht. Welcher Satz vermeidet einen unklaren Bezug?",
+					"sentence_en": "Laura spoke to Miriam and then revised her own report. Which sentence avoids an unclear reference?",
 					"words": [
 						{
 							"ok": true,

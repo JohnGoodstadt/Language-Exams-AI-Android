@@ -3,13 +3,17 @@
 	"location": 0,
 	"sheetname": "UsageQuiz2A2-de",
 	"title": "Verlaufsform",
+	"title_en": "What's happening now",
 	"updatedDate": 0,
 	"data": [
 		{
 			"title": "Wählen Sie für jede Frage die richtige Antwort.",
+			"title_en": "Choose the correct answer for each question.",
 			"description": "Laufende Handlungen im Deutschen (Präsens, gerade, am …-en)",
+			"description_en": "Things happening right now in German (present tense, gerade, am …-en)",
 			"sortorder": 1,
 			"learningTitle": "Ausdrücken, was gerade passiert",
+			"learningTitle_en": "Saying what is happening right now",
 			"learningPoints": [
 				"Zeigt, dass Deutsch keine -ing-Form hat: laufende Handlungen stehen im Präsens.",
 				"Übt 'gerade' für Handlungen, die genau jetzt passieren.",
@@ -17,13 +21,23 @@
 				"Trainiert 'dabei sein, etwas zu tun' und 'beim …'.",
 				"Niveau A2; orientiert sich am Goethe-Zertifikat A2 und telc Deutsch A2."
 			],
+			"learningPoints_en": [
+				"Shows that German has no -ing form: actions in progress use the present tense.",
+				"Practises 'gerade' (right now) for actions happening at this moment.",
+				"Covers the informal 'am …-en' form (am Kochen = busy cooking).",
+				"Trains 'dabei sein, etwas zu tun' (to be busy doing something) and 'beim …' (while …).",
+				"Level A2; based on the Goethe-Zertifikat A2 and telc Deutsch A2."
+			],
 			"sections": [
 				{
 					"title": "",
 					"page": 1,
 					"summary": "Deutsch hat keine -ing-Form; laufende Handlungen stehen im Präsens (oft mit 'gerade').",
+					"summary_en": "German has no -ing form; actions in progress use the present tense (often with 'gerade').",
 					"explain": "Eine laufende Handlung steht im Präsens: 'Ich lese gerade ein Buch.' Eine Form mit 'bin + Verb' wie im Englischen gibt es nicht.",
+					"explain_en": "An action in progress uses the present tense: 'Ich lese gerade ein Buch.' There is no 'am + verb' form like the English 'I am reading'.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -43,8 +57,11 @@
 					"title": "",
 					"page": 2,
 					"summary": "'gerade' zeigt, dass etwas genau jetzt passiert.",
+					"summary_en": "'gerade' shows that something is happening right now.",
 					"explain": "'Sie telefoniert gerade.' – Präsens + 'gerade' bedeutet 'genau jetzt'.",
+					"explain_en": "'Sie telefoniert gerade.' – present tense + 'gerade' means 'right now'.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -64,8 +81,11 @@
 					"title": "",
 					"page": 3,
 					"summary": "Umgangssprachlich: 'am' + großgeschriebener Infinitiv (am Kochen).",
+					"summary_en": "Informal: 'am' + the infinitive with a capital letter (am Kochen).",
 					"explain": "'Ich bin gerade am Kochen.' – der Infinitiv wird zum Nomen und großgeschrieben.",
+					"explain_en": "'Ich bin gerade am Kochen.' – the infinitive becomes a noun and gets a capital letter.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -85,8 +105,11 @@
 					"title": "",
 					"page": 4,
 					"summary": "Sowohl allgemeine als auch aktuelle Handlungen stehen im Präsens.",
+					"summary_en": "Both general and current actions use the present tense.",
 					"explain": "Gegenwart jetzt und allgemein: beides Präsens. 'jetzt trinke ich Kaffee' – kein 'bin … trinken'.",
+					"explain_en": "Now and in general: both use the present tense. 'jetzt trinke ich Kaffee' – not 'bin … trinken'.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -106,8 +129,11 @@
 					"title": "",
 					"page": 5,
 					"summary": "'dabei sein, etwas zu tun' betont eine laufende Handlung.",
+					"summary_en": "'dabei sein, etwas zu tun' stresses that an action is in progress.",
 					"explain": "'Wir sind gerade dabei, das Zimmer aufzuräumen.' – 'zu' + Infinitiv am Ende ('aufzuräumen').",
+					"explain_en": "'Wir sind gerade dabei, das Zimmer aufzuräumen.' – 'zu' + infinitive at the end ('aufzuräumen').",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -127,8 +153,11 @@
 					"title": "",
 					"page": 6,
 					"summary": "'gerade' steht meist nach dem Verb (im Mittelfeld).",
+					"summary_en": "'gerade' usually comes after the verb (in the middle of the sentence).",
 					"explain": "'Er schläft gerade.' – das Verb bleibt an Position 2, 'gerade' folgt.",
+					"explain_en": "'Er schläft gerade.' – the verb stays in position 2 and 'gerade' follows it.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -148,8 +177,11 @@
 					"title": "",
 					"page": 7,
 					"summary": "Auch die Frage nach der laufenden Handlung nutzt das Präsens + 'gerade'.",
+					"summary_en": "Asking what someone is doing right now also uses the present tense + 'gerade'.",
 					"explain": "'Was machst du gerade?' – nicht 'Was bist du machen?'.",
+					"explain_en": "'Was machst du gerade?' – not 'Was bist du machen?'.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -169,8 +201,11 @@
 					"title": "",
 					"page": 8,
 					"summary": "'beim' (= bei dem) + großgeschriebener Infinitiv beschreibt eine gleichzeitige Handlung.",
+					"summary_en": "'beim' (= bei dem) + the infinitive with a capital letter describes something happening at the same time.",
 					"explain": "'Beim Lesen schläft er oft ein.' – 'beim' + Nomen 'Lesen'.",
+					"explain_en": "'Beim Lesen schläft er oft ein.' – 'beim' + the noun 'Lesen'.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -190,8 +225,11 @@
 					"title": "",
 					"page": 9,
 					"summary": "'noch' zeigt, dass eine Handlung weiterhin läuft.",
+					"summary_en": "'noch' (still) shows that an action is still going on.",
 					"explain": "'Das Kind spielt noch im Garten.' – Präsens + 'noch', kein 'ist … spielen'.",
+					"explain_en": "'Das Kind spielt noch im Garten.' – present tense + 'noch', not 'ist … spielen'.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -211,8 +249,11 @@
 					"title": "",
 					"page": 10,
 					"summary": "Laufende Handlungen: Präsens (+ 'gerade'), nicht 'sein' + Verb.",
+					"summary_en": "Actions in progress: present tense (+ 'gerade'), not 'sein' + verb.",
 					"explain": "'Ich arbeite gerade an einem Projekt.' – Präsens; 'bin … arbeiten' ist falsch.",
+					"explain_en": "'Ich arbeite gerade an einem Projekt.' – present tense; 'bin … arbeiten' is wrong.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,

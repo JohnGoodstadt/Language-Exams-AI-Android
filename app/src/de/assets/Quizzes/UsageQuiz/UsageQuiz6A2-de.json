@@ -3,13 +3,17 @@
 	"location": 0,
 	"sheetname": "UsageQuiz6A2-de",
 	"title": "Konnektoren & wenn-Sätze",
+	"title_en": "because, that, if",
 	"updatedDate": 0,
 	"data": [
 		{
 			"title": "Wählen Sie für jede Frage die richtige Antwort.",
+			"title_en": "Choose the correct answer for each question.",
 			"description": "Bindewörter und Bedingungssätze im Deutschen",
+			"description_en": "Linking words and 'if' sentences in German",
 			"sortorder": 1,
 			"learningTitle": "Sätze verbinden und Bedingungen ausdrücken",
+			"learningTitle_en": "Joining sentences and saying 'if'",
 			"learningPoints": [
 				"Übt Nebensätze mit weil, obwohl, dass und damit (Verb am Ende).",
 				"Festigt Adverbien wie deshalb und trotzdem (Verb an Position 2).",
@@ -17,13 +21,23 @@
 				"Trainiert 'sondern' nach einer Verneinung.",
 				"Niveau A2; orientiert sich am Goethe-Zertifikat A2 und telc Deutsch A2."
 			],
+			"learningPoints_en": [
+				"Practises clauses with weil, obwohl, dass and damit (because, although, that, so that) – verb at the end.",
+				"Reinforces words like deshalb and trotzdem (so, even so) – verb in position 2.",
+				"Covers real conditions with 'wenn' (if) + present tense.",
+				"Trains 'sondern' (but rather) after a negative.",
+				"Level A2; based on the Goethe-Zertifikat A2 and telc Deutsch A2."
+			],
 			"sections": [
 				{
 					"title": "",
 					"page": 1,
 					"summary": "Nach 'weil' steht das konjugierte Verb am Ende des Nebensatzes.",
+					"summary_en": "After 'weil' (because) the conjugated verb goes to the end of the clause.",
 					"explain": "'…, weil ich krank bin.' – das Verb 'bin' steht am Ende.",
+					"explain_en": "'…, weil ich krank bin.' – the verb 'bin' is at the end.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -43,8 +57,11 @@
 					"title": "",
 					"page": 2,
 					"summary": "'obwohl' leitet einen Nebensatz ein; das Verb steht am Ende.",
+					"summary_en": "'obwohl' (although) starts a clause; the verb goes at the end.",
 					"explain": "'…, obwohl er krank ist.' – 'obwohl' + Verb 'ist' am Ende.",
+					"explain_en": "'…, obwohl er krank ist.' – 'obwohl' + the verb 'ist' at the end.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -64,8 +81,11 @@
 					"title": "",
 					"page": 3,
 					"summary": "'deshalb' ist ein Adverb; danach steht das Verb an Position 2.",
+					"summary_en": "'deshalb' (so, that's why) is followed by the verb in position 2.",
 					"explain": "'…, deshalb bleibe ich zu Hause.' – Verb 'bleibe' vor dem Subjekt.",
+					"explain_en": "'…, deshalb bleibe ich zu Hause.' – the verb 'bleibe' comes before the subject.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -85,8 +105,11 @@
 					"title": "",
 					"page": 4,
 					"summary": "'trotzdem' ist ein Adverb; das Verb folgt an Position 2.",
+					"summary_en": "'trotzdem' (even so) is followed by the verb in position 2.",
 					"explain": "'…, trotzdem gehen wir spazieren.' – Verb 'gehen' an Position 2.",
+					"explain_en": "'…, trotzdem gehen wir spazieren.' – the verb 'gehen' in position 2.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -106,8 +129,11 @@
 					"title": "",
 					"page": 5,
 					"summary": "Reale Bedingung: 'wenn' + Präsens; nach dem 'wenn'-Satz folgt das Verb (Position 2).",
+					"summary_en": "Real condition: 'wenn' + present tense; after the 'wenn' clause comes the verb (position 2).",
 					"explain": "'Wenn es morgen regnet, bleiben wir zu Hause.' – der Hauptsatz beginnt mit dem Verb 'bleiben'.",
+					"explain_en": "'Wenn es morgen regnet, bleiben wir zu Hause.' – the main clause starts with the verb 'bleiben'.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -127,8 +153,11 @@
 					"title": "",
 					"page": 6,
 					"summary": "'wenn' kann auch 'immer wenn' bedeuten; im Nebensatz steht das Verb am Ende.",
+					"summary_en": "'wenn' can also mean 'whenever'; in its clause the verb goes at the end.",
 					"explain": "'Wenn ich Zeit habe, gehe ich joggen.' – 'habe' am Ende des 'wenn'-Satzes.",
+					"explain_en": "'Wenn ich Zeit habe, gehe ich joggen.' – 'habe' at the end of the 'wenn' clause.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -148,8 +177,11 @@
 					"title": "",
 					"page": 7,
 					"summary": "'damit' nennt einen Zweck; das konjugierte Verb steht am Ende.",
+					"summary_en": "'damit' (so that) gives a purpose; the conjugated verb goes at the end.",
 					"explain": "'…, damit ich reisen kann.' – das Modalverb 'kann' steht am Ende.",
+					"explain_en": "'…, damit ich reisen kann.' – the modal verb 'kann' is at the end.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -169,8 +201,11 @@
 					"title": "",
 					"page": 8,
 					"summary": "Nach 'dass' steht das konjugierte Verb am Ende.",
+					"summary_en": "After 'dass' (that) the conjugated verb goes to the end.",
 					"explain": "'…, dass du bald gesund wirst.' – 'wirst' steht am Ende.",
+					"explain_en": "'…, dass du bald gesund wirst.' – 'wirst' is at the end.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -190,8 +225,11 @@
 					"title": "",
 					"page": 9,
 					"summary": "Der 'wenn'-Satz kann auch hinten stehen; das Verb steht am Ende.",
+					"summary_en": "The 'wenn' clause can also come second; its verb goes at the end.",
 					"explain": "'…, wenn ich zu Hause bin.' – 'bin' am Ende des Nebensatzes.",
+					"explain_en": "'…, wenn ich zu Hause bin.' – 'bin' at the end of the clause.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -211,8 +249,11 @@
 					"title": "",
 					"page": 10,
 					"summary": "Nach einer Verneinung steht 'sondern' (nicht 'aber').",
+					"summary_en": "After a negative you use 'sondern' (not 'aber').",
 					"explain": "'nicht … sondern': 'Er kommt nicht heute, sondern morgen.' Nach der Verneinung benutzt man 'sondern'.",
+					"explain_en": "'nicht … sondern' (not … but): 'Er kommt nicht heute, sondern morgen.' After a negative you use 'sondern'.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,

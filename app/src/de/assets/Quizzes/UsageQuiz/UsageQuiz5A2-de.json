@@ -3,13 +3,17 @@
 	"location": 0,
 	"sheetname": "UsageQuiz5A2-de",
 	"title": "Verben mit Ergänzung",
+	"title_en": "Verbs and what follows them",
 	"updatedDate": 0,
 	"data": [
 		{
 			"title": "Wählen Sie für jede Frage die richtige Antwort.",
+			"title_en": "Choose the correct answer for each question.",
 			"description": "Verben und ihre Ergänzungen (Kasus, Präpositionen, zu-Infinitiv)",
+			"description_en": "Verbs and what follows them (case, prepositions, zu + infinitive)",
 			"sortorder": 1,
 			"learningTitle": "Verben mit ihren Ergänzungen",
+			"learningTitle_en": "Verbs and the words that go with them",
 			"learningPoints": [
 				"Übt Verben mit Dativ (helfen, gefallen) und Akkusativ.",
 				"Festigt Verben mit festen Präpositionen (warten auf, denken an, sich freuen auf).",
@@ -17,13 +21,23 @@
 				"Trainiert Verben mit zwei Objekten (geben: Dativ + Akkusativ).",
 				"Niveau A2; orientiert sich am Goethe-Zertifikat A2 und telc Deutsch A2."
 			],
+			"learningPoints_en": [
+				"Practises verbs that take the dative (helfen, gefallen) and the accusative.",
+				"Reinforces verbs with fixed prepositions (warten auf, denken an, sich freuen auf).",
+				"Covers reflexive verbs and 'zu' + infinitive (vergessen, anfangen).",
+				"Trains verbs with two objects (geben: dative + accusative).",
+				"Level A2; based on the Goethe-Zertifikat A2 and telc Deutsch A2."
+			],
 			"sections": [
 				{
 					"title": "",
 					"page": 1,
 					"summary": "'helfen' steht mit dem Dativ.",
+					"summary_en": "'helfen' (to help) takes the dative.",
 					"explain": "'helfen' + Dativ: 'meine Mutter' → 'meiner Mutter': 'Ich helfe meiner Mutter.'",
+					"explain_en": "'helfen' + dative: 'meine Mutter' → 'meiner Mutter': 'Ich helfe meiner Mutter.'",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -43,8 +57,11 @@
 					"title": "",
 					"page": 2,
 					"summary": "'warten' verlangt die Präposition 'auf' + Akkusativ.",
+					"summary_en": "'warten' (to wait) needs 'auf' + accusative.",
 					"explain": "'warten auf' + Akkusativ: 'Wir warten auf den Bus.'",
+					"explain_en": "'warten auf' + accusative: 'Wir warten auf den Bus.'",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -64,8 +81,11 @@
 					"title": "",
 					"page": 3,
 					"summary": "'sich freuen auf' braucht das Reflexivpronomen und 'auf' + Akkusativ.",
+					"summary_en": "'sich freuen auf' (to look forward to) needs the reflexive pronoun and 'auf' + accusative.",
 					"explain": "'Ich freue mich auf das Wochenende.' – reflexiv 'mich' + 'auf' + Akkusativ.",
+					"explain_en": "'Ich freue mich auf das Wochenende.' – reflexive 'mich' + 'auf' + accusative.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -85,8 +105,11 @@
 					"title": "",
 					"page": 4,
 					"summary": "'denken' verlangt 'an' + Akkusativ.",
+					"summary_en": "'denken' (to think of) needs 'an' + accusative.",
 					"explain": "'denken an' + Akkusativ: 'Ich denke oft an dich.'",
+					"explain_en": "'denken an' + accusative: 'Ich denke oft an dich.'",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -106,8 +129,11 @@
 					"title": "",
 					"page": 5,
 					"summary": "'gefallen' steht mit dem Dativ (mir gefällt …).",
+					"summary_en": "'gefallen' (to like, to please) takes the dative (mir gefällt …).",
 					"explain": "'Das Bild gefällt mir.' – die Person steht im Dativ ('mir').",
+					"explain_en": "'Das Bild gefällt mir.' – the person is in the dative ('mir').",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -127,8 +153,11 @@
 					"title": "",
 					"page": 6,
 					"summary": "Viele Verben verlangen 'zu' + Infinitiv; bei trennbaren Verben steht 'zu' in der Mitte (abzuschließen).",
+					"summary_en": "Many verbs need 'zu' + infinitive; with separable verbs 'zu' goes in the middle (abzuschließen).",
 					"explain": "'…, die Tür abzuschließen.' – 'zu' zwischen Vorsilbe und Verb: 'ab-zu-schließen'.",
+					"explain_en": "'…, die Tür abzuschließen.' – 'zu' between the prefix and the verb: 'ab-zu-schließen'.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -148,8 +177,11 @@
 					"title": "",
 					"page": 7,
 					"summary": "'anfangen' verlangt 'zu' + Infinitiv.",
+					"summary_en": "'anfangen' (to start) needs 'zu' + infinitive.",
 					"explain": "'Es fängt an zu regnen.' – 'zu' + Infinitiv 'regnen'.",
+					"explain_en": "'Es fängt an zu regnen.' – 'zu' + the infinitive 'regnen'.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -169,8 +201,11 @@
 					"title": "",
 					"page": 8,
 					"summary": "'sprechen mit' steht mit dem Dativ.",
+					"summary_en": "'sprechen mit' (to speak to) takes the dative.",
 					"explain": "'sprechen mit' + Dativ: 'Ich spreche mit dem Lehrer.'",
+					"explain_en": "'sprechen mit' + dative: 'Ich spreche mit dem Lehrer.'",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -190,8 +225,11 @@
 					"title": "",
 					"page": 9,
 					"summary": "'geben' hat zwei Objekte: Person im Dativ, Sache im Akkusativ.",
+					"summary_en": "'geben' (to give) has two objects: the person in the dative, the thing in the accusative.",
 					"explain": "'Ich gebe dem Kind einen Apfel.' – 'dem Kind' (Dativ) + 'einen Apfel' (Akkusativ).",
+					"explain_en": "'Ich gebe dem Kind einen Apfel.' – 'dem Kind' (dative) + 'einen Apfel' (accusative).",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -211,8 +249,11 @@
 					"title": "",
 					"page": 10,
 					"summary": "'sich interessieren für' + Akkusativ (mit Reflexivpronomen).",
+					"summary_en": "'sich interessieren für' (to be interested in) + accusative (with a reflexive pronoun).",
 					"explain": "'Er interessiert sich für Musik.' – reflexiv 'sich' + 'für'.",
+					"explain_en": "'Er interessiert sich für Musik.' – reflexive 'sich' + 'für'.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,

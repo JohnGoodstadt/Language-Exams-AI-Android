@@ -3,13 +3,17 @@
 	"location": 0,
 	"sheetname": "UsageQuiz1A2-de",
 	"title": "Zukunft",
+	"title_en": "The future",
 	"updatedDate": 0,
 	"data": [
 		{
 			"title": "Wählen Sie für jede Frage die richtige Antwort.",
+			"title_en": "Choose the correct answer for each question.",
 			"description": "Die Zukunft im Deutschen (Futur I und Präsens)",
+			"description_en": "The future in German (Futur I and the present tense)",
 			"sortorder": 1,
 			"learningTitle": "Über die Zukunft sprechen",
+			"learningTitle_en": "Talking about the future",
 			"learningPoints": [
 				"Übt das Futur I: 'werden' + Infinitiv am Satzende.",
 				"Festigt die Formen von 'werden' (ich werde, du wirst, er wird …).",
@@ -17,13 +21,23 @@
 				"Trainiert die Satzklammer und die Stellung von 'nicht'.",
 				"Niveau A2; orientiert sich am Goethe-Zertifikat A2 und telc Deutsch A2."
 			],
+			"learningPoints_en": [
+				"Practises the future (Futur I): 'werden' + infinitive at the end of the sentence.",
+				"Reinforces the forms of 'werden' (ich werde, du wirst, er wird …).",
+				"Covers using the present tense with a time phrase to talk about the future.",
+				"Trains the 'verb bracket' and where 'nicht' goes.",
+				"Level A2; based on the Goethe-Zertifikat A2 and telc Deutsch A2."
+			],
 			"sections": [
 				{
 					"title": "",
 					"page": 1,
 					"summary": "Das Futur I bildet man mit 'werden' + Infinitiv; der Infinitiv steht am Ende.",
+					"summary_en": "The future (Futur I) is formed with 'werden' + infinitive; the infinitive goes at the end.",
 					"explain": "Futur I = 'werden' (Position 2) + Infinitiv am Ende: 'Ich werde morgen einen Kuchen backen.'",
+					"explain_en": "Futur I = 'werden' (position 2) + infinitive at the end: 'Ich werde morgen einen Kuchen backen.'",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -43,8 +57,11 @@
 					"title": "",
 					"page": 2,
 					"summary": "'werden' ist unregelmäßig: ich werde, du wirst, er wird …",
+					"summary_en": "'werden' is irregular: ich werde, du wirst, er wird …",
 					"explain": "Bei 'du' heißt es 'wirst': 'Du wirst bald Deutsch sprechen.'",
+					"explain_en": "With 'du' it is 'wirst': 'Du wirst bald Deutsch sprechen.'",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -64,8 +81,11 @@
 					"title": "",
 					"page": 3,
 					"summary": "Bei 'er/sie/es' heißt die Form 'wird'.",
+					"summary_en": "With 'er/sie/es' the form is 'wird'.",
 					"explain": "'Er wird nächstes Jahr studieren.' – 'wird' + Infinitiv 'studieren' am Ende.",
+					"explain_en": "'Er wird nächstes Jahr studieren.' – 'wird' + the infinitive 'studieren' at the end.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -85,8 +105,11 @@
 					"title": "",
 					"page": 4,
 					"summary": "Die Zukunft drückt man oft mit dem Präsens + Zeitangabe aus.",
+					"summary_en": "The future is often expressed with the present tense + a time phrase.",
 					"explain": "Mit einer Zeitangabe reicht das Präsens: 'Morgen fahre ich nach München.' Das Verb bleibt an Position 2.",
+					"explain_en": "With a time phrase the present tense is enough: 'Morgen fahre ich nach München.' The verb stays in position 2.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -106,8 +129,11 @@
 					"title": "",
 					"page": 5,
 					"summary": "Auch mit 'wir' gilt: 'werden' + Infinitiv am Ende.",
+					"summary_en": "With 'wir' too: 'werden' + infinitive at the end.",
 					"explain": "'Wir werden im Sommer nach Italien reisen.' – Infinitiv 'reisen' steht am Ende.",
+					"explain_en": "'Wir werden im Sommer nach Italien reisen.' – the infinitive 'reisen' is at the end.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -127,8 +153,11 @@
 					"title": "",
 					"page": 6,
 					"summary": "In Verneinungen steht 'nicht' vor dem Infinitiv am Ende.",
+					"summary_en": "In negative sentences 'nicht' goes before the infinitive at the end.",
 					"explain": "'nicht' steht direkt vor dem Infinitiv: 'Ich werde das nicht vergessen.'",
+					"explain_en": "'nicht' goes directly before the infinitive: 'Ich werde das nicht vergessen.'",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -148,8 +177,11 @@
 					"title": "",
 					"page": 7,
 					"summary": "In der Ja/Nein-Frage steht 'werden' zuerst, der Infinitiv am Ende.",
+					"summary_en": "In a yes/no question 'werden' comes first and the infinitive goes at the end.",
 					"explain": "'Wirst du morgen kommen?' – 'wirst' am Anfang, Infinitiv 'kommen' am Ende.",
+					"explain_en": "'Wirst du morgen kommen?' – 'wirst' at the start, the infinitive 'kommen' at the end.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -169,8 +201,11 @@
 					"title": "",
 					"page": 8,
 					"summary": "In W-Fragen steht 'werden' an Position 2, der Infinitiv am Ende.",
+					"summary_en": "In W-questions 'werden' is in position 2 and the infinitive at the end.",
 					"explain": "'Was wirst du am Wochenende machen?' – Fragewort + 'wirst' + … + Infinitiv 'machen'.",
+					"explain_en": "'Was wirst du am Wochenende machen?' – question word + 'wirst' + … + the infinitive 'machen'.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -190,8 +225,11 @@
 					"title": "",
 					"page": 9,
 					"summary": "Bei sicheren Plänen genügt oft das Präsens.",
+					"summary_en": "For fixed plans the present tense is often enough.",
 					"explain": "Feste Pläne stehen oft im Präsens + Zeitangabe: 'Nächste Woche habe ich Urlaub.' 'werde … Urlaub' ohne Infinitiv ist falsch.",
+					"explain_en": "Fixed plans often use the present tense + a time phrase: 'Nächste Woche habe ich Urlaub.' 'werde … Urlaub' with no infinitive is wrong.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -211,8 +249,11 @@
 					"title": "",
 					"page": 10,
 					"summary": "Auch 'sein' braucht im Futur seinen Infinitiv am Ende.",
+					"summary_en": "In the future, 'sein' also needs its infinitive at the end.",
 					"explain": "'Es wird bald dunkel sein.' – der Infinitiv 'sein' steht am Ende.",
+					"explain_en": "'Es wird bald dunkel sein.' – the infinitive 'sein' is at the end.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,

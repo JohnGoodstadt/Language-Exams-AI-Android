@@ -3,13 +3,17 @@
 	"location": 0,
 	"sheetname": "UsageQuiz4B2-de",
 	"title": "Akademisches Schreiben",
+	"title_en": "Writing factually",
 	"updatedDate": 0,
 	"data": [
 		{
 			"title": "Wähle bei jeder Frage die richtige Antwort.",
+			"title_en": "Choose the correct answer for each question.",
 			"description": "Akademisches Schreiben auf dem Niveau B2",
+			"description_en": "Academic writing at level B2",
 			"sortorder": 1,
 			"learningTitle": "Warum dieses Quiz wichtig ist",
+			"learningTitle_en": "Why this quiz matters",
 			"learningPoints": [
 				"Du formulierst sachlich, präzise und in einem angemessenen formellen Register.",
 				"Du strukturierst Argumente und stellst logische Beziehungen zwischen Aussagen her.",
@@ -18,13 +22,24 @@
 				"Du formulierst vorsichtige Schlussfolgerungen, ohne unbelegte Gewissheiten auszudrücken.",
 				"Die Aufgaben entsprechen dem GER-Niveau B2."
 			],
+			"learningPoints_en": [
+				"You write factually, precisely and in a suitably formal style.",
+				"You structure arguments and show the logical links between statements.",
+				"You bring in sources and other people's views using the right language.",
+				"You describe results and trends in a nuanced way.",
+				"You draw careful conclusions without claiming certainty you can't support.",
+				"The questions match CEFR level B2."
+			],
 			"sections": [
 				{
 					"title": "",
 					"page": 1,
 					"summary": "Sachlicher und formeller Stil.",
+					"summary_en": "Factual, formal style.",
 					"explain": "Akademische Texte verwenden eine sachliche, präzise Sprache und vermeiden umgangssprachliche oder wertende Formulierungen.",
+					"explain_en": "Academic texts use factual, precise language and avoid casual or judgemental wording.",
 					"sentence": "Welche Formulierung eignet sich am besten für einen akademischen Text?",
+					"sentence_en": "Which wording is best for an academic text?",
 					"words": [
 						{
 							"ok": true,
@@ -44,8 +59,11 @@
 					"title": "",
 					"page": 2,
 					"summary": "Klare Formulierung der Fragestellung.",
+					"summary_en": "Stating the question clearly.",
 					"explain": "Eine wissenschaftliche Fragestellung benennt präzise, was untersucht wird, und grenzt das Thema sinnvoll ein.",
+					"explain_en": "A research question says exactly what is being studied and sensibly limits the topic.",
 					"sentence": "Welche Forschungsfrage ist am klarsten und präzisesten formuliert?",
+					"sentence_en": "Which research question is the clearest and most precise?",
 					"words": [
 						{
 							"ok": true,
@@ -65,8 +83,11 @@
 					"title": "",
 					"page": 3,
 					"summary": "Logische Verknüpfung von Gegensatz und Einschränkung.",
+					"summary_en": "Linking a contrast or limitation logically.",
 					"explain": "Mit „allerdings“ kann eine vorherige Aussage eingeschränkt oder ihr ein Gegenargument gegenübergestellt werden.",
+					"explain_en": "„Allerdings“ (however) can limit the previous statement or set an argument against it.",
 					"sentence": "Welche Ergänzung passt? Die Methode liefert schnell Ergebnisse. ___ ist ihre Genauigkeit begrenzt.",
+					"sentence_en": "Which word fits? The method gives results quickly. ___ its accuracy is limited.",
 					"words": [
 						{
 							"ok": true,
@@ -86,8 +107,11 @@
 					"title": "",
 					"page": 4,
 					"summary": "Vorsichtige wissenschaftliche Aussage.",
+					"summary_en": "A careful scientific statement.",
 					"explain": "Wenn Daten keine eindeutige Ursache beweisen, sollte eine Schlussfolgerung vorsichtig formuliert werden, etwa mit „deutet darauf hin“.",
+					"explain_en": "When data don't prove a clear cause, a conclusion should be worded carefully, for example with „deutet darauf hin“ (suggests).",
 					"sentence": "Die Untersuchung zeigt einen möglichen, aber nicht endgültig bewiesenen Zusammenhang. Welche Aussage ist angemessen?",
+					"sentence_en": "The study shows a possible link, but not a proven one. Which statement is appropriate?",
 					"words": [
 						{
 							"ok": true,
@@ -107,8 +131,11 @@
 					"title": "",
 					"page": 5,
 					"summary": "Neutrale Wiedergabe einer Quelle.",
+					"summary_en": "Reporting a source neutrally.",
 					"explain": "Bei der Wiedergabe fremder Positionen muss deutlich werden, wer die Aussage gemacht hat. Formulierungen wie „laut der Studie“ schaffen diese Distanz.",
+					"explain_en": "When reporting other people's views it must be clear who said it. Phrases like „laut der Studie“ (according to the study) create this distance.",
 					"sentence": "Welche Formulierung gibt eine fremde Aussage sachlich wieder?",
+					"sentence_en": "Which wording reports someone else's statement neutrally?",
 					"words": [
 						{
 							"ok": true,
@@ -128,8 +155,11 @@
 					"title": "",
 					"page": 6,
 					"summary": "Paraphrase statt wörtlicher Übernahme.",
+					"summary_en": "Paraphrasing instead of copying word for word.",
 					"explain": "Eine Paraphrase gibt den Inhalt einer Quelle in eigenen Worten wieder, ohne die Bedeutung zu verändern. Die Quelle muss trotzdem genannt werden.",
+					"explain_en": "A paraphrase gives the content of a source in your own words without changing the meaning. The source must still be named.",
 					"sentence": "Originalaussage: „Digitale Werkzeuge verändern die Zusammenarbeit in internationalen Teams.“ Welche Variante ist eine passende Paraphrase?",
+					"sentence_en": "Original statement: 'Digital tools are changing how international teams work together.' Which version is a good paraphrase?",
 					"words": [
 						{
 							"ok": true,
@@ -149,8 +179,11 @@
 					"title": "",
 					"page": 7,
 					"summary": "Präzise Beschreibung einer Entwicklung.",
+					"summary_en": "Describing a trend precisely.",
 					"explain": "Bei der Beschreibung von Daten sollten Richtung, Umfang und Zeitraum einer Veränderung möglichst genau genannt werden.",
+					"explain_en": "When describing data, give the direction, size and time period of a change as exactly as possible.",
 					"sentence": "Eine Quote stieg zwischen 2020 und 2024 von 40 auf 55 Prozent. Welche Beschreibung ist am präzisesten?",
+					"sentence_en": "A rate rose from 40 to 55 percent between 2020 and 2024. Which description is the most precise?",
 					"words": [
 						{
 							"ok": true,
@@ -170,8 +203,11 @@
 					"title": "",
 					"page": 8,
 					"summary": "Begründung mit Beleg.",
+					"summary_en": "Giving a reason with evidence.",
 					"explain": "Eine akademische Begründung verbindet eine Behauptung mit nachvollziehbaren Daten oder einem geeigneten Beleg.",
+					"explain_en": "An academic argument links a claim to clear data or suitable evidence.",
 					"sentence": "Welche Aussage verbindet eine Schlussfolgerung nachvollziehbar mit einem Beleg?",
+					"sentence_en": "Which statement links a conclusion clearly to evidence?",
 					"words": [
 						{
 							"ok": true,
@@ -191,8 +227,11 @@
 					"title": "",
 					"page": 9,
 					"summary": "Angemessene Absatzstruktur.",
+					"summary_en": "A good paragraph structure.",
 					"explain": "Ein klarer akademischer Absatz beginnt mit einer Kernaussage, entwickelt sie durch Erklärung oder Belege und endet gegebenenfalls mit einer Folgerung.",
+					"explain_en": "A clear academic paragraph starts with a main point, develops it with explanation or evidence, and may end with a conclusion.",
 					"sentence": "Welche Reihenfolge ergibt einen logisch aufgebauten Absatz?",
+					"sentence_en": "Which order gives a logically built paragraph?",
 					"words": [
 						{
 							"ok": true,
@@ -212,8 +251,11 @@
 					"title": "",
 					"page": 10,
 					"summary": "Differenzierte Schlussfolgerung.",
+					"summary_en": "A balanced conclusion.",
 					"explain": "Eine gute Schlussfolgerung fasst das wichtigste Ergebnis zusammen, berücksichtigt Grenzen und behauptet nicht mehr, als die Untersuchung belegen kann.",
+					"explain_en": "A good conclusion sums up the main result, takes limitations into account and claims no more than the study can show.",
 					"sentence": "Die Stichprobe war klein und umfasste nur eine Altersgruppe. Welche Schlussfolgerung ist angemessen?",
+					"sentence_en": "The sample was small and covered only one age group. Which conclusion is appropriate?",
 					"words": [
 						{
 							"ok": true,

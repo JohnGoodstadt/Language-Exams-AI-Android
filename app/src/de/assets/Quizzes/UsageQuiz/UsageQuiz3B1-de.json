@@ -3,13 +3,17 @@
 	"location": 0,
 	"sheetname": "UsageQuiz3B1-de",
 	"title": "Passiv",
+	"title_en": "What is being done (passive)",
 	"updatedDate": 0,
 	"data": [
 		{
 			"title": "Wählen Sie für jede Frage die richtige Antwort.",
+			"title_en": "Choose the correct answer for each question.",
 			"description": "Das Passiv im Deutschen",
+			"description_en": "The passive in German",
 			"sortorder": 1,
 			"learningTitle": "Das Passiv verwenden",
+			"learningTitle_en": "Using the passive",
 			"learningPoints": [
 				"Übt das Vorgangspassiv (werden + Partizip II) im Präsens und Präteritum.",
 				"Festigt das Passiv mit Modalverben ('muss … gemacht werden').",
@@ -17,13 +21,23 @@
 				"Trainiert das Passiv-Perfekt ('ist … worden').",
 				"Niveau B1; orientiert sich am Goethe-Zertifikat B1 und telc Deutsch B1."
 			],
+			"learningPoints_en": [
+				"Practises the passive (werden + past participle) in the present and simple past.",
+				"Reinforces the passive with modal verbs ('muss … gemacht werden' = must be done).",
+				"Covers 'von' (by a person) and 'durch' (by means of / because of).",
+				"Trains the passive in the Perfekt ('ist … worden').",
+				"Level B1; based on the Goethe-Zertifikat B1 and telc Deutsch B1."
+			],
 			"sections": [
 				{
 					"title": "",
 					"page": 1,
 					"summary": "Das Vorgangspassiv bildet man mit 'werden' + Partizip II.",
+					"summary_en": "The passive is formed with 'werden' + past participle.",
 					"explain": "'Das Haus wird gerade renoviert.' – 'werden' + Partizip 'renoviert'.",
+					"explain_en": "'Das Haus wird gerade renoviert.' – 'werden' + the participle 'renoviert'.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -43,8 +57,11 @@
 					"title": "",
 					"page": 2,
 					"summary": "Der Urheber (Person) steht im Passiv mit 'von' + Dativ.",
+					"summary_en": "In the passive, the person doing it is given with 'von' + dative.",
 					"explain": "'von der Sekretärin' (von + Dativ): 'Der Brief wird von der Sekretärin geschrieben.'",
+					"explain_en": "'von der Sekretärin' (von + dative): 'Der Brief wird von der Sekretärin geschrieben.'",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -64,8 +81,11 @@
 					"title": "",
 					"page": 3,
 					"summary": "Passiv in der Vergangenheit: 'wurde' + Partizip II.",
+					"summary_en": "Passive in the past: 'wurde' + past participle.",
 					"explain": "'Die Kirche wurde im Mittelalter gebaut.' – 'wurde' (Präteritum von werden) + 'gebaut'.",
+					"explain_en": "'Die Kirche wurde im Mittelalter gebaut.' – 'wurde' (past of werden) + 'gebaut'.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -85,8 +105,11 @@
 					"title": "",
 					"page": 4,
 					"summary": "Passiv mit Modalverb: Modalverb + Partizip II + 'werden' (Infinitiv) am Ende.",
+					"summary_en": "Passive with a modal verb: modal verb + past participle + 'werden' (infinitive) at the end.",
 					"explain": "'muss … bezahlt werden': 'Die Rechnung muss bis Freitag bezahlt werden.'",
+					"explain_en": "'muss … bezahlt werden' (must be paid): 'Die Rechnung muss bis Freitag bezahlt werden.'",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -106,8 +129,11 @@
 					"title": "",
 					"page": 5,
 					"summary": "Auch in Fragen gilt: 'werden' (Position 2) + Partizip II am Ende.",
+					"summary_en": "In questions too: 'werden' (position 2) + past participle at the end.",
 					"explain": "'Wann wird das Ergebnis bekannt gegeben?' – 'wird' an Position 2, Partizip 'gegeben' am Ende.",
+					"explain_en": "'Wann wird das Ergebnis bekannt gegeben?' – 'wird' in position 2, the participle 'gegeben' at the end.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -127,8 +153,11 @@
 					"title": "",
 					"page": 6,
 					"summary": "Passiv im Perfekt: 'sein' + Partizip II + 'worden' (nicht 'geworden').",
+					"summary_en": "Passive in the Perfekt: 'sein' + past participle + 'worden' (not 'geworden').",
 					"explain": "'Das Problem ist schon gelöst worden.' – im Passiv-Perfekt heißt es 'worden'.",
+					"explain_en": "'Das Problem ist schon gelöst worden.' – in the passive Perfekt it is 'worden'.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -148,8 +177,11 @@
 					"title": "",
 					"page": 7,
 					"summary": "Das Mittel/die Ursache steht im Passiv mit 'durch' + Akkusativ.",
+					"summary_en": "In the passive, the means or cause is given with 'durch' + accusative.",
 					"explain": "'durch ein Erdbeben' (durch + Akkusativ): 'Die Stadt wurde durch ein Erdbeben zerstört.'",
+					"explain_en": "'durch ein Erdbeben' (durch + accusative): 'Die Stadt wurde durch ein Erdbeben zerstört.'",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -169,8 +201,11 @@
 					"title": "",
 					"page": 8,
 					"summary": "Das Passiv kann ohne Urheber stehen (man nennt nicht, wer handelt).",
+					"summary_en": "The passive can be used without saying who does it.",
 					"explain": "'In Deutschland wird viel Kaffee getrunken.' – Passiv ohne 'von …'; Partizip 'getrunken'.",
+					"explain_en": "'In Deutschland wird viel Kaffee getrunken.' – passive with no 'von …'; participle 'getrunken'.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -190,8 +225,11 @@
 					"title": "",
 					"page": 9,
 					"summary": "Das Zustandspassiv (Ergebnis/Zustand) bildet man mit 'sein' + Partizip II.",
+					"summary_en": "A state or result is described with 'sein' + past participle.",
 					"explain": "'Das Geschäft ist am Sonntag geschlossen.' – Zustand mit 'sein' + Partizip 'geschlossen'.",
+					"explain_en": "'Das Geschäft ist am Sonntag geschlossen.' – a state with 'sein' + the participle 'geschlossen'.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -211,8 +249,11 @@
 					"title": "",
 					"page": 10,
 					"summary": "Das Passiv-Verb 'werden' passt sich dem Subjekt an (Plural: wurden).",
+					"summary_en": "The passive verb 'werden' matches the subject (plural: wurden).",
 					"explain": "'Die Häuser' ist Plural → 'wurden': 'Die Häuser wurden im letzten Jahr gebaut.'",
+					"explain_en": "'Die Häuser' is plural → 'wurden': 'Die Häuser wurden im letzten Jahr gebaut.'",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,

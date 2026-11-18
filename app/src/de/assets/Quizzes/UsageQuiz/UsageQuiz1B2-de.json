@@ -3,13 +3,17 @@
 	"location": 0,
 	"sheetname": "UsageQuiz1B2-de",
 	"title": "Zeitformen & Aspekte",
+	"title_en": "Choosing the right tense",
 	"updatedDate": 0,
 	"data": [
 		{
 			"title": "Wähle bei jeder Frage die richtige Antwort.",
+			"title_en": "Choose the correct answer for each question.",
 			"description": "Zeitformen und Aspekte auf dem Niveau B2",
+			"description_en": "Tenses and time at level B2",
 			"sortorder": 1,
 			"learningTitle": "Warum dieses Quiz wichtig ist",
+			"learningTitle_en": "Why this quiz matters",
 			"learningPoints": [
 				"Du unterscheidest sicher zwischen Präsens, Perfekt, Präteritum, Plusquamperfekt und Futur II.",
 				"Du drückst Dauer, Verlauf und Abschluss einer Handlung präzise aus.",
@@ -18,13 +22,24 @@
 				"Du erkennst typische Zeitangaben und verwendest die dazu passende Zeitform.",
 				"Die Aufgaben entsprechen dem GER-Niveau B2."
 			],
+			"learningPoints_en": [
+				"You confidently tell apart the present, Perfekt, simple past, past perfect and future perfect.",
+				"You say exactly how long something lasts, whether it is still going on, and when it is finished.",
+				"You make the order of past events clear.",
+				"You describe future results and guesses about the past.",
+				"You recognise typical time phrases and use the tense that goes with them.",
+				"The questions match CEFR level B2."
+			],
 			"sections": [
 				{
 					"title": "",
 					"page": 1,
 					"summary": "Präsens mit „seit“ für eine andauernde Handlung.",
+					"summary_en": "Present tense with „seit“ (since/for) for something still going on.",
 					"explain": "Eine Handlung, die in der Vergangenheit begonnen hat und bis heute andauert, steht im Deutschen mit „seit“ im Präsens.",
+					"explain_en": "Something that started in the past and is still going on uses „seit“ with the present tense in German.",
 					"sentence": "Mara begann vor zwei Jahren bei dieser Firma und arbeitet noch immer dort. Welcher Satz passt?",
+					"sentence_en": "Mara started at this company two years ago and still works there. Which sentence fits?",
 					"words": [
 						{
 							"ok": true,
@@ -44,8 +59,11 @@
 					"title": "",
 					"page": 2,
 					"summary": "Plusquamperfekt für das frühere von zwei vergangenen Ereignissen.",
+					"summary_en": "Past perfect for the earlier of two past events.",
 					"explain": "Das Plusquamperfekt kennzeichnet eine Handlung, die bereits vor einem anderen Ereignis in der Vergangenheit abgeschlossen war.",
+					"explain_en": "The past perfect marks something that was already finished before another past event.",
 					"sentence": "Welche Ergänzung zeigt die zeitliche Reihenfolge korrekt? Nachdem Jonas alle Daten ___, schrieb er den Bericht.",
+					"sentence_en": "Which word(s) show the order of events correctly? After Jonas ___ all the data, he wrote the report.",
 					"words": [
 						{
 							"ok": true,
@@ -65,8 +83,11 @@
 					"title": "",
 					"page": 3,
 					"summary": "Präteritum für Verlauf und Unterbrechung in einer Erzählung.",
+					"summary_en": "Simple past for something in progress and an interruption in a story.",
 					"explain": "Eine länger dauernde Hintergrundhandlung kann im Präteritum stehen; ein plötzliches Ereignis unterbricht sie.",
+					"explain_en": "A longer background action can be in the simple past; a sudden event interrupts it.",
 					"sentence": "Welche Formulierung beschreibt eine laufende Handlung, die plötzlich unterbrochen wurde?",
+					"sentence_en": "Which sentence describes something in progress that was suddenly interrupted?",
 					"words": [
 						{
 							"ok": true,
@@ -86,8 +107,11 @@
 					"title": "",
 					"page": 4,
 					"summary": "Perfekt für ein abgeschlossenes Ergebnis mit Gegenwartsbezug.",
+					"summary_en": "Perfekt for a finished result that matters now.",
 					"explain": "Das Perfekt stellt hier das abgeschlossene Ergebnis in den Vordergrund, das für die Gegenwart wichtig ist.",
+					"explain_en": "Here the Perfekt puts the focus on the finished result, which is important now.",
 					"sentence": "Der Bericht ist jetzt fertig und kann verschickt werden. Welcher Satz drückt das korrekt aus?",
+					"sentence_en": "The report is now finished and can be sent. Which sentence says this correctly?",
 					"words": [
 						{
 							"ok": true,
@@ -107,8 +131,11 @@
 					"title": "",
 					"page": 5,
 					"summary": "Futur II für einen Abschluss vor einem zukünftigen Zeitpunkt.",
+					"summary_en": "Future perfect for something finished before a point in the future.",
 					"explain": "Das Futur II bezeichnet eine Handlung, die zu einem bestimmten Zeitpunkt in der Zukunft abgeschlossen sein wird.",
+					"explain_en": "The future perfect describes something that will be finished by a certain time in the future.",
 					"sentence": "Welche Ergänzung ist richtig? Bis Ende der Woche ___ das Team die neue Webseite ___.",
+					"sentence_en": "Which words are correct? By the end of the week the team ___ the new website ___ (will have finished).",
 					"words": [
 						{
 							"ok": true,
@@ -128,8 +155,11 @@
 					"title": "",
 					"page": 6,
 					"summary": "Futur II für eine Vermutung über die Vergangenheit.",
+					"summary_en": "Future perfect for a guess about the past.",
 					"explain": "Das Futur II kann auch eine Vermutung über ein bereits vergangenes Ereignis ausdrücken.",
+					"explain_en": "The future perfect can also express a guess about something that has already happened.",
 					"sentence": "Paul ist noch nicht da. Vielleicht hat er den Zug verpasst. Welche Vermutung passt?",
+					"sentence_en": "Paul isn't here yet. Perhaps he missed the train. Which guess fits?",
 					"words": [
 						{
 							"ok": true,
@@ -149,8 +179,11 @@
 					"title": "",
 					"page": 7,
 					"summary": "Verlaufsaspekt mit „gerade dabei sein“.",
+					"summary_en": "Saying something is in progress with „gerade dabei sein“.",
 					"explain": "Die Wendung „gerade dabei sein, etwas zu tun“ betont, dass eine Handlung im Moment des Sprechens verläuft.",
+					"explain_en": "The phrase „gerade dabei sein, etwas zu tun“ (to be busy doing something) stresses that an action is happening as you speak.",
 					"sentence": "Welche Aussage betont, dass die Handlung im Moment noch läuft?",
+					"sentence_en": "Which sentence stresses that the action is still going on right now?",
 					"words": [
 						{
 							"ok": true,
@@ -170,8 +203,11 @@
 					"title": "",
 					"page": 8,
 					"summary": "Perfekt für wiederholte abgeschlossene Handlungen in einem noch andauernden Zeitraum.",
+					"summary_en": "Perfekt for repeated, finished actions within a period that is still going on.",
 					"explain": "Das Perfekt passt zu mehreren abgeschlossenen Handlungen, wenn der genannte Zeitraum bis in die Gegenwart reicht.",
+					"explain_en": "The Perfekt fits several finished actions when the period mentioned reaches up to now.",
 					"sentence": "Das Projekt läuft noch. Welche Ergänzung ist richtig? Seit Projektbeginn ___ wir bereits fünf Sicherheitstests ___.",
+					"sentence_en": "The project is still running. Which words are correct? Since the project began we ___ already ___ five security tests.",
 					"words": [
 						{
 							"ok": true,
@@ -191,8 +227,11 @@
 					"title": "",
 					"page": 9,
 					"summary": "Plusquamperfekt für die Dauer bis zu einem vergangenen Zeitpunkt.",
+					"summary_en": "Past perfect for how long something lasted up to a point in the past.",
 					"explain": "Das Plusquamperfekt zeigt, dass eine längere Handlung vor einem späteren Zeitpunkt in der Vergangenheit lag und damals endete.",
+					"explain_en": "The past perfect shows that a longer action came before a later point in the past and ended then.",
 					"sentence": "Welche Form ist richtig? Bevor Elena nach Hamburg zog, ___ sie sechs Jahre in Köln ___.",
+					"sentence_en": "Which form is correct? Before Elena moved to Hamburg, she ___ in Cologne for six years.",
 					"words": [
 						{
 							"ok": true,
@@ -212,8 +251,11 @@
 					"title": "",
 					"page": 10,
 					"summary": "Präsens für ein fest geplantes zukünftiges Ereignis.",
+					"summary_en": "Present tense for a fixed future event.",
 					"explain": "Bei festen Terminen oder Fahrplänen kann das Präsens zusammen mit einer zukünftigen Zeitangabe verwendet werden.",
+					"explain_en": "For fixed appointments or timetables you can use the present tense with a future time phrase.",
 					"sentence": "Der Termin steht bereits fest. Welcher Satz ist korrekt?",
+					"sentence_en": "The appointment is already fixed. Which sentence is correct?",
 					"words": [
 						{
 							"ok": true,

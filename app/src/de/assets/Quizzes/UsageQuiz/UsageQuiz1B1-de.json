@@ -3,13 +3,17 @@
 	"location": 0,
 	"sheetname": "UsageQuiz1B1-de",
 	"title": "Präteritum & Plusquamperfekt",
+	"title_en": "Telling stories about the past",
 	"updatedDate": 0,
 	"data": [
 		{
 			"title": "Wählen Sie für jede Frage die richtige Antwort.",
+			"title_en": "Choose the correct answer for each question.",
 			"description": "Erzählen in der Vergangenheit: Präteritum und Plusquamperfekt",
+			"description_en": "Telling stories in the past: the simple past and the past perfect",
 			"sortorder": 1,
 			"learningTitle": "Die Vergangenheit erzählen",
+			"learningTitle_en": "Telling stories about the past",
 			"learningPoints": [
 				"Übt das Präteritum regelmäßiger und unregelmäßiger Verben.",
 				"Festigt das Präteritum von 'sein', 'haben' und den Modalverben (war, hatte, konnte).",
@@ -17,13 +21,23 @@
 				"Trainiert 'nachdem' und 'als' in Erzählungen.",
 				"Niveau B1; orientiert sich am Goethe-Zertifikat B1 und telc Deutsch B1."
 			],
+			"learningPoints_en": [
+				"Practises the simple past of regular and irregular verbs.",
+				"Reinforces the simple past of 'sein', 'haben' and the modal verbs (war, hatte, konnte).",
+				"Covers the past perfect (hatte/war + past participle) for something that happened even earlier.",
+				"Trains 'nachdem' (after) and 'als' (when) in stories.",
+				"Level B1; based on the Goethe-Zertifikat B1 and telc Deutsch B1."
+			],
 			"sections": [
 				{
 					"title": "",
 					"page": 1,
 					"summary": "Das regelmäßige Präteritum bildet man mit '-te' (wohnen → wohnte).",
+					"summary_en": "The regular simple past is formed with '-te' (wohnen → wohnte).",
 					"explain": "Regelmäßig: Stamm + '-te': 'Damals wohnte ich in einer kleinen Stadt.' Das Verb bleibt an Position 2.",
+					"explain_en": "Regular: stem + '-te': 'Damals wohnte ich in einer kleinen Stadt.' The verb stays in position 2.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -43,8 +57,11 @@
 					"title": "",
 					"page": 2,
 					"summary": "Unregelmäßige Verben ändern im Präteritum den Stamm (gehen → ging).",
+					"summary_en": "Irregular verbs change their stem in the simple past (gehen → ging).",
 					"explain": "'gehen' → 'ging': 'Als Kind ging ich oft ins Schwimmbad.' 'gehte' ist falsch.",
+					"explain_en": "'gehen' → 'ging': 'Als Kind ging ich oft ins Schwimmbad.' 'gehte' is wrong.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -64,8 +81,11 @@
 					"title": "",
 					"page": 3,
 					"summary": "Modalverben stehen in der Vergangenheit meist im Präteritum (können → konnte).",
+					"summary_en": "In the past, modal verbs usually use the simple past (können → konnte).",
 					"explain": "'können' → 'konnte' (ohne Umlaut): 'Früher konnte ich sehr gut Klavier spielen.' 'könnte' ist Konjunktiv II.",
+					"explain_en": "'können' → 'konnte' (no umlaut): 'Früher konnte ich sehr gut Klavier spielen.' 'könnte' means 'could/would be able to'.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -85,8 +105,11 @@
 					"title": "",
 					"page": 4,
 					"summary": "'sein' und 'haben' benutzt man in der Erzählung im Präteritum (war, hatte).",
+					"summary_en": "In stories, 'sein' and 'haben' are used in the simple past (war, hatte).",
 					"explain": "'Es war spät, und ich hatte großen Hunger.' – 'war' und 'hatte' sind die Präteritumformen.",
+					"explain_en": "'Es war spät, und ich hatte großen Hunger.' – 'war' and 'hatte' are the simple past forms.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -106,8 +129,11 @@
 					"title": "",
 					"page": 5,
 					"summary": "Das Plusquamperfekt (hatte/war + Partizip II) beschreibt eine frühere Vergangenheit.",
+					"summary_en": "The past perfect (hatte/war + past participle) describes something that happened even earlier.",
 					"explain": "Was vorher passierte, steht im Plusquamperfekt: 'Ich hatte schon gegessen, als er kam.'",
+					"explain_en": "What happened earlier goes in the past perfect: 'Ich hatte schon gegessen, als er kam.'",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -127,8 +153,11 @@
 					"title": "",
 					"page": 6,
 					"summary": "Nach 'nachdem' steht das Plusquamperfekt, im Hauptsatz das Präteritum.",
+					"summary_en": "After 'nachdem' (after) use the past perfect; the main clause uses the simple past.",
 					"explain": "'Nachdem er gegessen hatte, ging er spazieren.' – Nebensatz Plusquamperfekt, Hauptsatz Präteritum.",
+					"explain_en": "'Nachdem er gegessen hatte, ging er spazieren.' – the 'nachdem' clause is past perfect, the main clause simple past.",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -148,8 +177,11 @@
 					"title": "",
 					"page": 7,
 					"summary": "Bei Bewegungsverben bildet man das Plusquamperfekt mit 'war' + Partizip II.",
+					"summary_en": "Verbs of movement form the past perfect with 'war' + past participle.",
 					"explain": "'abfahren' → 'war abgefahren': 'Wir waren schon abgefahren, als der Anruf kam.'",
+					"explain_en": "'abfahren' → 'war abgefahren': 'Wir waren schon abgefahren, als der Anruf kam.'",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -169,8 +201,11 @@
 					"title": "",
 					"page": 8,
 					"summary": "Viele starke Verben ändern den Vokal (finden → fand).",
+					"summary_en": "Many irregular verbs change their vowel (finden → fand).",
 					"explain": "'finden' → 'fand': 'Sie fand die Lösung sofort.'",
+					"explain_en": "'finden' → 'fand': 'Sie fand die Lösung sofort.'",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -190,8 +225,11 @@
 					"title": "",
 					"page": 9,
 					"summary": "Für ein einmaliges Ereignis in der Vergangenheit benutzt man 'als' (nicht 'wenn').",
+					"summary_en": "For a single event in the past you use 'als' (not 'wenn').",
 					"explain": "Einmalig in der Vergangenheit → 'als': 'Als ich gestern nach Hause kam, war niemand da.'",
+					"explain_en": "A single event in the past → 'als': 'Als ich gestern nach Hause kam, war niemand da.'",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,
@@ -211,8 +249,11 @@
 					"title": "",
 					"page": 10,
 					"summary": "'kommen' hat ein unregelmäßiges Präteritum (kam); nach 'deshalb' folgt das Verb.",
+					"summary_en": "'kommen' has an irregular simple past (kam); after 'deshalb' comes the verb.",
 					"explain": "'kommen' → 'kam': 'Der Zug hatte Verspätung, deshalb kam ich zu spät.'",
+					"explain_en": "'kommen' → 'kam': 'Der Zug hatte Verspätung, deshalb kam ich zu spät.'",
 					"sentence": "Wählen Sie den richtigen Satz.",
+					"sentence_en": "Choose the correct sentence.",
 					"words": [
 						{
 							"ok": true,

@@ -3,13 +3,17 @@
 	"location": 0,
 	"sheetname": "UsageQuiz2B2-de",
 	"title": "Hypothetisches Denken",
+	"title_en": "What would have happened if …?",
 	"updatedDate": 0,
 	"data": [
 		{
 			"title": "Wähle bei jeder Frage die richtige Antwort.",
+			"title_en": "Choose the correct answer for each question.",
 			"description": "Hypothetische Aussagen und Bedingungen auf dem Niveau B2",
+			"description_en": "Imagined situations and conditions at level B2",
 			"sortorder": 1,
 			"learningTitle": "Warum dieses Quiz wichtig ist",
+			"learningTitle_en": "Why this quiz matters",
 			"learningPoints": [
 				"Du formulierst irreale Bedingungen in der Gegenwart und Vergangenheit.",
 				"Du verwendest den Konjunktiv II, um Folgen hypothetischer Situationen auszudrücken.",
@@ -18,13 +22,24 @@
 				"Du bildest irreale Vergleiche mit „als ob“.",
 				"Die Aufgaben entsprechen dem GER-Niveau B2."
 			],
+			"learningPoints_en": [
+				"You talk about imagined conditions in the present and the past.",
+				"You use the 'would' forms (Konjunktiv II) to say what would follow from imagined situations.",
+				"You talk naturally about wishes, regrets and missed chances.",
+				"You give polite advice and make careful guesses.",
+				"You make imagined comparisons with „als ob“ (as if).",
+				"The questions match CEFR level B2."
+			],
 			"sections": [
 				{
 					"title": "",
 					"page": 1,
 					"summary": "Irreale Bedingung in der Gegenwart.",
+					"summary_en": "Imagined condition in the present.",
 					"explain": "Bei einer unwahrscheinlichen oder nur vorgestellten Situation in der Gegenwart steht im wenn-Satz der Konjunktiv II. Die Folge wird häufig mit „würde“ und Infinitiv gebildet.",
+					"explain_en": "For an unlikely or only imagined situation in the present, the 'wenn' clause uses the 'would' form (Konjunktiv II). The result is often formed with „würde“ + infinitive.",
 					"sentence": "Ich habe kaum Freizeit. Welcher Satz beschreibt eine nur vorgestellte Situation?",
+					"sentence_en": "I hardly have any free time. Which sentence describes a situation that is only imagined?",
 					"words": [
 						{
 							"ok": true,
@@ -44,8 +59,11 @@
 					"title": "",
 					"page": 2,
 					"summary": "Irreale Bedingung in der Vergangenheit.",
+					"summary_en": "Imagined condition in the past.",
 					"explain": "Vergangene Situationen, die nicht mehr geändert werden können, stehen im Konjunktiv II der Vergangenheit: „wäre“ oder „hätte“ plus Partizip II.",
+					"explain_en": "Past situations that can no longer be changed use the past 'would' form: „wäre“ or „hätte“ + past participle.",
 					"sentence": "Sofia fuhr zu spät los und verpasste den Zug. Welcher Satz ist korrekt?",
+					"sentence_en": "Sofia left too late and missed the train. Which sentence is correct?",
 					"words": [
 						{
 							"ok": true,
@@ -65,8 +83,11 @@
 					"title": "",
 					"page": 3,
 					"summary": "Ratschlag mit „an deiner Stelle“.",
+					"summary_en": "Advice with „an deiner Stelle“ (if I were you).",
 					"explain": "Mit „an deiner Stelle“ und dem Konjunktiv II formuliert man einen höflichen oder vorsichtigen Ratschlag.",
+					"explain_en": "„An deiner Stelle“ with the 'would' form gives polite or careful advice.",
 					"sentence": "Ein Freund ist vor einem Vorstellungsgespräch sehr nervös. Welcher Ratschlag passt?",
+					"sentence_en": "A friend is very nervous before a job interview. Which piece of advice fits?",
 					"words": [
 						{
 							"ok": true,
@@ -86,8 +107,11 @@
 					"title": "",
 					"page": 4,
 					"summary": "Hypothetische Folge mit einem Modalverb.",
+					"summary_en": "Imagined result with a modal verb.",
 					"explain": "Die Konjunktiv-II-Form eines Modalverbs drückt aus, was unter einer vorgestellten Bedingung möglich oder unmöglich wäre.",
+					"explain_en": "The 'would' form of a modal verb says what would be possible or impossible under an imagined condition.",
 					"sentence": "Die Hilfe ist vorhanden. Denke sie dir weg: Ohne deine Unterstützung ___ ich diese Aufgabe nicht lösen.",
+					"sentence_en": "You do have help. Imagine you didn't: Without your support I ___ not be able to solve this task.",
 					"words": [
 						{
 							"ok": true,
@@ -107,8 +131,11 @@
 					"title": "",
 					"page": 5,
 					"summary": "Unerfüllbarer Wunsch in der Gegenwart.",
+					"summary_en": "A wish that can't come true right now.",
 					"explain": "Ein Wunsch, der im Moment nicht der Wirklichkeit entspricht, wird mit dem Konjunktiv II der Gegenwart ausgedrückt.",
+					"explain_en": "A wish that doesn't match reality right now is expressed with the present 'would' form.",
 					"sentence": "Lina spricht noch nicht fließend Spanisch. Welcher Satz drückt ihren gegenwärtigen Wunsch aus?",
+					"sentence_en": "Lina doesn't speak fluent Spanish yet. Which sentence expresses her wish now?",
 					"words": [
 						{
 							"ok": true,
@@ -128,8 +155,11 @@
 					"title": "",
 					"page": 6,
 					"summary": "Bedauern über eine vergangene Entscheidung.",
+					"summary_en": "Regret about a past decision.",
 					"explain": "Bedauern über Vergangenes steht im Konjunktiv II der Vergangenheit, weil die Situation nicht mehr verändert werden kann.",
+					"explain_en": "Regret about the past uses the past 'would' form, because the situation can no longer be changed.",
 					"sentence": "Ben hatte ein gutes Stellenangebot, lehnte es aber ab. Was kann er heute sagen?",
+					"sentence_en": "Ben had a good job offer but turned it down. What can he say today?",
 					"words": [
 						{
 							"ok": true,
@@ -149,8 +179,11 @@
 					"title": "",
 					"page": 7,
 					"summary": "Irrealer Vergleich mit „als ob“.",
+					"summary_en": "Imagined comparison with „als ob“ (as if).",
 					"explain": "Nach „als ob“ verwendet man den Konjunktiv II, wenn der Vergleich nicht der Wirklichkeit entspricht oder stark bezweifelt wird.",
+					"explain_en": "After „als ob“ you use the 'would' form when the comparison isn't true or is strongly doubted.",
 					"sentence": "Leon kennt nur wenige Einzelheiten, spricht aber sehr selbstsicher. Welcher Satz passt?",
+					"sentence_en": "Leon knows only a few details but talks very confidently. Which sentence fits?",
 					"words": [
 						{
 							"ok": true,
@@ -170,8 +203,11 @@
 					"title": "",
 					"page": 8,
 					"summary": "Irreale Bedingung ohne „wenn“.",
+					"summary_en": "Imagined condition without „wenn“.",
 					"explain": "Ein irrealer Bedingungssatz kann ohne „wenn“ beginnen. Dann steht die finite Verbform an erster Stelle.",
+					"explain_en": "An imagined 'if' clause can start without „wenn“. Then the conjugated verb comes first.",
 					"sentence": "Der Techniker erkannte das Problem zu spät. Welche Alternative ist grammatisch korrekt?",
+					"sentence_en": "The technician spotted the problem too late. Which version is grammatically correct?",
 					"words": [
 						{
 							"ok": true,
@@ -191,8 +227,11 @@
 					"title": "",
 					"page": 9,
 					"summary": "Beinahe eingetretenes Ereignis.",
+					"summary_en": "Something that almost happened.",
 					"explain": "Mit „beinahe“ und dem Konjunktiv II der Vergangenheit beschreibt man ein Ereignis, das fast, aber nicht tatsächlich eingetreten ist.",
+					"explain_en": "„Beinahe“ (almost) with the past 'would' form describes something that nearly happened but didn't.",
 					"sentence": "Ich erinnerte mich im letzten Moment an den Termin. Welcher Satz gibt die Situation richtig wieder?",
+					"sentence_en": "I remembered the appointment at the last moment. Which sentence describes the situation correctly?",
 					"words": [
 						{
 							"ok": true,
@@ -212,8 +251,11 @@
 					"title": "",
 					"page": 10,
 					"summary": "Vorsichtige Bedingung mit „sollte“.",
+					"summary_en": "A careful condition with „sollte“ (should … happen).",
 					"explain": "Mit „sollte“ am Satzanfang formuliert man eine mögliche, aber nicht sichere Bedingung. Der Bedingungssatz kommt dabei ohne „wenn“ aus.",
+					"explain_en": "Starting with „sollte“ gives a possible but uncertain condition. The 'if' clause then doesn't need „wenn“.",
 					"sentence": "Eine Verspätung ist möglich, aber nicht sicher. Welche Formulierung passt?",
+					"sentence_en": "A delay is possible but not certain. Which wording fits?",
 					"words": [
 						{
 							"ok": true,

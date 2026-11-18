@@ -3,13 +3,17 @@
 	"location": 0,
 	"sheetname": "UsageQuiz3B2-de",
 	"title": "Formale Satzstrukturen",
+	"title_en": "Writing formally",
 	"updatedDate": 0,
 	"data": [
 		{
 			"title": "Wähle bei jeder Frage die richtige Antwort.",
+			"title_en": "Choose the correct answer for each question.",
 			"description": "Formale Satzstrukturen auf dem Niveau B2",
+			"description_en": "Formal sentence structures at level B2",
 			"sortorder": 1,
 			"learningTitle": "Warum dieses Quiz wichtig ist",
+			"learningTitle_en": "Why this quiz matters",
 			"learningPoints": [
 				"Du verwendest Passivformen in formellen und sachlichen Texten.",
 				"Du verdichtest Informationen mithilfe von Nominalisierungen und Partizipialattributen.",
@@ -18,13 +22,24 @@
 				"Du verknüpfst Argumente mit formellen Konnektoren und korrekter Wortstellung.",
 				"Die Aufgaben entsprechen dem GER-Niveau B2."
 			],
+			"learningPoints_en": [
+				"You use the passive in formal and factual texts.",
+				"You pack information into fewer words using nouns made from verbs and participles before nouns.",
+				"You build complex 'which', 'to' and other clauses correctly.",
+				"You report what others said using the reported-speech forms (Konjunktiv I).",
+				"You link arguments with formal linking words and correct word order.",
+				"The questions match CEFR level B2."
+			],
 			"sections": [
 				{
 					"title": "",
 					"page": 1,
 					"summary": "Vorgangspassiv im Präteritum.",
+					"summary_en": "Passive in the simple past.",
 					"explain": "Das Vorgangspassiv wird mit einer Form von „werden“ und dem Partizip II gebildet. Es betont den Vorgang und nicht die handelnde Person.",
+					"explain_en": "The passive is formed with a form of „werden“ + past participle. It focuses on the action, not on who does it.",
 					"sentence": "Der Ausschuss prüfte den Antrag gestern. Welche Passivform ist korrekt?",
+					"sentence_en": "The committee examined the application yesterday. Which passive form is correct?",
 					"words": [
 						{
 							"ok": true,
@@ -44,8 +59,11 @@
 					"title": "",
 					"page": 2,
 					"summary": "Passiv mit einem Modalverb.",
+					"summary_en": "Passive with a modal verb.",
 					"explain": "Bei einem Modalverb steht der Infinitiv Passiv am Satzende: Partizip II plus „werden“.",
+					"explain_en": "With a modal verb the passive infinitive goes at the end: past participle + „werden“.",
 					"sentence": "Welche Formulierung eignet sich für eine formelle Anweisung?",
+					"sentence_en": "Which wording suits a formal instruction?",
 					"words": [
 						{
 							"ok": true,
@@ -65,8 +83,11 @@
 					"title": "",
 					"page": 3,
 					"summary": "Unpersönliche Passivkonstruktion.",
+					"summary_en": "Impersonal passive construction.",
 					"explain": "Unpersönliche Wendungen wie „es wird davon ausgegangen, dass“ lassen Aussagen sachlich und distanziert wirken.",
+					"explain_en": "Impersonal phrases like „es wird davon ausgegangen, dass“ (it is assumed that) make statements sound factual and neutral.",
 					"sentence": "Welche Variante formuliert die Annahme sachlich und formal?",
+					"sentence_en": "Which version states the assumption in a factual, formal way?",
 					"words": [
 						{
 							"ok": true,
@@ -86,8 +107,11 @@
 					"title": "",
 					"page": 4,
 					"summary": "Nominalisierung eines Nebensatzes.",
+					"summary_en": "Turning a clause into a noun phrase.",
 					"explain": "In formellen Texten kann ein Nebensatz durch eine Präposition und ein Nomen ersetzt werden. Nach „aufgrund“ steht in der Standardsprache der Genitiv.",
+					"explain_en": "In formal texts a clause can be replaced by a preposition and a noun. In standard German „aufgrund“ (due to) takes the genitive.",
 					"sentence": "Formuliere sachlicher: Weil sich die Lieferung verspätete, musste die Produktion warten.",
+					"sentence_en": "Say it more formally: Because the delivery was late, production had to wait.",
 					"words": [
 						{
 							"ok": true,
@@ -107,8 +131,11 @@
 					"title": "",
 					"page": 5,
 					"summary": "Partizipialattribut zur Verdichtung von Informationen.",
+					"summary_en": "A participle before the noun to say more in fewer words.",
 					"explain": "Ein Partizipialattribut kann einen Relativsatz verkürzen. Wie ein Adjektiv erhält das Partizip dabei eine passende Endung.",
+					"explain_en": "A participle before the noun can shorten a 'which' clause. Like an adjective, the participle then takes the right ending.",
 					"sentence": "Ersetze den Relativsatz: Die Ergebnisse, die gestern veröffentlicht wurden, bestätigen die Annahme.",
+					"sentence_en": "Replace the 'which' clause: The results, which were published yesterday, confirm the assumption.",
 					"words": [
 						{
 							"ok": true,
@@ -128,8 +155,11 @@
 					"title": "",
 					"page": 6,
 					"summary": "Genitivisches Relativpronomen.",
+					"summary_en": "'Whose' in a relative clause.",
 					"explain": "„Dessen“ und „deren“ zeigen in einem Relativsatz Besitz oder Zugehörigkeit an. „Dessen“ bezieht sich hier auf ein sächliches Nomen.",
+					"explain_en": "„Dessen“ and „deren“ mean 'whose' in a relative clause. Here „dessen“ refers to a neuter noun.",
 					"sentence": "Welche Ergänzung ist korrekt? Das Unternehmen, ___ Umsatz deutlich gestiegen ist, stellt neue Mitarbeitende ein.",
+					"sentence_en": "Which word is correct? The company ___ sales have risen sharply is hiring new staff.",
 					"words": [
 						{
 							"ok": true,
@@ -149,8 +179,11 @@
 					"title": "",
 					"page": 7,
 					"summary": "Indirekte Rede mit dem Konjunktiv I.",
+					"summary_en": "Reported speech with the Konjunktiv I forms.",
 					"explain": "In formellen Berichten kennzeichnet der Konjunktiv I eine Aussage, die von einer anderen Person stammt.",
+					"explain_en": "In formal reports the Konjunktiv I form shows that a statement comes from someone else.",
 					"sentence": "Die Sprecherin sagte: „Die Verhandlungen sind abgeschlossen.“ Welche indirekte Rede ist korrekt?",
+					"sentence_en": "The spokeswoman said: 'The negotiations are finished.' Which reported version is correct?",
 					"words": [
 						{
 							"ok": true,
@@ -170,8 +203,11 @@
 					"title": "",
 					"page": 8,
 					"summary": "Finalsatz mit „um … zu“.",
+					"summary_en": "Saying the purpose with „um … zu“ (in order to).",
 					"explain": "Wenn Hauptsatz und Zwecksatz dasselbe Subjekt haben, kann der Zweck mit „um … zu“ und einem Infinitiv ausgedrückt werden.",
+					"explain_en": "When both parts have the same subject, the purpose can be expressed with „um … zu“ + infinitive.",
 					"sentence": "Verbinde die Aussagen: Die Behörde vereinfacht das Verfahren. Sie möchte die Bearbeitungszeit verkürzen.",
+					"sentence_en": "Join the statements: The authority is simplifying the procedure. It wants to shorten the processing time.",
 					"words": [
 						{
 							"ok": true,
@@ -191,8 +227,11 @@
 					"title": "",
 					"page": 9,
 					"summary": "Zweiteiliger Konnektor „je … desto“.",
+					"summary_en": "The two-part linking words „je … desto“ (the more … the more).",
 					"explain": "Mit „je … desto“ beschreibt man zwei Entwicklungen, die voneinander abhängen. Im je-Satz steht das finite Verb am Ende.",
+					"explain_en": "„Je … desto“ describes two developments that depend on each other. In the 'je' clause the conjugated verb goes at the end.",
 					"sentence": "Welche Satzstruktur ist korrekt?",
+					"sentence_en": "Which sentence structure is correct?",
 					"words": [
 						{
 							"ok": true,
@@ -212,8 +251,11 @@
 					"title": "",
 					"page": 10,
 					"summary": "Konzessive Verknüpfung mit „obwohl“.",
+					"summary_en": "Saying 'although' with „obwohl“.",
 					"explain": "Ein Nebensatz mit „obwohl“ nennt einen Gegengrund. Das finite Verb steht am Ende des Nebensatzes.",
+					"explain_en": "A clause with „obwohl“ gives a reason against. The conjugated verb goes at the end of the clause.",
 					"sentence": "Verbinde die Aussagen: Die Kosten sind gestiegen. Das Projekt wird fortgesetzt.",
+					"sentence_en": "Join the statements: The costs have risen. The project will continue.",
 					"words": [
 						{
 							"ok": true,
