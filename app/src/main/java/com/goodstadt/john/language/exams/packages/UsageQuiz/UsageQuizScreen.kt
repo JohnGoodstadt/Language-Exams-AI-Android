@@ -569,13 +569,20 @@ internal fun UsageQuizQuestionAnswers(
                 }
             }
 
-        Text(
-            text = annotatedQuestionText,
-            style = MaterialTheme.typography.bodyLarge.copy(fontSize = 16.sp),
-            textAlign = TextAlign.Center,
-            modifier = Modifier.fillMaxWidth(),
-            color = orangeLight,
-        )
+        // Only fill-in-the-blank (the gap is filled in green) and definitions (the term) show text here.
+        // Sentence-choice questions no longer show a revealed-answer title: it repeated the row text, used
+        // space and pushed the radio buttons down. The chosen ROW changes colour instead (below). Mirrors iOS.
+        val showQuestionText = viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks ||
+            viewModel.currentFileFormat.value == viewModel.quizDefinitions
+        if (showQuestionText) {
+            Text(
+                text = annotatedQuestionText,
+                style = MaterialTheme.typography.bodyLarge.copy(fontSize = 16.sp),
+                textAlign = TextAlign.Center,
+                modifier = Modifier.fillMaxWidth(),
+                color = orangeLight,
+            )
+        }
 
         // Per-question mastery badge
         val masteryDisplay = viewModel.getQuestionMasteryDisplay(question.page)
@@ -667,9 +674,20 @@ internal fun UsageQuizQuestionAnswers(
                 }
             }
 
+            // Row colour shows the result: green for the correct answer, a red tint for a wrong pick.
+            val isCorrectPick = isCurrentAnswerCorrect == true && selectedOption == option
+            val isWrongPick = isCurrentAnswerCorrect == false && selectedOption == option
+            val rowBackground = when {
+                isCorrectPick -> correctGreen.copy(alpha = 0.15f)
+                isWrongPick -> Color.Red.copy(alpha = 0.12f)
+                else -> Color.Transparent
+            }
             Row(
                 verticalAlignment = Alignment.CenterVertically,
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .background(rowBackground, RoundedCornerShape(10.dp))
+                    .padding(horizontal = 4.dp)
             ) {
                 // Left cell: takes all remaining width so a long sentence WRAPS instead of
                 // shoving the radio button off the edge.
@@ -691,7 +709,8 @@ internal fun UsageQuizQuestionAnswers(
                         // Tapping the answer sentence is a demo play (like the loudspeaker), NOT a
                         // choice - only the radio button commits the answer.
                         text = option,
-                        color = LocalExtendedColors.current.quizQuestionText,
+                        color = if (isCorrectPick) correctGreen else LocalExtendedColors.current.quizQuestionText,
+                        fontWeight = if (isCorrectPick) FontWeight.SemiBold else FontWeight.Normal,
                         style = MaterialTheme.typography.bodyLarge.copy(fontSize = 14.sp),
                         modifier = Modifier
                             .weight(1f)

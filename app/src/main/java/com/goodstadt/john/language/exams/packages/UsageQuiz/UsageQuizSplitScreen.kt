@@ -446,7 +446,8 @@ private fun UsageQuizSheetPanel(
                     color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f)
                 )
             }
-        } else if (currentQuestionIndex == 0 && questions.isNotEmpty()) {
+        } else if (questions.isNotEmpty()) {
+            // The instruction ("Choose the best answer") on EVERY question, not just the first.
             Text(
                 text = displayText,
                 style = MaterialTheme.typography.bodyMedium,
