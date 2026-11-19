@@ -1031,23 +1031,41 @@ private fun AuditQuestionAnswers(
                 }
             }
 
-        Text(
-            text = annotatedQuestionText,
-//                    style = MaterialTheme.typography.bodyLarge.copy(fontSize = 16.sp),
-            style = MaterialTheme.typography.bodyLarge.copy(fontSize = if (heightClass == HeightClass.COMPACT) 15.sp else 16.sp),
-            textAlign = TextAlign.Center,
-            modifier = Modifier.fillMaxWidth().padding(bottom = questionTextPadding),
-            color = auditText,
-        )
+        // Only fill-in-the-blank (gap filled in green) and definitions (the term) show text here. Other
+        // questions no longer show a revealed-answer title: the chosen ROW changes colour instead.
+        if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks ||
+            viewModel.currentFileFormat.value == viewModel.quizDefinitions
+        ) {
+            Text(
+                text = annotatedQuestionText,
+                style = MaterialTheme.typography.bodyLarge.copy(fontSize = if (heightClass == HeightClass.COMPACT) 15.sp else 16.sp),
+                textAlign = TextAlign.Center,
+                modifier = Modifier.fillMaxWidth().padding(bottom = questionTextPadding),
+                color = auditText,
+            )
+        }
 
 
         //A row for each question
         question.words.forEach { option ->
             val isOptionCorrect = option == question.correctOption
 
+            // Row colour shows the result: green for a correct pick, a red tint for a wrong one.
+            val isCorrectPick = isCurrentAnswerCorrect == true && selectedOption == option
+            val isWrongPick = isCurrentAnswerCorrect == false && selectedOption == option
             Row(
                 verticalAlignment = Alignment.CenterVertically,
-                modifier = Modifier.fillMaxWidth().padding(vertical = rowVerticalPadding)
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .background(
+                        when {
+                            isCorrectPick -> correctGreen.copy(alpha = 0.15f)
+                            isWrongPick -> Color.Red.copy(alpha = 0.12f)
+                            else -> Color.Transparent
+                        },
+                        RoundedCornerShape(10.dp)
+                    )
+                    .padding(vertical = rowVerticalPadding, horizontal = 4.dp)
             ) {
                 // Left cell takes all remaining width so a long answer WRAPS instead of
                 // shoving the radio button off the right edge.
@@ -1079,7 +1097,8 @@ private fun AuditQuestionAnswers(
                     Spacer(modifier = Modifier.width(8.dp))
                     Text(
                         text = option,
-                        color = auditText,
+                        color = if (isCorrectPick) correctGreen else auditText,
+                        fontWeight = if (isCorrectPick) FontWeight.SemiBold else FontWeight.Normal,
 //                                style = MaterialTheme.typography.bodyLarge.copy(fontSize = 14.sp),
                         style = MaterialTheme.typography.bodyLarge.copy(
                             fontSize = if (heightClass == HeightClass.COMPACT) 13.sp else 14.sp

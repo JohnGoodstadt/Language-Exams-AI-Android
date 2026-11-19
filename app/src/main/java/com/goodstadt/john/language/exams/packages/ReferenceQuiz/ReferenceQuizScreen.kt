@@ -313,7 +313,8 @@ fun ReferenceQuizScreen(
                 )
                 Text(text = "Select All to see more.", style = MaterialTheme.typography.bodyMedium, textAlign = TextAlign.Center, color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f))
             }
-        } else if (currentQuestionIndex == 0 && questions.isNotEmpty()) {
+        } else if (questions.isNotEmpty()) {
+            // The instruction on EVERY question (answers are marked on the row, so there's room).
             Text(
                 text = displayText,
                 style = MaterialTheme.typography.bodyMedium,
@@ -380,13 +381,19 @@ fun ReferenceQuizScreen(
                     )
                 }
 
-                Text(
-                    text = annotatedQuestionText,
-                    style = MaterialTheme.typography.bodyLarge.copy(fontSize = 16.sp),
-                    textAlign = TextAlign.Center,
-                    modifier = Modifier.fillMaxWidth(),
-                    color = orangeLight,
-                )
+                // Only fill-in-the-blank (gap filled in green) and definitions (the term) show text here. Other
+                // questions no longer show a revealed-answer title: the chosen ROW changes colour instead.
+                if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks ||
+                    viewModel.currentFileFormat.value == viewModel.quizDefinitions
+                ) {
+                    Text(
+                        text = annotatedQuestionText,
+                        style = MaterialTheme.typography.bodyLarge.copy(fontSize = 16.sp),
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier.fillMaxWidth(),
+                        color = orangeLight,
+                    )
+                }
 
                 // Per-question mastery badge — hidden for generated quizzes (page-keyed mastery is stale
                 // when each attempt's question 1..N is a different question).
@@ -463,9 +470,22 @@ fun ReferenceQuizScreen(
                         }
                     }
 
+                    // Row colour shows the result: green for the correct answer, a red tint for a wrong pick.
+                    val isCorrectPick = isCurrentAnswerCorrect == true && selectedOption == option
+                    val isWrongPick = isCurrentAnswerCorrect == false && selectedOption == option
                     Row(
                         verticalAlignment = Alignment.CenterVertically,
-                        modifier = Modifier.fillMaxWidth()
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .background(
+                                when {
+                                    isCorrectPick -> correctGreen.copy(alpha = 0.15f)
+                                    isWrongPick -> Color.Red.copy(alpha = 0.12f)
+                                    else -> Color.Transparent
+                                },
+                                RoundedCornerShape(10.dp)
+                            )
+                            .padding(horizontal = 4.dp)
                     ) {
                         // Left cell: takes all remaining width so a long sentence WRAPS instead of
                         // shoving the radio button off the edge.
@@ -490,7 +510,8 @@ fun ReferenceQuizScreen(
                                 // Tapping the answer sentence is a demo play (like the loudspeaker), NOT a
                                 // choice - only the radio button commits the answer.
                                 text = option,
-                                color = LocalExtendedColors.current.quizQuestionText,
+                                color = if (isCorrectPick) correctGreen else LocalExtendedColors.current.quizQuestionText,
+                                fontWeight = if (isCorrectPick) FontWeight.SemiBold else FontWeight.Normal,
                                 style = MaterialTheme.typography.bodyLarge.copy(fontSize = 14.sp),
 //                                onTextLayout = { textLayoutResult ->
 //                                    isMultiLine = textLayoutResult.lineCount > 1

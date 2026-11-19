@@ -338,18 +338,10 @@ fun VocabQuizScreen(
                         color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f)
                     )
                 }
-            } else if (currentQuestionIndex == 0 && questions.isNotEmpty()) {
+            } else if (questions.isNotEmpty()) {
+                // The instruction on EVERY question (answers are marked on the row, so there's room).
                 Text(
                     text = displayText,
-                    style = MaterialTheme.typography.bodyLarge.copy(fontSize = 18.sp),
-                    textAlign = TextAlign.Center,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(vertical = verticalPadding)
-                )
-            } else if (questions.isNotEmpty()) {
-                Text( //still keep the space
-                    text = "",
                     style = MaterialTheme.typography.bodyLarge.copy(fontSize = 18.sp),
                     textAlign = TextAlign.Center,
                     modifier = Modifier
@@ -384,8 +376,14 @@ fun VocabQuizScreen(
                         }
                     }
 
-    //The correct answer row
-                if (isCurrentAnswerCorrect == true) {
+                // Only fill-in-the-blank and word-definition questions show text here (the question itself).
+                // Other questions no longer show the correct answer as a big green title above the rows: the
+                // chosen ROW changes colour instead. (annotatedQuestionText is still built - the stats use it.)
+                val showQuestionText = viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks ||
+                    viewModel.currentFileFormat.value == viewModel.quizWordDefinition
+                if (!showQuestionText) {
+                    // nothing - see the coloured answer row below
+                } else if (isCurrentAnswerCorrect == true) {
                     Text(
                         text = annotatedQuestionText,
                         style = MaterialTheme.typography.bodyLarge.copy(fontSize = 24.sp),
@@ -497,9 +495,22 @@ fun VocabQuizScreen(
                         }
                     }
 
+                    // Row colour shows the result: green for the correct answer, a red tint for a wrong pick.
+                    val isCorrectPick = isCurrentAnswerCorrect == true && selectedOption == option
+                    val isWrongPick = isCurrentAnswerCorrect == false && selectedOption == option
                     Row(
                         verticalAlignment = Alignment.CenterVertically,
-                        modifier = Modifier.fillMaxWidth()
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .background(
+                                when {
+                                    isCorrectPick -> correctGreen.copy(alpha = 0.15f)
+                                    isWrongPick -> Color.Red.copy(alpha = 0.12f)
+                                    else -> Color.Transparent
+                                },
+                                RoundedCornerShape(10.dp)
+                            )
+                            .padding(horizontal = 4.dp)
                     ) {
                         // Left cell: takes all remaining width so a long sentence WRAPS instead of
                         // shoving the radio button off the edge.
@@ -521,7 +532,8 @@ fun VocabQuizScreen(
                                 // Tapping the answer sentence is a demo play (like the loudspeaker), NOT a
                                 // choice - only the radio button commits the answer.
                                 text = option,
-                                color = LocalExtendedColors.current.quizQuestionText,
+                                color = if (isCorrectPick) correctGreen else LocalExtendedColors.current.quizQuestionText,
+                                fontWeight = if (isCorrectPick) FontWeight.SemiBold else FontWeight.Normal,
                                 style = MaterialTheme.typography.bodyLarge.copy(fontSize = 16.sp),
                                 modifier = Modifier
                                     .weight(1f)
