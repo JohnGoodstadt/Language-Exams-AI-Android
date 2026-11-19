@@ -1,5 +1,7 @@
 package com.goodstadt.john.language.exams.packages.CategoryTab
 
+import kotlinx.coroutines.delay
+import com.goodstadt.john.language.exams.packages.UsageQuiz.EntryTipBanner
 import android.Manifest
 import android.content.pm.PackageManager
 import android.os.Build
@@ -1538,8 +1540,13 @@ fun SectionQuizContainer(
     onInteraction: (Boolean) -> Unit = {}
 ) {
     // Trigger load when this view appears
+    // Teaching tip shown over the quiz (first time / come back tomorrow) - here so every entry point
+    // (Reference rows, the section icon on tabs 1-3, Focus) gets it.
+    var entryTip by remember { mutableStateOf<Pair<String, String>?>(null) }
     LaunchedEffect(categoryTitle, level) {
         viewModel.loadSectionQuiz(categoryTitle, level = level, isKey = isKey)
+        delay(300) // the section name/level are resolved by the load
+        entryTip = viewModel.sectionEntryTip(categoryTitle)
     }
 
     // 2. ✅ Observe Dirtiness
@@ -1558,5 +1565,7 @@ fun SectionQuizContainer(
     // Render the existing screen
     Box(modifier = Modifier.fillMaxHeight(0.9f)) {
         VocabQuizScreen(viewModel = viewModel)
+        EntryTipBanner(tip = entryTip, onDismiss = { entryTip = null },
+            modifier = Modifier.align(Alignment.BottomCenter))
     }
 }

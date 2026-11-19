@@ -9,7 +9,11 @@ data class CategoryMasteryStats(
     val day1Count: Int = 0,  // not Mastered yet: right first try on 1 of the 3 days needed
     val day2Count: Int = 0,  // ... on 2 of the 3 days
     val dayProgress: CategoryDayProgress? = null, // per-CATEGORY "N of 3 days" (null until the quiz is played)
+    val quizKey: String = "",   // SectionQuizKeyMap key; goes may be saved under it or under the title
 ) {
+    /** Every name this section's goes may be stored under (quiz key and/or title). */
+    val attemptNames: List<String> get() = listOf(quizKey, categoryTitle).filter { it.isNotBlank() }.distinct()
+
     // Helpers for UI progress bars (0.0 - 1.0)
     val masteredFraction: Float get() = if (totalWords > 0) masteredCount.toFloat() / totalWords else 0f
     val learningFraction: Float get() = if (totalWords > 0) learningCount.toFloat() / totalWords else 0f
@@ -54,5 +58,6 @@ data class DashboardUiState(
     val wordsDueCount: Int = 0,
     val wordsDueList: List<String> = listOf(),
     val totalMastered: Int = 0,
-    val categoryStats: List<CategoryMasteryStats> = emptyList()
+    val categoryStats: List<CategoryMasteryStats> = emptyList(),
+    val level: String = "",   // the skill level these sections belong to
 )

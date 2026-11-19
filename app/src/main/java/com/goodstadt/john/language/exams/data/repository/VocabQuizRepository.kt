@@ -39,6 +39,11 @@ data class DueItem(val word: String, val category: String)
 class VocabQuizRepository @Inject constructor(
     @ApplicationContext private val context: Context
 ) {
+    companion object {
+        /** Vocab daily goal: finish this many DIFFERENT sections today (separate from the Usage Quiz's). */
+        const val DAILY_GOAL = 2
+    }
+
     private val gson = Gson()
     private val fileName = "vocab_quiz_progress.json"
     private val scope = CoroutineScope(Dispatchers.IO)
@@ -506,6 +511,110 @@ class VocabQuizRepository @Inject constructor(
             lastTotal = last?.total ?: 0,
             earnedToday = VocabMasteryEngine.dayIndex(now, BuildConfig.DEBUG) in flawlessDays,
         )
+    }
+
+    // ---------------- Section row gamification (mirrors iOS VocabQuizRepository) ----------------
+    // A section's goes can be saved under its quiz key or its title (see VocabDashboardViewModel), so each
+    // helper takes every [names] the section may be stored under and merges their attempts. Android also
+    // saves an unfinished go when the sheet closes; only COMPLETED goes count as "goes" here (like iOS).
+
+    private fun sectionAttempts(names: List<String>, level: String): List<CategoryQuizAttempt> =
+        names.filter { it.isNotBlank() }.distinct().flatMap { getCategoryAttempts(it, level) }
+
+    private fun completedGoes(names: List<String>, level: String) =
+        sectionAttempts(names, level).filter { it.completed || (it.total > 0 && it.answered >= it.total) }
+
+    /** Day numbers (dayIndex: 30 s "days" in DEBUG) with a flawless go of this section. */
+    fun sectionPerfectDays(names: List<String>, level: String): Set<Long> =
+        sectionAttempts(names, level).filter { it.flawless }
+            .map { VocabMasteryEngine.dayIndex(it.attemptedAt, BuildConfig.DEBUG) }.toSet()
+
+    /**
+     * Stats line for a section row, e.g. "20m · 5x · ●●○ · 8/8 7/8 8/8" or "2d · 7x · 3 on 3 days · Mastered":
+     * time since the last finished go, finished goes, progress dots (perfect goes on different days), and
+     * the last 3 first-try scores, newest first. Null until the section has been finished once.
+     */
+    fun sectionSummary(names: List<String>, level: String, now: Long = System.currentTimeMillis()): String? {
+        val goes = completedGoes(names, level).sortedByDescending { it.attemptedAt }
+        val latest = goes.firstOrNull() ?: return null
+        val parts = mutableListOf(UsageQuizRepository.shortAge(now - latest.attemptedAt), "${goes.size}x")
+        val days = sectionPerfectDays(names, level).size.coerceAtMost(3)
+        if (days >= 3) {
+            parts += "3 on 3 days"; parts += "Mastered"
+        } else {
+            if (days > 0) parts += "●".repeat(days) + "○".repeat(3 - days)
+            val recent = goes.filter { it.total > 0 }.take(3)
+            if (recent.isNotEmpty()) parts += recent.joinToString(" ") { "${it.firstTryCorrect ?: it.correct}/${it.total}" }
+        }
+        return parts.joinToString(" · ")
+    }
+
+    /** Finished goes recorded for this section (to spot that one finished while the sheet was open). */
+    fun sectionCompletedCount(names: List<String>, level: String): Int = completedGoes(names, level).size
+
+    fun isSectionMastered(names: List<String>, level: String): Boolean = sectionPerfectDays(names, level).size >= 3
+
+    /** "↻ ready": 1 or 2 perfect days, not mastered, none yet today - a perfect go today would count. */
+    fun isSectionReady(names: List<String>, level: String, now: Long = System.currentTimeMillis()): Boolean {
+        val days = sectionPerfectDays(names, level)
+        return days.isNotEmpty() && days.size < 3 && VocabMasteryEngine.dayIndex(now, BuildConfig.DEBUG) !in days
+    }
+
+    /** "N due": words of this section (and level) due for review now, not yet mastered. */
+    fun sectionDueCount(names: List<String>, level: String, now: Long = System.currentTimeMillis()): Int {
+        val lower = names.filter { it.isNotBlank() }.map { it.lowercase() }.toSet()
+        return wordStates.values.count {
+            it.sourceCategory.lowercase() in lower && it.sourceLevel == level &&
+                it.masteryLevel != WordMasteryLevel.Mastered && it.nextReviewTime <= now
+        }
+    }
+
+    /** Best first-try score of any finished go (0 if none) - to spot a "New best!". */
+    fun sectionBestFirstTry(names: List<String>, level: String): Int =
+        completedGoes(names, level).maxOfOrNull { it.firstTryCorrect ?: it.correct } ?: 0
+
+    /** The most recent finished go (first-try score, flawless), or null. */
+    fun sectionLastGo(names: List<String>, level: String): CategoryQuizAttempt? =
+        completedGoes(names, level).maxByOrNull { it.attemptedAt }
+
+    /** Vocab daily goal (separate from the Usage Quiz's): different sections finished today (real day). */
+    fun sectionsCompletedToday(now: Long = System.currentTimeMillis()): Int {
+        val cal = java.util.Calendar.getInstance().apply { timeInMillis = now }
+        val y = cal.get(java.util.Calendar.YEAR); val d = cal.get(java.util.Calendar.DAY_OF_YEAR)
+        return categoryAttempts.count { (_, list) ->
+            list.any { a ->
+                (a.completed || (a.total > 0 && a.answered >= a.total)) && run {
+                    cal.timeInMillis = a.attemptedAt
+                    cal.get(java.util.Calendar.YEAR) == y && cal.get(java.util.Calendar.DAY_OF_YEAR) == d
+                }
+            }
+        }
+    }
+
+    /** Level crown: every section (each given by its names) is mastered. */
+    fun isLevelMastered(sections: List<List<String>>, level: String): Boolean =
+        sections.isNotEmpty() && sections.all { isSectionMastered(it, level) }
+
+    /**
+     * Teaching tip as the section quiz opens (null = nothing to say), same as the Usage Quiz: the first
+     * time a section is opened, how mastery works (remembered per section); on 2 perfect days with one
+     * TODAY, that today's already counts - come back tomorrow.
+     */
+    fun sectionEntryTip(names: List<String>, level: String, now: Long = System.currentTimeMillis()): Pair<String, String>? {
+        val prefs = context.getSharedPreferences("vocab_quiz_tips", Context.MODE_PRIVATE)
+        val shown = prefs.getStringSet("introShownIds", emptySet()) ?: emptySet()
+        val key = "$level|" + names.firstOrNull { it.isNotBlank() }.orEmpty()
+        if (sectionAttempts(names, level).isEmpty() && key !in shown) {
+            prefs.edit().putStringSet("introShownIds", shown + key).apply()
+            return "Aim for the crown 👑" to
+                "Get every word right first time on 3 different days to master this section."
+        }
+        val days = sectionPerfectDays(names, level)
+        if (days.size == 2 && VocabMasteryEngine.dayIndex(now, BuildConfig.DEBUG) in days) {
+            return "2 of 3 perfect days ✓" to
+                "Today's perfect go is already counted. Come back tomorrow for your last one and the crown 👑."
+        }
+        return null
     }
 
     private fun saveCategoryAttemptsToDisk() {

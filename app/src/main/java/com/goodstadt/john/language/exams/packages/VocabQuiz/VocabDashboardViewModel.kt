@@ -20,6 +20,8 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import kotlinx.coroutines.launch
 import timber.log.Timber
+import com.goodstadt.john.language.exams.managers.XPManager
+import com.goodstadt.john.language.exams.managers.BannerManager
 import javax.inject.Inject
 
 
@@ -29,6 +31,8 @@ class VocabDashboardViewModel @Inject constructor(
     private val vocabQuizRepository: VocabQuizRepository,
     private val contentRepository: ContentRepository,
     private val userPreferencesRepository: UserPreferencesRepository,
+    private val xpManager: XPManager,          // XP total (fly-in) + daily streak (Due Today card)
+    private val bannerManager: BannerManager,  // level / daily goal / all caught up banners
     // ...
 ) : ViewModel() {
 
@@ -121,7 +125,8 @@ class VocabDashboardViewModel @Inject constructor(
                             masteredCount = quizState.mastered,
                             day1Count = quizState.day1,
                             day2Count = quizState.day2,
-                            dayProgress = dayProgress
+                            dayProgress = dayProgress,
+                            quizKey = quizKey
                         )
                     }
 
@@ -157,7 +162,8 @@ class VocabDashboardViewModel @Inject constructor(
                         masteredCount = mastered,
                         day1Count = day1,
                         day2Count = day2,
-                        dayProgress = dayProgress
+                        dayProgress = dayProgress,
+                        quizKey = quizKey
                     )
                 }
 
@@ -170,10 +176,73 @@ class VocabDashboardViewModel @Inject constructor(
                     wordsDueCount = dueWords.size,
                     wordsDueList = dueWords,
                     totalMastered = totalMastered,
-                    categoryStats = statsList
+                    categoryStats = statsList,
+                    level = currentSkillLevel
                 )
             }
         }
+    }
+
+    // ---------------- Gamification (mirrors iOS VocabDashboardScreen) ----------------
+
+    fun sectionSummary(stat: CategoryMasteryStats, now: Long): String? =
+        vocabQuizRepository.sectionSummary(stat.attemptNames, _uiState.value.level, now)
+    fun isSectionMastered(stat: CategoryMasteryStats): Boolean =
+        vocabQuizRepository.isSectionMastered(stat.attemptNames, _uiState.value.level)
+    fun isSectionReady(stat: CategoryMasteryStats, now: Long): Boolean =
+        vocabQuizRepository.isSectionReady(stat.attemptNames, _uiState.value.level, now)
+    fun sectionDueCount(stat: CategoryMasteryStats, now: Long): Int =
+        vocabQuizRepository.sectionDueCount(stat.attemptNames, _uiState.value.level, now)
+    fun sectionsCompletedToday(): Int = vocabQuizRepository.sectionsCompletedToday()
+    fun isLevelMastered(): Boolean = vocabQuizRepository.isLevelMastered(
+        _uiState.value.categoryStats.map { it.attemptNames }, _uiState.value.level)
+    fun totalXp(): Int = xpManager.state.value.levels.values.sumOf { it.xp }
+    fun currentStreak(): Int = xpManager.state.value.currentStreak
+    fun showBanner(title: String, subtitle: String) = bannerManager.showBanner(title, subtitle)
+
+    /** State of a section as its quiz opens, compared when the quiz closes (row pulse, New best, XP...). */
+    data class SectionSnapshot(
+        val title: String, val names: List<String>, val goes: Int, val days: Int, val best: Int,
+        val xp: Int, val levelMastered: Boolean, val goalMet: Boolean,
+    )
+
+    /** What changed while the quiz sheet was open: drives the row pulse and the bigger moments. */
+    data class SectionOutcome(
+        val title: String, val tier: com.goodstadt.john.language.exams.packages.UsageQuiz.RowPulseTier,
+        val newBest: Boolean, val xpEarned: Int, val levelMastered: Boolean, val dailyGoalDone: Boolean,
+    )
+
+    fun snapshotSection(title: String): SectionSnapshot {
+        val level = _uiState.value.level
+        val names = _uiState.value.categoryStats.firstOrNull { it.categoryTitle == title }?.attemptNames ?: listOf(title)
+        return SectionSnapshot(
+            title, names,
+            vocabQuizRepository.sectionCompletedCount(names, level),
+            vocabQuizRepository.sectionPerfectDays(names, level).size,
+            vocabQuizRepository.sectionBestFirstTry(names, level),
+            totalXp(), isLevelMastered(),
+            vocabQuizRepository.sectionsCompletedToday() >= VocabQuizRepository.DAILY_GOAL,
+        )
+    }
+
+    /** Null unless a go was FINISHED while the sheet was open. */
+    fun outcomeSince(snap: SectionSnapshot): SectionOutcome? {
+        val level = _uiState.value.level
+        if (vocabQuizRepository.sectionCompletedCount(snap.names, level) <= snap.goes) return null
+        val daysNow = vocabQuizRepository.sectionPerfectDays(snap.names, level).size
+        val last = vocabQuizRepository.sectionLastGo(snap.names, level)
+        val tier = when {
+            snap.days < 3 && daysNow >= 3 -> com.goodstadt.john.language.exams.packages.UsageQuiz.RowPulseTier.MASTERED
+            last?.flawless == true -> com.goodstadt.john.language.exams.packages.UsageQuiz.RowPulseTier.PERFECT
+            else -> com.goodstadt.john.language.exams.packages.UsageQuiz.RowPulseTier.FINISHED
+        }
+        return SectionOutcome(
+            snap.title, tier,
+            newBest = snap.goes > 0 && ((last?.firstTryCorrect ?: last?.correct ?: 0) > snap.best),
+            xpEarned = totalXp() - snap.xp,
+            levelMastered = !snap.levelMastered && isLevelMastered(),
+            dailyGoalDone = !snap.goalMet && sectionsCompletedToday() >= VocabQuizRepository.DAILY_GOAL,
+        )
     }
 
     fun openQuizForCategory(title: String) {

@@ -349,6 +349,14 @@ class VocabSectionQuizViewModel @Inject constructor(
      * whole-quiz status and EVERY recorded attempt for this quiz to logcat. Nothing is recorded if the user
      * opened and closed the sheet without answering anything.
      */
+    /**
+     * Teaching tip as this section's quiz opens (first time: how to master it; 2 perfect days with one
+     * today: come back tomorrow) - see VocabQuizRepository.sectionEntryTip. [openedAs] is the title/key
+     * the sheet was opened with, checked alongside the resolved section name.
+     */
+    fun sectionEntryTip(openedAs: String): Pair<String, String>? =
+        vocabQuizRepository.sectionEntryTip(listOf(currentSectionTitle, openedAs), currentSkillLevel)
+
     fun recordAndLogCategoryAttempt() {
         val total = _allSectionQuestions.size
         val answered = _sectionAnswersByWord.size

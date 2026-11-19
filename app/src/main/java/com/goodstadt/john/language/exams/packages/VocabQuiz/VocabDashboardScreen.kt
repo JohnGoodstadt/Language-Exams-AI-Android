@@ -65,6 +65,29 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.goodstadt.john.language.exams.models.CategoryMasteryStats
 import com.goodstadt.john.language.exams.models.DashboardUiState
 import com.goodstadt.john.language.exams.packages.CategoryTab.SectionQuizContainer
+import android.provider.Settings
+import androidx.compose.animation.core.Animatable
+import androidx.compose.animation.core.tween
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableLongStateOf
+import androidx.compose.ui.graphics.TransformOrigin
+import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.hapticfeedback.HapticFeedback
+import androidx.compose.ui.hapticfeedback.HapticFeedbackType
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalHapticFeedback
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import com.goodstadt.john.language.exams.data.repository.VocabQuizRepository
+import com.goodstadt.john.language.exams.packages.UsageQuiz.RowPulseTier
+import com.goodstadt.john.language.exams.packages.UsageQuiz.color
+import com.goodstadt.john.language.exams.packages.UsageQuiz.StatsTag
+import com.goodstadt.john.language.exams.packages.UsageQuiz.DailyGoalRing
+import com.goodstadt.john.language.exams.packages.UsageQuiz.DailyGoalExplainer
+import com.goodstadt.john.language.exams.packages.UsageQuiz.LevelFireworks
+import com.goodstadt.john.language.exams.packages.UsageQuiz.playChimeUnlessSilent
 import timber.log.Timber
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -79,6 +102,37 @@ fun VocabDashboardScreen(
 
     val showSmartReview by viewModel.showSmartReviewSheet.collectAsState()
     val smartReviewSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+
+    // Gamification (mirrors iOS): when a section's quiz closes after a FINISHED go, its row pulses (1 blue /
+    // 2 green / 3 gold + crown + chime), "New best!" and "+N XP" show on it, then a level-mastered
+    // (fireworks) or daily-goal banner. The section is snapshotted as the quiz opens and compared after
+    // the sheet closes (Android records the go when the sheet closes, hence the short wait).
+    val context = LocalContext.current
+    val haptics = LocalHapticFeedback.current
+    val fx = remember { SectionRowFx() }
+    var snapshot by remember { mutableStateOf<VocabDashboardViewModel.SectionSnapshot?>(null) }
+    LaunchedEffect(currentQuizTitle) {
+        val title = currentQuizTitle
+        if (title != null) { snapshot = viewModel.snapshotSection(title); return@LaunchedEffect }
+        val snap = snapshot ?: return@LaunchedEffect
+        snapshot = null
+        delay(600) // let the sheet close and its go be recorded
+        val out = viewModel.outcomeSince(snap) ?: return@LaunchedEffect
+        fx.play(out, context, haptics, viewModel)
+    }
+    // "All caught up! ✓": Review Now cleared every due word.
+    var dueBeforeReview by remember { mutableStateOf<Int?>(null) }
+    LaunchedEffect(showSmartReview) {
+        if (showSmartReview) { dueBeforeReview = viewModel.uiState.value.wordsDueCount; return@LaunchedEffect }
+        val before = dueBeforeReview ?: return@LaunchedEffect
+        dueBeforeReview = null
+        delay(700) // the dashboard reloads after the review saves
+        if (before > 0 && viewModel.uiState.value.wordsDueCount == 0) {
+            haptics.performHapticFeedback(HapticFeedbackType.LongPress)
+            viewModel.showBanner("All caught up! ✓", "No words left to review today.")
+        }
+    }
+    if (fx.showFireworks) LevelFireworks(onDone = { fx.showFireworks = false })
 
     if (uiState.isLoading) {
         Box(
@@ -97,7 +151,9 @@ fun VocabDashboardScreen(
             },
             state = uiState,
             onCategoryClick = { title -> viewModel.openQuizForCategory(title) },
-            onDebugClick = { viewModel.debugResetVocabProgress() }
+            onDebugClick = { viewModel.debugResetVocabProgress() },
+            viewModel = viewModel,
+            fx = fx
         )
     }
 
@@ -138,9 +194,17 @@ fun VocabQuizActiveView(
     state: DashboardUiState,
     onStartReview: () -> Unit,
     onCategoryClick: (String) -> Unit,
-    onDebugClick: () -> Unit
+    onDebugClick: () -> Unit,
+    viewModel: VocabDashboardViewModel? = null,   // gamification data (null in previews)
+    fx: SectionRowFx = remember { SectionRowFx() }
 ) {
     val buttonBlue = LocalExtendedColors.current.buttonBlue
+    // Re-read time-based bits ("12m", "↻ ready", "N due") once a minute.
+    var nowMillis by remember { mutableLongStateOf(System.currentTimeMillis()) }
+    LaunchedEffect(Unit) { while (true) { delay(60_000); nowMillis = System.currentTimeMillis() } }
+    var showRowGuide by remember { mutableStateOf(false) }
+    var showGoalPopup by remember { mutableStateOf(false) }
+    if (showRowGuide) VocabRowGuideSheet(onDismiss = { showRowGuide = false })
     // The category panel gets a MIN height reaching the bottom of the screen (from where it starts),
     // so it stretches when the list is short but grows and scrolls when it is long. (A weight(1f)
     // panel inside heightIn(min) capped it at screen height and broke scrolling.)
@@ -174,6 +238,19 @@ fun VocabQuizActiveView(
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     Column(modifier = Modifier.weight(1f)) {
+                        // Daily study streak (the app-wide XP streak).
+                        val streak = remember(state) { viewModel?.currentStreak() ?: 0 }
+                        if (streak > 0) {
+                            Text(
+                                "🔥 $streak-day streak",
+                                style = MaterialTheme.typography.labelMedium,
+                                fontWeight = FontWeight.Bold,
+                                color = Color.White,
+                                modifier = Modifier
+                                    .background(Color.White.copy(alpha = 0.2f), RoundedCornerShape(50))
+                                    .padding(horizontal = 8.dp, vertical = 2.dp)
+                            )
+                        }
                         val label = if (state.wordsDueCount == 1) "word" else "words"
                         val yet = if (state.wordsDueCount == 0) "yet." else ""
                         Text(
@@ -243,12 +320,32 @@ fun VocabQuizActiveView(
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Text(
-                "Progress",
-                style = MaterialTheme.typography.titleLarge,
-                color = MaterialTheme.colorScheme.primary,
-                fontWeight = FontWeight.Bold
-            )
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Text(
+                    "Progress",
+                    style = MaterialTheme.typography.titleLarge,
+                    color = MaterialTheme.colorScheme.primary,
+                    fontWeight = FontWeight.Bold
+                )
+                // Level crown: every section in this level mastered.
+                val levelDone = remember(state) { viewModel?.isLevelMastered() ?: false }
+                if (levelDone) {
+                    Text("  ${state.level} 👑", style = MaterialTheme.typography.titleMedium,
+                        fontWeight = FontWeight.Bold, color = Color(0xFFFF9800))
+                }
+            }
+            Spacer(Modifier.weight(1f))
+            // Vocab daily goal ring (separate from the Usage Quiz's) - tap for what it means.
+            if (viewModel != null) {
+                val doneToday = remember(state, nowMillis) { viewModel.sectionsCompletedToday() }
+                Box {
+                    DailyGoalRing(done = doneToday, goal = VocabQuizRepository.DAILY_GOAL,
+                        modifier = Modifier.clickable { showGoalPopup = true })
+                    DropdownMenu(expanded = showGoalPopup, onDismissRequest = { showGoalPopup = false }) {
+                        DailyGoalExplainer(done = doneToday, goal = VocabQuizRepository.DAILY_GOAL, things = "vocab sections")
+                    }
+                }
+            }
             IconButton(onClick = { showScoringInfo = true }) {
                 Icon(
                     imageVector = Icons.Outlined.Info,
@@ -285,9 +382,15 @@ fun VocabQuizActiveView(
             verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
             state.categoryStats.forEach { stat ->
-                CategoryMasteryRow(stat, onClick = {
-                    onCategoryClick(stat.categoryTitle)
-                })
+                CategoryMasteryRow(
+                    stat,
+                    onClick = { onCategoryClick(stat.categoryTitle) },
+                    viewModel = viewModel,
+                    nowMillis = nowMillis,
+                    stateKey = state,
+                    fx = fx,
+                    onStatsTap = { showRowGuide = true }
+                )
             }
         }
 //        if (BuildConfig.DEBUG) {
@@ -313,24 +416,38 @@ fun VocabQuizActiveView(
 }
 
 /**
- * One category on the dashboard (matches iOS): a rounded card on a darker background with a play
- * icon, the title and its word count. Once any word has been quizzed it also shows the mastered count
- * and a stacked progress bar. Tapping it opens that category's quiz.
+ * One section on the dashboard, laid out like the Usage Quiz rows (mirrors iOS):
+ *   1. play icon, title, word count (or "12/19 words learned")
+ *   2. stats line "20m · 5x · ●●○ · 8/8 7/8 8/8" (or "… · 3 on 3 days · Mastered 👑") + "↻ ready" / "N due" /
+ *      "New best!" - tap it for the guide
+ *   3. the existing progress line ("1 of 3 days · last go 6 of 8" + what's next), kept for comparison.
+ * Pulses after its quiz closed, with "+N XP" rising from it. Tapping the row opens that section's quiz.
  */
 @Composable
 fun CategoryMasteryRow(
-    stat: CategoryMasteryStats, onClick: () -> Unit
+    stat: CategoryMasteryStats,
+    onClick: () -> Unit,
+    viewModel: VocabDashboardViewModel? = null,
+    nowMillis: Long = System.currentTimeMillis(),
+    stateKey: Any? = null,                // re-read the gamification bits when the dashboard reloads
+    fx: SectionRowFx = remember { SectionRowFx() },
+    onStatsTap: () -> Unit = {},
 ) {
     val progress = stat.dayProgress // per-category "N of 3 days"; null until the quiz is played
-    Column(verticalArrangement = Arrangement.spacedBy(8.dp),
+    val pulsing = fx.pulsingTitle == stat.categoryTitle
+    val pulseAmount = if (pulsing) fx.amount.value else 0f
+    Box(modifier = Modifier.fillMaxWidth()) {
+    Column(verticalArrangement = Arrangement.spacedBy(6.dp),
         modifier = Modifier
             .fillMaxWidth()
             .clip(RoundedCornerShape(10.dp))
             .background(LocalExtendedColors.current.cardBackground)
+            // Row pulse after its quiz closed.
+            .background(if (pulsing) fx.tier.color.copy(alpha = 0.35f * pulseAmount) else Color.Transparent)
             .clickable { onClick() }
             .padding(16.dp)
     ) {
-        // Header: play icon, title, count
+        // 1. Header: play icon, title, count / words learned
         Row(
             modifier = Modifier.fillMaxWidth(),
             verticalAlignment = Alignment.CenterVertically
@@ -352,34 +469,52 @@ fun CategoryMasteryRow(
                 modifier = Modifier.weight(1f)
             )
             Spacer(Modifier.width(8.dp))
+            // Words learned (each right first time on 3 different days) - "learned", so "Mastered" stays
+            // for the whole section.
             Text(
-                "${stat.totalWords} Words",
-                style = MaterialTheme.typography.labelMedium,
+                if (stat.masteredCount > 0) "${stat.masteredCount}/${stat.totalWords} words learned" else "${stat.totalWords} Words",
+                style = MaterialTheme.typography.labelMedium.copy(fontFeatureSettings = "tnum"),
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
         }
 
-        // Progress to Mastered (3 days, each with every word right first time) + what's next.
-        if (progress != null) {
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(8.dp)
-                    .clip(RoundedCornerShape(4.dp))
-                    .background(MaterialTheme.colorScheme.surfaceVariant),
-                horizontalArrangement = Arrangement.spacedBy(3.dp)
-            ) {
-                // Three segments, one per day earned.
-                repeat(3) { i ->
-                    Box(
-                        Modifier
-                            .fillMaxHeight()
-                            .weight(1f)
-                            .background(if (i < progress.days) Color(0xFF4CAF50) else Color.Transparent)
-                    )
+        // 2. Stats line (Usage-Quiz style)
+        if (viewModel != null) {
+            val summary = remember(stat, stateKey, nowMillis) { viewModel.sectionSummary(stat, nowMillis) }
+            if (summary != null) {
+                val mastered = remember(stat, stateKey) { viewModel.isSectionMastered(stat) }
+                val ready = remember(stat, stateKey, nowMillis) { viewModel.isSectionReady(stat, nowMillis) }
+                val due = remember(stat, stateKey, nowMillis) { viewModel.sectionDueCount(stat, nowMillis) }
+                val style = MaterialTheme.typography.labelSmall.copy(fontFeatureSettings = "tnum")
+                val textScale = if (pulsing && fx.tier == RowPulseTier.PERFECT) 1f + 0.12f * pulseAmount else 1f
+                val crownScale = if (pulsing && fx.tier == RowPulseTier.MASTERED) 1f + 0.8f * pulseAmount else 1f
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier
+                        .clickable { onStatsTap() } // tap the stats line for the guide (title opens the quiz)
+                        .graphicsLayer {
+                            scaleX = textScale; scaleY = textScale
+                            transformOrigin = TransformOrigin(0f, 0.5f)
+                        }
+                ) {
+                    Text(summary, style = style, color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        maxLines = 1, overflow = TextOverflow.Ellipsis, modifier = Modifier.weight(1f, fill = false))
+                    if (mastered) {
+                        Text("👑", style = style, modifier = Modifier
+                            .padding(start = 4.dp)
+                            .graphicsLayer { scaleX = crownScale; scaleY = crownScale })
+                    }
+                    if (ready) StatsTag("↻ ready", Color(0xFF2196F3), filled = false, style = style)
+                    if (due > 0 && !mastered) StatsTag("$due due", Color(0xFF9C27B0), filled = false, style = style)
+                    // "New best!" gives way to "↻ ready" (both together don't fit on one line).
+                    if (fx.newBestTitle == stat.categoryTitle && !ready)
+                        StatsTag("New best!", Color(0xFFFF9800), filled = true, style = style)
                 }
             }
+        }
 
+        // 3. Progress line: "N of 3 days" (or the last go's score) + what's next
+        if (progress != null) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically
@@ -399,6 +534,116 @@ fun CategoryMasteryRow(
                     maxLines = 1
                 )
             }
+        }
+    }
+    // "+N XP" rising from the row and fading, after its quiz closed.
+    if (fx.xpTitle == stat.categoryTitle) {
+        val p = fx.xpProgress.value
+        Text(
+            "+${fx.xpAmount} XP",
+            style = MaterialTheme.typography.titleMedium,
+            fontWeight = FontWeight.Bold,
+            color = Color(0xFFFF9800),
+            modifier = Modifier
+                .align(Alignment.CenterEnd)
+                .padding(end = 40.dp)
+                .graphicsLayer {
+                    translationY = -60.dp.toPx() * p
+                    alpha = 1f - p
+                    scaleX = 1f + 0.3f * p; scaleY = scaleX
+                }
+        )
+    }
+    } // Box
+}
+
+/**
+ * Animation state for the section rows (row pulse, New best, XP fly-in, level fireworks). [play] runs the
+ * whole sequence for one finished go, then the level-mastered or daily-goal moment. Mirrors iOS.
+ */
+class SectionRowFx {
+    var pulsingTitle by mutableStateOf<String?>(null)
+    var tier by mutableStateOf(RowPulseTier.FINISHED)
+    val amount = Animatable(0f)
+    var newBestTitle by mutableStateOf<String?>(null)
+    var xpTitle by mutableStateOf<String?>(null)
+    var xpAmount by mutableIntStateOf(0)
+    val xpProgress = Animatable(0f)
+    var showFireworks by mutableStateOf(false)
+
+    suspend fun play(
+        out: VocabDashboardViewModel.SectionOutcome,
+        context: android.content.Context,
+        haptics: HapticFeedback,
+        viewModel: VocabDashboardViewModel,
+    ) = coroutineScope {
+        tier = out.tier
+        amount.snapTo(0f)
+        pulsingTitle = out.title
+        delay(250)
+        when (out.tier) {
+            RowPulseTier.FINISHED -> haptics.performHapticFeedback(HapticFeedbackType.TextHandleMove)
+            RowPulseTier.PERFECT -> haptics.performHapticFeedback(HapticFeedbackType.LongPress)
+            RowPulseTier.MASTERED -> {
+                haptics.performHapticFeedback(HapticFeedbackType.LongPress)
+                playChimeUnlessSilent(context)
+            }
+        }
+        if (out.newBest) newBestTitle = out.title
+        if (out.xpEarned > 0) {
+            xpAmount = out.xpEarned
+            xpProgress.snapTo(0f)
+            xpTitle = out.title
+            launch { xpProgress.animateTo(1f, tween(1400)) }
+        }
+        val animationsOff = Settings.Global.getFloat(
+            context.contentResolver, Settings.Global.ANIMATOR_DURATION_SCALE, 1f) == 0f
+        repeat(if (animationsOff) 1 else out.tier.pulses) {
+            amount.animateTo(1f, tween(400))
+            amount.animateTo(0f, tween(400))
+            delay(50)
+        }
+        pulsingTitle = null
+        xpTitle = null
+        if (out.levelMastered) {
+            playChimeUnlessSilent(context)
+            showFireworks = true
+            viewModel.showBanner("${viewModel.uiState.value.level} vocab mastered! 👑",
+                "You've mastered every section in this level.")
+        } else if (out.dailyGoalDone) {
+            haptics.performHapticFeedback(HapticFeedbackType.LongPress)
+            viewModel.showBanner("Daily goal done! 🎯", "${VocabQuizRepository.DAILY_GOAL} vocab sections today. Great work.")
+        }
+    }
+}
+
+/** Guide sheet from tapping a section row's stats line: what each symbol means. Mirrors iOS. */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun VocabRowGuideSheet(onDismiss: () -> Unit) {
+    val items = listOf(
+        Triple("20m · 5x", MaterialTheme.colorScheme.onSurfaceVariant, "Time since your last go, and how many times you've finished this section."),
+        Triple("8/8 7/8", MaterialTheme.colorScheme.onSurfaceVariant, "Your last 3 scores, newest first (words right first time)."),
+        Triple("●●○", MaterialTheme.colorScheme.onSurface, "Perfect goes on different days. 3 different days masters the section."),
+        Triple("👑", Color(0xFFFFC107), "Mastered: every word right first time, on 3 different days."),
+        Triple("↻ ready", Color(0xFF2196F3), "A perfect go today will count towards the crown."),
+        Triple("5 due", Color(0xFF9C27B0), "Words in this section that are due for review now."),
+        Triple("New best!", Color(0xFFFF9800), "You just beat your best score on this section."),
+        Triple("12/19 learned", MaterialTheme.colorScheme.onSurfaceVariant, "Words you've got right first time on 3 different days."),
+    )
+    ModalBottomSheet(onDismissRequest = onDismiss) {
+        Column(modifier = Modifier.padding(horizontal = 20.dp).padding(bottom = 32.dp),
+            verticalArrangement = Arrangement.spacedBy(14.dp)) {
+            Text("Your section progress", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
+            items.forEach { (symbol, color, text) ->
+                Row(verticalAlignment = Alignment.Top) {
+                    Text(symbol, color = color, fontWeight = FontWeight.Bold,
+                        style = MaterialTheme.typography.bodyMedium, modifier = Modifier.width(110.dp))
+                    Text(text, style = MaterialTheme.typography.bodyMedium)
+                }
+            }
+            Text("Perfect = every word right on the first tap. Goes with mistakes never undo progress.",
+                style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
         }
     }
 }

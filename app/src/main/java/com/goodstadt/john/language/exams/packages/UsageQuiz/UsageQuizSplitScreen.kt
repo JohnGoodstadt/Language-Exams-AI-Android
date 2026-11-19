@@ -748,7 +748,7 @@ private val CrownIcon: ImageVector by lazy {
 
 
 /** Row-pulse colour per tier: blue (finished), green (perfect), gold (mastered). Mirrors iOS. */
-private val RowPulseTier.color: Color
+internal val RowPulseTier.color: Color
     get() = when (this) {
         RowPulseTier.FINISHED -> Color(0xFF2196F3)
         RowPulseTier.PERFECT -> Color(0xFF4CAF50)
@@ -756,7 +756,7 @@ private val RowPulseTier.color: Color
     }
 
 /** The mastery chime, unless the phone is on silent/vibrate (MediaPlayer ignores the ringer switch). */
-private fun playChimeUnlessSilent(context: Context) {
+internal fun playChimeUnlessSilent(context: Context) {
     val audio = context.getSystemService(Context.AUDIO_SERVICE) as? AudioManager
     if (audio?.ringerMode != AudioManager.RINGER_MODE_NORMAL) return
     runCatching {
@@ -774,7 +774,7 @@ private fun playChimeUnlessSilent(context: Context) {
  * shortly after the sheet, stays 5 s, tap to dismiss. Mirrors the iOS entry-tip banner.
  */
 @Composable
-private fun EntryTipBanner(tip: Pair<String, String>?, onDismiss: () -> Unit, modifier: Modifier = Modifier) {
+internal fun EntryTipBanner(tip: Pair<String, String>?, onDismiss: () -> Unit, modifier: Modifier = Modifier) {
     var visible by remember { mutableStateOf(false) }
     LaunchedEffect(tip) {
         if (tip == null) { visible = false; return@LaunchedEffect }
@@ -818,7 +818,7 @@ private fun EntryTipBanner(tip: Pair<String, String>?, onDismiss: () -> Unit, mo
 
 /** Small tag after the stats line: "↻ ready" (outlined) or "New best!" (filled). */
 @Composable
-private fun StatsTag(text: String, color: Color, filled: Boolean, style: TextStyle) {
+internal fun StatsTag(text: String, color: Color, filled: Boolean, style: TextStyle) {
     Text(
         text = text,
         style = style,
@@ -834,7 +834,7 @@ private fun StatsTag(text: String, color: Color, filled: Boolean, style: TextSty
 
 /** Ring next to the level tabs: today's finished usage quizzes against the daily goal ("1/2"); green ✓ when met. */
 @Composable
-private fun DailyGoalRing(done: Int, goal: Int, modifier: Modifier = Modifier) {
+internal fun DailyGoalRing(done: Int, goal: Int, modifier: Modifier = Modifier) {
     val fraction by animateFloatAsState(if (goal > 0) (done.toFloat() / goal).coerceAtMost(1f) else 0f, tween(600), label = "goal")
     val met = done >= goal
     val track = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.15f)
@@ -857,10 +857,10 @@ private fun DailyGoalRing(done: Int, goal: Int, modifier: Modifier = Modifier) {
 
 /** Popup from the daily-goal ring: what the goal is and today's progress. */
 @Composable
-private fun DailyGoalExplainer(done: Int, goal: Int) {
+internal fun DailyGoalExplainer(done: Int, goal: Int, things: String = "Usage quizzes") {
     Column(modifier = Modifier.width(280.dp).padding(16.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
         Text("Daily goal 🎯", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
-        Text("Finish $goal different Usage quizzes today. Any score counts. It starts again at midnight.",
+        Text("Finish $goal different $things today. Any score counts. It starts again at midnight.",
             style = MaterialTheme.typography.bodyMedium)
         Text(
             if (done >= goal) "Done for today ✓" else "Today: ${minOf(done, goal)} of $goal",
@@ -905,7 +905,7 @@ private fun UsageRowGuideSheet(onDismiss: () -> Unit) {
  * Android has no fireworks effect like iOS's CelebrationOverlay, so this is a simple Canvas burst.
  */
 @Composable
-private fun LevelFireworks(onDone: () -> Unit) {
+internal fun LevelFireworks(onDone: () -> Unit) {
     val progress = remember { Animatable(0f) }
     val particles = remember {
         val rnd = kotlin.random.Random(System.currentTimeMillis())
