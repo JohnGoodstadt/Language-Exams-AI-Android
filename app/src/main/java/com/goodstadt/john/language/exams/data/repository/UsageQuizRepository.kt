@@ -173,6 +173,46 @@ class UsageQuizRepository @Inject constructor(
     /** True once the quiz has been completed flawlessly on [MASTERY_DAYS] different days (row crown). */
     fun isMastered(quizId: String): Boolean = flawlessDistinctDays(quizId) >= MASTERY_DAYS
 
+    /**
+     * DEBUG: everything stored for one quiz as readable log lines - to check the picker-row summary
+     * ("5x · 2p · …") and the 3-different-days mastery rule. Every dated attempt is listed with its day
+     * number ([VocabMasteryEngine.dayIndex]: a 30-second window in DEBUG, a calendar day in release).
+     * Mirrors iOS UsageQuizRepository.debugDescription.
+     */
+    fun debugDescription(quizId: String): List<String> = synchronized(lock) {
+        val stat = quizStates[quizId] ?: return@synchronized listOf("UsageQuiz '$quizId': no stored data (never answered)")
+        val fmt = java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss", java.util.Locale.US)
+        fun time(t: Long) = if (t > 0) fmt.format(java.util.Date(t)) else "-"
+        fun day(i: Long) = if (BuildConfig.DEBUG) "$i (30s window from ${time(i * 30_000L)})"
+            else "$i (year ${i / 1000}, day-of-year ${i % 1000})"
+        @Suppress("SENSELESS_COMPARISON")
+        val attempts = if (stat.attempts == null) emptyList() else stat.attempts.sortedBy { it.attemptedAt }
+        val perfectDays = attempts.filter { it.flawless }
+            .map { VocabMasteryEngine.dayIndex(it.attemptedAt, BuildConfig.DEBUG) }.distinct().sortedDescending()
+
+        val lines = mutableListOf<String>()
+        lines += "===== UsageQuiz '$quizId' ====="
+        lines += "summary row       : ${recentSummary(quizId) ?: "(none)"}"
+        lines += "timesCompleted    : ${stat.timesCompleted}   bestScore: ${stat.bestScore}"
+        lines += "attempts (old→new): ${attempts.size}"
+        attempts.forEachIndexed { i, a ->
+            lines += "   #${i + 1} ${time(a.attemptedAt)}  firstTry ${a.firstTryCorrect ?: a.correct}/${a.total}" +
+                "  correct ${a.correct}  tries ${a.tries}  ${if (a.flawless) "FLAWLESS" else "with errors"}" +
+                "  day ${VocabMasteryEngine.dayIndex(a.attemptedAt, BuildConfig.DEBUG)}"
+        }
+        lines += "perfect days      : ${perfectDays.size} of $MASTERY_DAYS needed (newest first, one per day)"
+        perfectDays.forEach { lines += "   • day ${day(it)}" }
+        lines += "isMastered        : ${perfectDays.size >= MASTERY_DAYS}   3-day award given: ${stat.threeDayAwardGiven}"
+        if (BuildConfig.DEBUG) lines += "NOTE: DEBUG build - a 'day' is a 30-second window; flawless goes inside the same window count once."
+        lines += "questions (${stat.questions.size}):"
+        stat.questions.keys.sorted().forEach { p ->
+            stat.questions[p]?.let { q ->
+                lines += "   p$p: ${q.masteryLevel}, streak ${q.correctStreak}, last ${time(q.lastAnsweredAt)}, next due ${time(q.nextReviewTime)}"
+            }
+        }
+        lines
+    }
+
     /** Every dated attempt at one quiz, oldest first. */
     fun getQuizAttempts(quizId: String): List<UsageQuizAttempt> =
         synchronized(lock) { quizStates[quizId]?.attempts?.toList() ?: emptyList() }

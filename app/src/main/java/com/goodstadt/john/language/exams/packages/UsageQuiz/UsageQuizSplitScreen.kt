@@ -218,7 +218,10 @@ fun UsageQuizSplitScreen(
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .clickable { if (!isSelected) viewModel.onQuizSelected(quiz) }
+                        .clickable {
+                            viewModel.logQuizRowDebug(quiz) // DEBUG builds only: dump this row's stats to logcat
+                            if (!isSelected) viewModel.onQuizSelected(quiz)
+                        }
                         .padding(horizontal = 16.dp, vertical = 14.dp),
                     verticalAlignment = Alignment.CenterVertically
                 ) {

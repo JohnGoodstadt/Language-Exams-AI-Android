@@ -274,6 +274,12 @@ class UsageQuizViewModel @Inject constructor(
     fun quizRowSummary(quiz: QuizDetail, now: Long = System.currentTimeMillis()): String? =
         usageQuizRepository.recentSummary(quiz.baseName, now)
 
+    /** DEBUG: log everything behind a picker row's sub-line ("5x · 2p · …") to logcat (tag "UsageQuiz"). */
+    fun logQuizRowDebug(quiz: QuizDetail) {
+        if (!DEBUG) return
+        usageQuizRepository.debugDescription(quiz.baseName).forEach { Timber.tag("UsageQuiz").d(it) }
+    }
+
     /** True once this quiz is mastered (flawless on 3 different days) - the row shows a crown. */
     fun quizRowMastered(quiz: QuizDetail): Boolean = usageQuizRepository.isMastered(quiz.baseName)
 
