@@ -37,6 +37,17 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
+import android.content.Context
+import android.media.AudioManager
+import android.media.MediaPlayer
+import android.provider.Settings
+import androidx.compose.animation.core.Animatable
+import androidx.compose.animation.core.tween
+import androidx.compose.foundation.lazy.rememberLazyListState
+import androidx.compose.ui.graphics.TransformOrigin
+import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.hapticfeedback.HapticFeedbackType
+import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -113,6 +124,42 @@ fun UsageQuizSplitScreen(
         }
     }
     val statsInline = LocalConfiguration.current.screenWidthDp >= 600
+
+    // Row pulse (gamification, mirrors iOS): when the quiz sheet closes after a FINISHED run, that quiz's row
+    // pulses to draw the eye to its updated stats - 1 blue pulse (finished), 2 green + stats pop (perfect),
+    // 3 gold + crown pop + chime (this run completed mastery). "Remove animations" -> a single pulse.
+    val quizListState = rememberLazyListState()
+    val haptics = LocalHapticFeedback.current
+    var pulsingBaseName by remember { mutableStateOf<String?>(null) }
+    var pulseTier by remember { mutableStateOf(RowPulseTier.FINISHED) }
+    val pulseAmount = remember { Animatable(0f) }
+    LaunchedEffect(showQuizSheet) {
+        if (showQuizSheet) return@LaunchedEffect
+        val pulse = viewModel.takePendingRowPulse() ?: return@LaunchedEffect
+        delay(350) // let the sheet finish sliding away
+        val index = availableQuizzes.indexOfFirst { it.baseName == pulse.baseName }
+        if (index >= 0) quizListState.animateScrollToItem(index)
+        pulseTier = pulse.tier
+        pulseAmount.snapTo(0f)
+        pulsingBaseName = pulse.baseName
+        delay(250)
+        when (pulse.tier) {
+            RowPulseTier.FINISHED -> haptics.performHapticFeedback(HapticFeedbackType.TextHandleMove)
+            RowPulseTier.PERFECT -> haptics.performHapticFeedback(HapticFeedbackType.LongPress)
+            RowPulseTier.MASTERED -> {
+                haptics.performHapticFeedback(HapticFeedbackType.LongPress)
+                playChimeUnlessSilent(context)
+            }
+        }
+        val animationsOff = Settings.Global.getFloat(
+            context.contentResolver, Settings.Global.ANIMATOR_DURATION_SCALE, 1f) == 0f
+        repeat(if (animationsOff) 1 else pulse.tier.pulses) {
+            pulseAmount.animateTo(1f, tween(400))
+            pulseAmount.animateTo(0f, tween(400))
+            delay(50)
+        }
+        pulsingBaseName = null
+    }
 
     // Translate toggle: only offered when the loaded data carries "_en" translations (older cached /
     // Firestore data without them, and the English app, never show the button or translate).
@@ -200,6 +247,7 @@ fun UsageQuizSplitScreen(
 
         // --- Vertical quiz list (replaces the dropdown) ---
         LazyColumn(
+            state = quizListState,
             modifier = Modifier
                 .fillMaxWidth()
                 .weight(1f)
@@ -222,6 +270,11 @@ fun UsageQuizSplitScreen(
                             viewModel.logQuizRowDebug(quiz) // DEBUG builds only: dump this row's stats to logcat
                             if (!isSelected) viewModel.onQuizSelected(quiz)
                         }
+                        // Row pulse after a finished quiz's sheet closes (see the LaunchedEffect above).
+                        .background(
+                            if (pulsingBaseName == quiz.baseName)
+                                pulseTier.color.copy(alpha = 0.35f * pulseAmount.value) else Color.Transparent
+                        )
                         .padding(horizontal = 16.dp, vertical = 14.dp),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
@@ -234,11 +287,11 @@ fun UsageQuizSplitScreen(
                             color = if (isSelected) LocalExtendedColors.current.buttonBlue else MaterialTheme.colorScheme.onSurface
                         )
                         if (!statsInline && rowSummary != null) {
-                            QuizRowStatsText(rowSummary, small = true, mastered = rowMastered, modifier = Modifier.padding(top = 3.dp))
+                            QuizRowStatsText(rowSummary, small = true, mastered = rowMastered, pulseTier = if (pulsingBaseName == quiz.baseName) pulseTier else null, pulseAmount = pulseAmount.value, modifier = Modifier.padding(top = 3.dp))
                         }
                     }
                     if (statsInline && rowSummary != null) {
-                        QuizRowStatsText(rowSummary, small = false, mastered = rowMastered, modifier = Modifier.padding(start = 12.dp, end = 8.dp))
+                        QuizRowStatsText(rowSummary, small = false, mastered = rowMastered, pulseTier = if (pulsingBaseName == quiz.baseName) pulseTier else null, pulseAmount = pulseAmount.value, modifier = Modifier.padding(start = 12.dp, end = 8.dp))
                     }
                     if (isSelected) {
                         Icon(
@@ -506,11 +559,27 @@ private fun UsageQuizSheetPanel(
 
 /** A quiz row's history summary ("20m · 4x · 10/10 10/10 8/10"): small grey text, digits kept aligned. */
 @Composable
-private fun QuizRowStatsText(summary: String, small: Boolean, mastered: Boolean, modifier: Modifier = Modifier) {
+private fun QuizRowStatsText(
+    summary: String,
+    small: Boolean,
+    mastered: Boolean,
+    pulseTier: RowPulseTier? = null,   // non-null while this row is pulsing
+    pulseAmount: Float = 0f,           // 0..1 within a pulse
+    modifier: Modifier = Modifier,
+) {
+    // A perfect run makes the stats line (with its new "2p") pop slightly; mastery makes the crown pop.
+    val textScale = if (pulseTier == RowPulseTier.PERFECT) 1f + 0.12f * pulseAmount else 1f
+    val crownScale = if (pulseTier == RowPulseTier.MASTERED) 1f + 0.8f * pulseAmount else 1f
     val style = (if (small) MaterialTheme.typography.bodySmall else MaterialTheme.typography.bodyMedium)
         // "tnum" = tabular digits, so the scores line up row to row (set on the style: Text() has no such param).
         .copy(fontFeatureSettings = "tnum")
-    Row(modifier = modifier, verticalAlignment = Alignment.CenterVertically) {
+    Row(
+        modifier = modifier.graphicsLayer {
+            scaleX = textScale; scaleY = textScale
+            transformOrigin = TransformOrigin(0f, 0.5f)
+        },
+        verticalAlignment = Alignment.CenterVertically
+    ) {
         Text(
             text = summary,
             style = style,
@@ -525,7 +594,10 @@ private fun QuizRowStatsText(summary: String, small: Boolean, mastered: Boolean,
                 imageVector = CrownIcon,
                 contentDescription = "Mastered",
                 tint = Color(0xFFFFC107),
-                modifier = Modifier.padding(start = 4.dp).size(if (small) 14.dp else 16.dp)
+                modifier = Modifier
+                    .padding(start = 4.dp)
+                    .size(if (small) 14.dp else 16.dp)
+                    .graphicsLayer { scaleX = crownScale; scaleY = crownScale }
             )
         }
     }
@@ -541,4 +613,25 @@ private val CrownIcon: ImageVector by lazy {
             moveTo(5f, 19f); lineTo(19f, 19f); lineTo(19f, 21f); lineTo(5f, 21f); close()
         }
     }.build()
+}
+
+
+/** Row-pulse colour per tier: blue (finished), green (perfect), gold (mastered). Mirrors iOS. */
+private val RowPulseTier.color: Color
+    get() = when (this) {
+        RowPulseTier.FINISHED -> Color(0xFF2196F3)
+        RowPulseTier.PERFECT -> Color(0xFF4CAF50)
+        RowPulseTier.MASTERED -> Color(0xFFFFC107)
+    }
+
+/** The mastery chime, unless the phone is on silent/vibrate (MediaPlayer ignores the ringer switch). */
+private fun playChimeUnlessSilent(context: Context) {
+    val audio = context.getSystemService(Context.AUDIO_SERVICE) as? AudioManager
+    if (audio?.ringerMode != AudioManager.RINGER_MODE_NORMAL) return
+    runCatching {
+        MediaPlayer.create(context, R.raw.success_chime)?.apply {
+            setOnCompletionListener { it.release() }
+            start()
+        }
+    }
 }

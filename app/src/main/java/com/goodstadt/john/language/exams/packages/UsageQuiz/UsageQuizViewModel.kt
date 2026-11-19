@@ -274,6 +274,12 @@ class UsageQuizViewModel @Inject constructor(
     fun quizRowSummary(quiz: QuizDetail, now: Long = System.currentTimeMillis()): String? =
         usageQuizRepository.recentSummary(quiz.baseName, now)
 
+    // Row pulse (gamification): set when a run finishes, taken by the screen when the quiz sheet closes.
+    private val _pendingRowPulse = MutableStateFlow<RowPulse?>(null)
+
+    /** The pulse queued by the last finished run (then cleared), or null if no run finished. */
+    fun takePendingRowPulse(): RowPulse? = _pendingRowPulse.value.also { _pendingRowPulse.value = null }
+
     /** DEBUG: log everything behind a picker row's sub-line ("5x · 2p · …") to logcat (tag "UsageQuiz"). */
     fun logQuizRowDebug(quiz: QuizDetail) {
         if (!DEBUG) return
@@ -761,12 +767,22 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
             val currentQuizFileName = quizStatistics.value.filename
             // Record this go as a dated attempt (subsumes finishQuiz's completion/best-score bookkeeping)
             // and check the "flawless on 3 separate days" award.
+            val wasMastered = usageQuizRepository.isMastered(currentQuizFileName)
             val justEarnedAward = usageQuizRepository.recordAttempt(
                 quizId = currentQuizFileName, // e.g. "UsageQuiz1A1"
                 correct = qs.value.correct,
                 tries = qs.value.tries,
                 total = questionCount,
                 firstTryCorrect = firstTryCorrectIndices.size
+            )
+            // Queue the row pulse, played on the list when the quiz sheet closes.
+            _pendingRowPulse.value = RowPulse(
+                baseName = currentQuizFileName,
+                tier = when {
+                    !wasMastered && usageQuizRepository.isMastered(currentQuizFileName) -> RowPulseTier.MASTERED
+                    questionCount > 0 && firstTryCorrectIndices.size >= questionCount -> RowPulseTier.PERFECT
+                    else -> RowPulseTier.FINISHED
+                }
             )
             if (justEarnedAward) {
                 xpManager.registerAction(XpActionType.MemoryBoost)
@@ -1191,3 +1207,13 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
         }
     }
 }
+
+/** How strongly a quiz's row pulses on the list after its sheet closes (mirrors iOS RowPulseTier). */
+enum class RowPulseTier(val pulses: Int) {
+    FINISHED(1),   // run finished with mistakes
+    PERFECT(2),    // every question right first time
+    MASTERED(3)    // this run completed mastery (flawless on 3 different days)
+}
+
+/** A queued row pulse: which quiz row, and how strongly. */
+data class RowPulse(val baseName: String, val tier: RowPulseTier)
