@@ -174,6 +174,31 @@ class UsageQuizRepository @Inject constructor(
     fun isMastered(quizId: String): Boolean = flawlessDistinctDays(quizId) >= MASTERY_DAYS
 
     /**
+     * Teaching tip shown as a toast when a quiz is opened (null = nothing to say). Mirrors iOS entryTip:
+     * - never completed and its intro not yet shown -> how mastery works (marks the intro shown);
+     * - flawless on 2 different days, one of them TODAY, not yet mastered -> today's perfect go already
+     *   counts, so the crown needs another perfect go tomorrow.
+     */
+    fun entryTip(quizId: String, now: Long = System.currentTimeMillis()): Pair<String, String>? {
+        val prefs = context.getSharedPreferences("usage_quiz_tips", Context.MODE_PRIVATE)
+        val shown = prefs.getStringSet("introShownIds", emptySet()) ?: emptySet()
+        val attempts = getQuizAttempts(quizId)
+        if (attempts.isEmpty() && (quizStates[quizId]?.timesCompleted ?: 0) == 0 && quizId !in shown) {
+            prefs.edit().putStringSet("introShownIds", shown + quizId).apply()
+            return "Aim for the crown 👑" to
+                "Get every question right first time on $MASTERY_DAYS different days to master this quiz."
+        }
+        val perfectDays = attempts.filter { it.flawless }
+            .map { VocabMasteryEngine.dayIndex(it.attemptedAt, BuildConfig.DEBUG) }.toSet()
+        val today = VocabMasteryEngine.dayIndex(now, BuildConfig.DEBUG)
+        if (perfectDays.size == MASTERY_DAYS - 1 && today in perfectDays) {
+            return "${perfectDays.size} of $MASTERY_DAYS perfect days ✓" to
+                "Today's perfect run is already counted. Come back tomorrow for your last one and the crown 👑."
+        }
+        return null
+    }
+
+    /**
      * DEBUG: everything stored for one quiz as readable log lines - to check the picker-row summary
      * ("5x · 2p · …") and the 3-different-days mastery rule. Every dated attempt is listed with its day
      * number ([VocabMasteryEngine.dayIndex]: a 30-second window in DEBUG, a calendar day in release).

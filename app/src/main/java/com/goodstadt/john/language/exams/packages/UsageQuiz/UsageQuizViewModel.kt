@@ -277,6 +277,12 @@ class UsageQuizViewModel @Inject constructor(
     // Row pulse (gamification): set when a run finishes, taken by the screen when the quiz sheet closes.
     private val _pendingRowPulse = MutableStateFlow<RowPulse?>(null)
 
+    /** Teaching tip (title to subtitle) for the quiz about to open, or null - see UsageQuizRepository.entryTip. */
+    fun entryTipForSelectedQuiz(): Pair<String, String>? {
+        val baseName = (selectedQuiz.value ?: selectedLevel.value.quizzes.firstOrNull())?.baseName ?: return null
+        return usageQuizRepository.entryTip(baseName)
+    }
+
     /** The pulse queued by the last finished run (then cleared), or null if no run finished. */
     fun takePendingRowPulse(): RowPulse? = _pendingRowPulse.value.also { _pendingRowPulse.value = null }
 

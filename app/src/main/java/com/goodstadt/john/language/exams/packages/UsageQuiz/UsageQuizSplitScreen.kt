@@ -38,6 +38,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import android.content.Context
+import android.widget.Toast
 import android.media.AudioManager
 import android.media.MediaPlayer
 import android.provider.Settings
@@ -314,6 +315,10 @@ fun UsageQuizSplitScreen(
         Button(
             onClick = {
                 viewModel.resetForRetakeIfFinished() // finished quiz -> fresh go (Correct/Tries back to 0)
+                // Teaching tip: how mastery works (first time) or "come back tomorrow" (2nd perfect day is today).
+                viewModel.entryTipForSelectedQuiz()?.let { (title, subtitle) ->
+                    Toast.makeText(context, "$title\n$subtitle", Toast.LENGTH_LONG).show()
+                }
                 showQuizSheet = true
             },
             enabled = selectedQuiz != null || availableQuizzes.isNotEmpty(),
