@@ -22,8 +22,8 @@ if (secretsFile.exists()) {
     secretsProperties.load(FileInputStream(secretsFile))
 }
 
-val VERSION_CODE = 155  //manifest change - portrait
-val VERSION_NAME = "4.0.155"//go live - Car Auto
+val VERSION_CODE = 156  //gamification: Usage + Vocab Quiz
+val VERSION_NAME = "4.0.156"//go live - Car Auto
 
 android {
     namespace = "com.goodstadt.john.language.exams" // Base namespace
