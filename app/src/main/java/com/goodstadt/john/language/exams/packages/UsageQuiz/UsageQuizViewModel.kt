@@ -571,6 +571,23 @@ class UsageQuizViewModel @Inject constructor(
         }
     }
 
+    /**
+     * Re-taking a quiz that was FINISHED starts a fresh go: clear the Correct/Tries counters and the
+     * answers, but keep the same quiz, level and mastery filters. A part-done quiz is left alone (Continue).
+     * Without this the second go opened with the first go's "Correct 10 / Tries 10". Mirrors iOS
+     * UsageQuizView.resetForRetakeIfFinished.
+     */
+    fun resetForRetakeIfFinished() {
+        val total = _questions.value.size
+        if (total == 0 || userAnswers.value.size < total) return
+        val keepFilters = _activeFilters.value
+        resetQuiz()
+        _activeFilters.value = keepFilters
+        // New map instances (not just clear()) so Compose sees the change.
+        userAnswers.value = mutableMapOf()
+        firstAnswers.value = mutableMapOf()
+    }
+
     private fun resetQuiz() {
 
         saveQuizState()

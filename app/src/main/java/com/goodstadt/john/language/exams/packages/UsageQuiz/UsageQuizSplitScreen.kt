@@ -259,7 +259,10 @@ fun UsageQuizSplitScreen(
         // --- Start / Continue ---
         val inProgress = userAnswers.isNotEmpty() && userAnswers.size < questions.size
         Button(
-            onClick = { showQuizSheet = true },
+            onClick = {
+                viewModel.resetForRetakeIfFinished() // finished quiz -> fresh go (Correct/Tries back to 0)
+                showQuizSheet = true
+            },
             enabled = selectedQuiz != null || availableQuizzes.isNotEmpty(),
             modifier = Modifier
                 .fillMaxWidth()
