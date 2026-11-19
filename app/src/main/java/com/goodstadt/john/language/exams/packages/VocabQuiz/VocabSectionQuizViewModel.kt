@@ -211,6 +211,18 @@ class VocabSectionQuizViewModel @Inject constructor(
     val activeFilters: StateFlow<Set<WordMasteryLevel>> = _activeFilters.asStateFlow()
     val totalQuestionCount: Int get() = if (_allSectionQuestions.isNotEmpty()) _allSectionQuestions.size else _allQuestions.size
 
+    /**
+     * 1-based number of the current question across the WHOLE quiz (all 10-question pages), e.g. 11 on page
+     * 2, for the "Question 11 of 15" counter. [sectionIndex] is the 1-based page, [questionIndex] the
+     * 0-based question on it (passed in so the counter recomposes with them). Mirrors iOS.
+     */
+    fun overallQuestionNumber(sectionIndex: Int, questionIndex: Int): Int =
+        _paginatedQuestions.take((sectionIndex - 1).coerceAtLeast(0)).sumOf { it.size } + questionIndex + 1
+
+    /** Questions in play across all pages (falls back to the current page when nothing is paginated). */
+    val overallQuestionCount: Int
+        get() = if (_paginatedQuestions.isEmpty()) _questions.value.size else _paginatedQuestions.sumOf { it.size }
+
     // Section-wide questions (all JSON files combined) and pagination
     private var _allSectionQuestions: List<WordQuizQuestion> = emptyList()
     private var _paginatedQuestions: List<List<WordQuizQuestion>> = emptyList()

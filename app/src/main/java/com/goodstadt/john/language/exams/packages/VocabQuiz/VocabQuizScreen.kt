@@ -285,18 +285,21 @@ fun VocabQuizScreen(
                 onSelectAll = { viewModel.selectAllFilters() }
             )
 
-            // Question counter with filter info
-            if (activeFilters.isNotEmpty()) {
-                val filteredTotal = viewModel.filteredQuestionCount
-                if (filteredTotal > 0) {
-                    Text(
-                        text = "Showing $filteredTotal of ${viewModel.totalQuestionCount}",
-                        style = MaterialTheme.typography.labelSmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                        modifier = Modifier.padding(bottom = 4.dp)
-                    )
-                }
-            }
+        }
+
+        // Question counter, numbered across the whole quiz ("Question 11 of 15"), not per 10-question page.
+        // With a mastery filter on, the full section size follows in brackets. Mirrors iOS.
+        if (questions.isNotEmpty()) {
+            val number = viewModel.overallQuestionNumber(currentIndex, currentQuestionIndex)
+            val inPlay = viewModel.overallQuestionCount
+            Text(
+                text = if (isSectionMode && activeFilters.isNotEmpty())
+                    "Question $number of $inPlay (of ${viewModel.totalQuestionCount})"
+                else "Question $number of $inPlay",
+                style = MaterialTheme.typography.labelSmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                modifier = Modifier.padding(bottom = 4.dp)
+            )
         }
 
         // Long instructions and answers can scroll without moving navigation or scores off-screen.
