@@ -88,6 +88,7 @@ import com.goodstadt.john.language.exams.packages.UsageQuiz.DailyGoalRing
 import com.goodstadt.john.language.exams.packages.UsageQuiz.DailyGoalExplainer
 import com.goodstadt.john.language.exams.packages.UsageQuiz.LevelFireworks
 import com.goodstadt.john.language.exams.packages.UsageQuiz.playChimeUnlessSilent
+import androidx.compose.foundation.shape.CircleShape
 import timber.log.Timber
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -488,10 +489,11 @@ fun CategoryMasteryRow(
                 val style = MaterialTheme.typography.labelSmall.copy(fontFeatureSettings = "tnum")
                 val textScale = if (pulsing && fx.tier == RowPulseTier.PERFECT) 1f + 0.12f * pulseAmount else 1f
                 val crownScale = if (pulsing && fx.tier == RowPulseTier.MASTERED) 1f + 0.8f * pulseAmount else 1f
+                Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.fillMaxWidth()) {
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
                     modifier = Modifier
-                        .clickable { onStatsTap() } // tap the stats line for the guide (title opens the quiz)
+                        .weight(1f)
                         .graphicsLayer {
                             scaleX = textScale; scaleY = textScale
                             transformOrigin = TransformOrigin(0f, 0.5f)
@@ -509,6 +511,19 @@ fun CategoryMasteryRow(
                     // "New best!" gives way to "↻ ready" (both together don't fit on one line).
                     if (fx.newBestTitle == stat.categoryTitle && !ready)
                         StatsTag("New best!", Color(0xFFFF9800), filled = true, style = style)
+                }
+                // A clear ⓘ button for the guide, so tapping anywhere else on the row (title, stats) always
+                // opens the quiz. Only shown when there are stats to explain.
+                Icon(
+                    imageVector = Icons.Outlined.Info,
+                    contentDescription = "What the row's symbols mean",
+                    tint = LocalExtendedColors.current.buttonBlue,
+                    modifier = Modifier
+                        .padding(start = 6.dp)
+                        .size(22.dp)
+                        .clip(CircleShape)
+                        .clickable { onStatsTap() }
+                )
                 }
             }
         }
