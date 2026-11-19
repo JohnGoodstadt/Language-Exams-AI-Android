@@ -37,8 +37,14 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.slideInVertically
+import androidx.compose.animation.slideOutVertically
+import androidx.compose.foundation.layout.widthIn
+import androidx.compose.material3.Surface
 import android.content.Context
-import android.widget.Toast
 import android.media.AudioManager
 import android.media.MediaPlayer
 import android.provider.Settings
@@ -125,6 +131,8 @@ fun UsageQuizSplitScreen(
         }
     }
     val statsInline = LocalConfiguration.current.screenWidthDp >= 600
+    // Teaching tip (title to subtitle) shown over the quiz sheet as it opens - see EntryTipBanner.
+    var entryTip by remember { mutableStateOf<Pair<String, String>?>(null) }
 
     // Row pulse (gamification, mirrors iOS): when the quiz sheet closes after a FINISHED run, that quiz's row
     // pulses to draw the eye to its updated stats - 1 blue pulse (finished), 2 green + stats pop (perfect),
@@ -316,9 +324,8 @@ fun UsageQuizSplitScreen(
             onClick = {
                 viewModel.resetForRetakeIfFinished() // finished quiz -> fresh go (Correct/Tries back to 0)
                 // Teaching tip: how mastery works (first time) or "come back tomorrow" (2nd perfect day is today).
-                viewModel.entryTipForSelectedQuiz()?.let { (title, subtitle) ->
-                    Toast.makeText(context, "$title\n$subtitle", Toast.LENGTH_LONG).show()
-                }
+                // Shown as our own banner inside the sheet (a system Toast is capped at 2 lines on Android 12+).
+                entryTip = viewModel.entryTipForSelectedQuiz()
                 showQuizSheet = true
             },
             enabled = selectedQuiz != null || availableQuizzes.isNotEmpty(),
@@ -351,6 +358,12 @@ fun UsageQuizSplitScreen(
                     onShowInfo = { showInfoBottomSheet = true },
                     translating = translating,
                     translateButton = translateButton,
+                )
+                // Entry teaching tip over the bottom of the quiz: wraps to several lines; 5 s or tap to dismiss.
+                EntryTipBanner(
+                    tip = entryTip,
+                    onDismiss = { entryTip = null },
+                    modifier = Modifier.align(Alignment.BottomCenter)
                 )
             }
         }
@@ -637,6 +650,52 @@ private fun playChimeUnlessSilent(context: Context) {
         MediaPlayer.create(context, R.raw.success_chime)?.apply {
             setOnCompletionListener { it.release() }
             start()
+        }
+    }
+}
+
+
+/**
+ * Teaching tip banner shown over the bottom of the quiz sheet as it opens (how mastery works / come back
+ * tomorrow). Our own card rather than a system Toast, which Android 12+ truncates to two lines. Appears
+ * shortly after the sheet, stays 5 s, tap to dismiss. Mirrors the iOS entry-tip banner.
+ */
+@Composable
+private fun EntryTipBanner(tip: Pair<String, String>?, onDismiss: () -> Unit, modifier: Modifier = Modifier) {
+    var visible by remember { mutableStateOf(false) }
+    LaunchedEffect(tip) {
+        if (tip == null) { visible = false; return@LaunchedEffect }
+        delay(600)          // let the sheet finish opening
+        visible = true
+        delay(5_000)
+        visible = false
+        delay(300)          // exit animation
+        onDismiss()
+    }
+    AnimatedVisibility(
+        visible = visible && tip != null,
+        enter = slideInVertically { it } + fadeIn(),
+        exit = slideOutVertically { it } + fadeOut(),
+        modifier = modifier
+    ) {
+        val (title, subtitle) = tip ?: ("" to "")
+        Surface(
+            shape = RoundedCornerShape(12.dp),
+            color = MaterialTheme.colorScheme.surfaceVariant,
+            tonalElevation = 3.dp,
+            shadowElevation = 6.dp,
+            modifier = Modifier
+                .padding(horizontal = 16.dp, vertical = 24.dp)
+                .widthIn(max = 500.dp)
+                .fillMaxWidth()
+                .clickable { visible = false; onDismiss() }
+        ) {
+            Column(modifier = Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                Text(title, style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold,
+                    color = MaterialTheme.colorScheme.onSurface)
+                Text(subtitle, style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant)
+            }
         }
     }
 }
