@@ -200,10 +200,10 @@
 				{
 					"title": "",
 					"page": 8,
-					"summary": "Die Vergangenheit von 'haben' ist 'hatte' (Präteritum).",
-					"summary_en": "The past of 'haben' is 'hatte' (simple past).",
-					"explain": "'haben' im Präteritum: 'hatte(n)'. Bei 'wir' heißt es 'hatten': 'Wir hatten keine Zeit.'",
-					"explain_en": "'haben' in the simple past: 'hatte(n)'. With 'wir' it is 'hatten': 'Wir hatten keine Zeit.'",
+					"summary": "Bei 'wir' heißt 'haben' im Präteritum 'hatten'.",
+					"summary_en": "With 'wir', the simple-past form of 'haben' is 'hatten'.",
+					"explain": "Die Präteritumform richtet sich nach dem Subjekt: ich/er/sie/es 'hatte', wir/sie/Sie 'hatten'. Daher: 'Wir hatten keine Zeit.'",
+					"explain_en": "The simple-past form depends on the subject: ich/er/sie/es uses 'hatte'; wir/sie/Sie uses 'hatten'. Therefore: 'Wir hatten keine Zeit.'",
 					"sentence": "Wählen Sie den richtigen Satz.",
 					"sentence_en": "Choose the correct sentence.",
 					"words": [
@@ -217,7 +217,7 @@
 						},
 						{
 							"ok": false,
-							"word": "Wir haben keine Zeit gehatt."
+							"word": "Wir hattest keine Zeit."
 						}
 					]
 				},
