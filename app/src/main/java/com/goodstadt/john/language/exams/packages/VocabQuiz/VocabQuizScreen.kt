@@ -163,10 +163,9 @@ fun VocabQuizScreen(
                     // _      -> The actual underscore to match
                     // (?!_)  -> Check that there is NOT an underscore after
                     question.question.replace(Regex("(?<!_)_(?!_)"), "___")
-                } else if (viewModel.currentFileFormat.value == viewModel.quizWordDefinition) {
-                    question.question
                 } else {
-                    ""//question.sentence
+                    // The word being asked - shown on every question, like iOS (was blank for some formats).
+                    question.question
                 }
 
             // Restore any previous answer for this question so navigating back (auto or manual) re-shows
@@ -175,15 +174,9 @@ fun VocabQuizScreen(
             val prevCorrect = viewModel.answerCorrectFor(question.question)
             selectedOption = prevOption
             isCurrentAnswerCorrect = prevCorrect
-            displayedSentence = if (prevCorrect == true && prevOption != null) {
-                viewModel.highlightWordInSentence(
-                    sentence = prevOption,
-                    wordToHighlight = question.question,
-                    highlightColor = correctGreen
-                )
-            } else {
-                AnnotatedString(questionText)
-            }
+            // The title stays the ASKED word even once answered (like iOS); the correct answer is marked on
+            // its row (green) instead of replacing the title.
+            displayedSentence = AnnotatedString(questionText)
         }
     }
 
@@ -379,14 +372,10 @@ fun VocabQuizScreen(
                         }
                     }
 
-                // Only fill-in-the-blank and word-definition questions show text here (the question itself).
-                // Other questions no longer show the correct answer as a big green title above the rows: the
-                // chosen ROW changes colour instead. (annotatedQuestionText is still built - the stats use it.)
-                val showQuestionText = viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks ||
-                    viewModel.currentFileFormat.value == viewModel.quizWordDefinition
-                if (!showQuestionText) {
-                    // nothing - see the coloured answer row below
-                } else if (isCurrentAnswerCorrect == true) {
+                // Title = the word being asked, on every question and after answering (like iOS). The correct
+                // answer is shown by its ROW turning green, not by replacing the title.
+                // Always the asked word (never the answer). The correct answer is marked on its row.
+                if (isCurrentAnswerCorrect == true) {
                     Text(
                         text = annotatedQuestionText,
                         style = MaterialTheme.typography.bodyLarge.copy(fontSize = 24.sp),
@@ -480,11 +469,7 @@ fun VocabQuizScreen(
                             viewModel.vocabQuizAttemptStats(isOptionCorrect, question.question)
 
                             if (isOptionCorrect) {
-                                displayedSentence = viewModel.highlightWordInSentence(
-                                    sentence = option,
-                                    wordToHighlight = question.question,
-                                    highlightColor = correctGreen
-                                )
+                                // Title stays the asked word; the row turns green (row background below).
                                 viewModel.handleTap(option)
                                 viewModel.incQuizStat()
                             } else { // incorrect
