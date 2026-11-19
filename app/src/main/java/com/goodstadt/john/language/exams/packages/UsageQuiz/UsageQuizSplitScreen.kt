@@ -37,6 +37,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
+import androidx.compose.material.icons.outlined.Info
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.rememberCoroutineScope
 import kotlinx.coroutines.launch
@@ -378,11 +380,25 @@ fun UsageQuizSplitScreen(
                             color = if (isSelected) LocalExtendedColors.current.buttonBlue else MaterialTheme.colorScheme.onSurface
                         )
                         if (!statsInline && rowSummary != null) {
-                            QuizRowStatsText(rowSummary, small = true, mastered = rowMastered, ready = rowReady, newBest = rowNewBest, onClick = onStatsTap, pulseTier = if (pulsingBaseName == quiz.baseName) pulseTier else null, pulseAmount = pulseAmount.value, modifier = Modifier.padding(top = 3.dp))
+                            QuizRowStatsText(rowSummary, small = true, mastered = rowMastered, ready = rowReady, newBest = rowNewBest, pulseTier = if (pulsingBaseName == quiz.baseName) pulseTier else null, pulseAmount = pulseAmount.value, modifier = Modifier.padding(top = 3.dp))
                         }
                     }
                     if (statsInline && rowSummary != null) {
-                        QuizRowStatsText(rowSummary, small = false, mastered = rowMastered, ready = rowReady, newBest = rowNewBest, onClick = onStatsTap, pulseTier = if (pulsingBaseName == quiz.baseName) pulseTier else null, pulseAmount = pulseAmount.value, modifier = Modifier.padding(start = 12.dp, end = 8.dp))
+                        QuizRowStatsText(rowSummary, small = false, mastered = rowMastered, ready = rowReady, newBest = rowNewBest, pulseTier = if (pulsingBaseName == quiz.baseName) pulseTier else null, pulseAmount = pulseAmount.value, modifier = Modifier.padding(start = 12.dp, end = 8.dp))
+                    }
+                    // A clear ⓘ button for the guide, so tapping anywhere else on the row selects the quiz.
+                    // Only shown when the row has stats to explain.
+                    if (rowSummary != null) {
+                        Icon(
+                            imageVector = Icons.Outlined.Info,
+                            contentDescription = "What the row's symbols mean",
+                            tint = LocalExtendedColors.current.buttonBlue,
+                            modifier = Modifier
+                                .padding(end = 6.dp)
+                                .size(22.dp)
+                                .clip(CircleShape)
+                                .clickable { onStatsTap() }
+                        )
                     }
                     if (isSelected) {
                         Icon(
