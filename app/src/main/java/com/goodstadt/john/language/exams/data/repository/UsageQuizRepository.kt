@@ -158,8 +158,8 @@ class UsageQuizRepository @Inject constructor(
             parts += "$MASTERY_DAYS on $MASTERY_DAYS days"
             parts += "Mastered"
         } else {
-            // "2p" = flawless on 2 different days, so the learner knows how many are left.
-            if (perfectDays > 0) parts += "${perfectDays}p"
+            // Progress dots "●●○" = flawless on 2 of the 3 different days needed (was "2p"). Mirrors iOS.
+            if (perfectDays > 0) parts += "●".repeat(perfectDays) + "○".repeat(MASTERY_DAYS - perfectDays)
             val recent = attempts.sortedByDescending { it.attemptedAt }
                 .filter { it.total > 0 }
                 .take(RECENT_RUNS_SHOWN)
@@ -169,6 +169,41 @@ class UsageQuizRepository @Inject constructor(
         }
         parts.joinToString(" · ")
     }
+
+    // ---------------- Gamification helpers (mirror iOS UsageQuizRepository) ----------------
+
+    /** "↻ ready": 1 or 2 flawless days, not mastered, and none yet TODAY (dayIndex: 30 s "days" in DEBUG). */
+    fun isReadyAgain(quizId: String, now: Long = System.currentTimeMillis()): Boolean {
+        val days = getQuizAttempts(quizId).filter { it.flawless }
+            .map { VocabMasteryEngine.dayIndex(it.attemptedAt, BuildConfig.DEBUG) }.toSet()
+        return days.isNotEmpty() && days.size < MASTERY_DAYS &&
+            VocabMasteryEngine.dayIndex(now, BuildConfig.DEBUG) !in days
+    }
+
+    /** Best FIRST-TRY score so far, and whether the quiz has been finished before (for "New best!"). */
+    fun previousBest(quizId: String): Pair<Int, Boolean> {
+        val attempts = getQuizAttempts(quizId)
+        return (attempts.maxOfOrNull { it.firstTryCorrect ?: it.correct } ?: 0) to attempts.isNotEmpty()
+    }
+
+    /** Daily goal: how many DIFFERENT usage quizzes were finished today (real calendar day, not DEBUG days). */
+    fun quizzesCompletedToday(now: Long = System.currentTimeMillis()): Int = synchronized(lock) {
+        val cal = java.util.Calendar.getInstance()
+        cal.timeInMillis = now
+        val y = cal.get(java.util.Calendar.YEAR); val d = cal.get(java.util.Calendar.DAY_OF_YEAR)
+        quizStates.count { (_, stat) ->
+            @Suppress("SENSELESS_COMPARISON")
+            val attempts = if (stat.attempts == null) emptyList() else stat.attempts
+            attempts.any {
+                cal.timeInMillis = it.attemptedAt
+                cal.get(java.util.Calendar.YEAR) == y && cal.get(java.util.Calendar.DAY_OF_YEAR) == d
+            }
+        }
+    }
+
+    /** Level crown: every quiz in the level (by baseName) is mastered. */
+    fun isLevelMastered(baseNames: List<String>): Boolean =
+        baseNames.isNotEmpty() && baseNames.all { isMastered(it) }
 
     /** True once the quiz has been completed flawlessly on [MASTERY_DAYS] different days (row crown). */
     fun isMastered(quizId: String): Boolean = flawlessDistinctDays(quizId) >= MASTERY_DAYS
@@ -468,6 +503,8 @@ class UsageQuizRepository @Inject constructor(
         const val RECENT_RUNS_SHOWN = 3
         /** Flawless goes on this many different days = mastered (row crown, Focus 100%, 3-day award). */
         const val MASTERY_DAYS = 3
+        /** Daily goal: finish this many DIFFERENT usage quizzes today. */
+        const val DAILY_GOAL = 2
 
         /** "Just now" (< 10 min), then minutes "50m", hours "3h", days "2d", weeks "3w", years "1y". */
         fun shortAge(elapsedMillis: Long): String {

@@ -37,6 +37,23 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.rememberCoroutineScope
+import kotlinx.coroutines.launch
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.foundation.Canvas
+import androidx.compose.ui.graphics.drawscope.Stroke
+import androidx.compose.ui.graphics.StrokeCap
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.material.icons.filled.Check
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.animation.core.LinearOutSlowInEasing
+import androidx.compose.ui.window.Dialog
+import androidx.compose.ui.window.DialogProperties
+import androidx.compose.ui.geometry.Offset
+import com.goodstadt.john.language.exams.data.repository.UsageQuizRepository
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
@@ -142,6 +159,19 @@ fun UsageQuizSplitScreen(
     var pulsingBaseName by remember { mutableStateOf<String?>(null) }
     var pulseTier by remember { mutableStateOf(RowPulseTier.FINISHED) }
     val pulseAmount = remember { Animatable(0f) }
+    // More gamification (mirrors iOS), played with the row pulse when the sheet closes: "New best!" tag,
+    // "+N XP" rising from the row, level crown + fireworks, daily-goal ring + banner. Plus explanations:
+    // tap the ring (popup) or a row's stats line (guide sheet).
+    var xpAtSheetOpen by remember { mutableIntStateOf(0) }
+    var newBestBaseName by remember { mutableStateOf<String?>(null) }
+    var xpFlyBaseName by remember { mutableStateOf<String?>(null) }
+    var xpFlyAmount by remember { mutableIntStateOf(0) }
+    val xpFlyProgress = remember { Animatable(0f) }
+    var showLevelFireworks by remember { mutableStateOf(false) }
+    var showGoalPopup by remember { mutableStateOf(false) }
+    var showRowGuide by remember { mutableStateOf(false) }
+    val scope = rememberCoroutineScope()
+
     LaunchedEffect(showQuizSheet) {
         if (showQuizSheet) return@LaunchedEffect
         val pulse = viewModel.takePendingRowPulse() ?: return@LaunchedEffect
@@ -160,6 +190,15 @@ fun UsageQuizSplitScreen(
                 playChimeUnlessSilent(context)
             }
         }
+        // "New best!" (stays while this screen is open) and the "+N XP" fly-in, alongside the pulse.
+        if (pulse.newBest) newBestBaseName = pulse.baseName
+        val xpEarned = viewModel.totalXp() - xpAtSheetOpen
+        if (xpEarned > 0) {
+            xpFlyAmount = xpEarned
+            xpFlyProgress.snapTo(0f)
+            xpFlyBaseName = pulse.baseName
+            scope.launch { xpFlyProgress.animateTo(1f, tween(1400)) }
+        }
         val animationsOff = Settings.Global.getFloat(
             context.contentResolver, Settings.Global.ANIMATOR_DURATION_SCALE, 1f) == 0f
         repeat(if (animationsOff) 1 else pulse.tier.pulses) {
@@ -168,6 +207,18 @@ fun UsageQuizSplitScreen(
             delay(50)
         }
         pulsingBaseName = null
+        xpFlyBaseName = null
+        // Bigger moments after the row: a whole level mastered (fireworks + banner + chime), otherwise
+        // today's goal just reached (banner).
+        if (pulse.levelMastered != null) {
+            playChimeUnlessSilent(context)
+            showLevelFireworks = true
+            viewModel.showGamificationBanner("${pulse.levelMastered} mastered! 👑", "You've mastered every quiz in this level.")
+        } else if (pulse.dailyGoalDone) {
+            haptics.performHapticFeedback(HapticFeedbackType.LongPress)
+            viewModel.showGamificationBanner("Daily goal done! 🎯",
+                "${UsageQuizRepository.DAILY_GOAL} quizzes today. Great work.")
+        }
     }
 
     // Translate toggle: only offered when the loaded data carries "_en" translations (older cached /
@@ -195,20 +246,44 @@ fun UsageQuizSplitScreen(
     ) {
         // --- Level tabs (filter the quiz list below) ---
         val useFullLabels = LocalConfiguration.current.screenWidthDp >= 380
-        val labelFor: (UsageQuizLevelsFilename) -> String = { if (useFullLabels) it.description else it.shortLabel }
-        HorizontalLevelPicker(
-            options = UsageQuizLevelsFilename.entries.map { labelFor(it) },
-            selectedOption = labelFor(selectedLevel),
-            onOptionSelected = { newLabel ->
-                val level = UsageQuizLevelsFilename.entries.first { labelFor(it) == newLabel }
-                if (level != selectedLevel) {
-                    viewModel.onLevelSelected(level)
-                    viewModel.loadQuestions()
+        // Level crown: " 👑" on a level whose every quiz is mastered (re-read when stats change).
+        val masteredLevels = remember(usageStatsVersion) {
+            UsageQuizLevelsFilename.entries.filter { viewModel.isLevelMastered(it) }.toSet()
+        }
+        val labelFor: (UsageQuizLevelsFilename) -> String = {
+            (if (useFullLabels) it.description else it.shortLabel) + if (it in masteredLevels) " 👑" else ""
+        }
+        val doneToday = remember(usageStatsVersion, nowMillis) { viewModel.quizzesCompletedToday() }
+        Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.fillMaxWidth()) {
+            Box(modifier = Modifier.weight(1f)) {
+                HorizontalLevelPicker(
+                    options = UsageQuizLevelsFilename.entries.map { labelFor(it) },
+                    selectedOption = labelFor(selectedLevel),
+                    onOptionSelected = { newLabel ->
+                        val level = UsageQuizLevelsFilename.entries.first { labelFor(it) == newLabel }
+                        if (level != selectedLevel) {
+                            viewModel.onLevelSelected(level)
+                            viewModel.loadQuestions()
+                        }
+                    },
+                    filledWhenSelected = true,
+                    fontSize = 16.sp
+                )
+            }
+            // Daily goal ring: tap for what it means.
+            Box {
+                DailyGoalRing(
+                    done = doneToday,
+                    goal = UsageQuizRepository.DAILY_GOAL,
+                    modifier = Modifier
+                        .padding(start = 6.dp)
+                        .clickable { showGoalPopup = true }
+                )
+                DropdownMenu(expanded = showGoalPopup, onDismissRequest = { showGoalPopup = false }) {
+                    DailyGoalExplainer(done = doneToday, goal = UsageQuizRepository.DAILY_GOAL)
                 }
-            },
-            filledWhenSelected = true,
-            fontSize = 16.sp
-        )
+            }
+        }
         Spacer(modifier = Modifier.height(6.dp)) // a little air between the level tabs and the learningTitle
 
         // --- Fluency label (the stats-dashboard IconButton is removed for now: it took too much height) ---
@@ -272,6 +347,13 @@ fun UsageQuizSplitScreen(
                 val rowMastered = remember(quiz.baseName, usageStatsVersion, nowMillis) {
                     viewModel.quizRowMastered(quiz)
                 }
+                val rowReady = remember(quiz.baseName, usageStatsVersion, nowMillis) {
+                    viewModel.quizRowReady(quiz, nowMillis)
+                }
+                // "New best!" gives way to "↻ ready" (both together don't fit on one line).
+                val rowNewBest = newBestBaseName == quiz.baseName && !rowReady
+                val onStatsTap = { showRowGuide = true }
+                Box(modifier = Modifier.fillMaxWidth()) {
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -296,11 +378,11 @@ fun UsageQuizSplitScreen(
                             color = if (isSelected) LocalExtendedColors.current.buttonBlue else MaterialTheme.colorScheme.onSurface
                         )
                         if (!statsInline && rowSummary != null) {
-                            QuizRowStatsText(rowSummary, small = true, mastered = rowMastered, pulseTier = if (pulsingBaseName == quiz.baseName) pulseTier else null, pulseAmount = pulseAmount.value, modifier = Modifier.padding(top = 3.dp))
+                            QuizRowStatsText(rowSummary, small = true, mastered = rowMastered, ready = rowReady, newBest = rowNewBest, onClick = onStatsTap, pulseTier = if (pulsingBaseName == quiz.baseName) pulseTier else null, pulseAmount = pulseAmount.value, modifier = Modifier.padding(top = 3.dp))
                         }
                     }
                     if (statsInline && rowSummary != null) {
-                        QuizRowStatsText(rowSummary, small = false, mastered = rowMastered, pulseTier = if (pulsingBaseName == quiz.baseName) pulseTier else null, pulseAmount = pulseAmount.value, modifier = Modifier.padding(start = 12.dp, end = 8.dp))
+                        QuizRowStatsText(rowSummary, small = false, mastered = rowMastered, ready = rowReady, newBest = rowNewBest, onClick = onStatsTap, pulseTier = if (pulsingBaseName == quiz.baseName) pulseTier else null, pulseAmount = pulseAmount.value, modifier = Modifier.padding(start = 12.dp, end = 8.dp))
                     }
                     if (isSelected) {
                         Icon(
@@ -310,6 +392,25 @@ fun UsageQuizSplitScreen(
                         )
                     }
                 }
+                // "+N XP" rising from the row and fading, after the sheet closes.
+                if (xpFlyBaseName == quiz.baseName) {
+                    val p = xpFlyProgress.value
+                    Text(
+                        text = "+$xpFlyAmount XP",
+                        style = MaterialTheme.typography.titleMedium,
+                        fontWeight = FontWeight.Bold,
+                        color = Color(0xFFFF9800),
+                        modifier = Modifier
+                            .align(Alignment.CenterEnd)
+                            .padding(end = 48.dp)
+                            .graphicsLayer {
+                                translationY = -70.dp.toPx() * p
+                                alpha = 1f - p
+                                scaleX = 1f + 0.3f * p; scaleY = scaleX
+                            }
+                    )
+                }
+                } // Box
                 HorizontalDivider(
                     modifier = Modifier.padding(start = 16.dp),
                     thickness = 0.5.dp,
@@ -323,6 +424,7 @@ fun UsageQuizSplitScreen(
         Button(
             onClick = {
                 viewModel.resetForRetakeIfFinished() // finished quiz -> fresh go (Correct/Tries back to 0)
+                xpAtSheetOpen = viewModel.totalXp()  // so the XP earned in the sheet can fly in from the row
                 // Teaching tip: how mastery works (first time) or "come back tomorrow" (2nd perfect day is today).
                 // Shown as our own banner inside the sheet (a system Toast is capped at 2 lines on Android 12+).
                 entryTip = viewModel.entryTipForSelectedQuiz()
@@ -342,6 +444,10 @@ fun UsageQuizSplitScreen(
             )
         }
     }
+
+    // --- Explanations + level fireworks (gamification) ---
+    if (showRowGuide) UsageRowGuideSheet(onDismiss = { showRowGuide = false })
+    if (showLevelFireworks) LevelFireworks(onDone = { showLevelFireworks = false })
 
     // --- The quiz itself, in a near-full-height sheet ---
     if (showQuizSheet) {
@@ -581,6 +687,9 @@ private fun QuizRowStatsText(
     summary: String,
     small: Boolean,
     mastered: Boolean,
+    ready: Boolean = false,            // "↻ ready" - a perfect run today counts towards the crown
+    newBest: Boolean = false,          // "New best!" - the run just finished beat this quiz's best
+    onClick: (() -> Unit)? = null,     // tap the stats line -> the row guide
     pulseTier: RowPulseTier? = null,   // non-null while this row is pulsing
     pulseAmount: Float = 0f,           // 0..1 within a pulse
     modifier: Modifier = Modifier,
@@ -592,10 +701,12 @@ private fun QuizRowStatsText(
         // "tnum" = tabular digits, so the scores line up row to row (set on the style: Text() has no such param).
         .copy(fontFeatureSettings = "tnum")
     Row(
-        modifier = modifier.graphicsLayer {
-            scaleX = textScale; scaleY = textScale
-            transformOrigin = TransformOrigin(0f, 0.5f)
-        },
+        modifier = modifier
+            .then(if (onClick != null) Modifier.clickable(onClick = onClick) else Modifier)
+            .graphicsLayer {
+                scaleX = textScale; scaleY = textScale
+                transformOrigin = TransformOrigin(0f, 0.5f)
+            },
         verticalAlignment = Alignment.CenterVertically
     ) {
         Text(
@@ -618,6 +729,8 @@ private fun QuizRowStatsText(
                     .graphicsLayer { scaleX = crownScale; scaleY = crownScale }
             )
         }
+        if (ready) StatsTag("↻ ready", Color(0xFF2196F3), filled = false, style = style)
+        if (newBest) StatsTag("New best!", Color(0xFFFF9800), filled = true, style = style)
     }
 }
 
@@ -696,6 +809,132 @@ private fun EntryTipBanner(tip: Pair<String, String>?, onDismiss: () -> Unit, mo
                 Text(subtitle, style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant)
             }
+        }
+    }
+}
+
+
+// ---------------- Gamification UI (mirrors iOS UsageQuizView) ----------------
+
+/** Small tag after the stats line: "↻ ready" (outlined) or "New best!" (filled). */
+@Composable
+private fun StatsTag(text: String, color: Color, filled: Boolean, style: TextStyle) {
+    Text(
+        text = text,
+        style = style,
+        fontWeight = FontWeight.Bold,
+        color = if (filled) Color.White else color,
+        maxLines = 1,
+        modifier = Modifier
+            .padding(start = 4.dp)
+            .background(if (filled) color else color.copy(alpha = 0.12f), RoundedCornerShape(50))
+            .padding(horizontal = 6.dp, vertical = 1.dp)
+    )
+}
+
+/** Ring next to the level tabs: today's finished usage quizzes against the daily goal ("1/2"); green ✓ when met. */
+@Composable
+private fun DailyGoalRing(done: Int, goal: Int, modifier: Modifier = Modifier) {
+    val fraction by animateFloatAsState(if (goal > 0) (done.toFloat() / goal).coerceAtMost(1f) else 0f, tween(600), label = "goal")
+    val met = done >= goal
+    val track = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.15f)
+    val arc = if (met) Color(0xFF4CAF50) else Color(0xFF2196F3)
+    Box(
+        contentAlignment = Alignment.Center,
+        modifier = modifier
+            .size(34.dp)
+            .semantics { contentDescription = "Daily goal: ${minOf(done, goal)} of $goal quizzes today" }
+    ) {
+        Canvas(modifier = Modifier.matchParentSize().padding(2.dp)) {
+            val stroke = Stroke(width = 4.dp.toPx(), cap = StrokeCap.Round)
+            drawArc(track, 0f, 360f, useCenter = false, style = stroke)
+            drawArc(arc, -90f, 360f * fraction, useCenter = false, style = stroke)
+        }
+        if (met) Icon(Icons.Default.Check, contentDescription = null, tint = Color(0xFF4CAF50), modifier = Modifier.size(16.dp))
+        else Text("${minOf(done, goal)}/$goal", style = MaterialTheme.typography.labelSmall, fontWeight = FontWeight.Bold)
+    }
+}
+
+/** Popup from the daily-goal ring: what the goal is and today's progress. */
+@Composable
+private fun DailyGoalExplainer(done: Int, goal: Int) {
+    Column(modifier = Modifier.width(280.dp).padding(16.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+        Text("Daily goal 🎯", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
+        Text("Finish $goal different Usage quizzes today. Any score counts. It starts again at midnight.",
+            style = MaterialTheme.typography.bodyMedium)
+        Text(
+            if (done >= goal) "Done for today ✓" else "Today: ${minOf(done, goal)} of $goal",
+            style = MaterialTheme.typography.bodyMedium,
+            fontWeight = FontWeight.Bold,
+            color = if (done >= goal) Color(0xFF4CAF50) else Color(0xFF2196F3)
+        )
+    }
+}
+
+/** Guide sheet from tapping a quiz row's stats line: what each symbol on the row means. */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun UsageRowGuideSheet(onDismiss: () -> Unit) {
+    val items = listOf(
+        Triple("20m · 5x", MaterialTheme.colorScheme.onSurfaceVariant, "Time since your last go, and how many times you've finished this quiz."),
+        Triple("10/10 9/10", MaterialTheme.colorScheme.onSurfaceVariant, "Your last 3 scores, newest first (right first time)."),
+        Triple("●●○", MaterialTheme.colorScheme.onSurface, "Perfect runs on different days. 3 different days masters the quiz."),
+        Triple("👑", Color(0xFFFFC107), "Mastered: perfect runs on 3 different days."),
+        Triple("↻ ready", Color(0xFF2196F3), "A perfect run today will count towards the crown."),
+        Triple("New best!", Color(0xFFFF9800), "You just beat your best score on this quiz."),
+    )
+    ModalBottomSheet(onDismissRequest = onDismiss) {
+        Column(modifier = Modifier.padding(horizontal = 20.dp).padding(bottom = 32.dp),
+            verticalArrangement = Arrangement.spacedBy(14.dp)) {
+            Text("Your quiz progress", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
+            items.forEach { (symbol, color, text) ->
+                Row(verticalAlignment = Alignment.Top) {
+                    Text(symbol, color = color, fontWeight = FontWeight.Bold,
+                        style = MaterialTheme.typography.bodyMedium, modifier = Modifier.width(96.dp))
+                    Text(text, style = MaterialTheme.typography.bodyMedium)
+                }
+            }
+            Text("Perfect = every question right on the first tap. Runs with mistakes never undo progress.",
+                style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+        }
+    }
+}
+
+/**
+ * Level mastered: a short gold particle burst over the whole screen (dimmed), ~3 s, tap to dismiss.
+ * Android has no fireworks effect like iOS's CelebrationOverlay, so this is a simple Canvas burst.
+ */
+@Composable
+private fun LevelFireworks(onDone: () -> Unit) {
+    val progress = remember { Animatable(0f) }
+    val particles = remember {
+        val rnd = kotlin.random.Random(System.currentTimeMillis())
+        List(90) {
+            Triple(rnd.nextFloat() * 2f * Math.PI.toFloat(), 0.35f + rnd.nextFloat() * 0.65f,
+                listOf(Color(0xFFFFC107), Color(0xFFFF9800), Color(0xFFFFEB3B), Color.White)[rnd.nextInt(4)])
+        }
+    }
+    LaunchedEffect(Unit) {
+        progress.animateTo(1f, tween(2800, easing = LinearOutSlowInEasing))
+        onDone()
+    }
+    Dialog(onDismissRequest = onDone, properties = DialogProperties(usePlatformDefaultWidth = false)) {
+        Box(modifier = Modifier.fillMaxSize().clickable { onDone() }) {
+            Canvas(modifier = Modifier.fillMaxSize()) {
+                val p = progress.value
+                val origin = Offset(size.width / 2f, size.height * 0.42f)
+                val reach = size.minDimension * 0.55f
+                particles.forEach { (angle, speed, color) ->
+                    val d = reach * speed * p
+                    val pos = Offset(origin.x + kotlin.math.cos(angle) * d,
+                        origin.y + kotlin.math.sin(angle) * d + 220f * p * p) // a little gravity
+                    drawCircle(color.copy(alpha = (1f - p).coerceIn(0f, 1f)), radius = 6f * (1f - 0.5f * p), center = pos)
+                }
+                drawCircle(Color(0xFFFFC107).copy(alpha = (0.6f * (1f - p * 3f)).coerceIn(0f, 1f)),
+                    radius = 60f + 240f * p, center = origin)
+            }
+            Text("👑", fontSize = 72.sp, modifier = Modifier.align(Alignment.Center)
+                .graphicsLayer { val s = 0.6f + 0.6f * minOf(progress.value * 3f, 1f); scaleX = s; scaleY = s })
         }
     }
 }

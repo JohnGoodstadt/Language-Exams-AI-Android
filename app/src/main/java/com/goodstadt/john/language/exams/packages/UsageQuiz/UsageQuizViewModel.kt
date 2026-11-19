@@ -283,6 +283,23 @@ class UsageQuizViewModel @Inject constructor(
         return usageQuizRepository.entryTip(baseName)
     }
 
+    /** "↻ ready" on a row: a perfect run today would add another day towards the crown. */
+    fun quizRowReady(quiz: QuizDetail, now: Long = System.currentTimeMillis()): Boolean =
+        usageQuizRepository.isReadyAgain(quiz.baseName, now)
+
+    /** Level crown: every quiz in [level] is mastered. */
+    fun isLevelMastered(level: UsageQuizLevelsFilename): Boolean =
+        usageQuizRepository.isLevelMastered(level.quizzes.map { it.baseName })
+
+    /** Daily goal ring: different usage quizzes finished today. */
+    fun quizzesCompletedToday(): Int = usageQuizRepository.quizzesCompletedToday()
+
+    /** All XP across levels - compared before/after the quiz sheet so the row can show "+N XP". */
+    fun totalXp(): Int = xpManager.state.value.levels.values.sumOf { it.xp }
+
+    /** Level / daily-goal banner shown on the list after the sheet closes (the app-wide banner). */
+    fun showGamificationBanner(title: String, subtitle: String) = bannerManager.showBanner(title, subtitle)
+
     /** The pulse queued by the last finished run (then cleared), or null if no run finished. */
     fun takePendingRowPulse(): RowPulse? = _pendingRowPulse.value.also { _pendingRowPulse.value = null }
 
@@ -774,6 +791,10 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
             // Record this go as a dated attempt (subsumes finishQuiz's completion/best-score bookkeeping)
             // and check the "flawless on 3 separate days" award.
             val wasMastered = usageQuizRepository.isMastered(currentQuizFileName)
+            val levelIds = selectedLevel.value.quizzes.map { it.baseName }
+            val levelWasMastered = usageQuizRepository.isLevelMastered(levelIds)
+            val goalWasMet = usageQuizRepository.quizzesCompletedToday() >= UsageQuizRepository.DAILY_GOAL
+            val (priorBest, playedBefore) = usageQuizRepository.previousBest(currentQuizFileName)
             val justEarnedAward = usageQuizRepository.recordAttempt(
                 quizId = currentQuizFileName, // e.g. "UsageQuiz1A1"
                 correct = qs.value.correct,
@@ -788,7 +809,12 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
                     !wasMastered && usageQuizRepository.isMastered(currentQuizFileName) -> RowPulseTier.MASTERED
                     questionCount > 0 && firstTryCorrectIndices.size >= questionCount -> RowPulseTier.PERFECT
                     else -> RowPulseTier.FINISHED
-                }
+                },
+                newBest = playedBefore && firstTryCorrectIndices.size > priorBest,
+                levelMastered = if (!levelWasMastered && usageQuizRepository.isLevelMastered(levelIds))
+                    selectedLevel.value.description else null,
+                dailyGoalDone = !goalWasMet &&
+                    usageQuizRepository.quizzesCompletedToday() >= UsageQuizRepository.DAILY_GOAL
             )
             if (justEarnedAward) {
                 xpManager.registerAction(XpActionType.MemoryBoost)
@@ -1221,5 +1247,14 @@ enum class RowPulseTier(val pulses: Int) {
     MASTERED(3)    // this run completed mastery (flawless on 3 different days)
 }
 
-/** A queued row pulse: which quiz row, and how strongly. */
-data class RowPulse(val baseName: String, val tier: RowPulseTier)
+/**
+ * A queued row pulse: which quiz row, how strongly, and the other moments played with it when the sheet
+ * closes - "New best!", a whole level just mastered (fireworks + banner), today's goal just reached (banner).
+ */
+data class RowPulse(
+    val baseName: String,
+    val tier: RowPulseTier,
+    val newBest: Boolean = false,
+    val levelMastered: String? = null,   // level name, e.g. "Beginner"
+    val dailyGoalDone: Boolean = false,
+)
