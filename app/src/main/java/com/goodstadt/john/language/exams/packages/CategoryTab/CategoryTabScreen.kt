@@ -1,5 +1,7 @@
 package com.goodstadt.john.language.exams.packages.CategoryTab
 
+import com.goodstadt.john.language.exams.utils.findActivity
+import com.goodstadt.john.language.exams.packages.reference.NavigationViewModel
 import kotlinx.coroutines.delay
 import com.goodstadt.john.language.exams.packages.UsageQuiz.EntryTipBanner
 import android.Manifest
@@ -177,6 +179,33 @@ fun CategoryTabScreen(
 
     // Global Translate sheet, opened from the "T" button in the stats row.
     var showTranslateSheet by remember { mutableStateOf(false) }
+
+    // Learn, then quiz.
+    // 1) One-time guide on tab 1 after the first readiness audit (signalled through the activity NavigationViewModel).
+    val tabActivity = context.findActivity() as? androidx.activity.ComponentActivity
+    val navViewModel: NavigationViewModel? = tabActivity?.let { hiltViewModel(it) }
+    var showVocabStartGuide by remember { mutableStateOf(false) }
+    val isTabOne = (tabIdentifier?.filter { it.isDigit() }?.toIntOrNull() ?: 0) == 1
+    if (isTabOne && navViewModel != null) {
+        val guideWanted by navViewModel.showVocabStartGuide.collectAsStateWithLifecycle()
+        LaunchedEffect(guideWanted) {
+            if (guideWanted) {
+                navViewModel.showVocabStartGuide.value = false
+                if (!LearnThenQuiz.hasSeenStartGuide(context)) {
+                    delay(800) // let the audit close and the tab settle
+                    LearnThenQuiz.setSeenStartGuide(context, true)
+                    showVocabStartGuide = true
+                }
+            }
+        }
+    }
+    // 2) "Section heard - now quiz yourself", held until no other sheet is in the way.
+    val sectionQuizPrompt by viewModel.sectionQuizPrompt.collectAsStateWithLifecycle()
+    val currentQuizCategoryForPrompt by viewModel.currentQuizCategory.collectAsStateWithLifecycle()
+    val promptCategory = sectionQuizPrompt?.takeIf {
+        !showMoreSheet && !showSavedSheet && !showVocabStartGuide && currentQuizCategoryForPrompt == null
+    }
+    val promptScope = rememberCoroutineScope()
 
     // Forget the last-played sentence when the user leaves this tab, so the Translate prefill starts blank.
     DisposableEffect(Unit) {
@@ -626,6 +655,26 @@ fun CategoryTabScreen(
             showQuizLegendSheet = showQuizLegendSheet,
             onDismissLegend = { showQuizLegendSheet = false },
         )
+
+        if (showVocabStartGuide) {
+            val firstSection = (uiState as? CategoryTabUiState.Success)?.categories?.firstOrNull()?.title
+            VocabStartGuideSheet(firstSectionTitle = firstSection, onDone = { showVocabStartGuide = false })
+        }
+        promptCategory?.let { category ->
+            SectionQuizPromptSheet(
+                sectionTitle = category.title,
+                onQuiz = {
+                    viewModel.clearSectionQuizPrompt()
+                    viewModel.stopSectionPlayback()
+                    // Let the prompt slide away before the quiz sheet comes up.
+                    promptScope.launch {
+                        delay(400)
+                        viewModel.openQuizForCategory(category)
+                    }
+                },
+                onLater = { viewModel.clearSectionQuizPrompt() }
+            )
+        }
 
     } //: Box
 }

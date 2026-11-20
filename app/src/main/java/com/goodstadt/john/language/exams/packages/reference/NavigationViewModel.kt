@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.packages.reference
 
+import kotlinx.coroutines.flow.MutableStateFlow
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestNavTarget
@@ -21,6 +22,10 @@ class NavigationViewModel @Inject constructor() : ViewModel() {
     // Sub-tab title to auto-select on the Me tab (e.g. from a notification deep link, "Saved").
     // MeTabContainerScreen consumes and clears it.
     var pendingMeSubTabTitle: String? = null
+
+    // Set when the learner leaves the first readiness-audit summary for the app: tab 1 (vocab list) shows the
+    // one-time "Listen, then quiz yourself" guide, then clears this. (Learn-then-quiz, mirrors iOS.)
+    val showVocabStartGuide = MutableStateFlow(false)
 
     fun requestNavigation(target: SideQuestNavTarget) {
         viewModelScope.launch {

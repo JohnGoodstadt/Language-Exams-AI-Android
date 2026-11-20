@@ -1,5 +1,9 @@
 package com.goodstadt.john.language.exams.packages.ReadinessAudit
 
+import com.goodstadt.john.language.exams.utils.findActivity
+import com.goodstadt.john.language.exams.packages.CategoryTab.LearnThenQuiz
+import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestNavTarget
+import com.goodstadt.john.language.exams.packages.reference.NavigationViewModel
 import android.content.Context
 import android.widget.Toast
 import androidx.activity.compose.BackHandler
@@ -144,6 +148,7 @@ fun ReadinessAuditScreen(
     viewModel: ReadinessAuditViewModel = hiltViewModel(),
     initialVersion: Int = 1,
     initialLevel: ReadinessAuditLevels? = null, // Open straight onto this level's test, if unlocked
+    startOnSummary: Boolean = false, // DEBUG: open on the "what next?" summary; "Start learning" only logs
     onFinished: () -> Unit // Existing callback to exit the screen
 ) {
     val correctGreen = LocalExtendedColors.current.textAccentAlternative
@@ -192,7 +197,19 @@ fun ReadinessAuditScreen(
     // Post-completion "what next?" summary (mirrors iOS): shown in place of the quiz once finished.
     val baselineLevel by viewModel.baselineLevel.collectAsState()
     val currentSkillLevel by viewModel.currentSkillLevel.collectAsState()
-    var showSummary by rememberSaveable { mutableStateOf(false) }
+    var showSummary by rememberSaveable { mutableStateOf(startOnSummary) }
+
+    // Learn, then quiz: the first time the learner leaves a summary for the app, land on tab 1 (vocab list)
+    // with the one-time learning-path guide, so they aren't left wondering what to do next.
+    val auditActivity = context.findActivity() as? androidx.activity.ComponentActivity
+    val navViewModel: NavigationViewModel? = auditActivity?.let { hiltViewModel(it) }
+    val leaveForApp: () -> Unit = {
+        if (!LearnThenQuiz.hasSeenStartGuide(context) && navViewModel != null) {
+            navViewModel.showVocabStartGuide.value = true
+            navViewModel.requestNavigation(SideQuestNavTarget.MainTab(0))
+        }
+        onFinished()
+    }
 
     // One-time "how to answer" sheet: the FIRST time the baseline audit quiz is opened, explain that the
     // speaker hears the sentence, tapping the sentence also hears it, and the radio gives the answer.
@@ -362,8 +379,12 @@ fun ReadinessAuditScreen(
                 finalCorrect = quizStatistics.correct,
                 finalTotal = questions.size,
                 onTakeNext = { level -> showSummary = false; viewModel.onLevelSelected(level) },
-                onLoadVocab = { esol -> viewModel.loadRecommendedVocab(esol); onFinished() },
-                onGoToApp = { onFinished() }
+                onLoadVocab = { esol ->
+                    if (startOnSummary) Timber.d("DEBUG audit summary: would load $esol")
+                    else viewModel.loadRecommendedVocab(esol)
+                    leaveForApp()
+                },
+                onGoToApp = { leaveForApp() }
             )
         } else {
         Column(
