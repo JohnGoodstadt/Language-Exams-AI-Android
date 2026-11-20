@@ -111,11 +111,11 @@
               "ok": true
             },
             {
-              "answer": "Gute Morgen, Frau Weber!",
+              "answer": "Ich sage jeden Abend „Guten Morgen“.",
               "ok": false
             },
             {
-              "answer": "Guten Morgen, bevor ich schlafen gehe!",
+              "answer": "Mit „Guten Morgen“ verabschiede ich mich vor dem Schlafengehen.",
               "ok": false
             }
           ]
@@ -166,11 +166,11 @@
               "ok": true
             },
             {
-              "answer": "Gute Tag, kann ich Ihnen helfen?",
+              "answer": "Um Mitternacht begrüße ich meine Nachbarin mit „Guten Tag“.",
               "ok": false
             },
             {
-              "answer": "Guten Tag, schlaf gut!",
+              "answer": "Mit „Guten Tag“ wünsche ich jemandem eine gute Nacht.",
               "ok": false
             }
           ]
@@ -221,11 +221,11 @@
               "ok": true
             },
             {
-              "answer": "Gute Abend, Herr Klein!",
+              "answer": "Morgens um sieben sage ich „Guten Abend“.",
               "ok": false
             },
             {
-              "answer": "Guten Abend, es ist sieben Uhr morgens.",
+              "answer": "Mit „Guten Abend“ verabschiede ich mich vor dem Schlafengehen.",
               "ok": false
             }
           ]
@@ -276,11 +276,11 @@
               "ok": true
             },
             {
-              "answer": "Guten Nacht, schlaf gut!",
+              "answer": "Am Morgen begrüße ich meinen Lehrer mit „Gute Nacht“.",
               "ok": false
             },
             {
-              "answer": "Gute Nacht, ich begrüße Sie zum Mittagessen.",
+              "answer": "Mit „Gute Nacht“ begrüße ich Gäste beim Mittagessen.",
               "ok": false
             }
           ]
@@ -442,11 +442,11 @@
               "ok": true
             },
             {
-              "answer": "Hallo! Wie heißen du?",
+              "answer": "Mit „Wie heißt du?“ frage ich nach dem Alter.",
               "ok": false
             },
             {
-              "answer": "Hallo! Wie heißt ich?",
+              "answer": "Mit „Wie heißt du?“ frage ich nach der Adresse.",
               "ok": false
             }
           ]
@@ -454,7 +454,7 @@
         {
           "title": "",
           "page": 9,
-          "question": "Ich heiße",
+          "question": "heißen",
           "summary": "Eine Wendung, mit der man seinen Namen nennt.",
           "explain": {
             "entryId": "Ich heiße",
@@ -509,7 +509,7 @@
         {
           "title": "",
           "page": 10,
-          "question": "Wie geht es dir?",
+          "question": "gehen",
           "summary": "Eine informelle Frage nach dem Befinden.",
           "explain": {
             "entryId": "Wie geht es dir?",

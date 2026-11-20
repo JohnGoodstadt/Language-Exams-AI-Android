@@ -56,11 +56,11 @@
               "ok": true
             },
             {
-              "answer": "Danke, mich geht es gut.",
+              "answer": "Ich fühle mich sehr schlecht. – Mir geht es gut.",
               "ok": false
             },
             {
-              "answer": "Danke, mir gehen es gut.",
+              "answer": "Mir geht es gut. Das heißt: Ich bin krank.",
               "ok": false
             }
           ]
@@ -111,11 +111,11 @@
               "ok": true
             },
             {
-              "answer": "Ich bin Jonas. – Freuen mich!",
+              "answer": "Ich bin sehr wütend. – Freut mich!",
               "ok": false
             },
             {
-              "answer": "Ich bin Jonas. – Freut ich!",
+              "answer": "Gute Nacht! – Freut mich!",
               "ok": false
             }
           ]
@@ -166,11 +166,11 @@
               "ok": true
             },
             {
-              "answer": "Herzlich Willkommen in Berlin!",
+              "answer": "Der Gast geht nach Hause. – Willkommen!",
               "ok": false
             },
             {
-              "answer": "Ich willkommen jeden Tag zur Schule.",
+              "answer": "Willkommen! Bitte gehen Sie weg.",
               "ok": false
             }
           ]
@@ -221,11 +221,11 @@
               "ok": true
             },
             {
-              "answer": "Danke für deinen Besuch. Bis balde!",
+              "answer": "Ich begrüße Anna. – Bis bald!",
               "ok": false
             },
             {
-              "answer": "Bis bald, wir sehen uns nie wieder.",
+              "answer": "Bis bald! Wir sehen uns nie wieder.",
               "ok": false
             }
           ]
@@ -276,11 +276,11 @@
               "ok": true
             },
             {
-              "answer": "Der Unterricht ist zu Ende. Bis Morgens!",
+              "answer": "Bis morgen! Wir treffen uns erst nächste Woche.",
               "ok": false
             },
             {
-              "answer": "Bis morgen, wir treffen uns heute Abend.",
+              "answer": "Bis morgen! Wir sehen uns heute Abend.",
               "ok": false
             }
           ]

@@ -11,7 +11,9 @@
       "sortorder": 1,
       "learningTitle": "Accusative",
       "learningPoints": [
-        "durch, für, gegen, ohne, um always take the accusative — only der → den changes."
+        "These prepositions always take the accusative: durch, für, gegen, ohne, um.",
+        "Definite articles in the accusative: masculine der → den · feminine die → die · neuter das → das · plural die → die.",
+        "First identify the noun's gender. Feuer is neuter (das Feuer), so gegen das Feuer is correct."
       ],
       "sections": [
         {
@@ -602,7 +604,9 @@
       "sortorder": 2,
       "learningTitle": "Dative",
       "learningPoints": [
-        "aus, außer, bei, gegenüber, mit, nach, seit, von, zu always take the dative."
+        "These prepositions always take the dative: aus, außer, bei, gegenüber, mit, nach, seit, von, zu.",
+        "Definite articles in the dative: masculine der → dem · feminine die → der · neuter das → dem · plural die → den.",
+        "In the dative plural, the noun usually adds -n when possible: die Kinder → mit den Kindern."
       ],
       "sections": [
         {
@@ -1425,7 +1429,10 @@
       "sortorder": 3,
       "learningTitle": "Two-way",
       "learningPoints": [
-        "Two-way prepositions: accusative for movement (wohin?), dative for location (wo?)."
+        "Two-way prepositions are an, auf, hinter, in, neben, über, unter, vor and zwischen.",
+        "Use the accusative for a destination or change of position (wohin?); use the dative for an existing location (wo?).",
+        "Movement alone does not decide the case: Ich schwimme im See (wo? dative), but Ich schwimme in den See (wohin? accusative).",
+        "After choosing the case, choose the article by gender: accusative der → den; dative der/das → dem, die → der, plural die → den."
       ],
       "sections": [
         {
@@ -1958,7 +1965,10 @@
       "sortorder": 4,
       "learningTitle": "Contractions",
       "learningPoints": [
-        "Preposition + article merge: an dem → am, in das → ins, zu der → zur …"
+        "Common contractions: an dem → am · an das → ans · in dem → im · in das → ins.",
+        "Fixed-dative contractions: bei dem → beim · von dem → vom · zu dem → zum · zu der → zur.",
+        "Choose the preposition, case and noun gender first; then contract. Zu, bei and von always take the dative.",
+        "Movement is not why zum is dative: zu itself always takes the dative, as in zum Arzt and zur Arbeit."
       ],
       "sections": [
         {
@@ -2317,7 +2327,10 @@
       "sortorder": 5,
       "learningTitle": "da- / wo-",
       "learningPoints": [
-        "For things, attach da-/wo- to the preposition instead of a pronoun."
+        "For things and ideas, use da(r) + preposition to refer back, and wo(r) + preposition to ask a question.",
+        "Before a consonant, use no r: damit/womit, dafür/wofür. Before a vowel, add r: daran/woran, darüber/worüber.",
+        "For people, use the preposition with a personal pronoun or wen: mit ihm, für sie, an wen — not damit or woran.",
+        "Keep the verb's fixed preposition: einverstanden mit → damit; denken an → daran; sich freuen über → darüber."
       ],
       "sections": [
         {
@@ -2560,7 +2573,10 @@
       "sortorder": 6,
       "learningTitle": "Place · Time · Direction",
       "learningPoints": [
-        "The same preposition can answer where, when, or where to."
+        "Place (wo?) with a two-way preposition takes the dative: in der Stadt, auf dem Tisch, an der Ecke.",
+        "Destination (wohin?) with a two-way preposition takes the accusative: in die Stadt. But zu always takes the dative: zur Schule.",
+        "For time: use am with days, um with clock times and im with seasons: am Montag · um neun Uhr · im Sommer.",
+        "The question word helps, but the preposition still matters: wo? and wohin? control two-way prepositions; fixed-case prepositions keep their own case."
       ],
       "sections": [
         {
