@@ -1,5 +1,11 @@
 package com.goodstadt.john.language.exams.packages.Settings
 
+import com.goodstadt.john.language.exams.packages.CategoryTab.LearnThenQuiz
+import com.goodstadt.john.language.exams.packages.ReadinessAudit.ReadinessAuditScreen
+import com.goodstadt.john.language.exams.packages.ReadinessAudit.ReadinessAuditModalCard
+import androidx.compose.material.icons.filled.Flag
+import androidx.compose.ui.window.DialogProperties
+import androidx.compose.ui.window.Dialog
 import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
@@ -130,6 +136,8 @@ fun SettingsScreen(
     var showDebugSheet by remember { mutableStateOf(false) }
     var showTranslateSheet by remember { mutableStateOf(false) }
     var showOfflineSheet by remember { mutableStateOf(false) }
+    // DEBUG: the readiness audit's "what next?" summary, opened without taking the quiz.
+    var showDebugAuditSummary by remember { mutableStateOf(false) }
     val vm: DictionaryEntryBrowserViewModel = viewModel()
 
 //    var showTryOutVoicesSheet by remember { mutableStateOf(false) }
@@ -205,6 +213,17 @@ fun SettingsScreen(
         dictionaryViewModel = vm,
     )
 
+    if (DEBUG && showDebugAuditSummary) {
+        Dialog(
+            onDismissRequest = { showDebugAuditSummary = false },
+            properties = DialogProperties(usePlatformDefaultWidth = false, dismissOnBackPress = false, dismissOnClickOutside = false)
+        ) {
+            ReadinessAuditModalCard {
+                ReadinessAuditScreen(startOnSummary = true, onFinished = { showDebugAuditSummary = false })
+            }
+        }
+    }
+
     if (showOfflineSheet) {
         OfflineDownloadSheet(
             friendlyVoiceName = uiState.currentFriendlyVoiceName,
@@ -224,6 +243,10 @@ fun SettingsScreen(
         snackbarHostState = snackbarHostState,
         onShowSignIn = { showSignInSheet = true },
         onShowTranslate = { showTranslateSheet = true },
+        onShowAuditSummary = {
+            LearnThenQuiz.setSeenStartGuide(context, false) // so leaving the summary shows the guide again
+            showDebugAuditSummary = true
+        },
         // Premium only (IAP or redeemed code); others get the upgrade sheet.
         onShowOffline = { if (isPurchased) showOfflineSheet = true else viewModel.onShowBottomSheetClicked() },
         onRedeemCode = {
@@ -589,6 +612,7 @@ private fun SettingsContent(
     onShowTranslate: () -> Unit,
     onShowOffline: () -> Unit,
     onRedeemCode: () -> Unit,
+    onShowAuditSummary: () -> Unit = {},
 ) {
     val settingsColors = LocalExtendedColors.current
     val sessionFeedback = rememberSessionFeedbackManager()
@@ -995,6 +1019,17 @@ private fun SettingsContent(
         }
 
         if (DEBUG) {
+            // Learn-then-quiz: the audit's "what next?" summary without taking the quiz. Resets the one-time
+            // vocab guide, so leaving the summary goes to tab 1 and shows it again.
+            settingsItem { iconTint ->
+                SettingsActionItem(
+                    iconTint = iconTint,
+                    icon = Icons.Default.Flag,
+                    title = "Show Audit Summary",
+                    currentValue = "Leave it → tab 1 + learning guide (guide reset) (D)",
+                    onClick = onShowAuditSummary
+                )
+            }
             settingsItem { iconTint ->
                 SettingsActionItem(
                     iconTint = iconTint,

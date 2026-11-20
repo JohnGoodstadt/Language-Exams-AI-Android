@@ -233,6 +233,15 @@ class CategoryTabViewModel @Inject constructor(
         _currentQuizCategory.value = null
     }
 
+    // Learn, then quiz: set every time a section's sentences have all been heard, so the screen can offer
+    // that section's quiz. The screen shows it once no other sheet is in the way, then clears it.
+    private val _sectionQuizPrompt = MutableStateFlow<Category?>(null)
+    val sectionQuizPrompt = _sectionQuizPrompt.asStateFlow()
+
+    fun clearSectionQuizPrompt() {
+        _sectionQuizPrompt.value = null
+    }
+
     // Internal session counter
     private var sessionPlayCount = 0
     private var hasSeenHelp = false
@@ -1059,6 +1068,13 @@ Fix: Remove the duplicate calls at lines 856 and 859.
 
             // D. Check Whole Sheet
             checkSheetCompletionIfNeeded(examName)
+
+            // E. Learn, then quiz: always offer this section's quiz. Wait so the banner is seen first
+            //    (and the last sentence finishes).
+            viewModelScope.launch {
+                delay(2000)
+                _sectionQuizPrompt.value = category
+            }
         }
     }
 
